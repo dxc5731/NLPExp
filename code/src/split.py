@@ -18,13 +18,14 @@ import json
 import random
 from pathlib import Path
 
-from .data_io import DATA_DIR, ROOT, load_split, sha256_file
+from .config import ARTIFACTS, DATA_DIR
+from .data_io import load_split, sha256_file
 from .labels import ENTITY_TYPES
 
 SEED = 42
 VAL_RATIO = 0.10
 VERSION = "v1"
-OUT_DIR = ROOT / "code" / "artifacts"
+OUT_DIR = ARTIFACTS
 
 
 def dialogue_stats(dialogue: dict) -> dict:

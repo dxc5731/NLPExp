@@ -1,0 +1,20 @@
+{
+  "sentences": 98529,
+  "chars": 1279361,
+  "max_tokens": 201,
+  "truncated": 0,
+  "uncovered_chars": 0,
+  "over_covered_chars": 0,
+  "offset_overlap": 0,
+  "unk_tokens": 676,
+  "multi_char_tokens": {
+    "2": 3375,
+    "3": 407,
+    "4": 28,
+    "5": 13,
+    "6": 1,
+    "8": 1
+  },
+  "roundtrip_mismatch_sentences": 8,
+  "roundtrip_mismatch_ratio": 8.119436917049803e-05
+}

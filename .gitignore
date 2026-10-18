@@ -14,3 +14,7 @@ runs/**/checkpoints/
 *.pt
 *.bin
 *.safetensors
+
+# 预训练模型本体与下载缓存，不进仓库
+code/models/
+code/.hf-cache/

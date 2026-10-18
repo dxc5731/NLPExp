@@ -1,16 +1,10 @@
 # -*- coding: utf-8 -*-
-"""读原始数据的最小工具层。
-
-约定：所有路径都从项目根目录推出来，不写死绝对路径。
-    code/src/data_io.py  ->  parents[0]=src, [1]=code, [2]=项目根
-"""
+"""读原始数据的最小工具层。"""
 
 import hashlib
 import json
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
-DATA_DIR = ROOT / "doc" / "数据" / "IMCS-V2-NER" / "IMCS-V2-NER"
+from .config import DATA_DIR
 
 SPLITS = {
     "train": "IMCS-V2_train.json",
@@ -19,14 +13,17 @@ SPLITS = {
 }
 
 
+def split_path(split: str):
+    return DATA_DIR / SPLITS[split]
+
+
 def load_split(split: str) -> dict:
     """读一个官方划分，返回 {对话ID: 对话字典}。"""
-    path = DATA_DIR / SPLITS[split]
-    with open(path, "r", encoding="utf-8") as f:
+    with open(split_path(split), "r", encoding="utf-8") as f:
         return json.load(f)
 
 
-def sha256_file(path: Path) -> str:
+def sha256_file(path) -> str:
     """算文件字节的 SHA-256。run_info 里要填，先算出来备用。"""
     h = hashlib.sha256()
     with open(path, "rb") as f:
