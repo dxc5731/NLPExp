@@ -335,8 +335,8 @@
       "source": "AI交互记录.md",
       "destination": "evaluation/AI交互记录.md",
       "original_sha256": "6a4ca8d513be2f99686e0d7e695f34064f8d649761133d615add8c900d8ee03a",
-      "published_sha256": "6a4ca8d513be2f99686e0d7e695f34064f8d649761133d615add8c900d8ee03a",
-      "original_bytes_preserved": true
+      "published_sha256": "7180b93818e7af98e078b2fee0ca94f0d85d3152b303be6f3c4eb5a24c72db3d",
+      "original_bytes_preserved": false
     },
     {
       "source_relative_to": "original_workspace",
@@ -935,6 +935,7 @@
     "evaluation/tests/run_pipeline_acceptance.py",
     "evaluation/configs/evaluation_runs.example.json",
     "evaluation/README.md",
+    "evaluation/AI交互记录.md",
     "evaluation/data/README.md",
     "evaluation/docs/真实模型预测接入与评估指南.md",
     "evaluation/docs/统一评分说明.md",
