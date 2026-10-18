@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "artifact_kind": "interface_example",
+  "example_notice": "完全人工构造的接口示例；未训练、未推理，不能作为正式运行记录。运行专属字段的 null 仅表示本例未执行，不适用于真实交接。",
+  "run_id": "manual-interface-example-v1",
+  "method": {
+    "name": "人工接口样例",
+    "kind": "manual_fixture"
+  },
+  "data": {
+    "version": "manual-interface-fixture-v1",
+    "split": "dev",
+    "source_file": "data_dev.json",
+    "source_sha256": "60a73d712c1eb2d2be46f3aa7f3838520d3207103ae872c14feddfface61df30",
+    "archive_sha256": null
+  },
+  "method_version": "manually-authored-fixture-v1",
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "snapshot_sha256": null,
+    "note": "人工编写，无模型代码运行；真实交接必须提供代码版本或可获取的代码快照及哈希。"
+  },
+  "config": {
+    "version": "manual-fixture-v1",
+    "path": null,
+    "sha256": null,
+    "inline": {
+      "normalization": "none",
+      "character_unit": "Unicode code points"
+    }
+  },
+  "preprocessing": "无；逐原始字符，保留空白、标点及组合字符。",
+  "alignment": "人工逐字符标注；不使用 tokenizer；未进行真实预测。",
+  "prediction": {
+    "file": "predictions_dev.json",
+    "sha256": "10b0227adf0883ce6e195b447e721e0bcf1ae9483451ff8e3507d11a45f7f70e"
+  },
+  "inference_command": null,
+  "inference_working_directory": null,
+  "device": null,
+  "environment": null,
+  "inference_elapsed_seconds": null,
+  "timing_scope": null,
+  "random_seeds": null,
+  "seed_applicability": "不适用；完全人工构造，无随机过程。",
+  "training": null,
+  "notes": "仅供理解字段；正式运行 artifact_kind 应为 model_prediction，并补齐规范要求。"
+}

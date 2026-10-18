@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "purpose": "synthetic_integration_test",
+  "data": {
+    "path": "data_dev.json",
+    "split": "dev"
+  },
+  "output_dir": "../../logs/pipeline_validation/batches",
+  "runs": [
+    {
+      "run_id": "synthetic_rules_v1",
+      "method_name": "人工规则接口",
+      "predictions": "rules/predictions_dev.json",
+      "run_info": "rules/run_info.json"
+    },
+    {
+      "run_id": "synthetic_crf_v1",
+      "method_name": "人工CRF接口",
+      "predictions": "crf/predictions_dev.json",
+      "run_info": "crf/run_info.json"
+    },
+    {
+      "run_id": "synthetic_bert_v1",
+      "method_name": "人工BERT接口",
+      "predictions": "bert/predictions_dev.json",
+      "run_info": "bert/run_info.json"
+    }
+  ]
+}

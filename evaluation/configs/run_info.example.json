@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "artifact_kind": "model_prediction",
+  "example_notice": "待替换模板，非真实运行记录。所有待填写字段、null、文件路径必须据实替换；本文件不代表已完成交付或核查。",
+  "run_id": "bert_a_run_001",
+  "method": {"name": "BERT_A", "kind": "bert"},
+  "method_version": "待填写实际模型及checkpoint标识",
+  "data": {
+    "version": "IMCS-V2-NER-platform-84e34d24",
+    "split": "dev",
+    "source_file": "IMCS-V2-NER/IMCS-V2_dev.json",
+    "source_sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f",
+    "archive_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67"
+  },
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "snapshot": {"path": "config/source_snapshot.zip", "sha256": "待填写实际源码快照SHA256"}
+  },
+  "config": {"version": "待填写实际配置版本", "path": "config/inference.json", "sha256": "待填写实际配置SHA256"},
+  "logs": [{"path": "logs/inference.log", "sha256": "待填写实际日志SHA256"}],
+  "preprocessing": "待填写实际预处理或明确无；不得修改交接文本坐标",
+  "alignment": {
+    "tokenizer": "待填写实际名称与版本",
+    "character_mapping": "待填写子词到原字符的实际映射及证据位置",
+    "special_tokens": "待填写特殊token标签如何排除",
+    "long_text": "待填写长句处理及完整原句还原方式"
+  },
+  "prediction": {"file": "predictions_dev.json", "sha256": "待填写最终预测文件SHA256"},
+  "inference_command": "待填写实际执行的完整命令",
+  "inference_working_directory": "待填写实际工作目录",
+  "device": "待填写实际CPU或GPU型号",
+  "environment": {"python": "待填写实际Python版本", "packages": {"待替换为实际框架名称": "待填写实际版本"}},
+  "inference_elapsed_seconds": null,
+  "timing_scope": "待填写实测耗时范围，是否含加载、预处理、写盘",
+  "random_seeds": null,
+  "seed_applicability": "有随机过程必须改为实际整数种子字典；无随机过程才保留null并写明原因",
+  "training": {
+    "model_version": "待填写实际训练模型或词典构建版本",
+    "command": "待填写实际训练或构建命令",
+    "data": [{"split": "train", "path": "C:/待替换的实际数据目录/IMCS-V2_train.json", "sha256": "待填写训练源文件SHA256"}],
+    "config": {"path": "config/training.json", "sha256": "待填写实际训练配置SHA256"},
+    "logs": [{"path": "logs/training.log", "sha256": "待填写实际训练日志SHA256"}]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "artifact_kind": "synthetic_integration_test",
+  "synthetic_notice": "人工三方法接入彩排；不是训练得到的规则、CRF 或 BERT 结果，运行专属 null 表示没有推理。",
+  "run_id": "synthetic_rules_v1",
+  "method": {
+    "name": "人工规则接口",
+    "kind": "dictionary_rules"
+  },
+  "method_version": "synthetic-interface-v1",
+  "data": {
+    "version": "manual-pipeline-fixture-v1",
+    "split": "dev",
+    "source_file": "../data_dev.json",
+    "source_sha256": "dcc0d2c174c871b2defa24875bf454da83bb2e58ec8f0fb6de7ca2507fb8aba3",
+    "archive_sha256": null
+  },
+  "code": {
+    "revision": null,
+    "dirty": null,
+    "snapshot": {
+      "path": "../fixture_source.txt",
+      "sha256": "abaeddc98f5879cfd7e5db7c55217ff2cad79bf29901d7cceafe98dafd80ae5d"
+    }
+  },
+  "config": {
+    "version": "synthetic-v1",
+    "inline": {
+      "fixture": true,
+      "model_inference": false
+    }
+  },
+  "logs": [
+    {
+      "path": "fixture_creation.txt",
+      "sha256": "d3a6b82bcee67484e54d99f1226f277a6b04dcca603fa0ce93b49762cf1425b3"
+    }
+  ],
+  "preprocessing": "无；人工原始字符接口样例。",
+  "alignment": {
+    "tokenizer": "未运行，人工接口",
+    "character_mapping": "人工逐码点构造",
+    "special_tokens": "无",
+    "long_text": "未执行分段或截断"
+  },
+  "prediction": {
+    "file": "predictions_dev.json",
+    "sha256": "2a52b0825da9612beb4cb3d46ca3bf89ea271b9204880cae86a2ce79838f6d58"
+  },
+  "inference_command": null,
+  "inference_working_directory": null,
+  "device": null,
+  "environment": {
+    "python": "3.14.0",
+    "packages": {},
+    "context": "fixture_preparation_only"
+  },
+  "inference_elapsed_seconds": null,
+  "timing_scope": null,
+  "training": null,
+  "random_seeds": null,
+  "seed_applicability": "无训练／推理，人工确定性构造。"
+}

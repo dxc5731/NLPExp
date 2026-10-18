@@ -1,0 +1,12 @@
+/data/*
+!/data/README.md
+!/data/.gitkeep
+/results/*
+!/results/README.md
+!/results/.gitkeep
+/configs/evaluation_runs.json
+/docs/前期核验/eval_task1_upstream.py
+/logs/pipeline_validation/batches/
+/logs/pipeline_validation/acceptance/*
+!/logs/pipeline_validation/acceptance/20261017T104721155709_pb8d_vw9/
+!/logs/pipeline_validation/acceptance/20261018T225551849836_46_l2go2/

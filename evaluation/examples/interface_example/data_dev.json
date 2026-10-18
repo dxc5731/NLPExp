@@ -1,0 +1,28 @@
+{
+  "example_dialogue_001": {
+    "dialogue": [
+      {
+        "sentence_id": "01",
+        "speaker": "患者",
+        "sentence": "孩子发热。",
+        "BIO_label": "O O B-Symptom I-Symptom O"
+      },
+      {
+        "sentence_id": "07",
+        "speaker": "医生",
+        "sentence": "请用药甲。",
+        "BIO_label": "O O B-Drug I-Drug O"
+      }
+    ]
+  },
+  "example_dialogue_unicode": {
+    "dialogue": [
+      {
+        "sentence_id": "3",
+        "speaker": "人工接口示例",
+        "sentence": "A 😀，𠀀é",
+        "BIO_label": "O O O O O O O"
+      }
+    ]
+  }
+}

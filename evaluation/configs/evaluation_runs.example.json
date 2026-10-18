@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "purpose": "model_evaluation",
+  "example_notice": "待替换示例；以下真实队友文件尚不存在。仅保留已收到的 runs，或修改路径；不要把人工样例标成 model_evaluation。",
+  "data": {
+    "path": "../data/IMCS-V2-NER.zip",
+    "split": "dev"
+  },
+  "output_dir": "../results/batches",
+  "runs": [
+    {
+      "run_id": "rules_run_001",
+      "method_name": "规则词典",
+      "predictions": "../results/dictionary_rules/run_001/predictions_dev.json",
+      "run_info": "../results/dictionary_rules/run_001/run_info.json"
+    },
+    {
+      "run_id": "crf_run_001",
+      "method_name": "独立CRF",
+      "predictions": "../results/crf/run_001/predictions_dev.json",
+      "run_info": "../results/crf/run_001/run_info.json"
+    },
+    {
+      "run_id": "bert_a_run_001",
+      "method_name": "BERT_A",
+      "predictions": "../results/bert_a/run_001/predictions_dev.json",
+      "run_info": "../results/bert_a/run_001/run_info.json"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "manual_scoring": {
+    "dialogue": [
+      {
+        "sentence_id": "01",
+        "sentence": "甲乙，丙丁。戊己，庚辛。壬癸。",
+        "BIO_label": "B-Symptom I-Symptom O B-Drug I-Drug O B-Drug_Category I-Drug_Category O B-Medical_Examination I-Medical_Examination O B-Operation I-Operation O"
+      },
+      {
+        "sentence_id": "09",
+        "sentence": "A 😀，𠀀é",
+        "BIO_label": "O O O O O O O"
+      }
+    ]
+  }
+}

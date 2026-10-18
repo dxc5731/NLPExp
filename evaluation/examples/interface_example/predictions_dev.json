@@ -1,0 +1,9 @@
+{
+  "example_dialogue_001": {
+    "01": "O O B-Symptom I-Symptom O",
+    "07": "O O B-Drug I-Drug O"
+  },
+  "example_dialogue_unicode": {
+    "3": "O O O O O O O"
+  }
+}

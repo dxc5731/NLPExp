@@ -1,0 +1,6 @@
+{
+  "manual_scoring": {
+    "01": "B-Symptom I-Symptom O B-Drug I-Drug O B-Drug_Category I-Drug_Category O B-Medical_Examination I-Medical_Examination O O O O",
+    "09": "B-Operation O O O O O O"
+  }
+}
