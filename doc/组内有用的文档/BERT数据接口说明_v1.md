@@ -2,6 +2,28 @@
 
 > 你不用再碰原始 JSON。数据切分、分词对齐、DataLoader 都已经做好了，你直接用下面三行拿 batch。
 
+## 0. 拿到包之后先做这三步
+
+1. **解压到你的项目根目录**。解压后应该看到 `code/` 这个文件夹，而不是再套一层。
+2. **装环境**：`cd code` 然后 `pip install -r requirements.txt`。
+   如果装 torch 报找不到 `2.6.0+cu124`，改用
+   `pip install torch --index-url https://download.pytorch.org/whl/cu124`。
+3. **让程序找到数据**。两种都行：
+   - 把数据集放到 `<项目根>/doc/数据/IMCS-V2-NER/IMCS-V2-NER/`（和我的结构一致）；
+   - 或者设环境变量指向你放数据的目录：
+     `set IMCS_DATA_DIR=D:\你的路径\IMCS-V2-NER`
+4. 模型：`bert-base-chinese` 需要你自己下一次，设 `BERT_MODEL_DIR` 指向它，
+   或者放到 `code/models/bert-base-chinese/`。
+
+验证装好了：
+
+```powershell
+cd code
+python -m scripts.demo_dataloader
+```
+
+看到「一致: True」就说明接口通了。
+
 ## 1. 名单在哪
 
 `code/artifacts/split_v1.json`：
