@@ -22,7 +22,7 @@ python -X utf8 src/run_evaluation_batch.py --manifest examples/pipeline_validati
 python -X utf8 tests/run_pipeline_acceptance.py --official-data data/IMCS-V2-NER.zip
 ```
 
-该命令只用人工数据评分，对完整官方 dev 只读核验结构、BIO 和字符对应，不运行真实模型。项目原始材料见[课程材料](../docs/course/README.md)。
+该命令只用人工数据评分，对完整官方 dev 只读核验结构、BIO 和字符对应，不运行真实模型。
 
 自然语言处理课程项目，方向 **B：信息抽取／序列标注**。当前使用 IMCS-V2-NER（Task1），对医患对话逐句预测字符级 BIO 标签，识别症状、药品名、药物类别、检查和医疗操作五类实体。
 

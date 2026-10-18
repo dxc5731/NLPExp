@@ -1,4 +1,0 @@
-COMMAND: C:\Users\HP\AppData\Local\Programs\Python\Python314\python.exe -X utf8 tests/prepare_author_reference.py
-EXIT: 0
-PASS: pinned reference SHA-256 verified: C:\Users\HP\AppData\Local\Temp\NLPExp-evaluation-verify-zlve0nro\NLPExp\evaluation\docs\前期核验\eval_task1_upstream.py
-External test-only source; not part of the published repository. No model was run.

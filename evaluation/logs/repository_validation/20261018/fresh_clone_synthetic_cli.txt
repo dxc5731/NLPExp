@@ -1,7 +1,0 @@
-COMMAND: C:\Users\HP\AppData\Local\Programs\Python\Python314\python.exe -X utf8 src/run_evaluation_batch.py --manifest examples/pipeline_validation/evaluation_runs.json --csv-bom
-EXIT: 0
-synthetic_rules_v1: SCORED entity_micro_f1=0.0 metadata=PASS
-synthetic_crf_v1: SCORED entity_micro_f1=0.4444444444444444 metadata=PASS
-synthetic_bert_v1: SCORED entity_micro_f1=0.8 metadata=PASS
-SUCCESS self_check= PASS seconds= 0.226
-Batch report: C:\Users\HP\AppData\Local\Temp\NLPExp-evaluation-verify-zlve0nro\NLPExp\evaluation\logs\pipeline_validation\batches\20261018T230459426893_2pl2y6hp\batch_report.json
