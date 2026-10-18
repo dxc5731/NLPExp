@@ -1,0 +1,16 @@
+# 环境
+.venv/
+__pycache__/
+*.py[cod]
+
+# 原始数据太大，不进仓库（老师也要求数据集不入包）
+doc/数据/
+
+# 个人协作手册，不属于项目产物
+doc/怎么跟我协作/
+
+# 模型权重不进仓库
+runs/**/checkpoints/
+*.pt
+*.bin
+*.safetensors
