@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "purpose": "input_validation_only",
+  "mode": "prediction_validation",
+  "created_at": "2026-10-16T22:25:30+08:00",
+  "python_version": "3.14.0",
+  "split": "dev",
+  "status": "PASS",
+  "character_unit": "Python len(str): Unicode code points, no normalization",
+  "inputs": {
+    "data": {
+      "requested_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\interface_example\\data_dev.json",
+      "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\interface_example\\data_dev.json",
+      "sha256": "60a73d712c1eb2d2be46f3aa7f3838520d3207103ae872c14feddfface61df30"
+    },
+    "predictions": {
+      "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\interface_example\\predictions_dev.json",
+      "sha256": "10b0227adf0883ce6e195b447e721e0bcf1ae9483451ff8e3507d11a45f7f70e"
+    }
+  },
+  "data": {
+    "format": "raw",
+    "dialogues": 2,
+    "sentences": 3,
+    "unique_sentence_ids": 3,
+    "sentences_with_text": 3,
+    "characters": 17,
+    "sentences_with_gold": 3,
+    "dialogue_fields": [
+      "dialogue"
+    ],
+    "sentence_fields": [
+      "BIO_label",
+      "sentence",
+      "sentence_id",
+      "speaker"
+    ]
+  },
+  "predictions": {
+    "dialogues": 2,
+    "sentences": 3,
+    "unique_sentence_ids": 3,
+    "matched_sentence_ids": 3,
+    "expected_sentences": {
+      "passed": 3,
+      "failed": 0,
+      "not_fully_checked": 0
+    }
+  },
+  "required_checks": [
+    "data_json",
+    "data_structure",
+    "gold_presence",
+    "gold_format",
+    "gold_labels",
+    "gold_bio",
+    "gold_alignment",
+    "prediction_json",
+    "prediction_structure",
+    "prediction_format",
+    "prediction_labels",
+    "prediction_bio",
+    "prediction_alignment",
+    "id_coverage",
+    "record_counts"
+  ],
+  "checks": {
+    "data_json": {
+      "checked": 1,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "data_structure": {
+      "checked": 1,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "gold_presence": {
+      "checked": 3,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "gold_format": {
+      "checked": 3,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "gold_labels": {
+      "checked": 3,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "gold_bio": {
+      "checked": 3,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "gold_alignment": {
+      "checked": 3,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "prediction_json": {
+      "checked": 1,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "prediction_structure": {
+      "checked": 1,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "id_coverage": {
+      "checked": 1,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "record_counts": {
+      "checked": 1,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "prediction_format": {
+      "checked": 3,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "prediction_labels": {
+      "checked": 3,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "prediction_bio": {
+      "checked": 3,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "prediction_alignment": {
+      "checked": 3,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    }
+  },
+  "errors": {
+    "total": 0,
+    "by_code": {},
+    "examples": [],
+    "examples_omitted": 0
+  }
+}

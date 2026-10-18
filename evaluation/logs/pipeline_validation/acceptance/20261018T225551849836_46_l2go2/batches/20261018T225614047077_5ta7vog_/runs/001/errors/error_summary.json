@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "purpose": "synthetic_integration_test",
+  "run_id": "synthetic_rules_v1",
+  "method_name": "人工规则接口",
+  "status": "PASS",
+  "inputs": {
+    "data": {
+      "requested_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLPExp-evaluation\\evaluation\\examples\\pipeline_validation\\data_dev.json",
+      "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLPExp-evaluation\\evaluation\\examples\\pipeline_validation\\data_dev.json",
+      "sha256": "dcc0d2c174c871b2defa24875bf454da83bb2e58ec8f0fb6de7ca2507fb8aba3"
+    },
+    "predictions": {
+      "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLPExp-evaluation\\evaluation\\examples\\pipeline_validation\\rules\\predictions_dev.json",
+      "sha256": "2a52b0825da9612beb4cb3d46ca3bf89ea271b9204880cae86a2ce79838f6d58"
+    }
+  },
+  "entities": {
+    "micro": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 5,
+      "predicted": 0
+    },
+    "per_type": {
+      "Symptom": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1,
+        "predicted": 0
+      },
+      "Drug": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1,
+        "predicted": 0
+      },
+      "Drug_Category": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1,
+        "predicted": 0
+      },
+      "Medical_Examination": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1,
+        "predicted": 0
+      },
+      "Operation": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1,
+        "predicted": 0
+      }
+    },
+    "gold_total": 5,
+    "predicted_total": 0
+  },
+  "rows": {
+    "FN": 5
+  },
+  "candidate_counts": {
+    "suspected_miss": 5
+  },
+  "ambiguous_unlinked_rows": 0,
+  "local_text_exported": false,
+  "notice": "Candidate phenomena are not causal explanations and never change TP/FP/FN."
+}

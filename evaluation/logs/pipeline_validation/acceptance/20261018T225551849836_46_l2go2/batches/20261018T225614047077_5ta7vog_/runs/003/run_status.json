@@ -1,0 +1,16 @@
+{
+  "index": 3,
+  "run_id": "synthetic_bert_v1",
+  "method_name": "人工BERT接口",
+  "data_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLPExp-evaluation\\evaluation\\examples\\pipeline_validation\\data_dev.json",
+  "split": "dev",
+  "prediction_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLPExp-evaluation\\evaluation\\examples\\pipeline_validation\\bert\\predictions_dev.json",
+  "run_info_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLPExp-evaluation\\evaluation\\examples\\pipeline_validation\\bert\\run_info.json",
+  "status": "SCORED",
+  "evaluation_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLPExp-evaluation\\evaluation\\logs\\pipeline_validation\\acceptance\\20261018T225551849836_46_l2go2\\batches\\20261018T225614047077_5ta7vog_\\runs\\003\\evaluation.json",
+  "evaluation_sha256": "6a0a56fcaa267090383806f4bb85016d852ee087ad3d0d4ba79279527b8fd68c",
+  "metadata_status": "PASS",
+  "automated_metadata_status": "PASS",
+  "entity_micro_f1": 0.8,
+  "error_export": "PASS"
+}

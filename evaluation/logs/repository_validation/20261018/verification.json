@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-10-18T22:55:51+08:00",
+  "purpose": "repository_checkout_validation",
+  "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cwd": "C:\\Users\\HP\\Documents\\ChatGPT\\NLPExp-evaluation\\evaluation",
+  "commands": [
+    {
+      "name": "prepare_author_reference",
+      "arguments": [
+        "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-X",
+        "utf8",
+        "tests/prepare_author_reference.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.2308867999818176,
+      "transcript": "evaluation/logs/repository_validation/20261018/prepare_author_reference.txt"
+    },
+    {
+      "name": "acceptance_cli",
+      "arguments": [
+        "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-X",
+        "utf8",
+        "tests/run_pipeline_acceptance.py",
+        "--official-data",
+        "C:/Users/HP/Downloads/IMCS-V2-NER.zip"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 24.73711899999762,
+      "transcript": "evaluation/logs/repository_validation/20261018/acceptance_cli.txt"
+    },
+    {
+      "name": "author_crosscheck",
+      "arguments": [
+        "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-X",
+        "utf8",
+        "tests/crosscheck_author.py",
+        "--report",
+        "C:\\Users\\HP\\Documents\\ChatGPT\\NLPExp-evaluation\\evaluation\\logs\\repository_validation\\20261018\\author_crosscheck.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.23893240001052618,
+      "transcript": "evaluation/logs/repository_validation/20261018/author_crosscheck.txt"
+    }
+  ],
+  "status": "PASS",
+  "test_counts": {
+    "stage1": 42,
+    "stage2": 47,
+    "stage3": 49,
+    "all": 138
+  },
+  "acceptance_summary": "evaluation/logs/pipeline_validation/acceptance/20261018T225551849836_46_l2go2/acceptance_summary.json",
+  "synthetic_cli_status": "SUCCESS",
+  "synthetic_self_check": "PASS",
+  "synthetic_unique_sentences": 2,
+  "prediction_sentence_records": 6,
+  "official_dev_counts": {
+    "dialogues": 833,
+    "sentences": 33267,
+    "characters": 441339
+  },
+  "official_dev_scored": false,
+  "official_archive_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67",
+  "input_hashes_unchanged": true,
+  "implementation_hashes": {
+    "check_run_info.py": "ba4cd48b9a02a25da0fde6f5991ad928728c9b26f773caae35ad51e12b03c82c",
+    "compare_evaluations.py": "03eaefb5975f73ce2cc4e4c53776c7d589b3caf4309aadb54e0e4e9e937f5f11",
+    "evaluate_predictions.py": "7c75016ae1f4cc07d4037bfeb39ffb63aaee8d43fc7a1da10c15fe258c3dc173",
+    "evaluation_io.py": "8863d424b22d05ecd1300cda2dce9f382ba043e80c12039471ecb201c1781335",
+    "export_errors.py": "6bf80ffc670b9795f50ef4b6a569373cb8c06432e9d3b01e6b7dba234d81e003",
+    "ner_metrics.py": "5e02e13834e07560a3586038c832a603e675115bf0b3a2d0b8d3ebedf2356074",
+    "run_evaluation_batch.py": "ebbdc4b3eec92d2025b57c70e5ea3cf36b1139b10d83703b96ecf9eab6997327",
+    "validate_predictions.py": "75dc966361d216bdb9500acb63bce6be4313b708136290cd26b1195dfb7c1dcb"
+  },
+  "limits": [
+    "No real model inference or model scores.",
+    "No Tianchi upload or website deployment.",
+    "Runtime only verified on the recorded Windows/Python environment; no cross-version claim."
+  ]
+}

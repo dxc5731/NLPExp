@@ -1,0 +1,67 @@
+{
+  "scope": "synthetic local probes only; platform evaluator was not invoked",
+  "checker": {
+    "valid_bio": {
+      "passes_record_and_format_checks": true
+    },
+    "all_O": {
+      "passes_record_and_format_checks": true
+    },
+    "orphan_I": {
+      "passes_record_and_format_checks": true
+    },
+    "wrong_length": {
+      "passes_record_and_format_checks": false,
+      "error_type": "AssertionError",
+      "message": "The BIO tag must be equal to the original text length. Expected: 3, acutal: 2. The defect dialog is \"d\", and the defect sentence_id is \"1\"."
+    },
+    "unknown_tag": {
+      "passes_record_and_format_checks": false,
+      "error_type": "AssertionError",
+      "message": "The BIO tag must be in the predefined list. The defect dialog is \"d\", and the defect sentence_id is \"1\", and the defected tag is \"PAD\" "
+    },
+    "extra_record": {
+      "passes_record_and_format_checks": true
+    },
+    "path_argument_rejected": "Submission filename should be IMCS-V2-NER_test.json"
+  },
+  "upstream_entity_parser": {
+    "valid": {
+      "tags": [
+        "B-Symptom",
+        "I-Symptom",
+        "O"
+      ],
+      "entities": [
+        [
+          "Symptom",
+          0,
+          1
+        ]
+      ]
+    },
+    "orphan_I": {
+      "tags": [
+        "I-Symptom",
+        "I-Symptom",
+        "O"
+      ],
+      "entities": []
+    },
+    "mismatched_I_type": {
+      "tags": [
+        "B-Symptom",
+        "I-Drug",
+        "I-Symptom",
+        "O"
+      ],
+      "entities": [
+        [
+          "Symptom",
+          0,
+          2
+        ]
+      ]
+    }
+  }
+}

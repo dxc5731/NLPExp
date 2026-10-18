@@ -1,0 +1,55 @@
+COMMAND: C:\Users\HP\AppData\Local\Programs\Python\Python314\python.exe -X utf8 -m unittest discover -s tests -p test_evaluate_predictions.py -v
+EXIT: 0
+ELAPSED_SECONDS: 1.365949599974556
+test_actual_author_entity_block_mixed_five_types (test_evaluate_predictions.AuthorCrosscheckTests.test_actual_author_entity_block_mixed_five_types) ... ok
+test_four_crosscheck_cases_overall_and_per_type (test_evaluate_predictions.AuthorCrosscheckTests.test_four_crosscheck_cases_overall_and_per_type) ... ok
+test_nontrivial_author_per_type_rounding (test_evaluate_predictions.AuthorCrosscheckTests.test_nontrivial_author_per_type_rounding) ... ok
+test_all_o_with_gold_entities (test_evaluate_predictions.CharacterTests.test_all_o_with_gold_entities) ... ok
+test_confusion_direction_fixed_order_and_counts (test_evaluate_predictions.CharacterTests.test_confusion_direction_fixed_order_and_counts) ... ok
+test_empty_matrix_zero_policy_and_shape_validation (test_evaluate_predictions.CharacterTests.test_empty_matrix_zero_policy_and_shape_validation) ... ok
+test_many_o_high_accuracy_zero_entity_f1 (test_evaluate_predictions.CharacterTests.test_many_o_high_accuracy_zero_entity_f1) ... ok
+test_mixed_fixture_manual_character_expectations (test_evaluate_predictions.CharacterTests.test_mixed_fixture_manual_character_expectations) ... ok
+test_no_o_summary_preserves_false_positives_and_false_negatives (test_evaluate_predictions.CharacterTests.test_no_o_summary_preserves_false_positives_and_false_negatives) ... ok
+test_only_b_i_boundary_error (test_evaluate_predictions.CharacterTests.test_only_b_i_boundary_error) ... ok
+test_perfect_labels_fixed_macro_denominator (test_evaluate_predictions.CharacterTests.test_perfect_labels_fixed_macro_denominator) ... ok
+test_unicode_space_punctuation_positions (test_evaluate_predictions.CharacterTests.test_unicode_space_punctuation_positions) ... ok
+test_wrong_type_character_statistics (test_evaluate_predictions.CharacterTests.test_wrong_type_character_statistics) ... ok
+test_adjacent_same_type_remains_two_entities (test_evaluate_predictions.EntityTests.test_adjacent_same_type_remains_two_entities) ... ok
+test_both_all_o_zero_denominators (test_evaluate_predictions.EntityTests.test_both_all_o_zero_denominators) ... ok
+test_empty_pure_inputs_no_nan (test_evaluate_predictions.EntityTests.test_empty_pure_inputs_no_nan) ... ok
+test_exact_match_all_five_types (test_evaluate_predictions.EntityTests.test_exact_match_all_five_types) ... ok
+test_global_micro_is_not_sentence_mean (test_evaluate_predictions.EntityTests.test_global_micro_is_not_sentence_mean) ... ok
+test_gold_entity_prediction_all_o (test_evaluate_predictions.EntityTests.test_gold_entity_prediction_all_o) ... ok
+test_half_open_spans_and_sentence_end (test_evaluate_predictions.EntityTests.test_half_open_spans_and_sentence_end) ... ok
+test_illegal_bio_rejected_by_pure_api (test_evaluate_predictions.EntityTests.test_illegal_bio_rejected_by_pure_api) ... ok
+test_missing_one_of_two_entities (test_evaluate_predictions.EntityTests.test_missing_one_of_two_entities) ... ok
+test_mixed_five_types_manual_expected (test_evaluate_predictions.EntityTests.test_mixed_five_types_manual_expected) ... ok
+test_no_gold_but_predicted_entity (test_evaluate_predictions.EntityTests.test_no_gold_but_predicted_entity) ... ok
+test_pure_api_refuses_id_and_length_mismatch (test_evaluate_predictions.EntityTests.test_pure_api_refuses_id_and_length_mismatch) ... ok
+test_same_span_cannot_match_across_dialogues (test_evaluate_predictions.EntityTests.test_same_span_cannot_match_across_dialogues) ... ok
+test_same_span_cannot_match_across_sentences (test_evaluate_predictions.EntityTests.test_same_span_cannot_match_across_sentences) ... ok
+test_tuple_ids_avoid_underscore_collision (test_evaluate_predictions.EntityTests.test_tuple_ids_avoid_underscore_collision) ... ok
+test_wrong_end (test_evaluate_predictions.EntityTests.test_wrong_end) ... ok
+test_wrong_start (test_evaluate_predictions.EntityTests.test_wrong_start) ... ok
+test_wrong_type_counts_fp_and_fn (test_evaluate_predictions.EntityTests.test_wrong_type_counts_fp_and_fn) ... ok
+test_bad_gold_stops_scoring (test_evaluate_predictions.IntegrationTests.test_bad_gold_stops_scoring) ... ok
+test_cli_failure_publishes_only_rejection_no_metrics (test_evaluate_predictions.IntegrationTests.test_cli_failure_publishes_only_rejection_no_metrics) ... ok
+test_cli_success_matches_expected (test_evaluate_predictions.IntegrationTests.test_cli_success_matches_expected) ... ok
+test_duplicate_key_stops_scoring (test_evaluate_predictions.IntegrationTests.test_duplicate_key_stops_scoring) ... ok
+test_illegal_bio_stops_scoring (test_evaluate_predictions.IntegrationTests.test_illegal_bio_stops_scoring) ... ok
+test_invalid_label_stops_scoring (test_evaluate_predictions.IntegrationTests.test_invalid_label_stops_scoring) ... ok
+test_length_error_stops_scoring (test_evaluate_predictions.IntegrationTests.test_length_error_stops_scoring) ... ok
+test_missing_sentence_stops_scoring (test_evaluate_predictions.IntegrationTests.test_missing_sentence_stops_scoring) ... ok
+test_output_input_protection (test_evaluate_predictions.IntegrationTests.test_output_input_protection) ... ok
+test_raw_test_no_gold_refuses_even_after_validation_pass (test_evaluate_predictions.IntegrationTests.test_raw_test_no_gold_refuses_even_after_validation_pass) ... ok
+test_repeat_publication_never_overwrites (test_evaluate_predictions.IntegrationTests.test_repeat_publication_never_overwrites) ... ok
+test_single_loaded_snapshot_no_reread_after_validation (test_evaluate_predictions.IntegrationTests.test_single_loaded_snapshot_no_reread_after_validation) ... ok
+test_template_not_run_refuses_scoring (test_evaluate_predictions.IntegrationTests.test_template_not_run_refuses_scoring) ... ok
+test_valid_dev_readonly_hashes_and_counts (test_evaluate_predictions.IntegrationTests.test_valid_dev_readonly_hashes_and_counts) ... ok
+test_wrong_id_stops_scoring (test_evaluate_predictions.IntegrationTests.test_wrong_id_stops_scoring) ... ok
+test_zip_and_directory_reuse (test_evaluate_predictions.IntegrationTests.test_zip_and_directory_reuse) ... ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 0.940s
+
+OK

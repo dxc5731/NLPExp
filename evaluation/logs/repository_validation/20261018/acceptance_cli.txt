@@ -1,0 +1,10 @@
+COMMAND: C:\Users\HP\AppData\Local\Programs\Python\Python314\python.exe -X utf8 tests/run_pipeline_acceptance.py --official-data C:/Users/HP/Downloads/IMCS-V2-NER.zip
+EXIT: 0
+ELAPSED_SECONDS: 24.73711899999762
+stage1 exit= 0 seconds= 2.328
+stage2 exit= 0 seconds= 1.366
+stage3 exit= 0 seconds= 8.225
+all exit= 0 seconds= 10.05
+three_method_cli exit= 0 seconds= 0.414
+official_dev_readonly exit= 0 seconds= 1.912
+PASS: C:\Users\HP\Documents\ChatGPT\NLPExp-evaluation\evaluation\logs\pipeline_validation\acceptance\20261018T225551849836_46_l2go2\acceptance_summary.json

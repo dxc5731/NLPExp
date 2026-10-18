@@ -1,0 +1,221 @@
+{
+  "archive": "C:\\Users\\HP\\Downloads\\IMCS-V2-NER.zip",
+  "archive_bytes": 6369806,
+  "archive_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67",
+  "files": [
+    {
+      "name": "IMCS-V2-NER/IMCS-V2_dev.json",
+      "bytes": 17175331,
+      "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+    },
+    {
+      "name": "IMCS-V2-NER/mappings.json",
+      "bytes": 18192,
+      "sha256": "53871e27d91a66bf9ff43651130b4e426886cfd6f9abbf0d7d899344f2278c2b"
+    },
+    {
+      "name": "IMCS-V2-NER/IMCS-V2_test.json",
+      "bytes": 5984788,
+      "sha256": "46ee2e8bbffdc722cad7b813e5d8223c5842904924a164faaf0db523e7c0f09d"
+    },
+    {
+      "name": "IMCS-V2-NER/README.txt",
+      "bytes": 471,
+      "sha256": "d9a7e2be46061e4589cf222ce69bee083865326814fc4c68e0912cb30392984e"
+    },
+    {
+      "name": "IMCS-V2-NER/IMCS-V2-NER_test.json",
+      "bytes": 470013,
+      "sha256": "702d13ba02a22599f6a897a55f9e87a2edcd0cab6e480417ccf6982518ff6e66"
+    },
+    {
+      "name": "IMCS-V2-NER/example_pred.json",
+      "bytes": 5183,
+      "sha256": "b151cc03be803fd67753f5f88ca2d18aebafafef69436dfbdefe10fd7837a135"
+    },
+    {
+      "name": "IMCS-V2-NER/IMCS-V2_train.json",
+      "bytes": 50868537,
+      "sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24"
+    }
+  ],
+  "splits": {
+    "train": {
+      "dialogues": 2472,
+      "sentences": 98529,
+      "duplicate_sentence_ids": 0,
+      "characters": 1279361,
+      "empty_sentences": 0,
+      "sentences_with_bio": 98529,
+      "length_mismatch": 0,
+      "illegal_tag": 0,
+      "max_sentence_chars": 199,
+      "sentences_over_510_chars": 0,
+      "top_level_fields": {
+        "diagnosis": 2472,
+        "self_report": 2472,
+        "explicit_info": 2472,
+        "dialogue": 2472,
+        "report": 2472,
+        "implicit_info": 2472
+      },
+      "sentence_fields": {
+        "sentence_id": 98529,
+        "speaker": 98529,
+        "sentence": 98529,
+        "dialogue_act": 98529,
+        "BIO_label": 98529,
+        "symptom_norm": 98529,
+        "symptom_type": 98529,
+        "local_implicit_info": 98529
+      },
+      "tag_counts": {
+        "O": 1065137,
+        "B-Symptom": 46657,
+        "I-Symptom": 86561,
+        "B-Medical_Examination": 6381,
+        "I-Medical_Examination": 14614,
+        "B-Drug": 8143,
+        "I-Drug": 25665,
+        "B-Operation": 2924,
+        "I-Operation": 4727,
+        "B-Drug_Category": 5167,
+        "I-Drug_Category": 13385
+      },
+      "entity_counts_from_B_tags": {
+        "Symptom": 46657,
+        "Medical_Examination": 6381,
+        "Drug": 8143,
+        "Operation": 2924,
+        "Drug_Category": 5167
+      }
+    },
+    "dev": {
+      "dialogues": 833,
+      "sentences": 33267,
+      "duplicate_sentence_ids": 0,
+      "characters": 441339,
+      "empty_sentences": 0,
+      "sentences_with_bio": 33267,
+      "length_mismatch": 0,
+      "illegal_tag": 0,
+      "max_sentence_chars": 199,
+      "sentences_over_510_chars": 0,
+      "top_level_fields": {
+        "diagnosis": 833,
+        "self_report": 833,
+        "explicit_info": 833,
+        "dialogue": 833,
+        "report": 833,
+        "implicit_info": 833
+      },
+      "sentence_fields": {
+        "sentence_id": 33267,
+        "speaker": 33267,
+        "sentence": 33267,
+        "dialogue_act": 33267,
+        "BIO_label": 33267,
+        "symptom_norm": 33267,
+        "symptom_type": 33267,
+        "local_implicit_info": 33267
+      },
+      "tag_counts": {
+        "O": 369500,
+        "B-Symptom": 15351,
+        "I-Symptom": 27047,
+        "B-Drug": 3115,
+        "I-Drug": 9409,
+        "B-Drug_Category": 1717,
+        "I-Drug_Category": 4453,
+        "B-Medical_Examination": 2316,
+        "I-Medical_Examination": 5553,
+        "B-Operation": 1079,
+        "I-Operation": 1799
+      },
+      "entity_counts_from_B_tags": {
+        "Symptom": 15351,
+        "Drug": 3115,
+        "Drug_Category": 1717,
+        "Medical_Examination": 2316,
+        "Operation": 1079
+      }
+    },
+    "test": {
+      "dialogues": 811,
+      "sentences": 32935,
+      "duplicate_sentence_ids": 0,
+      "characters": 431570,
+      "empty_sentences": 0,
+      "sentences_without_bio": 32935,
+      "max_sentence_chars": 197,
+      "sentences_over_510_chars": 0,
+      "top_level_fields": {
+        "self_report": 811,
+        "explicit_info": 811,
+        "dialogue": 811
+      },
+      "sentence_fields": {
+        "sentence_id": 32935,
+        "speaker": 32935,
+        "sentence": 32935
+      },
+      "tag_counts": {},
+      "entity_counts_from_B_tags": {}
+    }
+  },
+  "dialogue_id_overlap": {
+    "train_dev": 0,
+    "train_test": 0,
+    "dev_test": 0
+  },
+  "submission_template": {
+    "dialogues": 811,
+    "sentences": 32935,
+    "values": {
+      "": 32935
+    },
+    "ids_match_test_exactly": true
+  },
+  "example_prediction": {
+    "dialogues": 2,
+    "sentences": 77,
+    "invalid_i_transitions": 38,
+    "length_mismatch": 0
+  },
+  "mappings": {
+    "number_of_objects": 6,
+    "object_sizes": [
+      444,
+      444,
+      4,
+      4,
+      3,
+      3
+    ],
+    "bio2id": {
+      "PAD": 0,
+      "O": 1,
+      "B-Symptom": 2,
+      "I-Symptom": 3
+    },
+    "id2bio": {
+      "0": "PAD",
+      "1": "O",
+      "2": "B-Symptom",
+      "3": "I-Symptom"
+    }
+  },
+  "archive_readme": "数据集下载文件为：IMCS-V2-NER.zip, 包括：\n* IMCS-V2_train.json: 训练集，IMCS-V2 4个子任务共享\n* IMCS-V2_dev.json: 验证集，IMCS-V2 4个子任务共享\n* IMCS-V2_test.json: 测试集， IMCS-V2 4个子任务共享\n* mappings.json：共包含444个归一化后的症状实体。\n* IMCS-V2-NER_test.json: IMCS-V2-NER任务的提交文件，提交格式请参照example_pred.json。\n* example_pred.json: 提交结果示例\n* README.txt: 说明文件\n",
+  "compared_to_previous_github_download": {
+    "train": {
+      "BIO_strings_changed": 17653,
+      "sentence_text_changed": 0,
+      "missing_old_sentence": 0
+    },
+    "dev": {
+      "BIO_strings_changed": 5845,
+      "sentence_text_changed": 0,
+      "missing_old_sentence": 0
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-18T22:58:30+08:00",
+  "status": "PASS",
+  "selected_files": 163,
+  "json_files_checked": 67,
+  "implementation_unchanged": true,
+  "historical_evidence_bytes_preserved": true,
+  "missing_markdown_file_targets": [],
+  "encoding_flags": [],
+  "secret_pattern_files": [],
+  "json_failures": [],
+  "prohibited_paths": [],
+  "ignore_probes": {
+    "evaluation/data/IMCS-V2-NER.zip": true,
+    "evaluation/results/probe/predictions_dev.json": true,
+    "evaluation/configs/evaluation_runs.json": true,
+    "evaluation/docs/前期核验/eval_task1_upstream.py": true,
+    "evaluation/logs/pipeline_validation/batches/probe/evaluation.json": true,
+    "evaluation/results/probe/errors/local_analysis/sentences.jsonl": true
+  },
+  "notice": "Checks cover selected files and known patterns; the historical evidence is retained as evidence, not new execution."
+}

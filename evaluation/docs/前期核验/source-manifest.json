@@ -1,0 +1,50 @@
+[
+  {
+    "file": "format_checker_IMCS_V2_NER.py",
+    "url": "https://raw.githubusercontent.com/CBLUEbenchmark/CBLUE/6a2c54f6a69265a33181c752a5350277149b8883/format_checker/format_checker_IMCS_V2_NER.py",
+    "bytes": 2775,
+    "sha256": "43225dd433f8d7693f6eea1cda5b0493dd4853179590d9e036bae54ad5708d9e"
+  },
+  {
+    "file": "format_checker.py",
+    "url": "https://raw.githubusercontent.com/CBLUEbenchmark/CBLUE/6a2c54f6a69265a33181c752a5350277149b8883/format_checker/format_checker.py",
+    "bytes": 1501,
+    "sha256": "1fd3973b28ef1b6acf0fa521d2d8a2e88c17439539b5938d5606d0b65247abaa"
+  },
+  {
+    "file": "format_checker_README.md",
+    "url": "https://raw.githubusercontent.com/CBLUEbenchmark/CBLUE/6a2c54f6a69265a33181c752a5350277149b8883/format_checker/README.md",
+    "bytes": 2898,
+    "sha256": "ab98767b6b5c4654d3c25cffb376b26599eac6c08d4d74d07db5dde6f6b60a66"
+  },
+  {
+    "file": "CBLUE_README_ZH.md",
+    "url": "https://raw.githubusercontent.com/CBLUEbenchmark/CBLUE/6a2c54f6a69265a33181c752a5350277149b8883/README_ZH.md",
+    "bytes": 35572,
+    "sha256": "e371165fd91ceb06dc895cc0f258b1a845a31cdb94fbb38deb90e35dc434d204"
+  },
+  {
+    "file": "CBLUE_LICENSE",
+    "url": "https://raw.githubusercontent.com/CBLUEbenchmark/CBLUE/6a2c54f6a69265a33181c752a5350277149b8883/LICENSE",
+    "bytes": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "file": "imcs-task1-README.md",
+    "url": "https://raw.githubusercontent.com/lemuria-wchen/imcs21-cblue/8d512c6635029bf068712d62cf2428e65c5e4a58/task1/README.md",
+    "bytes": 2669,
+    "sha256": "3015bfbe292814914adcffa3ce393d9c223fcf5691646831d1535ae2fc0634f6"
+  },
+  {
+    "file": "imcs-tree.json",
+    "url": "https://api.github.com/repos/lemuria-wchen/imcs21-cblue/git/trees/8d512c6635029bf068712d62cf2428e65c5e4a58?recursive=1",
+    "bytes": 35817,
+    "sha256": "bc6309cab1f3d83a404dbc3614c9bf61f147a4b4db50e3f0e25333de6230f23e"
+  },
+  {
+    "file": "course.html",
+    "url": "https://6ccfkuh9.qwenwork.host/course-project/%E8%AF%BE%E7%A8%8B%E9%A1%B9%E7%9B%AE%E4%BB%BB%E5%8A%A1%E4%B9%A6_20261013_codex.html",
+    "bytes": 29918,
+    "sha256": "102063e8b29ff45fa84249604e531d86cb339c4483511803dc239548f2096576"
+  }
+]

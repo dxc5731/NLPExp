@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "purpose": "synthetic_integration_test",
+  "status": "SUCCESS",
+  "created_at": "2026-10-17T10:47:39+08:00",
+  "manifest": {
+    "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\evaluation_runs.json",
+    "sha256": "534c27f969a6167651812e039a6f8b42e7b0df738fdb5e90288462e8853496d1"
+  },
+  "directory": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\batches\\20261017T104739822386_4o3zgaqq",
+  "runs": [
+    {
+      "index": 1,
+      "run_id": "synthetic_rules_v1",
+      "method_name": "人工规则接口",
+      "data_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\data_dev.json",
+      "split": "dev",
+      "prediction_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\rules\\predictions_dev.json",
+      "run_info_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\rules\\run_info.json",
+      "status": "SCORED",
+      "evaluation_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\batches\\20261017T104739822386_4o3zgaqq\\runs\\001\\evaluation.json",
+      "evaluation_sha256": "02dc76ead925c4f7b3b07996fb71c307beca6cecac3d08eb1eea495d971e1470",
+      "metadata_status": "PASS",
+      "automated_metadata_status": "PASS",
+      "entity_micro_f1": 0.0,
+      "error_export": "PASS"
+    },
+    {
+      "index": 2,
+      "run_id": "synthetic_crf_v1",
+      "method_name": "人工CRF接口",
+      "data_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\data_dev.json",
+      "split": "dev",
+      "prediction_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\crf\\predictions_dev.json",
+      "run_info_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\crf\\run_info.json",
+      "status": "SCORED",
+      "evaluation_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\batches\\20261017T104739822386_4o3zgaqq\\runs\\002\\evaluation.json",
+      "evaluation_sha256": "9229705dffe619ac571b1cd6a0e1d3557290427b5d8af2f10a7db86005c20982",
+      "metadata_status": "PASS",
+      "automated_metadata_status": "PASS",
+      "entity_micro_f1": 0.4444444444444444,
+      "error_export": "PASS"
+    },
+    {
+      "index": 3,
+      "run_id": "synthetic_bert_v1",
+      "method_name": "人工BERT接口",
+      "data_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\data_dev.json",
+      "split": "dev",
+      "prediction_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\bert\\predictions_dev.json",
+      "run_info_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\bert\\run_info.json",
+      "status": "SCORED",
+      "evaluation_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\batches\\20261017T104739822386_4o3zgaqq\\runs\\003\\evaluation.json",
+      "evaluation_sha256": "fb78778dbfdb8f07626809ed5c0403d3b4f7b364c4d8024d79c5322d67da8279",
+      "metadata_status": "PASS",
+      "automated_metadata_status": "PASS",
+      "entity_micro_f1": 0.8,
+      "error_export": "PASS"
+    }
+  ],
+  "self_check": "PASS",
+  "notice": "Technical scores are retained even with incomplete metadata. Comparison eligibility is checked separately; no claim of fair training.",
+  "comparison": {
+    "status": "COMPARED",
+    "included": 3,
+    "excluded": [],
+    "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\batches\\20261017T104739822386_4o3zgaqq\\comparison\\comparison.json"
+  },
+  "elapsed_seconds": 0.17681789999915054,
+  "implementation": {
+    "check_run_info.py": "ba4cd48b9a02a25da0fde6f5991ad928728c9b26f773caae35ad51e12b03c82c",
+    "compare_evaluations.py": "03eaefb5975f73ce2cc4e4c53776c7d589b3caf4309aadb54e0e4e9e937f5f11",
+    "evaluate_predictions.py": "7c75016ae1f4cc07d4037bfeb39ffb63aaee8d43fc7a1da10c15fe258c3dc173",
+    "evaluation_io.py": "8863d424b22d05ecd1300cda2dce9f382ba043e80c12039471ecb201c1781335",
+    "export_errors.py": "6bf80ffc670b9795f50ef4b6a569373cb8c06432e9d3b01e6b7dba234d81e003",
+    "ner_metrics.py": "5e02e13834e07560a3586038c832a603e675115bf0b3a2d0b8d3ebedf2356074",
+    "run_evaluation_batch.py": "ebbdc4b3eec92d2025b57c70e5ea3cf36b1139b10d83703b96ecf9eab6997327",
+    "validate_predictions.py": "75dc966361d216bdb9500acb63bce6be4313b708136290cd26b1195dfb7c1dcb"
+  }
+}

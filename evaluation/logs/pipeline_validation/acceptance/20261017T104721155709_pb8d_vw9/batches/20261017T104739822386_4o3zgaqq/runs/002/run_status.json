@@ -1,0 +1,16 @@
+{
+  "index": 2,
+  "run_id": "synthetic_crf_v1",
+  "method_name": "人工CRF接口",
+  "data_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\data_dev.json",
+  "split": "dev",
+  "prediction_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\crf\\predictions_dev.json",
+  "run_info_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\crf\\run_info.json",
+  "status": "SCORED",
+  "evaluation_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\batches\\20261017T104739822386_4o3zgaqq\\runs\\002\\evaluation.json",
+  "evaluation_sha256": "9229705dffe619ac571b1cd6a0e1d3557290427b5d8af2f10a7db86005c20982",
+  "metadata_status": "PASS",
+  "automated_metadata_status": "PASS",
+  "entity_micro_f1": 0.4444444444444444,
+  "error_export": "PASS"
+}

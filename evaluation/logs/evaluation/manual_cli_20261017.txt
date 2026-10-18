@@ -1,0 +1,16 @@
+Artificial scorer validation only; no model inference.
+Command: C:\Users\HP\AppData\Local\Programs\Python\Python314\python.exe -X utf8 src/evaluate_predictions.py --data examples/scorer_validation/data_dev.json --predictions examples/scorer_validation/predictions_dev.json --split dev --purpose scorer_validation --output-dir logs/evaluation/manual_cli
+Exit code: 0
+
+SCORED purpose=scorer_validation split=dev
+ENTITY MICRO (primary): TP=2 FP=2 FN=3 P=0.500000 R=0.400000 F1=0.444444
+Symptom: TP=1 FP=0 FN=0 P=1.000000 R=1.000000 F1=1.000000
+Drug: TP=0 FP=1 FN=1 P=0.000000 R=0.000000 F1=0.000000
+Drug_Category: TP=0 FP=1 FN=1 P=0.000000 R=0.000000 F1=0.000000
+Medical_Examination: TP=0 FP=0 FN=1 P=0.000000 R=0.000000 F1=0.000000
+Operation: TP=1 FP=0 FN=0 P=1.000000 R=1.000000 F1=1.000000
+Gold entities=5 Predicted entities=4
+Character accuracy (with O)=0.772727 correct=17 total=22
+Character including_o: micro-P=0.772727 micro-R=0.772727 micro-F1=0.772727 macro-F1=0.535354
+Character excluding_o: micro-P=0.714286 micro-R=0.500000 micro-F1=0.588235 macro-F1=0.500000
+Result: C:\Users\HP\Documents\ChatGPT\NLP大作业\logs\evaluation\manual_cli\20261017T100936263720_xe7oc7wq\evaluation.json

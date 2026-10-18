@@ -1,0 +1,16 @@
+{
+  "index": 1,
+  "run_id": "synthetic_rules_v1",
+  "method_name": "人工规则接口",
+  "data_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLPExp-evaluation\\evaluation\\examples\\pipeline_validation\\data_dev.json",
+  "split": "dev",
+  "prediction_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLPExp-evaluation\\evaluation\\examples\\pipeline_validation\\rules\\predictions_dev.json",
+  "run_info_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLPExp-evaluation\\evaluation\\examples\\pipeline_validation\\rules\\run_info.json",
+  "status": "SCORED",
+  "evaluation_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLPExp-evaluation\\evaluation\\logs\\pipeline_validation\\acceptance\\20261018T225551849836_46_l2go2\\batches\\20261018T225614047077_5ta7vog_\\runs\\001\\evaluation.json",
+  "evaluation_sha256": "abb62a0a7bee0c1f1f45cc4aacc2280f4121aa1aa13a9d0f7460cc3b65a3f6b8",
+  "metadata_status": "PASS",
+  "automated_metadata_status": "PASS",
+  "entity_micro_f1": 0.0,
+  "error_export": "PASS"
+}

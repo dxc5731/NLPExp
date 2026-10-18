@@ -1,0 +1,3 @@
+﻿record_id,run_id,method_name,split,dialogue_id,sentence_id,category,entity_type,start,end,character_positions,coordinate_unit,candidate_id,gold_sha256,prediction_sha256
+2cb0e922bf2b6174128f836fc857a5c7,synthetic_crf_v1,人工CRF接口,dev,manual_scoring,01,TP,Symptom,0,2,"[0, 1]","original Unicode code points, zero-based [start,end)",,dcc0d2c174c871b2defa24875bf454da83bb2e58ec8f0fb6de7ca2507fb8aba3,4cc465a73c08bba74e6251fbd9597d865c23587ecbb829898967d210decb401c
+b6acfa95ebee3fdabbb162520249ac45,synthetic_crf_v1,人工CRF接口,dev,manual_scoring,01,TP,Operation,12,14,"[12, 13]","original Unicode code points, zero-based [start,end)",,dcc0d2c174c871b2defa24875bf454da83bb2e58ec8f0fb6de7ca2507fb8aba3,4cc465a73c08bba74e6251fbd9597d865c23587ecbb829898967d210decb401c

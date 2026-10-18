@@ -1,0 +1,75 @@
+{
+  "purpose": "read_only_archive_structure_audit",
+  "created_at": "2026-10-16T22:26:08+08:00",
+  "python_version": "3.14.0",
+  "archive": "C:\\Users\\HP\\Downloads\\IMCS-V2-NER.zip",
+  "sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67",
+  "matches_preexisting_archive_hash": true,
+  "members": [
+    {
+      "path": "IMCS-V2-NER/",
+      "bytes": 0,
+      "is_directory": true
+    },
+    {
+      "path": "IMCS-V2-NER/IMCS-V2_dev.json",
+      "bytes": 17175331,
+      "is_directory": false
+    },
+    {
+      "path": "IMCS-V2-NER/mappings.json",
+      "bytes": 18192,
+      "is_directory": false
+    },
+    {
+      "path": "IMCS-V2-NER/IMCS-V2_test.json",
+      "bytes": 5984788,
+      "is_directory": false
+    },
+    {
+      "path": "IMCS-V2-NER/README.txt",
+      "bytes": 471,
+      "is_directory": false
+    },
+    {
+      "path": "IMCS-V2-NER/IMCS-V2-NER_test.json",
+      "bytes": 470013,
+      "is_directory": false
+    },
+    {
+      "path": "IMCS-V2-NER/example_pred.json",
+      "bytes": 5183,
+      "is_directory": false
+    },
+    {
+      "path": "IMCS-V2-NER/IMCS-V2_train.json",
+      "bytes": 50868537,
+      "is_directory": false
+    }
+  ],
+  "test_template": {
+    "dialogues": 811,
+    "sentences": 32935,
+    "values_all_empty": true,
+    "ids_exactly_match_raw_test": true,
+    "sha256": "702d13ba02a22599f6a897a55f9e87a2edcd0cab6e480417ccf6982518ff6e66"
+  },
+  "mappings_summary": {
+    "root_type": "array",
+    "mapping_sizes": [
+      444,
+      444,
+      4,
+      4,
+      3,
+      3
+    ],
+    "bio_label_to_id": {
+      "PAD": 0,
+      "O": 1,
+      "B-Symptom": 2,
+      "I-Symptom": 3
+    },
+    "note": "Only the BIO map is retained here; other mappings are not duplicated."
+  }
+}

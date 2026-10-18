@@ -1,0 +1,199 @@
+{
+  "scope": "NER, DAC, SR only; MRG archive not opened",
+  "packages": {
+    "NER": {
+      "archive_bytes": 6369806,
+      "archive_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67",
+      "files": [
+        {
+          "name": "IMCS-V2_dev.json",
+          "bytes": 17175331,
+          "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+        },
+        {
+          "name": "mappings.json",
+          "bytes": 18192,
+          "sha256": "53871e27d91a66bf9ff43651130b4e426886cfd6f9abbf0d7d899344f2278c2b"
+        },
+        {
+          "name": "IMCS-V2_test.json",
+          "bytes": 5984788,
+          "sha256": "46ee2e8bbffdc722cad7b813e5d8223c5842904924a164faaf0db523e7c0f09d"
+        },
+        {
+          "name": "README.txt",
+          "bytes": 471,
+          "sha256": "d9a7e2be46061e4589cf222ce69bee083865326814fc4c68e0912cb30392984e"
+        },
+        {
+          "name": "IMCS-V2-NER_test.json",
+          "bytes": 470013,
+          "sha256": "702d13ba02a22599f6a897a55f9e87a2edcd0cab6e480417ccf6982518ff6e66"
+        },
+        {
+          "name": "example_pred.json",
+          "bytes": 5183,
+          "sha256": "b151cc03be803fd67753f5f88ca2d18aebafafef69436dfbdefe10fd7837a135"
+        },
+        {
+          "name": "IMCS-V2_train.json",
+          "bytes": 50868537,
+          "sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24"
+        }
+      ],
+      "task_test_template": {
+        "dialogues": 811,
+        "first_dialogue_structure": "{'1': '', '2': '', '3': '', '4': '', '5': '', '6': '', '7': '', '8': '', '9': '', '10': '', '11': '', '12': '', '13': '', '14': '', '15': '', '16': '', '17': '', '18': '', '19': '', '20': '', '21': '', '22': '', '23': '', '24': '', '25': '', '26': '', '27': '', '28': '', '29': '', '30': '', '31': ''"
+      }
+    },
+    "DAC": {
+      "archive_bytes": 6369580,
+      "archive_sha256": "d9c048e664b035c794c30e0ee4ded5e7d5f6c4e119ed3fceb106ea17e1ca6d19",
+      "files": [
+        {
+          "name": "IMCS-V2_dev.json",
+          "bytes": 17175331,
+          "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+        },
+        {
+          "name": "mappings.json",
+          "bytes": 18192,
+          "sha256": "53871e27d91a66bf9ff43651130b4e426886cfd6f9abbf0d7d899344f2278c2b"
+        },
+        {
+          "name": "IMCS-V2-DAC_test.json",
+          "bytes": 470013,
+          "sha256": "702d13ba02a22599f6a897a55f9e87a2edcd0cab6e480417ccf6982518ff6e66"
+        },
+        {
+          "name": "IMCS-V2_test.json",
+          "bytes": 5984788,
+          "sha256": "46ee2e8bbffdc722cad7b813e5d8223c5842904924a164faaf0db523e7c0f09d"
+        },
+        {
+          "name": "README.txt",
+          "bytes": 471,
+          "sha256": "b8b7638f0f870a2ffbb205e96d5f6dc92ec0f9413814b68eebc613fb282d47d7"
+        },
+        {
+          "name": "example_pred.json",
+          "bytes": 2377,
+          "sha256": "0eea1d9a48616130330e13d738fab515944940fde5b09ac6db732102c0f9b323"
+        },
+        {
+          "name": "IMCS-V2_train.json",
+          "bytes": 50868537,
+          "sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24"
+        }
+      ],
+      "task_test_template": {
+        "dialogues": 811,
+        "first_dialogue_structure": "{'1': '', '2': '', '3': '', '4': '', '5': '', '6': '', '7': '', '8': '', '9': '', '10': '', '11': '', '12': '', '13': '', '14': '', '15': '', '16': '', '17': '', '18': '', '19': '', '20': '', '21': '', '22': '', '23': '', '24': '', '25': '', '26': '', '27': '', '28': '', '29': '', '30': '', '31': ''"
+      }
+    },
+    "SR": {
+      "archive_bytes": 6369069,
+      "archive_sha256": "a5944e616bc0f1e668966c2fc7ccb3971c754f291e18b52f7c7efcb3d3bdc626",
+      "files": [
+        {
+          "name": "IMCS-V2_dev.json",
+          "bytes": 17175331,
+          "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+        },
+        {
+          "name": "mappings.json",
+          "bytes": 18192,
+          "sha256": "53871e27d91a66bf9ff43651130b4e426886cfd6f9abbf0d7d899344f2278c2b"
+        },
+        {
+          "name": "IMCS-V2_test.json",
+          "bytes": 5984788,
+          "sha256": "46ee2e8bbffdc722cad7b813e5d8223c5842904924a164faaf0db523e7c0f09d"
+        },
+        {
+          "name": "README.txt",
+          "bytes": 468,
+          "sha256": "4f1dcba697860eccebd5c0321304300c4956f20f7fb60b138b57c9ed054dd37f"
+        },
+        {
+          "name": "example_pred.json",
+          "bytes": 1141,
+          "sha256": "27119f64a2546e3d6c249ac6e95b2f51f726de545b62574c3eeeb681e954b388"
+        },
+        {
+          "name": "IMCS-V2_train.json",
+          "bytes": 50868537,
+          "sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24"
+        },
+        {
+          "name": "IMCS-V2-SR_test.json",
+          "bytes": 484611,
+          "sha256": "8ff743b545dac262f18cb527a2b0f3e236df6d5545958e82f213e5b262145860"
+        }
+      ],
+      "task_test_template": {
+        "dialogues": 811,
+        "first_dialogue_structure": "{'1': {}, '2': {}, '3': {}, '4': {}, '5': {}, '6': {}, '7': {}, '8': {}, '9': {}, '10': {}, '11': {}, '12': {}, '13': {}, '14': {}, '15': {}, '16': {}, '17': {}, '18': {}, '19': {}, '20': {}, '21': {}, '22': {}, '23': {}, '24': {}, '25': {}, '26': {}, '27': {}, '28': {}, '29': {}, '30': {}, '31': {}"
+      }
+    }
+  },
+  "shared_files_identical": {
+    "IMCS-V2_dev.json": true,
+    "mappings.json": true,
+    "IMCS-V2_test.json": true,
+    "IMCS-V2_train.json": true
+  },
+  "exact_dialogue_text_overlap": {
+    "train_dev": 1,
+    "train_test": 0,
+    "dev_test": 0
+  },
+  "train_dev_exact_duplicate_details": [
+    {
+      "train": [
+        {
+          "dialogue_id": "10189999",
+          "sentences": 50,
+          "characters": 488,
+          "BIO_sha256": "688a8bf3e6409f27ce9ef5e00290acc34f2161ae4ebc534ff74539e8bd21fa34"
+        }
+      ],
+      "dev": [
+        {
+          "dialogue_id": "10333194",
+          "sentences": 50,
+          "characters": 488,
+          "BIO_sha256": "8c73a5a8203a9de2227fbdefcd612d81c82d512da9acc8d1d0556fec04c4429b"
+        }
+      ]
+    }
+  ],
+  "local_evaluation_sanity": {
+    "description": "Deterministic metric sanity check over full dev gold; not model predictions",
+    "dev_entity_count": 23578,
+    "entity_count_by_type": {
+      "Symptom": 15351,
+      "Drug": 3115,
+      "Drug_Category": 1717,
+      "Medical_Examination": 2316,
+      "Operation": 1079
+    },
+    "gold_as_prediction": {
+      "TP": 23578,
+      "FP": 0,
+      "FN": 0,
+      "P": 1.0,
+      "R": 1.0,
+      "F1": 1.0
+    },
+    "all_O_prediction": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 23578,
+      "P": 0,
+      "R": 0.0,
+      "F1": 0.0,
+      "character_accuracy": 0.8372248996802911
+    }
+  }
+}

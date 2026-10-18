@@ -1,0 +1,3 @@
+﻿candidate_id,run_id,method_name,split,dialogue_id,sentence_id,phenomenon,fp_record_id,fn_record_id,association_status
+2ad60e70e4cc1c701bbec08cd6afd08c,synthetic_bert_v1,人工BERT接口,dev,manual_scoring,01,suspected_miss,,34e3ae169c71074d66469aff635887d2,unlinked
+c64f36da1f9cbbff77448cd240d8987f,synthetic_bert_v1,人工BERT接口,dev,manual_scoring,09,suspected_spurious,20ea45084c60111b32dcbf55d1acc89d,,unlinked

@@ -1,0 +1,204 @@
+{
+  "created_at": "2026-10-16T10:55:51+08:00",
+  "timezone": "Asia/Shanghai",
+  "project": "IMCS-V2-NER Task1",
+  "course_live_fetch": {
+    "url": "https://6ccfkuh9.qwenwork.host/course-project/%E8%AF%BE%E7%A8%8B%E9%A1%B9%E7%9B%AE%E4%BB%BB%E5%8A%A1%E4%B9%A6_20261013_codex.html",
+    "retrieved_at": "2026-10-16T10:55:51+08:00",
+    "path": "docs/课程任务书/课程项目任务书_20261016.html",
+    "sha256": "102063e8b29ff45fa84249604e531d86cb339c4483511803dc239548f2096576",
+    "matches_2026_10_15_snapshot": true,
+    "text_path": "docs/课程任务书/课程项目任务书_20261016.txt",
+    "text_sha256": "eba1776e6a9887afc3af8d769b648e8855f38e105d34583c62b33f6eaf90ca47"
+  },
+  "history_basis": {
+    "session_id": "01a13e2a-d36d-7db1-a06e-2a66dc12c16a",
+    "source": "Original chat timestamps and user decisions, plus saved audit artifacts; no transcript copied into project",
+    "retrospective_entries": "AI交互记录.md entries 01-08"
+  },
+  "copied_artifacts": [
+    {
+      "path": "docs/前期核验/IMCS-V2-NER_平台规则与评估核验说明.md",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\IMCS-V2-NER_平台规则与评估核验说明.md",
+      "bytes": 19452,
+      "sha256": "984af88053dc3e6737eef912cd8f065340a471edda88bb0605490ed9de8b731b",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/Task1_课程全流程可行性核验.md",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\Task1_课程全流程可行性核验.md",
+      "bytes": 11775,
+      "sha256": "6a3c2cd8f0c623cd5f6f4683a1fafe10bb989a3c791e7ecf80b4bceaa63652a1",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/archive-audit.json",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\archive-audit.json",
+      "bytes": 6345,
+      "sha256": "0f0bce8a26bde3d95f4fb19c6e00cb4dcde856237112d499080bf11ec6fee303",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/related-packages-audit.json",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\related-packages-audit.json",
+      "bytes": 7029,
+      "sha256": "e83bcda63a135f08cc487bd448eb9fa9f90525e741facab5d32812d983ed3382",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/evaluator-contract-probes.json",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\evaluator-contract-probes.json",
+      "bytes": 1668,
+      "sha256": "867fc9463f75eb3b5da05d0d9620b36d6e5bba588cbcecf18a17dcd122ade2d2",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/config.json",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\config.json",
+      "bytes": 23606,
+      "sha256": "ed48cce2bc47bbfa394fdcf85982e6dec9d858ae5fc2c6379096c4384f002c49",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/seasons.json",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\seasons.json",
+      "bytes": 44531,
+      "sha256": "71f302ffbb8b70abb178340c1b36ad3046bad1d6645dba5043fe7b2e6b965db5",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/rank-total-page1.json",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\rank-total-page1.json",
+      "bytes": 49593,
+      "sha256": "4ce9fbc6f6edcab107c0374b7d525bda5ae7000a5f8f3b444228a365ba9ce415",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/rank-ner-page1.json",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\rank-ner-page1.json",
+      "bytes": 43191,
+      "sha256": "eb6b457ece62104466b9a2ffd155d244d866bdabe3c92a2d88d6bb98e8b02a30",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/rank-ner-summary.json",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\rank-ner-summary.json",
+      "bytes": 4490,
+      "sha256": "317b4c5480281279704fda7bc2736655ea1714d405385f81de60248c179b797f",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/source-manifest.json",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\source-manifest.json",
+      "bytes": 2284,
+      "sha256": "3aa929c9337d41181dc7ff4118b9e015446566a07330a48568a085cae5fc2fbd",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/format_checker.py",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\format_checker.py",
+      "bytes": 1501,
+      "sha256": "1fd3973b28ef1b6acf0fa521d2d8a2e88c17439539b5938d5606d0b65247abaa",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/format_checker_IMCS_V2_NER.py",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\format_checker_IMCS_V2_NER.py",
+      "bytes": 2775,
+      "sha256": "43225dd433f8d7693f6eea1cda5b0493dd4853179590d9e036bae54ad5708d9e",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/format_checker_README.md",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\format_checker_README.md",
+      "bytes": 2898,
+      "sha256": "ab98767b6b5c4654d3c25cffb376b26599eac6c08d4d74d07db5dde6f6b60a66",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/eval_task1_upstream.py",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\eval_task1_upstream.py",
+      "bytes": 4182,
+      "sha256": "9af0a1bdbdc813ff8f60b149c41e32d0d0b96f0cecb32b2bf0e37d568563d919",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/seqeval_sequence_labeling_v1.2.2.py",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\seqeval_sequence_labeling_v1.2.2.py",
+      "bytes": 29083,
+      "sha256": "f826759a4c1f61651cdb1ccba675cae7605cbf6a62ba5f6fb4b11681e5b55336",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/audit_zip.py",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\audit_zip.py",
+      "bytes": 5732,
+      "sha256": "a1c3b044c16b39be40915d81abaad2fac7649b1396fccd26046065329c9b57a8",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/audit_related_packages.py",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\audit_related_packages.py",
+      "bytes": 5187,
+      "sha256": "4a56d3072457e8b1465603e59f906d99766343342f3d8d75c83fc0688039df6a",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/verify_evaluator_contract.py",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\verify_evaluator_contract.py",
+      "bytes": 2967,
+      "sha256": "6a2cb216377061975a9ed8d79537764d010e9f380620756e6077088de1bae06a",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/imcs-task1-README.md",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\imcs-task1-README.md",
+      "bytes": 2669,
+      "sha256": "3015bfbe292814914adcffa3ce393d9c223fcf5691646831d1535ae2fc0634f6",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/CBLUE_README_ZH.md",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\CBLUE_README_ZH.md",
+      "bytes": 35572,
+      "sha256": "e371165fd91ceb06dc895cc0f258b1a845a31cdb94fbb38deb90e35dc434d204",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/CBLUE_LICENSE",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\CBLUE_LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/course.html",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\course.html",
+      "bytes": 29918,
+      "sha256": "102063e8b29ff45fa84249604e531d86cb339c4483511803dc239548f2096576",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/course-text.txt",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\tianchi-task1-audit\\course-text.txt",
+      "bytes": 10037,
+      "sha256": "35d06af57c6bce435e92802bf164d56fd1fb4c86b255364facae707c9bf5c44d",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    },
+    {
+      "path": "docs/前期核验/ner-ranking-wide-20261015.png",
+      "source_path": "C:\\Users\\HP\\.codex\\visualizations\\2026\\10\\15\\01a13e2a-d36d-7db1-a06e-2a66dc12c16a\\output\\playwright\\ner-ranking-wide-20261015.png",
+      "bytes": 122387,
+      "sha256": "6884d4bc64d08adb7728962df3008f8fa942d38d106caeb3da60b5bd2fec06c0",
+      "provenance": "2026-10-15 audit, copied unchanged"
+    }
+  ],
+  "not_copied": [
+    "Raw NER/DAC/SR/MRG archives and datasets",
+    "Older GitHub test labels",
+    "dataset-detail.json and platform-content.md (large raw page exports)",
+    "platform-detail.js",
+    "Superseded multi-task proposal"
+  ],
+  "state": "Preparation and feasibility audit only; no trained team model or Tianchi submission"
+}

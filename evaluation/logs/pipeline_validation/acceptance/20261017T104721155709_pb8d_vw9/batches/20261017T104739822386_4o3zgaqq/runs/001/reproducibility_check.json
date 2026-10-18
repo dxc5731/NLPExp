@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "run_id": "synthetic_rules_v1",
+  "method_name": "人工规则接口",
+  "automated_status": "PASS",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "schema_version",
+      "status": "PASS",
+      "message": "Supported metadata schema is 1.0."
+    },
+    {
+      "name": "artifact_kind",
+      "status": "PASS",
+      "message": "Synthetic fixtures and actual predictions must not be interchanged."
+    },
+    {
+      "name": "synthetic_notice",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "run_id",
+      "status": "PASS",
+      "message": "Must match manifest run_id."
+    },
+    {
+      "name": "method.name",
+      "status": "PASS",
+      "message": "Must match manifest method name."
+    },
+    {
+      "name": "method.kind",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "method_version",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "data.version",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "preprocessing",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "config.version",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "data.split",
+      "status": "PASS",
+      "message": "Must equal evaluated split."
+    },
+    {
+      "name": "data.source_sha256",
+      "status": "PASS",
+      "message": "Must equal scored gold bytes."
+    },
+    {
+      "name": "data.archive_sha256",
+      "status": "PASS",
+      "message": "Must match evaluated archive; real raw JSON also declares fixed platform archive provenance."
+    },
+    {
+      "name": "data.source_file",
+      "status": "PASS",
+      "message": "Must resolve to the scored source JSON."
+    },
+    {
+      "name": "prediction.sha256",
+      "status": "PASS",
+      "message": "Must match scored prediction bytes."
+    },
+    {
+      "name": "prediction.file",
+      "status": "PASS",
+      "message": "Must identify actual scored file."
+    },
+    {
+      "name": "input_files_unchanged",
+      "status": "PASS",
+      "message": "Actual source and prediction hashes match evaluation."
+    },
+    {
+      "name": "code.version",
+      "status": "PASS",
+      "message": "Provide Git revision+dirty or a local hashed source snapshot."
+    },
+    {
+      "name": "code.snapshot",
+      "status": "PASS",
+      "message": "Local file exists; declared hash checked when required/provided."
+    },
+    {
+      "name": "config.inline",
+      "status": "PASS",
+      "message": "Complete inline configuration supplied; completeness still needs human review."
+    },
+    {
+      "name": "logs",
+      "status": "PASS",
+      "message": "Provide at least one inference/evidence log reference."
+    },
+    {
+      "name": "logs[0]",
+      "status": "PASS",
+      "message": "Local file exists; declared hash checked when required/provided."
+    },
+    {
+      "name": "alignment",
+      "status": "PASS",
+      "message": "Describe original-character restoration, or explicitly no tokenizer."
+    },
+    {
+      "name": "inference_command",
+      "status": "NOT_APPLICABLE",
+      "message": "Explicit synthetic fixture; no inference occurred."
+    },
+    {
+      "name": "inference_working_directory",
+      "status": "NOT_APPLICABLE",
+      "message": "Explicit synthetic fixture; no inference occurred."
+    },
+    {
+      "name": "timing_scope",
+      "status": "NOT_APPLICABLE",
+      "message": "Explicit synthetic fixture; no inference occurred."
+    },
+    {
+      "name": "device",
+      "status": "PASS",
+      "message": "Record actual device; synthetic no-inference fixture may use null."
+    },
+    {
+      "name": "environment",
+      "status": "PASS",
+      "message": "Provide Python version and string package versions (empty packages allowed for stdlib rules)."
+    },
+    {
+      "name": "inference_elapsed_seconds",
+      "status": "PASS",
+      "message": "Measured finite nonnegative seconds; synthetic not-executed uses null."
+    },
+    {
+      "name": "training_and_seeds",
+      "status": "NOT_APPLICABLE",
+      "message": "Synthetic integration fixture, no model training."
+    },
+    {
+      "name": "actual_model_identity",
+      "status": "NOT_APPLICABLE",
+      "message": "Not applicable to this declared run."
+    },
+    {
+      "name": "absence_of_data_leakage",
+      "status": "NOT_APPLICABLE",
+      "message": "Not applicable to this declared run."
+    },
+    {
+      "name": "faithful_character_alignment",
+      "status": "NOT_APPLICABLE",
+      "message": "Not applicable to this declared run."
+    },
+    {
+      "name": "actual_training_reproducibility",
+      "status": "NOT_APPLICABLE",
+      "message": "Not applicable to this declared run."
+    },
+    {
+      "name": "truth_of_inference_timing",
+      "status": "NOT_APPLICABLE",
+      "message": "Not applicable to this declared run."
+    }
+  ],
+  "evidence": [
+    {
+      "label": "code.snapshot",
+      "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\fixture_source.txt",
+      "sha256": "abaeddc98f5879cfd7e5db7c55217ff2cad79bf29901d7cceafe98dafd80ae5d"
+    },
+    {
+      "label": "logs[0]",
+      "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\rules\\fixture_creation.txt",
+      "sha256": "d3a6b82bcee67484e54d99f1226f277a6b04dcca603fa0ce93b49762cf1425b3"
+    }
+  ],
+  "inference_elapsed_seconds_for_comparison": null,
+  "notice": "PASS checks file presence, type and consistency only; human claims are not automatically verified.",
+  "run_info": {
+    "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\rules\\run_info.json",
+    "sha256": "a4e233c7a7a5e5ca979ac09a52d46f5a66d89847119b6b9d396a74f3e1a1d6cd"
+  },
+  "method_kind": "dictionary_rules",
+  "method_version": "synthetic-interface-v1",
+  "data_version": "manual-pipeline-fixture-v1"
+}

@@ -1,0 +1,32 @@
+{
+  "code": "SUCCESS",
+  "data": [
+    {
+      "id": 27,
+      "datalabConfigIdShadow": 27,
+      "datalabId": 95414,
+      "seasonName": "CBLUE3.0",
+      "seasonStartTime": "2023-05-12 12:05:00",
+      "seasonEndTime": "2027-04-30 12:00:00",
+      "scoreList": null
+    },
+    {
+      "id": 9,
+      "datalabConfigIdShadow": 9,
+      "datalabId": 95414,
+      "seasonName": "CBLUE2.0",
+      "seasonStartTime": "2022-02-14 18:00:00",
+      "seasonEndTime": "2023-05-12 12:00:00",
+      "scoreList": null
+    },
+    {
+      "id": 3,
+      "datalabConfigIdShadow": 0,
+      "datalabId": 95414,
+      "seasonName": "CBLUE1.0",
+      "seasonStartTime": "2021-04-01 00:00:00",
+      "seasonEndTime": "2022-02-14 18:00:00",
+      "scoreList": null
+    }
+  ]
+}

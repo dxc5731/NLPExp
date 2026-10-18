@@ -1,0 +1,16 @@
+﻿method_name,run_id,entity_type,precision,recall,f1,tp,fp,fn,support
+人工BERT接口,synthetic_bert_v1,Symptom,1.0,1.0,1.0,1,0,0,1
+人工BERT接口,synthetic_bert_v1,Drug,1.0,1.0,1.0,1,0,0,1
+人工BERT接口,synthetic_bert_v1,Drug_Category,1.0,1.0,1.0,1,0,0,1
+人工BERT接口,synthetic_bert_v1,Medical_Examination,1.0,1.0,1.0,1,0,0,1
+人工BERT接口,synthetic_bert_v1,Operation,0.0,0.0,0.0,0,1,1,1
+人工CRF接口,synthetic_crf_v1,Symptom,1.0,1.0,1.0,1,0,0,1
+人工CRF接口,synthetic_crf_v1,Drug,0.0,0.0,0.0,0,1,1,1
+人工CRF接口,synthetic_crf_v1,Drug_Category,0.0,0.0,0.0,0,1,1,1
+人工CRF接口,synthetic_crf_v1,Medical_Examination,0.0,0.0,0.0,0,0,1,1
+人工CRF接口,synthetic_crf_v1,Operation,1.0,1.0,1.0,1,0,0,1
+人工规则接口,synthetic_rules_v1,Symptom,0.0,0.0,0.0,0,0,1,1
+人工规则接口,synthetic_rules_v1,Drug,0.0,0.0,0.0,0,0,1,1
+人工规则接口,synthetic_rules_v1,Drug_Category,0.0,0.0,0.0,0,0,1,1
+人工规则接口,synthetic_rules_v1,Medical_Examination,0.0,0.0,0.0,0,0,1,1
+人工规则接口,synthetic_rules_v1,Operation,0.0,0.0,0.0,0,0,1,1

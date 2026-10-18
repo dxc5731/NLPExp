@@ -1,0 +1,51 @@
+Purpose: artificial scorer validation, not model experiments
+Command: C:\Users\HP\AppData\Local\Programs\Python\Python314\python.exe -X utf8 -m unittest discover -s tests -p test_validate_predictions.py -v
+Exit code: 0
+
+test_all_five_types_and_adjacent_entities (test_validate_predictions.ValidationTests.test_all_five_types_and_adjacent_entities) ... ok
+test_ambiguous_directory_and_zip (test_validate_predictions.ValidationTests.test_ambiguous_directory_and_zip) ... ok
+test_bad_gold_alignment_and_bio (test_validate_predictions.ValidationTests.test_bad_gold_alignment_and_bio) ... ok
+test_bio_resets_at_sentence_boundary (test_validate_predictions.ValidationTests.test_bio_resets_at_sentence_boundary) ... ok
+test_cli_audit_only_and_overwrite_protection (test_validate_predictions.ValidationTests.test_cli_audit_only_and_overwrite_protection) ... ok
+test_cli_exit_codes_and_reports (test_validate_predictions.ValidationTests.test_cli_exit_codes_and_reports) ... ok
+test_cross_type_i (test_validate_predictions.ValidationTests.test_cross_type_i) ... ok
+test_data_sentence_schema_errors (test_validate_predictions.ValidationTests.test_data_sentence_schema_errors) ... ok
+test_directory_and_nested_directory_resolution (test_validate_predictions.ValidationTests.test_directory_and_nested_directory_resolution) ... ok
+test_duplicate_prediction_keys_root_and_nested (test_validate_predictions.ValidationTests.test_duplicate_prediction_keys_root_and_nested) ... ok
+test_duplicate_source_key (test_validate_predictions.ValidationTests.test_duplicate_source_key) ... ok
+test_duplicate_source_sentence_id (test_validate_predictions.ValidationTests.test_duplicate_source_sentence_id) ... ok
+test_empty_predictions (test_validate_predictions.ValidationTests.test_empty_predictions) ... ok
+test_error_counts_exhaustive_examples_bounded_no_text (test_validate_predictions.ValidationTests.test_error_counts_exhaustive_examples_bounded_no_text) ... ok
+test_extra_empty_dialogue (test_validate_predictions.ValidationTests.test_extra_empty_dialogue) ... ok
+test_extra_sentence (test_validate_predictions.ValidationTests.test_extra_sentence) ... ok
+test_i_at_sentence_start (test_validate_predictions.ValidationTests.test_i_at_sentence_start) ... ok
+test_invalid_data_json_and_root_including_null (test_validate_predictions.ValidationTests.test_invalid_data_json_and_root_including_null) ... ok
+test_invalid_json_utf8_bom_and_constants (test_validate_predictions.ValidationTests.test_invalid_json_utf8_bom_and_constants) ... ok
+test_invalid_separators (test_validate_predictions.ValidationTests.test_invalid_separators) ... ok
+test_legal_complete_predictions (test_validate_predictions.ValidationTests.test_legal_complete_predictions) ... ok
+test_missing_dialogue (test_validate_predictions.ValidationTests.test_missing_dialogue) ... ok
+test_missing_files_and_bad_zip (test_validate_predictions.ValidationTests.test_missing_files_and_bad_zip) ... ok
+test_missing_sentence (test_validate_predictions.ValidationTests.test_missing_sentence) ... ok
+test_missing_text_in_raw_test_fails (test_validate_predictions.ValidationTests.test_missing_text_in_raw_test_fails) ... ok
+test_no_mutation_or_silent_repair (test_validate_predictions.ValidationTests.test_no_mutation_or_silent_repair) ... ok
+test_o_to_i (test_validate_predictions.ValidationTests.test_o_to_i) ... ok
+test_prediction_dialogue_type_and_empty_ids (test_validate_predictions.ValidationTests.test_prediction_dialogue_type_and_empty_ids) ... ok
+test_prediction_root_types_including_null (test_validate_predictions.ValidationTests.test_prediction_root_types_including_null) ... ok
+test_prediction_value_types (test_validate_predictions.ValidationTests.test_prediction_value_types) ... ok
+test_raw_test_has_text_no_gold (test_validate_predictions.ValidationTests.test_raw_test_has_text_no_gold) ... ok
+test_short_and_long_sequences (test_validate_predictions.ValidationTests.test_short_and_long_sequences) ... ok
+test_split_mismatch (test_validate_predictions.ValidationTests.test_split_mismatch) ... ok
+test_template_cannot_claim_alignment_pass (test_validate_predictions.ValidationTests.test_template_cannot_claim_alignment_pass) ... ok
+test_test_unexpected_gold (test_validate_predictions.ValidationTests.test_test_unexpected_gold) ... ok
+test_test_zip_prefers_original_text_and_falls_back_explicitly (test_validate_predictions.ValidationTests.test_test_zip_prefers_original_text_and_falls_back_explicitly) ... ok
+test_unicode_codepoints_spaces_punctuation (test_validate_predictions.ValidationTests.test_unicode_codepoints_spaces_punctuation) ... ok
+test_unknown_and_special_labels (test_validate_predictions.ValidationTests.test_unknown_and_special_labels) ... ok
+test_unpaired_surrogates_rejected_and_report_encodable (test_validate_predictions.ValidationTests.test_unpaired_surrogates_rejected_and_report_encodable) ... ok
+test_wrong_dialogue_id (test_validate_predictions.ValidationTests.test_wrong_dialogue_id) ... ok
+test_wrong_id_with_unchanged_count (test_validate_predictions.ValidationTests.test_wrong_id_with_unchanged_count) ... ok
+test_zip_readonly_and_source_hashes (test_validate_predictions.ValidationTests.test_zip_readonly_and_source_hashes) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 1.966s
+
+OK

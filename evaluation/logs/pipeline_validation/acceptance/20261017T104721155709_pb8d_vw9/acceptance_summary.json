@@ -1,0 +1,184 @@
+{
+  "purpose": "synthetic_integration_test",
+  "commands": [
+    {
+      "name": "stage1",
+      "arguments": [
+        "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_validate_predictions.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.9131966999993892,
+      "transcript": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\stage1.txt"
+    },
+    {
+      "name": "stage2",
+      "arguments": [
+        "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_evaluate_predictions.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.9503231999988202,
+      "transcript": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\stage2.txt"
+    },
+    {
+      "name": "stage3",
+      "arguments": [
+        "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_evaluation_pipeline.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.5727503999951296,
+      "transcript": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\stage3.txt"
+    },
+    {
+      "name": "all",
+      "arguments": [
+        "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 9.018782899998769,
+      "transcript": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\all.txt"
+    },
+    {
+      "name": "three_method_cli",
+      "arguments": [
+        "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-X",
+        "utf8",
+        "src/run_evaluation_batch.py",
+        "--manifest",
+        "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\evaluation_runs.json",
+        "--output-dir",
+        "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\batches",
+        "--csv-bom"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.3867836999997962,
+      "transcript": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\three_method_cli.txt"
+    },
+    {
+      "name": "official_dev_readonly",
+      "arguments": [
+        "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-X",
+        "utf8",
+        "src/validate_predictions.py",
+        "--data",
+        "C:\\Users\\HP\\Downloads\\IMCS-V2-NER.zip",
+        "--split",
+        "dev",
+        "--audit-data",
+        "--report",
+        "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\official_dev_readonly.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.2267072000031476,
+      "transcript": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\official_dev_readonly.txt"
+    }
+  ],
+  "test_counts": {
+    "stage1": 42,
+    "stage2": 47,
+    "stage3": 49,
+    "all": 138
+  },
+  "notice": "Artificial handoff metrics only; official dev is read-only audited, never scored here.",
+  "artificial_runs": [
+    {
+      "run_id": "synthetic_rules_v1",
+      "entity_micro": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5,
+        "predicted": 0
+      },
+      "independent_metrics_match": true,
+      "saved_errors_match": true
+    },
+    {
+      "run_id": "synthetic_crf_v1",
+      "entity_micro": {
+        "tp": 2,
+        "fp": 2,
+        "fn": 3,
+        "precision": 0.5,
+        "recall": 0.4,
+        "f1": 0.4444444444444444,
+        "support": 5,
+        "predicted": 4
+      },
+      "independent_metrics_match": true,
+      "saved_errors_match": true
+    },
+    {
+      "run_id": "synthetic_bert_v1",
+      "entity_micro": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8,
+        "support": 5,
+        "predicted": 5
+      },
+      "independent_metrics_match": true,
+      "saved_errors_match": true
+    }
+  ],
+  "status": "PASS",
+  "batch_report": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\batches\\20261017T104739822386_4o3zgaqq\\batch_report.json",
+  "official_audit": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\official_dev_readonly.json",
+  "input_hashes_unchanged": true,
+  "official_archive_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67",
+  "official_dev_scored": false,
+  "synthetic_unique_sentences": 2,
+  "prediction_sentence_records": 6,
+  "official_dev_counts": {
+    "dialogues": 833,
+    "sentences": 33267,
+    "characters": 441339
+  }
+}

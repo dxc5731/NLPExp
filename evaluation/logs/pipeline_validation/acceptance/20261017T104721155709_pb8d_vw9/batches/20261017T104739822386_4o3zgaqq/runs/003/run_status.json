@@ -1,0 +1,16 @@
+{
+  "index": 3,
+  "run_id": "synthetic_bert_v1",
+  "method_name": "人工BERT接口",
+  "data_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\data_dev.json",
+  "split": "dev",
+  "prediction_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\bert\\predictions_dev.json",
+  "run_info_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\bert\\run_info.json",
+  "status": "SCORED",
+  "evaluation_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\batches\\20261017T104739822386_4o3zgaqq\\runs\\003\\evaluation.json",
+  "evaluation_sha256": "fb78778dbfdb8f07626809ed5c0403d3b4f7b364c4d8024d79c5322d67da8279",
+  "metadata_status": "PASS",
+  "automated_metadata_status": "PASS",
+  "entity_micro_f1": 0.8,
+  "error_export": "PASS"
+}

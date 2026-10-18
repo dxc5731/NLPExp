@@ -1,0 +1,1633 @@
+{
+  "schema_version": "1.0",
+  "purpose": "synthetic_integration_test",
+  "status": "COMPARED",
+  "scope": "metrics-compatible and automated metadata-complete; not proof of fair training or actual reproducibility",
+  "included": [
+    {
+      "evaluation_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\batches\\20261017T104739822386_4o3zgaqq\\runs\\003\\evaluation.json",
+      "evaluation_sha256": "fb78778dbfdb8f07626809ed5c0403d3b4f7b364c4d8024d79c5322d67da8279",
+      "run_id": "synthetic_bert_v1",
+      "method_name": "人工BERT接口",
+      "metadata_status": "PASS",
+      "run": {
+        "run_id": "synthetic_bert_v1",
+        "method_name": "人工BERT接口",
+        "method_version": "synthetic-interface-v1",
+        "data_version": "manual-pipeline-fixture-v1",
+        "run_info_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\bert\\run_info.json",
+        "run_info_sha256": "7b88a6fa6cd840966d6128f3f4cf7ea1dd5abdb9b99647151a359be1c39fff0b"
+      },
+      "inputs": {
+        "data": {
+          "requested_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\data_dev.json",
+          "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\data_dev.json",
+          "sha256": "dcc0d2c174c871b2defa24875bf454da83bb2e58ec8f0fb6de7ca2507fb8aba3"
+        },
+        "predictions": {
+          "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\bert\\predictions_dev.json",
+          "sha256": "d00b501bd26254e813bda6dd1aee3e81ede9cfc2f7b465b7d2824ddd4f26d9c1"
+        }
+      },
+      "entities": {
+        "micro": {
+          "tp": 4,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1": 0.8,
+          "support": 5,
+          "predicted": 5
+        },
+        "per_type": {
+          "Symptom": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Drug": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Drug_Category": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Medical_Examination": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Operation": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 1
+          }
+        },
+        "gold_total": 5,
+        "predicted_total": 5
+      },
+      "characters": {
+        "total": 22,
+        "correct": 19,
+        "accuracy": 0.8636363636363636,
+        "per_label": {
+          "O": {
+            "tp": 11,
+            "fp": 2,
+            "fn": 1,
+            "precision": 0.8461538461538461,
+            "recall": 0.9166666666666666,
+            "f1": 0.88,
+            "support": 12,
+            "predicted": 13
+          },
+          "B-Symptom": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "I-Symptom": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "B-Drug": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "I-Drug": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "B-Drug_Category": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "I-Drug_Category": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "B-Medical_Examination": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "I-Medical_Examination": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "B-Operation": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "I-Operation": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          }
+        },
+        "including_o": {
+          "labels": [
+            "O",
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "micro": {
+            "tp": 19,
+            "fp": 3,
+            "fn": 3,
+            "precision": 0.8636363636363636,
+            "recall": 0.8636363636363636,
+            "f1": 0.8636363636363636,
+            "support": 22,
+            "predicted": 22
+          },
+          "macro_f1": 0.8072727272727274,
+          "macro_denominator": 11
+        },
+        "excluding_o": {
+          "labels": [
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "micro": {
+            "tp": 8,
+            "fp": 1,
+            "fn": 2,
+            "precision": 0.8888888888888888,
+            "recall": 0.8,
+            "f1": 0.8421052631578947,
+            "support": 10,
+            "predicted": 9
+          },
+          "macro_f1": 0.8,
+          "macro_denominator": 10
+        },
+        "confusion_matrix": {
+          "labels": [
+            "O",
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "rows": "gold",
+          "columns": "predicted",
+          "counts": [
+            [
+              11,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "row_sums": [
+            12,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "column_sums": [
+            13,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ]
+        }
+      },
+      "automated_metadata_status": "PASS",
+      "human_review_pending": []
+    },
+    {
+      "evaluation_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\batches\\20261017T104739822386_4o3zgaqq\\runs\\002\\evaluation.json",
+      "evaluation_sha256": "9229705dffe619ac571b1cd6a0e1d3557290427b5d8af2f10a7db86005c20982",
+      "run_id": "synthetic_crf_v1",
+      "method_name": "人工CRF接口",
+      "metadata_status": "PASS",
+      "run": {
+        "run_id": "synthetic_crf_v1",
+        "method_name": "人工CRF接口",
+        "method_version": "synthetic-interface-v1",
+        "data_version": "manual-pipeline-fixture-v1",
+        "run_info_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\crf\\run_info.json",
+        "run_info_sha256": "d1a38b5122608b99474671b2171cd13c101b61a84f60136c9a4979be306b3c37"
+      },
+      "inputs": {
+        "data": {
+          "requested_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\data_dev.json",
+          "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\data_dev.json",
+          "sha256": "dcc0d2c174c871b2defa24875bf454da83bb2e58ec8f0fb6de7ca2507fb8aba3"
+        },
+        "predictions": {
+          "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\crf\\predictions_dev.json",
+          "sha256": "4cc465a73c08bba74e6251fbd9597d865c23587ecbb829898967d210decb401c"
+        }
+      },
+      "entities": {
+        "micro": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.5,
+          "recall": 0.4,
+          "f1": 0.4444444444444444,
+          "support": 5,
+          "predicted": 4
+        },
+        "per_type": {
+          "Symptom": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Drug": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Drug_Category": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Medical_Examination": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "Operation": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          }
+        },
+        "gold_total": 5,
+        "predicted_total": 4
+      },
+      "characters": {
+        "total": 22,
+        "correct": 17,
+        "accuracy": 0.7727272727272727,
+        "per_label": {
+          "O": {
+            "tp": 12,
+            "fp": 3,
+            "fn": 0,
+            "precision": 0.8,
+            "recall": 1.0,
+            "f1": 0.8888888888888888,
+            "support": 12,
+            "predicted": 15
+          },
+          "B-Symptom": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "I-Symptom": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "B-Drug": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "I-Drug": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "B-Drug_Category": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "I-Drug_Category": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "B-Medical_Examination": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "I-Medical_Examination": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "B-Operation": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "I-Operation": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          }
+        },
+        "including_o": {
+          "labels": [
+            "O",
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "micro": {
+            "tp": 17,
+            "fp": 5,
+            "fn": 5,
+            "precision": 0.7727272727272727,
+            "recall": 0.7727272727272727,
+            "f1": 0.7727272727272727,
+            "support": 22,
+            "predicted": 22
+          },
+          "macro_f1": 0.5353535353535354,
+          "macro_denominator": 11
+        },
+        "excluding_o": {
+          "labels": [
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "micro": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 5,
+            "precision": 0.7142857142857143,
+            "recall": 0.5,
+            "f1": 0.5882352941176471,
+            "support": 10,
+            "predicted": 7
+          },
+          "macro_f1": 0.5,
+          "macro_denominator": 10
+        },
+        "confusion_matrix": {
+          "labels": [
+            "O",
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "rows": "gold",
+          "columns": "predicted",
+          "counts": [
+            [
+              12,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "row_sums": [
+            12,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "column_sums": [
+            15,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        }
+      },
+      "automated_metadata_status": "PASS",
+      "human_review_pending": []
+    },
+    {
+      "evaluation_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\logs\\pipeline_validation\\acceptance\\20261017T104721155709_pb8d_vw9\\batches\\20261017T104739822386_4o3zgaqq\\runs\\001\\evaluation.json",
+      "evaluation_sha256": "02dc76ead925c4f7b3b07996fb71c307beca6cecac3d08eb1eea495d971e1470",
+      "run_id": "synthetic_rules_v1",
+      "method_name": "人工规则接口",
+      "metadata_status": "PASS",
+      "run": {
+        "run_id": "synthetic_rules_v1",
+        "method_name": "人工规则接口",
+        "method_version": "synthetic-interface-v1",
+        "data_version": "manual-pipeline-fixture-v1",
+        "run_info_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\rules\\run_info.json",
+        "run_info_sha256": "a4e233c7a7a5e5ca979ac09a52d46f5a66d89847119b6b9d396a74f3e1a1d6cd"
+      },
+      "inputs": {
+        "data": {
+          "requested_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\data_dev.json",
+          "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\data_dev.json",
+          "sha256": "dcc0d2c174c871b2defa24875bf454da83bb2e58ec8f0fb6de7ca2507fb8aba3"
+        },
+        "predictions": {
+          "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\rules\\predictions_dev.json",
+          "sha256": "2a52b0825da9612beb4cb3d46ca3bf89ea271b9204880cae86a2ce79838f6d58"
+        }
+      },
+      "entities": {
+        "micro": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 5,
+          "predicted": 0
+        },
+        "per_type": {
+          "Symptom": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "Drug": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "Drug_Category": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "Medical_Examination": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "Operation": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          }
+        },
+        "gold_total": 5,
+        "predicted_total": 0
+      },
+      "characters": {
+        "total": 22,
+        "correct": 12,
+        "accuracy": 0.5454545454545454,
+        "per_label": {
+          "O": {
+            "tp": 12,
+            "fp": 10,
+            "fn": 0,
+            "precision": 0.5454545454545454,
+            "recall": 1.0,
+            "f1": 0.7058823529411765,
+            "support": 12,
+            "predicted": 22
+          },
+          "B-Symptom": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "I-Symptom": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "B-Drug": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "I-Drug": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "B-Drug_Category": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "I-Drug_Category": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "B-Medical_Examination": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "I-Medical_Examination": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "B-Operation": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "I-Operation": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          }
+        },
+        "including_o": {
+          "labels": [
+            "O",
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "micro": {
+            "tp": 12,
+            "fp": 10,
+            "fn": 10,
+            "precision": 0.5454545454545454,
+            "recall": 0.5454545454545454,
+            "f1": 0.5454545454545454,
+            "support": 22,
+            "predicted": 22
+          },
+          "macro_f1": 0.06417112299465241,
+          "macro_denominator": 11
+        },
+        "excluding_o": {
+          "labels": [
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "micro": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 10,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 10,
+            "predicted": 0
+          },
+          "macro_f1": 0.0,
+          "macro_denominator": 10
+        },
+        "confusion_matrix": {
+          "labels": [
+            "O",
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "rows": "gold",
+          "columns": "predicted",
+          "counts": [
+            [
+              12,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "row_sums": [
+            12,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "column_sums": [
+            22,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "automated_metadata_status": "PASS",
+      "human_review_pending": []
+    }
+  ],
+  "excluded": [],
+  "overview": [
+    {
+      "method_name": "人工BERT接口",
+      "run_id": "synthetic_bert_v1",
+      "method_version": "synthetic-interface-v1",
+      "split": "dev",
+      "data_version": "manual-pipeline-fixture-v1",
+      "gold_sha256": "dcc0d2c174c871b2defa24875bf454da83bb2e58ec8f0fb6de7ca2507fb8aba3",
+      "entity_micro_precision": 0.8,
+      "entity_micro_recall": 0.8,
+      "entity_micro_f1": 0.8,
+      "character_accuracy": 0.8636363636363636,
+      "character_micro_f1_excluding_o": 0.8421052631578947,
+      "sentences": 2,
+      "inference_elapsed_seconds": null,
+      "metadata_status": "PASS",
+      "automated_metadata_status": "PASS",
+      "purpose": "synthetic_integration_test",
+      "evaluation_sha256": "fb78778dbfdb8f07626809ed5c0403d3b4f7b364c4d8024d79c5322d67da8279",
+      "prediction_sha256": "d00b501bd26254e813bda6dd1aee3e81ede9cfc2f7b465b7d2824ddd4f26d9c1"
+    },
+    {
+      "method_name": "人工CRF接口",
+      "run_id": "synthetic_crf_v1",
+      "method_version": "synthetic-interface-v1",
+      "split": "dev",
+      "data_version": "manual-pipeline-fixture-v1",
+      "gold_sha256": "dcc0d2c174c871b2defa24875bf454da83bb2e58ec8f0fb6de7ca2507fb8aba3",
+      "entity_micro_precision": 0.5,
+      "entity_micro_recall": 0.4,
+      "entity_micro_f1": 0.4444444444444444,
+      "character_accuracy": 0.7727272727272727,
+      "character_micro_f1_excluding_o": 0.5882352941176471,
+      "sentences": 2,
+      "inference_elapsed_seconds": null,
+      "metadata_status": "PASS",
+      "automated_metadata_status": "PASS",
+      "purpose": "synthetic_integration_test",
+      "evaluation_sha256": "9229705dffe619ac571b1cd6a0e1d3557290427b5d8af2f10a7db86005c20982",
+      "prediction_sha256": "4cc465a73c08bba74e6251fbd9597d865c23587ecbb829898967d210decb401c"
+    },
+    {
+      "method_name": "人工规则接口",
+      "run_id": "synthetic_rules_v1",
+      "method_version": "synthetic-interface-v1",
+      "split": "dev",
+      "data_version": "manual-pipeline-fixture-v1",
+      "gold_sha256": "dcc0d2c174c871b2defa24875bf454da83bb2e58ec8f0fb6de7ca2507fb8aba3",
+      "entity_micro_precision": 0.0,
+      "entity_micro_recall": 0.0,
+      "entity_micro_f1": 0.0,
+      "character_accuracy": 0.5454545454545454,
+      "character_micro_f1_excluding_o": 0.0,
+      "sentences": 2,
+      "inference_elapsed_seconds": null,
+      "metadata_status": "PASS",
+      "automated_metadata_status": "PASS",
+      "purpose": "synthetic_integration_test",
+      "evaluation_sha256": "02dc76ead925c4f7b3b07996fb71c307beca6cecac3d08eb1eea495d971e1470",
+      "prediction_sha256": "2a52b0825da9612beb4cb3d46ca3bf89ea271b9204880cae86a2ce79838f6d58"
+    }
+  ],
+  "entity_types": [
+    {
+      "method_name": "人工BERT接口",
+      "run_id": "synthetic_bert_v1",
+      "entity_type": "Symptom",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "support": 1
+    },
+    {
+      "method_name": "人工BERT接口",
+      "run_id": "synthetic_bert_v1",
+      "entity_type": "Drug",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "support": 1
+    },
+    {
+      "method_name": "人工BERT接口",
+      "run_id": "synthetic_bert_v1",
+      "entity_type": "Drug_Category",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "support": 1
+    },
+    {
+      "method_name": "人工BERT接口",
+      "run_id": "synthetic_bert_v1",
+      "entity_type": "Medical_Examination",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "support": 1
+    },
+    {
+      "method_name": "人工BERT接口",
+      "run_id": "synthetic_bert_v1",
+      "entity_type": "Operation",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1,
+      "support": 1
+    },
+    {
+      "method_name": "人工CRF接口",
+      "run_id": "synthetic_crf_v1",
+      "entity_type": "Symptom",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "support": 1
+    },
+    {
+      "method_name": "人工CRF接口",
+      "run_id": "synthetic_crf_v1",
+      "entity_type": "Drug",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1,
+      "support": 1
+    },
+    {
+      "method_name": "人工CRF接口",
+      "run_id": "synthetic_crf_v1",
+      "entity_type": "Drug_Category",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1,
+      "support": 1
+    },
+    {
+      "method_name": "人工CRF接口",
+      "run_id": "synthetic_crf_v1",
+      "entity_type": "Medical_Examination",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "support": 1
+    },
+    {
+      "method_name": "人工CRF接口",
+      "run_id": "synthetic_crf_v1",
+      "entity_type": "Operation",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "support": 1
+    },
+    {
+      "method_name": "人工规则接口",
+      "run_id": "synthetic_rules_v1",
+      "entity_type": "Symptom",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "support": 1
+    },
+    {
+      "method_name": "人工规则接口",
+      "run_id": "synthetic_rules_v1",
+      "entity_type": "Drug",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "support": 1
+    },
+    {
+      "method_name": "人工规则接口",
+      "run_id": "synthetic_rules_v1",
+      "entity_type": "Drug_Category",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "support": 1
+    },
+    {
+      "method_name": "人工规则接口",
+      "run_id": "synthetic_rules_v1",
+      "entity_type": "Medical_Examination",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "support": 1
+    },
+    {
+      "method_name": "人工规则接口",
+      "run_id": "synthetic_rules_v1",
+      "entity_type": "Operation",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "support": 1
+    }
+  ],
+  "metric_policy": {
+    "version": "strict-ner-character-v1",
+    "scale": "fractions in [0,1], unrounded",
+    "primary_metric": "entities.micro.f1",
+    "zero_division": 0.0,
+    "entity_identity": [
+      "dialogue_id",
+      "sentence_id",
+      "entity_type",
+      "start",
+      "end"
+    ],
+    "span": "zero-based [start, end), Unicode code points",
+    "entity_matching": "exact type and boundaries within original dialogue and sentence",
+    "entity_micro": "pool TP/FP/FN globally before computing P/R/F1",
+    "bio_policy": "strict, reject invalid BIO without repair",
+    "character_unit": "Python len(str), original Unicode code points, no normalization",
+    "character_accuracy": "all positions including O; correct / total",
+    "character_micro": "sum one-vs-rest TP/FP/FN over selected labels, using all positions",
+    "character_macro": "unweighted mean over all fixed 11 labels (with O) or 10 (without O); absent F1=0",
+    "excluding_o": "exclude O label only, retain O->entity FP and entity->O FN; no position filtering",
+    "confusion_direction": "rows=gold, columns=predicted; fixed labels in characters.confusion_matrix.labels",
+    "support": "gold count for the entity type or character label"
+  }
+}

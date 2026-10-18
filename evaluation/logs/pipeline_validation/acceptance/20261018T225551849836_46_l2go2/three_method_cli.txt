@@ -1,0 +1,8 @@
+COMMAND: C:\Users\HP\AppData\Local\Programs\Python\Python314\python.exe -X utf8 src/run_evaluation_batch.py --manifest C:\Users\HP\Documents\ChatGPT\NLPExp-evaluation\evaluation\examples\pipeline_validation\evaluation_runs.json --output-dir C:\Users\HP\Documents\ChatGPT\NLPExp-evaluation\evaluation\logs\pipeline_validation\acceptance\20261018T225551849836_46_l2go2\batches --csv-bom
+EXIT: 0
+ELAPSED_SECONDS: 0.4141894000058528
+synthetic_rules_v1: SCORED entity_micro_f1=0.0 metadata=PASS
+synthetic_crf_v1: SCORED entity_micro_f1=0.4444444444444444 metadata=PASS
+synthetic_bert_v1: SCORED entity_micro_f1=0.8 metadata=PASS
+SUCCESS self_check= PASS seconds= 0.223
+Batch report: C:\Users\HP\Documents\ChatGPT\NLPExp-evaluation\evaluation\logs\pipeline_validation\acceptance\20261018T225551849836_46_l2go2\batches\20261018T225614047077_5ta7vog_\batch_report.json

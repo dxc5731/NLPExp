@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "purpose": "synthetic_integration_test",
+  "run_id": "synthetic_bert_v1",
+  "method_name": "人工BERT接口",
+  "status": "PASS",
+  "inputs": {
+    "data": {
+      "requested_path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\data_dev.json",
+      "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\data_dev.json",
+      "sha256": "dcc0d2c174c871b2defa24875bf454da83bb2e58ec8f0fb6de7ca2507fb8aba3"
+    },
+    "predictions": {
+      "path": "C:\\Users\\HP\\Documents\\ChatGPT\\NLP大作业\\examples\\pipeline_validation\\bert\\predictions_dev.json",
+      "sha256": "d00b501bd26254e813bda6dd1aee3e81ede9cfc2f7b465b7d2824ddd4f26d9c1"
+    }
+  },
+  "entities": {
+    "micro": {
+      "tp": 4,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8,
+      "support": 5,
+      "predicted": 5
+    },
+    "per_type": {
+      "Symptom": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1,
+        "predicted": 1
+      },
+      "Drug": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1,
+        "predicted": 1
+      },
+      "Drug_Category": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1,
+        "predicted": 1
+      },
+      "Medical_Examination": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1,
+        "predicted": 1
+      },
+      "Operation": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1,
+        "predicted": 1
+      }
+    },
+    "gold_total": 5,
+    "predicted_total": 5
+  },
+  "rows": {
+    "FN": 1,
+    "FP": 1,
+    "TP": 4
+  },
+  "candidate_counts": {
+    "suspected_miss": 1,
+    "suspected_spurious": 1
+  },
+  "ambiguous_unlinked_rows": 0,
+  "local_text_exported": false,
+  "notice": "Candidate phenomena are not causal explanations and never change TP/FP/FN."
+}

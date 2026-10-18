@@ -1,0 +1,550 @@
+{
+  "purpose": "scorer_validation",
+  "status": "PASS",
+  "notice": "Entirely artificial data; no model experiment, no Tianchi server, no seqeval/character equivalence claim.",
+  "created_at": "2026-10-17T10:09:36+08:00",
+  "overall_tolerance": 1e-12,
+  "rounded_class_tolerance": 5.0000001e-05,
+  "cases": [
+    {
+      "case": "mixed_five_types",
+      "expected_overall_f1": 0.4444444444444444,
+      "ours": {
+        "micro": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.5,
+          "recall": 0.4,
+          "f1": 0.4444444444444444,
+          "support": 5,
+          "predicted": 4
+        },
+        "per_type": {
+          "Symptom": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Drug": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Drug_Category": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Medical_Examination": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "Operation": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          }
+        },
+        "gold_total": 5,
+        "predicted_total": 4
+      },
+      "author": {
+        "overall_f1": 0.4444444444444445,
+        "class_info": {
+          "Symptom": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "Drug": {
+            "acc": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Drug_Category": {
+            "acc": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Medical_Examination": {
+            "acc": 0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Operation": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "gold_total": 5,
+        "predicted_total": 4,
+        "tp": 2,
+        "author_entity_stdout": "-------------------- entity-level metric (f1 score) --------------------\nSX: 1.0\tDN: 0.0\tDC: 0.0\tEX: 0.0\tOP: 1.0\tOverall: 0.4444\n",
+        "source_sha256": "9af0a1bdbdc813ff8f60b149c41e32d0d0b96f0cecb32b2bf0e37d568563d919",
+        "source_url": "https://github.com/lemuria-wchen/imcs21-cblue/blob/8d512c6635029bf068712d62cf2428e65c5e4a58/task1/eval_task1.py",
+        "execution_scope": "get_entity_bio + compute + ner_eval entity prefix via AST; seqeval import/token section and full CLI NOT run"
+      },
+      "per_type_comparison": {
+        "Symptom": {
+          "ours": 1.0,
+          "author_rounded_4dp": 1.0,
+          "absolute_difference": 0.0
+        },
+        "Drug": {
+          "ours": 0.0,
+          "author_rounded_4dp": 0.0,
+          "absolute_difference": 0.0
+        },
+        "Drug_Category": {
+          "ours": 0.0,
+          "author_rounded_4dp": 0.0,
+          "absolute_difference": 0.0
+        },
+        "Medical_Examination": {
+          "ours": 0.0,
+          "author_rounded_4dp": 0.0,
+          "absolute_difference": 0.0
+        },
+        "Operation": {
+          "ours": 1.0,
+          "author_rounded_4dp": 1.0,
+          "absolute_difference": 0.0
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "identity_diagnostic",
+      "expected_overall_f1": 1.0,
+      "ours": {
+        "micro": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 5,
+          "predicted": 5
+        },
+        "per_type": {
+          "Symptom": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Drug": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Drug_Category": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Medical_Examination": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Operation": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          }
+        },
+        "gold_total": 5,
+        "predicted_total": 5
+      },
+      "author": {
+        "overall_f1": 1.0,
+        "class_info": {
+          "Symptom": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "Drug": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "Drug_Category": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "Medical_Examination": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "Operation": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "gold_total": 5,
+        "predicted_total": 5,
+        "tp": 5,
+        "author_entity_stdout": "-------------------- entity-level metric (f1 score) --------------------\nSX: 1.0\tDN: 1.0\tDC: 1.0\tEX: 1.0\tOP: 1.0\tOverall: 1.0\n",
+        "source_sha256": "9af0a1bdbdc813ff8f60b149c41e32d0d0b96f0cecb32b2bf0e37d568563d919",
+        "source_url": "https://github.com/lemuria-wchen/imcs21-cblue/blob/8d512c6635029bf068712d62cf2428e65c5e4a58/task1/eval_task1.py",
+        "execution_scope": "get_entity_bio + compute + ner_eval entity prefix via AST; seqeval import/token section and full CLI NOT run"
+      },
+      "per_type_comparison": {
+        "Symptom": {
+          "ours": 1.0,
+          "author_rounded_4dp": 1.0,
+          "absolute_difference": 0.0
+        },
+        "Drug": {
+          "ours": 1.0,
+          "author_rounded_4dp": 1.0,
+          "absolute_difference": 0.0
+        },
+        "Drug_Category": {
+          "ours": 1.0,
+          "author_rounded_4dp": 1.0,
+          "absolute_difference": 0.0
+        },
+        "Medical_Examination": {
+          "ours": 1.0,
+          "author_rounded_4dp": 1.0,
+          "absolute_difference": 0.0
+        },
+        "Operation": {
+          "ours": 1.0,
+          "author_rounded_4dp": 1.0,
+          "absolute_difference": 0.0
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "all_o_diagnostic",
+      "expected_overall_f1": 0.0,
+      "ours": {
+        "micro": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 5,
+          "predicted": 0
+        },
+        "per_type": {
+          "Symptom": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "Drug": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "Drug_Category": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "Medical_Examination": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          },
+          "Operation": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1,
+            "predicted": 0
+          }
+        },
+        "gold_total": 5,
+        "predicted_total": 0
+      },
+      "author": {
+        "overall_f1": 0.0,
+        "class_info": {
+          "Symptom": {
+            "acc": 0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Drug": {
+            "acc": 0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Drug_Category": {
+            "acc": 0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Medical_Examination": {
+            "acc": 0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Operation": {
+            "acc": 0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "gold_total": 5,
+        "predicted_total": 0,
+        "tp": 0,
+        "author_entity_stdout": "-------------------- entity-level metric (f1 score) --------------------\nSX: 0.0\tDN: 0.0\tDC: 0.0\tEX: 0.0\tOP: 0.0\tOverall: 0.0\n",
+        "source_sha256": "9af0a1bdbdc813ff8f60b149c41e32d0d0b96f0cecb32b2bf0e37d568563d919",
+        "source_url": "https://github.com/lemuria-wchen/imcs21-cblue/blob/8d512c6635029bf068712d62cf2428e65c5e4a58/task1/eval_task1.py",
+        "execution_scope": "get_entity_bio + compute + ner_eval entity prefix via AST; seqeval import/token section and full CLI NOT run"
+      },
+      "per_type_comparison": {
+        "Symptom": {
+          "ours": 0.0,
+          "author_rounded_4dp": 0.0,
+          "absolute_difference": 0.0
+        },
+        "Drug": {
+          "ours": 0.0,
+          "author_rounded_4dp": 0.0,
+          "absolute_difference": 0.0
+        },
+        "Drug_Category": {
+          "ours": 0.0,
+          "author_rounded_4dp": 0.0,
+          "absolute_difference": 0.0
+        },
+        "Medical_Examination": {
+          "ours": 0.0,
+          "author_rounded_4dp": 0.0,
+          "absolute_difference": 0.0
+        },
+        "Operation": {
+          "ours": 0.0,
+          "author_rounded_4dp": 0.0,
+          "absolute_difference": 0.0
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "class_rounding_diagnostic",
+      "expected_overall_f1": 0.9090909090909091,
+      "ours": {
+        "micro": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091,
+          "support": 6,
+          "predicted": 5
+        },
+        "per_type": {
+          "Symptom": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "support": 2,
+            "predicted": 1
+          },
+          "Drug": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Drug_Category": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Medical_Examination": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "Operation": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          }
+        },
+        "gold_total": 6,
+        "predicted_total": 5
+      },
+      "author": {
+        "overall_f1": 0.9090909090909091,
+        "class_info": {
+          "Symptom": {
+            "acc": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          },
+          "Drug": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "Drug_Category": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "Medical_Examination": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "Operation": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "gold_total": 6,
+        "predicted_total": 5,
+        "tp": 5,
+        "author_entity_stdout": "-------------------- entity-level metric (f1 score) --------------------\nSX: 0.6667\tDN: 1.0\tDC: 1.0\tEX: 1.0\tOP: 1.0\tOverall: 0.9091\n",
+        "source_sha256": "9af0a1bdbdc813ff8f60b149c41e32d0d0b96f0cecb32b2bf0e37d568563d919",
+        "source_url": "https://github.com/lemuria-wchen/imcs21-cblue/blob/8d512c6635029bf068712d62cf2428e65c5e4a58/task1/eval_task1.py",
+        "execution_scope": "get_entity_bio + compute + ner_eval entity prefix via AST; seqeval import/token section and full CLI NOT run"
+      },
+      "per_type_comparison": {
+        "Symptom": {
+          "ours": 0.6666666666666666,
+          "author_rounded_4dp": 0.6667,
+          "absolute_difference": 3.333333333332966e-05
+        },
+        "Drug": {
+          "ours": 1.0,
+          "author_rounded_4dp": 1.0,
+          "absolute_difference": 0.0
+        },
+        "Drug_Category": {
+          "ours": 1.0,
+          "author_rounded_4dp": 1.0,
+          "absolute_difference": 0.0
+        },
+        "Medical_Examination": {
+          "ours": 1.0,
+          "author_rounded_4dp": 1.0,
+          "absolute_difference": 0.0
+        },
+        "Operation": {
+          "ours": 1.0,
+          "author_rounded_4dp": 1.0,
+          "absolute_difference": 0.0
+        }
+      },
+      "status": "PASS"
+    }
+  ]
+}

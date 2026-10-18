@@ -1,0 +1,5 @@
+COMMAND: C:\Users\HP\AppData\Local\Programs\Python\Python314\python.exe -X utf8 src/validate_predictions.py --data C:\Users\HP\Downloads\IMCS-V2-NER.zip --split dev --audit-data --report C:\Users\HP\Documents\ChatGPT\NLPExp-evaluation\evaluation\logs\pipeline_validation\acceptance\20261018T225551849836_46_l2go2\official_dev_readonly.json
+EXIT: 0
+ELAPSED_SECONDS: 1.9123360000085086
+PASS mode=data_audit split=dev dialogues=833 sentences=33267 errors=0
+Report: C:\Users\HP\Documents\ChatGPT\NLPExp-evaluation\evaluation\logs\pipeline_validation\acceptance\20261018T225551849836_46_l2go2\official_dev_readonly.json
