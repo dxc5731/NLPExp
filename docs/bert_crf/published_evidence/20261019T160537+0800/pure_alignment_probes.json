@@ -1,0 +1,54 @@
+{
+  "scope": "Synthetic inputs passed to unchanged functions. No real tokenizer or DataLoader test.",
+  "observations": {
+    "zero_width_ignored_continuation_not_ignored": [
+      -100,
+      3,
+      4,
+      -100
+    ],
+    "multichar_boundary_loss": {
+      "gold": [
+        "O",
+        "B-Drug"
+      ],
+      "restored": [
+        [
+          "O",
+          "O"
+        ],
+        []
+      ]
+    },
+    "uncovered_filled_O": [
+      [
+        "O",
+        "O",
+        "O"
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "illegal_leading_I_repaired": [
+      [
+        "B-Drug"
+      ],
+      []
+    ],
+    "zip_length_mismatch_not_rejected": [
+      [
+        "O",
+        "O"
+      ],
+      [
+        1
+      ]
+    ],
+    "ignore_index_at_nonzero_span": {
+      "exception": "IndexError",
+      "message": "list index out of range"
+    }
+  }
+}

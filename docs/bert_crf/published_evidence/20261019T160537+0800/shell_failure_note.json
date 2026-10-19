@@ -1,0 +1,8 @@
+{
+  "operation": "Inline Python command intended to inspect the official cu124 torch wheel index",
+  "result": "PowerShell ParserError: Missing type name after '['",
+  "exit_code": 1,
+  "effect": "Python never ran; no index report was written by this attempt",
+  "correction": "Moved the operation into audit_followup.py --wheel-index to avoid shell quote interpretation",
+  "timestamp_precision": "Exact time not captured; occurred after the 16:07:20+08:00 follow-up and before the successful wheel-index script run"
+}

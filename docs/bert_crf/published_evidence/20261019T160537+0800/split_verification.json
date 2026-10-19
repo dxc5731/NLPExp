@@ -1,0 +1,57 @@
+{
+  "source_sha256_actual": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24",
+  "source_sha256_matches": true,
+  "train_ids_unique": true,
+  "val_ids_unique": true,
+  "disjoint": true,
+  "exact_official_train_coverage": true,
+  "version": "v1",
+  "seed": 42,
+  "recorded_stats": {
+    "train": {
+      "dialogues": 2225,
+      "sentences": 88842,
+      "chars": 1153312,
+      "entities": {
+        "Symptom": 42210,
+        "Drug": 7418,
+        "Drug_Category": 4677,
+        "Medical_Examination": 5766,
+        "Operation": 2600
+      }
+    },
+    "val": {
+      "dialogues": 247,
+      "sentences": 9687,
+      "chars": 126049,
+      "entities": {
+        "Symptom": 4447,
+        "Drug": 725,
+        "Drug_Category": 490,
+        "Medical_Examination": 615,
+        "Operation": 324
+      }
+    }
+  },
+  "actual_counts": {
+    "train": {
+      "dialogues": 2225,
+      "sentences": 88842,
+      "chars": 1153312,
+      "length_mismatches": 0,
+      "unknown_labels": [],
+      "non_string_sentence_ids": 0,
+      "max_sentence_chars": 199
+    },
+    "val": {
+      "dialogues": 247,
+      "sentences": 9687,
+      "chars": 126049,
+      "length_mismatches": 0,
+      "unknown_labels": [],
+      "non_string_sentence_ids": 0,
+      "max_sentence_chars": 159
+    }
+  },
+  "dev_test_policy": "Only archive bytes hashed; dev/test JSON labels not parsed."
+}

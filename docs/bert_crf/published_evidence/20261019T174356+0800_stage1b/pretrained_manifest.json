@@ -1,0 +1,63 @@
+{
+  "artifact_kind": "stage1b_core_smoke_test",
+  "model_id": "google-bert/bert-base-chinese",
+  "revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+  "time": "2026-10-19T17:49:52.822274+08:00",
+  "license": "Apache-2.0 (upstream model card)",
+  "files": [
+    {
+      "name": "config.json",
+      "url": "https://huggingface.co/google-bert/bert-base-chinese/resolve/8f23c25b06e129b6c986331a13d8d025a92cf0ea/config.json",
+      "path": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T174356+0800_stage1b\\pretrained\\config.json",
+      "action": "copied_verified_stage1a_file",
+      "bytes": 624,
+      "sha256": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+      "elapsed_seconds": 0.0018754000775516033
+    },
+    {
+      "name": "tokenizer.json",
+      "url": "https://huggingface.co/google-bert/bert-base-chinese/resolve/8f23c25b06e129b6c986331a13d8d025a92cf0ea/tokenizer.json",
+      "path": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T174356+0800_stage1b\\pretrained\\tokenizer.json",
+      "action": "copied_verified_stage1a_file",
+      "bytes": 268943,
+      "sha256": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+      "elapsed_seconds": 0.001992100151255727
+    },
+    {
+      "name": "tokenizer_config.json",
+      "url": "https://huggingface.co/google-bert/bert-base-chinese/resolve/8f23c25b06e129b6c986331a13d8d025a92cf0ea/tokenizer_config.json",
+      "path": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T174356+0800_stage1b\\pretrained\\tokenizer_config.json",
+      "action": "copied_verified_stage1a_file",
+      "bytes": 49,
+      "sha256": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+      "elapsed_seconds": 0.0012425000313669443
+    },
+    {
+      "name": "vocab.txt",
+      "url": "https://huggingface.co/google-bert/bert-base-chinese/resolve/8f23c25b06e129b6c986331a13d8d025a92cf0ea/vocab.txt",
+      "path": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T174356+0800_stage1b\\pretrained\\vocab.txt",
+      "action": "copied_verified_stage1a_file",
+      "bytes": 109540,
+      "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c",
+      "elapsed_seconds": 0.0016077000182121992
+    },
+    {
+      "name": "model.safetensors",
+      "url": "https://huggingface.co/google-bert/bert-base-chinese/resolve/8f23c25b06e129b6c986331a13d8d025a92cf0ea/model.safetensors",
+      "path": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T174356+0800_stage1b\\pretrained\\model.safetensors",
+      "action": "downloaded_pinned_public_file",
+      "bytes": 411553788,
+      "sha256": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3",
+      "elapsed_seconds": 341.8399730999954
+    },
+    {
+      "name": "README.md",
+      "url": "https://huggingface.co/google-bert/bert-base-chinese/resolve/8f23c25b06e129b6c986331a13d8d025a92cf0ea/README.md",
+      "path": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T174356+0800_stage1b\\pretrained\\README.md",
+      "action": "downloaded_pinned_public_file",
+      "bytes": 1923,
+      "sha256": "80efb5c88f6c09c0f4b2f91380852a374f023e195954f21ff7221928487ce454",
+      "elapsed_seconds": 0.8086405999492854
+    }
+  ]
+}

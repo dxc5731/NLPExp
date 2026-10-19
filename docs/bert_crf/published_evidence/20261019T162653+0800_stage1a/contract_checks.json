@@ -1,0 +1,138 @@
+{
+  "timestamp": "2026-10-19T16:36:59.040762+08:00",
+  "reason_for_additional_check": "2 real I->B repairs require checking projected gold before constrained CRF training",
+  "scope": "Official train only; original gold unchanged",
+  "projected_gold_checks": {
+    "train": {
+      "sentences": 88842,
+      "original_gold_illegal_transitions": 0,
+      "projected_token_gold_illegal_transitions": 2,
+      "projected_token_gold_illegal_sentences": 2,
+      "wordpiece_continuations": 307,
+      "wordpiece_continuations_ignored": 0
+    },
+    "val": {
+      "sentences": 9687,
+      "original_gold_illegal_transitions": 0,
+      "projected_token_gold_illegal_transitions": 0,
+      "projected_token_gold_illegal_sentences": 0,
+      "wordpiece_continuations": 26,
+      "wordpiece_continuations_ignored": 0
+    }
+  },
+  "projected_gold_illegal_examples_no_text": [
+    {
+      "split": "train",
+      "dialogue_id": "10098865",
+      "sentence_id": "21",
+      "invalid_token_transitions": [
+        {
+          "position": 1,
+          "previous_tag": "O",
+          "tag": "I-Symptom"
+        }
+      ]
+    },
+    {
+      "split": "train",
+      "dialogue_id": "10506585",
+      "sentence_id": "10",
+      "invalid_token_transitions": [
+        {
+          "position": 21,
+          "previous_tag": "O",
+          "tag": "I-Symptom"
+        }
+      ]
+    }
+  ],
+  "unlabeled_batch": {
+    "fields": [
+      "input_ids",
+      "attention_mask",
+      "offsets",
+      "dialogue_id",
+      "sentence_id",
+      "text"
+    ],
+    "has_labels": false,
+    "input_shape": [
+      4,
+      11
+    ],
+    "valid_lengths_from_offsets": [
+      2,
+      8,
+      2,
+      9
+    ]
+  },
+  "interface_integrity": [
+    {
+      "path": "code/requirements.txt",
+      "unchanged": true
+    },
+    {
+      "path": "code/artifacts/alignment_report_dev.json",
+      "unchanged": true
+    },
+    {
+      "path": "code/artifacts/alignment_report_test.json",
+      "unchanged": true
+    },
+    {
+      "path": "code/artifacts/alignment_report_train.json",
+      "unchanged": true
+    },
+    {
+      "path": "code/artifacts/split_v1.json",
+      "unchanged": true
+    },
+    {
+      "path": "code/scripts/demo_dataloader.py",
+      "unchanged": true
+    },
+    {
+      "path": "code/src/align.py",
+      "unchanged": true
+    },
+    {
+      "path": "code/src/config.py",
+      "unchanged": true
+    },
+    {
+      "path": "code/src/dataset.py",
+      "unchanged": true
+    },
+    {
+      "path": "code/src/data_io.py",
+      "unchanged": true
+    },
+    {
+      "path": "code/src/labels.py",
+      "unchanged": true
+    },
+    {
+      "path": "code/src/split.py",
+      "unchanged": true
+    },
+    {
+      "path": "code/src/__init__.py",
+      "unchanged": true
+    },
+    {
+      "path": "code/tests/test_align.py",
+      "unchanged": true
+    },
+    {
+      "path": "doc/数据接口说明.md",
+      "unchanged": true
+    },
+    {
+      "path": "README_先看我.md",
+      "unchanged": true
+    }
+  ],
+  "original_six_inputs_unchanged": true,
+  "venv_system_site_packages": false
+}

@@ -1,0 +1,20 @@
+{
+  "change": "Remove only extra blank lines at EOF after tests; no semantic changes",
+  "files": [
+    {
+      "file": "tests\\bert_crf\\conftest.py",
+      "before_sha256": "5a6ce399b123e0c13340c54fffdbe1ca231284a27da0b563683ef1cc1498d493",
+      "after_sha256": "06bb0bee65fe93fff2200494516cfcc6ec4d6f85172e7a464454d6124a070748"
+    },
+    {
+      "file": "tests\\bert_crf\\test_constraints.py",
+      "before_sha256": "e2dc39d08cec7c415117b252a86c9586b095aad6cb7684efe67e778d31d5b5db",
+      "after_sha256": "9f5be23bf44020f8df12a6ddfbaca3e3ec949e4a9e7c0ff37b8f33e4a9432d37"
+    },
+    {
+      "file": "tests\\bert_crf\\test_crf.py",
+      "before_sha256": "b2ca1b0cb89c9f7dedf03b234181def3ddb1b0dd62b4611c897a2f7f39998df0",
+      "after_sha256": "bf6857294c3d00aff0577fd8a530a25cade773edd7dcd155f9ab592aaaffdb7d"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+[
+  {
+    "split": "train",
+    "dataset_sentences": 88842,
+    "fields": [
+      "input_ids",
+      "attention_mask",
+      "offsets",
+      "dialogue_id",
+      "sentence_id",
+      "text",
+      "labels"
+    ],
+    "tensors": {
+      "input_ids": {
+        "shape": [
+          4,
+          11
+        ],
+        "dtype": "torch.int64"
+      },
+      "attention_mask": {
+        "shape": [
+          4,
+          11
+        ],
+        "dtype": "torch.int64"
+      },
+      "offsets": {
+        "shape": [
+          4,
+          11,
+          2
+        ],
+        "dtype": "torch.int64"
+      },
+      "labels": {
+        "shape": [
+          4,
+          11
+        ],
+        "dtype": "torch.int64"
+      }
+    },
+    "metadata_list_lengths": {
+      "dialogue_id": 4,
+      "sentence_id": 4,
+      "text": 4
+    },
+    "sample_ids": [
+      {
+        "dialogue_id": "10000795",
+        "sentence_id": "1"
+      },
+      {
+        "dialogue_id": "10000795",
+        "sentence_id": "2"
+      },
+      {
+        "dialogue_id": "10000795",
+        "sentence_id": "3"
+      },
+      {
+        "dialogue_id": "10000795",
+        "sentence_id": "4"
+      }
+    ],
+    "attention_lengths": [
+      4,
+      10,
+      4,
+      11
+    ],
+    "valid_label_lengths": [
+      2,
+      8,
+      2,
+      9
+    ],
+    "ignored_labels": 23,
+    "padding_positions": 15,
+    "ignored_special_positions": 8,
+    "attention_equals_label_valid": false,
+    "raw_crf_mask_first_column": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "packing_probe": {
+      "shape": [
+        4,
+        9
+      ],
+      "lengths": [
+        2,
+        8,
+        2,
+        9
+      ],
+      "bool_mask_prefix_contiguous": true,
+      "all_label_values_legal_including_padding": true,
+      "selected_label_roundtrip": true
+    },
+    "note": "Packing probe only; no CRF model or likelihood implemented"
+  },
+  {
+    "split": "val",
+    "dataset_sentences": 9687,
+    "fields": [
+      "input_ids",
+      "attention_mask",
+      "offsets",
+      "dialogue_id",
+      "sentence_id",
+      "text",
+      "labels"
+    ],
+    "tensors": {
+      "input_ids": {
+        "shape": [
+          4,
+          40
+        ],
+        "dtype": "torch.int64"
+      },
+      "attention_mask": {
+        "shape": [
+          4,
+          40
+        ],
+        "dtype": "torch.int64"
+      },
+      "offsets": {
+        "shape": [
+          4,
+          40,
+          2
+        ],
+        "dtype": "torch.int64"
+      },
+      "labels": {
+        "shape": [
+          4,
+          40
+        ],
+        "dtype": "torch.int64"
+      }
+    },
+    "metadata_list_lengths": {
+      "dialogue_id": 4,
+      "sentence_id": 4,
+      "text": 4
+    },
+    "sample_ids": [
+      {
+        "dialogue_id": "10001003",
+        "sentence_id": "1"
+      },
+      {
+        "dialogue_id": "10001003",
+        "sentence_id": "2"
+      },
+      {
+        "dialogue_id": "10001003",
+        "sentence_id": "3"
+      },
+      {
+        "dialogue_id": "10001003",
+        "sentence_id": "4"
+      }
+    ],
+    "attention_lengths": [
+      40,
+      7,
+      25,
+      15
+    ],
+    "valid_label_lengths": [
+      38,
+      5,
+      23,
+      13
+    ],
+    "ignored_labels": 81,
+    "padding_positions": 73,
+    "ignored_special_positions": 8,
+    "attention_equals_label_valid": false,
+    "raw_crf_mask_first_column": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "packing_probe": {
+      "shape": [
+        4,
+        38
+      ],
+      "lengths": [
+        38,
+        5,
+        23,
+        13
+      ],
+      "bool_mask_prefix_contiguous": true,
+      "all_label_values_legal_including_padding": true,
+      "selected_label_roundtrip": true
+    },
+    "note": "Packing probe only; no CRF model or likelihood implemented"
+  }
+]

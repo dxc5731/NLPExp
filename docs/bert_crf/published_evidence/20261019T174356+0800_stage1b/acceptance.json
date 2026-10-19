@@ -1,0 +1,230 @@
+{
+  "artifact_kind": "stage1b_core_smoke_test",
+  "time": "2026-10-19T17:52:34.505769+08:00",
+  "status": "PASS",
+  "pretrained_weight_lfs_verified": {
+    "api": "https://huggingface.co/api/models/google-bert/bert-base-chinese/tree/8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+    "upstream": {
+      "type": "file",
+      "oid": "7e1ca32bc425a86a08702c0732951fdee91541ec",
+      "size": 411553788,
+      "lfs": {
+        "oid": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3",
+        "size": 411553788,
+        "pointerSize": 134
+      },
+      "xetHash": "49b7d1dd65a3fe7bea585c2cdc68c874d23c5a73652d694354652200a618ee72",
+      "path": "model.safetensors"
+    },
+    "local": {
+      "name": "model.safetensors",
+      "url": "https://huggingface.co/google-bert/bert-base-chinese/resolve/8f23c25b06e129b6c986331a13d8d025a92cf0ea/model.safetensors",
+      "path": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T174356+0800_stage1b\\pretrained\\model.safetensors",
+      "action": "downloaded_pinned_public_file",
+      "bytes": 411553788,
+      "sha256": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3",
+      "elapsed_seconds": 341.8399730999954
+    }
+  },
+  "tokenizer_stage1a_identity": true,
+  "public_interface_unchanged_files": 16,
+  "archive_identity": {
+    "IMCS-V2-NER.zip": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67",
+    "BERT数据接口_v1.zip": "96d259bc1b411a972b46869573f095b0af1de68e2750bdb9ba72450526723df6"
+  },
+  "dataset_labels_read_in_stage1b": false,
+  "test_runs": [
+    {
+      "run": "core_tests_first",
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "52",
+      "time": "8.169",
+      "timestamp": "2026-10-19T17:47:10.155578+08:00",
+      "hostname": "LAPTOP-3DVII6A1"
+    },
+    {
+      "run": "complete_tests",
+      "name": "pytest",
+      "errors": "0",
+      "failures": "1",
+      "skipped": "0",
+      "tests": "53",
+      "time": "9.203",
+      "timestamp": "2026-10-19T17:50:27.012687+08:00",
+      "hostname": "LAPTOP-3DVII6A1"
+    },
+    {
+      "run": "complete_tests_reporting_fix",
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "53",
+      "time": "6.962",
+      "timestamp": "2026-10-19T17:51:13.659184+08:00",
+      "hostname": "LAPTOP-3DVII6A1"
+    }
+  ],
+  "enumeration_comparisons": [
+    {
+      "check": "exhaustive_synthetic_paths",
+      "length": 1,
+      "bio_constraints": true,
+      "included_paths": 6,
+      "partition_dp": 2.9785981126565595,
+      "partition_enumeration": 2.9785981126565595,
+      "gold_path": [
+        5
+      ],
+      "gold_score": 0.49575592012555525,
+      "nll": 2.4828421925310042,
+      "best_path": [
+        9
+      ]
+    },
+    {
+      "check": "exhaustive_synthetic_paths",
+      "length": 1,
+      "bio_constraints": false,
+      "included_paths": 11,
+      "partition_dp": 3.8286607107923816,
+      "partition_enumeration": 3.8286607107923816,
+      "gold_path": [
+        5
+      ],
+      "gold_score": 0.49575592012555525,
+      "nll": 3.3329047906668263,
+      "best_path": [
+        10
+      ]
+    },
+    {
+      "check": "exhaustive_synthetic_paths",
+      "length": 2,
+      "bio_constraints": true,
+      "included_paths": 41,
+      "partition_dp": 4.624750950576976,
+      "partition_enumeration": 4.624750950576976,
+      "gold_path": [
+        5,
+        0
+      ],
+      "gold_score": -1.377268993380438,
+      "nll": 6.002019943957414,
+      "best_path": [
+        3,
+        4
+      ]
+    },
+    {
+      "check": "exhaustive_synthetic_paths",
+      "length": 2,
+      "bio_constraints": false,
+      "included_paths": 121,
+      "partition_dp": 5.883457950831678,
+      "partition_enumeration": 5.883457950831678,
+      "gold_path": [
+        5,
+        5
+      ],
+      "gold_score": -1.0842853929734897,
+      "nll": 6.967743343805168,
+      "best_path": [
+        2,
+        4
+      ]
+    },
+    {
+      "check": "exhaustive_synthetic_paths",
+      "length": 3,
+      "bio_constraints": true,
+      "included_paths": 281,
+      "partition_dp": 7.245052220209383,
+      "partition_enumeration": 7.245052220209384,
+      "gold_path": [
+        5,
+        0,
+        5
+      ],
+      "gold_score": -1.0121040002929993,
+      "nll": 8.257156220502383,
+      "best_path": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "check": "exhaustive_synthetic_paths",
+      "length": 3,
+      "bio_constraints": false,
+      "included_paths": 1331,
+      "partition_dp": 9.430351852573585,
+      "partition_enumeration": 9.430351852573585,
+      "gold_path": [
+        5,
+        5,
+        5
+      ],
+      "gold_score": -2.0596298071177155,
+      "nll": 11.489981659691301,
+      "best_path": [
+        2,
+        10,
+        4
+      ]
+    }
+  ],
+  "checkpoint_files": {
+    ".local\\bert_crf\\20261019T174356+0800_stage1b\\checkpoint_reporting_fix\\character_crf_config.json": {
+      "bytes": 683,
+      "sha256": "4c65488a45c65a4fa6856680721dd814880ca5f132d85b6aec3a6ca15b7509bb"
+    },
+    ".local\\bert_crf\\20261019T174356+0800_stage1b\\checkpoint_reporting_fix\\head.pt": {
+      "bytes": 36984,
+      "sha256": "df83cc6c2b56760750562a3b683d1dc4507097cefe2bd753ad0f56a343f9cc36"
+    },
+    ".local\\bert_crf\\20261019T174356+0800_stage1b\\checkpoint_reporting_fix\\encoder\\config.json": {
+      "bytes": 895,
+      "sha256": "b332a6ff2ef3b81f35fe6be157105fd824c8f5e2bb347aa978134bc7b45da985"
+    },
+    ".local\\bert_crf\\20261019T174356+0800_stage1b\\checkpoint_reporting_fix\\encoder\\model.safetensors": {
+      "bytes": 406730352,
+      "sha256": "142c2047dd175d91ee1734a3a2d1eb542de1bdd4eba340106742f78e1933c425"
+    }
+  },
+  "verified_command_logs": 6,
+  "real_character_adapter": "NOT_IMPLEMENTED",
+  "optimizer_steps": 0,
+  "failure_and_fix": {
+    "run": "complete_tests",
+    "returncode": 1,
+    "cause": "Transformers loading_info contains sets; JSON evidence serialization failed after all numerical assertions",
+    "fix": "Normalize loading_info sets to sorted lists in test evidence only",
+    "before_source": "test_pretrained_before_reporting_fix.py",
+    "before_source_sha256": "acddffbd477582b432ccc626eb53be26c236334eaef5745dfc76455208dc02f4",
+    "rerun": "complete_tests_reporting_fix",
+    "rerun_returncode": 0,
+    "prior_checkpoint_preserved": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T174356+0800_stage1b\\checkpoint"
+  },
+  "ai_use": {
+    "tool": "Codex",
+    "scope": [
+      "core implementation",
+      "synthetic algorithm tests",
+      "pretrained GPU smoke",
+      "evidence serialization debugging",
+      "technical documentation"
+    ],
+    "program_verified": "53 pytest tests including real GPU and checkpoint assertions",
+    "human_review_pending": [
+      "implementation review",
+      "stage1C alignment contract",
+      "formal experimental design and research analysis"
+    ],
+    "human_modifications_this_turn": "No independent human code modifications observed; no contribution declaration written"
+  }
+}

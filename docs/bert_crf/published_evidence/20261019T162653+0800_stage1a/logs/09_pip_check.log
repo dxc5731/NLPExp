@@ -1,0 +1,3 @@
+ARGV ["C:/userProgram/NLPexp/.venv-bert-crf/Scripts/python.exe", "-m", "pip", "check"]
+CWD C:\userProgram\NLPexp
+No broken requirements found.

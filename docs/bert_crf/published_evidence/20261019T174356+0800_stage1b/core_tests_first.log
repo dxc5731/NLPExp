@@ -1,0 +1,63 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.5, pytest-9.1.1, pluggy-1.7.0 -- C:\userProgram\NLPexp\.venv-bert-crf\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\userProgram\NLPexp
+configfile: pytest.ini
+plugins: anyio-4.15.1
+collecting ... collected 52 items
+
+tests/bert_crf/test_constraints.py::test_all_pairs_against_independent_bio_rule PASSED [  1%]
+tests/bert_crf/test_constraints.py::test_legal_gold[tags0] PASSED        [  3%]
+tests/bert_crf/test_constraints.py::test_legal_gold[tags1] PASSED        [  5%]
+tests/bert_crf/test_constraints.py::test_legal_gold[tags2] PASSED        [  7%]
+tests/bert_crf/test_constraints.py::test_legal_gold[tags3] PASSED        [  9%]
+tests/bert_crf/test_constraints.py::test_legal_gold[tags4] PASSED        [ 11%]
+tests/bert_crf/test_constraints.py::test_legal_gold[tags5] PASSED        [ 13%]
+tests/bert_crf/test_constraints.py::test_illegal_gold_refused[tags0] PASSED [ 15%]
+tests/bert_crf/test_constraints.py::test_illegal_gold_refused[tags1] PASSED [ 17%]
+tests/bert_crf/test_constraints.py::test_illegal_gold_refused[tags2] PASSED [ 19%]
+tests/bert_crf/test_constraints.py::test_illegal_gold_refused[tags3] PASSED [ 21%]
+tests/bert_crf/test_constraints.py::test_illegal_gold_refused[tags4] PASSED [ 23%]
+tests/bert_crf/test_constraints.py::test_illegal_arcs_cannot_win_or_enter_partition PASSED [ 25%]
+tests/bert_crf/test_crf.py::test_exhaustive_partition_score_nll_viterbi_and_gradient[1-True] PASSED [ 26%]
+tests/bert_crf/test_crf.py::test_exhaustive_partition_score_nll_viterbi_and_gradient[1-False] PASSED [ 28%]
+tests/bert_crf/test_crf.py::test_exhaustive_partition_score_nll_viterbi_and_gradient[2-True] PASSED [ 30%]
+tests/bert_crf/test_crf.py::test_exhaustive_partition_score_nll_viterbi_and_gradient[2-False] PASSED [ 32%]
+tests/bert_crf/test_crf.py::test_exhaustive_partition_score_nll_viterbi_and_gradient[3-True] PASSED [ 34%]
+tests/bert_crf/test_crf.py::test_exhaustive_partition_score_nll_viterbi_and_gradient[3-False] PASSED [ 36%]
+tests/bert_crf/test_crf.py::test_variable_batch_padding_invariant_loss_path_and_gradients PASSED [ 38%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[empty_batch] PASSED   [ 40%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[empty_time] PASSED    [ 42%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[zero_length_sample] PASSED [ 44%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[first_false] PASSED   [ 46%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[hole] PASSED          [ 48%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[mask_int] PASSED      [ 50%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[mask_shape] PASSED    [ 51%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[emission_shape] PASSED [ 53%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[half] PASSED          [ 55%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[nan] PASSED           [ 57%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[inf] PASSED           [ 59%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[tag_float] PASSED     [ 61%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[tag_shape] PASSED     [ 63%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[negative] PASSED      [ 65%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[too_large] PASSED     [ 67%]
+tests/bert_crf/test_crf.py::test_reject_bad_inputs[padding_minus100] PASSED [ 69%]
+tests/bert_crf/test_crf.py::test_invalid_reduction PASSED                [ 71%]
+tests/bert_crf/test_crf.py::test_extreme_finite_emissions_are_stable PASSED [ 73%]
+tests/bert_crf/test_crf.py::test_gpu_cpu_crf_agreement_and_backward PASSED [ 75%]
+tests/bert_crf/test_model.py::test_adapter_is_explicitly_abstract PASSED [ 76%]
+tests/bert_crf/test_model.py::test_cpu_tiny_bert_chain_and_special_token_exclusion PASSED [ 78%]
+tests/bert_crf/test_model.py::test_save_load_eval_exact_outputs_and_configuration PASSED [ 80%]
+tests/bert_crf/test_model.py::test_head_prediction_without_labels PASSED [ 82%]
+tests/bert_crf/test_model.py::test_bad_config[change0] PASSED            [ 84%]
+tests/bert_crf/test_model.py::test_bad_config[change1] PASSED            [ 86%]
+tests/bert_crf/test_model.py::test_bad_config[change2] PASSED            [ 88%]
+tests/bert_crf/test_model.py::test_bad_config[change3] PASSED            [ 90%]
+tests/bert_crf/test_model.py::test_bad_config[change4] PASSED            [ 92%]
+tests/bert_crf/test_model.py::test_bad_config[change5] PASSED            [ 94%]
+tests/bert_crf/test_model.py::test_bad_config[change6] PASSED            [ 96%]
+tests/bert_crf/test_model.py::test_head_rejects_hidden_shape_and_nonfinite PASSED [ 98%]
+tests/bert_crf/test_model.py::test_stateful_adapter_checkpoint_refused PASSED [100%]
+
+- generated xml file: C:\userProgram\NLPexp\docs\bert_crf\evidence\20261019T174356+0800_stage1b\core_tests_first.xml -
+============================= 52 passed in 8.17s ==============================

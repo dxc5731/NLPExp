@@ -1,0 +1,267 @@
+{
+  "finalized_at": "2026-10-19T16:44:16.969758+08:00",
+  "git_commit": "7be9ef96c5ed0357ea8eaa31b2e849bc4670e78f",
+  "git_status_porcelain": "",
+  "git_remote_count": 0,
+  "prior_stage0_files_unchanged": 51,
+  "command_log_hashes_verified": 17,
+  "commands": [
+    {
+      "name": "create_venv",
+      "exit_code": 0,
+      "elapsed_seconds": 2.7417057999409735
+    },
+    {
+      "name": "install_torch",
+      "exit_code": 0,
+      "elapsed_seconds": 222.2693433999084
+    },
+    {
+      "name": "install_dependencies",
+      "exit_code": 0,
+      "elapsed_seconds": 75.74769069999456
+    },
+    {
+      "name": "cuda_smoke",
+      "exit_code": 1,
+      "elapsed_seconds": 8.515641400124878
+    },
+    {
+      "name": "install_tzdata",
+      "exit_code": 0,
+      "elapsed_seconds": 4.796206200029701
+    },
+    {
+      "name": "cuda_smoke_retry",
+      "exit_code": 0,
+      "elapsed_seconds": 4.50122409989126
+    },
+    {
+      "name": "public_demo",
+      "exit_code": 0,
+      "elapsed_seconds": 6.672515199985355
+    },
+    {
+      "name": "public_unittest",
+      "exit_code": 0,
+      "elapsed_seconds": 4.560693100094795
+    },
+    {
+      "name": "full_alignment_audit",
+      "exit_code": 0,
+      "elapsed_seconds": 15.62874159985222
+    },
+    {
+      "name": "pip_check",
+      "exit_code": 0,
+      "elapsed_seconds": 0.4111654001753777
+    },
+    {
+      "name": "git_init",
+      "exit_code": 0,
+      "elapsed_seconds": 0.053623100044205785
+    },
+    {
+      "name": "freeze",
+      "exit_code": 0,
+      "elapsed_seconds": 0.33180560008622706
+    },
+    {
+      "name": "projected_gold_and_contract",
+      "exit_code": 0,
+      "elapsed_seconds": 11.779153099982068
+    },
+    {
+      "name": "cuda_recheck",
+      "exit_code": 0,
+      "elapsed_seconds": 4.395317799877375
+    },
+    {
+      "name": "git_add",
+      "exit_code": 0,
+      "elapsed_seconds": 0.06516690016724169
+    },
+    {
+      "name": "git_add_final_report",
+      "exit_code": 0,
+      "elapsed_seconds": 0.029123499989509583
+    },
+    {
+      "name": "git_commit",
+      "exit_code": 0,
+      "elapsed_seconds": 0.08086370001547039
+    }
+  ],
+  "acceptance": {
+    "gpu_smoke": "PASS",
+    "demo_equal_true": true,
+    "unittest_ran_six": true,
+    "unittest_ok": true,
+    "full_alignment_audit_completed": true,
+    "pip_check_pass": true
+  },
+  "alignment_totals": {
+    "sentences": 98529,
+    "chars": 1279361,
+    "tokens_with_special": 1472082,
+    "multichar_tokens": 3825,
+    "unk_tokens": 676,
+    "internal_ignored_positions": 0,
+    "special_positions": 197058,
+    "special_labels_wrong": 0,
+    "wordpiece_continuation_tokens": 333,
+    "affected_entities": 0,
+    "entities_crossing_truncation": 0,
+    "uncovered_chars": 0,
+    "uncovered_sentences": 0,
+    "overcovered_chars": 0,
+    "overcovered_sentences": 0,
+    "full_uncovered_chars": 0,
+    "full_uncovered_sentences": 0,
+    "truncated_chars_chars": 0,
+    "truncated_chars_sentences": 0,
+    "repairs_chars": 2,
+    "repairs_sentences": 2,
+    "mismatch_chars": 11,
+    "mismatch_sentences": 8,
+    "needs_truncation_sentences": 0,
+    "exactly_once_coverage_sentences": 98529,
+    "roundtrip_exact_sentences": 98521,
+    "multichar_token_sentences": 3248,
+    "lossy_multichar_tokens": 8,
+    "lossy_multichar_sentences": 8,
+    "internal_ignore_hole_sentences": 0
+  },
+  "original_interface_changed": false,
+  "formal_training_or_predictions": false,
+  "finalization_first_attempt": {
+    "outer_python_exit_code": 1,
+    "failing_subcommand_prefix": [
+      "git",
+      "check-ignore",
+      "-q"
+    ],
+    "error": "fatal: --quiet is only valid with a single pathname",
+    "effect": "No result file written; validation command syntax issue, not failed ignore protection",
+    "fix": "Check one pathname at a time; all checks then passed",
+    "full_original_trace": "Retained in the tool execution output of this conversation; not copied as a duplicate large log"
+  },
+  "evidence_file_manifest": [
+    {
+      "path": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/alignment_audit.json",
+      "sha256": "a782d535b0786a1da4196436e915e8fe5b40d060c49a8110e43a9d68614b55fe",
+      "bytes": 17678
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/alignment_issues.jsonl",
+      "sha256": "18a261284d1c2eb7339ae105cc1504a2e9d38df881d14de95254eca79acbbfce",
+      "bytes": 3600
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/batch_checks.json",
+      "sha256": "32dc13c8653f1bbcdbf64b04a966fa70ff0455e3d3d793ab6936ba079e46c5b8",
+      "bytes": 4006
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/commands.jsonl",
+      "sha256": "4e2b196fc4f7587509c0ff7cd40ce383280dd62d2548dd37638a2cf5bd655e03",
+      "bytes": 16791
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/contract_checks.json",
+      "sha256": "879c927e546d18a67282c418ca5aee393e941adb2c60dbe81dbeac48bca6cd3e",
+      "bytes": 3207
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/gpu_smoke.json",
+      "sha256": "b10459606a51d547d4b3c2b980b1dcba002ca178a80a67ba64c2a4aa3eb9b93e",
+      "bytes": 1349
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/input_identity.json",
+      "sha256": "199cb93deca5fabe3a5da7e4c09c9b6e6d3ee8b54b9377bbd32222297bc86b77",
+      "bytes": 517
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/installation_plan.json",
+      "sha256": "5e3c1e7e6336fb25081fb7502b58baa696f89f40b28f263dc3d49ba3c9904a3f",
+      "bytes": 1029
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/installation_sources.json",
+      "sha256": "5481e307838185c466859d8272e6d7dfa193aa65c34b9d806cbf7f03b4d688a2",
+      "bytes": 27745
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/interface_manifest.json",
+      "sha256": "29876e2e6b6c92a2b0de9adf9239020be0b8653f97da0717dbf43c3ec335eb45",
+      "bytes": 2164
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/requirements-stage1a.in",
+      "sha256": "88e2d62b2da93e9e8b95e252230bf156a6acd8c7e5e1d36521c725395b628c6b",
+      "bytes": 118
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/run_context.json",
+      "sha256": "5f4a9bf6fda6bf87dbb5a9564d8fa5b47a8d8c5a8e37aa5d75e5b799156e3d36",
+      "bytes": 661
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/synthetic_tokenizer_probes.json",
+      "sha256": "facca0edf477666f3380c0fa48745b3ea7c49f97fe0deb6e371868fa5d4ff2e4",
+      "bytes": 37754
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/tokenizer_manifest.json",
+      "sha256": "29efcadbc815321a027c6d2f317244528d7f84dea83d382f9700c1e8c17cff22",
+      "bytes": 1446
+    }
+  ],
+  "source_snapshot": [
+    {
+      "path": ".gitignore",
+      "sha256": "2204f976a590adbc1b92c3193d8cdefb73e60731dacf8f800ee2834ac08209a0"
+    },
+    {
+      "path": "docs/bert_crf/audit_followup.py",
+      "sha256": "0885ffe814e1c73cf75718061a72f301c5efa7d08c2ebf9684ce7512de6f30c0"
+    },
+    {
+      "path": "docs/bert_crf/audit_stage0.py",
+      "sha256": "0f813ac36ab5b66b34d5a74e1c76638162b4c5c812c119035b0ad0c8ee903c9c"
+    },
+    {
+      "path": "docs/bert_crf/gpu_smoke.py",
+      "sha256": "cf4511c1714f16b2439762e880fdcd29587c1e4f724aeb3674540652e3dcac54"
+    },
+    {
+      "path": "docs/bert_crf/stage1a_alignment_audit.py",
+      "sha256": "b030c1aea1d7bfee811a88216fce930ea98842e1b2360d464f1e74c8ff1427a3"
+    },
+    {
+      "path": "docs/bert_crf/stage1a_contract_checks.py",
+      "sha256": "14ea752370d67e4cb271ad2947441964cdd6eb87489f013582ddda7f643dbdd7"
+    },
+    {
+      "path": "docs/bert_crf/stage1a_runner.py",
+      "sha256": "a3881d4c380f527cb11248562e82803db6d9c1538d993b05b3efd4f638a33bf6"
+    },
+    {
+      "path": "docs/bert_crf/00_initial_audit.md",
+      "sha256": "166a6eb49359eec2b15739dbcbb59a34f65e1954620c895437844c47f39c72c3"
+    },
+    {
+      "path": "docs/bert_crf/01_environment_and_dataloader.md",
+      "sha256": "3a0b30982c0757bc1074b948e1a04b08d44778de710e36e7de473abc69776496"
+    },
+    {
+      "path": "docs/bert_crf/alignment_summary.md",
+      "sha256": "20a6e4d1c0cf9003eac55db5e2628db7efc2b693b607dbc9ddd82e725aeb8fee"
+    },
+    {
+      "path": "docs/bert_crf/requirements-stage1a.lock.txt",
+      "sha256": "2920bc797f4cdf3564ecc154d2647208ea9a48d48490d9884d38eafa54ed1123"
+    }
+  ]
+}

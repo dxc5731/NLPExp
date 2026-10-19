@@ -1,0 +1,153 @@
+{
+  "artifact_kind": "stage1b_core_smoke_test",
+  "time": "2026-10-19T17:51:18.795259+08:00",
+  "synthetic_only": true,
+  "real_character_adapter": "NOT_IMPLEMENTED",
+  "model_name": "google-bert/bert-base-chinese",
+  "revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+  "local_model_path": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T174356+0800_stage1b\\pretrained",
+  "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "precision": "float32",
+  "torch": "2.14.1+cu132",
+  "cuda_runtime": "13.2",
+  "synthetic_texts": [
+    "天地玄黄",
+    "宇宙"
+  ],
+  "arbitrary_gold": [
+    [
+      0,
+      1,
+      2,
+      0
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "verified_token_offsets": [
+    [
+      [
+        1,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        2,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        3,
+        [
+          2,
+          3
+        ]
+      ],
+      [
+        4,
+        [
+          3,
+          4
+        ]
+      ]
+    ],
+    [
+      [
+        1,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        2,
+        [
+          1,
+          2
+        ]
+      ]
+    ]
+  ],
+  "tokenizer_class": "BertTokenizer",
+  "tokenizer_is_fast": true,
+  "weight_load_seconds": 0.3129221999552101,
+  "loading_info": {
+    "missing_keys": [],
+    "unexpected_keys": [
+      "bert.pooler.dense.bias",
+      "bert.pooler.dense.weight",
+      "cls.predictions.bias",
+      "cls.predictions.transform.LayerNorm.bias",
+      "cls.predictions.transform.LayerNorm.weight",
+      "cls.predictions.transform.dense.bias",
+      "cls.predictions.transform.dense.weight",
+      "cls.seq_relationship.bias",
+      "cls.seq_relationship.weight"
+    ],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "pretrained_tensor_equality_verified": [
+    "bert.embeddings.word_embeddings.weight",
+    "bert.encoder.layer.11.output.dense.weight"
+  ],
+  "encoder_parameters": 101677056,
+  "head_parameters": 8602,
+  "total_parameters": 101685658,
+  "trainable_parameters": 101685658,
+  "baseline_allocated_bytes": 407387136,
+  "forward_seconds_including_decode_validation": 0.11082520009949803,
+  "token_hidden_shapes": [
+    [
+      2,
+      6,
+      768
+    ]
+  ],
+  "character_emissions_shape": [
+    2,
+    4,
+    11
+  ],
+  "synthetic_smoke_nll": 6.125827789306641,
+  "decoded_paths": [
+    [
+      1,
+      3,
+      4,
+      5
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "backward_seconds": 0.04298699996434152,
+  "gradient_tensor_count": 202,
+  "all_gradients_finite": true,
+  "representative_gradient_norms": {
+    "encoder.bert.embeddings.word_embeddings.weight": 10.140836715698242,
+    "encoder.bert.encoder.layer.0.attention.self.query.weight": 3.4266998767852783,
+    "encoder.bert.encoder.layer.11.output.dense.weight": 7.588494777679443,
+    "head.classifier.weight": 27.294410705566406,
+    "head.crf.transitions": 0.9835309982299805
+  },
+  "peak_allocated_bytes": 997215232,
+  "peak_reserved_bytes": 1077936128,
+  "checkpoint_save_seconds": 0.39757629996165633,
+  "checkpoint_reload_seconds": 0.46261600009165704,
+  "checkpoint_path": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T174356+0800_stage1b\\checkpoint_reporting_fix",
+  "checkpoint_emissions_bitwise_equal": true,
+  "checkpoint_loss_bitwise_equal": true,
+  "checkpoint_paths_equal": true,
+  "checkpoint_configuration_equal": true,
+  "elapsed_seconds": 1.8017730000428855,
+  "status": "PASS",
+  "optimizer_steps": 0
+}

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-19T16:07:20.496607+08:00",
+  "args": [
+    "C:/apps/anaconda/envs/mcmc_env/python.exe",
+    "-X",
+    "utf8",
+    "-c",
+    "import sys,importlib.util,json; print(sys.executable); print(sys.version); print(json.dumps({m:bool(importlib.util.find_spec(m)) for m in ['torch','transformers','tokenizers','torchcrf','TorchCRF']},indent=2))"
+  ],
+  "returncode": 0,
+  "stdout": "C:\\apps\\anaconda\\envs\\mcmc_env\\python.exe\r\n3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]\r\n{\r\n  \"torch\": false,\r\n  \"transformers\": false,\r\n  \"tokenizers\": false,\r\n  \"torchcrf\": false,\r\n  \"TorchCRF\": false\r\n}\r\n",
+  "stderr": ""
+}

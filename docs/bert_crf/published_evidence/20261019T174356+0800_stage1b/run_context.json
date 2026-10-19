@@ -1,0 +1,27 @@
+{
+  "artifact_kind": "stage1b_core_smoke_test",
+  "run_id": "20261019T174356+0800_stage1b",
+  "evidence": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T174356+0800_stage1b",
+  "local": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T174356+0800_stage1b",
+  "model": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T174356+0800_stage1b\\pretrained",
+  "start_time": "2026-10-19T17:43:56.903880+08:00",
+  "cwd": "C:\\userProgram\\NLPexp",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "executable": "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.14.1+cu132",
+  "transformers": "5.20.1",
+  "tokenizers": "0.23.3",
+  "cuda_runtime": "13.2",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "capability": [
+    12,
+    0
+  ],
+  "gpu_total_bytes": 8546484224,
+  "git_head": "7be9ef96c5ed0357ea8eaa31b2e849bc4670e78f",
+  "git_status": "?? docs/bert_crf/stage1b_runner.py\n",
+  "model_id": "google-bert/bert-base-chinese",
+  "revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea"
+}

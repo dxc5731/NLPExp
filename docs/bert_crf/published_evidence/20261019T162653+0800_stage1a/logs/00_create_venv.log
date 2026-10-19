@@ -1,0 +1,2 @@
+ARGV ["C:/apps/anaconda/python.exe", "-m", "venv", ".venv-bert-crf"]
+CWD C:\userProgram\NLPexp

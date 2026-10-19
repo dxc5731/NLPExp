@@ -1,0 +1,66 @@
+[
+  {
+    "path": "code/requirements.txt",
+    "sha256": "1d2f42c8b0491757ae17fcc2ebe846b395e3b4aee1a4fb44029b91a37fa2e732"
+  },
+  {
+    "path": "code/artifacts/alignment_report_dev.json",
+    "sha256": "2d1d68c4409678957204540f2588ed8f557b23f6d62dbbc15b5a7b0daf964acb"
+  },
+  {
+    "path": "code/artifacts/alignment_report_test.json",
+    "sha256": "84e0ea75d0cbda417170ce5f7ea657b9eecc6644063003bbc34745165b7b0406"
+  },
+  {
+    "path": "code/artifacts/alignment_report_train.json",
+    "sha256": "a4d06b3d37b5840cbe368b39aee4f4c8468d2aff107f31af1972ebdbe7a7519b"
+  },
+  {
+    "path": "code/artifacts/split_v1.json",
+    "sha256": "497f21cf13d8f5accb83f86ffda16a4a59ba716c064ec347e990a219e8957072"
+  },
+  {
+    "path": "code/scripts/demo_dataloader.py",
+    "sha256": "adf9fddebc03cc3385b774e9d28897fad42c500073f71b32d962dfefc0d2ef79"
+  },
+  {
+    "path": "code/src/align.py",
+    "sha256": "d1563a69d8dff7a5e086114409e0bfc9048121c5497c93843ff24fa4d4a23727"
+  },
+  {
+    "path": "code/src/config.py",
+    "sha256": "fbc669c1c807e31ba4ca570a15a3d408c60e48299e61f633a9ef833f94f9c4e3"
+  },
+  {
+    "path": "code/src/dataset.py",
+    "sha256": "dce9f7c26e16a060f29366e52d9debb21aaacd21745ddbc2fee3836b278acc8e"
+  },
+  {
+    "path": "code/src/data_io.py",
+    "sha256": "1b2d60df7551f31db7b3987df5c3b5b645659387831c48c2d3de703d068152ef"
+  },
+  {
+    "path": "code/src/labels.py",
+    "sha256": "bfe9c11aa337c9c4fb7a8157047d1921418b307bae9dceb0f7191e290d3a882c"
+  },
+  {
+    "path": "code/src/split.py",
+    "sha256": "b666ed7483688630e462ee1f7f43a5855cadb8412a44a67b5d91aad4314c07b5"
+  },
+  {
+    "path": "code/src/__init__.py",
+    "sha256": "8b084a9f378124b2b1a51563bf3c22444eb7ff33692017da28b2136ae56987ed"
+  },
+  {
+    "path": "code/tests/test_align.py",
+    "sha256": "b033f5e4975a9252d0c50ba7c6d00eea11b0d5b6270822e3c91b0504af869a34"
+  },
+  {
+    "path": "doc/数据接口说明.md",
+    "sha256": "d27c137b66f6f2a6dc341b3f3309bcaff89fb80a07e8adad8784fa905d196807"
+  },
+  {
+    "path": "README_先看我.md",
+    "sha256": "66aff82e65ea00b8932c30c63be87c102c97c68487721b6255922737838d69be"
+  }
+]

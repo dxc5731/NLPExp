@@ -1,0 +1,3 @@
+tests/bert_crf/conftest.py:15: new blank line at EOF.
+tests/bert_crf/test_constraints.py:49: new blank line at EOF.
+tests/bert_crf/test_crf.py:157: new blank line at EOF.

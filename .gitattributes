@@ -1,0 +1,2 @@
+# Preserve original evidence bytes so SHA-256 manifests survive clone on Windows.
+docs/bert_crf/published_evidence/** -text -whitespace

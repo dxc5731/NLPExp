@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-10-19T16:07:20.496607+08:00",
+  "files": [
+    {
+      "path": "BERT数据接口_v1.zip",
+      "unchanged": true
+    },
+    {
+      "path": "IMCS-V2-NER.zip",
+      "unchanged": true
+    },
+    {
+      "path": "课程项目任务书_20261013_codex.md",
+      "unchanged": true
+    },
+    {
+      "path": "贡献声明表_20261013_codex.md",
+      "unchanged": true
+    },
+    {
+      "path": "项目报告模板_20261013_codex.md",
+      "unchanged": true
+    },
+    {
+      "path": "预测结果交接规范.md",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/code/requirements.txt",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/code/artifacts/alignment_report_dev.json",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/code/artifacts/alignment_report_test.json",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/code/artifacts/alignment_report_train.json",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/code/artifacts/split_v1.json",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/code/scripts/demo_dataloader.py",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/code/src/align.py",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/code/src/config.py",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/code/src/dataset.py",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/code/src/data_io.py",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/code/src/labels.py",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/code/src/split.py",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/code/src/__init__.py",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/code/tests/test_align.py",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/doc/数据接口说明.md",
+      "unchanged": true
+    },
+    {
+      "path": "interface_snapshot/README_先看我.md",
+      "unchanged": true
+    }
+  ]
+}
