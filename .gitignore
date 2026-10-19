@@ -18,6 +18,7 @@
 /runs/
 /logs/
 /checkpoints/
+/experiments/bert_crf/
 .env
 .env.*
 !.env.example

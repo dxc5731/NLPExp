@@ -1,0 +1,183 @@
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights:   8%|▊         | 16/197 [00:00<00:01, 159.32it/s]Loading weights:  21%|██        | 41/197 [00:00<00:00, 187.30it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 656.76it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: .local/bert_crf/20261019T174356+0800_stage1b/pretrained
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+bert.pooler.dense.weight                   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+bert.pooler.dense.bias                     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+{
+  "artifact_kind": "synthetic_smoke_test",
+  "run_directory": "C:\\userProgram\\NLPexp\\experiments\\bert_crf\\20261019T192450+0800_synthetic_smoke_test_9dbaa909",
+  "config": {
+    "artifact_kind": "synthetic_smoke_test",
+    "epochs": 3,
+    "batch_size": 2,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_epsilon": 1e-08,
+    "scheduler": "linear",
+    "warmup_steps": 1,
+    "gradient_clip_norm": 1.0,
+    "seed": 1729,
+    "device": "cuda",
+    "precision": "float32",
+    "deterministic_algorithms": true,
+    "shuffle": true,
+    "selection_metric": "entity.micro.f1",
+    "selection_mode": "max",
+    "min_delta": 0.0,
+    "early_stopping_patience": null,
+    "model_config_path": "configs/bert_crf/stage1b_core_smoke.json"
+  },
+  "state": {
+    "epoch": 3,
+    "global_step": 6,
+    "best_value": 0.4,
+    "best_epoch": 1,
+    "bad_epochs": 2,
+    "best_checkpoint": "C:\\userProgram\\NLPexp\\experiments\\bert_crf\\20261019T192450+0800_synthetic_smoke_test_9dbaa909\\checkpoints\\epoch_0001.pt",
+    "best_checkpoint_sha256": "0f5d026b330f242239d353453e80a41a42a5ce688b290fc21a70cfe6df62662f"
+  },
+  "max_parameter_changes": {
+    "encoder.bert.embeddings.word_embeddings.weight": 5.9232115745544434e-05,
+    "head.classifier.weight": 5.7635828852653503e-05,
+    "head.crf.transitions": 5.534570664167404e-05
+  },
+  "best_reloaded_validation": {
+    "loss": 3.7128725051879883,
+    "sentences": 4,
+    "characters": 10,
+    "character_accuracy_including_O": 0.7,
+    "protocol": "strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0",
+    "character": {
+      "micro": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "true_positive": 3,
+        "predicted": 3,
+        "gold": 6
+      },
+      "macro": {
+        "precision": 0.4,
+        "recall": 0.3,
+        "f1": 0.3333333333333333
+      },
+      "per_type": {
+        "Symptom": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "true_positive": 1,
+          "predicted": 1,
+          "gold": 2
+        },
+        "Drug": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 2
+        },
+        "Drug_Category": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 2,
+          "predicted": 2,
+          "gold": 2
+        },
+        "Medical_Examination": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 0
+        },
+        "Operation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 0
+        }
+      }
+    },
+    "entity": {
+      "micro": {
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4,
+        "true_positive": 1,
+        "predicted": 2,
+        "gold": 3
+      },
+      "macro": {
+        "precision": 0.2,
+        "recall": 0.2,
+        "f1": 0.2
+      },
+      "per_type": {
+        "Symptom": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 1,
+          "gold": 1
+        },
+        "Drug": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 1
+        },
+        "Drug_Category": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 1,
+          "predicted": 1,
+          "gold": 1
+        },
+        "Medical_Examination": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 0
+        },
+        "Operation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 0
+        }
+      }
+    }
+  },
+  "elapsed_seconds_including_load": 15.337715500034392,
+  "status": "PASS",
+  "real_data_used": false
+}

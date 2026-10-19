@@ -11,3 +11,9 @@
 阶段 1B 只验证人工样例：BERT→测试专用一对一映射→字符 CRF；一般真实 Token→字符适配仍未实现，没有正式微调、效果指标或 dev/test 预测。
 
 导出代码：`../export_public_evidence.py`，使用显式白名单且拒绝覆盖已有副本。本次上传未重新运行模型测试，引用的是保留原始时间与哈希的实际历史结果。
+
+## 阶段 1C（后续追加）
+
+`20261019T192215+0800_stage1c/` 保存本阶段实际执行的 130 项回归、真实预训练 BERT 的人工训练器测试及 CPU/CUDA 轻量模型恢复核验。所有训练数字标为 `synthetic_smoke_test`，未使用真实医疗数据。完整说明见 [阶段报告](../03_training_framework.md)。
+
+本阶段由 `../stage1c_finalize.py` 独立导出 24 份轻量原件副本，逐文件来源与哈希在该子目录的 `export_manifest.json`；未改写历史 `manifest.json`。Checkpoint 不发布；`resume_verification.json` 包含从本地真实 Checkpoint 核对的状态结果及合并的原始日志，未重新训练。

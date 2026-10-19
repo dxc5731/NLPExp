@@ -1,0 +1,125 @@
+{
+  "artifact_kind": "synthetic_smoke_test",
+  "epoch": 3,
+  "validation": {
+    "loss": 2.494633138179779,
+    "sentences": 4,
+    "characters": 10,
+    "character_accuracy_including_O": 0.7,
+    "protocol": "strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0",
+    "character": {
+      "micro": {
+        "precision": 0.6,
+        "recall": 0.5,
+        "f1": 0.5454545454545454,
+        "true_positive": 3,
+        "predicted": 5,
+        "gold": 6
+      },
+      "macro": {
+        "precision": 0.3,
+        "recall": 0.3,
+        "f1": 0.26666666666666666
+      },
+      "per_type": {
+        "Symptom": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "true_positive": 1,
+          "predicted": 1,
+          "gold": 2
+        },
+        "Drug": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 2
+        },
+        "Drug_Category": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "true_positive": 2,
+          "predicted": 4,
+          "gold": 2
+        },
+        "Medical_Examination": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 0
+        },
+        "Operation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 0
+        }
+      }
+    },
+    "entity": {
+      "micro": {
+        "precision": 0.3333333333333333,
+        "recall": 0.3333333333333333,
+        "f1": 0.3333333333333333,
+        "true_positive": 1,
+        "predicted": 3,
+        "gold": 3
+      },
+      "macro": {
+        "precision": 0.1,
+        "recall": 0.2,
+        "f1": 0.13333333333333333
+      },
+      "per_type": {
+        "Symptom": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 1,
+          "gold": 1
+        },
+        "Drug": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 1
+        },
+        "Drug_Category": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "true_positive": 1,
+          "predicted": 2,
+          "gold": 1
+        },
+        "Medical_Examination": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 0
+        },
+        "Operation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 0
+        }
+      }
+    }
+  }
+}

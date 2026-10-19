@@ -12,3 +12,4 @@ def pytest_addoption(parser):
     parser.addoption('--pretrained-dir', default=None)
     parser.addoption('--smoke-output', default=None)
     parser.addoption('--checkpoint-dir', default=None)
+    parser.addoption('--trainer-smoke-summary', default=None)

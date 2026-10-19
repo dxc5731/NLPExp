@@ -1,0 +1,150 @@
+{
+  "exported_at": "2026-10-19T19:30:19.754988+08:00",
+  "policy": "Explicit synthetic-only allowlist; byte-identical copies; no data/weights/checkpoints.",
+  "files": [
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\commands.jsonl",
+      "published": "commands.jsonl",
+      "bytes": 5310,
+      "sha256": "0c7c94a6620e5dddb9261e6e9a657e93e04e618aff242d6193b6a8e2951ae721"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\environment.json",
+      "published": "environment.json",
+      "bytes": 544,
+      "sha256": "d42017de1bc8671f66726e4a92cbd5150a1b4c06e35af37c88648ffd0c92ad11"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\initial_code.json",
+      "published": "initial_code.json",
+      "bytes": 581,
+      "sha256": "b18a2c050f86a3bc5d4f4b69d9aab6425cae1f9cc5c152092901c9ffb54b6246"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\source_manifest.json",
+      "published": "source_manifest.json",
+      "bytes": 2145,
+      "sha256": "2208f1a53a20fcd253d84fe01c67aa4b24b71cb4f0c4e2f3a8a0333895b59c75"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\first_framework_tests.log",
+      "published": "first_framework_tests.log",
+      "bytes": 6705,
+      "sha256": "b494650dd0be58aed6ecbee1a45e627585b3c3091fa130e6b88565b70d80c49a"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\first_framework_tests.xml",
+      "published": "first_framework_tests.xml",
+      "bytes": 8555,
+      "sha256": "56a5640557051281c518e2ca3c88f9603b586341763e32cd13c6f17d1ee3c405"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\full_regression.log",
+      "published": "full_regression.log",
+      "bytes": 23631,
+      "sha256": "26a2de94cd30b6669628651bdfea68b06b924ff5d8090614c891671aabf22dbb"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\full_regression.xml",
+      "published": "full_regression.xml",
+      "bytes": 15177,
+      "sha256": "28cd8529f50bc8823d94502ffaf3aab0df41dde6b5968a78e9837f605b8639ed"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\pretrained_trainer_smoke.log",
+      "published": "pretrained_trainer_smoke.log",
+      "bytes": 5675,
+      "sha256": "64203baa2384bcafd892cd1c13640ed172060dcb43934204d30b9436bc1c659a"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\pretrained_trainer_smoke.json",
+      "published": "pretrained_trainer_smoke.json",
+      "bytes": 4463,
+      "sha256": "ffa263f35c6287c1890fd6ac4a48f4793f07004def90bf4ac287832101f00979"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\pretrained_trainer_final.log",
+      "published": "pretrained_trainer_final.log",
+      "bytes": 5800,
+      "sha256": "81d2cf7a4bd6ded63ca40d49646fc453effadb40defb7b5aee0d5cbea1faa1fe"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\pretrained_trainer_final.json",
+      "published": "pretrained_trainer_final.json",
+      "bytes": 4463,
+      "sha256": "06090cb0a866127f16516c26a64dd7ccb358af18cbfcded0d50d89cf2ef334fd"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\stage1b_regression_gpu.json",
+      "published": "stage1b_regression_gpu.json",
+      "bytes": 3624,
+      "sha256": "4573bd0ca891d2e92b1cceae3164aeb346d3aa13c5dba5f2292100d0165053fc"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\resume_verification.json",
+      "published": "resume_verification.json",
+      "bytes": 84808,
+      "sha256": "aff0d7e571e7a073ba183cadb3a4eef4823736914d0dba9adca2e019ee8ba5eb"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\verification.json",
+      "published": "verification.json",
+      "bytes": 615,
+      "sha256": "f0c6588c47aba5a743b02f4f354a58e04847c6b79632f65fdc21635e9f070b0a"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\docs\\bert_crf\\evidence\\20261019T192215+0800_stage1c\\dependency_check.log",
+      "published": "dependency_check.log",
+      "bytes": 31,
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\experiments\\bert_crf\\20261019T192609+0800_synthetic_smoke_test_61102491\\config.json",
+      "published": "pretrained_run/config.json",
+      "bytes": 1418,
+      "sha256": "9f30516e31f0e1cf5b444f481b3ad4e91bdfdcc667199e7beb9f2f40041c0437"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\experiments\\bert_crf\\20261019T192609+0800_synthetic_smoke_test_61102491\\run_manifest.json",
+      "published": "pretrained_run/run_manifest.json",
+      "bytes": 5749,
+      "sha256": "692413925c3a53de323fc359834b819a356af78a0a47df3ff2b356ed952dc7d9"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\experiments\\bert_crf\\20261019T192609+0800_synthetic_smoke_test_61102491\\environment.json",
+      "published": "pretrained_run/environment.json",
+      "bytes": 544,
+      "sha256": "d42017de1bc8671f66726e4a92cbd5150a1b4c06e35af37c88648ffd0c92ad11"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\experiments\\bert_crf\\20261019T192609+0800_synthetic_smoke_test_61102491\\train.log",
+      "published": "pretrained_run/train.log",
+      "bytes": 9702,
+      "sha256": "aae1d41c376a05b9aca625719543c173f0fb415a7a6443d4ff048e9833c33434"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\experiments\\bert_crf\\20261019T192609+0800_synthetic_smoke_test_61102491\\history.csv",
+      "published": "pretrained_run/history.csv",
+      "bytes": 629,
+      "sha256": "72f3a3dc299c166aa08f831d24068d6329408245600631090e1728aad0431b16"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\experiments\\bert_crf\\20261019T192609+0800_synthetic_smoke_test_61102491\\metrics.json",
+      "published": "pretrained_run/metrics.json",
+      "bytes": 3046,
+      "sha256": "c9d7dc31feb0fd3eafa1245ce769150ddc864dc1ff5767c05b42e764910e6ff0"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\experiments\\bert_crf\\20261019T192609+0800_synthetic_smoke_test_61102491\\checkpoint_info.json",
+      "published": "pretrained_run/checkpoint_info.json",
+      "bytes": 705,
+      "sha256": "a93df51f9c0f8e91851cc23c5f5290f97e3079b7d7906b2000f6ad7e0c053830"
+    },
+    {
+      "source": "C:\\userProgram\\NLPexp\\experiments\\bert_crf\\20261019T192609+0800_synthetic_smoke_test_61102491\\source_manifest.json",
+      "published": "pretrained_run/source_manifest.json",
+      "bytes": 2471,
+      "sha256": "bd762946a5ea569b7576164029e415a0c5c4e122fac94aee9762f4145d3832ed"
+    }
+  ]
+}
