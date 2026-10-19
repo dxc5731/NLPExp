@@ -1,44 +1,56 @@
 # -*- coding: utf-8 -*-
 """统一的 PyTorch 数据接口。BERT-Softmax 和 BERT-CRF 都用这一份，保证对比公平。
 
-一个 batch 里给你四样东西：
+一个 batch 里给你：
 
     input_ids        [B, L]  词片编号
     attention_mask   [B, L]  1=真实词片，0=补位
-    labels           [B, L]  词片级标签；特殊符号和补位是 -100，损失函数会自动跳过
-    offsets          [B, L, 2] 每个词片对应原文的 [起, 止) 字符下标，解码还原时用
+    labels           [B, L]  词片级标签；特殊符号、补位、**无法无损表示的词片**都是 -100
+    offsets          [B, L, 2] 每个词片对应原文的 [起, 止) 字符下标
 
-为什么 labels 用 -100 而不是 PAD 标签：
-    PyTorch 的交叉熵默认忽略 -100。这样补位和 [CLS]/[SEP] 不参与训练，
-    也不用担心模型把补位学成 O，把 F1 刷虚高。
+除了 batch，Dataset 本身还挂着两样字符级的东西（CRF 和校验要用）：
+    ds.char_labels[i]   第 i 句的字符级金标，原样，长度 = len(原文)
+    ds.ambiguous        无法无损映射的词片清单（对话ID, 句子ID, 位置, 两边的标签）
+    ds.report()         上面这些东西的汇总统计
 
-为什么把 offsets 也放进 batch：
-    推理时要把词片预测还原成字符预测，必须知道每个词片覆盖哪几个字。
-    训练时不用，但留着一份，接口对两边一致，B 那边写 CRF 时不用改结构。
+为什么 -100 而不是别的：
+    交叉熵默认忽略 -100。补位和特殊符号不该参与训练；
+    一个词片覆盖多个字符且标签互相冲突时，任何单一标签都是伪造，
+    也只能不参与训练——但会记进 ambiguous，绝不静默处理。
 """
 
 import torch
 from torch.utils.data import DataLoader, Dataset
 
-from .align import IGNORE_INDEX, encode_sentence, gold_to_token_labels, load_tokenizer
+from .align import IGNORE_INDEX, encode_sentence, load_tokenizer
 from .config import MAX_LEN
 
 
 class NerDataset(Dataset):
-    """把「对话ID + 句子ID + 原文 + 标签」变成模型输入。
-
-    分词只在初始化时做一次，训练时直接取，不重复算。
-    """
+    """把「对话ID + 句子ID + 原文 + 标签」变成模型输入。分词只在初始化时做一次。"""
 
     def __init__(self, examples, tokenizer, max_len: int = MAX_LEN, with_labels: bool = True):
         self.examples = examples
         self.with_labels = with_labels
         self.encoded = []
+        self.char_labels = [] if with_labels else None
+        self.ambiguous = []          # [(dialogue_id, sentence_id, {start,end,text,tags})]
+        self.n_ambiguous_sentences = 0
+
         for ex in examples:
-            ids, offsets = encode_sentence(tokenizer, ex["text"], max_len=max_len)
-            item = {"input_ids": ids, "offsets": offsets}
+            where = f"对话{ex['dialogue_id']}/句{ex['sentence_id']}"
+            enc = encode_sentence(
+                tokenizer, ex["text"], max_len=max_len,
+                tags=ex["tags"] if with_labels else None, where=where,
+            )
+            item = {"input_ids": enc.input_ids, "offsets": enc.offsets}
             if with_labels:
-                item["labels"] = gold_to_token_labels(ex["tags"], offsets)
+                item["labels"] = enc.token_labels
+                self.char_labels.append(list(ex["tags"]))
+                if enc.ambiguous:
+                    self.n_ambiguous_sentences += 1
+                    for a in enc.ambiguous:
+                        self.ambiguous.append((ex["dialogue_id"], ex["sentence_id"], a))
             self.encoded.append(item)
 
     def __len__(self) -> int:
@@ -57,6 +69,17 @@ class NerDataset(Dataset):
         if self.with_labels:
             out["labels"] = torch.tensor(enc["labels"], dtype=torch.long)
         return out
+
+    def report(self) -> dict:
+        return {
+            "examples": len(self.examples),
+            "ambiguous_tokens": len(self.ambiguous),
+            "ambiguous_sentences": self.n_ambiguous_sentences,
+            "ambiguous_examples": [
+                {"dialogue_id": d, "sentence_id": s, **a}
+                for d, s, a in self.ambiguous[:20]
+            ],
+        }
 
 
 def collate_fn(batch, pad_token_id: int = 0):
@@ -99,8 +122,8 @@ def collect_examples(data: dict, dialogue_ids=None, require_labels: bool = True)
         for s in data[did]["dialogue"]:
             text = s["sentence"]
             tags = s["BIO_label"].split(" ") if require_labels else None
-            if require_labels:
-                assert len(tags) == len(text), (did, s["sentence_id"])
+            if require_labels and len(tags) != len(text):
+                raise ValueError(f"对话{did}/句{s['sentence_id']} 标签数与字符数不一致")
             examples.append({
                 "dialogue_id": did,
                 "sentence_id": s["sentence_id"],

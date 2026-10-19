@@ -14,23 +14,33 @@
 from seqeval.metrics import classification_report, f1_score, precision_score, recall_score
 from sklearn.metrics import accuracy_score, f1_score as token_f1
 
-from .align import tokens_to_char_labels
+from .align import AlignmentError, restore_char_labels, to_legal_bio
 from .labels import LABELS
 
 
-def decode_batch(pred_ids, offsets, texts, id2label_ids=None):
-    """词片级预测 -> 每个字符的标签字符串列表。"""
+def decode_batch(pred_ids, offsets, texts):
+    """词片级预测 -> 每个字符的标签字符串。
+
+    返回 (每句的标签列表, 非法 BIO 修复处数)。
+    修复只发生在预测结果上——模型逐位置分类不保证 BIO 合法，
+    导出前必须修；修了几处会被记下来，不藏着。
+    """
     out = []
+    n_repair = 0
     for i, text in enumerate(texts):
         n = len(text)
         offs = offsets[i].tolist()
-        # 只取覆盖了字符的词片
         pairs = [(int(p), tuple(o)) for p, o in zip(pred_ids[i].tolist(), offs) if o[0] != o[1]]
-        labels = [int(p) for p, _ in pairs]
-        o = [o for _, o in pairs]
-        tags, _ = tokens_to_char_labels(labels, o, n)
-        out.append(tags)
-    return out
+        labels = [p for p, _ in pairs]
+        o = [x for _, x in pairs]
+        tags = restore_char_labels(labels, o, n)
+        if any(t is None for t in tags):
+            missing = [k for k, t in enumerate(tags) if t is None]
+            raise AlignmentError(f"预测还原后有 {len(missing)} 个字符没有标签，位置 {missing[:10]}")
+        fixed, changed = to_legal_bio(tags)
+        out.append(fixed)
+        n_repair += changed
+    return out, n_repair
 
 
 def compute_metrics(gold_tags, pred_tags):

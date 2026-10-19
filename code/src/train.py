@@ -64,11 +64,11 @@ class Logger:
 
 
 @torch.no_grad()
-def evaluate(model, loader, examples, device, id2label):
-    """在验证集上跑一遍。返回指标字典和每个类别的报告。"""
+def evaluate(model, loader, examples, device):
+    """在验证集上跑一遍。返回指标字典、每类报告、非法 BIO 修复处数。"""
     model.eval()
     gold, pred = [], []
-    total_loss, n_batch = 0.0, 0
+    total_loss, n_batch, n_repair = 0.0, 0, 0
     idx = 0
     for batch in loader:
         input_ids = batch["input_ids"].to(device)
@@ -79,14 +79,16 @@ def evaluate(model, loader, examples, device, id2label):
         n_batch += 1
 
         pred_ids = out.logits.argmax(dim=-1).cpu()
-        decoded = decode_batch(pred_ids, batch["offsets"], batch["text"], id2label)
+        decoded, repaired = decode_batch(pred_ids, batch["offsets"], batch["text"])
+        n_repair += repaired
         pred.extend(decoded)
-        for i in range(len(decoded)):
+        for _ in range(len(decoded)):
             gold.append(examples[idx]["tags"])
             idx += 1
 
     metrics = compute_metrics(gold, pred)
     metrics["val_loss"] = total_loss / max(n_batch, 1)
+    metrics["bio_repairs"] = n_repair
     return metrics, full_report(gold, pred)
 
 
@@ -170,7 +172,7 @@ def main() -> None:
             pbar.set_postfix(loss=f"{loss.item():.4f}", lr=f"{scheduler.get_last_lr()[0]:.2e}")
 
         avg_loss = running / max(len(train_loader), 1)
-        metrics, report = evaluate(model, val_loader, val_examples, device, None)
+        metrics, report = evaluate(model, val_loader, val_examples, device)
         metrics.update({"epoch": epoch, "train_loss": avg_loss,
                         "elapsed_seconds": time.time() - t0})
         history.append(metrics)
