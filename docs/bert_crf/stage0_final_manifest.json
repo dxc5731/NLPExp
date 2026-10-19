@@ -1,0 +1,267 @@
+{
+  "timestamp": "2026-10-19T16:12:23.885115+08:00",
+  "checks": {
+    "original_inputs_unchanged": true,
+    "interface_sources_unchanged": true,
+    "audit_scripts_ast_valid": true,
+    "json_files_parsed": 24,
+    "training_executed": false
+  },
+  "files": [
+    {
+      "path": "docs/bert_crf/00_initial_audit.md",
+      "bytes": 28036,
+      "sha256": "166a6eb49359eec2b15739dbcbb59a34f65e1954620c895437844c47f39c72c3"
+    },
+    {
+      "path": "docs/bert_crf/audit_followup.py",
+      "bytes": 5761,
+      "sha256": "0885ffe814e1c73cf75718061a72f301c5efa7d08c2ebf9684ce7512de6f30c0"
+    },
+    {
+      "path": "docs/bert_crf/audit_stage0.py",
+      "bytes": 9434,
+      "sha256": "0f813ac36ab5b66b34d5a74e1c76638162b4c5c812c119035b0ad0c8ee903c9c"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/commands/00.json",
+      "bytes": 326,
+      "sha256": "09546bd8fb3d2bef809107ff1f143e5aab6cc0b1a5e9c29221cf93f1ec2fd631"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/commands/01.json",
+      "bytes": 336,
+      "sha256": "d91cbbcd3a480e8021a671d7188febf6b3e2f02013e650d5708679e58e76b167"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/commands/02.json",
+      "bytes": 433,
+      "sha256": "55811183f154ed5f455ab50030081431311264c54202501645c6e0f41a63c382"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/commands/03.json",
+      "bytes": 21598,
+      "sha256": "2f7a23e8570f72811b14c98602e54d5ab156e11bf274fc4f74bbd34444494e08"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/commands/04.json",
+      "bytes": 1003,
+      "sha256": "9498c06e69b5164995f7bcbc7931821bc8bacdeffa2a2207ffd52c894a6c50eb"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/commands/05.json",
+      "bytes": 1631,
+      "sha256": "9538b04be593db56430d32240d5ff46f289cdf59a1e89c1835acee58904bb80e"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/commands_index.json",
+      "bytes": 25516,
+      "sha256": "fbd17b76c84ea2e95adeedf087efa686e69dfc3641127254c31f50896ae5d7dc"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/dataset_archive_manifest.json",
+      "bytes": 1124,
+      "sha256": "1aafd82e417725ef0e4b62aab1a2535d88833603db837d07f42a7ebbac60dff3"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/dependency_index_checks.json",
+      "bytes": 24727,
+      "sha256": "b41219ebd0e7c37ae58b96689270a41d745d3ebbfce4623adbdfe8029a8c5a15"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/environment.json",
+      "bytes": 679,
+      "sha256": "66af68ca0e58394f24cedfc0d307df048bf09689515b29325c81ee92984fd7d0"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/input_manifest.json",
+      "bytes": 964,
+      "sha256": "00307c3af7f8739ca8d3785794d349cfe3f2761b4a034d80a6bb1d074297021e"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_manifest.json",
+      "bytes": 2475,
+      "sha256": "6067612a1baa80c14b0255bee3a652697aa039911d8a5afb95b893de9d0b2cd4"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/code/artifacts/alignment_report_dev.json",
+      "bytes": 427,
+      "sha256": "2d1d68c4409678957204540f2588ed8f557b23f6d62dbbc15b5a7b0daf964acb"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/code/artifacts/alignment_report_test.json",
+      "bytes": 368,
+      "sha256": "84e0ea75d0cbda417170ce5f7ea657b9eecc6644063003bbc34745165b7b0406"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/code/artifacts/alignment_report_train.json",
+      "bytes": 416,
+      "sha256": "a4d06b3d37b5840cbe368b39aee4f4c8468d2aff107f31af1972ebdbe7a7519b"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/code/artifacts/split_v1.json",
+      "bytes": 40357,
+      "sha256": "497f21cf13d8f5accb83f86ffda16a4a59ba716c064ec347e990a219e8957072"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/code/requirements.txt",
+      "bytes": 531,
+      "sha256": "1d2f42c8b0491757ae17fcc2ebe846b395e3b4aee1a4fb44029b91a37fa2e732"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/code/scripts/demo_dataloader.py",
+      "bytes": 2285,
+      "sha256": "adf9fddebc03cc3385b774e9d28897fad42c500073f71b32d962dfefc0d2ef79"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/code/src/__init__.py",
+      "bytes": 24,
+      "sha256": "8b084a9f378124b2b1a51563bf3c22444eb7ff33692017da28b2136ae56987ed"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/code/src/align.py",
+      "bytes": 2995,
+      "sha256": "d1563a69d8dff7a5e086114409e0bfc9048121c5497c93843ff24fa4d4a23727"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/code/src/config.py",
+      "bytes": 862,
+      "sha256": "fbc669c1c807e31ba4ca570a15a3d408c60e48299e61f633a9ef833f94f9c4e3"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/code/src/data_io.py",
+      "bytes": 782,
+      "sha256": "1b2d60df7551f31db7b3987df5c3b5b645659387831c48c2d3de703d068152ef"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/code/src/dataset.py",
+      "bytes": 5137,
+      "sha256": "dce9f7c26e16a060f29366e52d9debb21aaacd21745ddbc2fee3836b278acc8e"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/code/src/labels.py",
+      "bytes": 632,
+      "sha256": "bfe9c11aa337c9c4fb7a8157047d1921418b307bae9dceb0f7191e290d3a882c"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/code/src/split.py",
+      "bytes": 3996,
+      "sha256": "b666ed7483688630e462ee1f7f43a5855cadb8412a44a67b5d91aad4314c07b5"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/code/tests/test_align.py",
+      "bytes": 3900,
+      "sha256": "b033f5e4975a9252d0c50ba7c6d00eea11b0d5b6270822e3c91b0504af869a34"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/doc/数据接口说明.md",
+      "bytes": 3828,
+      "sha256": "d27c137b66f6f2a6dc341b3f3309bcaff89fb80a07e8adad8784fa905d196807"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/interface_snapshot/README_先看我.md",
+      "bytes": 716,
+      "sha256": "66aff82e65ea00b8932c30c63be87c102c97c68487721b6255922737838d69be"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/pure_alignment_probes.json",
+      "bytes": 917,
+      "sha256": "858439b6c0cc2977bd3fff078e681c1b134c9310f6583e4602d76adee17e7a3e"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/secondary_environment.json",
+      "bytes": 724,
+      "sha256": "28a69cea5cb76c9f0de40ff6536408ceeb78d781591cd966fb5fd2ff1aab55ba"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/shell_failure_note.json",
+      "bytes": 520,
+      "sha256": "c3e9d32dc9212e2e74a6dd8d3ec1c1043d20cab65118021fe307f1a83e902eb7"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/source_integrity_check.json",
+      "bytes": 2250,
+      "sha256": "93be82f0b322af6587441483927d74b2f02cf364b4b3198377f8a1264c93deb2"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/split_verification.json",
+      "bytes": 1435,
+      "sha256": "0ed35f1165e9532853539320bba8222481862d50b1baec00c1e74a3f471ab638"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/torch_wheel_index_check.json",
+      "bytes": 600,
+      "sha256": "80a0335315cc8ae4b3103b0846634575e72d0da3ad5fcdb29d0fbe823542bc03"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/train_contract_checks.json",
+      "bytes": 869,
+      "sha256": "c0c3e3e63da47c45b1680094126ae04db8b79dd071c8a5d8d5ddf17804d71d8d"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/upstream_manifest.json",
+      "bytes": 2608,
+      "sha256": "a1b2602df70ccd87ab4ff615b7003b97e0b22b2170e61e089349a0b700fac8e0"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/upstream_snapshot/README.md",
+      "bytes": 15108,
+      "sha256": "ea262b7b7442f76464b40eabb076a912acd9514512c87100ff19ad112430f873"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/upstream_snapshot/task1/BERT-NER/data_loader.py",
+      "bytes": 10216,
+      "sha256": "4ed6c6d61eff97cd7f18e873d539a1fa629ca734063940dba983db2ecf60e2f9"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/upstream_snapshot/task1/BERT-NER/inference.py",
+      "bytes": 7651,
+      "sha256": "3b8495b700be030d6af7ae316241d059a197fd0574df1ea841a1822518118987"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/upstream_snapshot/task1/BERT-NER/main.py",
+      "bytes": 4202,
+      "sha256": "1663b25b6617c5e7a6da49912685df83b61ed4a1af6a62b8b03d9450167974c6"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/upstream_snapshot/task1/BERT-NER/modeling_nerbert.py",
+      "bytes": 2738,
+      "sha256": "16be70938b3bbc6c3d5952fc36bdebe54f02f3d5110f1a6c221640d9ccea807c"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/upstream_snapshot/task1/BERT-NER/predict.py",
+      "bytes": 8274,
+      "sha256": "f3ee4cda1f9734caaa970942b6a45e8875754e72a875ca7c34104acfbc1d367f"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/upstream_snapshot/task1/BERT-NER/preprocess.py",
+      "bytes": 2732,
+      "sha256": "9584e5ff26b288c99aa42baff78b784da3a76d4fb0ce1357f7569dab2dfe0c16"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/upstream_snapshot/task1/BERT-NER/README.md",
+      "bytes": 834,
+      "sha256": "494d6b1d5fd2bad4edd5d2ea45a59542665b493fea06e2683a8c8ca600a7b983"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/upstream_snapshot/task1/BERT-NER/requirements.txt",
+      "bytes": 94,
+      "sha256": "bd8403d357c94540e43cf48f5f49089635a47ad3f71271d56657472a7df148a0"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/upstream_snapshot/task1/BERT-NER/trainer.py",
+      "bytes": 10545,
+      "sha256": "5ccf802ed2333034d7f9e4f45f1541e77fc70a6a780061a54497238eaa2e79e9"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/upstream_snapshot/task1/BERT-NER/utils.py",
+      "bytes": 2689,
+      "sha256": "ed30c761fc4b6090fb9e7f4825c4d54293f59fc3f3d1a026c896f760efd20318"
+    },
+    {
+      "path": "docs/bert_crf/evidence/20261019T160537+0800/upstream_snapshot/task1/README.md",
+      "bytes": 2669,
+      "sha256": "3015bfbe292814914adcffa3ce393d9c223fcf5691646831d1535ae2fc0634f6"
+    }
+  ]
+}
