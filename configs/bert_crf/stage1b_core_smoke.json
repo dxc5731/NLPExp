@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "artifact_kind": "stage1b_core_smoke_test",
+  "bert_model_name": "google-bert/bert-base-chinese",
+  "bert_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+  "hidden_size": 768,
+  "num_labels": 11,
+  "labels": ["O", "B-Symptom", "I-Symptom", "B-Drug", "I-Drug", "B-Drug_Category", "I-Drug_Category", "B-Medical_Examination", "I-Medical_Examination", "B-Operation", "I-Operation"],
+  "dropout": 0.1,
+  "bio_constraints": true,
+  "constraint_rule_version": "strict_bio_v1",
+  "seed": 1729,
+  "device": "cuda",
+  "precision": "float32",
+  "deterministic_algorithms": true
+}
