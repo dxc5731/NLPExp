@@ -1,0 +1,8 @@
+# 服务器端依赖（torch 单独装，不写在这里）
+# 安装：pip install -r requirements-server.txt
+transformers==5.20.1
+tokenizers==0.23.3
+huggingface-hub==2.2.0
+seqeval==1.2.2
+numpy==2.4.6
+tqdm==4.70.1
