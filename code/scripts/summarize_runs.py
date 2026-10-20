@@ -63,6 +63,8 @@ def fmt(v, digits=4):
     if v is None:
         return "—"
     if isinstance(v, float):
+        if v != 0 and abs(v) < 0.001:
+            return f"{v:.1e}"
         return f"{v:.{digits}f}"
     return str(v)
 
