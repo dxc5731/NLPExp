@@ -29,7 +29,7 @@ def restore_rng(state):
         torch.cuda.set_rng_state_all([s.cpu() for s in state['torch_cuda']])
 
 
-def save_checkpoint(path, model, optimizer, scheduler, training_state, identity, config):
+def save_checkpoint(path, model, optimizer, scheduler, training_state, identity, config, *, run_metadata=None):
     path = Path(path)
     if path.exists():
         raise FileExistsError('Checkpoint already exists; do not overwrite history')
@@ -37,7 +37,7 @@ def save_checkpoint(path, model, optimizer, scheduler, training_state, identity,
     payload = {'schema': SCHEMA, 'artifact_kind': config['artifact_kind'], 'identity': identity,
                'training_config': config, 'model': model.state_dict(), 'optimizer': optimizer.state_dict(),
                'scheduler': scheduler.state_dict(), 'training_state': training_state.copy(),
-               'rng': rng_state(), 'amp_scaler': None}
+               'rng': rng_state(), 'amp_scaler': None, 'run_metadata': run_metadata}
     try:
         torch.save(payload, temporary)
         temporary.replace(path)

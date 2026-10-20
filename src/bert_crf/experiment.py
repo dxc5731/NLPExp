@@ -4,6 +4,7 @@ from datetime import datetime
 import hashlib
 import importlib.metadata
 import json
+import os
 from pathlib import Path
 import platform
 import shutil
@@ -48,6 +49,7 @@ def environment():
     return {'python': sys.version, 'executable': sys.executable, 'platform': platform.platform(),
             'packages': {k: importlib.metadata.version(k) for k in ('torch', 'transformers', 'tokenizers', 'numpy', 'pytest')},
             'cuda_runtime': torch.version.cuda, 'cuda_available': torch.cuda.is_available(),
+            'cublas_workspace_config': os.environ.get('CUBLAS_WORKSPACE_CONFIG'),
             'gpu': torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
             'capability': list(torch.cuda.get_device_capability(0)) if torch.cuda.is_available() else None}
 
@@ -78,6 +80,7 @@ class Experiment:
         if artifact_kind not in KINDS:
             raise ValueError('Unknown run type')
         self.kind = artifact_kind
+        self.log_name = 'run.log' if artifact_kind == 'real_training' else 'train.log'
         run_id = run_id or datetime.now().astimezone().strftime('%Y%m%dT%H%M%S%z') + '_' + artifact_kind + '_' + uuid.uuid4().hex[:8]
         if Path(run_id).name != run_id or run_id in ('.', '..'):
             raise ValueError('run_id must be a single directory name')
@@ -100,7 +103,7 @@ class Experiment:
 
     def event(self, event, **fields):
         record = {'artifact_kind': self.kind, 'time': datetime.now().astimezone().isoformat(), 'event': event, **fields}
-        with (self.path / 'train.log').open('a', encoding='utf-8') as stream:
+        with (self.path / self.log_name).open('a', encoding='utf-8') as stream:
             stream.write(canonical(record) + '\n')
 
     def epoch(self, row, metrics):

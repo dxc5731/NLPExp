@@ -1,0 +1,71 @@
+{
+  "inspection_kind": "static integration analysis backed by actual data batches",
+  "fields": [
+    {
+      "target": "input_ids",
+      "source": "batch.input_ids",
+      "format": "[B,L] int64",
+      "required_work": "reuse",
+      "verification": "actual batch"
+    },
+    {
+      "target": "attention_mask",
+      "source": "batch.attention_mask",
+      "format": "[B,L] int64",
+      "required_work": "reuse for BERT, not character CRF",
+      "verification": "actual batch"
+    },
+    {
+      "target": "character_labels",
+      "source": "Dataset.char_labels indexed by original ID",
+      "format": "[B,C] int64, 0..10; O only as masked padding placeholder",
+      "required_work": "NEW data adapter; never infer from token labels",
+      "verification": "source gold verified, adapter not implemented"
+    },
+    {
+      "target": "character_mask",
+      "source": "len(batch.text)",
+      "format": "[B,C] bool contiguous prefix",
+      "required_work": "NEW data adapter",
+      "verification": "lengths checked, tensor adapter not implemented"
+    },
+    {
+      "target": "mapping",
+      "source": "batch.offsets + attention + original lengths",
+      "format": "future mapping metadata",
+      "required_work": "NEW data adapter AND differentiable representation adapter",
+      "verification": "coverage audited only; no representation conversion"
+    },
+    {
+      "target": "ids",
+      "source": "batch.dialogue_id, batch.sentence_id",
+      "format": "list[tuple[str,str]]",
+      "required_work": "zip into Trainer protocol; preserve strings/order",
+      "verification": "actual IDs verified"
+    },
+    {
+      "target": "token_type_ids",
+      "source": "not supplied",
+      "format": "optional [B,L]",
+      "required_work": "single sentence BERT can omit",
+      "verification": "static model signature"
+    },
+    {
+      "target": "character_hidden_states",
+      "source": "BERT output plus future adapter, NOT DataLoader",
+      "format": "[B,C,H]",
+      "required_work": "NEW differentiable representation adapter",
+      "verification": "not implemented / not run"
+    },
+    {
+      "target": "provider.metadata",
+      "source": "archive/split/tokenizer/label/alignment identities",
+      "format": "versioned dict",
+      "required_work": "NEW epoch-pure BatchProvider wrapper",
+      "verification": "source identities available; wrapper not implemented"
+    }
+  ],
+  "real_execution_guard": "TrainingConfig.require_synthetic and formal entry remain unchanged/closed",
+  "best_baseline_pending_human_confirmation": "Validated offsets; share one token vector across its span; mean only for explicitly allowed multi-token coverage; fail on zero coverage. No gold-dependent mapping.",
+  "gradient_status": "Gather/share/mean are differentiable in theory; no v2 gradient or model test was run"
+}

@@ -1,0 +1,7 @@
+{
+  "artifact_kind": "environment_check",
+  "batch_size": 16,
+  "basis": "Largest measured candidate with longest unique real samples, three-copy AdamW reserve and >=1GiB free",
+  "formal_training_started": false,
+  "config_sha256": "2bf995dc16e85060e25805862ccf8227f6dff6b2ee390070e98b276dd503389d"
+}

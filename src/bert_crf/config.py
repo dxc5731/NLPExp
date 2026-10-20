@@ -1,6 +1,7 @@
 """Serializable model/runtime configuration, independent of dataset processing."""
 from dataclasses import asdict, dataclass
 import json
+import os
 from pathlib import Path
 import random
 
@@ -52,6 +53,10 @@ class ModelConfig:
 
 def configure_runtime(config: ModelConfig):
     """Explicitly apply the recorded seed/device/precision policy; no hidden global seeding."""
+    if config.device.startswith('cuda') and config.deterministic_algorithms:
+        setting = os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG', ':4096:8')
+        if setting not in (':4096:8', ':16:8'):
+            raise ValueError('Unsupported deterministic CUBLAS_WORKSPACE_CONFIG')
     random.seed(config.seed)
     np.random.seed(config.seed)
     torch.manual_seed(config.seed)

@@ -1,0 +1,97 @@
+[
+  {
+    "path": "code/requirements.txt",
+    "bytes": 531,
+    "sha256": "1d2f42c8b0491757ae17fcc2ebe846b395e3b4aee1a4fb44029b91a37fa2e732"
+  },
+  {
+    "path": "code/artifacts/alignment_report_dev.json",
+    "bytes": 2367,
+    "sha256": "c8624eedb344ea97fa15319f355278b693f78f245a5210b779a0416cf69d1d54"
+  },
+  {
+    "path": "code/artifacts/alignment_report_test.json",
+    "bytes": 303,
+    "sha256": "1b66d28171261836cf2f5d49dcf3c657117195152443d5e473d12a4877a98be7"
+  },
+  {
+    "path": "code/artifacts/alignment_report_train.json",
+    "bytes": 2585,
+    "sha256": "2b4d97b423c99bda9e4254aad4b112599d7436f1548147c0d8e04012c0cc3465"
+  },
+  {
+    "path": "code/artifacts/split_v1.json",
+    "bytes": 40357,
+    "sha256": "497f21cf13d8f5accb83f86ffda16a4a59ba716c064ec347e990a219e8957072"
+  },
+  {
+    "path": "code/scripts/demo_dataloader.py",
+    "bytes": 2356,
+    "sha256": "8e9163f7e8bfd5f2a5f0bf9bbd6d6cf7d3c44176936185eccc689862b1707512"
+  },
+  {
+    "path": "code/src/align.py",
+    "bytes": 5962,
+    "sha256": "40d63734e9b0eb7da4c6a33c5fb835d35d73442382ac35257c828a7ba7e6ca3e"
+  },
+  {
+    "path": "code/src/config.py",
+    "bytes": 862,
+    "sha256": "fbc669c1c807e31ba4ca570a15a3d408c60e48299e61f633a9ef833f94f9c4e3"
+  },
+  {
+    "path": "code/src/dataset.py",
+    "bytes": 6272,
+    "sha256": "9daae661ad7f8d8752561223c31ed956f1eb4c75c658cbc95c90ca5b16e31349"
+  },
+  {
+    "path": "code/src/data_io.py",
+    "bytes": 782,
+    "sha256": "1b2d60df7551f31db7b3987df5c3b5b645659387831c48c2d3de703d068152ef"
+  },
+  {
+    "path": "code/src/labels.py",
+    "bytes": 632,
+    "sha256": "bfe9c11aa337c9c4fb7a8157047d1921418b307bae9dceb0f7191e290d3a882c"
+  },
+  {
+    "path": "code/src/metrics.py",
+    "bytes": 2742,
+    "sha256": "6a74810fb76e187f7aeedfb26e70837b6d2f9815fd38d7ac5c28b8553173f0da"
+  },
+  {
+    "path": "code/src/model.py",
+    "bytes": 908,
+    "sha256": "4a2a5d4298a3e70083f2488cae62f1457e5e83654c2d1d8189d83cd209dac480"
+  },
+  {
+    "path": "code/src/split.py",
+    "bytes": 3996,
+    "sha256": "b666ed7483688630e462ee1f7f43a5855cadb8412a44a67b5d91aad4314c07b5"
+  },
+  {
+    "path": "code/src/__init__.py",
+    "bytes": 24,
+    "sha256": "8b084a9f378124b2b1a51563bf3c22444eb7ff33692017da28b2136ae56987ed"
+  },
+  {
+    "path": "code/tests/test_align.py",
+    "bytes": 6145,
+    "sha256": "6566daa3b2d7ea8dba374e9fd98ad46206a9295cab4633cdaa8344573223e12e"
+  },
+  {
+    "path": "doc/数据接口说明.md",
+    "bytes": 4648,
+    "sha256": "bf15ada138028db93e2e90824dbee015a1884144a52c41a1c119681dfb6bce57"
+  },
+  {
+    "path": "doc/数据接口说明_v2.md",
+    "bytes": 4648,
+    "sha256": "bf15ada138028db93e2e90824dbee015a1884144a52c41a1c119681dfb6bce57"
+  },
+  {
+    "path": "README_先看我.md",
+    "bytes": 938,
+    "sha256": "000ccf8cbdee5a3dd164d7e1ba7140e6b8c1865f98407bfd9bbb625a5059fa2a"
+  }
+]

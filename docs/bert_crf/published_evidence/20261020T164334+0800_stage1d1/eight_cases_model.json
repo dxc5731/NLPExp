@@ -1,0 +1,106 @@
+[
+  {
+    "split": "train",
+    "id": [
+      "10034734",
+      "2"
+    ],
+    "n_char": 12,
+    "loss": 29.70708656311035,
+    "loss_finite": true,
+    "raw_gold_unchanged": true,
+    "prediction_length": 12,
+    "strict_bio_legal": true
+  },
+  {
+    "split": "train",
+    "id": [
+      "10098865",
+      "21"
+    ],
+    "n_char": 9,
+    "loss": 21.827489852905273,
+    "loss_finite": true,
+    "raw_gold_unchanged": true,
+    "prediction_length": 9,
+    "strict_bio_legal": true
+  },
+  {
+    "split": "train",
+    "id": [
+      "10193361",
+      "25"
+    ],
+    "n_char": 24,
+    "loss": 58.189666748046875,
+    "loss_finite": true,
+    "raw_gold_unchanged": true,
+    "prediction_length": 24,
+    "strict_bio_legal": true
+  },
+  {
+    "split": "train",
+    "id": [
+      "10206772",
+      "25"
+    ],
+    "n_char": 25,
+    "loss": 61.12934875488281,
+    "loss_finite": true,
+    "raw_gold_unchanged": true,
+    "prediction_length": 25,
+    "strict_bio_legal": true
+  },
+  {
+    "split": "train",
+    "id": [
+      "10506585",
+      "10"
+    ],
+    "n_char": 28,
+    "loss": 70.87483978271484,
+    "loss_finite": true,
+    "raw_gold_unchanged": true,
+    "prediction_length": 28,
+    "strict_bio_legal": true
+  },
+  {
+    "split": "train",
+    "id": [
+      "10515756",
+      "10"
+    ],
+    "n_char": 18,
+    "loss": 42.92655944824219,
+    "loss_finite": true,
+    "raw_gold_unchanged": true,
+    "prediction_length": 18,
+    "strict_bio_legal": true
+  },
+  {
+    "split": "train",
+    "id": [
+      "10731191",
+      "31"
+    ],
+    "n_char": 17,
+    "loss": 43.339744567871094,
+    "loss_finite": true,
+    "raw_gold_unchanged": true,
+    "prediction_length": 17,
+    "strict_bio_legal": true
+  },
+  {
+    "split": "val",
+    "id": [
+      "10491432",
+      "7"
+    ],
+    "n_char": 24,
+    "loss": 66.37612915039062,
+    "loss_finite": true,
+    "raw_gold_unchanged": true,
+    "prediction_length": 24,
+    "strict_bio_legal": true
+  }
+]

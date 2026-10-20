@@ -73,6 +73,6 @@ class TrainingConfig:
 
 def require_synthetic(config, provider_kind=None):
     if config.artifact_kind != 'synthetic_smoke_test':
-        raise RuntimeError('Real training/inference disabled: repaired public interface and real character Adapter are not integrated')
+        raise RuntimeError('Synthetic entry only; real training disabled without explicit formal configuration and passing preflight')
     if provider_kind is not None and provider_kind != config.artifact_kind:
         raise ValueError('Provider/config artifact_kind mismatch; no synthetic/real fallback')

@@ -1,0 +1,351 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-20T18:09:44.559007+08:00",
+  "initial_files_preserved": 156,
+  "authorized_changed_initial_files": [
+    "README.md",
+    "docs/bert_crf/stage1e_runner.py",
+    "src/bert_crf/checkpoint.py",
+    "src/bert_crf/config.py",
+    "src/bert_crf/data_adapter.py",
+    "src/bert_crf/experiment.py",
+    "src/bert_crf/train.py",
+    "src/bert_crf/trainer.py",
+    "src/bert_crf/training_config.py"
+  ],
+  "prospective_files": [
+    {
+      "file": "README.md",
+      "bytes": 4272,
+      "sha256": "7c7dd944ce7900db9af1e74dc543691a91b0fa3bbbb4691a59438252afd2a4b9"
+    },
+    {
+      "file": "configs/bert_crf/first_baseline.json",
+      "bytes": 5751,
+      "sha256": "2bf995dc16e85060e25805862ccf8227f6dff6b2ee390070e98b276dd503389d"
+    },
+    {
+      "file": "configs/bert_crf/stage1d1_integration.json",
+      "bytes": 745,
+      "sha256": "120c64941c000ad765f94b3b379601fd004dd33c0d89da8027fbd61d969f294d"
+    },
+    {
+      "file": "docs/bert_crf/04_interface_v2_audit.md",
+      "bytes": 23389,
+      "sha256": "cdd04035d508f35bdf8435d3703f73f8d775771235cf16a1a1c250885367aec2"
+    },
+    {
+      "file": "docs/bert_crf/05_character_adapter_integration.md",
+      "bytes": 22916,
+      "sha256": "b19c6a4ee93b61ba674417d2596f4dda3e9c82acf7223c2ee7bfdf645be7934e"
+    },
+    {
+      "file": "docs/bert_crf/06_pretraining_readiness_review.md",
+      "bytes": 18656,
+      "sha256": "1a93cf94512cf5d6f64c2329f7ce6ca0ff89418dfab82dd8534dea09b07f3f92"
+    },
+    {
+      "file": "docs/bert_crf/07_baseline_config_decisions.md",
+      "bytes": 9238,
+      "sha256": "a81d2b0a53d3567e591dc015c718b5f3066a26a2fdf51580665e13117de390ac"
+    },
+    {
+      "file": "docs/bert_crf/08_training_preflight_and_integration.md",
+      "bytes": 17612,
+      "sha256": "2eb0fb43acb7c6ba31a7faf4a4b92dc330145ea1be9a5e167e2ea0310ff40532"
+    },
+    {
+      "file": "docs/bert_crf/interface_v2_alignment_audit.py",
+      "bytes": 19924,
+      "sha256": "e735eec2a19ef8dda490b1712830d4d6d23766c19f3634196e9d76edafd6cc16"
+    },
+    {
+      "file": "docs/bert_crf/interface_v2_finalize.py",
+      "bytes": 7913,
+      "sha256": "f0725671a3d815d3b142bc1ae59b5e64a7a851af61da0e7de7f995e448ba1b47"
+    },
+    {
+      "file": "docs/bert_crf/interface_v2_runner.py",
+      "bytes": 7868,
+      "sha256": "e901703d35737fd295fc8dc9d5a22303fa7169e31edcf9bfd7f245be0246e854"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T161159+0800_interface_v2_audit/alignment_summary.json",
+      "bytes": 18142,
+      "sha256": "d335e9b137347154179e7ba325312ccde4b17e21b85dd0486032b667ebe69e47"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T161159+0800_interface_v2_audit/commands.json",
+      "bytes": 1165,
+      "sha256": "7ad8fa90c4621cd53bf15afccafbc7daa9229256226479570061c86073279d8d"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T161159+0800_interface_v2_audit/execution_summary.json",
+      "bytes": 980,
+      "sha256": "920335a31fae49c65e6d82f73f8a90071a394cd9b25342fd4b7d7adf0fc1e3d4"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T161159+0800_interface_v2_audit/field_mapping.json",
+      "bytes": 2905,
+      "sha256": "0b9bc82f5a10ae577a87b805c3bf15232853e8bd6cf73744287a619a5753398d"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T161159+0800_interface_v2_audit/interface_manifest.json",
+      "bytes": 2930,
+      "sha256": "c22f5108e01ded103511280a935c1496c342490795fb0282c6d634b80e69b64a"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T161159+0800_interface_v2_audit/v1_v2_diff.json",
+      "bytes": 720,
+      "sha256": "9b3b55d8e93741b52fa3dea401310f2693882eb7c3415c1f500b122c421402d2"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/commands.json",
+      "bytes": 3172,
+      "sha256": "8152eb75b21b16ffecd53fbc23d3e29f3d9245c40dedb20c8969eabe6496ec0e"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/coverage_audit.json",
+      "bytes": 1971,
+      "sha256": "8a06cabe710efa2bd702bd68df20eabb14f0e132f664c4282289b5e51a4a052c"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/eight_cases_model.json",
+      "bytes": 2050,
+      "sha256": "528340f07cad20c85bbc8bea3ddb40794977c8f3aa9cccba89ad8f3171570444"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/known_issues.json",
+      "bytes": 1091,
+      "sha256": "6cf478b6c1eff1d219e009be4bbe59b6c2537e05c9af55c704a29e35df1f977e"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/real_batch_integration.json",
+      "bytes": 6501,
+      "sha256": "46050b67ae42d0d5c25e361fe18943e952d5f6aa3d84986cd3625c37aab4099b"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/test_summary.json",
+      "bytes": 661,
+      "sha256": "db7fbe544b5645d1ad463786d9de1e8eab3a2dc90f3b3cd63648cf15ed7bed2b"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/tests.json",
+      "bytes": 15764,
+      "sha256": "3680562846e0c91fe53ba051dba2a243bf33f9f00cfa578b8dad8141dd88ace0"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T171714+0800_stage1d_closeout_review/historical_readiness.json",
+      "bytes": 405,
+      "sha256": "5d6c82a90f5fc86b189691de0ec26e910117bf0c82f2b8cf2d8ae1fdb7274caf"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/acceptance.json",
+      "bytes": 24807,
+      "sha256": "0feb13b37c73338eeeebc12111cc6cb71a58961e98786282981e68fd1f00fa50"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/commands.json",
+      "bytes": 7617,
+      "sha256": "7873176a1c3ae289300ccf38fe31b612c29786cedd7663bff5c980793c025834"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/configuration_selection.json",
+      "bytes": 309,
+      "sha256": "48a3798777f3ad13849dfcae07f11bcf8b71f2b843d4ff4bb67da285231e500f"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/environment.json",
+      "bytes": 571,
+      "sha256": "c6aeef1226602b52e3e5005dc596c5c214d8653116818eb013aeb33d5e7ee21b"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/export_manifest.json",
+      "bytes": 15110,
+      "sha256": "7966478f3872dce383644b3b33acd74a07d4edf72ea00b6184d09c442fd935b2"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/lengths_and_coverage.json",
+      "bytes": 7113,
+      "sha256": "1d254f257e2f36356b71758b465a23cfc482656b5139110f16921f6f0603e252"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/preflight.json",
+      "bytes": 3093,
+      "sha256": "0ddf1849135689030e06b0ed2ca298928d425feb0dc7608a3e17b5a7bc16816c"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/real_probes.json",
+      "bytes": 3044,
+      "sha256": "6987a2ffa374528cd86664f384ee962685ee01b57698e4ad9096d69c7a706853"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/resource_measurements.json",
+      "bytes": 14576,
+      "sha256": "a51cec631245624cd95796592882b9ea20f25927cd07b4d6b0c845cdda30fd35"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/runner_metadata_correction.json",
+      "bytes": 239,
+      "sha256": "1688914b94382e6836595465c6bf8fc8925cf7821a8dcc9f4974382e890e55c4"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/synthetic_pretrained_trainer.json",
+      "bytes": 4451,
+      "sha256": "2e50b9026aa0ebd0e6c5936c47a3900c585b267e1d222a2c3577b55fe67a09dd"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/synthetic_run/checkpoint_info.json",
+      "bytes": 726,
+      "sha256": "6835f73aa96a4f496b9474609ae78cfb95d4321e6b07d54bf8d3d9d9d5ec6b55"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/synthetic_run/config.json",
+      "bytes": 1411,
+      "sha256": "6a9a621ea2728a2d131b7c7b0749fdfdf079996bddd4ea1c38fe7e7ed18979c1"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/synthetic_run/history.csv",
+      "bytes": 415,
+      "sha256": "2f1af165de86a286a153d79f9d42efceacb9ceb053abe575c15656fd0402a530"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/synthetic_run/metrics.json",
+      "bytes": 3301,
+      "sha256": "8307b0cf6c2755fed92373162215cbc9d5128689ca5e9f4ea9a4973f11f5bb2d"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/synthetic_run/run_info.json",
+      "bytes": 12969,
+      "sha256": "dc5586fbcaf5a4e2e45e0b25169f48666e19f4e752318be27d59ad70cd0fbb9b"
+    },
+    {
+      "file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/tests.json",
+      "bytes": 20854,
+      "sha256": "7660edab17806aef713156dc8c40417cd6cec5a130f505c4e35404d44bca71d9"
+    },
+    {
+      "file": "docs/bert_crf/stage1d1_finalize.py",
+      "bytes": 4961,
+      "sha256": "dc85bf2334162243e3c32a32d76e433b6fb911ed5bfcefc2b3f017e110f97655"
+    },
+    {
+      "file": "docs/bert_crf/stage1d1_integration_check.py",
+      "bytes": 20190,
+      "sha256": "d3105ceaa9a706f8915a29d6906b3eed2581ae7021be604159fb4dc34a17360e"
+    },
+    {
+      "file": "docs/bert_crf/stage1d1_runner.py",
+      "bytes": 5202,
+      "sha256": "9df5850a88480d8e8b51c9ea6b28b3676d26c845a8f79f2cf4ad817c0dd64cac"
+    },
+    {
+      "file": "docs/bert_crf/stage1d_closeout_review.py",
+      "bytes": 18457,
+      "sha256": "63d36702e82479ef1e0671ba3d740cf4e377a61cda1185611325a11209bba7df"
+    },
+    {
+      "file": "docs/bert_crf/stage1e_checks.py",
+      "bytes": 10327,
+      "sha256": "ba16084cf9bc97142409f99f526608daf642d2b97f3f1707cfc05039462fb410"
+    },
+    {
+      "file": "docs/bert_crf/stage1e_finalize.py",
+      "bytes": 15363,
+      "sha256": "3a3e35b53f643244e6fb36c49f7e749d20b3577cf821e32a578e9b090e84a670"
+    },
+    {
+      "file": "docs/bert_crf/stage1e_runner.py",
+      "bytes": 4367,
+      "sha256": "4c460d3c1c8f0a7473b79cbddfb345287691b904b47379f5a7bb2f7cf18de6c2"
+    },
+    {
+      "file": "scripts/train_bert_crf.py",
+      "bytes": 275,
+      "sha256": "e0b1ddb7319df51927ce1a8a099e9a669c26a1d2253af6f8ef6b774264f33dc7"
+    },
+    {
+      "file": "src/bert_crf/character_mapping.py",
+      "bytes": 6441,
+      "sha256": "c882ca9064fa3f00208df6057b3f82d688aaa17cd228e9bc0e76c47ec0c96706"
+    },
+    {
+      "file": "src/bert_crf/checkpoint.py",
+      "bytes": 4351,
+      "sha256": "bd6d84a946da786b99d29e3cf0cd36b4426bdc374dcf3af6314936a98d4514eb"
+    },
+    {
+      "file": "src/bert_crf/config.py",
+      "bytes": 3007,
+      "sha256": "9b6fb7d9572eda6a398b7dd5a977ed1978d7b27ab5160b8ca1e6c76f2f9d7c8d"
+    },
+    {
+      "file": "src/bert_crf/data_adapter.py",
+      "bytes": 11782,
+      "sha256": "9e0d1dcadde9e1f16d1fdf0673d00eb844a42a36fa18bda97fa4e2e08e072f79"
+    },
+    {
+      "file": "src/bert_crf/experiment.py",
+      "bytes": 5827,
+      "sha256": "1d3044f9c27f14ff8b2f96914662881d1efae97fb492111ff392fda68f2bcc18"
+    },
+    {
+      "file": "src/bert_crf/formal_config.py",
+      "bytes": 9429,
+      "sha256": "a3cdf8094ca095e5396becd8119894babe6285e534eaab5466992c4da0a4a25a"
+    },
+    {
+      "file": "src/bert_crf/preflight.py",
+      "bytes": 15741,
+      "sha256": "56aed9d9632b048d725b19b3eb44cdd0262a917437d01e03ef9e5da8e858b840"
+    },
+    {
+      "file": "src/bert_crf/real_data.py",
+      "bytes": 4819,
+      "sha256": "896bc8bde376b8bdf92623e3344f3295a223ef941377a1285f622ad5c9166da9"
+    },
+    {
+      "file": "src/bert_crf/run_artifacts.py",
+      "bytes": 5379,
+      "sha256": "7d10995ea57b67ced440bd59395de0f58d50420e30ed565f7c16ed8e73bb72f8"
+    },
+    {
+      "file": "src/bert_crf/train.py",
+      "bytes": 1899,
+      "sha256": "ec7ea308c00909f3acdd7c560953e7bcba13edcc6d56766848656c7f4c6454f5"
+    },
+    {
+      "file": "src/bert_crf/trainer.py",
+      "bytes": 20537,
+      "sha256": "7c36028c2a2a9b737819a09ca03feac4438d694fc4fa8d071da6007f7b5e1b8a"
+    },
+    {
+      "file": "src/bert_crf/training_config.py",
+      "bytes": 4100,
+      "sha256": "0b030c0b45f0b62d0af999b246d6518f5d9447c6f78182f644297cb30a59ad19"
+    },
+    {
+      "file": "tests/bert_crf/test_character_adapter.py",
+      "bytes": 13039,
+      "sha256": "2a0f06d0aad090f80942a9c55501c4311206e5a9e597ec03f74344f8489a6f00"
+    },
+    {
+      "file": "tests/bert_crf/test_character_real_integration.py",
+      "bytes": 4647,
+      "sha256": "ee02428d17cb538dd0409f8bb7a06954c8a74435c3b6457027d6f3d772745aca"
+    },
+    {
+      "file": "tests/bert_crf/test_formal_training.py",
+      "bytes": 19077,
+      "sha256": "030c1e855c98be174b4562731a402980131066261418e846e9316dd9bb698adc"
+    }
+  ],
+  "sensitive_findings": [],
+  "privacy_scan_scope": "Limited credential formats, personal Windows paths and full original train sentences >=8 codepoints; complements explicit file/content review",
+  "ignored_data_weights_logs_untouched": true,
+  "formal_optimizer_steps": 0,
+  "source_review": "All modified/new production sources, tests, configuration and reports inspected; old D0/D1 unchanged files also match prior inventory",
+  "git_base": "663f727949a4b923fa84c3b76ec64efad7bd72a1",
+  "staged_at_audit": [],
+  "git_status": "M README.md\n M src/bert_crf/checkpoint.py\n M src/bert_crf/config.py\n M src/bert_crf/experiment.py\n M src/bert_crf/train.py\n M src/bert_crf/trainer.py\n M src/bert_crf/training_config.py\n?? configs/bert_crf/first_baseline.json\n?? configs/bert_crf/stage1d1_integration.json\n?? docs/bert_crf/04_interface_v2_audit.md\n?? docs/bert_crf/05_character_adapter_integration.md\n?? docs/bert_crf/06_pretraining_readiness_review.md\n?? docs/bert_crf/07_baseline_config_decisions.md\n?? docs/bert_crf/08_training_preflight_and_integration.md\n?? docs/bert_crf/interface_v2_alignment_audit.py\n?? docs/bert_crf/interface_v2_finalize.py\n?? docs/bert_crf/interface_v2_runner.py\n?? docs/bert_crf/published_evidence/20261020T161159+0800_interface_v2_audit/\n?? docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/\n?? docs/bert_crf/published_evidence/20261020T171714+0800_stage1d_closeout_review/\n?? docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/\n?? docs/bert_crf/stage1d1_finalize.py\n?? docs/bert_crf/stage1d1_integration_check.py\n?? docs/bert_crf/stage1d1_runner.py\n?? docs/bert_crf/stage1d_closeout_review.py\n?? docs/bert_crf/stage1e_checks.py\n?? docs/bert_crf/stage1e_finalize.py\n?? docs/bert_crf/stage1e_runner.py\n?? scripts/\n?? src/bert_crf/character_mapping.py\n?? src/bert_crf/data_adapter.py\n?? src/bert_crf/formal_config.py\n?? src/bert_crf/preflight.py\n?? src/bert_crf/real_data.py\n?? src/bert_crf/run_artifacts.py\n?? tests/bert_crf/test_character_adapter.py\n?? tests/bert_crf/test_character_real_integration.py\n?? tests/bert_crf/test_formal_training.py"
+}

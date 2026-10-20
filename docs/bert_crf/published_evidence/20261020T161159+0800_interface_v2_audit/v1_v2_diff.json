@@ -1,0 +1,28 @@
+{
+  "added": [
+    "code/src/metrics.py",
+    "code/src/model.py",
+    "doc/数据接口说明_v2.md"
+  ],
+  "removed": [],
+  "changed": [
+    "README_先看我.md",
+    "code/artifacts/alignment_report_dev.json",
+    "code/artifacts/alignment_report_test.json",
+    "code/artifacts/alignment_report_train.json",
+    "code/scripts/demo_dataloader.py",
+    "code/src/align.py",
+    "code/src/dataset.py",
+    "code/tests/test_align.py",
+    "doc/数据接口说明.md"
+  ],
+  "unchanged": [
+    "code/artifacts/split_v1.json",
+    "code/requirements.txt",
+    "code/src/__init__.py",
+    "code/src/config.py",
+    "code/src/data_io.py",
+    "code/src/labels.py",
+    "code/src/split.py"
+  ]
+}

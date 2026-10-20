@@ -1,0 +1,248 @@
+[
+  {
+    "name": "configure",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "docs/bert_crf/stage1e_checks.py",
+      "configure"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 7.549017199780792,
+    "log_sha256": "b1a229855194fcfc7a5ea058fb053db4f82acf6dc4af12d9b58611fd1bbd34c5"
+  },
+  {
+    "name": "resources",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "docs/bert_crf/stage1e_checks.py",
+      "resources"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 26.82712999987416,
+    "log_sha256": "0e8e52818273bc33f64dc012f031879c026771b7a677da88394ffab4b1b2db50"
+  },
+  {
+    "name": "length_survey",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "docs/bert_crf/stage1e_checks.py",
+      "survey"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 67.40910530020483,
+    "log_sha256": "9fe418014cf8347902f4dcc73189a7582732dcbd162351973ebf66047adf8c52"
+  },
+  {
+    "name": "select_config",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "docs/bert_crf/stage1e_checks.py",
+      "select"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 6.212055700132623,
+    "log_sha256": "9c0cd0321fa404343577e1e5b312ece79adce2339c6463df0daecd6e9f0bcee0"
+  },
+  {
+    "name": "formal_unit_first",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "pytest",
+      "tests/bert_crf/test_formal_training.py",
+      "-v",
+      "-s",
+      "-k",
+      "not real_preflight_and_resource",
+      "--basetemp=.local/bert_crf/20261020T174150+0800_stage1e/pytest_first",
+      "--junitxml=docs/bert_crf/evidence/20261020T174150+0800_stage1e/formal_unit_first.xml"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 9.804898800095543,
+    "log_sha256": "09f716919484854c5b249313553d43c936b4395685121da5d35bbcf89dbdee6f"
+  },
+  {
+    "name": "real_preflight",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "bert_crf.train",
+      "--config",
+      "configs/bert_crf/first_baseline.json",
+      "--preflight",
+      "--preflight-output",
+      "docs/bert_crf/evidence/20261020T174150+0800_stage1e/preflight"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 58.21421980019659,
+    "log_sha256": "45611efccc021414a827529629b4dfbcdbb1babafb209b4f9fd8ded971bfa42f"
+  },
+  {
+    "name": "full_regression_first",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "pytest",
+      "tests/bert_crf",
+      "-v",
+      "-s",
+      "--basetemp=.local/bert_crf/20261020T174150+0800_stage1e/pytest_all_first",
+      "--pretrained-dir=.local/bert_crf/20261019T174356+0800_stage1b/pretrained",
+      "--smoke-output=docs/bert_crf/evidence/20261020T174150+0800_stage1e/core_gpu_regression.json",
+      "--checkpoint-dir=.local/bert_crf/20261020T174150+0800_stage1e/core_checkpoint",
+      "--trainer-smoke-summary=docs/bert_crf/evidence/20261019T192215+0800_stage1c/pretrained_trainer_final.json",
+      "--junitxml=docs/bert_crf/evidence/20261020T174150+0800_stage1e/full_regression_first.xml"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 31.99289650004357,
+    "log_sha256": "d6adfdfbaebd7dcc0b27a2c735c5f22a76856319da2deb1e9e12dde8471cae44"
+  },
+  {
+    "name": "public_v2_tests",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      ".local/bert_crf/20261020T161159+0800_interface_v2_audit/interface/code/tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 8.132762200199068,
+    "log_sha256": "1b7f15d899ddf387d36ba2f8e701a57368360a10233071d0f2e2e436621aa3af"
+  },
+  {
+    "name": "synthetic_pretrained",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "docs/bert_crf/stage1e_checks.py",
+      "synthetic_pretrained"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 19.495705799898133,
+    "log_sha256": "e242f3a54901e6b0014716d08e23ae4261ecbf2153be1eeafee52cdff277a7ae"
+  },
+  {
+    "name": "dependency_check",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.5851837999653071,
+    "log_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+  },
+  {
+    "name": "preflight_final",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "scripts/train_bert_crf.py",
+      "--config",
+      "configs/bert_crf/first_baseline.json",
+      "--preflight",
+      "--preflight-output",
+      "docs/bert_crf/evidence/20261020T174150+0800_stage1e/preflight_final"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 75.22606069990434,
+    "log_sha256": "70c159adcd89c778f327cb8aaca06a7bea8e51cde00f3421b92d1eeef4c3230c"
+  },
+  {
+    "name": "remote_fetch",
+    "command": [
+      "git",
+      "fetch",
+      "origin",
+      "dxc"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 6.392615800024942,
+    "log_sha256": "82d2aef710efe65cad8a4050ba4cc4049d55ba2ca85e7426e4eb2da7186f22bf"
+  },
+  {
+    "name": "full_regression_final",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "pytest",
+      "tests/bert_crf",
+      "-v",
+      "-s",
+      "--basetemp=.local/bert_crf/20261020T174150+0800_stage1e/pytest_all_final",
+      "--pretrained-dir=.local/bert_crf/20261019T174356+0800_stage1b/pretrained",
+      "--smoke-output=docs/bert_crf/evidence/20261020T174150+0800_stage1e/core_gpu_final.json",
+      "--checkpoint-dir=.local/bert_crf/20261020T174150+0800_stage1e/core_checkpoint_final",
+      "--trainer-smoke-summary=docs/bert_crf/evidence/20261019T192215+0800_stage1c/pretrained_trainer_final.json",
+      "--junitxml=docs/bert_crf/evidence/20261020T174150+0800_stage1e/full_regression_final.xml"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 40.6443781000562,
+    "log_sha256": "6c5155defb4bc21e58c38a086f55e7a494b9747064675c829323d104959fe251"
+  },
+  {
+    "name": "acceptance_summary",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "docs/bert_crf/stage1e_finalize.py",
+      "summarize"
+    ],
+    "exit_code": 1,
+    "elapsed_seconds": 0.10559680010192096,
+    "log_sha256": "f53e7f2b26b78822e59f1ed09516e4c7c71647a9194b99506cf59cb3730a32e5"
+  },
+  {
+    "name": "export_public_evidence",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "docs/bert_crf/stage1e_finalize.py",
+      "export"
+    ],
+    "exit_code": 1,
+    "elapsed_seconds": 0.1300030997954309,
+    "log_sha256": "d9a1b183bbaff0f3b5b3915dbac97a1179bdffd9f9144cb0a9b029894a5022c1"
+  },
+  {
+    "name": "acceptance_summary_fixed",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "docs/bert_crf/stage1e_finalize.py",
+      "summarize"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.13147610006853938,
+    "log_sha256": "07e95c2d3f7a3742be9beda1947bb0cb2697a85a36511a236a3678c56e26477f"
+  }
+]

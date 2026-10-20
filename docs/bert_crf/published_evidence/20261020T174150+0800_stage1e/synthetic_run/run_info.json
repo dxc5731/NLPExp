@@ -1,0 +1,363 @@
+{
+  "schema_version": "bert_crf_internal_run_v1",
+  "artifact_kind": "synthetic_smoke_test",
+  "run_id": "20261020T175501+0800_synthetic_smoke_test_bbe90894",
+  "status": "completed",
+  "method": "character_bert_crf",
+  "code": {
+    "commit": "663f727949a4b923fa84c3b76ec64efad7bd72a1",
+    "dirty_status": "M src/bert_crf/checkpoint.py\n M src/bert_crf/experiment.py\n M src/bert_crf/train.py\n M src/bert_crf/trainer.py\n M src/bert_crf/training_config.py\n?? configs/bert_crf/first_baseline.json\n?? configs/bert_crf/stage1d1_integration.json\n?? docs/bert_crf/04_interface_v2_audit.md\n?? docs/bert_crf/05_character_adapter_integration.md\n?? docs/bert_crf/06_pretraining_readiness_review.md\n?? docs/bert_crf/interface_v2_alignment_audit.py\n?? docs/bert_crf/interface_v2_finalize.py\n?? docs/bert_crf/interface_v2_runner.py\n?? docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/\n?? docs/bert_crf/stage1d1_finalize.py\n?? docs/bert_crf/stage1d1_integration_check.py\n?? docs/bert_crf/stage1d1_runner.py\n?? docs/bert_crf/stage1d_closeout_review.py\n?? docs/bert_crf/stage1e_checks.py\n?? docs/bert_crf/stage1e_runner.py\n?? src/bert_crf/character_mapping.py\n?? src/bert_crf/data_adapter.py\n?? src/bert_crf/formal_config.py\n?? src/bert_crf/preflight.py\n?? src/bert_crf/real_data.py\n?? src/bert_crf/run_artifacts.py\n?? tests/bert_crf/test_character_adapter.py\n?? tests/bert_crf/test_character_real_integration.py\n?? tests/bert_crf/test_formal_training.py",
+    "source_manifest_sha256": "fab15e46fa2ef32bb13b25c1e9ca7dd8f251b10097bf1df7fea628ea6ce9053c",
+    "source_snapshot": "source_snapshot/",
+    "tracked_patch": "tracked_changes.patch"
+  },
+  "config_file": "config.json",
+  "config_sha256": "6a9a621ea2728a2d131b7c7b0749fdfdf079996bddd4ea1c38fe7e7ed18979c1",
+  "environment_file": "environment.json",
+  "random_seed": 42,
+  "started_at": "2026-10-20T17:55:01.556667+08:00",
+  "updated_at": "2026-10-20T17:55:08.002030+08:00",
+  "ended_at": "2026-10-20T17:55:08.002030+08:00",
+  "fit_elapsed_seconds": 6.292198300128803,
+  "data": {
+    "train": {
+      "artifact_kind": "synthetic_smoke_test",
+      "data_version": "synthetic_char_v1",
+      "split": "synthetic_train",
+      "ids_sha256": "85b172db0290a02a51873d70ed455229b765c87361ada58abed36f39be184743",
+      "data_sha256": "9e4432d1abea2d9417351202ed1c3f3b96dc412cdbb27af5a1c579f0eecd3775",
+      "alignment_version": "SYNTHETIC_ONLY_verified_one_to_one_v1",
+      "source": "real_tokenizer_on_invented_text",
+      "tokenizer": {
+        "model": "google-bert/bert-base-chinese",
+        "revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+        "local_path": "<PROJECT>\\.local\\bert_crf\\20261019T174356+0800_stage1b\\pretrained",
+        "is_fast": true,
+        "file_hashes": {
+          "config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+          "model.safetensors": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3",
+          "tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+          "tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+          "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+        }
+      },
+      "synthetic_texts": [
+        "天地玄黄",
+        "宇宙",
+        "日月",
+        "星辰"
+      ],
+      "label_note": "Arbitrary test BIO; not medical entity answers"
+    },
+    "validation": {
+      "artifact_kind": "synthetic_smoke_test",
+      "data_version": "synthetic_char_v1",
+      "split": "synthetic_val",
+      "ids_sha256": "7821f127c987c39428e82d0083e7ae07b56657b2ddf1ac4fffd25c099c695e55",
+      "data_sha256": "9e4432d1abea2d9417351202ed1c3f3b96dc412cdbb27af5a1c579f0eecd3775",
+      "alignment_version": "SYNTHETIC_ONLY_verified_one_to_one_v1",
+      "source": "real_tokenizer_on_invented_text",
+      "tokenizer": {
+        "model": "google-bert/bert-base-chinese",
+        "revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+        "local_path": "<PROJECT>\\.local\\bert_crf\\20261019T174356+0800_stage1b\\pretrained",
+        "is_fast": true,
+        "file_hashes": {
+          "config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+          "model.safetensors": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3",
+          "tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+          "tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+          "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+        }
+      },
+      "synthetic_texts": [
+        "天地玄黄",
+        "宇宙",
+        "日月",
+        "星辰"
+      ],
+      "label_note": "Arbitrary test BIO; not medical entity answers"
+    }
+  },
+  "training_state": {
+    "epoch": 2,
+    "global_step": 4,
+    "best_value": 1.0,
+    "best_epoch": 2,
+    "bad_epochs": 0,
+    "best_checkpoint": "<PROJECT>\\.local\\bert_crf\\20261020T174150+0800_stage1e\\synthetic_runs\\20261020T175501+0800_synthetic_smoke_test_bbe90894\\checkpoints\\epoch_0002.pt",
+    "best_checkpoint_sha256": "76249c9eab5dfa718ae1879db80d3d3cc8f5abc5d70bdcf5786f29f7e9e7895c"
+  },
+  "last_validation": {
+    "artifact_kind": "synthetic_smoke_test",
+    "split": "internal_val",
+    "sentences": 4,
+    "metrics": {
+      "loss": 2.7556463479995728,
+      "sentences": 4,
+      "characters": 10,
+      "character_accuracy_including_O": 1.0,
+      "protocol": "strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0",
+      "character": {
+        "micro": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 6,
+          "predicted": 6,
+          "gold": 6
+        },
+        "macro": {
+          "precision": 0.6,
+          "recall": 0.6,
+          "f1": 0.6
+        },
+        "per_type": {
+          "Symptom": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "true_positive": 2,
+            "predicted": 2,
+            "gold": 2
+          },
+          "Drug": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "true_positive": 2,
+            "predicted": 2,
+            "gold": 2
+          },
+          "Drug_Category": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "true_positive": 2,
+            "predicted": 2,
+            "gold": 2
+          },
+          "Medical_Examination": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "true_positive": 0,
+            "predicted": 0,
+            "gold": 0
+          },
+          "Operation": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "true_positive": 0,
+            "predicted": 0,
+            "gold": 0
+          }
+        }
+      },
+      "entity": {
+        "micro": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 3,
+          "predicted": 3,
+          "gold": 3
+        },
+        "macro": {
+          "precision": 0.6,
+          "recall": 0.6,
+          "f1": 0.6
+        },
+        "per_type": {
+          "Symptom": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "true_positive": 1,
+            "predicted": 1,
+            "gold": 1
+          },
+          "Drug": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "true_positive": 1,
+            "predicted": 1,
+            "gold": 1
+          },
+          "Drug_Category": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "true_positive": 1,
+            "predicted": 1,
+            "gold": 1
+          },
+          "Medical_Examination": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "true_positive": 0,
+            "predicted": 0,
+            "gold": 0
+          },
+          "Operation": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "true_positive": 0,
+            "predicted": 0,
+            "gold": 0
+          }
+        }
+      }
+    },
+    "elapsed_seconds": 0.02979400008916855,
+    "timing_scope": "internal validation loader/adaptation, GPU forward/decode, metrics and JSONL writes; excludes model loading and optimizer updates",
+    "predictions_sha256": "9afc518a8356596e51e90bf7eff10b6a7e26a1ee6d7bc1e4b7fa316b9b720737",
+    "errors_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "selected_validation": {
+    "artifact_kind": "synthetic_smoke_test",
+    "split": "internal_val",
+    "sentences": 4,
+    "metrics": {
+      "loss": 2.7556463479995728,
+      "sentences": 4,
+      "characters": 10,
+      "character_accuracy_including_O": 1.0,
+      "protocol": "strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0",
+      "character": {
+        "micro": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 6,
+          "predicted": 6,
+          "gold": 6
+        },
+        "macro": {
+          "precision": 0.6,
+          "recall": 0.6,
+          "f1": 0.6
+        },
+        "per_type": {
+          "Symptom": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "true_positive": 2,
+            "predicted": 2,
+            "gold": 2
+          },
+          "Drug": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "true_positive": 2,
+            "predicted": 2,
+            "gold": 2
+          },
+          "Drug_Category": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "true_positive": 2,
+            "predicted": 2,
+            "gold": 2
+          },
+          "Medical_Examination": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "true_positive": 0,
+            "predicted": 0,
+            "gold": 0
+          },
+          "Operation": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "true_positive": 0,
+            "predicted": 0,
+            "gold": 0
+          }
+        }
+      },
+      "entity": {
+        "micro": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 3,
+          "predicted": 3,
+          "gold": 3
+        },
+        "macro": {
+          "precision": 0.6,
+          "recall": 0.6,
+          "f1": 0.6
+        },
+        "per_type": {
+          "Symptom": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "true_positive": 1,
+            "predicted": 1,
+            "gold": 1
+          },
+          "Drug": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "true_positive": 1,
+            "predicted": 1,
+            "gold": 1
+          },
+          "Drug_Category": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "true_positive": 1,
+            "predicted": 1,
+            "gold": 1
+          },
+          "Medical_Examination": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "true_positive": 0,
+            "predicted": 0,
+            "gold": 0
+          },
+          "Operation": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "true_positive": 0,
+            "predicted": 0,
+            "gold": 0
+          }
+        }
+      }
+    },
+    "elapsed_seconds": 0.02979400008916855,
+    "timing_scope": "internal validation loader/adaptation, GPU forward/decode, metrics and JSONL writes; excludes model loading and optimizer updates",
+    "predictions_sha256": "9afc518a8356596e51e90bf7eff10b6a7e26a1ee6d7bc1e4b7fa316b9b720737",
+    "errors_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "executor": "synthetic_test",
+  "training_command": [
+    "<PROJECT>\\.venv-bert-crf\\Scripts\\python.exe",
+    "docs/bert_crf/stage1e_checks.py",
+    "synthetic_pretrained"
+  ],
+  "alignment": "synthetic fixture",
+  "official_handoff": {
+    "status": "not_run",
+    "schema_version": "1.0",
+    "reason": "Internal validation artifacts are not official dev/test predictions"
+  }
+}

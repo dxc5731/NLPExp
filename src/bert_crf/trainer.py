@@ -1,4 +1,4 @@
-"""Character BERT-CRF trainer; real-data execution intentionally locked in stage 1C."""
+"""Character trainer: isolated synthetic tests or explicitly preflighted real runs."""
 from dataclasses import asdict, replace
 import math
 from pathlib import Path
@@ -25,7 +25,7 @@ class BatchProvider(Protocol):
     Each batch: {'ids': [(dialogue_id,sentence_id), ...], 'inputs': model kwargs}.
     inputs must include original character_labels and prefix character_mask.
     Future BERT inputs/mapping are passed through untouched to the existing model.
-    Real provider/Adapter integration is deliberately not implemented here.
+    Real providers require a matching validated formal execution context.
     """
     size: int
     metadata: dict
@@ -55,10 +55,30 @@ def metric_value(metrics, name):
 
 class Trainer:
     def __init__(self, model, config: TrainingConfig, train: BatchProvider, val: BatchProvider,
-                 output_root, *, metadata=None, run_id=None):
-        require_synthetic(config)
+                 output_root, *, metadata=None, run_id=None, execution_context=None,
+                 record_validation_artifacts=False):
+        self.execution_context = execution_context
+        if config.artifact_kind == 'synthetic_smoke_test':
+            require_synthetic(config)
+            if execution_context is not None:
+                raise ValueError('Synthetic training cannot use a real execution context')
+        else:
+            # Retain the old refusal unless the ENTIRE formal startup succeeded.
+            if config.artifact_kind != 'real_training' or execution_context is None:
+                raise RuntimeError('Real training disabled without a validated formal preflight context')
+            from .preflight import ReadyContext
+            if not isinstance(execution_context, ReadyContext):
+                raise ValueError('Invalid formal execution context')
+            execution_context.validate_training(model, config, train, val)
+            expected_root = execution_context.config.path(execution_context.config.value['outputs']['root'])
+            if Path(output_root).resolve() != expected_root:
+                raise ValueError('Formal output root/config mismatch')
+            metadata = {**(metadata or {}), 'formal_config': execution_context.config.value,
+                        'preflight': execution_context.report}
+            record_validation_artifacts = True
         for provider in (train, val):
-            require_synthetic(config, provider.metadata.get('artifact_kind', 'UNSPECIFIED'))
+            if config.artifact_kind == 'synthetic_smoke_test':
+                require_synthetic(config, provider.metadata.get('artifact_kind', 'UNSPECIFIED'))
             if type(provider.size) is not int or provider.size <= 0:
                 raise ValueError('Training/validation data must be nonempty')
         self.model, self.config, self.train_provider, self.val_provider = model, config, train, val
@@ -76,7 +96,7 @@ class Trainer:
         if config.warmup_steps >= total_steps:
             raise ValueError('warmup_steps must be less than total planned optimizer steps')
         self.optimizer = torch.optim.AdamW(model.parameters(), lr=config.learning_rate,
-            betas=config.adam_betas, eps=config.adam_epsilon, weight_decay=config.weight_decay)
+            betas=config.adam_betas, eps=config.adam_epsilon, weight_decay=config.weight_decay, foreach=False)
 
         def schedule(step):
             if step < config.warmup_steps:
@@ -91,15 +111,23 @@ class Trainer:
             'train_size': train.size, 'val_size': val.size,
             'runtime': environment()['packages'], 'device': config.device})
         combined = {'training': config.to_dict(), 'model': asdict(model_config)}
+        if execution_context is not None:
+            combined['formal'] = execution_context.config.value
         self.run = Experiment(output_root, config.artifact_kind, combined,
             {'train': train.metadata, 'validation': val.metadata, 'model_identity': self.identity,
-             'loader_policy': 'epoch-seeded provider; no persistent sampler cursor; num_workers=0 in synthetic tests',
+             'loader_policy': 'epoch-seeded provider; no persistent sampler cursor; num_workers=0',
              'selection': {'metric': config.selection_metric, 'mode': config.selection_mode,
                            'tie': 'retain earlier best; min_delta is strict', 'patience': config.early_stopping_patience},
              'user_metadata': metadata or {}}, run_id)
         self.state = {'epoch': 0, 'global_step': 0, 'best_value': None, 'best_epoch': None,
                       'bad_epochs': 0, 'best_checkpoint': None, 'best_checkpoint_sha256': None}
         self._fitted = False
+        self.record_validation_artifacts = record_validation_artifacts
+        self._validation_epoch = None
+        self._last_validation_artifact = None
+        if record_validation_artifacts:
+            from .run_artifacts import initialize_run_info
+            initialize_run_info(self)
 
     def _batch(self, batch):
         if not isinstance(batch, dict) or 'inputs' not in batch or 'ids' not in batch:
@@ -137,7 +165,12 @@ class Trainer:
         self.model.eval()
         metric = Metrics()
         total_loss = count = 0
+        tick = time.perf_counter()
+        writer = None
         try:
+            if self.record_validation_artifacts and self._validation_epoch is not None:
+                from .run_artifacts import ValidationArtifacts
+                writer = ValidationArtifacts(self.run.path, self._validation_epoch, self.config.artifact_kind)
             for batch in self.val_provider.batches(0, self.config.batch_size, False, self.config.seed):
                 inputs, ids = self._batch(batch)
                 output = self.model(**inputs, decode=True)
@@ -149,11 +182,22 @@ class Trainer:
                     length = int(inputs['character_mask'][b].sum())
                     gold = inputs['character_labels'][b, :length].tolist()
                     metric.update(key, gold, paths[b])
+                    if writer is not None:
+                        writer.add(key, gold, paths[b])
                 total_loss += float(loss) * len(ids)
                 count += len(ids)
             if count != self.val_provider.size:
                 raise ValueError('Validation provider sentence count mismatch')
-            return {'loss': total_loss / count, **metric.compute()}
+            result = {'loss': total_loss / count, **metric.compute()}
+            if writer is not None:
+                if self.device.type == 'cuda':
+                    torch.cuda.synchronize(self.device)
+                self._last_validation_artifact = writer.finish(result, time.perf_counter() - tick)
+            return result
+        except BaseException:
+            if writer is not None:
+                writer.abort()
+            raise
         finally:
             self.model.train(mode)
 
@@ -226,7 +270,9 @@ class Trainer:
                                    gradient_norm_before_clipping=float(grad_norm))
                 if count != self.train_provider.size or steps != self.steps_per_epoch:
                     raise ValueError('Training provider sentence/batch count mismatch')
+                self._validation_epoch = epoch
                 metrics = self.evaluate()
+                self._validation_epoch = None
                 value = metric_value(metrics, self.config.selection_metric)
                 best = self.state['best_value']
                 improved = best is None or ((value - best if self.config.selection_mode == 'max' else best - value) > self.config.min_delta)
@@ -237,7 +283,9 @@ class Trainer:
                 # Hash of this file cannot be embedded in itself. A best's hash
                 # is recorded in checkpoint_info; later epochs carry it forward.
                 checksum = save_checkpoint(path, self.model, self.optimizer, self.scheduler,
-                    self.state, self.identity, self.config.to_dict())
+                    self.state, self.identity, self.config.to_dict(),
+                    run_metadata={'run_id': self.run.manifest['run_id'], 'config': combined_config(self),
+                                  'code': self.run.manifest['code']})
                 if improved:
                     self.state['best_checkpoint_sha256'] = checksum
                 self.run.event('checkpoint', epoch=epoch, path=str(path), sha256=checksum,
@@ -249,6 +297,9 @@ class Trainer:
                        'learning_rate': self.optimizer.param_groups[0]['lr'],
                        'epoch_elapsed_seconds': time.perf_counter() - t, 'global_step': self.state['global_step']}
                 self.run.epoch(row, metrics)
+                if self.record_validation_artifacts:
+                    from .run_artifacts import update_run_info
+                    update_run_info(self, 'running')
                 write_json(self.run.path / 'checkpoint_info.json', {'artifact_kind': self.config.artifact_kind,
                     'latest': str(path), 'latest_sha256': checksum, **self.state,
                     'selection_reason': 'strict improvement' if improved else 'tie/insufficient improvement; earlier best retained'})
@@ -258,6 +309,9 @@ class Trainer:
                 timing_scope='fit includes updates, validation, logging and checkpoint I/O; excludes initial model/provider load',
                 peak_allocated_bytes=torch.cuda.max_memory_allocated(self.device) if self.device.type == 'cuda' else None,
                 peak_reserved_bytes=torch.cuda.max_memory_reserved(self.device) if self.device.type == 'cuda' else None)
+            if self.record_validation_artifacts:
+                from .run_artifacts import finalize_artifacts
+                finalize_artifacts(self, status)
             return self.state.copy()
         except BaseException as exc:
             self.run.status('failed', exception_type=type(exc).__name__, error=str(exc),
@@ -268,4 +322,15 @@ class Trainer:
             except OSError:
                 # Manifest still records failure if train.log alone is unwritable.
                 pass
+            if self.record_validation_artifacts:
+                from .run_artifacts import update_run_info
+                try:
+                    update_run_info(self, 'failed')
+                except OSError:
+                    pass
             raise
+
+
+def combined_config(trainer):
+    return {'training': trainer.config.to_dict(), 'model': asdict(trainer.model.config),
+            'formal': trainer.execution_context.config.value if trainer.execution_context is not None else None}

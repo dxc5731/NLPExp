@@ -1,0 +1,512 @@
+{
+  "artifact_kind": "real_data_resource_test",
+  "optimizer_steps": 0,
+  "model_config": {
+    "schema_version": "1.0",
+    "artifact_kind": "real_training",
+    "bert_model_name": "google-bert/bert-base-chinese",
+    "bert_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+    "hidden_size": 768,
+    "num_labels": 11,
+    "labels": [
+      "O",
+      "B-Symptom",
+      "I-Symptom",
+      "B-Drug",
+      "I-Drug",
+      "B-Drug_Category",
+      "I-Drug_Category",
+      "B-Medical_Examination",
+      "I-Medical_Examination",
+      "B-Operation",
+      "I-Operation"
+    ],
+    "dropout": 0.1,
+    "bio_constraints": true,
+    "constraint_rule_version": "strict_bio_v1",
+    "seed": 42,
+    "device": "cuda",
+    "precision": "float32",
+    "deterministic_algorithms": true
+  },
+  "inputs": {
+    "official_train": {
+      "path": ".local/bert_crf/20261019T162653+0800_stage1a/data/IMCS-V2_train.json",
+      "files": {
+        ".": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24"
+      }
+    },
+    "fixed_split": {
+      "path": ".local/bert_crf/20261020T161159+0800_interface_v2_audit/interface/code/artifacts/split_v1.json",
+      "files": {
+        ".": "497f21cf13d8f5accb83f86ffda16a4a59ba716c064ec347e990a219e8957072"
+      }
+    },
+    "interface": {
+      "path": ".local/bert_crf/20261020T161159+0800_interface_v2_audit/interface/code/src",
+      "files": {
+        "__init__.py": "8b084a9f378124b2b1a51563bf3c22444eb7ff33692017da28b2136ae56987ed",
+        "align.py": "40d63734e9b0eb7da4c6a33c5fb835d35d73442382ac35257c828a7ba7e6ca3e",
+        "config.py": "fbc669c1c807e31ba4ca570a15a3d408c60e48299e61f633a9ef833f94f9c4e3",
+        "data_io.py": "1b2d60df7551f31db7b3987df5c3b5b645659387831c48c2d3de703d068152ef",
+        "dataset.py": "9daae661ad7f8d8752561223c31ed956f1eb4c75c658cbc95c90ca5b16e31349",
+        "labels.py": "bfe9c11aa337c9c4fb7a8157047d1921418b307bae9dceb0f7191e290d3a882c",
+        "metrics.py": "6a74810fb76e187f7aeedfb26e70837b6d2f9815fd38d7ac5c28b8553173f0da",
+        "model.py": "4a2a5d4298a3e70083f2488cae62f1457e5e83654c2d1d8189d83cd209dac480",
+        "split.py": "b666ed7483688630e462ee1f7f43a5855cadb8412a44a67b5d91aad4314c07b5"
+      }
+    },
+    "tokenizer": {
+      "path": ".local/bert_crf/20261019T162653+0800_stage1a/tokenizer",
+      "files": {
+        "config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+        "tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+        "tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+        "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+      }
+    },
+    "pretrained": {
+      "path": ".local/bert_crf/20261019T174356+0800_stage1b/pretrained",
+      "files": {
+        "config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+        "model.safetensors": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3",
+        "README.md": "80efb5c88f6c09c0f4b2f91380852a374f023e195954f21ff7221928487ce454",
+        "tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+        "tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+        "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+      }
+    }
+  },
+  "environment": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.14.1+cu132",
+      "transformers": "5.20.1",
+      "tokenizers": "0.23.3",
+      "numpy": "2.4.6",
+      "pytest": "9.1.1"
+    },
+    "cuda_runtime": "13.2",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "capability": [
+      12,
+      0
+    ]
+  },
+  "cases": [
+    {
+      "status": "PASS",
+      "batch_size": 4,
+      "token_shape": [
+        4,
+        15
+      ],
+      "character_shape": [
+        4,
+        13
+      ],
+      "token_lengths": [
+        5,
+        15,
+        6,
+        12
+      ],
+      "character_lengths": [
+        3,
+        13,
+        4,
+        10
+      ],
+      "loss": 14.588342666625977,
+      "elapsed_seconds": 0.16136309993453324,
+      "backward": true,
+      "gradients": {
+        "bert": {
+          "tensors": 197,
+          "finite": 197,
+          "nonzero": 197
+        },
+        "linear": {
+          "tensors": 2,
+          "finite": 2,
+          "nonzero": 2
+        },
+        "crf": {
+          "tensors": 3,
+          "finite": 3,
+          "nonzero": 3
+        }
+      },
+      "optimizer_steps": 0,
+      "reserve_multiplier": 3,
+      "reserve_bytes": 1220227896,
+      "peak_allocated_bytes": 2217761280,
+      "peak_reserved_bytes": 2329935872,
+      "free_bytes_at_peak_end": 4962910208,
+      "parameter_hash_before": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+      "parameter_hash_after": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+      "parameter_versions_unchanged": true,
+      "timing_scope": "allocation, GPU forward/backward or decode, gradient checks; excludes tokenizer, hashing, optimizer step and I/O",
+      "cpu_adaptation_seconds_mean_3": 0.001005100008721153,
+      "sample_strategy": "seeded_ordinary",
+      "max_tokens": 256
+    },
+    {
+      "status": "PASS",
+      "batch_size": 4,
+      "token_shape": [
+        4,
+        201
+      ],
+      "character_shape": [
+        4,
+        199
+      ],
+      "token_lengths": [
+        201,
+        201,
+        201,
+        201
+      ],
+      "character_lengths": [
+        199,
+        199,
+        199,
+        199
+      ],
+      "loss": 347.71124267578125,
+      "elapsed_seconds": 0.35339809977449477,
+      "backward": true,
+      "gradients": {
+        "bert": {
+          "tensors": 197,
+          "finite": 197,
+          "nonzero": 197
+        },
+        "linear": {
+          "tensors": 2,
+          "finite": 2,
+          "nonzero": 2
+        },
+        "crf": {
+          "tensors": 3,
+          "finite": 3,
+          "nonzero": 3
+        }
+      },
+      "optimizer_steps": 0,
+      "reserve_multiplier": 3,
+      "reserve_bytes": 1220227896,
+      "peak_allocated_bytes": 2224857600,
+      "peak_reserved_bytes": 2426404864,
+      "free_bytes_at_peak_end": 4866441216,
+      "parameter_hash_before": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+      "parameter_hash_after": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+      "parameter_versions_unchanged": true,
+      "timing_scope": "allocation, GPU forward/backward or decode, gradient checks; excludes tokenizer, hashing, optimizer step and I/O",
+      "cpu_adaptation_seconds_mean_3": 0.007271533366292715,
+      "sample_strategy": "longest_unique",
+      "max_tokens": 256
+    },
+    {
+      "status": "PASS",
+      "batch_size": 8,
+      "token_shape": [
+        8,
+        15
+      ],
+      "character_shape": [
+        8,
+        13
+      ],
+      "token_lengths": [
+        5,
+        15,
+        6,
+        12,
+        4,
+        8,
+        7,
+        9
+      ],
+      "character_lengths": [
+        3,
+        13,
+        4,
+        10,
+        2,
+        6,
+        5,
+        7
+      ],
+      "loss": 12.256364822387695,
+      "elapsed_seconds": 0.13538569980300963,
+      "backward": true,
+      "gradients": {
+        "bert": {
+          "tensors": 197,
+          "finite": 197,
+          "nonzero": 197
+        },
+        "linear": {
+          "tensors": 2,
+          "finite": 2,
+          "nonzero": 2
+        },
+        "crf": {
+          "tensors": 3,
+          "finite": 3,
+          "nonzero": 3
+        }
+      },
+      "optimizer_steps": 0,
+      "reserve_multiplier": 3,
+      "reserve_bytes": 1220227896,
+      "peak_allocated_bytes": 2218984960,
+      "peak_reserved_bytes": 2338324480,
+      "free_bytes_at_peak_end": 4954521600,
+      "parameter_hash_before": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+      "parameter_hash_after": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+      "parameter_versions_unchanged": true,
+      "timing_scope": "allocation, GPU forward/backward or decode, gradient checks; excludes tokenizer, hashing, optimizer step and I/O",
+      "cpu_adaptation_seconds_mean_3": 0.0022987333747247853,
+      "sample_strategy": "seeded_ordinary",
+      "max_tokens": 256
+    },
+    {
+      "status": "PASS",
+      "batch_size": 8,
+      "token_shape": [
+        8,
+        201
+      ],
+      "character_shape": [
+        8,
+        199
+      ],
+      "token_lengths": [
+        201,
+        201,
+        201,
+        201,
+        201,
+        200,
+        197,
+        196
+      ],
+      "character_lengths": [
+        199,
+        199,
+        199,
+        199,
+        199,
+        198,
+        195,
+        194
+      ],
+      "loss": 352.67437744140625,
+      "elapsed_seconds": 0.43609209987334907,
+      "backward": true,
+      "gradients": {
+        "bert": {
+          "tensors": 197,
+          "finite": 197,
+          "nonzero": 197
+        },
+        "linear": {
+          "tensors": 2,
+          "finite": 2,
+          "nonzero": 2
+        },
+        "crf": {
+          "tensors": 3,
+          "finite": 3,
+          "nonzero": 3
+        }
+      },
+      "optimizer_steps": 0,
+      "reserve_multiplier": 3,
+      "reserve_bytes": 1220227896,
+      "peak_allocated_bytes": 2786984960,
+      "peak_reserved_bytes": 2996830208,
+      "free_bytes_at_peak_end": 4296015872,
+      "parameter_hash_before": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+      "parameter_hash_after": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+      "parameter_versions_unchanged": true,
+      "timing_scope": "allocation, GPU forward/backward or decode, gradient checks; excludes tokenizer, hashing, optimizer step and I/O",
+      "cpu_adaptation_seconds_mean_3": 0.025093866667399805,
+      "sample_strategy": "longest_unique",
+      "max_tokens": 256
+    },
+    {
+      "status": "PASS",
+      "batch_size": 16,
+      "token_shape": [
+        16,
+        67
+      ],
+      "character_shape": [
+        16,
+        65
+      ],
+      "token_lengths": [
+        5,
+        15,
+        6,
+        12,
+        4,
+        8,
+        7,
+        9,
+        32,
+        6,
+        27,
+        13,
+        67,
+        8,
+        6,
+        10
+      ],
+      "character_lengths": [
+        3,
+        13,
+        4,
+        10,
+        2,
+        6,
+        5,
+        7,
+        30,
+        4,
+        25,
+        11,
+        65,
+        6,
+        4,
+        8
+      ],
+      "loss": 24.299182891845703,
+      "elapsed_seconds": 0.2398581998422742,
+      "backward": true,
+      "gradients": {
+        "bert": {
+          "tensors": 197,
+          "finite": 197,
+          "nonzero": 197
+        },
+        "linear": {
+          "tensors": 2,
+          "finite": 2,
+          "nonzero": 2
+        },
+        "crf": {
+          "tensors": 3,
+          "finite": 3,
+          "nonzero": 3
+        }
+      },
+      "optimizer_steps": 0,
+      "reserve_multiplier": 3,
+      "reserve_bytes": 1220227896,
+      "peak_allocated_bytes": 2404482048,
+      "peak_reserved_bytes": 2636120064,
+      "free_bytes_at_peak_end": 4656726016,
+      "parameter_hash_before": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+      "parameter_hash_after": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+      "parameter_versions_unchanged": true,
+      "timing_scope": "allocation, GPU forward/backward or decode, gradient checks; excludes tokenizer, hashing, optimizer step and I/O",
+      "cpu_adaptation_seconds_mean_3": 0.011190433365603289,
+      "sample_strategy": "seeded_ordinary",
+      "max_tokens": 256
+    },
+    {
+      "status": "PASS",
+      "batch_size": 16,
+      "token_shape": [
+        16,
+        201
+      ],
+      "character_shape": [
+        16,
+        199
+      ],
+      "token_lengths": [
+        201,
+        201,
+        201,
+        201,
+        201,
+        200,
+        197,
+        196,
+        196,
+        193,
+        193,
+        193,
+        193,
+        193,
+        193,
+        193
+      ],
+      "character_lengths": [
+        199,
+        199,
+        199,
+        199,
+        199,
+        198,
+        195,
+        194,
+        194,
+        193,
+        193,
+        193,
+        193,
+        193,
+        193,
+        193
+      ],
+      "loss": 357.78662109375,
+      "elapsed_seconds": 0.6493619999382645,
+      "backward": true,
+      "gradients": {
+        "bert": {
+          "tensors": 197,
+          "finite": 197,
+          "nonzero": 197
+        },
+        "linear": {
+          "tensors": 2,
+          "finite": 2,
+          "nonzero": 2
+        },
+        "crf": {
+          "tensors": 3,
+          "finite": 3,
+          "nonzero": 3
+        }
+      },
+      "optimizer_steps": 0,
+      "reserve_multiplier": 3,
+      "reserve_bytes": 1220227896,
+      "peak_allocated_bytes": 3862691840,
+      "peak_reserved_bytes": 4099932160,
+      "free_bytes_at_peak_end": 3192913920,
+      "parameter_hash_before": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+      "parameter_hash_after": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+      "parameter_versions_unchanged": true,
+      "timing_scope": "allocation, GPU forward/backward or decode, gradient checks; excludes tokenizer, hashing, optimizer step and I/O",
+      "cpu_adaptation_seconds_mean_3": 0.026984733374168474,
+      "sample_strategy": "longest_unique",
+      "max_tokens": 256
+    }
+  ],
+  "notes": [
+    "No optimizer created or stepped",
+    "3 parameter-sized FP32 tensors reserve two AdamW moments and working memory",
+    "Step timings exclude AdamW, checkpoint I/O and a full epoch; estimates are not measured epoch duration"
+  ]
+}

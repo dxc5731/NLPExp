@@ -1,0 +1,223 @@
+{
+  "artifact_kind": "published_engineering_evidence",
+  "exported_at": "2026-10-20T18:09:20.663580+08:00",
+  "files": [
+    {
+      "source": "docs/bert_crf/evidence/20261020T161159+0800_interface_v2_audit/alignment_audit.json",
+      "source_sha256": "45fbc6d54e9a9d1e86d1cc9c4a569b8013db0fa6b5a35a7025a57ebe63edffdb",
+      "published": "docs/bert_crf/published_evidence/20261020T161159+0800_interface_v2_audit/alignment_summary.json",
+      "published_sha256": "d335e9b137347154179e7ba325312ccde4b17e21b85dd0486032b667ebe69e47",
+      "transformation": "allowlisted aggregate fields; no issue details/text/token IDs"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T161159+0800_interface_v2_audit/execution_summary.json",
+      "source_sha256": "920335a31fae49c65e6d82f73f8a90071a394cd9b25342fd4b7d7adf0fc1e3d4",
+      "published": "docs/bert_crf/published_evidence/20261020T161159+0800_interface_v2_audit/execution_summary.json",
+      "published_sha256": "920335a31fae49c65e6d82f73f8a90071a394cd9b25342fd4b7d7adf0fc1e3d4",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T161159+0800_interface_v2_audit/v1_v2_diff.json",
+      "source_sha256": "9b3b55d8e93741b52fa3dea401310f2693882eb7c3415c1f500b122c421402d2",
+      "published": "docs/bert_crf/published_evidence/20261020T161159+0800_interface_v2_audit/v1_v2_diff.json",
+      "published_sha256": "9b3b55d8e93741b52fa3dea401310f2693882eb7c3415c1f500b122c421402d2",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T161159+0800_interface_v2_audit/field_mapping.json",
+      "source_sha256": "0b9bc82f5a10ae577a87b805c3bf15232853e8bd6cf73744287a619a5753398d",
+      "published": "docs/bert_crf/published_evidence/20261020T161159+0800_interface_v2_audit/field_mapping.json",
+      "published_sha256": "0b9bc82f5a10ae577a87b805c3bf15232853e8bd6cf73744287a619a5753398d",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T161159+0800_interface_v2_audit/interface_manifest.json",
+      "source_sha256": "c22f5108e01ded103511280a935c1496c342490795fb0282c6d634b80e69b64a",
+      "published": "docs/bert_crf/published_evidence/20261020T161159+0800_interface_v2_audit/interface_manifest.json",
+      "published_sha256": "c22f5108e01ded103511280a935c1496c342490795fb0282c6d634b80e69b64a",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T164334+0800_stage1d1/coverage_audit.json",
+      "source_sha256": "8a06cabe710efa2bd702bd68df20eabb14f0e132f664c4282289b5e51a4a052c",
+      "published": "docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/coverage_audit.json",
+      "published_sha256": "8a06cabe710efa2bd702bd68df20eabb14f0e132f664c4282289b5e51a4a052c",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T164334+0800_stage1d1/eight_cases_model.json",
+      "source_sha256": "528340f07cad20c85bbc8bea3ddb40794977c8f3aa9cccba89ad8f3171570444",
+      "published": "docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/eight_cases_model.json",
+      "published_sha256": "528340f07cad20c85bbc8bea3ddb40794977c8f3aa9cccba89ad8f3171570444",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T164334+0800_stage1d1/real_batch_integration.json",
+      "source_sha256": "8944a97ae48a9c4f9d3044fa12b582cabef4bf35cd8088bd2a104e74840ba95f",
+      "published": "docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/real_batch_integration.json",
+      "published_sha256": "46050b67ae42d0d5c25e361fe18943e952d5f6aa3d84986cd3625c37aab4099b",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T164334+0800_stage1d1/test_summary.json",
+      "source_sha256": "db7fbe544b5645d1ad463786d9de1e8eab3a2dc90f3b3cd63648cf15ed7bed2b",
+      "published": "docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/test_summary.json",
+      "published_sha256": "db7fbe544b5645d1ad463786d9de1e8eab3a2dc90f3b3cd63648cf15ed7bed2b",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T164334+0800_stage1d1/known_issues.json",
+      "source_sha256": "cc61674c98e1dbd0d35e0d272b667a6be441822893e15546d98cc29ead3e3d9c",
+      "published": "docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/known_issues.json",
+      "published_sha256": "6cf478b6c1eff1d219e009be4bbe59b6c2537e05c9af55c704a29e35df1f977e",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T164334+0800_stage1d1/full_regression_01.xml",
+      "source_sha256": "bfd1fd384c0ca66eb45e3f0a01e7849640aac6e4b169e99f1bad3c66283148bc",
+      "published": "docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/tests.json",
+      "published_sha256": "3680562846e0c91fe53ba051dba2a243bf33f9f00cfa578b8dad8141dd88ace0",
+      "transformation": "JUnit names/outcomes only; host/output stripped"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T171714+0800_stage1d_closeout_review/review_closure.json",
+      "source_sha256": "a18da864316e73c3fb67f7874b1b6f3b74827bc9561b91d6021ad76c7ef859da",
+      "published": "docs/bert_crf/published_evidence/20261020T171714+0800_stage1d_closeout_review/historical_readiness.json",
+      "published_sha256": "5d6c82a90f5fc86b189691de0ec26e910117bf0c82f2b8cf2d8ae1fdb7274caf",
+      "transformation": "historical failed readiness preserved; no original logs or personal paths"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T174150+0800_stage1e/resource_measurements.json",
+      "source_sha256": "a51cec631245624cd95796592882b9ea20f25927cd07b4d6b0c845cdda30fd35",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/resource_measurements.json",
+      "published_sha256": "a51cec631245624cd95796592882b9ea20f25927cd07b4d6b0c845cdda30fd35",
+      "transformation": "none; byte-identical resource contract"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T174150+0800_stage1e/acceptance.json",
+      "source_sha256": "0feb13b37c73338eeeebc12111cc6cb71a58961e98786282981e68fd1f00fa50",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/acceptance.json",
+      "published_sha256": "0feb13b37c73338eeeebc12111cc6cb71a58961e98786282981e68fd1f00fa50",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T174150+0800_stage1e/configuration_selection.json",
+      "source_sha256": "48a3798777f3ad13849dfcae07f11bcf8b71f2b843d4ff4bb67da285231e500f",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/configuration_selection.json",
+      "published_sha256": "48a3798777f3ad13849dfcae07f11bcf8b71f2b843d4ff4bb67da285231e500f",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T174150+0800_stage1e/runner_metadata_correction.json",
+      "source_sha256": "1688914b94382e6836595465c6bf8fc8925cf7821a8dcc9f4974382e890e55c4",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/runner_metadata_correction.json",
+      "published_sha256": "1688914b94382e6836595465c6bf8fc8925cf7821a8dcc9f4974382e890e55c4",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T174150+0800_stage1e/preflight_final/preflight.json",
+      "source_sha256": "0ddf1849135689030e06b0ed2ca298928d425feb0dc7608a3e17b5a7bc16816c",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/preflight.json",
+      "published_sha256": "0ddf1849135689030e06b0ed2ca298928d425feb0dc7608a3e17b5a7bc16816c",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T174150+0800_stage1e/preflight_final/real_probes.json",
+      "source_sha256": "6987a2ffa374528cd86664f384ee962685ee01b57698e4ad9096d69c7a706853",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/real_probes.json",
+      "published_sha256": "6987a2ffa374528cd86664f384ee962685ee01b57698e4ad9096d69c7a706853",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T174150+0800_stage1e/preflight_final/lengths_and_coverage.json",
+      "source_sha256": "1d254f257e2f36356b71758b465a23cfc482656b5139110f16921f6f0603e252",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/lengths_and_coverage.json",
+      "published_sha256": "1d254f257e2f36356b71758b465a23cfc482656b5139110f16921f6f0603e252",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T174150+0800_stage1e/preflight_final/environment.json",
+      "source_sha256": "0203343c176a7cdbc6ac008b7227fdbe2b8d92eb7e986894282b2833990116d7",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/environment.json",
+      "published_sha256": "c6aeef1226602b52e3e5005dc596c5c214d8653116818eb013aeb33d5e7ee21b",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T174150+0800_stage1e/full_regression_final.xml",
+      "source_sha256": "2beb837ce5f7f5a75e2e41f4b00b38a4a43853afde6283340c97b41567ff4955",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/tests.json",
+      "published_sha256": "7660edab17806aef713156dc8c40417cd6cec5a130f505c4e35404d44bca71d9",
+      "transformation": "JUnit names/outcomes only; host/output stripped"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T174150+0800_stage1e/synthetic_pretrained_trainer.json",
+      "source_sha256": "25b466bdfdf710c8746f0c175d4e07ed5b26881d3cef63c2134e744e457c9bc2",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/synthetic_pretrained_trainer.json",
+      "published_sha256": "2e50b9026aa0ebd0e6c5936c47a3900c585b267e1d222a2c3577b55fe67a09dd",
+      "transformation": "synthetic-only summary; bulky manifest excluded; paths redacted"
+    },
+    {
+      "source": ".local/bert_crf/20261020T174150+0800_stage1e/synthetic_runs/20261020T175501+0800_synthetic_smoke_test_bbe90894/history.csv",
+      "source_sha256": "2f1af165de86a286a153d79f9d42efceacb9ceb053abe575c15656fd0402a530",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/synthetic_run/history.csv",
+      "published_sha256": "2f1af165de86a286a153d79f9d42efceacb9ceb053abe575c15656fd0402a530",
+      "transformation": "none; artificial-data CSV"
+    },
+    {
+      "source": ".local/bert_crf/20261020T174150+0800_stage1e/synthetic_runs/20261020T175501+0800_synthetic_smoke_test_bbe90894/config.json",
+      "source_sha256": "6a9a621ea2728a2d131b7c7b0749fdfdf079996bddd4ea1c38fe7e7ed18979c1",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/synthetic_run/config.json",
+      "published_sha256": "6a9a621ea2728a2d131b7c7b0749fdfdf079996bddd4ea1c38fe7e7ed18979c1",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": ".local/bert_crf/20261020T174150+0800_stage1e/synthetic_runs/20261020T175501+0800_synthetic_smoke_test_bbe90894/metrics.json",
+      "source_sha256": "993c743ce6cb81dfcc6704e70095947471c2ca219faf893dbf9cc360c208f208",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/synthetic_run/metrics.json",
+      "published_sha256": "8307b0cf6c2755fed92373162215cbc9d5128689ca5e9f4ea9a4973f11f5bb2d",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": ".local/bert_crf/20261020T174150+0800_stage1e/synthetic_runs/20261020T175501+0800_synthetic_smoke_test_bbe90894/checkpoint_info.json",
+      "source_sha256": "362325418e4fb866c6f1361a72519d8b258f248255aa0a5441a751cd1e9908b3",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/synthetic_run/checkpoint_info.json",
+      "published_sha256": "6835f73aa96a4f496b9474609ae78cfb95d4321e6b07d54bf8d3d9d9d5ec6b55",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": ".local/bert_crf/20261020T174150+0800_stage1e/synthetic_runs/20261020T175501+0800_synthetic_smoke_test_bbe90894/run_info.json",
+      "source_sha256": "ccd767438cd5610c7e5392a1ca8c4e8c044bd5b4fd9cb9cb4e594c59795ddf23",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/synthetic_run/run_info.json",
+      "published_sha256": "dc5586fbcaf5a4e2e45e0b25169f48666e19f4e752318be27d59ad70cd0fbb9b",
+      "transformation": "structured copy; project paths redacted"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T161159+0800_interface_v2_audit/commands.jsonl",
+      "source_sha256": "e2dfb14324e46d1db8b6b15fa9ee7cf275df8f20acf20bb68f52cda85e6cf9da",
+      "published": "docs/bert_crf/published_evidence/20261020T161159+0800_interface_v2_audit/commands.json",
+      "published_sha256": "7ad8fa90c4621cd53bf15afccafbc7daa9229256226479570061c86073279d8d",
+      "transformation": "argv, exit, elapsed and raw-log hashes only; no raw logs"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T164334+0800_stage1d1/commands.jsonl",
+      "source_sha256": "9769980ce071dacdbf0c42ef811e4b90854bb9a02c94b090f28ecaa2f7829eae",
+      "published": "docs/bert_crf/published_evidence/20261020T164334+0800_stage1d1/commands.json",
+      "published_sha256": "8152eb75b21b16ffecd53fbc23d3e29f3d9245c40dedb20c8969eabe6496ec0e",
+      "transformation": "argv, exit, elapsed and raw-log hashes only; no raw logs"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261020T174150+0800_stage1e/commands.jsonl",
+      "source_sha256": "eb865dbd02a3396a07183a997d37de437352b8dff6ef23a0c2e49438a10da5d9",
+      "published": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/commands.json",
+      "published_sha256": "7873176a1c3ae289300ccf38fe31b612c29786cedd7663bff5c980793c025834",
+      "transformation": "argv, exit, elapsed and raw-log hashes only; no raw logs"
+    }
+  ],
+  "excluded": [
+    "medical texts and token IDs",
+    "all raw logs",
+    "dataset/split contents",
+    "weights/checkpoints/environments/keys"
+  ],
+  "note": "Export time is not experiment execution time; original timestamps and source hashes retained"
+}

@@ -1,0 +1,26 @@
+{
+  "finished_at": "2026-10-20T16:17:25.956849+08:00",
+  "artifact_kind": "interface_audit",
+  "git": {
+    "branch": "dxc",
+    "commit": "663f727949a4b923fa84c3b76ec64efad7bd72a1",
+    "status": "?? docs/bert_crf/interface_v2_alignment_audit.py\n?? docs/bert_crf/interface_v2_finalize.py\n?? docs/bert_crf/interface_v2_runner.py"
+  },
+  "tracked_files_byte_identical": 140,
+  "v2_files_byte_identical": 19,
+  "v1_files_byte_identical": 16,
+  "archive_data_tokenizer_hashes_unchanged": true,
+  "supplied_tests": {
+    "passed": 13,
+    "failed": 0
+  },
+  "prior_model_tests_rerun": false,
+  "prior_model_tests_note": "Historical 130 passes are not a new run; no model/optimizer executed in this audit.",
+  "all_logged_commands_at_this_point_exit_zero": true,
+  "demo_roundtrip_true": true,
+  "committed_or_pushed": false,
+  "real_adapter_implemented": false,
+  "real_data_training": false,
+  "formal_predictions": false,
+  "dev_test_gold_used": false
+}
