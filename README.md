@@ -6,6 +6,20 @@
 任务：给定医患对话中的一句话，为每个字符打 BIO 标签，识别 5 类实体
 （症状 / 药物 / 药物类别 / 检查 / 操作）。
 
+## 分支说明
+
+每个成员一个分支，各自维护，不合并到 `main`。
+
+**本分支 `memberA` = 成员 A（刘天明）**，负责：
+
+1. 公共数据处理：官方 train 按**整段对话**切分为内部 train/val（90:10，seed=42），
+   名单在 `code/artifacts/split_v1.json`，全组共用。
+2. BERT Tokenizer 与字符级 BIO 对齐（v2）：歧义词片标 -100 不伪造标签，
+   全量 98529 句校验，明细在 `code/artifacts/alignment_report_*.json`。
+3. 统一 `Dataset` / `DataLoader` 接口，供 BERT-Softmax 与 BERT-CRF 共用，
+   说明见 `doc/组内有用的文档/BERT数据接口说明_v2.md`。
+4. BERT-Softmax 模型（`code/src/model.py` / `code/src/train.py`）。
+
 ## 目录结构
 
 ```
