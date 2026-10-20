@@ -114,6 +114,10 @@ def main() -> None:
     log = Logger(run_dir / "train.log")
     log(f"run_id={run_id}")
     log(f"配置: {json.dumps(asdict(cfg), ensure_ascii=False)}")
+    # 先落一份配置：这样即使训练中途崩了，实验记录表里也能看到这次用了什么参数
+    with open(run_dir / "config.json", "w", encoding="utf-8") as f:
+        json.dump({"config": asdict(cfg), "run_id": run_id, "history": []},
+                  f, ensure_ascii=False, indent=2)
 
     set_seed(cfg.seed)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
