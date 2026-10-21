@@ -1,0 +1,3197 @@
+{
+  "schema_version": "bert_crf_dropout02_public_comparison_v1",
+  "scope": "Already audited saved internal-val predictions only; no training, inference or new scoring during publication.",
+  "units": {
+    "precision_recall_f1": "fraction in [0,1]",
+    "delta_precision_recall_f1": "percentage points (pp); 100*(dropout02-baseline)",
+    "nll": "sample-mean sequence negative log likelihood",
+    "elapsed_seconds": "seconds",
+    "tp_fp_fn": "entity",
+    "epoch_learning_rate": "scheduler value at epoch end; rate for the next update, not constant within an epoch"
+  },
+  "definitions": {
+    "strict_entity_match": "Start, end and entity type must all match. Python Unicode character indices; half-open [start,end).",
+    "length_bins": [
+      "1",
+      "2",
+      "3-4",
+      "5-8",
+      "9+"
+    ],
+    "length_group_assignment": "Gold TP/FN by gold length; FP by predicted length. A boundary mismatch may assign its FN/FP to different groups.",
+    "length_group_sentences": "Sentences containing at least one gold or predicted entity in this group; can differ between models. Gold support remains fixed.",
+    "small_group_flag": "gold<30 or predicted<30 or involved sentences<30; even unflagged finite groups such as 52 or 72 gold require caution.",
+    "component_partition": "Remove exact TP; build gold/prediction overlap bipartite graph on FN/FP; connected components give mutually exclusive geometric units.",
+    "split_merge_candidates": "1 gold to multiple predictions / multiple gold to 1 prediction within a component; geometric candidates, not confirmed semantic diagnoses.",
+    "boundary_shapes": "Within 1:1 same-type boundary mismatch: predicted span contains gold=overextended; gold contains prediction=undercovered; otherwise shifted.",
+    "side_category_priority": [
+      "type_only_exact_span",
+      "boundary_same_type_overlap",
+      "boundary_and_type_overlap",
+      "no_overlapping_counterpart"
+    ],
+    "side_vs_component_unit": "Side categories partition each FN and FP separately; do not add them to components or treat an FN+FP pair as independent causes.",
+    "type_involvement": "A component can involve several types; type-involvement counts are nonexclusive and not additive to global events.",
+    "selection": "Maximum strict entity micro F1 on fixed internal val, min_delta=0; earliest epoch wins ties."
+  },
+  "validation": {
+    "sentences": 9687,
+    "characters": 126049,
+    "gold_entities": 6601,
+    "dialogues": 247,
+    "data_version": "IMCS-V2-NER_train_sha256_07cdd379",
+    "split_version": "split_v1_sha256_497f21cf"
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "baseline": {
+        "train_loss": 1.1740611342955645,
+        "val_loss": 0.4064097930258539,
+        "val_entity_precision": 0.9022042843837318,
+        "val_entity_recall": 0.8804726556582336,
+        "val_entity_f1": 0.8912060108870659,
+        "learning_rate": 1.777813350408196e-05,
+        "epoch_elapsed_seconds": 1398.8013623000588,
+        "global_step": 5553,
+        "selected_best": false,
+        "entity_metrics": {
+          "tp": 5812,
+          "fp": 630,
+          "fn": 789,
+          "predicted": 6442,
+          "gold": 6601,
+          "precision": 0.9022042843837318,
+          "recall": 0.8804726556582336,
+          "f1": 0.8912060108870659
+        },
+        "entity_macro_f1": 0.8884010305153562,
+        "entity_per_type": {
+          "Symptom": {
+            "tp": 3918,
+            "fp": 422,
+            "fn": 529,
+            "predicted": 4340,
+            "gold": 4447,
+            "precision": 0.9027649769585253,
+            "recall": 0.8810434000449742,
+            "f1": 0.8917719358142709
+          },
+          "Drug": {
+            "tp": 665,
+            "fp": 61,
+            "fn": 60,
+            "predicted": 726,
+            "gold": 725,
+            "precision": 0.9159779614325069,
+            "recall": 0.9172413793103448,
+            "f1": 0.9166092350103376
+          },
+          "Drug_Category": {
+            "tp": 420,
+            "fp": 50,
+            "fn": 70,
+            "predicted": 470,
+            "gold": 490,
+            "precision": 0.8936170212765957,
+            "recall": 0.8571428571428571,
+            "f1": 0.875
+          },
+          "Medical_Examination": {
+            "tp": 522,
+            "fp": 61,
+            "fn": 93,
+            "predicted": 583,
+            "gold": 615,
+            "precision": 0.8953687821612349,
+            "recall": 0.848780487804878,
+            "f1": 0.8714524207011685
+          },
+          "Operation": {
+            "tp": 287,
+            "fp": 36,
+            "fn": 37,
+            "predicted": 323,
+            "gold": 324,
+            "precision": 0.8885448916408669,
+            "recall": 0.8858024691358025,
+            "f1": 0.8871715610510046
+          }
+        }
+      },
+      "dropout02": {
+        "train_loss": 1.1942781126518498,
+        "val_loss": 0.3975764773782222,
+        "val_entity_precision": 0.896937212863706,
+        "val_entity_recall": 0.8872898045750643,
+        "val_entity_f1": 0.892087426700175,
+        "learning_rate": 1.777813350408196e-05,
+        "epoch_elapsed_seconds": 1113.0914586998988,
+        "global_step": 5553,
+        "selected_best": false,
+        "entity_metrics": {
+          "tp": 5857,
+          "fp": 673,
+          "fn": 744,
+          "predicted": 6530,
+          "gold": 6601,
+          "precision": 0.896937212863706,
+          "recall": 0.8872898045750643,
+          "f1": 0.892087426700175
+        },
+        "entity_macro_f1": 0.8895338271200647,
+        "entity_per_type": {
+          "Symptom": {
+            "tp": 3969,
+            "fp": 473,
+            "fn": 478,
+            "predicted": 4442,
+            "gold": 4447,
+            "precision": 0.8935164340387213,
+            "recall": 0.8925118057117157,
+            "f1": 0.8930138373270334
+          },
+          "Drug": {
+            "tp": 655,
+            "fp": 56,
+            "fn": 70,
+            "predicted": 711,
+            "gold": 725,
+            "precision": 0.9212376933895922,
+            "recall": 0.903448275862069,
+            "f1": 0.9122562674094707
+          },
+          "Drug_Category": {
+            "tp": 428,
+            "fp": 49,
+            "fn": 62,
+            "predicted": 477,
+            "gold": 490,
+            "precision": 0.8972746331236897,
+            "recall": 0.8734693877551021,
+            "f1": 0.8852119958634954
+          },
+          "Medical_Examination": {
+            "tp": 516,
+            "fp": 58,
+            "fn": 99,
+            "predicted": 574,
+            "gold": 615,
+            "precision": 0.8989547038327527,
+            "recall": 0.8390243902439024,
+            "f1": 0.8679562657695542
+          },
+          "Operation": {
+            "tp": 289,
+            "fp": 37,
+            "fn": 35,
+            "predicted": 326,
+            "gold": 324,
+            "precision": 0.8865030674846626,
+            "recall": 0.8919753086419753,
+            "f1": 0.8892307692307693
+          }
+        }
+      },
+      "delta_f1_pp": 0.08814158131091876
+    },
+    {
+      "epoch": 2,
+      "baseline": {
+        "train_loss": 0.3517742135318862,
+        "val_loss": 0.3992348076931227,
+        "val_entity_precision": 0.8932038834951457,
+        "val_entity_recall": 0.89198606271777,
+        "val_entity_f1": 0.8925945577200031,
+        "learning_rate": 1.333360012806147e-05,
+        "epoch_elapsed_seconds": 1393.7531501001213,
+        "global_step": 11106,
+        "selected_best": false,
+        "entity_metrics": {
+          "tp": 5888,
+          "fp": 704,
+          "fn": 713,
+          "predicted": 6592,
+          "gold": 6601,
+          "precision": 0.8932038834951457,
+          "recall": 0.89198606271777,
+          "f1": 0.8925945577200031
+        },
+        "entity_macro_f1": 0.8898204758752257,
+        "entity_per_type": {
+          "Symptom": {
+            "tp": 3952,
+            "fp": 451,
+            "fn": 495,
+            "predicted": 4403,
+            "gold": 4447,
+            "precision": 0.8975698387463094,
+            "recall": 0.8886890038228019,
+            "f1": 0.8931073446327683
+          },
+          "Drug": {
+            "tp": 676,
+            "fp": 73,
+            "fn": 49,
+            "predicted": 749,
+            "gold": 725,
+            "precision": 0.9025367156208278,
+            "recall": 0.9324137931034483,
+            "f1": 0.9172320217096337
+          },
+          "Drug_Category": {
+            "tp": 441,
+            "fp": 48,
+            "fn": 49,
+            "predicted": 489,
+            "gold": 490,
+            "precision": 0.901840490797546,
+            "recall": 0.9,
+            "f1": 0.9009193054136874
+          },
+          "Medical_Examination": {
+            "tp": 528,
+            "fp": 83,
+            "fn": 87,
+            "predicted": 611,
+            "gold": 615,
+            "precision": 0.8641571194762684,
+            "recall": 0.8585365853658536,
+            "f1": 0.8613376835236541
+          },
+          "Operation": {
+            "tp": 291,
+            "fp": 49,
+            "fn": 33,
+            "predicted": 340,
+            "gold": 324,
+            "precision": 0.8558823529411764,
+            "recall": 0.8981481481481481,
+            "f1": 0.8765060240963856
+          }
+        }
+      },
+      "dropout02": {
+        "train_loss": 0.3582451219324811,
+        "val_loss": 0.38960289830847444,
+        "val_entity_precision": 0.901619309501986,
+        "val_entity_recall": 0.8941069534918952,
+        "val_entity_f1": 0.8978474176618241,
+        "learning_rate": 1.333360012806147e-05,
+        "epoch_elapsed_seconds": 1099.517626899993,
+        "global_step": 11106,
+        "selected_best": false,
+        "entity_metrics": {
+          "tp": 5902,
+          "fp": 644,
+          "fn": 699,
+          "predicted": 6546,
+          "gold": 6601,
+          "precision": 0.901619309501986,
+          "recall": 0.8941069534918952,
+          "f1": 0.8978474176618241
+        },
+        "entity_macro_f1": 0.8965329083512688,
+        "entity_per_type": {
+          "Symptom": {
+            "tp": 3967,
+            "fp": 415,
+            "fn": 480,
+            "predicted": 4382,
+            "gold": 4447,
+            "precision": 0.9052943861250571,
+            "recall": 0.89206206431302,
+            "f1": 0.8986295163665194
+          },
+          "Drug": {
+            "tp": 675,
+            "fp": 71,
+            "fn": 50,
+            "predicted": 746,
+            "gold": 725,
+            "precision": 0.9048257372654156,
+            "recall": 0.9310344827586207,
+            "f1": 0.9177430319510538
+          },
+          "Drug_Category": {
+            "tp": 441,
+            "fp": 42,
+            "fn": 49,
+            "predicted": 483,
+            "gold": 490,
+            "precision": 0.9130434782608695,
+            "recall": 0.9,
+            "f1": 0.9064748201438848
+          },
+          "Medical_Examination": {
+            "tp": 524,
+            "fp": 79,
+            "fn": 91,
+            "predicted": 603,
+            "gold": 615,
+            "precision": 0.8689883913764511,
+            "recall": 0.8520325203252033,
+            "f1": 0.8604269293924467
+          },
+          "Operation": {
+            "tp": 295,
+            "fp": 37,
+            "fn": 29,
+            "predicted": 332,
+            "gold": 324,
+            "precision": 0.8885542168674698,
+            "recall": 0.9104938271604939,
+            "f1": 0.8993902439024389
+          }
+        }
+      },
+      "delta_f1_pp": 0.5252859941821009
+    },
+    {
+      "epoch": 3,
+      "baseline": {
+        "train_loss": 0.2563927958085154,
+        "val_loss": 0.43422783760016853,
+        "val_entity_precision": 0.8944981862152358,
+        "val_entity_recall": 0.8965308286623239,
+        "val_entity_f1": 0.8955133540137703,
+        "learning_rate": 8.88906675204098e-06,
+        "epoch_elapsed_seconds": 1182.0809261999093,
+        "global_step": 16659,
+        "selected_best": false,
+        "entity_metrics": {
+          "tp": 5918,
+          "fp": 698,
+          "fn": 683,
+          "predicted": 6616,
+          "gold": 6601,
+          "precision": 0.8944981862152358,
+          "recall": 0.8965308286623239,
+          "f1": 0.8955133540137703
+        },
+        "entity_macro_f1": 0.8913728069826,
+        "entity_per_type": {
+          "Symptom": {
+            "tp": 3985,
+            "fp": 467,
+            "fn": 462,
+            "predicted": 4452,
+            "gold": 4447,
+            "precision": 0.8951033243486074,
+            "recall": 0.8961097369012818,
+            "f1": 0.8956062478930218
+          },
+          "Drug": {
+            "tp": 670,
+            "fp": 51,
+            "fn": 55,
+            "predicted": 721,
+            "gold": 725,
+            "precision": 0.9292649098474342,
+            "recall": 0.9241379310344827,
+            "f1": 0.9266943291839557
+          },
+          "Drug_Category": {
+            "tp": 440,
+            "fp": 52,
+            "fn": 50,
+            "predicted": 492,
+            "gold": 490,
+            "precision": 0.8943089430894309,
+            "recall": 0.8979591836734694,
+            "f1": 0.8961303462321792
+          },
+          "Medical_Examination": {
+            "tp": 538,
+            "fp": 77,
+            "fn": 77,
+            "predicted": 615,
+            "gold": 615,
+            "precision": 0.8747967479674796,
+            "recall": 0.8747967479674796,
+            "f1": 0.8747967479674796
+          },
+          "Operation": {
+            "tp": 285,
+            "fp": 51,
+            "fn": 39,
+            "predicted": 336,
+            "gold": 324,
+            "precision": 0.8482142857142857,
+            "recall": 0.8796296296296297,
+            "f1": 0.8636363636363636
+          }
+        }
+      },
+      "dropout02": {
+        "train_loss": 0.260794060438418,
+        "val_loss": 0.43267273769987075,
+        "val_entity_precision": 0.8975366480278072,
+        "val_entity_recall": 0.8997121648235116,
+        "val_entity_f1": 0.8986230897261309,
+        "learning_rate": 8.88906675204098e-06,
+        "epoch_elapsed_seconds": 1101.1336291001644,
+        "global_step": 16659,
+        "selected_best": true,
+        "entity_metrics": {
+          "tp": 5939,
+          "fp": 678,
+          "fn": 662,
+          "predicted": 6617,
+          "gold": 6601,
+          "precision": 0.8975366480278072,
+          "recall": 0.8997121648235116,
+          "f1": 0.8986230897261309
+        },
+        "entity_macro_f1": 0.8903459856313601,
+        "entity_per_type": {
+          "Symptom": {
+            "tp": 4021,
+            "fp": 453,
+            "fn": 426,
+            "predicted": 4474,
+            "gold": 4447,
+            "precision": 0.8987483236477425,
+            "recall": 0.9042050820778053,
+            "f1": 0.9014684452415648
+          },
+          "Drug": {
+            "tp": 669,
+            "fp": 51,
+            "fn": 56,
+            "predicted": 720,
+            "gold": 725,
+            "precision": 0.9291666666666667,
+            "recall": 0.9227586206896552,
+            "f1": 0.9259515570934256
+          },
+          "Drug_Category": {
+            "tp": 436,
+            "fp": 47,
+            "fn": 54,
+            "predicted": 483,
+            "gold": 490,
+            "precision": 0.9026915113871635,
+            "recall": 0.889795918367347,
+            "f1": 0.896197327852004
+          },
+          "Medical_Examination": {
+            "tp": 531,
+            "fp": 77,
+            "fn": 84,
+            "predicted": 608,
+            "gold": 615,
+            "precision": 0.8733552631578947,
+            "recall": 0.8634146341463415,
+            "f1": 0.8683565004088307
+          },
+          "Operation": {
+            "tp": 282,
+            "fp": 50,
+            "fn": 42,
+            "predicted": 332,
+            "gold": 324,
+            "precision": 0.8493975903614458,
+            "recall": 0.8703703703703703,
+            "f1": 0.8597560975609756
+          }
+        }
+      },
+      "delta_f1_pp": 0.31097357123606173
+    },
+    {
+      "epoch": 4,
+      "baseline": {
+        "train_loss": 0.18781227463796293,
+        "val_loss": 0.49964012928123236,
+        "val_entity_precision": 0.8911350703803534,
+        "val_entity_recall": 0.9015300712013331,
+        "val_entity_f1": 0.8963024324120793,
+        "learning_rate": 4.44453337602049e-06,
+        "epoch_elapsed_seconds": 1097.3334357000422,
+        "global_step": 22212,
+        "selected_best": false,
+        "entity_metrics": {
+          "tp": 5951,
+          "fp": 727,
+          "fn": 650,
+          "predicted": 6678,
+          "gold": 6601,
+          "precision": 0.8911350703803534,
+          "recall": 0.9015300712013331,
+          "f1": 0.8963024324120793
+        },
+        "entity_macro_f1": 0.8944835523523279,
+        "entity_per_type": {
+          "Symptom": {
+            "tp": 4013,
+            "fp": 496,
+            "fn": 434,
+            "predicted": 4509,
+            "gold": 4447,
+            "precision": 0.8899977822133511,
+            "recall": 0.9024061164830223,
+            "f1": 0.896158999553372
+          },
+          "Drug": {
+            "tp": 664,
+            "fp": 54,
+            "fn": 61,
+            "predicted": 718,
+            "gold": 725,
+            "precision": 0.924791086350975,
+            "recall": 0.9158620689655173,
+            "f1": 0.9203049203049204
+          },
+          "Drug_Category": {
+            "tp": 440,
+            "fp": 52,
+            "fn": 50,
+            "predicted": 492,
+            "gold": 490,
+            "precision": 0.8943089430894309,
+            "recall": 0.8979591836734694,
+            "f1": 0.8961303462321792
+          },
+          "Medical_Examination": {
+            "tp": 542,
+            "fp": 80,
+            "fn": 73,
+            "predicted": 622,
+            "gold": 615,
+            "precision": 0.8713826366559485,
+            "recall": 0.8813008130081301,
+            "f1": 0.8763136620856912
+          },
+          "Operation": {
+            "tp": 292,
+            "fp": 45,
+            "fn": 32,
+            "predicted": 337,
+            "gold": 324,
+            "precision": 0.8664688427299704,
+            "recall": 0.9012345679012346,
+            "f1": 0.8835098335854765
+          }
+        }
+      },
+      "dropout02": {
+        "train_loss": 0.18809908763316144,
+        "val_loss": 0.4988053218860849,
+        "val_entity_precision": 0.8888723372560703,
+        "val_entity_recall": 0.9039539463717619,
+        "val_entity_f1": 0.8963497070752591,
+        "learning_rate": 4.44453337602049e-06,
+        "epoch_elapsed_seconds": 1090.5179574999493,
+        "global_step": 22212,
+        "selected_best": false,
+        "entity_metrics": {
+          "tp": 5967,
+          "fp": 746,
+          "fn": 634,
+          "predicted": 6713,
+          "gold": 6601,
+          "precision": 0.8888723372560703,
+          "recall": 0.9039539463717619,
+          "f1": 0.8963497070752591
+        },
+        "entity_macro_f1": 0.8947799368656583,
+        "entity_per_type": {
+          "Symptom": {
+            "tp": 4019,
+            "fp": 512,
+            "fn": 428,
+            "predicted": 4531,
+            "gold": 4447,
+            "precision": 0.8870006621054954,
+            "recall": 0.9037553406791096,
+            "f1": 0.8952996212965026
+          },
+          "Drug": {
+            "tp": 673,
+            "fp": 50,
+            "fn": 52,
+            "predicted": 723,
+            "gold": 725,
+            "precision": 0.9308437067773168,
+            "recall": 0.9282758620689655,
+            "f1": 0.9295580110497238
+          },
+          "Drug_Category": {
+            "tp": 444,
+            "fp": 48,
+            "fn": 46,
+            "predicted": 492,
+            "gold": 490,
+            "precision": 0.9024390243902439,
+            "recall": 0.9061224489795918,
+            "f1": 0.9042769857433809
+          },
+          "Medical_Examination": {
+            "tp": 544,
+            "fp": 90,
+            "fn": 71,
+            "predicted": 634,
+            "gold": 615,
+            "precision": 0.8580441640378549,
+            "recall": 0.8845528455284553,
+            "f1": 0.8710968775020016
+          },
+          "Operation": {
+            "tp": 287,
+            "fp": 46,
+            "fn": 37,
+            "predicted": 333,
+            "gold": 324,
+            "precision": 0.8618618618618619,
+            "recall": 0.8858024691358025,
+            "f1": 0.873668188736682
+          }
+        }
+      },
+      "delta_f1_pp": 0.004727466317977491
+    },
+    {
+      "epoch": 5,
+      "baseline": {
+        "train_loss": 0.13030616565960154,
+        "val_loss": 0.6008118890542,
+        "val_entity_precision": 0.8916005390028447,
+        "val_entity_recall": 0.9021360399939403,
+        "val_entity_f1": 0.8968373493975903,
+        "learning_rate": 0.0,
+        "epoch_elapsed_seconds": 1102.327916600043,
+        "global_step": 27765,
+        "selected_best": true,
+        "entity_metrics": {
+          "tp": 5955,
+          "fp": 724,
+          "fn": 646,
+          "predicted": 6679,
+          "gold": 6601,
+          "precision": 0.8916005390028447,
+          "recall": 0.9021360399939403,
+          "f1": 0.8968373493975903
+        },
+        "entity_macro_f1": 0.8957733263889175,
+        "entity_per_type": {
+          "Symptom": {
+            "tp": 4018,
+            "fp": 502,
+            "fn": 429,
+            "predicted": 4520,
+            "gold": 4447,
+            "precision": 0.8889380530973451,
+            "recall": 0.9035304699797616,
+            "f1": 0.896174863387978
+          },
+          "Drug": {
+            "tp": 669,
+            "fp": 53,
+            "fn": 56,
+            "predicted": 722,
+            "gold": 725,
+            "precision": 0.9265927977839336,
+            "recall": 0.9227586206896552,
+            "f1": 0.9246717346233587
+          },
+          "Drug_Category": {
+            "tp": 442,
+            "fp": 49,
+            "fn": 48,
+            "predicted": 491,
+            "gold": 490,
+            "precision": 0.90020366598778,
+            "recall": 0.9020408163265307,
+            "f1": 0.9011213047910296
+          },
+          "Medical_Examination": {
+            "tp": 537,
+            "fp": 80,
+            "fn": 78,
+            "predicted": 617,
+            "gold": 615,
+            "precision": 0.8703403565640194,
+            "recall": 0.8731707317073171,
+            "f1": 0.8717532467532467
+          },
+          "Operation": {
+            "tp": 289,
+            "fp": 40,
+            "fn": 35,
+            "predicted": 329,
+            "gold": 324,
+            "precision": 0.878419452887538,
+            "recall": 0.8919753086419753,
+            "f1": 0.885145482388974
+          }
+        }
+      },
+      "dropout02": {
+        "train_loss": 0.1344171980258503,
+        "val_loss": 0.5948351923988935,
+        "val_entity_precision": 0.8918797667115298,
+        "val_entity_recall": 0.9034994697773064,
+        "val_entity_f1": 0.8976520168573149,
+        "learning_rate": 0.0,
+        "epoch_elapsed_seconds": 1085.8473535000812,
+        "global_step": 27765,
+        "selected_best": false,
+        "entity_metrics": {
+          "tp": 5964,
+          "fp": 723,
+          "fn": 637,
+          "predicted": 6687,
+          "gold": 6601,
+          "precision": 0.8918797667115298,
+          "recall": 0.9034994697773064,
+          "f1": 0.8976520168573149
+        },
+        "entity_macro_f1": 0.8990354881736332,
+        "entity_per_type": {
+          "Symptom": {
+            "tp": 4015,
+            "fp": 504,
+            "fn": 432,
+            "predicted": 4519,
+            "gold": 4447,
+            "precision": 0.888470900641735,
+            "recall": 0.902855857881718,
+            "f1": 0.8956056212357796
+          },
+          "Drug": {
+            "tp": 672,
+            "fp": 50,
+            "fn": 53,
+            "predicted": 722,
+            "gold": 725,
+            "precision": 0.9307479224376731,
+            "recall": 0.926896551724138,
+            "f1": 0.9288182446440912
+          },
+          "Drug_Category": {
+            "tp": 445,
+            "fp": 46,
+            "fn": 45,
+            "predicted": 491,
+            "gold": 490,
+            "precision": 0.9063136456211812,
+            "recall": 0.9081632653061225,
+            "f1": 0.9072375127420998
+          },
+          "Medical_Examination": {
+            "tp": 538,
+            "fp": 82,
+            "fn": 77,
+            "predicted": 620,
+            "gold": 615,
+            "precision": 0.867741935483871,
+            "recall": 0.8747967479674796,
+            "f1": 0.8712550607287449
+          },
+          "Operation": {
+            "tp": 294,
+            "fp": 41,
+            "fn": 30,
+            "predicted": 335,
+            "gold": 324,
+            "precision": 0.8776119402985074,
+            "recall": 0.9074074074074074,
+            "f1": 0.8922610015174507
+          }
+        }
+      },
+      "delta_f1_pp": 0.08146674597245829
+    }
+  ],
+  "best_models": {
+    "baseline": {
+      "epoch": 5,
+      "model": "baseline",
+      "micro": {
+        "tp": 5955,
+        "fp": 724,
+        "fn": 646,
+        "predicted": 6679,
+        "gold": 6601,
+        "precision": 0.8916005390028447,
+        "recall": 0.9021360399939403,
+        "f1": 0.8968373493975903
+      },
+      "per_type": {
+        "Symptom": {
+          "tp": 4018,
+          "fp": 502,
+          "fn": 429,
+          "predicted": 4520,
+          "gold": 4447,
+          "precision": 0.8889380530973451,
+          "recall": 0.9035304699797616,
+          "f1": 0.896174863387978
+        },
+        "Drug": {
+          "tp": 669,
+          "fp": 53,
+          "fn": 56,
+          "predicted": 722,
+          "gold": 725,
+          "precision": 0.9265927977839336,
+          "recall": 0.9227586206896552,
+          "f1": 0.9246717346233587
+        },
+        "Drug_Category": {
+          "tp": 442,
+          "fp": 49,
+          "fn": 48,
+          "predicted": 491,
+          "gold": 490,
+          "precision": 0.90020366598778,
+          "recall": 0.9020408163265307,
+          "f1": 0.9011213047910296
+        },
+        "Medical_Examination": {
+          "tp": 537,
+          "fp": 80,
+          "fn": 78,
+          "predicted": 617,
+          "gold": 615,
+          "precision": 0.8703403565640194,
+          "recall": 0.8731707317073171,
+          "f1": 0.8717532467532467
+        },
+        "Operation": {
+          "tp": 289,
+          "fp": 40,
+          "fn": 35,
+          "predicted": 329,
+          "gold": 324,
+          "precision": 0.878419452887538,
+          "recall": 0.8919753086419753,
+          "f1": 0.885145482388974
+        }
+      },
+      "macro_f1": 0.8957733263889175,
+      "sentences": 9687,
+      "characters": 126049,
+      "saved_metrics_match": true,
+      "saved_errors_match": true,
+      "predictions_sha256": "1decf59497252cd0b4c09e619bf855e6cf3a430940b6734ba7004aa4021586e1",
+      "error_sentences": 814,
+      "validation_nll": 0.6008118890542
+    },
+    "dropout02": {
+      "epoch": 3,
+      "model": "dropout02",
+      "micro": {
+        "tp": 5939,
+        "fp": 678,
+        "fn": 662,
+        "predicted": 6617,
+        "gold": 6601,
+        "precision": 0.8975366480278072,
+        "recall": 0.8997121648235116,
+        "f1": 0.8986230897261309
+      },
+      "per_type": {
+        "Symptom": {
+          "tp": 4021,
+          "fp": 453,
+          "fn": 426,
+          "predicted": 4474,
+          "gold": 4447,
+          "precision": 0.8987483236477425,
+          "recall": 0.9042050820778053,
+          "f1": 0.9014684452415648
+        },
+        "Drug": {
+          "tp": 669,
+          "fp": 51,
+          "fn": 56,
+          "predicted": 720,
+          "gold": 725,
+          "precision": 0.9291666666666667,
+          "recall": 0.9227586206896552,
+          "f1": 0.9259515570934256
+        },
+        "Drug_Category": {
+          "tp": 436,
+          "fp": 47,
+          "fn": 54,
+          "predicted": 483,
+          "gold": 490,
+          "precision": 0.9026915113871635,
+          "recall": 0.889795918367347,
+          "f1": 0.896197327852004
+        },
+        "Medical_Examination": {
+          "tp": 531,
+          "fp": 77,
+          "fn": 84,
+          "predicted": 608,
+          "gold": 615,
+          "precision": 0.8733552631578947,
+          "recall": 0.8634146341463415,
+          "f1": 0.8683565004088307
+        },
+        "Operation": {
+          "tp": 282,
+          "fp": 50,
+          "fn": 42,
+          "predicted": 332,
+          "gold": 324,
+          "precision": 0.8493975903614458,
+          "recall": 0.8703703703703703,
+          "f1": 0.8597560975609756
+        }
+      },
+      "macro_f1": 0.8903459856313601,
+      "sentences": 9687,
+      "characters": 126049,
+      "saved_metrics_match": true,
+      "saved_errors_match": true,
+      "predictions_sha256": "674de4cf5bd0a63e5d4cdf89e3e85fa681576229ea5aba7e4d07cbc737e3cad1",
+      "error_sentences": 806,
+      "validation_nll": 0.43267273769987075
+    },
+    "delta": {
+      "percentage_metrics_unit": "percentage_point",
+      "micro": {
+        "tp": -16,
+        "fp": -46,
+        "fn": 16,
+        "predicted": -62,
+        "gold": 0,
+        "precision": 0.5936109024962444,
+        "recall": -0.24238751704287465,
+        "f1": 0.17857403285406193
+      },
+      "macro_f1_pp": -0.5427340757557353
+    }
+  },
+  "timing": {
+    "baseline": {
+      "completed_epoch_seconds_sum": 6174.2967909001745,
+      "original_start_to_stop_wall_seconds": 3186.238563,
+      "original_fit_timer_seconds": null,
+      "resumed_fit_seconds": 3384.7140045000706,
+      "combined_active_time_estimate_seconds": 6570.9525675000705,
+      "combined_active_time_estimate_scope": "Original manifest start-to-confirmed-stop wall + resumed fit timer; slightly different timing boundaries, excludes long pause",
+      "end_to_end_wall_seconds_including_pause": 13997.661449,
+      "pause_between_runs_manifest_seconds": 7425.777556,
+      "retained_optimizer_steps": 27765,
+      "resumed_optimizer_steps": 16659,
+      "logged_updates_all_invocations": 29368,
+      "logged_discarded_partial_epoch_updates": 1603,
+      "exact_physical_updates": null,
+      "physical_count_limitation": "Forced stop could interrupt after optimizer.step before batch log; logged count is a lower bound, retained lineage count is exact.",
+      "early_stopping_triggered": false,
+      "configured_epochs_completed": 5
+    },
+    "dropout02": {
+      "fit_seconds": 5490.146387000103,
+      "completed_epoch_seconds_sum": 5490.108025700087,
+      "launch_to_exit_seconds": 5545.937463
+    },
+    "limitation": "Interrupted/resumed Baseline timing is not directly comparable to continuous dropout02 fit; no speedup claim."
+  },
+  "entity_comparison": [
+    {
+      "entity": "Symptom",
+      "baseline_tp": 4018,
+      "baseline_fp": 502,
+      "baseline_fn": 429,
+      "baseline_predicted": 4520,
+      "baseline_gold": 4447,
+      "baseline_precision": 0.8889380530973451,
+      "baseline_recall": 0.9035304699797616,
+      "baseline_f1": 0.896174863387978,
+      "dropout02_tp": 4021,
+      "dropout02_fp": 453,
+      "dropout02_fn": 426,
+      "dropout02_predicted": 4474,
+      "dropout02_gold": 4447,
+      "dropout02_precision": 0.8987483236477425,
+      "dropout02_recall": 0.9042050820778053,
+      "dropout02_f1": 0.9014684452415648,
+      "delta_tp": 3,
+      "delta_fp": -49,
+      "delta_fn": -3,
+      "delta_predicted": -46,
+      "delta_gold": 0,
+      "delta_precision_pp": 0.9810270550397404,
+      "delta_recall_pp": 0.06746120980436476,
+      "delta_f1_pp": 0.5293581853586748
+    },
+    {
+      "entity": "Drug",
+      "baseline_tp": 669,
+      "baseline_fp": 53,
+      "baseline_fn": 56,
+      "baseline_predicted": 722,
+      "baseline_gold": 725,
+      "baseline_precision": 0.9265927977839336,
+      "baseline_recall": 0.9227586206896552,
+      "baseline_f1": 0.9246717346233587,
+      "dropout02_tp": 669,
+      "dropout02_fp": 51,
+      "dropout02_fn": 56,
+      "dropout02_predicted": 720,
+      "dropout02_gold": 725,
+      "dropout02_precision": 0.9291666666666667,
+      "dropout02_recall": 0.9227586206896552,
+      "dropout02_f1": 0.9259515570934256,
+      "delta_tp": 0,
+      "delta_fp": -2,
+      "delta_fn": 0,
+      "delta_predicted": -2,
+      "delta_gold": 0,
+      "delta_precision_pp": 0.25738688827331435,
+      "delta_recall_pp": 0.0,
+      "delta_f1_pp": 0.12798224700668603
+    },
+    {
+      "entity": "Drug_Category",
+      "baseline_tp": 442,
+      "baseline_fp": 49,
+      "baseline_fn": 48,
+      "baseline_predicted": 491,
+      "baseline_gold": 490,
+      "baseline_precision": 0.90020366598778,
+      "baseline_recall": 0.9020408163265307,
+      "baseline_f1": 0.9011213047910296,
+      "dropout02_tp": 436,
+      "dropout02_fp": 47,
+      "dropout02_fn": 54,
+      "dropout02_predicted": 483,
+      "dropout02_gold": 490,
+      "dropout02_precision": 0.9026915113871635,
+      "dropout02_recall": 0.889795918367347,
+      "dropout02_f1": 0.896197327852004,
+      "delta_tp": -6,
+      "delta_fp": -2,
+      "delta_fn": 6,
+      "delta_predicted": -8,
+      "delta_gold": 0,
+      "delta_precision_pp": 0.24878453993835148,
+      "delta_recall_pp": -1.224489795918371,
+      "delta_f1_pp": -0.4923976939025576
+    },
+    {
+      "entity": "Medical_Examination",
+      "baseline_tp": 537,
+      "baseline_fp": 80,
+      "baseline_fn": 78,
+      "baseline_predicted": 617,
+      "baseline_gold": 615,
+      "baseline_precision": 0.8703403565640194,
+      "baseline_recall": 0.8731707317073171,
+      "baseline_f1": 0.8717532467532467,
+      "dropout02_tp": 531,
+      "dropout02_fp": 77,
+      "dropout02_fn": 84,
+      "dropout02_predicted": 608,
+      "dropout02_gold": 615,
+      "dropout02_precision": 0.8733552631578947,
+      "dropout02_recall": 0.8634146341463415,
+      "dropout02_f1": 0.8683565004088307,
+      "delta_tp": -6,
+      "delta_fp": -3,
+      "delta_fn": 6,
+      "delta_predicted": -9,
+      "delta_gold": 0,
+      "delta_precision_pp": 0.3014906593875266,
+      "delta_recall_pp": -0.9756097560975618,
+      "delta_f1_pp": -0.3396746344416002
+    },
+    {
+      "entity": "Operation",
+      "baseline_tp": 289,
+      "baseline_fp": 40,
+      "baseline_fn": 35,
+      "baseline_predicted": 329,
+      "baseline_gold": 324,
+      "baseline_precision": 0.878419452887538,
+      "baseline_recall": 0.8919753086419753,
+      "baseline_f1": 0.885145482388974,
+      "dropout02_tp": 282,
+      "dropout02_fp": 50,
+      "dropout02_fn": 42,
+      "dropout02_predicted": 332,
+      "dropout02_gold": 324,
+      "dropout02_precision": 0.8493975903614458,
+      "dropout02_recall": 0.8703703703703703,
+      "dropout02_f1": 0.8597560975609756,
+      "delta_tp": -7,
+      "delta_fp": 10,
+      "delta_fn": 7,
+      "delta_predicted": 3,
+      "delta_gold": 0,
+      "delta_precision_pp": -2.902186252609218,
+      "delta_recall_pp": -2.1604938271604923,
+      "delta_f1_pp": -2.538938482799835
+    }
+  ],
+  "entity_length_comparison": [
+    {
+      "length_bin": "1",
+      "entity_type": "ALL",
+      "baseline_sentences": 479,
+      "baseline_tp": 458,
+      "baseline_fp": 73,
+      "baseline_fn": 60,
+      "baseline_predicted": 531,
+      "baseline_gold": 518,
+      "baseline_precision": 0.8625235404896422,
+      "baseline_recall": 0.8841698841698842,
+      "baseline_f1": 0.8732125834127741,
+      "baseline_small_group": false,
+      "dropout02_sentences": 474,
+      "dropout02_tp": 458,
+      "dropout02_fp": 66,
+      "dropout02_fn": 60,
+      "dropout02_predicted": 524,
+      "dropout02_gold": 518,
+      "dropout02_precision": 0.8740458015267175,
+      "dropout02_recall": 0.8841698841698842,
+      "dropout02_f1": 0.8790786948176584,
+      "dropout02_small_group": false,
+      "delta_f1_pp": 0.5866111404884355
+    },
+    {
+      "length_bin": "1",
+      "entity_type": "Symptom",
+      "baseline_sentences": 479,
+      "baseline_tp": 449,
+      "baseline_fp": 67,
+      "baseline_fn": 53,
+      "baseline_predicted": 516,
+      "baseline_gold": 502,
+      "baseline_precision": 0.8701550387596899,
+      "baseline_recall": 0.8944223107569721,
+      "baseline_f1": 0.882121807465619,
+      "baseline_small_group": false,
+      "dropout02_sentences": 474,
+      "dropout02_tp": 449,
+      "dropout02_fp": 60,
+      "dropout02_fn": 53,
+      "dropout02_predicted": 509,
+      "dropout02_gold": 502,
+      "dropout02_precision": 0.8821218074656189,
+      "dropout02_recall": 0.8944223107569721,
+      "dropout02_f1": 0.8882294757665679,
+      "dropout02_small_group": false,
+      "delta_f1_pp": 0.6107668300948887
+    },
+    {
+      "length_bin": "1",
+      "entity_type": "Drug",
+      "baseline_sentences": 479,
+      "baseline_tp": 0,
+      "baseline_fp": 0,
+      "baseline_fn": 5,
+      "baseline_predicted": 0,
+      "baseline_gold": 5,
+      "baseline_precision": 0.0,
+      "baseline_recall": 0.0,
+      "baseline_f1": 0.0,
+      "baseline_small_group": true,
+      "dropout02_sentences": 474,
+      "dropout02_tp": 0,
+      "dropout02_fp": 0,
+      "dropout02_fn": 5,
+      "dropout02_predicted": 0,
+      "dropout02_gold": 5,
+      "dropout02_precision": 0.0,
+      "dropout02_recall": 0.0,
+      "dropout02_f1": 0.0,
+      "dropout02_small_group": true,
+      "delta_f1_pp": 0.0
+    },
+    {
+      "length_bin": "1",
+      "entity_type": "Drug_Category",
+      "baseline_sentences": 479,
+      "baseline_tp": 9,
+      "baseline_fp": 5,
+      "baseline_fn": 2,
+      "baseline_predicted": 14,
+      "baseline_gold": 11,
+      "baseline_precision": 0.6428571428571429,
+      "baseline_recall": 0.8181818181818182,
+      "baseline_f1": 0.7200000000000001,
+      "baseline_small_group": true,
+      "dropout02_sentences": 474,
+      "dropout02_tp": 9,
+      "dropout02_fp": 4,
+      "dropout02_fn": 2,
+      "dropout02_predicted": 13,
+      "dropout02_gold": 11,
+      "dropout02_precision": 0.6923076923076923,
+      "dropout02_recall": 0.8181818181818182,
+      "dropout02_f1": 0.7500000000000001,
+      "dropout02_small_group": true,
+      "delta_f1_pp": 3.0000000000000027
+    },
+    {
+      "length_bin": "1",
+      "entity_type": "Medical_Examination",
+      "baseline_sentences": 479,
+      "baseline_tp": 0,
+      "baseline_fp": 1,
+      "baseline_fn": 0,
+      "baseline_predicted": 1,
+      "baseline_gold": 0,
+      "baseline_precision": 0.0,
+      "baseline_recall": 0.0,
+      "baseline_f1": 0.0,
+      "baseline_small_group": true,
+      "dropout02_sentences": 474,
+      "dropout02_tp": 0,
+      "dropout02_fp": 2,
+      "dropout02_fn": 0,
+      "dropout02_predicted": 2,
+      "dropout02_gold": 0,
+      "dropout02_precision": 0.0,
+      "dropout02_recall": 0.0,
+      "dropout02_f1": 0.0,
+      "dropout02_small_group": true,
+      "delta_f1_pp": 0.0
+    },
+    {
+      "length_bin": "1",
+      "entity_type": "Operation",
+      "baseline_sentences": 479,
+      "baseline_tp": 0,
+      "baseline_fp": 0,
+      "baseline_fn": 0,
+      "baseline_predicted": 0,
+      "baseline_gold": 0,
+      "baseline_precision": 0.0,
+      "baseline_recall": 0.0,
+      "baseline_f1": 0.0,
+      "baseline_small_group": true,
+      "dropout02_sentences": 474,
+      "dropout02_tp": 0,
+      "dropout02_fp": 0,
+      "dropout02_fn": 0,
+      "dropout02_predicted": 0,
+      "dropout02_gold": 0,
+      "dropout02_precision": 0.0,
+      "dropout02_recall": 0.0,
+      "dropout02_f1": 0.0,
+      "dropout02_small_group": true,
+      "delta_f1_pp": 0.0
+    },
+    {
+      "length_bin": "2",
+      "entity_type": "ALL",
+      "baseline_sentences": 2237,
+      "baseline_tp": 2678,
+      "baseline_fp": 157,
+      "baseline_fn": 186,
+      "baseline_predicted": 2835,
+      "baseline_gold": 2864,
+      "baseline_precision": 0.944620811287478,
+      "baseline_recall": 0.9350558659217877,
+      "baseline_f1": 0.9398140024565714,
+      "baseline_small_group": false,
+      "dropout02_sentences": 2224,
+      "dropout02_tp": 2668,
+      "dropout02_fp": 138,
+      "dropout02_fn": 196,
+      "dropout02_predicted": 2806,
+      "dropout02_gold": 2864,
+      "dropout02_precision": 0.9508196721311475,
+      "dropout02_recall": 0.9315642458100558,
+      "dropout02_f1": 0.9410934744268077,
+      "dropout02_small_group": false,
+      "delta_f1_pp": 0.12794719702362567
+    },
+    {
+      "length_bin": "2",
+      "entity_type": "Symptom",
+      "baseline_sentences": 2237,
+      "baseline_tp": 2234,
+      "baseline_fp": 123,
+      "baseline_fn": 128,
+      "baseline_predicted": 2357,
+      "baseline_gold": 2362,
+      "baseline_precision": 0.9478150190920662,
+      "baseline_recall": 0.9458086367485182,
+      "baseline_f1": 0.9468107649925832,
+      "baseline_small_group": false,
+      "dropout02_sentences": 2224,
+      "dropout02_tp": 2235,
+      "dropout02_fp": 109,
+      "dropout02_fn": 127,
+      "dropout02_predicted": 2344,
+      "dropout02_gold": 2362,
+      "dropout02_precision": 0.9534982935153583,
+      "dropout02_recall": 0.9462320067739204,
+      "dropout02_f1": 0.949851253718657,
+      "dropout02_small_group": false,
+      "delta_f1_pp": 0.30404887260737645
+    },
+    {
+      "length_bin": "2",
+      "entity_type": "Drug",
+      "baseline_sentences": 2237,
+      "baseline_tp": 84,
+      "baseline_fp": 10,
+      "baseline_fn": 10,
+      "baseline_predicted": 94,
+      "baseline_gold": 94,
+      "baseline_precision": 0.8936170212765957,
+      "baseline_recall": 0.8936170212765957,
+      "baseline_f1": 0.8936170212765957,
+      "baseline_small_group": false,
+      "dropout02_sentences": 2224,
+      "dropout02_tp": 81,
+      "dropout02_fp": 8,
+      "dropout02_fn": 13,
+      "dropout02_predicted": 89,
+      "dropout02_gold": 94,
+      "dropout02_precision": 0.9101123595505618,
+      "dropout02_recall": 0.8617021276595744,
+      "dropout02_f1": 0.8852459016393442,
+      "dropout02_small_group": false,
+      "delta_f1_pp": -0.8371119637251456
+    },
+    {
+      "length_bin": "2",
+      "entity_type": "Drug_Category",
+      "baseline_sentences": 2237,
+      "baseline_tp": 8,
+      "baseline_fp": 5,
+      "baseline_fn": 10,
+      "baseline_predicted": 13,
+      "baseline_gold": 18,
+      "baseline_precision": 0.6153846153846154,
+      "baseline_recall": 0.4444444444444444,
+      "baseline_f1": 0.5161290322580646,
+      "baseline_small_group": true,
+      "dropout02_sentences": 2224,
+      "dropout02_tp": 9,
+      "dropout02_fp": 0,
+      "dropout02_fn": 9,
+      "dropout02_predicted": 9,
+      "dropout02_gold": 18,
+      "dropout02_precision": 1.0,
+      "dropout02_recall": 0.5,
+      "dropout02_f1": 0.6666666666666666,
+      "dropout02_small_group": true,
+      "delta_f1_pp": 15.053763440860202
+    },
+    {
+      "length_bin": "2",
+      "entity_type": "Medical_Examination",
+      "baseline_sentences": 2237,
+      "baseline_tp": 145,
+      "baseline_fp": 12,
+      "baseline_fn": 20,
+      "baseline_predicted": 157,
+      "baseline_gold": 165,
+      "baseline_precision": 0.9235668789808917,
+      "baseline_recall": 0.8787878787878788,
+      "baseline_f1": 0.9006211180124223,
+      "baseline_small_group": false,
+      "dropout02_sentences": 2224,
+      "dropout02_tp": 143,
+      "dropout02_fp": 13,
+      "dropout02_fn": 22,
+      "dropout02_predicted": 156,
+      "dropout02_gold": 165,
+      "dropout02_precision": 0.9166666666666666,
+      "dropout02_recall": 0.8666666666666667,
+      "dropout02_f1": 0.8909657320872274,
+      "dropout02_small_group": false,
+      "delta_f1_pp": -0.9655385925194881
+    },
+    {
+      "length_bin": "2",
+      "entity_type": "Operation",
+      "baseline_sentences": 2237,
+      "baseline_tp": 207,
+      "baseline_fp": 7,
+      "baseline_fn": 18,
+      "baseline_predicted": 214,
+      "baseline_gold": 225,
+      "baseline_precision": 0.9672897196261683,
+      "baseline_recall": 0.92,
+      "baseline_f1": 0.9430523917995445,
+      "baseline_small_group": false,
+      "dropout02_sentences": 2224,
+      "dropout02_tp": 200,
+      "dropout02_fp": 8,
+      "dropout02_fn": 25,
+      "dropout02_predicted": 208,
+      "dropout02_gold": 225,
+      "dropout02_precision": 0.9615384615384616,
+      "dropout02_recall": 0.8888888888888888,
+      "dropout02_f1": 0.9237875288683602,
+      "dropout02_small_group": false,
+      "delta_f1_pp": -1.9264862931184235
+    },
+    {
+      "length_bin": "3-4",
+      "entity_type": "ALL",
+      "baseline_sentences": 1868,
+      "baseline_tp": 1961,
+      "baseline_fp": 251,
+      "baseline_fn": 202,
+      "baseline_predicted": 2212,
+      "baseline_gold": 2163,
+      "baseline_precision": 0.8865280289330922,
+      "baseline_recall": 0.9066111881645862,
+      "baseline_f1": 0.8964571428571427,
+      "baseline_small_group": false,
+      "dropout02_sentences": 1860,
+      "dropout02_tp": 1951,
+      "dropout02_fp": 237,
+      "dropout02_fn": 212,
+      "dropout02_predicted": 2188,
+      "dropout02_gold": 2163,
+      "dropout02_precision": 0.8916819012797075,
+      "dropout02_recall": 0.9019879796578826,
+      "dropout02_f1": 0.8968053321075615,
+      "dropout02_small_group": false,
+      "delta_f1_pp": 0.034818925041879556
+    },
+    {
+      "length_bin": "3-4",
+      "entity_type": "Symptom",
+      "baseline_sentences": 1868,
+      "baseline_tp": 824,
+      "baseline_fp": 138,
+      "baseline_fn": 95,
+      "baseline_predicted": 962,
+      "baseline_gold": 919,
+      "baseline_precision": 0.8565488565488566,
+      "baseline_recall": 0.8966267682263329,
+      "baseline_f1": 0.8761297182349814,
+      "baseline_small_group": false,
+      "dropout02_sentences": 1860,
+      "dropout02_tp": 819,
+      "dropout02_fp": 124,
+      "dropout02_fn": 100,
+      "dropout02_predicted": 943,
+      "dropout02_gold": 919,
+      "dropout02_precision": 0.8685047720042418,
+      "dropout02_recall": 0.8911860718171926,
+      "dropout02_f1": 0.8796992481203006,
+      "dropout02_small_group": false,
+      "delta_f1_pp": 0.35695298853192226
+    },
+    {
+      "length_bin": "3-4",
+      "entity_type": "Drug",
+      "baseline_sentences": 1868,
+      "baseline_tp": 389,
+      "baseline_fp": 32,
+      "baseline_fn": 28,
+      "baseline_predicted": 421,
+      "baseline_gold": 417,
+      "baseline_precision": 0.9239904988123515,
+      "baseline_recall": 0.9328537170263789,
+      "baseline_f1": 0.9284009546539379,
+      "baseline_small_group": false,
+      "dropout02_sentences": 1860,
+      "dropout02_tp": 392,
+      "dropout02_fp": 30,
+      "dropout02_fn": 25,
+      "dropout02_predicted": 422,
+      "dropout02_gold": 417,
+      "dropout02_precision": 0.9289099526066351,
+      "dropout02_recall": 0.9400479616306955,
+      "dropout02_f1": 0.934445768772348,
+      "dropout02_small_group": false,
+      "delta_f1_pp": 0.6044814118410069
+    },
+    {
+      "length_bin": "3-4",
+      "entity_type": "Drug_Category",
+      "baseline_sentences": 1868,
+      "baseline_tp": 350,
+      "baseline_fp": 18,
+      "baseline_fn": 23,
+      "baseline_predicted": 368,
+      "baseline_gold": 373,
+      "baseline_precision": 0.9510869565217391,
+      "baseline_recall": 0.938337801608579,
+      "baseline_f1": 0.9446693657219973,
+      "baseline_small_group": false,
+      "dropout02_sentences": 1860,
+      "dropout02_tp": 344,
+      "dropout02_fp": 15,
+      "dropout02_fn": 29,
+      "dropout02_predicted": 359,
+      "dropout02_gold": 373,
+      "dropout02_precision": 0.958217270194986,
+      "dropout02_recall": 0.9222520107238605,
+      "dropout02_f1": 0.9398907103825136,
+      "dropout02_small_group": false,
+      "delta_f1_pp": -0.47786553394837394
+    },
+    {
+      "length_bin": "3-4",
+      "entity_type": "Medical_Examination",
+      "baseline_sentences": 1868,
+      "baseline_tp": 335,
+      "baseline_fp": 40,
+      "baseline_fn": 42,
+      "baseline_predicted": 375,
+      "baseline_gold": 377,
+      "baseline_precision": 0.8933333333333333,
+      "baseline_recall": 0.8885941644562334,
+      "baseline_f1": 0.8909574468085106,
+      "baseline_small_group": false,
+      "dropout02_sentences": 1860,
+      "dropout02_tp": 334,
+      "dropout02_fp": 39,
+      "dropout02_fn": 43,
+      "dropout02_predicted": 373,
+      "dropout02_gold": 377,
+      "dropout02_precision": 0.8954423592493298,
+      "dropout02_recall": 0.8859416445623343,
+      "dropout02_f1": 0.8906666666666667,
+      "dropout02_small_group": false,
+      "delta_f1_pp": -0.0290780141843916
+    },
+    {
+      "length_bin": "3-4",
+      "entity_type": "Operation",
+      "baseline_sentences": 1868,
+      "baseline_tp": 63,
+      "baseline_fp": 23,
+      "baseline_fn": 14,
+      "baseline_predicted": 86,
+      "baseline_gold": 77,
+      "baseline_precision": 0.7325581395348837,
+      "baseline_recall": 0.8181818181818182,
+      "baseline_f1": 0.7730061349693251,
+      "baseline_small_group": false,
+      "dropout02_sentences": 1860,
+      "dropout02_tp": 62,
+      "dropout02_fp": 29,
+      "dropout02_fn": 15,
+      "dropout02_predicted": 91,
+      "dropout02_gold": 77,
+      "dropout02_precision": 0.6813186813186813,
+      "dropout02_recall": 0.8051948051948052,
+      "dropout02_f1": 0.7380952380952381,
+      "dropout02_small_group": false,
+      "delta_f1_pp": -3.4910896874086994
+    },
+    {
+      "length_bin": "5-8",
+      "entity_type": "ALL",
+      "baseline_sentences": 996,
+      "baseline_tp": 812,
+      "baseline_fp": 212,
+      "baseline_fn": 162,
+      "baseline_predicted": 1024,
+      "baseline_gold": 974,
+      "baseline_precision": 0.79296875,
+      "baseline_recall": 0.8336755646817249,
+      "baseline_f1": 0.8128128128128128,
+      "baseline_small_group": false,
+      "dropout02_sentences": 992,
+      "dropout02_tp": 814,
+      "dropout02_fp": 207,
+      "dropout02_fn": 160,
+      "dropout02_predicted": 1021,
+      "dropout02_gold": 974,
+      "dropout02_precision": 0.7972575905974535,
+      "dropout02_recall": 0.8357289527720739,
+      "dropout02_f1": 0.8160401002506266,
+      "dropout02_small_group": false,
+      "delta_f1_pp": 0.3227287437813753
+    },
+    {
+      "length_bin": "5-8",
+      "entity_type": "Symptom",
+      "baseline_sentences": 996,
+      "baseline_tp": 491,
+      "baseline_fp": 147,
+      "baseline_fn": 121,
+      "baseline_predicted": 638,
+      "baseline_gold": 612,
+      "baseline_precision": 0.7695924764890282,
+      "baseline_recall": 0.8022875816993464,
+      "baseline_f1": 0.7856,
+      "baseline_small_group": false,
+      "dropout02_sentences": 992,
+      "dropout02_tp": 495,
+      "dropout02_fp": 134,
+      "dropout02_fn": 117,
+      "dropout02_predicted": 629,
+      "dropout02_gold": 612,
+      "dropout02_precision": 0.7869634340222575,
+      "dropout02_recall": 0.8088235294117647,
+      "dropout02_f1": 0.7977437550362612,
+      "dropout02_small_group": false,
+      "delta_f1_pp": 1.2143755036261195
+    },
+    {
+      "length_bin": "5-8",
+      "entity_type": "Drug",
+      "baseline_sentences": 996,
+      "baseline_tp": 171,
+      "baseline_fp": 10,
+      "baseline_fn": 13,
+      "baseline_predicted": 181,
+      "baseline_gold": 184,
+      "baseline_precision": 0.9447513812154696,
+      "baseline_recall": 0.9293478260869565,
+      "baseline_f1": 0.936986301369863,
+      "baseline_small_group": false,
+      "dropout02_sentences": 992,
+      "dropout02_tp": 172,
+      "dropout02_fp": 12,
+      "dropout02_fn": 12,
+      "dropout02_predicted": 184,
+      "dropout02_gold": 184,
+      "dropout02_precision": 0.9347826086956522,
+      "dropout02_recall": 0.9347826086956522,
+      "dropout02_f1": 0.9347826086956522,
+      "dropout02_small_group": false,
+      "delta_f1_pp": -0.22036926742108331
+    },
+    {
+      "length_bin": "5-8",
+      "entity_type": "Drug_Category",
+      "baseline_sentences": 996,
+      "baseline_tp": 74,
+      "baseline_fp": 20,
+      "baseline_fn": 10,
+      "baseline_predicted": 94,
+      "baseline_gold": 84,
+      "baseline_precision": 0.7872340425531915,
+      "baseline_recall": 0.8809523809523809,
+      "baseline_f1": 0.8314606741573034,
+      "baseline_small_group": false,
+      "dropout02_sentences": 992,
+      "dropout02_tp": 73,
+      "dropout02_fp": 27,
+      "dropout02_fn": 11,
+      "dropout02_predicted": 100,
+      "dropout02_gold": 84,
+      "dropout02_precision": 0.73,
+      "dropout02_recall": 0.8690476190476191,
+      "dropout02_f1": 0.7934782608695652,
+      "dropout02_small_group": false,
+      "delta_f1_pp": -3.7982413287738215
+    },
+    {
+      "length_bin": "5-8",
+      "entity_type": "Medical_Examination",
+      "baseline_sentences": 996,
+      "baseline_tp": 57,
+      "baseline_fp": 25,
+      "baseline_fn": 15,
+      "baseline_predicted": 82,
+      "baseline_gold": 72,
+      "baseline_precision": 0.6951219512195121,
+      "baseline_recall": 0.7916666666666666,
+      "baseline_f1": 0.7402597402597403,
+      "baseline_small_group": false,
+      "dropout02_sentences": 992,
+      "dropout02_tp": 54,
+      "dropout02_fp": 21,
+      "dropout02_fn": 18,
+      "dropout02_predicted": 75,
+      "dropout02_gold": 72,
+      "dropout02_precision": 0.72,
+      "dropout02_recall": 0.75,
+      "dropout02_f1": 0.7346938775510204,
+      "dropout02_small_group": false,
+      "delta_f1_pp": -0.5565862708719838
+    },
+    {
+      "length_bin": "5-8",
+      "entity_type": "Operation",
+      "baseline_sentences": 996,
+      "baseline_tp": 19,
+      "baseline_fp": 10,
+      "baseline_fn": 3,
+      "baseline_predicted": 29,
+      "baseline_gold": 22,
+      "baseline_precision": 0.6551724137931034,
+      "baseline_recall": 0.8636363636363636,
+      "baseline_f1": 0.7450980392156864,
+      "baseline_small_group": true,
+      "dropout02_sentences": 992,
+      "dropout02_tp": 20,
+      "dropout02_fp": 13,
+      "dropout02_fn": 2,
+      "dropout02_predicted": 33,
+      "dropout02_gold": 22,
+      "dropout02_precision": 0.6060606060606061,
+      "dropout02_recall": 0.9090909090909091,
+      "dropout02_f1": 0.7272727272727273,
+      "dropout02_small_group": true,
+      "delta_f1_pp": -1.782531194295911
+    },
+    {
+      "length_bin": "9+",
+      "entity_type": "ALL",
+      "baseline_sentences": 109,
+      "baseline_tp": 46,
+      "baseline_fp": 31,
+      "baseline_fn": 36,
+      "baseline_predicted": 77,
+      "baseline_gold": 82,
+      "baseline_precision": 0.5974025974025974,
+      "baseline_recall": 0.5609756097560976,
+      "baseline_f1": 0.5786163522012578,
+      "baseline_small_group": false,
+      "dropout02_sentences": 107,
+      "dropout02_tp": 48,
+      "dropout02_fp": 30,
+      "dropout02_fn": 34,
+      "dropout02_predicted": 78,
+      "dropout02_gold": 82,
+      "dropout02_precision": 0.6153846153846154,
+      "dropout02_recall": 0.5853658536585366,
+      "dropout02_f1": 0.6,
+      "dropout02_small_group": false,
+      "delta_f1_pp": 2.1383647798742134
+    },
+    {
+      "length_bin": "9+",
+      "entity_type": "Symptom",
+      "baseline_sentences": 109,
+      "baseline_tp": 20,
+      "baseline_fp": 27,
+      "baseline_fn": 32,
+      "baseline_predicted": 47,
+      "baseline_gold": 52,
+      "baseline_precision": 0.425531914893617,
+      "baseline_recall": 0.38461538461538464,
+      "baseline_f1": 0.40404040404040403,
+      "baseline_small_group": false,
+      "dropout02_sentences": 107,
+      "dropout02_tp": 23,
+      "dropout02_fp": 26,
+      "dropout02_fn": 29,
+      "dropout02_predicted": 49,
+      "dropout02_gold": 52,
+      "dropout02_precision": 0.46938775510204084,
+      "dropout02_recall": 0.4423076923076923,
+      "dropout02_f1": 0.4554455445544554,
+      "dropout02_small_group": false,
+      "delta_f1_pp": 5.1405140514051375
+    },
+    {
+      "length_bin": "9+",
+      "entity_type": "Drug",
+      "baseline_sentences": 109,
+      "baseline_tp": 25,
+      "baseline_fp": 1,
+      "baseline_fn": 0,
+      "baseline_predicted": 26,
+      "baseline_gold": 25,
+      "baseline_precision": 0.9615384615384616,
+      "baseline_recall": 1.0,
+      "baseline_f1": 0.9803921568627451,
+      "baseline_small_group": true,
+      "dropout02_sentences": 107,
+      "dropout02_tp": 24,
+      "dropout02_fp": 1,
+      "dropout02_fn": 1,
+      "dropout02_predicted": 25,
+      "dropout02_gold": 25,
+      "dropout02_precision": 0.96,
+      "dropout02_recall": 0.96,
+      "dropout02_f1": 0.96,
+      "dropout02_small_group": true,
+      "delta_f1_pp": -2.039215686274509
+    },
+    {
+      "length_bin": "9+",
+      "entity_type": "Drug_Category",
+      "baseline_sentences": 109,
+      "baseline_tp": 1,
+      "baseline_fp": 1,
+      "baseline_fn": 3,
+      "baseline_predicted": 2,
+      "baseline_gold": 4,
+      "baseline_precision": 0.5,
+      "baseline_recall": 0.25,
+      "baseline_f1": 0.3333333333333333,
+      "baseline_small_group": true,
+      "dropout02_sentences": 107,
+      "dropout02_tp": 1,
+      "dropout02_fp": 1,
+      "dropout02_fn": 3,
+      "dropout02_predicted": 2,
+      "dropout02_gold": 4,
+      "dropout02_precision": 0.5,
+      "dropout02_recall": 0.25,
+      "dropout02_f1": 0.3333333333333333,
+      "dropout02_small_group": true,
+      "delta_f1_pp": 0.0
+    },
+    {
+      "length_bin": "9+",
+      "entity_type": "Medical_Examination",
+      "baseline_sentences": 109,
+      "baseline_tp": 0,
+      "baseline_fp": 2,
+      "baseline_fn": 1,
+      "baseline_predicted": 2,
+      "baseline_gold": 1,
+      "baseline_precision": 0.0,
+      "baseline_recall": 0.0,
+      "baseline_f1": 0.0,
+      "baseline_small_group": true,
+      "dropout02_sentences": 107,
+      "dropout02_tp": 0,
+      "dropout02_fp": 2,
+      "dropout02_fn": 1,
+      "dropout02_predicted": 2,
+      "dropout02_gold": 1,
+      "dropout02_precision": 0.0,
+      "dropout02_recall": 0.0,
+      "dropout02_f1": 0.0,
+      "dropout02_small_group": true,
+      "delta_f1_pp": 0.0
+    },
+    {
+      "length_bin": "9+",
+      "entity_type": "Operation",
+      "baseline_sentences": 109,
+      "baseline_tp": 0,
+      "baseline_fp": 0,
+      "baseline_fn": 0,
+      "baseline_predicted": 0,
+      "baseline_gold": 0,
+      "baseline_precision": 0.0,
+      "baseline_recall": 0.0,
+      "baseline_f1": 0.0,
+      "baseline_small_group": true,
+      "dropout02_sentences": 107,
+      "dropout02_tp": 0,
+      "dropout02_fp": 0,
+      "dropout02_fn": 0,
+      "dropout02_predicted": 0,
+      "dropout02_gold": 0,
+      "dropout02_precision": 0.0,
+      "dropout02_recall": 0.0,
+      "dropout02_f1": 0.0,
+      "dropout02_small_group": true,
+      "delta_f1_pp": 0.0
+    }
+  ],
+  "error_component_comparison": [
+    {
+      "dimension": "error_component",
+      "group": "isolated_gold_miss",
+      "entity_type": "ALL",
+      "unit": "overlap_connected_component",
+      "baseline_components": 225,
+      "baseline_fn": 225,
+      "baseline_fp": 0,
+      "dropout02_components": 245,
+      "dropout02_fn": 245,
+      "dropout02_fp": 0,
+      "delta_components": 20
+    },
+    {
+      "dimension": "error_component",
+      "group": "isolated_prediction_spurious",
+      "entity_type": "ALL",
+      "unit": "overlap_connected_component",
+      "baseline_components": 292,
+      "baseline_fn": 0,
+      "baseline_fp": 292,
+      "dropout02_components": 257,
+      "dropout02_fn": 0,
+      "dropout02_fp": 257,
+      "delta_components": -35
+    },
+    {
+      "dimension": "error_component",
+      "group": "many_gold_to_one_prediction_merge_candidate",
+      "entity_type": "ALL",
+      "unit": "overlap_connected_component",
+      "baseline_components": 20,
+      "baseline_fn": 41,
+      "baseline_fp": 20,
+      "dropout02_components": 23,
+      "dropout02_fn": 46,
+      "dropout02_fp": 23,
+      "delta_components": 3
+    },
+    {
+      "dimension": "error_component",
+      "group": "many_to_many_complex",
+      "entity_type": "ALL",
+      "unit": "overlap_connected_component",
+      "baseline_components": 1,
+      "baseline_fn": 2,
+      "baseline_fp": 2,
+      "dropout02_components": 1,
+      "dropout02_fn": 2,
+      "dropout02_fp": 2,
+      "delta_components": 0
+    },
+    {
+      "dimension": "error_component",
+      "group": "one_gold_to_many_predictions_split_candidate",
+      "entity_type": "ALL",
+      "unit": "overlap_connected_component",
+      "baseline_components": 32,
+      "baseline_fn": 32,
+      "baseline_fp": 64,
+      "dropout02_components": 27,
+      "dropout02_fn": 27,
+      "dropout02_fp": 54,
+      "delta_components": -5
+    },
+    {
+      "dimension": "error_component",
+      "group": "one_to_one_boundary_and_type",
+      "entity_type": "ALL",
+      "unit": "overlap_connected_component",
+      "baseline_components": 31,
+      "baseline_fn": 31,
+      "baseline_fp": 31,
+      "dropout02_components": 29,
+      "dropout02_fn": 29,
+      "dropout02_fp": 29,
+      "delta_components": -2
+    },
+    {
+      "dimension": "error_component",
+      "group": "one_to_one_same_type_boundary",
+      "entity_type": "ALL",
+      "unit": "overlap_connected_component",
+      "baseline_components": 277,
+      "baseline_fn": 277,
+      "baseline_fp": 277,
+      "dropout02_components": 268,
+      "dropout02_fn": 268,
+      "dropout02_fp": 268,
+      "delta_components": -9
+    },
+    {
+      "dimension": "error_component",
+      "group": "one_to_one_type_only",
+      "entity_type": "ALL",
+      "unit": "overlap_connected_component",
+      "baseline_components": 38,
+      "baseline_fn": 38,
+      "baseline_fp": 38,
+      "dropout02_components": 45,
+      "dropout02_fn": 45,
+      "dropout02_fp": 45,
+      "delta_components": 7
+    }
+  ],
+  "boundary_shape_comparison": [
+    {
+      "entity_type": "ALL",
+      "shape": "overextended",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 155,
+      "dropout02": 155,
+      "delta": 0
+    },
+    {
+      "entity_type": "ALL",
+      "shape": "undercovered",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 119,
+      "dropout02": 111,
+      "delta": -8
+    },
+    {
+      "entity_type": "ALL",
+      "shape": "shifted",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 3,
+      "dropout02": 2,
+      "delta": -1
+    },
+    {
+      "entity_type": "Symptom",
+      "shape": "overextended",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 104,
+      "dropout02": 96,
+      "delta": -8
+    },
+    {
+      "entity_type": "Symptom",
+      "shape": "undercovered",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 85,
+      "dropout02": 76,
+      "delta": -9
+    },
+    {
+      "entity_type": "Symptom",
+      "shape": "shifted",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 3,
+      "dropout02": 2,
+      "delta": -1
+    },
+    {
+      "entity_type": "Drug",
+      "shape": "overextended",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 7,
+      "dropout02": 10,
+      "delta": 3
+    },
+    {
+      "entity_type": "Drug",
+      "shape": "undercovered",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 9,
+      "dropout02": 8,
+      "delta": -1
+    },
+    {
+      "entity_type": "Drug",
+      "shape": "shifted",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 0,
+      "dropout02": 0,
+      "delta": 0
+    },
+    {
+      "entity_type": "Drug_Category",
+      "shape": "overextended",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 8,
+      "dropout02": 9,
+      "delta": 1
+    },
+    {
+      "entity_type": "Drug_Category",
+      "shape": "undercovered",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 4,
+      "dropout02": 4,
+      "delta": 0
+    },
+    {
+      "entity_type": "Drug_Category",
+      "shape": "shifted",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 0,
+      "dropout02": 0,
+      "delta": 0
+    },
+    {
+      "entity_type": "Medical_Examination",
+      "shape": "overextended",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 18,
+      "dropout02": 14,
+      "delta": -4
+    },
+    {
+      "entity_type": "Medical_Examination",
+      "shape": "undercovered",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 19,
+      "dropout02": 21,
+      "delta": 2
+    },
+    {
+      "entity_type": "Medical_Examination",
+      "shape": "shifted",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 0,
+      "dropout02": 0,
+      "delta": 0
+    },
+    {
+      "entity_type": "Operation",
+      "shape": "overextended",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 18,
+      "dropout02": 26,
+      "delta": 8
+    },
+    {
+      "entity_type": "Operation",
+      "shape": "undercovered",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 2,
+      "dropout02": 2,
+      "delta": 0
+    },
+    {
+      "entity_type": "Operation",
+      "shape": "shifted",
+      "unit": "one_to_one_same_type_component",
+      "baseline": 0,
+      "dropout02": 0,
+      "delta": 0
+    }
+  ],
+  "error_side_comparison": [
+    {
+      "entity_type": "Symptom",
+      "side": "FN",
+      "category": "boundary_and_type_overlap",
+      "baseline": 19,
+      "dropout02": 14,
+      "delta": -5,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Symptom",
+      "side": "FN",
+      "category": "boundary_same_type_overlap",
+      "baseline": 238,
+      "dropout02": 222,
+      "delta": -16,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Symptom",
+      "side": "FN",
+      "category": "no_overlapping_counterpart",
+      "baseline": 170,
+      "dropout02": 189,
+      "delta": 19,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Symptom",
+      "side": "FN",
+      "category": "type_only_exact_span",
+      "baseline": 2,
+      "dropout02": 1,
+      "delta": -1,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Symptom",
+      "side": "FP",
+      "category": "boundary_and_type_overlap",
+      "baseline": 14,
+      "dropout02": 19,
+      "delta": 5,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Symptom",
+      "side": "FP",
+      "category": "boundary_same_type_overlap",
+      "baseline": 257,
+      "dropout02": 233,
+      "delta": -24,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Symptom",
+      "side": "FP",
+      "category": "no_overlapping_counterpart",
+      "baseline": 224,
+      "dropout02": 193,
+      "delta": -31,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Symptom",
+      "side": "FP",
+      "category": "type_only_exact_span",
+      "baseline": 7,
+      "dropout02": 8,
+      "delta": 1,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Drug",
+      "side": "FN",
+      "category": "boundary_and_type_overlap",
+      "baseline": 4,
+      "dropout02": 4,
+      "delta": 0,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Drug",
+      "side": "FN",
+      "category": "boundary_same_type_overlap",
+      "baseline": 26,
+      "dropout02": 25,
+      "delta": -1,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Drug",
+      "side": "FN",
+      "category": "no_overlapping_counterpart",
+      "baseline": 15,
+      "dropout02": 14,
+      "delta": -1,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Drug",
+      "side": "FN",
+      "category": "type_only_exact_span",
+      "baseline": 11,
+      "dropout02": 13,
+      "delta": 2,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Drug",
+      "side": "FP",
+      "category": "boundary_and_type_overlap",
+      "baseline": 5,
+      "dropout02": 5,
+      "delta": 0,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Drug",
+      "side": "FP",
+      "category": "boundary_same_type_overlap",
+      "baseline": 24,
+      "dropout02": 23,
+      "delta": -1,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Drug",
+      "side": "FP",
+      "category": "no_overlapping_counterpart",
+      "baseline": 10,
+      "dropout02": 9,
+      "delta": -1,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Drug",
+      "side": "FP",
+      "category": "type_only_exact_span",
+      "baseline": 14,
+      "dropout02": 14,
+      "delta": 0,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Drug_Category",
+      "side": "FN",
+      "category": "boundary_and_type_overlap",
+      "baseline": 15,
+      "dropout02": 15,
+      "delta": 0,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Drug_Category",
+      "side": "FN",
+      "category": "boundary_same_type_overlap",
+      "baseline": 14,
+      "dropout02": 16,
+      "delta": 2,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Drug_Category",
+      "side": "FN",
+      "category": "no_overlapping_counterpart",
+      "baseline": 8,
+      "dropout02": 10,
+      "delta": 2,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Drug_Category",
+      "side": "FN",
+      "category": "type_only_exact_span",
+      "baseline": 11,
+      "dropout02": 13,
+      "delta": 2,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Drug_Category",
+      "side": "FP",
+      "category": "boundary_and_type_overlap",
+      "baseline": 10,
+      "dropout02": 7,
+      "delta": -3,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Drug_Category",
+      "side": "FP",
+      "category": "boundary_same_type_overlap",
+      "baseline": 14,
+      "dropout02": 16,
+      "delta": 2,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Drug_Category",
+      "side": "FP",
+      "category": "no_overlapping_counterpart",
+      "baseline": 13,
+      "dropout02": 11,
+      "delta": -2,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Drug_Category",
+      "side": "FP",
+      "category": "type_only_exact_span",
+      "baseline": 12,
+      "dropout02": 13,
+      "delta": 1,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Medical_Examination",
+      "side": "FN",
+      "category": "boundary_and_type_overlap",
+      "baseline": 3,
+      "dropout02": 7,
+      "delta": 4,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Medical_Examination",
+      "side": "FN",
+      "category": "boundary_same_type_overlap",
+      "baseline": 43,
+      "dropout02": 40,
+      "delta": -3,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Medical_Examination",
+      "side": "FN",
+      "category": "no_overlapping_counterpart",
+      "baseline": 21,
+      "dropout02": 23,
+      "delta": 2,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Medical_Examination",
+      "side": "FN",
+      "category": "type_only_exact_span",
+      "baseline": 11,
+      "dropout02": 14,
+      "delta": 3,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Medical_Examination",
+      "side": "FP",
+      "category": "boundary_and_type_overlap",
+      "baseline": 9,
+      "dropout02": 5,
+      "delta": -4,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Medical_Examination",
+      "side": "FP",
+      "category": "boundary_same_type_overlap",
+      "baseline": 40,
+      "dropout02": 39,
+      "delta": -1,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Medical_Examination",
+      "side": "FP",
+      "category": "no_overlapping_counterpart",
+      "baseline": 29,
+      "dropout02": 29,
+      "delta": 0,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Medical_Examination",
+      "side": "FP",
+      "category": "type_only_exact_span",
+      "baseline": 2,
+      "dropout02": 4,
+      "delta": 2,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Operation",
+      "side": "FN",
+      "category": "boundary_and_type_overlap",
+      "baseline": 1,
+      "dropout02": 1,
+      "delta": 0,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Operation",
+      "side": "FN",
+      "category": "boundary_same_type_overlap",
+      "baseline": 20,
+      "dropout02": 28,
+      "delta": 8,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Operation",
+      "side": "FN",
+      "category": "no_overlapping_counterpart",
+      "baseline": 11,
+      "dropout02": 9,
+      "delta": -2,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Operation",
+      "side": "FN",
+      "category": "type_only_exact_span",
+      "baseline": 3,
+      "dropout02": 4,
+      "delta": 1,
+      "unit": "FN_entity"
+    },
+    {
+      "entity_type": "Operation",
+      "side": "FP",
+      "category": "boundary_and_type_overlap",
+      "baseline": 1,
+      "dropout02": 1,
+      "delta": 0,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Operation",
+      "side": "FP",
+      "category": "boundary_same_type_overlap",
+      "baseline": 20,
+      "dropout02": 28,
+      "delta": 8,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Operation",
+      "side": "FP",
+      "category": "no_overlapping_counterpart",
+      "baseline": 16,
+      "dropout02": 15,
+      "delta": -1,
+      "unit": "FP_entity"
+    },
+    {
+      "entity_type": "Operation",
+      "side": "FP",
+      "category": "type_only_exact_span",
+      "baseline": 3,
+      "dropout02": 6,
+      "delta": 3,
+      "unit": "FP_entity"
+    }
+  ],
+  "errors_by_model": {
+    "baseline": {
+      "original_side_categories": {
+        "FN": {
+          "no_overlapping_counterpart": 225,
+          "boundary_same_type_overlap": 341,
+          "type_only_exact_span": 38,
+          "boundary_and_type_overlap": 42
+        },
+        "FP": {
+          "boundary_same_type_overlap": 355,
+          "type_only_exact_span": 38,
+          "no_overlapping_counterpart": 292,
+          "boundary_and_type_overlap": 39
+        }
+      },
+      "component_partition": {
+        "isolated_gold_miss": {
+          "components": 225,
+          "fn": 225,
+          "fp": 0
+        },
+        "one_to_one_same_type_boundary": {
+          "components": 277,
+          "fn": 277,
+          "fp": 277
+        },
+        "one_to_one_type_only": {
+          "components": 38,
+          "fn": 38,
+          "fp": 38
+        },
+        "isolated_prediction_spurious": {
+          "components": 292,
+          "fn": 0,
+          "fp": 292
+        },
+        "one_to_one_boundary_and_type": {
+          "components": 31,
+          "fn": 31,
+          "fp": 31
+        },
+        "one_gold_to_many_predictions_split_candidate": {
+          "components": 32,
+          "fn": 32,
+          "fp": 64
+        },
+        "many_gold_to_one_prediction_merge_candidate": {
+          "components": 20,
+          "fn": 41,
+          "fp": 20
+        },
+        "many_to_many_complex": {
+          "components": 1,
+          "fn": 2,
+          "fp": 2
+        }
+      },
+      "boundary_shapes": {
+        "overextended": 155,
+        "undercovered": 119,
+        "shifted": 3
+      },
+      "boundary_shapes_by_type": {
+        "Symptom": {
+          "overextended": 104,
+          "undercovered": 85,
+          "shifted": 3
+        },
+        "Operation": {
+          "overextended": 18,
+          "undercovered": 2
+        },
+        "Medical_Examination": {
+          "undercovered": 19,
+          "overextended": 18
+        },
+        "Drug": {
+          "overextended": 7,
+          "undercovered": 9
+        },
+        "Drug_Category": {
+          "overextended": 8,
+          "undercovered": 4
+        }
+      },
+      "exact_boundary_type_confusions": [
+        {
+          "gold": "Drug",
+          "predicted": "Drug_Category",
+          "pairs": 11
+        },
+        {
+          "gold": "Drug_Category",
+          "predicted": "Drug",
+          "pairs": 11
+        },
+        {
+          "gold": "Medical_Examination",
+          "predicted": "Drug",
+          "pairs": 1
+        },
+        {
+          "gold": "Medical_Examination",
+          "predicted": "Operation",
+          "pairs": 3
+        },
+        {
+          "gold": "Medical_Examination",
+          "predicted": "Symptom",
+          "pairs": 7
+        },
+        {
+          "gold": "Operation",
+          "predicted": "Drug_Category",
+          "pairs": 1
+        },
+        {
+          "gold": "Operation",
+          "predicted": "Medical_Examination",
+          "pairs": 2
+        },
+        {
+          "gold": "Symptom",
+          "predicted": "Drug",
+          "pairs": 2
+        }
+      ],
+      "error_sentences": 814
+    },
+    "dropout02": {
+      "original_side_categories": {
+        "FN": {
+          "no_overlapping_counterpart": 245,
+          "boundary_same_type_overlap": 331,
+          "type_only_exact_span": 45,
+          "boundary_and_type_overlap": 41
+        },
+        "FP": {
+          "boundary_same_type_overlap": 339,
+          "type_only_exact_span": 45,
+          "no_overlapping_counterpart": 257,
+          "boundary_and_type_overlap": 37
+        }
+      },
+      "component_partition": {
+        "isolated_gold_miss": {
+          "components": 245,
+          "fn": 245,
+          "fp": 0
+        },
+        "one_to_one_same_type_boundary": {
+          "components": 268,
+          "fn": 268,
+          "fp": 268
+        },
+        "one_to_one_type_only": {
+          "components": 45,
+          "fn": 45,
+          "fp": 45
+        },
+        "isolated_prediction_spurious": {
+          "components": 257,
+          "fn": 0,
+          "fp": 257
+        },
+        "one_to_one_boundary_and_type": {
+          "components": 29,
+          "fn": 29,
+          "fp": 29
+        },
+        "one_gold_to_many_predictions_split_candidate": {
+          "components": 27,
+          "fn": 27,
+          "fp": 54
+        },
+        "many_gold_to_one_prediction_merge_candidate": {
+          "components": 23,
+          "fn": 46,
+          "fp": 23
+        },
+        "many_to_many_complex": {
+          "components": 1,
+          "fn": 2,
+          "fp": 2
+        }
+      },
+      "boundary_shapes": {
+        "overextended": 155,
+        "undercovered": 111,
+        "shifted": 2
+      },
+      "boundary_shapes_by_type": {
+        "Symptom": {
+          "overextended": 96,
+          "undercovered": 76,
+          "shifted": 2
+        },
+        "Operation": {
+          "overextended": 26,
+          "undercovered": 2
+        },
+        "Drug": {
+          "overextended": 10,
+          "undercovered": 8
+        },
+        "Drug_Category": {
+          "overextended": 9,
+          "undercovered": 4
+        },
+        "Medical_Examination": {
+          "overextended": 14,
+          "undercovered": 21
+        }
+      },
+      "exact_boundary_type_confusions": [
+        {
+          "gold": "Drug",
+          "predicted": "Drug_Category",
+          "pairs": 13
+        },
+        {
+          "gold": "Drug_Category",
+          "predicted": "Drug",
+          "pairs": 12
+        },
+        {
+          "gold": "Drug_Category",
+          "predicted": "Operation",
+          "pairs": 1
+        },
+        {
+          "gold": "Medical_Examination",
+          "predicted": "Drug",
+          "pairs": 1
+        },
+        {
+          "gold": "Medical_Examination",
+          "predicted": "Operation",
+          "pairs": 5
+        },
+        {
+          "gold": "Medical_Examination",
+          "predicted": "Symptom",
+          "pairs": 8
+        },
+        {
+          "gold": "Operation",
+          "predicted": "Drug",
+          "pairs": 1
+        },
+        {
+          "gold": "Operation",
+          "predicted": "Medical_Examination",
+          "pairs": 3
+        },
+        {
+          "gold": "Symptom",
+          "predicted": "Medical_Examination",
+          "pairs": 1
+        }
+      ],
+      "error_sentences": 806
+    }
+  },
+  "type_error_and_zero_gold_analysis": {
+    "baseline": {
+      "by_type_side_categories": {
+        "Symptom": {
+          "FN": {
+            "no_overlapping_counterpart": 170,
+            "boundary_same_type_overlap": 238,
+            "boundary_and_type_overlap": 19,
+            "type_only_exact_span": 2
+          },
+          "FP": {
+            "boundary_same_type_overlap": 257,
+            "no_overlapping_counterpart": 224,
+            "boundary_and_type_overlap": 14,
+            "type_only_exact_span": 7
+          }
+        },
+        "Drug": {
+          "FN": {
+            "type_only_exact_span": 11,
+            "boundary_same_type_overlap": 26,
+            "no_overlapping_counterpart": 15,
+            "boundary_and_type_overlap": 4
+          },
+          "FP": {
+            "type_only_exact_span": 14,
+            "boundary_same_type_overlap": 24,
+            "no_overlapping_counterpart": 10,
+            "boundary_and_type_overlap": 5
+          }
+        },
+        "Drug_Category": {
+          "FN": {
+            "type_only_exact_span": 11,
+            "boundary_same_type_overlap": 14,
+            "boundary_and_type_overlap": 15,
+            "no_overlapping_counterpart": 8
+          },
+          "FP": {
+            "no_overlapping_counterpart": 13,
+            "type_only_exact_span": 12,
+            "boundary_same_type_overlap": 14,
+            "boundary_and_type_overlap": 10
+          }
+        },
+        "Medical_Examination": {
+          "FN": {
+            "no_overlapping_counterpart": 21,
+            "boundary_same_type_overlap": 43,
+            "type_only_exact_span": 11,
+            "boundary_and_type_overlap": 3
+          },
+          "FP": {
+            "boundary_and_type_overlap": 9,
+            "no_overlapping_counterpart": 29,
+            "boundary_same_type_overlap": 40,
+            "type_only_exact_span": 2
+          }
+        },
+        "Operation": {
+          "FN": {
+            "boundary_same_type_overlap": 20,
+            "boundary_and_type_overlap": 1,
+            "no_overlapping_counterpart": 11,
+            "type_only_exact_span": 3
+          },
+          "FP": {
+            "boundary_same_type_overlap": 20,
+            "no_overlapping_counterpart": 16,
+            "type_only_exact_span": 3,
+            "boundary_and_type_overlap": 1
+          }
+        }
+      },
+      "components_involving_type": {
+        "Symptom": {
+          "isolated_gold_miss": 170,
+          "one_to_one_same_type_boundary": 192,
+          "isolated_prediction_spurious": 224,
+          "one_to_one_boundary_and_type": 26,
+          "one_gold_to_many_predictions_split_candidate": 30,
+          "many_gold_to_one_prediction_merge_candidate": 11,
+          "one_to_one_type_only": 9
+        },
+        "Drug_Category": {
+          "one_to_one_type_only": 23,
+          "isolated_prediction_spurious": 13,
+          "one_to_one_same_type_boundary": 12,
+          "one_to_one_boundary_and_type": 15,
+          "one_gold_to_many_predictions_split_candidate": 4,
+          "isolated_gold_miss": 8,
+          "many_gold_to_one_prediction_merge_candidate": 6
+        },
+        "Drug": {
+          "one_to_one_type_only": 25,
+          "one_to_one_same_type_boundary": 16,
+          "isolated_gold_miss": 15,
+          "one_to_one_boundary_and_type": 7,
+          "many_to_many_complex": 1,
+          "isolated_prediction_spurious": 10,
+          "many_gold_to_one_prediction_merge_candidate": 6,
+          "one_gold_to_many_predictions_split_candidate": 2
+        },
+        "Operation": {
+          "one_to_one_same_type_boundary": 20,
+          "one_to_one_boundary_and_type": 2,
+          "isolated_prediction_spurious": 16,
+          "isolated_gold_miss": 11,
+          "one_to_one_type_only": 6
+        },
+        "Medical_Examination": {
+          "isolated_gold_miss": 21,
+          "one_to_one_boundary_and_type": 12,
+          "isolated_prediction_spurious": 29,
+          "one_to_one_same_type_boundary": 37,
+          "one_to_one_type_only": 13,
+          "many_gold_to_one_prediction_merge_candidate": 3
+        }
+      },
+      "zero_gold_sentences": {
+        "sentences": 5708,
+        "fp_sentences": 133,
+        "fp_entities": 141
+      }
+    },
+    "dropout02": {
+      "by_type_side_categories": {
+        "Symptom": {
+          "FN": {
+            "no_overlapping_counterpart": 189,
+            "boundary_same_type_overlap": 222,
+            "type_only_exact_span": 1,
+            "boundary_and_type_overlap": 14
+          },
+          "FP": {
+            "boundary_same_type_overlap": 233,
+            "no_overlapping_counterpart": 193,
+            "boundary_and_type_overlap": 19,
+            "type_only_exact_span": 8
+          }
+        },
+        "Drug": {
+          "FN": {
+            "type_only_exact_span": 13,
+            "boundary_same_type_overlap": 25,
+            "no_overlapping_counterpart": 14,
+            "boundary_and_type_overlap": 4
+          },
+          "FP": {
+            "type_only_exact_span": 14,
+            "no_overlapping_counterpart": 9,
+            "boundary_same_type_overlap": 23,
+            "boundary_and_type_overlap": 5
+          }
+        },
+        "Drug_Category": {
+          "FN": {
+            "type_only_exact_span": 13,
+            "no_overlapping_counterpart": 10,
+            "boundary_same_type_overlap": 16,
+            "boundary_and_type_overlap": 15
+          },
+          "FP": {
+            "no_overlapping_counterpart": 11,
+            "type_only_exact_span": 13,
+            "boundary_same_type_overlap": 16,
+            "boundary_and_type_overlap": 7
+          }
+        },
+        "Medical_Examination": {
+          "FN": {
+            "no_overlapping_counterpart": 23,
+            "type_only_exact_span": 14,
+            "boundary_same_type_overlap": 40,
+            "boundary_and_type_overlap": 7
+          },
+          "FP": {
+            "no_overlapping_counterpart": 29,
+            "boundary_same_type_overlap": 39,
+            "type_only_exact_span": 4,
+            "boundary_and_type_overlap": 5
+          }
+        },
+        "Operation": {
+          "FN": {
+            "boundary_same_type_overlap": 28,
+            "boundary_and_type_overlap": 1,
+            "no_overlapping_counterpart": 9,
+            "type_only_exact_span": 4
+          },
+          "FP": {
+            "boundary_same_type_overlap": 28,
+            "no_overlapping_counterpart": 15,
+            "type_only_exact_span": 6,
+            "boundary_and_type_overlap": 1
+          }
+        }
+      },
+      "components_involving_type": {
+        "Symptom": {
+          "isolated_gold_miss": 189,
+          "one_to_one_same_type_boundary": 174,
+          "isolated_prediction_spurious": 193,
+          "one_to_one_boundary_and_type": 25,
+          "one_gold_to_many_predictions_split_candidate": 26,
+          "many_gold_to_one_prediction_merge_candidate": 15,
+          "one_to_one_type_only": 9
+        },
+        "Drug_Category": {
+          "one_to_one_type_only": 26,
+          "isolated_prediction_spurious": 11,
+          "isolated_gold_miss": 10,
+          "one_to_one_same_type_boundary": 13,
+          "one_to_one_boundary_and_type": 14,
+          "one_gold_to_many_predictions_split_candidate": 3,
+          "many_gold_to_one_prediction_merge_candidate": 6
+        },
+        "Drug": {
+          "one_to_one_type_only": 27,
+          "isolated_prediction_spurious": 9,
+          "one_to_one_same_type_boundary": 18,
+          "isolated_gold_miss": 14,
+          "one_to_one_boundary_and_type": 6,
+          "many_to_many_complex": 1,
+          "many_gold_to_one_prediction_merge_candidate": 6
+        },
+        "Operation": {
+          "one_to_one_same_type_boundary": 28,
+          "one_to_one_boundary_and_type": 2,
+          "isolated_prediction_spurious": 15,
+          "one_to_one_type_only": 10,
+          "isolated_gold_miss": 9
+        },
+        "Medical_Examination": {
+          "isolated_gold_miss": 23,
+          "isolated_prediction_spurious": 29,
+          "one_to_one_type_only": 18,
+          "one_to_one_same_type_boundary": 35,
+          "many_gold_to_one_prediction_merge_candidate": 3,
+          "one_to_one_boundary_and_type": 11,
+          "one_gold_to_many_predictions_split_candidate": 1
+        }
+      },
+      "zero_gold_sentences": {
+        "sentences": 5708,
+        "fp_sentences": 120,
+        "fp_entities": 125
+      }
+    }
+  },
+  "paired_prediction_analysis": {
+    "status": "PASS",
+    "unit_definitions": {
+      "sentence": "Exact equality of all strict entity sets; includes sentences with zero gold entities",
+      "gold_entity": "Fixed gold span/type recovered by neither/one/both models",
+      "spurious_prediction": "Exact non-gold span/type, persistent/removed/added across models",
+      "same_score": "Report both identical TP/FP/FN tuple and identical rational per-sentence F1; neither is an independent causal event"
+    },
+    "sentence_transitions": {
+      "both_correct": 8762,
+      "predictions_identical": 9348,
+      "both_wrong": 695,
+      "baseline_wrong_dropout02_correct": 119,
+      "predictions_different": 339,
+      "different_predictions_same_tp_fp_fn": 28,
+      "different_predictions_same_sentence_f1": 90,
+      "baseline_correct_dropout02_wrong": 111
+    },
+    "gold_entity_transitions": {
+      "both_correct": 5839,
+      "baseline_only_correct": 116,
+      "dropout02_only_correct": 100,
+      "both_missed": 546
+    },
+    "false_positive_transitions": {
+      "persistent": 540,
+      "removed": 184,
+      "added": 138
+    },
+    "gold_gains_by_type": {
+      "Symptom": 74,
+      "Drug": 8,
+      "Operation": 4,
+      "Medical_Examination": 12,
+      "Drug_Category": 2
+    },
+    "gold_losses_by_type": {
+      "Symptom": 71,
+      "Drug_Category": 8,
+      "Medical_Examination": 18,
+      "Drug": 8,
+      "Operation": 11
+    },
+    "gold_gains_by_length": {
+      "3-4": 29,
+      "2": 28,
+      "1": 12,
+      "9+": 6,
+      "5-8": 25
+    },
+    "gold_losses_by_length": {
+      "1": 12,
+      "3-4": 39,
+      "2": 38,
+      "9+": 4,
+      "5-8": 23
+    },
+    "gold_gains_by_old_fn_category": {
+      "no_overlapping_counterpart": 28,
+      "boundary_and_type_overlap": 6,
+      "type_only_exact_span": 2,
+      "boundary_same_type_overlap": 64
+    },
+    "gold_losses_by_new_fn_category": {
+      "no_overlapping_counterpart": 41,
+      "boundary_same_type_overlap": 60,
+      "type_only_exact_span": 8,
+      "boundary_and_type_overlap": 7
+    },
+    "fp_removed_by_old_category": {
+      "boundary_and_type_overlap": 9,
+      "no_overlapping_counterpart": 74,
+      "boundary_same_type_overlap": 94,
+      "type_only_exact_span": 7
+    },
+    "fp_added_by_new_category": {
+      "no_overlapping_counterpart": 39,
+      "boundary_same_type_overlap": 78,
+      "type_only_exact_span": 14,
+      "boundary_and_type_overlap": 7
+    },
+    "dialogue_cluster_bootstrap": {
+      "dialogues": 247,
+      "replicates": 10000,
+      "seed": 20261021,
+      "observational_unit": "whole dialogue; all its sentences kept together",
+      "delta_f1_pp_percentiles_2_5_50_97_5": [
+        -0.262796168755311,
+        0.18368554658859115,
+        0.6369897920132399
+      ],
+      "bootstrap_fraction_delta_positive": 0.7833,
+      "limitations": "Exploratory conditional on these trained/selected checkpoints and this internal val; not training-seed variability or independent confirmation after validation-based epoch selection; not a universal significance claim."
+    }
+  },
+  "nll_comparison": {
+    "baseline_e2_to_e5_rise": 0.20157708136107733,
+    "dropout02_e2_to_e5_rise": 0.20523229409041904,
+    "late_rise_reduced": false,
+    "selected_checkpoint_nll_not_same_epoch": true,
+    "validation_nll_independently_reinferred": false
+  },
+  "unavailable": {
+    "training_seed_variability": "Not measured: one seed42 training per dropout setting.",
+    "full_val_reinferred_nll": "Not performed; NLL cross-checked across original saved logs/history/metrics.",
+    "causal_semantic_error_attribution": "Aggregate geometric analysis cannot establish causes or annotation errors.",
+    "independent_official_test_performance": "No official dev/test tuning or predictions used."
+  },
+  "provenance": [
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/dropout02_audit_report.md",
+      "sha256": "053586f5cc0b99116bd03229294524571817ef54b861452d1fcb8df511b83b92"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/dropout02_audit_summary.json",
+      "sha256": "aab44edfd2ca352c9f45501c0aff4613c697802cea5cfbd3f2a0cbcbbc353fb9"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/independent_recalculation.json",
+      "sha256": "85d5e8f746e137579d90fcf52ced681584c52b3f1915019d26774444c68e01c6"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/record_cross_checks.json",
+      "sha256": "bd609b0bcca391b279661e9c1a1b5f290fef9a3c1603d61297f94fe8f1ec3771"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/config_diff.json",
+      "sha256": "588828211ebc509c8b18c6cbf69ee8fc41f55eeeb8f7c3fa4dea7bc95be1ec94"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/paired_prediction_analysis.json",
+      "sha256": "cc70d868f59c8b4722db99e09e7de70beab0a52bbf4856f6ec93d9daf9d9e4c0"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/supplementary_comparison.json",
+      "sha256": "bd79a3ed411ec3ff13f5e53b4cb3296160b000cd1c87cb32c3f399da29dabe72"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/baseline_vs_dropout02.csv",
+      "sha256": "5a83022d1713c9ba3f9e3e67535aa9ade63e27493d1ad9dfc5cb487f98949871"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/entity_comparison.csv",
+      "sha256": "a6482c1d4a75f7e7ccbe6a53d81c342f8af6fb156fd84656cb2f79d72dce218d"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/entity_length_comparison.csv",
+      "sha256": "6f59b0b4dbd7403dadfd26088788ab6ffc1c4afbd2b2597d6e4e02b689217554"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/error_comparison.csv",
+      "sha256": "a2b6c538aacd26a9558cf23c316cfd729bc93aa370638de6ebf01c8956455969"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/boundary_shape_comparison.csv",
+      "sha256": "e95fcb1eebcdc9124334fd6509db805a3598b927ff759e98fae15592e3b2be68"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/error_side_comparison.csv",
+      "sha256": "831aa4a4ecaa18a59c1ecdb0163470fa4aeca5263e63c549c17f37505084d212"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/report_quality_check.json",
+      "sha256": "63959441185bd0c8b2378d0a9faf866cb1c1f848605ce98f0a781f3d9a989a5c"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/loss_comparison.png",
+      "sha256": "46bac0be230f1fad3a1d454a644f855d65273bcc03b1370eaea93432dde0df1c"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/f1_comparison.png",
+      "sha256": "d62f3c58cf8493b48d29cd20867afba75a9f9f63e76e90dd0a26603037a2d58c"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/entity_f1_comparison.png",
+      "sha256": "739ee99b6c9bb4271529349474368f41787b60ae532edd43cde519c5f6deb417"
+    },
+    {
+      "local_evidence_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/error_comparison.png",
+      "sha256": "7f56435d05bbe27e0d73bc8b91f7851d9ecfd53a63b00c4fbd33308753039075"
+    }
+  ]
+}
