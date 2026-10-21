@@ -1,0 +1,974 @@
+{
+  "schema_version": "bert_crf_lr1e5_summary_v1",
+  "experiment": "Experiment3: baseline head dropout0.1, learning rate1e-5",
+  "run": {
+    "run_id": "20261021T195736+0800_real_training_95abb833",
+    "run_directory": "experiments/bert_crf/20261021T195736+0800_real_training_95abb833",
+    "config": "configs/bert_crf/lr_1e-5.json",
+    "config_sha256": "3dcb3e0942bdc74b0a8d9f7db3a0a1d44c4b0f36b9fb7b8da3ec16347f77aef0",
+    "formal_config_identity": "477e710e9e42d5e3c6b15e4ffa46a30884c0d954413f67c0f8d7ac27f8b9be09",
+    "run_config_sha256": "3253c334d6afecd85263eacbfc6949464fcade17b9a2770067b3d9285d873f75",
+    "training_commit": "f15da70b09dd0d7e1a3946f53bf346146ea5db2f",
+    "source_manifest_sha256": "9263f0d77330d6972411ac277be70e1c57683a431c09eb6255d422589afb2dc6",
+    "output_head_dropout": 0.1,
+    "learning_rate": 1e-05,
+    "best_checkpoint": {
+      "path": "experiments/bert_crf/20261021T195736+0800_real_training_95abb833/checkpoints/epoch_0005.pt",
+      "sha256": "e5ee6aaa8d4a00a4626553002aa9a63253a8ee0139463fec2bb41427bf391bed",
+      "bytes": 1220509451
+    },
+    "logical_status": "completed",
+    "completed_epochs": 5,
+    "retained_optimizer_updates": 27765,
+    "branch": "dxc",
+    "process_launcher_pid": 11192,
+    "observed_training_pid": 12100,
+    "launched_at": "2026-10-21T19:56:39.912306+08:00",
+    "run_created_at": "2026-10-21T19:57:36.873234+08:00",
+    "manifest_ended_at": "2026-10-21T21:32:27.735453+08:00",
+    "process_ended_at": "2026-10-21T21:32:29.200865+08:00",
+    "process_exit_code": 0,
+    "early_stopping_triggered": false,
+    "interruption_resume_retry": false,
+    "timing": {
+      "fit_seconds": 5689.893698500004,
+      "completed_epoch_seconds_sum": 5689.819530299632,
+      "launch_to_exit_seconds": 5749.288559
+    },
+    "training_config_was_untracked": true,
+    "command": ".venv-bert-crf/Scripts/pythonw.exe -u -X utf8 scripts/train_bert_crf.py --config configs/bert_crf/lr_1e-5.json --train --preflight-output .local/bert_crf/20261021T194908+0800_lr1e5_launch/preflight_training",
+    "cwd": "project root"
+  },
+  "configuration": {
+    "schema_version": "bert_crf_formal_v1",
+    "artifact_kind": "real_training",
+    "experiment_name": "first_baseline",
+    "executor": "dxc",
+    "model": {
+      "schema_version": "1.0",
+      "artifact_kind": "real_training",
+      "bert_model_name": "google-bert/bert-base-chinese",
+      "bert_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+      "hidden_size": 768,
+      "num_labels": 11,
+      "labels": [
+        "O",
+        "B-Symptom",
+        "I-Symptom",
+        "B-Drug",
+        "I-Drug",
+        "B-Drug_Category",
+        "I-Drug_Category",
+        "B-Medical_Examination",
+        "I-Medical_Examination",
+        "B-Operation",
+        "I-Operation"
+      ],
+      "dropout": 0.1,
+      "bio_constraints": true,
+      "constraint_rule_version": "strict_bio_v1",
+      "seed": 42,
+      "device": "cuda",
+      "precision": "float32",
+      "deterministic_algorithms": true
+    },
+    "training": {
+      "artifact_kind": "real_training",
+      "epochs": 5,
+      "batch_size": 16,
+      "learning_rate": 1e-05,
+      "weight_decay": 0.01,
+      "adam_betas": [
+        0.9,
+        0.999
+      ],
+      "adam_epsilon": 1e-08,
+      "scheduler": "linear",
+      "warmup_steps": 2777,
+      "gradient_clip_norm": 1.0,
+      "seed": 42,
+      "device": "cuda",
+      "precision": "float32",
+      "deterministic_algorithms": true,
+      "shuffle": true,
+      "selection_metric": "entity.micro.f1",
+      "selection_mode": "max",
+      "min_delta": 0.0,
+      "early_stopping_patience": 2,
+      "model_config_path": "inline:formal.model"
+    },
+    "inputs": {
+      "official_train": {
+        "path": ".local/bert_crf/20261019T162653+0800_stage1a/data/IMCS-V2_train.json",
+        "files": {
+          ".": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24"
+        }
+      },
+      "fixed_split": {
+        "path": ".local/bert_crf/20261020T161159+0800_interface_v2_audit/interface/code/artifacts/split_v1.json",
+        "files": {
+          ".": "497f21cf13d8f5accb83f86ffda16a4a59ba716c064ec347e990a219e8957072"
+        }
+      },
+      "interface": {
+        "path": ".local/bert_crf/20261020T161159+0800_interface_v2_audit/interface/code/src",
+        "files": {
+          "__init__.py": "8b084a9f378124b2b1a51563bf3c22444eb7ff33692017da28b2136ae56987ed",
+          "align.py": "40d63734e9b0eb7da4c6a33c5fb835d35d73442382ac35257c828a7ba7e6ca3e",
+          "config.py": "fbc669c1c807e31ba4ca570a15a3d408c60e48299e61f633a9ef833f94f9c4e3",
+          "data_io.py": "1b2d60df7551f31db7b3987df5c3b5b645659387831c48c2d3de703d068152ef",
+          "dataset.py": "9daae661ad7f8d8752561223c31ed956f1eb4c75c658cbc95c90ca5b16e31349",
+          "labels.py": "bfe9c11aa337c9c4fb7a8157047d1921418b307bae9dceb0f7191e290d3a882c",
+          "metrics.py": "6a74810fb76e187f7aeedfb26e70837b6d2f9815fd38d7ac5c28b8553173f0da",
+          "model.py": "4a2a5d4298a3e70083f2488cae62f1457e5e83654c2d1d8189d83cd209dac480",
+          "split.py": "b666ed7483688630e462ee1f7f43a5855cadb8412a44a67b5d91aad4314c07b5"
+        }
+      },
+      "tokenizer": {
+        "path": ".local/bert_crf/20261019T162653+0800_stage1a/tokenizer",
+        "files": {
+          "config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+          "tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+          "tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+          "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+        }
+      },
+      "pretrained": {
+        "path": ".local/bert_crf/20261019T174356+0800_stage1b/pretrained",
+        "files": {
+          "config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+          "model.safetensors": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3",
+          "README.md": "80efb5c88f6c09c0f4b2f91380852a374f023e195954f21ff7221928487ce454",
+          "tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+          "tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+          "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+        }
+      }
+    },
+    "data": {
+      "version": "IMCS-V2-NER_train_sha256_07cdd379",
+      "split_version": "split_v1_sha256_497f21cf",
+      "source": "official_train_only",
+      "train_split": "train",
+      "validation_split": "val",
+      "expected_dialogues": {
+        "train": 2225,
+        "val": 247
+      },
+      "expected_sentences": {
+        "train": 88842,
+        "val": 9687
+      },
+      "expected_characters": {
+        "train": 1153312,
+        "val": 126049
+      }
+    },
+    "alignment": {
+      "policy": "offset_share_unique_v1",
+      "offset_unit": "python_unicode_codepoint",
+      "gold": "original_character_bio",
+      "uncovered": "reject",
+      "overlap": "reject",
+      "truncation": "reject"
+    },
+    "resources": {
+      "max_tokens": 256,
+      "padding": "dynamic_longest",
+      "num_workers": 0,
+      "gradient_accumulation_steps": 1,
+      "amp": false,
+      "adam_foreach": false,
+      "optimizer_state_reserve_multiplier": 3,
+      "minimum_free_bytes": 1073741824,
+      "minimum_disk_free_bytes": 17179869184,
+      "measurement_file": "docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/resource_measurements.json",
+      "measurement_sha256": "a51cec631245624cd95796592882b9ea20f25927cd07b4d6b0c845cdda30fd35"
+    },
+    "outputs": {
+      "root": "experiments/bert_crf",
+      "checkpoints": "checkpoints",
+      "logs": ".",
+      "results": "."
+    },
+    "formats": {
+      "history": "bert_crf_history_v1",
+      "predictions": "character_internal_jsonl_v1",
+      "run_info": "bert_crf_internal_run_v1",
+      "future_handoff": "1.0"
+    },
+    "warmup_ratio": 0.1
+  },
+  "single_factor_verification": {
+    "status": "PASS",
+    "single_factor_control_valid": true,
+    "differences": [
+      {
+        "field": "training.learning_rate",
+        "baseline": 2e-05,
+        "lr1e5": 1e-05
+      }
+    ],
+    "nonresearch_config_differences": [],
+    "source_differences": [],
+    "baseline_source_files_checked": 36,
+    "production_commit_diff": "",
+    "extra_snapshot_files": [
+      "configs/bert_crf/dropout_02.json",
+      "configs/bert_crf/lr_1e-5.json"
+    ],
+    "actual_optimizer_constructor": "torch.optim.AdamW(model.parameters(), lr=config.learning_rate, betas=config.adam_betas, eps=config.adam_epsilon, weight_decay=config.weight_decay, foreach=False)",
+    "parameter_groups": 1,
+    "all_modules_base_learning_rate": {
+      "bert": 1e-05,
+      "linear": 1e-05,
+      "crf": 1e-05
+    },
+    "warmup_initial_effective_lr": 0.0,
+    "planned_steps": 27765,
+    "warmup_steps": 2777,
+    "warmup_ratio": 0.1,
+    "head_dropout": 0.1,
+    "bert_hidden_dropout": 0.1,
+    "bert_attention_dropout": 0.1,
+    "fresh_pretrained_initialization": true,
+    "no_resume": true,
+    "same_initial_parameter_hash": true,
+    "baseline_commit": "a955f56855f72c944010b93c9965c01187c15b4d",
+    "third_commit": "f15da70b09dd0d7e1a3946f53bf346146ea5db2f",
+    "limits": [
+      "Single training seed42; fixed internal-val selects each best epoch",
+      "Exp2 vs Exp3 changes both dropout and learning rate; scheme comparison only"
+    ]
+  },
+  "best": {
+    "epoch": 5,
+    "model": "lr1e5",
+    "micro": {
+      "tp": 5974,
+      "fp": 702,
+      "fn": 627,
+      "predicted": 6676,
+      "gold": 6601,
+      "precision": 0.8948472139005392,
+      "recall": 0.9050143917588244,
+      "f1": 0.8999020863146795
+    },
+    "per_type": {
+      "Symptom": {
+        "tp": 4036,
+        "fp": 477,
+        "fn": 411,
+        "predicted": 4513,
+        "gold": 4447,
+        "precision": 0.8943053401285176,
+        "recall": 0.9075781425680234,
+        "f1": 0.900892857142857
+      },
+      "Drug": {
+        "tp": 667,
+        "fp": 53,
+        "fn": 58,
+        "predicted": 720,
+        "gold": 725,
+        "precision": 0.9263888888888889,
+        "recall": 0.92,
+        "f1": 0.9231833910034603
+      },
+      "Drug_Category": {
+        "tp": 442,
+        "fp": 45,
+        "fn": 48,
+        "predicted": 487,
+        "gold": 490,
+        "precision": 0.9075975359342916,
+        "recall": 0.9020408163265307,
+        "f1": 0.9048106448311156
+      },
+      "Medical_Examination": {
+        "tp": 536,
+        "fp": 87,
+        "fn": 79,
+        "predicted": 623,
+        "gold": 615,
+        "precision": 0.8603531300160514,
+        "recall": 0.8715447154471545,
+        "f1": 0.8659127625201939
+      },
+      "Operation": {
+        "tp": 293,
+        "fp": 40,
+        "fn": 31,
+        "predicted": 333,
+        "gold": 324,
+        "precision": 0.8798798798798799,
+        "recall": 0.904320987654321,
+        "f1": 0.8919330289193304
+      }
+    },
+    "macro_f1": 0.8973465368833914,
+    "sentences": 9687,
+    "characters": 126049,
+    "saved_metrics_match": true,
+    "saved_errors_match": true,
+    "predictions_sha256": "1e93bd9204e5434b2787d557ef7baebc7662218ba2dd3bc8a6328e30dd5b9afa",
+    "error_sentences": 787,
+    "validation_nll": 0.495046121928669
+  },
+  "comparisons": {
+    "lr1e5_minus_baseline": {
+      "micro": {
+        "tp": 19,
+        "fp": -22,
+        "fn": -19,
+        "predicted": -3,
+        "gold": 0,
+        "precision": 0.3246674897694479,
+        "recall": 0.2878351764884046,
+        "f1": 0.30647369170891947
+      },
+      "macro_f1_pp": 0.15732104944738978,
+      "selected_epoch_delta": 0,
+      "selected_checkpoint_val_nll_delta": -0.10576576712553104,
+      "single_factor": true
+    },
+    "lr1e5_minus_dropout02": {
+      "micro": {
+        "tp": 35,
+        "fp": 24,
+        "fn": -35,
+        "predicted": 59,
+        "gold": 0,
+        "precision": -0.26894341272679645,
+        "recall": 0.5302226935312793,
+        "f1": 0.12789965885485755
+      },
+      "macro_f1_pp": 0.7000551252031251,
+      "selected_epoch_delta": 2,
+      "selected_checkpoint_val_nll_delta": 0.062373384228798234,
+      "single_factor": false
+    }
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 1.4349924662670792,
+      "val_loss": 0.3930747210456452,
+      "val_char_precision": 0.9065038624470471,
+      "val_char_recall": 0.9043854415274463,
+      "val_char_f1": 0.9054434128979267,
+      "val_entity_precision": 0.8948406676783005,
+      "val_entity_recall": 0.8933494925011362,
+      "val_entity_f1": 0.8940944583428095,
+      "learning_rate": 8.88906675204098e-06,
+      "epoch_elapsed_seconds": 1215.8110861999448,
+      "global_step": 5553,
+      "selected_best": false,
+      "entity_metrics": {
+        "tp": 5897,
+        "fp": 693,
+        "fn": 704,
+        "predicted": 6590,
+        "gold": 6601,
+        "precision": 0.8948406676783005,
+        "recall": 0.8933494925011362,
+        "f1": 0.8940944583428095
+      },
+      "entity_macro_f1": 0.8908569386941165,
+      "entity_per_type": {
+        "Symptom": {
+          "tp": 3978,
+          "fp": 468,
+          "fn": 469,
+          "predicted": 4446,
+          "gold": 4447,
+          "precision": 0.8947368421052632,
+          "recall": 0.8945356420058467,
+          "f1": 0.8946362307432812
+        },
+        "Drug": {
+          "tp": 670,
+          "fp": 58,
+          "fn": 55,
+          "predicted": 728,
+          "gold": 725,
+          "precision": 0.9203296703296703,
+          "recall": 0.9241379310344827,
+          "f1": 0.9222298692360632
+        },
+        "Drug_Category": {
+          "tp": 426,
+          "fp": 50,
+          "fn": 64,
+          "predicted": 476,
+          "gold": 490,
+          "precision": 0.8949579831932774,
+          "recall": 0.8693877551020408,
+          "f1": 0.8819875776397516
+        },
+        "Medical_Examination": {
+          "tp": 531,
+          "fp": 72,
+          "fn": 84,
+          "predicted": 603,
+          "gold": 615,
+          "precision": 0.8805970149253731,
+          "recall": 0.8634146341463415,
+          "f1": 0.8719211822660099
+        },
+        "Operation": {
+          "tp": 292,
+          "fp": 45,
+          "fn": 32,
+          "predicted": 337,
+          "gold": 324,
+          "precision": 0.8664688427299704,
+          "recall": 0.9012345679012346,
+          "f1": 0.8835098335854765
+        }
+      },
+      "improved_over_prior_epochs": true
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.35391908643864056,
+      "val_loss": 0.39035617141048273,
+      "val_char_precision": 0.9093616598828551,
+      "val_char_recall": 0.9108989657915673,
+      "val_char_f1": 0.9101296636693329,
+      "val_entity_precision": 0.897156684815487,
+      "val_entity_recall": 0.8986517194364491,
+      "val_entity_f1": 0.8979035798077651,
+      "learning_rate": 6.666800064030735e-06,
+      "epoch_elapsed_seconds": 1175.8233819999732,
+      "global_step": 11106,
+      "selected_best": false,
+      "entity_metrics": {
+        "tp": 5932,
+        "fp": 680,
+        "fn": 669,
+        "predicted": 6612,
+        "gold": 6601,
+        "precision": 0.897156684815487,
+        "recall": 0.8986517194364491,
+        "f1": 0.8979035798077651
+      },
+      "entity_macro_f1": 0.8963477399919292,
+      "entity_per_type": {
+        "Symptom": {
+          "tp": 3991,
+          "fp": 449,
+          "fn": 456,
+          "predicted": 4440,
+          "gold": 4447,
+          "precision": 0.8988738738738739,
+          "recall": 0.897458961097369,
+          "f1": 0.8981658602453022
+        },
+        "Drug": {
+          "tp": 677,
+          "fp": 68,
+          "fn": 48,
+          "predicted": 745,
+          "gold": 725,
+          "precision": 0.9087248322147651,
+          "recall": 0.9337931034482758,
+          "f1": 0.9210884353741496
+        },
+        "Drug_Category": {
+          "tp": 442,
+          "fp": 38,
+          "fn": 48,
+          "predicted": 480,
+          "gold": 490,
+          "precision": 0.9208333333333333,
+          "recall": 0.9020408163265307,
+          "f1": 0.911340206185567
+        },
+        "Medical_Examination": {
+          "tp": 532,
+          "fp": 86,
+          "fn": 83,
+          "predicted": 618,
+          "gold": 615,
+          "precision": 0.86084142394822,
+          "recall": 0.865040650406504,
+          "f1": 0.8629359286293593
+        },
+        "Operation": {
+          "tp": 290,
+          "fp": 39,
+          "fn": 34,
+          "predicted": 329,
+          "gold": 324,
+          "precision": 0.8814589665653495,
+          "recall": 0.8950617283950617,
+          "f1": 0.888208269525268
+        }
+      },
+      "improved_over_prior_epochs": true
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.2734714044747844,
+      "val_loss": 0.4127904439447489,
+      "val_char_precision": 0.9078765772870663,
+      "val_char_recall": 0.915821400159109,
+      "val_char_f1": 0.9118316831683169,
+      "val_entity_precision": 0.8976912630149388,
+      "val_entity_recall": 0.9012270868050295,
+      "val_entity_f1": 0.8994557000302389,
+      "learning_rate": 4.44453337602049e-06,
+      "epoch_elapsed_seconds": 1094.0506448999513,
+      "global_step": 16659,
+      "selected_best": false,
+      "entity_metrics": {
+        "tp": 5949,
+        "fp": 678,
+        "fn": 652,
+        "predicted": 6627,
+        "gold": 6601,
+        "precision": 0.8976912630149388,
+        "recall": 0.9012270868050295,
+        "f1": 0.8994557000302389
+      },
+      "entity_macro_f1": 0.8938200917531762,
+      "entity_per_type": {
+        "Symptom": {
+          "tp": 4019,
+          "fp": 447,
+          "fn": 428,
+          "predicted": 4466,
+          "gold": 4447,
+          "precision": 0.899910434393193,
+          "recall": 0.9037553406791096,
+          "f1": 0.9018287894087289
+        },
+        "Drug": {
+          "tp": 664,
+          "fp": 58,
+          "fn": 61,
+          "predicted": 722,
+          "gold": 725,
+          "precision": 0.9196675900277008,
+          "recall": 0.9158620689655173,
+          "f1": 0.9177608845888044
+        },
+        "Drug_Category": {
+          "tp": 442,
+          "fp": 47,
+          "fn": 48,
+          "predicted": 489,
+          "gold": 490,
+          "precision": 0.9038854805725971,
+          "recall": 0.9020408163265307,
+          "f1": 0.9029622063329927
+        },
+        "Medical_Examination": {
+          "tp": 534,
+          "fp": 78,
+          "fn": 81,
+          "predicted": 612,
+          "gold": 615,
+          "precision": 0.8725490196078431,
+          "recall": 0.8682926829268293,
+          "f1": 0.8704156479217605
+        },
+        "Operation": {
+          "tp": 290,
+          "fp": 48,
+          "fn": 34,
+          "predicted": 338,
+          "gold": 324,
+          "precision": 0.8579881656804734,
+          "recall": 0.8950617283950617,
+          "f1": 0.8761329305135952
+        }
+      },
+      "improved_over_prior_epochs": true
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.21971749304768093,
+      "val_loss": 0.44932269514733036,
+      "val_char_precision": 0.8897803247373448,
+      "val_char_recall": 0.926412092283214,
+      "val_char_f1": 0.9077267855402903,
+      "val_entity_precision": 0.8890211246652782,
+      "val_entity_recall": 0.905317376155128,
+      "val_entity_f1": 0.8970952488178338,
+      "learning_rate": 2.222266688010245e-06,
+      "epoch_elapsed_seconds": 1096.2079315998126,
+      "global_step": 22212,
+      "selected_best": false,
+      "entity_metrics": {
+        "tp": 5976,
+        "fp": 746,
+        "fn": 625,
+        "predicted": 6722,
+        "gold": 6601,
+        "precision": 0.8890211246652782,
+        "recall": 0.905317376155128,
+        "f1": 0.8970952488178338
+      },
+      "entity_macro_f1": 0.89355944327664,
+      "entity_per_type": {
+        "Symptom": {
+          "tp": 4035,
+          "fp": 510,
+          "fn": 412,
+          "predicted": 4545,
+          "gold": 4447,
+          "precision": 0.8877887788778878,
+          "recall": 0.9073532718686755,
+          "f1": 0.8974644128113879
+        },
+        "Drug": {
+          "tp": 665,
+          "fp": 52,
+          "fn": 60,
+          "predicted": 717,
+          "gold": 725,
+          "precision": 0.9274755927475593,
+          "recall": 0.9172413793103448,
+          "f1": 0.9223300970873787
+        },
+        "Drug_Category": {
+          "tp": 442,
+          "fp": 53,
+          "fn": 48,
+          "predicted": 495,
+          "gold": 490,
+          "precision": 0.8929292929292929,
+          "recall": 0.9020408163265307,
+          "f1": 0.89746192893401
+        },
+        "Medical_Examination": {
+          "tp": 546,
+          "fp": 83,
+          "fn": 69,
+          "predicted": 629,
+          "gold": 615,
+          "precision": 0.8680445151033387,
+          "recall": 0.8878048780487805,
+          "f1": 0.8778135048231511
+        },
+        "Operation": {
+          "tp": 288,
+          "fp": 48,
+          "fn": 36,
+          "predicted": 336,
+          "gold": 324,
+          "precision": 0.8571428571428571,
+          "recall": 0.8888888888888888,
+          "f1": 0.8727272727272727
+        }
+      },
+      "improved_over_prior_epochs": false
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.1788142180148148,
+      "val_loss": 0.495046121928669,
+      "val_char_precision": 0.9042121226945844,
+      "val_char_recall": 0.9190035799522673,
+      "val_char_f1": 0.9115478509604715,
+      "val_entity_precision": 0.8948472139005392,
+      "val_entity_recall": 0.9050143917588244,
+      "val_entity_f1": 0.8999020863146795,
+      "learning_rate": 0.0,
+      "epoch_elapsed_seconds": 1107.92648559995,
+      "global_step": 27765,
+      "selected_best": true,
+      "entity_metrics": {
+        "tp": 5974,
+        "fp": 702,
+        "fn": 627,
+        "predicted": 6676,
+        "gold": 6601,
+        "precision": 0.8948472139005392,
+        "recall": 0.9050143917588244,
+        "f1": 0.8999020863146795
+      },
+      "entity_macro_f1": 0.8973465368833914,
+      "entity_per_type": {
+        "Symptom": {
+          "tp": 4036,
+          "fp": 477,
+          "fn": 411,
+          "predicted": 4513,
+          "gold": 4447,
+          "precision": 0.8943053401285176,
+          "recall": 0.9075781425680234,
+          "f1": 0.900892857142857
+        },
+        "Drug": {
+          "tp": 667,
+          "fp": 53,
+          "fn": 58,
+          "predicted": 720,
+          "gold": 725,
+          "precision": 0.9263888888888889,
+          "recall": 0.92,
+          "f1": 0.9231833910034603
+        },
+        "Drug_Category": {
+          "tp": 442,
+          "fp": 45,
+          "fn": 48,
+          "predicted": 487,
+          "gold": 490,
+          "precision": 0.9075975359342916,
+          "recall": 0.9020408163265307,
+          "f1": 0.9048106448311156
+        },
+        "Medical_Examination": {
+          "tp": 536,
+          "fp": 87,
+          "fn": 79,
+          "predicted": 623,
+          "gold": 615,
+          "precision": 0.8603531300160514,
+          "recall": 0.8715447154471545,
+          "f1": 0.8659127625201939
+        },
+        "Operation": {
+          "tp": 293,
+          "fp": 40,
+          "fn": 31,
+          "predicted": 333,
+          "gold": 324,
+          "precision": 0.8798798798798799,
+          "recall": 0.904320987654321,
+          "f1": 0.8919330289193304
+        }
+      },
+      "improved_over_prior_epochs": true
+    }
+  ],
+  "environment": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.14.1+cu132",
+      "transformers": "5.20.1",
+      "tokenizers": "0.23.3",
+      "numpy": "2.4.6",
+      "pytest": "9.1.1"
+    },
+    "cuda_runtime": "13.2",
+    "cuda_available": true,
+    "cublas_workspace_config": ":4096:8",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "capability": [
+      12,
+      0
+    ]
+  },
+  "verification": {
+    "status": "PASS",
+    "all_five_epoch_predictions_independently_recomputed": true,
+    "val_sentences": 9687,
+    "val_gold_entities": 6601,
+    "saved_errors_match": true,
+    "all_five_checkpoints_loaded": true,
+    "sample_inference_sentences": 47,
+    "sample_predictions_match": true,
+    "gold_removed_predictions_identical": true,
+    "optimizer_created_during_audit": false,
+    "optimizer_updates_during_audit": 0,
+    "model_parameters_unchanged_during_inference": true,
+    "original_files_rehashed_unchanged": 380,
+    "preflight_passed_twice": true,
+    "preflight_optimizer_updates": 0,
+    "baseline_resource_evidence_reused_legally": true,
+    "adamw_parameter_groups": 1,
+    "base_lr_all_modules": 1e-05,
+    "warmup_steps": 2777,
+    "planned_total_updates": 27765
+  },
+  "bootstrap": {
+    "dialogues": 247,
+    "replicates": 10000,
+    "seed": 20261021,
+    "observational_unit": "whole dialogue; all its sentences kept together",
+    "delta_f1_pp_percentiles_2_5_50_97_5": [
+      -0.060109285226026814,
+      0.30475489806425227,
+      0.674378397336042
+    ],
+    "bootstrap_fraction_delta_positive": 0.9518,
+    "limitations": "Exploratory conditional on these trained/selected checkpoints and this internal val; not training-seed variability or independent confirmation after validation-based epoch selection; not a universal significance claim."
+  },
+  "nll_comparison": {
+    "baseline": {
+      "minimum_epoch": 2,
+      "minimum": 0.3992348076931227,
+      "e2_to_e5_rise": 0.20157708136107733,
+      "selected_checkpoint_nll": 0.6008118890542
+    },
+    "dropout02": {
+      "minimum_epoch": 2,
+      "minimum": 0.38960289830847444,
+      "e2_to_e5_rise": 0.20523229409041904,
+      "selected_checkpoint_nll": 0.43267273769987075
+    },
+    "lr1e5": {
+      "minimum_epoch": 2,
+      "minimum": 0.39035617141048273,
+      "e2_to_e5_rise": 0.10468995051818625,
+      "selected_checkpoint_nll": 0.495046121928669
+    },
+    "same_epoch_lr1e5_minus_baseline": [
+      {
+        "epoch": 1,
+        "val_nll_delta": -0.013335071980208668
+      },
+      {
+        "epoch": 2,
+        "val_nll_delta": -0.008878636282639962
+      },
+      {
+        "epoch": 3,
+        "val_nll_delta": -0.021437393655419634
+      },
+      {
+        "epoch": 4,
+        "val_nll_delta": -0.050317434133901995
+      },
+      {
+        "epoch": 5,
+        "val_nll_delta": -0.10576576712553104
+      }
+    ]
+  },
+  "limitations": [
+    "One training seed42 per setting; Bootstrap samples dialogues, not training seeds.",
+    "All best checkpoints selected on the same internal val; exploratory interval is conditional on that selection.",
+    "No official dev/test prediction or independent external generalization assessment.",
+    "Validation NLL crosschecked saved records only, not full-val reinference; sampled inference checks decode consistency.",
+    "Error split/merge components are geometric candidates, not confirmed semantic error causes.",
+    "Sparse length groups require caution; zero-support F1=0 is a convention, not evidence of failure.",
+    "Exp2 versus Exp3 changes both research parameters and is not a causal single-factor comparison.",
+    "Baseline interrupted/resumed timing and discarded updates prevent a clean physical speed comparison."
+  ],
+  "conclusions": {
+    "current_internal_micro_and_macro_best_candidate": "lr1e5 epoch5",
+    "precision_best_candidate": "dropout02 epoch3",
+    "recall_best_candidate": "lr1e5 epoch5",
+    "learning_rate_change_observed_effect": "Micro and macro higher; P/R both higher; validation NLL rise reduced but not removed; medical examination and Drug regress.",
+    "stable_improvement_proven": false,
+    "recommended_next_action": "Freeze three audited candidates; use LR1e-5/E5 as provisional primary. If budget permits, prioritize paired multi-seed baseline vs LR comparison; do not assume a combined LR/dropout benefit."
+  },
+  "local_evidence": {
+    "audit_directory": "docs/bert_crf/evidence/20261021T214932+0800_lr1e5_result_audit",
+    "archive_directory": "docs/bert_crf/evidence/20261021T214932+0800_lr1e5_github_archive",
+    "training_directory": "experiments/bert_crf/20261021T195736+0800_real_training_95abb833"
+  },
+  "links": {
+    "report": "lr1e5_vs_previous.md",
+    "comparison_data": "../analysis/three_experiments_comparison.json"
+  },
+  "provenance": [
+    {
+      "local_project_relative_path": "configs/bert_crf/lr_1e-5.json",
+      "sha256": "3dcb3e0942bdc74b0a8d9f7db3a0a1d44c4b0f36b9fb7b8da3ec16347f77aef0",
+      "bytes": 5751
+    },
+    {
+      "local_project_relative_path": "experiments/bert_crf/20261021T195736+0800_real_training_95abb833/config.json",
+      "sha256": "3253c334d6afecd85263eacbfc6949464fcade17b9a2770067b3d9285d873f75",
+      "bytes": 7462
+    },
+    {
+      "local_project_relative_path": "experiments/bert_crf/20261021T195736+0800_real_training_95abb833/history.csv",
+      "sha256": "70731abe42417fb71cb5687d058845dc83a15e6f1799bda9b8fd1a5a9149d7d6",
+      "bytes": 1161
+    },
+    {
+      "local_project_relative_path": "experiments/bert_crf/20261021T195736+0800_real_training_95abb833/metrics.json",
+      "sha256": "07f5f526058e9c5aeb112d43ace792bb4844fcffea8286f33522cdd681ded901",
+      "bytes": 4005
+    },
+    {
+      "local_project_relative_path": "experiments/bert_crf/20261021T195736+0800_real_training_95abb833/predictions.jsonl",
+      "sha256": "1e93bd9204e5434b2787d557ef7baebc7662218ba2dd3bc8a6328e30dd5b9afa",
+      "bytes": 2209790
+    },
+    {
+      "local_project_relative_path": "experiments/bert_crf/20261021T195736+0800_real_training_95abb833/errors.jsonl",
+      "sha256": "ae4480417327f2435333c2d13aa779018a7a8a6f3515e6ec4a8fb17ae77edc0f",
+      "bytes": 168100
+    },
+    {
+      "local_project_relative_path": "experiments/bert_crf/20261021T195736+0800_real_training_95abb833/run_manifest.json",
+      "sha256": "af9ee5feb4f6b0d13d44c352ccdfb279416698f829fdf2458ec35c0402b93ff2",
+      "bytes": 18027
+    },
+    {
+      "local_project_relative_path": "experiments/bert_crf/20261021T195736+0800_real_training_95abb833/source_manifest.json",
+      "sha256": "9263f0d77330d6972411ac277be70e1c57683a431c09eb6255d422589afb2dc6",
+      "bytes": 3989
+    },
+    {
+      "local_project_relative_path": ".local/bert_crf/20261021T194908+0800_lr1e5_launch/training.finished.json",
+      "sha256": "b05477cf6cbeb320423d624b3c9e76478e62cc76970d918ef2039d1cdaf628eb",
+      "bytes": 1382
+    },
+    {
+      "local_project_relative_path": ".local/bert_crf/20261021T194908+0800_lr1e5_launch/preflight_training/preflight.json",
+      "sha256": "058ab995996b9708374f9ed2d1ebacfbbd05a728be71a268ce42dc2052ad7503",
+      "bytes": 1919
+    },
+    {
+      "local_project_relative_path": ".local/bert_crf/20261021T194908+0800_lr1e5_launch/preflight_gate/real_probes.json",
+      "sha256": "9169ed1171417547628d750c0b53fa82a9d1f2e8e3d2e06ba9d044562fa92d05",
+      "bytes": 3044
+    },
+    {
+      "local_project_relative_path": "docs/bert_crf/analysis/dropout02_comparison_data.json",
+      "sha256": "220184a51042275b06d75086290b3dcc285dda788e97a96c7af143414b09ac5c",
+      "bytes": 98539
+    },
+    {
+      "local_project_relative_path": "docs/bert_crf/experiments/baseline_run1_summary.json",
+      "sha256": "b73cd2d5d888a483600ceda1b69eeaeb84ab67a831c82e09f417a17174616ce5",
+      "bytes": 14803
+    },
+    {
+      "local_project_relative_path": "docs/bert_crf/evidence/20261021T214932+0800_lr1e5_result_audit/record_cross_checks.json",
+      "sha256": "84875317fd96cd3889414937599efdbe42bd3a6851a20756a7ef427108840f31",
+      "bytes": 12633
+    },
+    {
+      "local_project_relative_path": "docs/bert_crf/evidence/20261021T214932+0800_lr1e5_result_audit/prediction_recomputation.json",
+      "sha256": "0895f831d3d1756befe307d925eba16138b85a31476ffa22f0e595e0d62c9578",
+      "bytes": 52816
+    },
+    {
+      "local_project_relative_path": "docs/bert_crf/evidence/20261021T214932+0800_lr1e5_result_audit/paired_prediction_analysis.json",
+      "sha256": "8a645f1d3edf464376e7c98d868eddd458693ead9e8ffe6a35fe2d74d9c5d90f",
+      "bytes": 2951
+    },
+    {
+      "local_project_relative_path": "docs/bert_crf/evidence/20261021T214932+0800_lr1e5_result_audit/checkpoint_verification.json",
+      "sha256": "1d657ec890c641473e3e0987c265912b3b50d3f22b094492a549886d629f0ea6",
+      "bytes": 12015
+    },
+    {
+      "local_project_relative_path": "docs/bert_crf/evidence/20261021T214932+0800_lr1e5_result_audit/original_artifact_integrity.json",
+      "sha256": "ae4c96e0d8cea77d9b754c0859076e5de79f9cc7a68a50bd732653c8db0ec6d8",
+      "bytes": 180
+    },
+    {
+      "local_project_relative_path": "docs/bert_crf/evidence/20261021T214932+0800_lr1e5_result_audit/audit.py",
+      "sha256": "0e0ec128b35be1d8fc82be6668f560f622e52c0e43f3084e7c0b9e83fc78a383",
+      "bytes": 21187
+    },
+    {
+      "local_project_relative_path": "docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/audit.py",
+      "sha256": "1ec27cd9a78d62c296a3de9001c30b73a5bdecb8f1267c67a3165b46c948aa8b",
+      "bytes": 41365
+    }
+  ]
+}

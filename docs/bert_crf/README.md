@@ -26,3 +26,21 @@ Baseline归档时记录的计划（历史内容，第二轮现已完成）：
 - 当前观察：MicroF1提高0.1786pp，主要来自FP减少；Recall及三类实体F1下降，后期验证NLL上升未解决。保留0.2/E3作为候选，同时保留Baseline，不宣称稳定普遍最优。
 - 第二轮完整审计本地位置：`docs/bert_crf/evidence/20261021T155410+0800_dropout02_result_audit/`；完整训练与敏感证据继续本地受控保存。
 - 当前建议：先人工复核Operation新增过长边界与Medical漏识别/错类；之后视目标考虑固定其他条件的学习率2e-5→1e-5，或配对多seed验证Dropout稳定性。本次只整理、提交和同步成果，不执行训练。
+
+
+## 第三轮已审计：学习率 1e-5，以及三轮总结
+
+本节更新当前候选建议，前文前两轮的记录与当时结论作为历史保留。
+
+| 实验 | LR | 输出头Dropout | 最佳Epoch | Precision | Recall | Micro F1 | Macro F1 | 相对Baseline F1 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Experiment 3：学习率对照 | 1e-5 | 0.1 | 5 | 89.4847% | 90.5014% | **89.9902%** | 89.7347% | **+0.3065 pp** |
+
+- [完整第三轮审计与三轮对照报告](experiments/lr1e5_vs_previous.md) · [第三轮结构化摘要](experiments/lr1e5_summary.json) · [三轮完整聚合数值数据](analysis/three_experiments_comparison.json) · [实际正式配置](../../configs/bert_crf/lr_1e-5.json)。
+- [三轮Train/Val NLL](figures/three_runs_loss_comparison.png) · [Micro F1与P/R](figures/three_runs_f1_comparison.png) · [五类实体F1](figures/three_runs_entity_f1_comparison.png) · [全部错误分量](figures/three_runs_error_comparison.png)。
+- 第三轮正式run：`20261021T195736+0800_real_training_95abb833`；正常完成5轮，27765次更新，fit5689.894秒，无恢复或重启。最佳Checkpoint SHA-256：`e5ee6aaa8d4a00a4626553002aa9a63253a8ee0139463fec2bb41427bf391bed`。
+- 单变量核验通过：相对Baseline只将统一BERT/Linear/CRF学习率2e-5→1e-5，输出头及BERT内部Dropout仍0.1；数据、映射、CRF、Scheduler、Warmup及选模规则保持一致。
+- 当前内部Micro/Macro/Recall最高候选为**LR1e-5/E5**；Precision最高仍是Dropout0.2/E3。第三轮P/R同时提高，FP-22、FN-19，但Drug与Medical_Examination退化。Val NLL后期上升缓解而未消失。
+- 对话级10000次Bootstrap（seed20261021）的第三轮−Baseline Delta F1探索性95%区间为[-0.0601,+0.6744] pp，跨零。单seed、同一内部val选模，不证明稳定最优；第二轮与第三轮不是单变量对照。
+- 建议先冻结三份已审计候选并准备小组交接；有预算时优先配对多seed验证Baseline与LR1e-5，而非立即开展广泛调参或默认组合Dropout0.2更好。本轮没有执行新训练或官方dev/test预测。
+- 完整本地审计：`docs/bert_crf/evidence/20261021T214932+0800_lr1e5_result_audit/`；归档过程：`docs/bert_crf/evidence/20261021T214932+0800_lr1e5_github_archive/`；原始训练：`experiments/bert_crf/20261021T195736+0800_real_training_95abb833/`。这些被忽略目录仅为本地索引，不是GitHub下载链接。原始数据、逐句预测、Checkpoint、恢复状态和敏感日志继续本地受控保存。
