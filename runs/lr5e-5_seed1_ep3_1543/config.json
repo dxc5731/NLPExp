@@ -1,0 +1,54 @@
+{
+  "config": {
+    "lr": 5e-05,
+    "batch_size": 32,
+    "epochs": 3,
+    "warmup_ratio": 0.1,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "dropout": 0.1,
+    "seed": 1,
+    "max_len": 256
+  },
+  "run_id": "lr5e-5_seed1_ep3_1543",
+  "train_sentences": 88842,
+  "val_sentences": 9687,
+  "history": [
+    {
+      "token_accuracy": 0.9728676943093559,
+      "token_macro_f1": 0.9118286370766092,
+      "entity_precision": 0.8409934341992578,
+      "entity_recall": 0.8925920315103772,
+      "entity_f1": 0.8660248401558021,
+      "val_loss": 0.0778115203996238,
+      "bio_repairs": 261,
+      "epoch": 1,
+      "train_loss": 0.15732424822694638,
+      "elapsed_seconds": 969.6377665996552
+    },
+    {
+      "token_accuracy": 0.9746447809978659,
+      "token_macro_f1": 0.9199869452834097,
+      "entity_precision": 0.8640127851227662,
+      "entity_recall": 0.900924102408726,
+      "entity_f1": 0.882082468110353,
+      "val_loss": 0.07713053420823264,
+      "bio_repairs": 163,
+      "epoch": 2,
+      "train_loss": 0.06530505667689103,
+      "elapsed_seconds": 1937.753130197525
+    },
+    {
+      "token_accuracy": 0.975366722465073,
+      "token_macro_f1": 0.9209878912918164,
+      "entity_precision": 0.875957572186211,
+      "entity_recall": 0.9007726102105742,
+      "entity_f1": 0.8881917992381806,
+      "val_loss": 0.08338387240043008,
+      "bio_repairs": 143,
+      "epoch": 3,
+      "train_loss": 0.03986597529398767,
+      "elapsed_seconds": 2909.068683385849
+    }
+  ]
+}
