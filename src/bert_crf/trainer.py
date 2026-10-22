@@ -9,7 +9,7 @@ import torch
 
 from .checkpoint import load_checkpoint_model, restore_checkpoint, save_checkpoint
 from .config import configure_runtime
-from .experiment import Experiment, environment, file_hash, fingerprint, write_json
+from .experiment import Experiment, BOUNDARY_HISTORY_FIELDS, environment, file_hash, fingerprint, write_json
 from .metrics import Metrics
 from .training_config import TrainingConfig, require_synthetic
 
@@ -83,6 +83,7 @@ class Trainer:
                 raise ValueError('Training/validation data must be nonempty')
         self.model, self.config, self.train_provider, self.val_provider = model, config, train, val
         model_config = model.config
+        self.boundary_aux = getattr(model, 'boundary_head', None) is not None
         runtime = replace(model_config, seed=config.seed, device=config.device, precision=config.precision,
                           deterministic_algorithms=config.deterministic_algorithms)
         # Reject misleading model/runtime records, rather than silently overriding.
@@ -118,7 +119,8 @@ class Trainer:
              'loader_policy': 'epoch-seeded provider; no persistent sampler cursor; num_workers=0',
              'selection': {'metric': config.selection_metric, 'mode': config.selection_mode,
                            'tie': 'retain earlier best; min_delta is strict', 'patience': config.early_stopping_patience},
-             'user_metadata': metadata or {}}, run_id)
+             'user_metadata': metadata or {}}, run_id,
+             extra_history_fields=BOUNDARY_HISTORY_FIELDS if self.boundary_aux else ())
         self.state = {'epoch': 0, 'global_step': 0, 'best_value': None, 'best_epoch': None,
                       'bad_epochs': 0, 'best_checkpoint': None, 'best_checkpoint_sha256': None}
         self._fitted = False
@@ -159,12 +161,22 @@ class Trainer:
             raise FloatingPointError('Loss is missing, nonscalar or NaN/Inf')
         return loss
 
+    def _components(self, output):
+        if not self.boundary_aux:
+            return {}
+        result = {}
+        for name in ('crf_nll', 'start_loss', 'end_loss', 'boundary_loss', 'total_loss'):
+            result[name] = float(self._loss({'loss': output.get(name)}).detach())
+        return result
+
     @torch.no_grad()
     def evaluate(self):
         mode = self.model.training
         self.model.eval()
         metric = Metrics()
         total_loss = count = 0
+        components = {}
+        boundary_counts_total = {name: {'tp': 0, 'predicted': 0, 'gold': 0} for name in ('start', 'end')}
         tick = time.perf_counter()
         writer = None
         try:
@@ -175,6 +187,15 @@ class Trainer:
                 inputs, ids = self._batch(batch)
                 output = self.model(**inputs, decode=True)
                 loss = self._loss(output)
+                values = self._components(output)
+                if self.boundary_aux:
+                    from .boundary import boundary_counts
+                    current = boundary_counts(output, inputs['character_labels'], inputs['character_mask'])
+                    for name, counts in current.items():
+                        for key, value in counts.items():
+                            boundary_counts_total[name][key] += value
+                    for name, value in values.items():
+                        components[name] = components.get(name, 0.) + value * len(ids)
                 paths = output.get('paths')
                 if not isinstance(paths, list) or len(paths) != len(ids):
                     raise ValueError('Decode missing or batch length mismatch')
@@ -184,11 +205,18 @@ class Trainer:
                     metric.update(key, gold, paths[b])
                     if writer is not None:
                         writer.add(key, gold, paths[b])
-                total_loss += float(loss) * len(ids)
+                total_loss += (values['crf_nll'] if self.boundary_aux else float(loss)) * len(ids)
                 count += len(ids)
             if count != self.val_provider.size:
                 raise ValueError('Validation provider sentence count mismatch')
             result = {'loss': total_loss / count, **metric.compute()}
+            if self.boundary_aux:
+                from .boundary import boundary_metrics
+                result.update({name: value / count for name, value in components.items()})
+                result['boundary_auxiliary'] = {'threshold': 0.5, 'unit': 'valid original character position; class-agnostic',
+                    'metrics': boundary_metrics(boundary_counts_total),
+                    'loss_aggregation': 'sample-count-weighted mean of per-batch balanced BCE; diagnostic only',
+                    'decode_policy': 'crf_only'}
             if writer is not None:
                 if self.device.type == 'cuda':
                     torch.cuda.synchronize(self.device)
@@ -245,6 +273,7 @@ class Trainer:
                 t = time.perf_counter()
                 self.model.train()
                 loss_sum, count, seen, steps = 0.0, 0, set(), 0
+                component_sums = {}
                 for batch in self.train_provider.batches(epoch, self.config.batch_size, self.config.shuffle, self.config.seed):
                     inputs, ids = self._batch(batch)
                     if seen.intersection(ids):
@@ -253,6 +282,7 @@ class Trainer:
                     self.optimizer.zero_grad(set_to_none=True)
                     output = self.model(**inputs, decode=False)
                     loss = self._loss(output)
+                    values = self._components(output)
                     loss.backward()
                     grads = [p.grad for p in self.model.parameters() if p.grad is not None]
                     if not grads or any(not bool(torch.isfinite(g).all()) for g in grads):
@@ -264,10 +294,12 @@ class Trainer:
                     self.state['global_step'] += 1
                     count += len(ids)
                     steps += 1
-                    loss_sum += float(loss.detach()) * len(ids)
+                    loss_sum += (values['crf_nll'] if self.boundary_aux else float(loss.detach())) * len(ids)
+                    for name, val in values.items():
+                        component_sums[name] = component_sums.get(name, 0.) + val * len(ids)
                     self.run.event('train_batch', epoch=epoch, global_step=self.state['global_step'],
                                    samples=len(ids), loss=float(loss.detach()), learning_rate_used=lr_used,
-                                   gradient_norm_before_clipping=float(grad_norm))
+                                   gradient_norm_before_clipping=float(grad_norm), **values)
                 if count != self.train_provider.size or steps != self.steps_per_epoch:
                     raise ValueError('Training provider sentence/batch count mismatch')
                 self._validation_epoch = epoch
@@ -296,6 +328,10 @@ class Trainer:
                        **{f'val_{short}_{m}': metrics[level]['micro'][m] for short, level in [('char', 'character'), ('entity', 'entity')] for m in ('precision', 'recall', 'f1')},
                        'learning_rate': self.optimizer.param_groups[0]['lr'],
                        'epoch_elapsed_seconds': time.perf_counter() - t, 'global_step': self.state['global_step']}
+                if self.boundary_aux:
+                    row.update({f'train_{key}': val / count for key, val in component_sums.items()})
+                    row.update({f'val_{key}': metrics[key] for key in component_sums})
+                    row['cumulative_fit_seconds'] = time.perf_counter() - started
                 self.run.epoch(row, metrics)
                 if self.record_validation_artifacts:
                     from .run_artifacts import update_run_info

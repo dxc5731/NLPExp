@@ -2,6 +2,7 @@
 from dataclasses import dataclass
 from datetime import datetime
 import hashlib
+import json
 import math
 from pathlib import Path
 import shutil
@@ -24,6 +25,35 @@ def model_hash(model):
         h.update(name.encode('utf-8'))
         h.update(p.detach().cpu().contiguous().numpy().tobytes())
     return h.hexdigest()
+
+
+def boundary_resource_contract(config):
+    """Additional binding for the new variant; old resource identities are unchanged."""
+    value = {'training': config.training.to_dict(),
+        'resources': {k: v for k, v in config.value['resources'].items()
+                      if k not in ('measurement_file', 'measurement_sha256')},
+        'implementation_sha256': {name: file_hash(config.root / 'src/bert_crf' / name)
+            for name in ('boundary.py', 'model.py', 'config.py', 'preflight.py')}}
+    return json.loads(json.dumps(value, allow_nan=False))
+
+
+def boundary_gradient_probe(model, output):
+    """Two extra backward-only diagnostics, no update and no second BERT forward."""
+    tensors = (output['character_hidden_states'], model.encoder.bert.embeddings.word_embeddings.weight)
+    result = {}
+    for name, loss in (('crf', output['crf_nll']),
+                       ('weighted_aux', model.config.boundary_aux.weight * output['boundary_loss'])):
+        gradients = torch.autograd.grad(loss, tensors, retain_graph=True)
+        norms = {}
+        for key, grad in zip(('shared_characters', 'bert_embeddings'), gradients):
+            if not bool(torch.isfinite(grad).all()) or not bool((grad != 0).any()):
+                raise FloatingPointError('Missing/nonfinite auxiliary contribution to ' + key)
+            norms[key] = float(grad.detach().norm())
+        result[name] = norms
+        del gradients
+    result['weighted_aux_to_crf_norm_ratio'] = {key: result['weighted_aux'][key] / result['crf'][key]
+        for key in ('shared_characters', 'bert_embeddings')}
+    return result
 
 
 def build_model(config):
@@ -105,12 +135,16 @@ def probe_batch(model, provider, indices, *, backward, reserve_multiplier=0):
             if not bool(torch.isfinite(loss)):
                 raise FloatingPointError('Probe Loss NaN/Inf')
             if backward:
+                contribution = boundary_gradient_probe(model, output) if model.boundary_head is not None else None
                 loss.backward()
         if device.type == 'cuda':
             torch.cuda.synchronize(device)
         gradients = {}
         if backward:
-            for name, module in (('bert', model.encoder), ('linear', model.head.classifier), ('crf', model.head.crf)):
+            modules = [('bert', model.encoder), ('linear', model.head.classifier), ('crf', model.head.crf)]
+            if model.boundary_head is not None:
+                modules.extend([('start_head', model.boundary_head.start), ('end_head', model.boundary_head.end)])
+            for name, module in modules:
                 params = [p for p in module.parameters() if p.requires_grad]
                 finite = sum(p.grad is not None and bool(torch.isfinite(p.grad).all()) for p in params)
                 nonzero = sum(p.grad is not None and bool((p.grad != 0).any()) for p in params)
@@ -137,6 +171,16 @@ def probe_batch(model, provider, indices, *, backward, reserve_multiplier=0):
             'parameter_hash_before': before, 'parameter_hash_after': model_hash(model),
             'parameter_versions_unchanged': versions == [p._version for p in model.parameters()],
             'timing_scope': 'allocation, GPU forward/backward or decode, gradient checks; excludes tokenizer, hashing, optimizer step and I/O'}
+        if model.boundary_head is not None:
+            from .boundary import boundary_counts
+            result['loss_components'] = {key: float(output[key].detach()) for key in
+                ('crf_nll', 'start_loss', 'end_loss', 'boundary_loss', 'total_loss')}
+            result['weighted_boundary_loss'] = model.config.boundary_aux.weight * result['loss_components']['boundary_loss']
+            if not all(math.isfinite(v) for v in result['loss_components'].values()):
+                raise FloatingPointError('Nonfinite boundary loss component')
+            result['boundary_counts'] = boundary_counts(output, inputs['character_labels'], inputs['character_mask'])
+            result['gradient_contribution'] = contribution if backward else None
+            result['decode_policy'] = 'crf_only'
         if result['parameter_hash_before'] != result['parameter_hash_after'] or not result['parameter_versions_unchanged']:
             raise AssertionError('Probe changed model parameters')
         return result
@@ -227,6 +271,9 @@ def run_preflight(config, directory):
         from dataclasses import asdict
         if measured['model_config'] != json.loads(json.dumps(asdict(config.model))) or measured['inputs'] != config.value['inputs']:
             raise ValueError('Resource evidence model/input configuration mismatch')
+        if hasattr(config.model, 'boundary_aux'):
+            if measured.get('boundary_resource_contract') != boundary_resource_contract(config):
+                raise ValueError('Boundary resource evidence implementation/training contract mismatch')
         now = environment()
         if any(measured['environment'][key] != now[key] for key in ('packages', 'gpu', 'cuda_runtime', 'capability')):
             raise ValueError('Resource evidence hardware/software mismatch; remeasure')
@@ -236,6 +283,10 @@ def run_preflight(config, directory):
         if len(selected) != 1 or selected[0]['max_tokens'] != r['max_tokens']:
             raise ValueError('Selected batch/resource strategy not measured')
         selected = selected[0]
+        if hasattr(config.model, 'boundary_aux'):
+            if not selected.get('gradient_contribution') or not selected.get('loss_components') or \
+                    any(selected['gradients'].get(name, {}).get('nonzero', 0) == 0 for name in ('start_head', 'end_head')):
+                raise ValueError('Boundary resource evidence lacks real auxiliary forward/backward')
         if measured.get('optimizer_steps') != 0 or selected.get('optimizer_steps') != 0 \
                 or selected['parameter_hash_before'] != selected['parameter_hash_after'] \
                 or not selected['parameter_versions_unchanged'] \

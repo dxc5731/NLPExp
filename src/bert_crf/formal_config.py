@@ -6,7 +6,7 @@ from pathlib import Path
 import re
 
 from .character_mapping import MAPPING_POLICY, OFFSET_UNIT
-from .config import ModelConfig
+from .config import ModelConfig, BoundaryModelConfig, model_config_from_dict
 from .constraints import LABELS
 from .experiment import fingerprint
 from .training_config import TrainingConfig
@@ -30,9 +30,13 @@ class FormalConfig:
         for key in ('experiment_name', 'executor'):
             if not isinstance(v[key], str) or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]{0,63}', v[key]):
                 raise ValueError(f'Invalid {key}')
-        exact(v['model'], {f.name for f in fields(ModelConfig)}, 'model')
+        model_cls = BoundaryModelConfig if v['model'].get('schema_version') == '1.1_boundary_aux' else ModelConfig
+        exact(v['model'], {f.name for f in fields(model_cls)}, 'model')
+        if model_cls is BoundaryModelConfig:
+            from .config import BoundaryAuxConfig
+            exact(v['model']['boundary_aux'], {f.name for f in fields(BoundaryAuxConfig)}, 'boundary_aux')
         exact(v['training'], {f.name for f in fields(TrainingConfig)}, 'training')
-        self.model = ModelConfig(**v['model'])
+        self.model = model_config_from_dict(v['model'])
         self.training = TrainingConfig(**v['training'])
         if (self.model.bert_model_name, self.model.bert_revision) != ('google-bert/bert-base-chinese',
                 '8f23c25b06e129b6c986331a13d8d025a92cf0ea'):

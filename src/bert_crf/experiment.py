@@ -20,6 +20,8 @@ ROOT = Path(__file__).resolve().parents[2]
 HISTORY_FIELDS = ['epoch', 'train_loss', 'val_loss', 'val_char_precision', 'val_char_recall',
                   'val_char_f1', 'val_entity_precision', 'val_entity_recall', 'val_entity_f1',
                   'learning_rate', 'epoch_elapsed_seconds', 'global_step']
+BOUNDARY_HISTORY_FIELDS = [f'{split}_{name}' for split in ('train', 'val')
+    for name in ('crf_nll', 'start_loss', 'end_loss', 'boundary_loss', 'total_loss')] + ['cumulative_fit_seconds']
 
 
 def canonical(value):
@@ -76,10 +78,11 @@ def code_snapshot(directory):
 
 
 class Experiment:
-    def __init__(self, parent, artifact_kind, config, metadata, run_id=None):
+    def __init__(self, parent, artifact_kind, config, metadata, run_id=None, *, extra_history_fields=()):
         if artifact_kind not in KINDS:
             raise ValueError('Unknown run type')
         self.kind = artifact_kind
+        self.history_fields = [*HISTORY_FIELDS, *extra_history_fields]
         self.log_name = 'run.log' if artifact_kind == 'real_training' else 'train.log'
         run_id = run_id or datetime.now().astimezone().strftime('%Y%m%dT%H%M%S%z') + '_' + artifact_kind + '_' + uuid.uuid4().hex[:8]
         if Path(run_id).name != run_id or run_id in ('.', '..'):
@@ -95,7 +98,7 @@ class Experiment:
                          'metadata': metadata, 'code': code_snapshot(self.path)}
         write_json(self.path / 'run_manifest.json', self.manifest)
         with (self.path / 'history.csv').open('x', encoding='utf-8', newline='') as stream:
-            csv.DictWriter(stream, HISTORY_FIELDS).writeheader()
+            csv.DictWriter(stream, self.history_fields).writeheader()
 
     def status(self, status, **fields):
         self.manifest.update(status=status, updated_at=datetime.now().astimezone().isoformat(), **fields)
@@ -109,7 +112,7 @@ class Experiment:
     def epoch(self, row, metrics):
         self.event('epoch_complete', history=row, validation=metrics)
         with (self.path / 'history.csv').open('a', encoding='utf-8', newline='') as stream:
-            csv.DictWriter(stream, HISTORY_FIELDS).writerow(row)
+            csv.DictWriter(stream, self.history_fields).writerow(row)
         write_json(self.path / 'metrics.json', {'artifact_kind': self.kind, 'epoch': row['epoch'], 'validation': metrics})
 
 

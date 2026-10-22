@@ -44,3 +44,20 @@ Baseline归档时记录的计划（历史内容，第二轮现已完成）：
 - 对话级10000次Bootstrap（seed20261021）的第三轮−Baseline Delta F1探索性95%区间为[-0.0601,+0.6744] pp，跨零。单seed、同一内部val选模，不证明稳定最优；第二轮与第三轮不是单变量对照。
 - 建议先冻结三份已审计候选并准备小组交接；有预算时优先配对多seed验证Baseline与LR1e-5，而非立即开展广泛调参或默认组合Dropout0.2更好。本轮没有执行新训练或官方dev/test预测。
 - 完整本地审计：`docs/bert_crf/evidence/20261021T214932+0800_lr1e5_result_audit/`；归档过程：`docs/bert_crf/evidence/20261021T214932+0800_lr1e5_github_archive/`；原始训练：`experiments/bert_crf/20261021T195736+0800_real_training_95abb833/`。这些被忽略目录仅为本地索引，不是GitHub下载链接。原始数据、逐句预测、Checkpoint、恢复状态和敏感日志继续本地受控保存。
+
+
+## 第四轮已审计：边界辅助学习与四轮对照
+
+前三轮记录及当时结论保留；本节为当前结论。
+
+| 实验 | LR | Dropout | 边界辅助λ | 最佳Epoch | Precision | Recall | Micro F1 | Macro F1 | ΔF1 vs Baseline / 第三轮 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Boundary Auxiliary | 1e-5 | 0.1 | 0.2 | 3 | 89.8292% | 90.0470% | **89.9380%** | 89.5896% | +0.2542 / −0.0522 pp |
+
+- [独立审计报告](experiments/boundary_aux_run1.md) · [四轮完整对照](experiments/four_runs_comparison.md) · [摘要](experiments/boundary_aux_summary.json) · [完整聚合JSON](analysis/four_runs_comparison.json) · [全标量CSV](analysis/four_runs_comparison.csv) · [真实配置](../../configs/bert_crf/boundary_aux_02.json)。
+- [CRF NLL](figures/four_runs_loss_comparison.png) · [Micro F1](figures/four_runs_f1_comparison.png) · [五类实体](figures/four_runs_entity_f1_comparison.png) · [边界/错误分量](figures/four_runs_error_comparison.png) · [配对变化](figures/boundary_aux_paired_changes.png) · [辅助/Total Loss](figures/boundary_aux_losses.png)。
+- run `20261021T231741+0800_real_training_86767c7e`，5轮27765次更新、exit0，E5末early_stopped；最佳E3 SHA-256 `e06bae70f7030dd21237578df6e68d9d2f225c1d54781edec326ee196c94a307`。四轮20份逐Epoch预测复算通过，第四轮5份Checkpoint可读、最佳完整9687句重新推理一致，267项测试通过。
+- 实际新增Start/End各Linear(768,1)，原字符BIO生成目标，平衡BCE，total=CRF+.2×boundary，最终仍CRF；训练源码快照/当前源码逐字节吻合。实际实现与必要测试一同归档，未改训练后的逻辑或历史配置。
+- 相对第三轮：一对一同类型边界272→263、Medical42→35；过长153→155、纯漏215→237、合并19→26。FP−29/FN+30；Medical F1+0.5213pp，另外四类下降。247对话/10000次配对Bootstrap的DeltaF1区间[-0.4256,+0.3238]pp跨零，不能声称稳定优势。
+- 当前主候选仍**第三轮LR1e-5/E5**（Micro/Macro/Recall最高）；第四轮Precision最高。先冻结交接、复核短实体漏检与合并，再视预算考虑配对多seed；不自动决定新参数或第五轮。
+- 完整审计本地`docs/bert_crf/evidence/20261022T200005+0800_boundary_aux_result_audit`，归档过程为其`publication/`；启动证据`docs/bert_crf/evidence/20261021T224813+0800_boundary_aux_launch`，原训练`experiments/bert_crf/20261021T231741+0800_real_training_86767c7e`。这些为本地受控索引，不是GitHub下载链接。原始文本、完整预测/错误、Checkpoint、敏感日志、权重与资源文件不公开。

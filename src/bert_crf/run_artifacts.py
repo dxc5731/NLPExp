@@ -73,6 +73,13 @@ def update_run_info(trainer, status):
         'alignment': context.config.value['alignment'] if context is not None else 'synthetic fixture',
         'official_handoff': {'status': 'not_run', 'schema_version': '1.0',
                              'reason': 'Internal validation artifacts are not official dev/test predictions'}}
+    if trainer.boundary_aux:
+        from dataclasses import asdict
+        record['method'] = 'character_bert_crf_boundary_aux_v1'
+        record['boundary_aux'] = asdict(trainer.model.config.boundary_aux)
+        record['loss_semantics'] = {'train_loss': 'CRF sequence NLL mean', 'val_loss': 'CRF sequence NLL mean',
+            'backpropagation': 'total_loss = crf_nll + 0.2 * boundary_loss',
+            'epoch_aggregation': 'sample-count-weighted batch means', 'selection': 'strict entity.micro.f1 only'}
     write_json(trainer.run.path / 'run_info.json', record)
 
 

@@ -6,7 +6,7 @@ import torch
 from torch import nn
 from transformers import BertModel
 
-from .config import ModelConfig
+from .config import ModelConfig, BoundaryModelConfig
 from .crf import LinearChainCRF
 
 
@@ -85,12 +85,33 @@ class CharacterBertCRF(nn.Module):
         self.encoder = encoder
         self.adapter = adapter
         self.head = CharacterCRFHead(config)
+        self.boundary_head = None
+        if isinstance(config, BoundaryModelConfig):
+            from .boundary import BoundaryAuxHead
+            # Heads are initialized on CPU. Restore its RNG exactly; no CUDA RNG
+            # or extra dropout is consumed and the original main path is intact.
+            with torch.random.fork_rng(devices=[]):
+                self.boundary_head = BoundaryAuxHead(config.hidden_size)
 
     def forward(self, input_ids, attention_mask, *, character_mask, mapping,
                 character_labels=None, token_type_ids=None, decode=False):
         tokens = self.encoder(input_ids, attention_mask, token_type_ids)
         characters = self.adapter(tokens, character_mask=character_mask, **mapping)
-        return self.head(characters, character_mask, character_labels, decode=decode)
+        output = self.head(characters, character_mask, character_labels, decode=decode)
+        if self.boundary_head is not None:
+            from .boundary import balanced_bce, boundary_targets
+            start, end = self.boundary_head(characters)
+            output.update(start_logits=start, end_logits=end, character_hidden_states=characters)
+            if character_labels is not None:
+                targets = boundary_targets(character_labels, character_mask)
+                start_loss = balanced_bce(start, targets[0], character_mask)
+                end_loss = balanced_bce(end, targets[1], character_mask)
+                boundary_loss = (start_loss + end_loss) / 2
+                crf_nll = output['loss']
+                total = crf_nll + self.config.boundary_aux.weight * boundary_loss
+                output.update(loss=total, crf_nll=crf_nll, start_loss=start_loss, end_loss=end_loss,
+                              boundary_loss=boundary_loss, total_loss=total)
+        return output
 
     def save_pretrained(self, directory):
         if any(True for _ in self.adapter.parameters()) or any(True for _ in self.adapter.buffers()):
@@ -100,6 +121,8 @@ class CharacterBertCRF(nn.Module):
         self.config.save(directory / 'character_crf_config.json')
         self.encoder.bert.save_pretrained(directory / 'encoder', safe_serialization=True)
         torch.save(self.head.state_dict(), directory / 'head.pt')
+        if self.boundary_head is not None:
+            torch.save(self.boundary_head.state_dict(), directory / 'boundary_head.pt')
 
     @classmethod
     def from_pretrained(cls, directory, *, adapter):
@@ -108,4 +131,6 @@ class CharacterBertCRF(nn.Module):
         encoder = BertEncoder.from_pretrained(config, directory / 'encoder')
         model = cls(config, encoder, adapter)
         model.head.load_state_dict(torch.load(directory / 'head.pt', map_location='cpu', weights_only=True))
+        if model.boundary_head is not None:
+            model.boundary_head.load_state_dict(torch.load(directory / 'boundary_head.pt', map_location='cpu', weights_only=True), strict=True)
         return model
