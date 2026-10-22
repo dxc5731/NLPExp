@@ -236,6 +236,13 @@ $/configuration_identities/boundary_aux/best_checkpoint/checkpoint_sha256,"""e06
 $/configuration_identities/boundary_aux/logical_status,"""early_stopped"""
 $/configuration_identities/boundary_aux/completed_epochs,5
 $/configuration_identities/boundary_aux/retained_optimizer_updates,27765
+$/configuration_identities/boundary_aux/published_configuration_identity/training_working_file_sha256,"""c0354da4afeb96bac0b5c1bcf0cb996d4f609219c093ce370fa520df613699ba"""
+$/configuration_identities/boundary_aux/published_configuration_identity/published_git_blob_content_sha256,"""2174735106501bc33eeb5856fd57c67a3d04c2cbefcce257eda202ebe6181be2"""
+$/configuration_identities/boundary_aux/published_configuration_identity/training_bytes,6014
+$/configuration_identities/boundary_aux/published_configuration_identity/published_bytes,5846
+$/configuration_identities/boundary_aux/published_configuration_identity/difference,"""CRLF normalized to LF by Git attributes/core.autocrlf; JSON values unchanged."""
+$/configuration_identities/boundary_aux/published_configuration_identity/parsed_json_identical,true
+$/configuration_identities/boundary_aux/published_configuration_identity/training_config_file_modified_during_audit,false
 $/fourth_actual_configuration/schema_version,"""bert_crf_formal_v1"""
 $/fourth_actual_configuration/artifact_kind,"""real_training"""
 $/fourth_actual_configuration/experiment_name,"""boundary_aux_02"""
@@ -5689,6 +5696,7 @@ $/limitations/10,"""Full best-fourth validation reinference reproduced predictio
 $/limitations/11,"""No auxiliary-head logits were persisted per sentence; all-epoch auxiliary metrics are saved runtime aggregates; best-epoch diagnostics independently reproduced."""
 $/limitations/12,"""CRF endpoint matches are class-agnostic independent position-set intersections, not complete strict entities or semantic pairing."""
 $/limitations/13,"""Training data, fixed split, pretrained weights, resources and full local evidence are not included in the public repository; resource/config references require controlled external inputs."""
+$/limitations/14,"""The actual fourth-run config uses CRLF; Git normalizes it to LF. Original and published byte SHA-256 differ, while parsed JSON and all hyperparameters are identical. Both hashes are recorded under published_configuration_identity."""
 $/provenance/audit_evidence,"""docs/bert_crf/evidence/20261022T200005+0800_boundary_aux_result_audit"""
 $/provenance/launch_evidence,"""docs/bert_crf/evidence/20261021T224813+0800_boundary_aux_launch"""
 $/provenance/prior_three_runs_json_sha256,"""78ef61557934ab4218e6be606bd9da8daa58188b94fd09b9f049e9272249e920"""

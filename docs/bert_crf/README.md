@@ -61,3 +61,5 @@ Baseline归档时记录的计划（历史内容，第二轮现已完成）：
 - 相对第三轮：一对一同类型边界272→263、Medical42→35；过长153→155、纯漏215→237、合并19→26。FP−29/FN+30；Medical F1+0.5213pp，另外四类下降。247对话/10000次配对Bootstrap的DeltaF1区间[-0.4256,+0.3238]pp跨零，不能声称稳定优势。
 - 当前主候选仍**第三轮LR1e-5/E5**（Micro/Macro/Recall最高）；第四轮Precision最高。先冻结交接、复核短实体漏检与合并，再视预算考虑配对多seed；不自动决定新参数或第五轮。
 - 完整审计本地`docs/bert_crf/evidence/20261022T200005+0800_boundary_aux_result_audit`，归档过程为其`publication/`；启动证据`docs/bert_crf/evidence/20261021T224813+0800_boundary_aux_launch`，原训练`experiments/bert_crf/20261021T231741+0800_real_training_86767c7e`。这些为本地受控索引，不是GitHub下载链接。原始文本、完整预测/错误、Checkpoint、敏感日志、权重与资源文件不公开。
+
+- 配置字节身份补充：训练原件为CRLF，Git公开内容为LF，JSON及超参数完全一致；两种SHA-256见独立报告和摘要的`published_configuration_identity`。本地真实配置未改写。

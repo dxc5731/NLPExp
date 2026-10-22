@@ -245,7 +245,16 @@
     },
     "logical_status": "early_stopped",
     "completed_epochs": 5,
-    "retained_optimizer_updates": 27765
+    "retained_optimizer_updates": 27765,
+    "published_configuration_identity": {
+      "training_working_file_sha256": "c0354da4afeb96bac0b5c1bcf0cb996d4f609219c093ce370fa520df613699ba",
+      "published_git_blob_content_sha256": "2174735106501bc33eeb5856fd57c67a3d04c2cbefcce257eda202ebe6181be2",
+      "training_bytes": 6014,
+      "published_bytes": 5846,
+      "difference": "CRLF normalized to LF by Git attributes/core.autocrlf; JSON values unchanged.",
+      "parsed_json_identical": true,
+      "training_config_file_modified_during_audit": false
+    }
   },
   "actual_configuration": {
     "schema_version": "bert_crf_formal_v1",
@@ -720,6 +729,7 @@
     "Full best-fourth validation reinference reproduced predictions and all component losses/auxiliary metrics; other epochs have prediction-based score recomputation and saved-loss crosschecks.",
     "No auxiliary-head logits were persisted per sentence; all-epoch auxiliary metrics are saved runtime aggregates; best-epoch diagnostics independently reproduced.",
     "CRF endpoint matches are class-agnostic independent position-set intersections, not complete strict entities or semantic pairing.",
-    "Training data, fixed split, pretrained weights, resources and full local evidence are not included in the public repository; resource/config references require controlled external inputs."
+    "Training data, fixed split, pretrained weights, resources and full local evidence are not included in the public repository; resource/config references require controlled external inputs.",
+    "The actual fourth-run config uses CRLF; Git normalizes it to LF. Original and published byte SHA-256 differ, while parsed JSON and all hyperparameters are identical. Both hashes are recorded under published_configuration_identity."
   ]
 }

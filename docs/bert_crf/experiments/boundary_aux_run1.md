@@ -115,7 +115,7 @@ E3起点TP6403/预测7872/Gold6601，终点TP6419/预测7523/Gold6601。E3诊断
 | tests/bert_crf/test_boundary_aux.py | 27b857584778b74ae9792ca79f9a9cdd012f556246182ec95e62434de2964b46 |
 | configs/bert_crf/boundary_aux_02.json | c0354da4afeb96bac0b5c1bcf0cb996d4f609219c093ce370fa520df613699ba |
 
-公开配置与实际训练文件字节一致，不含本机绝对路径，无需脱敏；相对`.local/`资源未公开。公开源码即上述快照版本，本次未修改训练逻辑。原始医疗文本、逐句预测/错误/匿名案例ID、Checkpoint/优化器/RNG、完整日志与预训练权重仅本地受控保存。审计与发布证据本地：`docs/bert_crf/evidence/20261022T200005+0800_boundary_aux_result_audit`，启动证据`docs/bert_crf/evidence/20261021T224813+0800_boundary_aux_launch`；不是GitHub下载链接。
+训练原配置与本次工作文件逐字节一致，不含本机绝对路径，无需路径脱敏；Git归档时将CRLF规范化为LF。训练原文件SHA-256为`c0354da4afeb96bac0b5c1bcf0cb996d4f609219c093ce370fa520df613699ba`（6014 bytes），Git公开文件内容SHA-256为`2174735106501bc33eeb5856fd57c67a3d04c2cbefcce257eda202ebe6181be2`（5846 bytes）。仅换行字节不同，解析JSON、有效超参数和资源身份完全一致；原配置没有被改写。相对`.local/`资源未公开。公开源码即上述快照版本，本次未修改训练逻辑。原始医疗文本、逐句预测/错误/匿名案例ID、Checkpoint/优化器/RNG、完整日志与预训练权重仅本地受控保存。审计与发布证据本地：`docs/bert_crf/evidence/20261022T200005+0800_boundary_aux_result_audit`，启动证据`docs/bert_crf/evidence/20261021T224813+0800_boundary_aux_launch`；不是GitHub下载链接。
 
 ## 结论边界
 
