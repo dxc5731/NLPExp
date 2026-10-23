@@ -1,0 +1,14 @@
+﻿词典 min_count=1：8354 词
+训练 TF-IDF 守门员...
+
+阈值=0.04（统一口径，定义见 baseline/eval_pred.py 文件头）
+
+--- 纯规则 ---
+  逐字   P=0.6676 R=0.8072 F1=0.7308 acc=0.9179
+  实体   P=0.5295 R=0.7617 F1=0.6247  (tp=5028 fp=4468 fn=1573)
+
+--- gated 组合 ---
+  逐字   P=0.7092 R=0.7497 F1=0.7289 acc=0.9216
+  实体   P=0.5885 R=0.7025 F1=0.6405  (tp=4637 fp=3242 fn=1964)
+
+gated 预测已存：D:\Research Project\demo\自然语言处理作业\baseline\out\pred_gated.json

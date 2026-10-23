@@ -1,0 +1,202 @@
+# 规则基线错例分析  词典 min_count=1（8354 词）
+# val 9687 句，错误 span 合计 4657 个
+# 类别口径：① 边界错（截断/扩展/错位） ② 类型错（同字面异类型） ③ 漏标（词表外未登录 / 词表内被抢） ④ 误标（凭空多标）
+
+
+========================================================================
+【误标 / 非实体被标】共 2898 例，占全部错误 62.2%，展示前 5 例
+========================================================================
+对话 10001003 句 22
+原文: 一次半包一天2次用温水
+标注: O O O O O O O O O O O
+预测: O O O O O O O O O O B-Symptom
+问题: 「水」  预测 span=(10,11) 类型=Symptom  → 误标/非实体被标
+
+对话 10001240 句 1
+原文: 为了更好的提供服务，我需要询问您几个与病症相关的问题，感谢您配合。
+标注: O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
+预测: O O O O O O O O O O O O O O O O O O O O O O O O O O O B-Symptom O O O O O
+问题: 「感」  预测 span=(27,28) 类型=Symptom  → 误标/非实体被标
+
+对话 10001240 句 3
+原文: 宝宝平时喝水多么？
+标注: O O O O O O O O O
+预测: O O O O O B-Symptom I-Symptom O O
+问题: 「水多」  预测 span=(5,7) 类型=Symptom  → 误标/非实体被标
+
+对话 10001240 句 5
+原文: 青菜水果吃的多么？
+标注: O O O O O O O O O
+预测: O O B-Symptom O O O O O O
+问题: 「水」  预测 span=(2,3) 类型=Symptom  → 误标/非实体被标
+
+对话 10001240 句 7
+原文: 吃的少？肉食吃的多么？
+标注: O O O O O O O O O O O
+预测: B-Symptom I-Symptom I-Symptom O O O O O O O O
+问题: 「吃的少」  预测 span=(0,3) 类型=Symptom  → 误标/非实体被标
+
+
+========================================================================
+【边界错 / 错位】共 971 例，占全部错误 20.9%，展示前 5 例
+========================================================================
+对话 10001003 句 3
+原文: 一天拉6到7次，有多有少，母乳够，拍肚子有鼓音
+标注: B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom O O O O O O O O O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom
+预测: O O B-Symptom O O O O O O O O O O O O O O O O O O O O
+问题: 「拉」  金标准 span=(0,7) 类型=Symptom  预测 span=(2,3) 类型=Symptom  → 边界错/错位
+
+对话 10001003 句 4
+原文: 你好给宝宝查过大便常规吗?
+标注: O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination I-Medical_Examination O O
+预测: O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O
+问题: 「查过大便」  金标准 span=(7,11) 类型=Medical_Examination  预测 span=(5,9) 类型=Medical_Examination  → 边界错/错位
+
+对话 10001240 句 26
+原文: 那吃乳酸菌有用吗？
+标注: O O B-Drug_Category I-Drug_Category I-Drug_Category O O O O
+预测: O O B-Drug I-Drug I-Drug O O O O
+问题: 「乳酸菌」  金标准 span=(2,5) 类型=Drug_Category  预测 span=(2,5) 类型=Drug  → 边界错/错位
+
+对话 10003407 句 16
+原文: 可以吃点头孢克肟
+标注: O O O O B-Drug I-Drug I-Drug I-Drug
+预测: O O O B-Symptom I-Symptom O O O
+问题: 「点头」  金标准 span=(4,8) 类型=Drug  预测 span=(3,5) 类型=Symptom  → 边界错/错位
+
+对话 10003424 句 5
+原文: 主要是什么症状，咳嗽感觉有痰？
+标注: O O O O O O O O B-Symptom I-Symptom O O O B-Symptom O
+预测: O O O O O O O O B-Symptom I-Symptom B-Symptom O B-Symptom I-Symptom O
+问题: 「有痰」  金标准 span=(13,14) 类型=Symptom  预测 span=(12,14) 类型=Symptom  → 边界错/错位
+
+
+========================================================================
+【边界错 / 扩展】共 323 例，占全部错误 6.9%，展示前 5 例
+========================================================================
+对话 10001003 句 14
+原文: 可是肚子很胀，可以再吃吗
+标注: O O B-Symptom I-Symptom I-Symptom I-Symptom O O O O O O
+预测: O O O O O B-Symptom O O O O O O
+问题: 「胀」  金标准 span=(2,6) 类型=Symptom  预测 span=(5,6) 类型=Symptom  → 边界错/扩展
+
+对话 10001240 句 14
+原文: 有好久了，但之前不像现在这样费劲，今天大便嫌屁股疼！
+标注: O O O O O O O O O O O O O O O O O O O O O O B-Symptom I-Symptom I-Symptom O
+预测: O O O O O O O O O O O O O O B-Symptom I-Symptom O O O B-Medical_Examination I-Medical_Examination O B-Symptom O B-Symptom O
+问题: 「疼」  金标准 span=(22,25) 类型=Symptom  预测 span=(24,25) 类型=Symptom  → 边界错/扩展
+
+对话 10023935 句 6
+原文: 咳嗽咳嗽剧烈，憋的脸红，
+标注: B-Symptom I-Symptom B-Symptom I-Symptom O O O B-Symptom O B-Symptom I-Symptom O
+预测: B-Symptom I-Symptom I-Symptom I-Symptom O O O B-Symptom O O B-Symptom O
+问题: 「红」  金标准 span=(9,11) 类型=Symptom  预测 span=(10,11) 类型=Symptom  → 边界错/扩展
+
+对话 10023935 句 13
+原文: 嗯,咳嗽时,会有连续两三次,好像有东西咳不出来状态！脸泛红,大声哭泣！
+标注: O O B-Symptom I-Symptom O O O O O O O O O O O O O O O B-Symptom O O O O O O B-Symptom I-Symptom I-Symptom O O O B-Symptom I-Symptom O
+预测: O O B-Symptom I-Symptom O O O O O O O O O O O O O O O B-Symptom O O O O O O O O B-Symptom O O O B-Symptom O O
+问题: 「红」  金标准 span=(26,29) 类型=Symptom  预测 span=(28,29) 类型=Symptom  → 边界错/扩展
+
+对话 10029278 句 11
+原文: 身上冰凉，感觉湿湿的，又好像是在出汗
+标注: B-Symptom I-Symptom I-Symptom I-Symptom O O O O O O O O O O O O B-Symptom I-Symptom
+预测: O O B-Symptom I-Symptom O B-Symptom O O O O O O O O O O B-Symptom I-Symptom
+问题: 「冰凉」  金标准 span=(0,4) 类型=Symptom  预测 span=(2,4) 类型=Symptom  → 边界错/扩展
+
+
+========================================================================
+【边界错 / 截断】共 272 例，占全部错误 5.8%，展示前 5 例
+========================================================================
+对话 10001240 句 14
+原文: 有好久了，但之前不像现在这样费劲，今天大便嫌屁股疼！
+标注: O O O O O O O O O O O O O O O O O O O O O O B-Symptom I-Symptom I-Symptom O
+预测: O O O O O O O O O O O O O O B-Symptom I-Symptom O O O B-Medical_Examination I-Medical_Examination O B-Symptom O B-Symptom O
+问题: 「屁」  金标准 span=(22,25) 类型=Symptom  预测 span=(22,23) 类型=Symptom  → 边界错/截断
+
+对话 10001240 句 15
+原文: 大便像羊粪似的一粒一粒的？
+标注: B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom O
+预测: B-Medical_Examination I-Medical_Examination O O O O O O O O O O O
+问题: 「大便」  金标准 span=(0,12) 类型=Symptom  预测 span=(0,2) 类型=Medical_Examination  → 边界错/截断
+
+对话 10023935 句 13
+原文: 嗯,咳嗽时,会有连续两三次,好像有东西咳不出来状态！脸泛红,大声哭泣！
+标注: O O B-Symptom I-Symptom O O O O O O O O O O O O O O O B-Symptom O O O O O O B-Symptom I-Symptom I-Symptom O O O B-Symptom I-Symptom O
+预测: O O B-Symptom I-Symptom O O O O O O O O O O O O O O O B-Symptom O O O O O O O O B-Symptom O O O B-Symptom O O
+问题: 「哭」  金标准 span=(32,34) 类型=Symptom  预测 span=(32,33) 类型=Symptom  → 边界错/截断
+
+对话 10035834 句 7
+原文: 宝宝哪天接种的水痘疫苗？
+标注: O O O O B-Operation I-Operation I-Operation I-Operation I-Operation I-Operation I-Operation O
+预测: O O O O B-Operation I-Operation O B-Symptom I-Symptom B-Drug I-Drug O
+问题: 「接种」  金标准 span=(4,11) 类型=Operation  预测 span=(4,6) 类型=Operation  → 边界错/截断
+
+对话 10035834 句 18
+原文: 像孩子这种情况打了水痘有事吗？
+标注: O O O O O O O B-Operation I-Operation I-Operation I-Operation O O O O
+预测: O O O O O O O B-Operation O B-Symptom I-Symptom O O O O
+问题: 「打」  金标准 span=(7,11) 类型=Operation  预测 span=(7,8) 类型=Operation  → 边界错/截断
+
+
+========================================================================
+【漏标 / 词表外未登录】共 189 例，占全部错误 4.1%，展示前 5 例
+========================================================================
+对话 10001003 句 3
+原文: 一天拉6到7次，有多有少，母乳够，拍肚子有鼓音
+标注: B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom O O O O O O O O O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom
+预测: O O B-Symptom O O O O O O O O O O O O O O O O O O O O
+问题: 「拍肚子有鼓音」  金标准 span=(17,23) 类型=Symptom  → 漏标/词表外未登录
+
+对话 10001003 句 6
+原文: 很会打嗝，要紧吗，昨晚2点到现在睡眠很浅，
+标注: O O B-Symptom I-Symptom O O O O O O O O O O O O B-Symptom I-Symptom I-Symptom I-Symptom O
+预测: O O B-Symptom I-Symptom O O O O O O O O O O O O O O O O O
+问题: 「睡眠很浅」  金标准 span=(16,20) 类型=Symptom  → 漏标/词表外未登录
+
+对话 10001003 句 17
+原文: 小新生儿吃饱之后肚子就是很鼓
+标注: O O O O O O O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom
+预测: O O O O O O O O O O O O O O
+问题: 「肚子就是很鼓」  金标准 span=(8,14) 类型=Symptom  → 漏标/词表外未登录
+
+对话 10003407 句 20
+原文: 家里有开喉利剑
+标注: O O O B-Drug I-Drug I-Drug I-Drug
+预测: O O O O O O O
+问题: 「开喉利剑」  金标准 span=(3,7) 类型=Drug  → 漏标/词表外未登录
+
+对话 10003424 句 29
+原文: 我的腋下一边还长了两个拇指大的硬包是怎么回事。
+标注: O O O O O O O O O O O O O O O B-Symptom I-Symptom O O O O O O
+预测: O O O O O O O O O O O O O O O O O O O O O O O
+问题: 「硬包」  金标准 span=(15,17) 类型=Symptom  → 漏标/词表外未登录
+
+
+========================================================================
+【类型错 / 同字面异类型】共 4 例，占全部错误 0.1%，展示前 5 例
+========================================================================
+对话 10421340 句 16
+原文: 经皮测量，就是用黄疸仪，不抽血的测量黄疸。目前我看你平均的黄疸指数接近10，还是偏高的。一般平均的黄疸指数超过13，就需要退黄疸治疗。
+标注: B-Medical_Examination I-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O O O O O B-Medical_Examination I-Medical_Examination O O O B-Symptom I-Symptom O O O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O O O O O O O O O O O O B-Symptom I-Symptom O O O O O O O O O O O B-Symptom I-Symptom O O O
+预测: B-Medical_Examination I-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O B-Symptom I-Symptom O O O B-Medical_Examination I-Medical_Examination O B-Medical_Examination I-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O O O O O O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O O O O B-Symptom I-Symptom O O O O
+问题: 「黄疸」  金标准 span=(18,20) 类型=Symptom  预测 span=(8,10) 类型=Symptom  → 类型错/同字面异类型
+
+对话 10635297 句 36
+原文: 哦，我下午去看一下，前天我要查支原体的，医生说不用，现在我就担心是支原体
+标注: O O O O O O O O O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O O O O O O O O O O O O O O
+预测: O O O O O O O O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O O O O O O O O O O O B-Symptom I-Symptom I-Symptom
+问题: 「支原体」  金标准 span=(15,18) 类型=Medical_Examination  预测 span=(33,36) 类型=Symptom  → 类型错/同字面异类型
+
+对话 10671965 句 49
+原文: 这个药物刺激的话倒是没什么问题如果不吃药也吐的话就要空肚子的奥，一般需要空2小时肚子的奥，不吐的话再给宝贝少喝点温水的奥！如果精神状态差尿量少也是要及时补液的奥！
+标注: O O O O O O O O O O O O O O O O O O O O O B-Symptom O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom B-Symptom I-Symptom I-Symptom O O O O O B-Operation I-Operation O O O
+预测: O O O O O O O O O O O O O O O O O B-Symptom I-Symptom O O B-Symptom O O O O O O O O O O O O O O O O O O O O O O O O B-Symptom O O O O O O O O O O B-Symptom O O O O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom B-Symptom I-Symptom I-Symptom O O O O O B-Operation I-Operation O O O
+问题: 「吐」  金标准 span=(21,22) 类型=Symptom  预测 span=(46,47) 类型=Symptom  → 类型错/同字面异类型
+
+对话 10798968 句 23
+原文: 血常规的反应的是感染的程度，白细胞刚开始查的时候可能不是疾病的急性期，血常规随着感染的进行可能会上升到最高点再慢慢下降，血常规不可能随时监测，所以白细胞可能上升到最高又下降的
+标注: B-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O B-Symptom I-Symptom O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O O O O O O O O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O O O O O O O O O O O O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O O O O O O O
+预测: B-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O B-Symptom I-Symptom O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O O O O O O O O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination O O B-Symptom I-Symptom O O O O O O O O O O O O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination O O O O O O O O O O O
+问题: 「感染」  金标准 span=(8,10) 类型=Symptom  预测 span=(40,42) 类型=Symptom  → 类型错/同字面异类型
+
