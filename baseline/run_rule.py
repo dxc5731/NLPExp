@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 r"""规则基线在 val 划分上跑分：预测 + 逐字/实体级 P/R/F1 + 错例采样。
 
-用法：
-    cd "d:\Research Project\demo\自然语言处理作业"
-    $env:IMCS_DATA_DIR="d:\Research Project\demo\自然语言处理作业\IMCS-V2-NER"
+数据目录会自动发现（项目根下的 IMCS-V2-NER/），一般无需设置环境变量。
+如数据在别处，可选设置：$env:IMCS_DATA_DIR="...\IMCS-V2-NER"
+
+用法（在作业根目录）：
     python baseline/run_rule.py                # 默认 min_count=1
     python baseline/run_rule.py 2 min2         # min_count=2，预测另存 pred_rule_min2.json
 """

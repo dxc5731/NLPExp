@@ -7,8 +7,8 @@
     python baseline/extract_dict.py
 
 产出：
-    baseline/dict/dict_symptom.txt ... 5 个词表，每行 "词 频次"
-    baseline/dict/dict_stats.json  词表统计，写进报告用
+    dict_regen/dict_*.txt      各 min_count 下重新统计的词典（不覆盖冻结词典 dict/）
+    dict_regen/dict_stats.json 词表统计，写进报告用
 """
 import json
 import os
@@ -20,7 +20,9 @@ CODE_DIR = os.path.join(os.path.dirname(HERE), "bert_api", "code")
 sys.path.insert(0, CODE_DIR)
 
 ARTIFACTS = os.path.join(CODE_DIR, "artifacts")
-OUT_DIR = os.path.join(HERE, "dict")
+# 词典重建输出到独立目录：冻结词典在 baseline/dict/（已提交、供快速复现直接读取），
+# 这里重新统计的产物写到 dict_regen/，绝不覆盖冻结词典。
+OUT_DIR = os.path.join(HERE, "dict_regen")
 
 # 11 类标签里的 5 个实体类型（与 labels.py 一致，不要另起一份）
 ENTITY_TYPES = ["Symptom", "Drug", "Drug_Category", "Medical_Examination", "Operation"]

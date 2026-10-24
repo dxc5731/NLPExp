@@ -24,7 +24,8 @@ Thumbs.db
 # ===== 本地日志 =====
 *.log
 
-# ===== 注意 =====
-# baseline/out/ 里的小结果文件（sweep_*.json、error_analysis*.json、*_log.txt）
-# 是 RESULTS.md 的引用证据，保留入库。
-# 仅忽略其中可重生成的大体量预测 json 之外的临时文件。
+# ===== 注意：baseline/out/ 与 baseline/out_dev/ 里的结果文件（eval_*.json、
+# *_log.txt、error_analysis*.json、dev 预测/标准）是 RESULTS.md 的引用证据，保留入库。
+# 仅参数扫描的中间产物见下面一行。=====
+baseline/sweeps/
+baseline/dict_regen/

@@ -238,8 +238,11 @@ def main():
           f" acc={ch['acc']:.4f} | entity P={en['P']:.4f} R={en['R']:.4f} F1={en['F1']:.4f}")
 
     if args.save:
-        os.makedirs(OUT_DIR, exist_ok=True)
-        out_path = os.path.join(OUT_DIR, f"eval_{name}.json")
+        # 结果写到预测文件所在的目录：val 预测在 out/、dev 预测在 out_dev/，
+        # 各归各的目录，互不覆盖。
+        save_dir = os.path.dirname(os.path.abspath(args.pred)) or OUT_DIR
+        os.makedirs(save_dir, exist_ok=True)
+        out_path = os.path.join(save_dir, f"eval_{name}.json")
         payload = {"pred_file": os.path.abspath(args.pred),
                    "gold_file": os.path.abspath(args.gold),
                    "alignment": {k: (len(v) if isinstance(v, list) else v) for k, v in rep.items()},

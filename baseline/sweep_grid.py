@@ -9,9 +9,9 @@
 一律按 **实体级 F1** 选参（见 RESULTS.md §3.3：句级目标选出来的阈值在实体级上会掉 0.14）。
 
 产出：
-    out/pred_gated_mc<N>_t<θ>.json  每个组合一份预测（不覆盖）
-    out/sweep_grid.json              完整结果
-    out/sweep_grid_log.txt           表格（由调用方重定向）
+    sweeps/pred_gated_mc<N>_t<θ>.json  每个组合一份预测（不覆盖）
+    sweeps/sweep_grid.json             完整结果
+    sweeps/sweep_grid_log.txt          表格（由调用方重定向）
 
 用法：
     python baseline/sweep_grid.py
@@ -31,7 +31,7 @@ from run_rule import load_examples, load_lexicon, load_split_ids  # noqa: E402
 from tfidf_baseline import train_ovr, tfidf_row  # noqa: E402
 from train_tfidf import ENTITY_TYPES, load_xy  # noqa: E402
 
-OUT = os.path.join(HERE, "out")
+OUT = os.path.join(HERE, "sweeps")
 MC_GRID = [1, 2, 3, 5, 10, 20]
 THETA_GRID = [0.00, 0.02, 0.04, 0.06, 0.08, 0.10]
 

@@ -12,9 +12,9 @@
     python baseline/sweep_gated.py                       # 默认网格
     python baseline/sweep_gated.py 0.02 0.04 0.06 0.08   # 自定义网格
 产出：
-    out/pred_gated_<θ>.json   每个 θ 一份预测（不覆盖，便于核对）
-    out/sweep_gated.json      机器可读结果
-    out/sweep_gated_log.txt   表格（由调用方重定向）
+    sweeps/pred_gated_<θ>.json   每个 θ 一份预测（不覆盖，便于核对）
+    sweeps/sweep_gated.json      机器可读结果
+    sweeps/sweep_gated_log.txt   表格（由调用方重定向）
 """
 import json
 import os
@@ -32,7 +32,7 @@ from tfidf_baseline import train_ovr, tfidf_row  # noqa: E402
 from train_tfidf import ENTITY_TYPES, load_xy  # noqa: E402
 from src.labels import ENTITY_TYPES as LABEL_TYPES  # noqa: E402
 
-OUT = os.path.join(HERE, "out")
+OUT = os.path.join(HERE, "sweeps")
 DEFAULT_GRID = [0.00, 0.02, 0.04, 0.06, 0.08, 0.10, 0.15]
 
 

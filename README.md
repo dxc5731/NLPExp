@@ -8,11 +8,11 @@
 ## 0. 30 秒跑通基线（最重要的一条命令）
 
 ```powershell
-# 1) 指定数据目录（一次即可，指向含 IMCS-V2_train.json 的文件夹）
-$env:IMCS_DATA_DIR="D:\Research Project\demo\自然语言处理作业\IMCS-V2-NER"
-cd "D:\Research Project\demo\自然语言处理作业"
+# 1) 进入项目根（本 README 所在目录）
+cd <项目根>
 
 # 2) 一条命令得到主结果（纯规则基线，实体级 + 逐字级 P/R/F1）
+#    数据放项目根 IMCS-V2-NER/ 即可，程序会自动找到，无需设环境变量
 python baseline/run_rule.py 10 min10
 ```
 
@@ -31,6 +31,20 @@ python baseline/run_rule.py 10 min10
 标准答案写入 `baseline/out/val_gold.json`。
 
 > 若只想要默认词典（min_count=1）的对照结果：`python baseline/run_rule.py`（实体 F1=0.6247）。
+
+> 数据不在项目根时，才需要指定位置：`$env:IMCS_DATA_DIR="...\IMCS-V2-NER"`（自动发现在 `src/config.py`）。
+
+### 0.1 官方 dev 推理与评分（提交用，独立目录不覆盖 val）
+
+```powershell
+# 用冻结的 mc10 词典对官方 dev(833 对话/33267 句) 推理，产物写到 baseline/out_dev/
+python baseline/run_dev.py
+# 用同一把尺子给 dev 预测打分
+python baseline/eval_pred.py baseline/out_dev/pred_rule_min10_dev.json --gold baseline/out_dev/dev_gold.json --save
+```
+
+**预期（本机实测）**：dev 实体级 `P=0.7564 R=0.7757 F1=0.7659`（即 76.59%）。
+val 与 dev 是**两个不同划分**，数字不可混写：val 实体 F1=0.7620、dev 实体 F1=0.7659。
 
 ---
 
@@ -102,9 +116,14 @@ $env:LLM_API_KEY="sk-..."     # 具体变量名以组内实现为准
 - **切分**：由 `bert_api/code/artifacts/split_v1.json` 统一规定（`seed=42`，按整段对话 90:10 切 train/val）。
   全组**必须用同一份名单**，否则对比不公平。官方 dev **不参与训练和调参**，只用于最后提交。
 
-**数据放置两种方式（二选一）**：
-1. 放到 `bert_api/code/doc/数据/IMCS-V2-NER/IMCS-V2-NER/`（C 的默认路径）；
-2. 或用 `$env:IMCS_DATA_DIR` 指向任意位置（推荐，本文档统一用这个）。
+**数据放置（自动发现，无需环境变量）**：
+把 `IMCS-V2-NER/`（含 `IMCS-V2_train.json`）放到**项目根**（与 `baseline/`、`bert_api/` 同级）即可。
+程序在 `bert_api/code/src/config.py` 里按优先级自动查找以下位置，找到就用：
+1. `<项目根>/IMCS-V2-NER/`（推荐）
+2. `<项目根>/IMCS-V2-NER/IMCS-V2-NER/`（解压多套一层也可）
+3. `<bert_api>/doc/数据/IMCS-V2-NER/IMCS-V2-NER/`（原始交接包路径）
+
+数据放在别处时，再设环境变量覆盖：`$env:IMCS_DATA_DIR="...\IMCS-V2-NER"`。
 
 ---
 
@@ -115,60 +134,71 @@ $env:LLM_API_KEY="sk-..."     # 具体变量名以组内实现为准
 ├── README.md                     # 本文件
 ├── RESULTS.md                    # 所有实验数字 + 出处 + 更正记录（报告直接抄）
 ├── 项目摘要.md                    # 300 字项目摘要
+├── 贡献声明_学号_姓名.md           # 个人贡献声明模板
 ├── baseline/                     # 非大模型基线（本人负责）
-│   ├── extract_dict.py           #   从 train 提取 5 类词典
-│   ├── run_rule.py               #   纯规则基线（主入口）
+│   ├── run_rule.py               #   纯规则基线·val 跑分（主入口）
+│   ├── run_dev.py                #   ★官方 dev 推理（冻结词典，产物进 out_dev/）
+│   ├── eval_pred.py              #   ★唯一评测口径（任何方法的 pred.json 都能打分）
+│   ├── extract_dict.py           #   从 train 重建词典（产物进 dict_regen/，不碰冻结 dict/）
 │   ├── train_tfidf.py            #   TF-IDF 句级 5 类判类
 │   ├── gated_combo.py            #   TF-IDF 守门 + 规则组合
-│   ├── sweep_mincount.py         #   参数对比：词典 min_count
-│   ├── sweep_grid.py             #   参数对比：min_count × 阈值 二维
-│   ├── sweep_tfidf.py            #   参数对比：TF-IDF 阈值
+│   ├── sweep_mincount.py         #   参数对比：词典 min_count（产物进 sweeps/）
+│   ├── sweep_grid.py             #   参数对比：min_count × 阈值 二维（产物进 sweeps/）
+│   ├── sweep_tfidf.py            #   参数对比：TF-IDF 阈值（只打印）
 │   ├── error_analysis.py         #   错例分析：4 类互斥 + 逐类归因
-│   ├── eval_pred.py              #   ★唯一评测口径（任何方法的 pred.json 都能打分）
 │   ├── verify_fast_match.py      #   加速实现等价性自检
-│   ├── dict/                     #   词典产出
-│   └── out/                      #   预测、日志、评测结果
-├── bert_api/                     # BERT 数据接口（C 提供）
+│   ├── dict/                     #   ★冻结词典（已提交，快速复现直接读这里）
+│   ├── out/                      #   val 预测/日志/评测结果（已提交，报告证据）
+│   ├── out_dev/                  #   ★官方 dev 预测/标准/评测（独立，不覆盖 val）
+│   ├── dict_regen/               #   词典重建产物（可重生成，不入库）
+│   └── sweeps/                   #   参数扫描产物（可重生成，不入库）
+├── bert_api/                     # BERT 数据接口（C 提供；label_map 等公共依赖来源）
 │   └── code/src/                 #   labels.py 为全项目唯一标签来源
-└── IMCS-V2-NER/                  # 原始数据
+└── IMCS-V2-NER/                  # 原始数据（不入库）
 ```
+
+**输出目录约定（避免互相覆盖）**：
+- `dict/` 冻结词典、`out/` val 结果 = **交付证据**，已提交，普通复现只读不写。
+- `out_dev/` 官方 dev 结果 = 提交用，独立于 val。
+- `dict_regen/`、`sweeps/` = 重建/扫描产物，可随时重跑重生成，**不入库**（见 `.gitignore`）。
 
 ---
 
 ## 4. 完整实验复现命令
 
 ```powershell
-$env:IMCS_DATA_DIR="D:\Research Project\demo\自然语言处理作业\IMCS-V2-NER"
-cd "D:\Research Project\demo\自然语言处理作业"
+cd <项目根>   # 数据放 IMCS-V2-NER/ 于此，自动发现
 
-# 1) 词典（从 train 提取，产出 dict/dict_*.txt）
-python baseline/extract_dict.py
-
-# 2) 纯规则基线（默认 min_count=1）
-python baseline/run_rule.py
-python baseline/eval_pred.py baseline/out/pred_rule.json --save
-
-# 3) 纯规则基线（调参后最佳 min_count=10，报告主表用这组）
+# —— 快速复现（读冻结词典，秒级；报告主表就用这组）——
 python baseline/run_rule.py 10 min10
 python baseline/eval_pred.py baseline/out/pred_rule_min10.json --save
 
-# 4) TF-IDF 句级判类 + 阈值扫描
+# —— 官方 dev 推理 + 统一评分（提交用，独立 out_dev/）——
+python baseline/run_dev.py
+python baseline/eval_pred.py baseline/out_dev/pred_rule_min10_dev.json --gold baseline/out_dev/dev_gold.json --save
+
+# —— 对照：默认词典 min_count=1 ——
+python baseline/run_rule.py
+python baseline/eval_pred.py baseline/out/pred_rule.json --save
+
+# —— 词典重建（从 train 重新统计，产物进 dict_regen/，不覆盖冻结 dict/）——
+python baseline/extract_dict.py 10
+
+# —— TF-IDF 句级判类 + gated 组合 ——
 python baseline/train_tfidf.py
 python baseline/sweep_tfidf.py
-
-# 5) gated 组合（θ 按实体级 F1 选为 0.04）
 python baseline/gated_combo.py 0.04
 python baseline/eval_pred.py baseline/out/pred_gated.json --save
 
-# 6) 参数对比实验
-python baseline/sweep_mincount.py     # 词典 min_count 扫描
-python baseline/sweep_grid.py         # min_count × θ 二维扫描
+# —— 参数对比扫描（产物进 sweeps/，可重生成、不入库）——
+python baseline/sweep_mincount.py
+python baseline/sweep_grid.py
 
-# 7) 错例分析（min_count=1 与 10 各一份）
+# —— 错例分析（min_count=1 与 10 各一份）——
 python baseline/error_analysis.py
 python baseline/error_analysis.py 10
 
-# 8) 加速实现等价性自检（期望：A不一致=0 B不一致=0 -> 通过）
+# —— 加速实现等价性自检（期望：A不一致=0 B不一致=0 -> 通过）——
 python baseline/verify_fast_match.py
 ```
 
@@ -196,17 +226,21 @@ python baseline/eval_pred.py baseline/out/pred_llm.json  --tag llm  --save
 
 ---
 
-## 6. 主要结果（val，详见 `RESULTS.md`）
+## 6. 主要结果（详见 `RESULTS.md`）
 
-| 方法 | 逐字 F1 | 实体 P | 实体 R | 实体 F1 |
-|---|---|---|---|---|
-| **纯规则 + 词典 min_count=10**（最佳基线） | 0.7748 | 0.7630 | 0.7609 | **0.7620** |
-| 纯规则 + 词典 min_count=1 | 0.7308 | 0.5295 | 0.7617 | 0.6247 |
-| gated 组合（mc=1, θ=0.04） | 0.7289 | 0.5885 | 0.7025 | 0.6405 |
-| BERT / LLM（组内分工） | ⬜ | ⬜ | ⬜ | ⬜ |
+| 方法 | 划分 | 逐字 F1 | 实体 P | 实体 R | 实体 F1 |
+|---|---|---|---|---|---|
+| **纯规则 + 词典 min_count=10**（最佳基线） | val | 0.7748 | 0.7630 | 0.7609 | **0.7620** |
+| 纯规则 + 词典 min_count=10 | **dev（提交）** | 0.7843 | 0.7564 | 0.7757 | **0.7659** |
+| 纯规则 + 词典 min_count=1 | val | 0.7308 | 0.5295 | 0.7617 | 0.6247 |
+| gated 组合（mc=1, θ=0.04） | val | 0.7289 | 0.5885 | 0.7025 | 0.6405 |
+| BERT / LLM（组内分工） | val/dev | ⬜ | ⬜ | ⬜ | ⬜ |
 
 关键结论：**词典清洗（min_count 1→10）带来的 +0.1373，是把 TF-IDF 守门员增益（+0.0158）的 8 倍多**；
 词典干净后守门员的最优阈值退化为 0（即不起作用）。完整推导见 `RESULTS.md` §3。
+
+> **val 与 dev 不可混写**：val（9687 句，本组自切，用来调参）实体 F1=0.7620；
+> dev（33267 句，官方，只用于最后提交）实体 F1=0.7659。两者划分不同、句数不同，报告里分别标注。
 
 ---
 

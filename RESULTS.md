@@ -51,6 +51,21 @@ TF-IDF 守门员带来的增益**完全消失**——二维扫描（§3.4）里 
 
 差距 **0.1215**，全部来自词典清洗，不是来自模型。
 
+### 1.1 官方 dev 结果（提交用，独立 `out_dev/`）
+
+冻结 mc10 词典（baseline/dict/）直接推理官方 dev，评测口径与 val 完全一致：
+
+| 方法 | 划分 | 逐字 P | 逐字 R | 逐字 F1 | 实体级 P | 实体级 R | 实体级 F1 |
+|---|---|---|---|---|---|---|---|
+| 纯规则 + 冻结词典 mc=10 | **dev（33267 句）** | 0.8588 | 0.7217 | 0.7843 | 0.7564 | 0.7757 | **0.7659** |
+
+出处：`python baseline/run_dev.py` → `out_dev/pred_rule_min10_dev.json`，
+`python baseline/eval_pred.py baseline/out_dev/pred_rule_min10_dev.json --gold baseline/out_dev/dev_gold.json --save`
+→ `out_dev/eval_pred_rule_min10_dev.json`（tp=18290 fp=5891 fn=5288）。
+
+> **val 与 dev 不可混写**：val（9687 句，自切、可调参）实体 F1=0.7620；
+> dev（33267 句，官方、只提交）实体 F1=0.7659。划分与句数都不同，报告里分别标注。
+
 ## 2. 纯规则 逐类明细（val）
 
 ### 2.1 min_count=1（默认词典，8354 词）
@@ -327,35 +342,39 @@ gated 退化成纯规则，符合预期）。
 ## 6. 复现命令（PowerShell）
 
 ```powershell
-$env:IMCS_DATA_DIR="d:\Research Project\demo\自然语言处理作业\IMCS-V2-NER"
-cd "d:\Research Project\demo\自然语言处理作业"
+cd <项目根>   # 数据放 IMCS-V2-NER/ 于此，config.py 自动发现；数据在别处再设 $env:IMCS_DATA_DIR
 
 # 0) 接口自检（需要先放好 bert-base-chinese，见 bert_api/doc）
 cd bert_api/code; pip install -r requirements.txt; python -m scripts.demo_dataloader; cd ../..
 
-# 1) 词典
-python baseline/extract_dict.py                 # -> dict/dict_*.txt, dict/dict_stats.json
+# 1) 词典重建（从 train 重新统计，产物进 dict_regen/，不覆盖冻结 dict/）
+python baseline/extract_dict.py                 # -> dict_regen/dict_*.txt, dict_regen/dict_stats.json
 
 # 2) 纯规则（默认词典 min_count=1）
 python baseline/run_rule.py                     # -> out/pred_rule.json, out/val_gold.json, out/run_rule_log.txt
 python baseline/eval_pred.py baseline/out/pred_rule.json --save     # -> out/eval_pred_rule.json
 
-# 3) 纯规则（调参后最佳 min_count=10）—— 报告主表用这组
+# 3) 纯规则（调参后最佳 min_count=10）—— val 主表用这组
 python baseline/run_rule.py 10 min10            # -> out/pred_rule_min10.json, out/run_rule_min10_log.txt
 python baseline/eval_pred.py baseline/out/pred_rule_min10.json --save  # -> out/eval_pred_rule_min10.json
 
+# 3b) 官方 dev 推理 + 统一评分（提交用，独立 out_dev/，不覆盖 val）
+python baseline/run_dev.py                      # -> out_dev/pred_rule_min10_dev.json, out_dev/dev_gold.json
+python baseline/eval_pred.py baseline/out_dev/pred_rule_min10_dev.json --gold baseline/out_dev/dev_gold.json --save
+                                                # -> out_dev/eval_pred_rule_min10_dev.json（dev 实体 F1=0.7659）
+
 # 4) TF-IDF 句级 + 阈值
 python baseline/train_tfidf.py                  # -> out/tfidf_val.json
-python baseline/sweep_tfidf.py                  # -> out/sweep_log.txt
+python baseline/sweep_tfidf.py                  # -> 打印（不写文件）
 
 # 5) gated 组合（θ 用实体级 F1 选出来的 0.04）
 python baseline/gated_combo.py 0.04             # -> out/pred_gated.json, out/gated_log.txt
 python baseline/eval_pred.py baseline/out/pred_gated.json --save
 
-# 6) 参数对比（§3.3 / §3.4）
-python baseline/sweep_mincount.py               # -> out/sweep_mincount.json, out/sweep_mincount_log.txt
-python baseline/sweep_grid.py                  # -> out/sweep_grid.json, out/sweep_grid_log.txt
-python baseline/sweep_gated.py                  # -> out/pred_gated_<θ>.json, out/sweep_gated.json
+# 6) 参数对比（§3.3 / §3.4）—— 产物进 sweeps/，可重生成、不入库
+python baseline/sweep_mincount.py               # -> sweeps/sweep_mincount.json
+python baseline/sweep_grid.py                  # -> sweeps/sweep_grid.json
+python baseline/sweep_gated.py                  # -> sweeps/pred_gated_<θ>.json, sweeps/sweep_gated.json
 
 # 7) 错例分析（§4）
 python baseline/error_analysis.py               # -> out/errors_sample.txt, out/error_analysis.json
@@ -364,6 +383,10 @@ python baseline/error_analysis.py 10            # -> out/errors_sample_mc10.txt,
 # 8) 加速版等价性自检（不要省，它是 6) 的可信前提）
 python baseline/verify_fast_match.py            # 期望 SUMMARY ... -> 通过
 ```
+
+**输出目录约定**：`dict/`（冻结词典）、`out/`（val 证据）、`out_dev/`（dev 提交证据）**均已提交、只读**；
+`dict_regen/`（词典重建）与 `sweeps/`（参数扫描）是**可重生成的中间产物，不入库**。
+这样"快速复现"直接读冻结词典与已存预测，**不会覆盖任何交付证据**。
 
 **日志编码**：所有 `out/*.txt` 日志统一 UTF-8。重定向用
 `... 2>&1 | Out-File -Encoding utf8 <log>`；不要用 `*>`（PowerShell 5.1 默认写成 UTF-16）。

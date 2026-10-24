@@ -11,9 +11,9 @@
     只用 train 统计频次，val 评估，全程不碰 dev。
 
 产出：
-    out/dict_stats_min<N>.json  每个 min_count 的词典规模
-    out/sweep_mincount.json    每个 min_count 的完整指标
-    out/sweep_mincount_log.txt 表格（由调用方重定向）
+    sweeps/dict_stats_min<N>.json  每个 min_count 的词典规模
+    sweeps/sweep_mincount.json    每个 min_count 的完整指标
+    sweeps/sweep_mincount_log.txt 表格（由调用方重定向）
 
 用法：
     python baseline/sweep_mincount.py                  # 默认网格
@@ -32,7 +32,7 @@ from eval_pred import char_level, entity_level  # noqa: E402
 from fast_match import all_types, build_index, collect_candidates, select_bio  # noqa: E402
 from run_rule import load_examples, load_lexicon, load_split_ids  # noqa: E402
 
-OUT = os.path.join(HERE, "out")
+OUT = os.path.join(HERE, "sweeps")
 DEFAULT_GRID = [1, 2, 3, 5, 10, 20]
 
 

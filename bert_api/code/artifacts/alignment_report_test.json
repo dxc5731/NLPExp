@@ -1,0 +1,19 @@
+{
+  "split": "test",
+  "sentences": 32935,
+  "chars": 431570,
+  "max_tokens": 197,
+  "truncated": 0,
+  "uncovered_chars": 0,
+  "over_covered_chars": 0,
+  "offset_overlap": 0,
+  "unk_tokens": 204,
+  "multi_char_tokens": {
+    "2": 1186,
+    "3": 135,
+    "4": 7,
+    "5": 3
+  },
+  "roundtrip_mismatch_sentences": 0,
+  "roundtrip_mismatch_ratio": 0.0
+}
