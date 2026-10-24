@@ -1,0 +1,6 @@
+split,dialogues,sentences,characters,gold_entities,source
+official_train,2472,98529,1279361,69272,platform_v2_seed42_split_v1
+official_dev,833,33267,441339,23578,platform_v2_seed42_split_v1
+official_test,811,32935,431570,not_public,platform_v2_seed42_split_v1
+internal_train,2225,88842,1153312,62671,platform_v2_seed42_split_v1
+internal_val,247,9687,126049,6601,platform_v2_seed42_split_v1

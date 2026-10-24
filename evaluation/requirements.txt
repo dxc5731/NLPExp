@@ -1,0 +1,2 @@
+# Python >=3.10. Evaluation and public tests use only the standard library.
+# No pip dependencies are required; training and plotting environments are not included.

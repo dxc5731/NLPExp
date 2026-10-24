@@ -1,0 +1,4 @@
+reported_model_label,split,evidence_date,precision,recall,f1,evidence_level,upload_checkpoint_mapping,evidence_id
+Baseline,official_test,2026-10-24,0.7652110000000001,0.743156,0.754022,report_embedded_screenshot_visually_verified,unconfirmed,U001
+BERT-Softmax,official_test,2026-10-24,0.893373,0.8414069999999999,0.866611,report_embedded_screenshot_visually_verified,unconfirmed,U001
+BERTCRF_LR1e,official_test,2026-10-24,0.898801,0.864517,0.8813249999999999,report_embedded_screenshot_visually_verified,unconfirmed,U001

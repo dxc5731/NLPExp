@@ -1,0 +1,109 @@
+{
+  "evidence_date": "2026-10-24",
+  "metric_scale": "fractions in [0,1]",
+  "sources": [
+    {
+      "evidence_id": "E024",
+      "sha256": "3e5a86839fae07b046459e5bb14e3aa90d6ffd5e54b1043f0d6d11f08c44d290",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E027",
+      "sha256": "a7f8a213298da6984f15047986576ab27c012cba7825a72c104c754c18568741",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E030",
+      "sha256": "38c3450c0681c173b4bee5ad81aa70b56a15c61e9eb76c0e304abccfc4bd6617",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E044",
+      "sha256": "0973411b106670a5d74520328a13766d40d4206391f213e7977e74eab88b2a01",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E045",
+      "sha256": "7501699325df39092b40d121c740d4dd97d2653bff106d1d8aa4fd61064c380f",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E047",
+      "sha256": "212d70fdc577c9ca5b5d851855b5f6f67b7c0fc6fad527f59f87ddfc22c2cb9d",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E048",
+      "sha256": "ead09d83c2f402bafebdd53eda875a8274ccf35ea65e02a60b15cd4a1818bf0e",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E050",
+      "sha256": "12d83d73993871833cdc951c86da943ea05c1bad4e3c05f0efc08bca6d5f32c5",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E051",
+      "sha256": "b4e465677557201305dd40a3d85127ca0eb0e4e9805d53c4b4ada685c7705224",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E053",
+      "sha256": "af61cb9c19c926dd94157645b65891a735aec49016b0f5910c85d67efdc02bc9",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E054",
+      "sha256": "8e212ccc44c55b9367a1b45b9f43b682e20c19b8ad0b153d41fe12c62da5d754",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E056",
+      "sha256": "b4010c0a4bb7aa7828f2b9df09fa7d8012831947ac9a00cff95f2e3b17f72c7e",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E057",
+      "sha256": "c1c643c30779163a6a95fdb11e535cea6d16ba9af14e420451d18fbfd6c54f9a",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E059",
+      "sha256": "d19440ef9557cf08eb695b4df2f9d6b5e5580cd45fdb51f31c360408099170b1",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E060",
+      "sha256": "c55ee4502368a8a5c97de817db0e47e56c6dcfd314f5df4fd2164bedb990daeb",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E072",
+      "sha256": "46cb7441b41f864428f23642e1370acc57137e5737f5828970f2f09d29927111",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E136",
+      "sha256": "f25d5ed034b6ad8c64eac7ac565b5847e55b381f77332afa965603598142f9b3",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E137",
+      "sha256": "cd825b0d6cb9a5316f5ffa2da72cc5c19e2ca4c616a7a7f1866d7aebb8033a95",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    },
+    {
+      "evidence_id": "E138",
+      "sha256": "1e8e83b68b677a059a844b063bee9aabfc28287bbf8eb6f35b4f436d787cbf35",
+      "kind": "original_scoring_or_training_record_retained_locally"
+    }
+  ],
+  "supplemental_sources": {
+    "U001": {
+      "kind": "platform_screenshot_embedded_in_existing_report",
+      "embedded_png_sha256": "a32c68a5faa3b50f125acffd39bcdb963c5d42ae6a25a5cc9f86c3b1f8ae73a1",
+      "source_report_sha256": "d2ac7617ff4df1417673e4e3cc771fd0de74d295028eef638bf1420215a22aa2",
+      "notice": "Three displayed score rows visually verified this round; no upload receipt or confirmed checkpoint mapping."
+    }
+  }
+}

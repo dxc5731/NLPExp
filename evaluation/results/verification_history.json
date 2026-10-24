@@ -1,0 +1,14 @@
+{
+  "evidence_date": "2026-10-17",
+  "purpose": "synthetic_integration_test",
+  "status": "PASS",
+  "test_counts": {
+    "stage1": 42,
+    "stage2": 47,
+    "stage3": 49,
+    "all": 138
+  },
+  "source_summary_sha256": "37e160b8c8a20f55ee2530f5ec04418fa58e33980dd4c6326ec5fb0ccf07065c",
+  "input_hashes_unchanged": true,
+  "notice": "Historical synthetic engineering acceptance, not model performance; raw transcript remains local. Current public subset excludes three third-party reference tests."
+}

@@ -15,8 +15,6 @@ from src.evaluate_predictions import evaluate, save_result
 from src.ner_metrics import (Entity, LABEL_ORDER, extract_entities, prf_counts,
                              score_confusion_matrix, score_entity_sets, score_sequences)
 from src.validate_predictions import load_and_validate
-from author_entity_reference import author_entity_reference
-from crosscheck_author import crosscheck
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -403,34 +401,6 @@ class IntegrationTests(MetricAssertions):
         self.assertAlmostEqual(4 / 9, result["entities"]["micro"]["f1"], delta=TOL)
 
 
-class AuthorCrosscheckTests(MetricAssertions):
-    def test_actual_author_entity_block_mixed_five_types(self):
-        data = json.loads((FIXTURE / "data_dev.json").read_text(encoding="utf-8"))
-        pred = json.loads((FIXTURE / "predictions_dev.json").read_text(encoding="utf-8"))
-        reference = author_entity_reference(data, pred)
-        self.assertAlmostEqual(4 / 9, reference["overall_f1"], delta=TOL)
-        self.assertEqual((5, 4, 2), (reference["gold_total"], reference["predicted_total"], reference["tp"]))
-        expected = {"Symptom": 1, "Drug": 0, "Drug_Category": 0, "Medical_Examination": 0, "Operation": 1}
-        self.assertEqual(expected, {k: v["f1"] for k, v in reference["class_info"].items()})
-
-    def test_four_crosscheck_cases_overall_and_per_type(self):
-        result = crosscheck()
-        self.assertEqual("PASS", result["status"])
-        self.assertEqual([4 / 9, 1.0, 0.0, 10 / 11], [c["expected_overall_f1"] for c in result["cases"]])
-        for case in result["cases"]:
-            self.assertEqual("PASS", case["status"])
-            self.assertAlmostEqual(case["expected_overall_f1"], case["author"]["overall_f1"], delta=TOL)
-
-    def test_nontrivial_author_per_type_rounding(self):
-        data = {"d": {"dialogue": [{"sentence_id": "1", "sentence": "甲乙丙丁戊己",
-                                    "BIO_label": "B-Symptom B-Symptom B-Drug B-Drug_Category B-Medical_Examination B-Operation"}]}}
-        pred = {"d": {"1": "B-Symptom O B-Drug B-Drug_Category B-Medical_Examination B-Operation"}}
-        ref = author_entity_reference(data, pred)
-        self.assertEqual(0.6667, ref["class_info"]["Symptom"]["f1"])
-        self.assertAlmostEqual(10 / 11, ref["overall_f1"], delta=TOL)
-        ours = one(data["d"]["dialogue"][0]["BIO_label"], pred["d"]["1"])["entities"]
-        self.assertAlmostEqual(2 / 3, ours["per_type"]["Symptom"]["f1"], delta=TOL)
-        self.assertLessEqual(abs(ours["per_type"]["Symptom"]["f1"] - 0.6667), 0.00005)
 
 
 if __name__ == "__main__":
