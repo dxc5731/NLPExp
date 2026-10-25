@@ -1,4 +1,4 @@
-﻿# 附录 A：复现指南
+# 附录 A：复现指南
 
 > 本附录给出"别人拿到仓库后怎么跑起来"的完整步骤，以及 2026-10-25 实际执行的一次复现记录。
 
@@ -79,9 +79,17 @@ python -X utf8 src/evaluate_predictions.py --data <数据> --predictions <预测
 
 ## 5. BERT-CRF 模块
 
-见 [`docs/bert_crf/README.md`](../docs/bert_crf/README.md) 与
-[`docs/bert_crf/08_training_preflight_and_integration.md`](../docs/bert_crf/08_training_preflight_and_integration.md)，
-该模块使用独立的 `.venv-bert-crf` 环境。
+代码在 `src/bert_crf/`，配置在 `configs/bert_crf/`，结果包在 `handoff_packages/` 的 v1.1 里。
+该模块使用独立的 `.venv-bert-crf` 环境，权重与原始数据不公开，需向模块负责人索取。
+
+```bash
+python -m pytest tests/bert_crf -q                                   # 单元测试
+python scripts/train_bert_crf.py --config configs/bert_crf/lr_1e-5.json --preflight   # 预检，不训练
+python scripts/train_bert_crf.py --config configs/bert_crf/lr_1e-5.json --train       # 正式训练（需授权资产）
+```
+
+推理复现见包内 `reproduce/README.md`；也可以直接用包里已冻结的 dev/test 预测。
+阶段记录见 [`docs/bert_crf/README.md`](../docs/bert_crf/README.md)。
 
 ## 6. 实际复现记录
 

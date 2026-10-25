@@ -117,6 +117,29 @@ python -m src.train --lr 5e-5 --epochs 3             # 训练
 python -m src.predict --run-id <run_id> --split dev  # 推理导出
 ```
 
+## 快速开始（BERT-CRF）
+
+代码在 `src/bert_crf/`，配置在 `configs/bert_crf/`，**结果在 [`handoff_packages/`](handoff_packages/README.md) 的 v1.1 包里**
+（dev 实体 F1 **0.8935**，P 0.8757 / R 0.9120）。
+
+权重与原始数据不公开，需要向模块负责人索取（E5 checkpoint 约 1.2GB，SHA-256 见包内 `reproduce/README.md`）。
+
+```bash
+# 单元测试（不需要权重）
+python -m pytest tests/bert_crf -q
+
+# 启动前预检：检查数据与资源，不训练
+python scripts/train_bert_crf.py --config configs/bert_crf/lr_1e-5.json --preflight
+
+# 正式训练：需要已授权的数据与权重，必须显式加 --train
+python scripts/train_bert_crf.py --config configs/bert_crf/lr_1e-5.json --train
+```
+
+推理复现（生成 dev/test 预测）见包内 `reproduce/README.md`，或直接用 v1.1 包里已冻结的
+`dev/predictions_dev.json`、`test/predictions_test.json`。
+
+阶段记录与四轮实验对照见 [`docs/bert_crf/README.md`](docs/bert_crf/README.md)。
+
 ## 评估模块
 
 ```bash
