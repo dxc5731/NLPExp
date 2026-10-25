@@ -1,0 +1,22 @@
+{
+  "artifact_kind": "synthetic_smoke_test",
+  "epochs": 3,
+  "batch_size": 2,
+  "learning_rate": 0.00002,
+  "weight_decay": 0.01,
+  "adam_betas": [0.9, 0.999],
+  "adam_epsilon": 1e-8,
+  "scheduler": "linear",
+  "warmup_steps": 1,
+  "gradient_clip_norm": 1.0,
+  "seed": 1729,
+  "device": "cuda",
+  "precision": "float32",
+  "deterministic_algorithms": true,
+  "shuffle": true,
+  "selection_metric": "entity.micro.f1",
+  "selection_mode": "max",
+  "min_delta": 0.0,
+  "early_stopping_patience": null,
+  "model_config_path": "configs/bert_crf/stage1b_core_smoke.json"
+}

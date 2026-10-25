@@ -1,26 +1,49 @@
+# ---- Python ----
 **/__pycache__/
 *.py[cod]
 .pytest_cache/
 .cache/
-.venv/
-venv/
+.ipynb_checkpoints/
 .env
 .env.*
 !.env.example
-**/local_analysis/
-**/checkpoint-*/
-weights/
-checkpoints/
+
+# ---- 虚拟环境 ----
+.venv/
+.venv*/
+venv/
+env/
+/.local/
+
+# ---- 模型权重与检查点 ----
 *.safetensors
 *.pt
 *.pth
 *.ckpt
 *.bin
 *.onnx
+weights/
+checkpoints/
+**/checkpoint-*/
+runs/**/checkpoints/
+code/models/
+code/.hf-cache/
+
+# ---- 原始数据与压缩包 ----
+doc/数据/
 *.zip
+*.7z
+*.rar
+
+# ---- 证据与本地分析 ----
+/docs/bert_crf/evidence/
+**/local_analysis/
+handoff/
+doc/怎么跟我协作/
+
+# ---- 视频与系统文件 ----
 *.mp4
 *.mkv
 *.avi
-.ipynb_checkpoints/
 .DS_Store
 Thumbs.db

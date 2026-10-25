@@ -1,0 +1,16 @@
+{
+  "configs\\bert_crf\\stage1b_core_smoke.json": "7af7d3159cb5f22bc2b557822d7c3972677ca45c784b6ceae22fd7ffba9b56dc",
+  "docs\\bert_crf\\stage1b_finalize.py": "abd6b42b04c7e68f9ed8e5bcc98bbbe6ae2cae2e73b0e34d51761677eb521e8e",
+  "docs\\bert_crf\\stage1b_runner.py": "f4626a1b7861fde79a23c6d39aee0b443029bb798a29c37fb4b0ae871b7462dc",
+  "pytest.ini": "1bb569ed5a3774e6a081c7091193f031ba6e92af4f38b6f82ff15626161ad15f",
+  "src\\bert_crf\\__init__.py": "57b22c9dc692ea521e70bf75fa78ded1ced698bdc0e05bcc0d9a5763b8463c17",
+  "src\\bert_crf\\config.py": "675e1e82e1193a5e337ddc87a6c3774d69950646ebe4003a67c25b100803524a",
+  "src\\bert_crf\\constraints.py": "88830e7534a5a4c15bbb5f8181c8a99c0024f13fa383cb9ce29e6af51bea00f4",
+  "src\\bert_crf\\crf.py": "9d672cb5eaabbb01ec7d140b6c70b9bcdfa981134017b5cd5b37fc62e3de1df6",
+  "src\\bert_crf\\model.py": "bb36b456dff831bbaf269e6c7f0c8b77c189d044aeeb3704a1e898ed755c0029",
+  "tests\\bert_crf\\conftest.py": "06bb0bee65fe93fff2200494516cfcc6ec4d6f85172e7a464454d6124a070748",
+  "tests\\bert_crf\\test_constraints.py": "9f5be23bf44020f8df12a6ddfbaca3e3ec949e4a9e7c0ff37b8f33e4a9432d37",
+  "tests\\bert_crf\\test_crf.py": "bf6857294c3d00aff0577fd8a530a25cade773edd7dcd155f9ab592aaaffdb7d",
+  "tests\\bert_crf\\test_model.py": "4032717e7df09421d6545fb254b87c46ea39ca9f7f96dd681aa5744dc8943152",
+  "tests\\bert_crf\\test_pretrained.py": "2981a2b75b498a4986b7ae7312ca88a064c58708e2e03bfbe567c7a4abe04b5e"
+}

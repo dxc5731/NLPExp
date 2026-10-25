@@ -1,0 +1,402 @@
+{
+  "schema_version": "bert_crf_baseline_public_archive_v1",
+  "experiment_name": "Baseline Run 1",
+  "task": "IMCS-V2-NER / Task1",
+  "archive_scope": "Public aggregate-only documentation; complete medical-text evidence and weights remain local.",
+  "training_code_commit": "a955f56855f72c944010b93c9965c01187c15b4d",
+  "training_branch": "dxc",
+  "formal_configuration": {
+    "path": "configs/bert_crf/first_baseline.json",
+    "recorded_windows_working_file_sha256": "2bf995dc16e85060e25805862ccf8227f6dff6b2ee390070e98b276dd503389d",
+    "git_blob_content_sha256_at_training_commit": "f8a74c08a8b99e704710f13694389c1c925c63ba1c862d269d4730cbe321aa88",
+    "byte_hash_note": "Windows working file and Git blob differ only in CRLF/LF; JSON contents match both actual runs. Hashes identify bytes, not privacy protection.",
+    "schema_version": "bert_crf_formal_v1",
+    "model_name": "google-bert/bert-base-chinese",
+    "model_tokenizer_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+    "model_output_head_dropout": 0.1,
+    "training": {
+      "artifact_kind": "real_training",
+      "epochs": 5,
+      "batch_size": 16,
+      "learning_rate": 2e-05,
+      "weight_decay": 0.01,
+      "adam_betas": [
+        0.9,
+        0.999
+      ],
+      "adam_epsilon": 1e-08,
+      "scheduler": "linear",
+      "warmup_steps": 2777,
+      "gradient_clip_norm": 1.0,
+      "seed": 42,
+      "device": "cuda",
+      "precision": "float32",
+      "deterministic_algorithms": true,
+      "shuffle": true,
+      "selection_metric": "entity.micro.f1",
+      "selection_mode": "max",
+      "min_delta": 0.0,
+      "early_stopping_patience": 2,
+      "model_config_path": "inline:formal.model"
+    },
+    "resources": {
+      "max_tokens": 256,
+      "padding": "dynamic_longest",
+      "num_workers": 0,
+      "gradient_accumulation_steps": 1,
+      "amp": false
+    },
+    "warmup_ratio": 0.1,
+    "alignment": {
+      "policy": "offset_share_unique_v1",
+      "offset_unit": "python_unicode_codepoint",
+      "gold": "original_character_bio",
+      "uncovered": "reject",
+      "overlap": "reject",
+      "truncation": "reject"
+    }
+  },
+  "data": {
+    "dataset": "IMCS-V2-NER / IMCS21-CBLUE official train only",
+    "version": "IMCS-V2-NER_train_sha256_07cdd379",
+    "split_version": "split_v1_sha256_497f21cf",
+    "official_train_sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24",
+    "split_sha256": "497f21cf13d8f5accb83f86ffda16a4a59ba716c064ec347e990a219e8957072",
+    "sizes": {
+      "train": {
+        "dialogues": 2225,
+        "sentences": 88842,
+        "characters": 1153312
+      },
+      "val": {
+        "dialogues": 247,
+        "sentences": 9687,
+        "characters": 126049
+      }
+    },
+    "validation_gold_entities": 6601,
+    "validation_predicted_entities": 6679,
+    "official_dev_test_used": false
+  },
+  "environment": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.14.1+cu132",
+      "transformers": "5.20.1",
+      "tokenizers": "0.23.3",
+      "numpy": "2.4.6",
+      "pytest": "9.1.1"
+    },
+    "cuda_runtime": "13.2",
+    "cuda_available": true,
+    "cublas_workspace_config": ":4096:8",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "capability": [
+      12,
+      0
+    ]
+  },
+  "run_chain": {
+    "original_run_id": "20261020T185424+0800_real_training_71838655",
+    "original_status": "interrupted",
+    "completed_original_epochs": [
+      1,
+      2
+    ],
+    "resumed_run_id": "20261020T215116+0800_real_training_76608cc3",
+    "resumed_status": "completed",
+    "completed_resumed_epochs": [
+      3,
+      4,
+      5
+    ],
+    "resume_epoch": 2,
+    "resume_global_step": 11106,
+    "resume_checkpoint_sha256": "db221c3cc04e8870d33abef069944d9d9e0488c6d3016862f6daf44ebd359138",
+    "first_resumed_step": 11107,
+    "final_retained_step": 27765,
+    "early_stopping_triggered": false,
+    "stop_note": "Forced interruption during original epoch3. Preserved epoch2 checkpoint; discarded partial epoch3 updates and replayed epoch3 in a separate run.",
+    "process_exit_code": null,
+    "exit_code_note": "Final OS numeric process exit code was not persisted; logical completion is supported by manifest, logs, history, checkpoints and predictions."
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 1.1740611342955645,
+      "val_loss": 0.4064097930258539,
+      "val_entity_precision": 0.9022042843837318,
+      "val_entity_recall": 0.8804726556582336,
+      "val_entity_f1": 0.8912060108870659,
+      "learning_rate": 1.777813350408196e-05,
+      "epoch_elapsed_seconds": 1398.8013623000588,
+      "global_step": 5553,
+      "optimizer_steps_in_epoch": 5553,
+      "cumulative_completed_epoch_seconds": 1398.8013623000588,
+      "selected_best": false,
+      "checkpoint_sha256": "9b785da7dfd011b5437ff61788e61084a70173a9f1eb8b2d36f70834b7de6abf"
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.3517742135318862,
+      "val_loss": 0.3992348076931227,
+      "val_entity_precision": 0.8932038834951457,
+      "val_entity_recall": 0.89198606271777,
+      "val_entity_f1": 0.8925945577200031,
+      "learning_rate": 1.333360012806147e-05,
+      "epoch_elapsed_seconds": 1393.7531501001213,
+      "global_step": 11106,
+      "optimizer_steps_in_epoch": 5553,
+      "cumulative_completed_epoch_seconds": 2792.55451240018,
+      "selected_best": false,
+      "checkpoint_sha256": "db221c3cc04e8870d33abef069944d9d9e0488c6d3016862f6daf44ebd359138"
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.2563927958085154,
+      "val_loss": 0.43422783760016853,
+      "val_entity_precision": 0.8944981862152358,
+      "val_entity_recall": 0.8965308286623239,
+      "val_entity_f1": 0.8955133540137703,
+      "learning_rate": 8.88906675204098e-06,
+      "epoch_elapsed_seconds": 1182.0809261999093,
+      "global_step": 16659,
+      "optimizer_steps_in_epoch": 5553,
+      "cumulative_completed_epoch_seconds": 3974.6354386000894,
+      "selected_best": false,
+      "checkpoint_sha256": "2a86041a02dfb1d22f1b1df345a15151c8fb8f4237699d7718244d7b8ae16cbd"
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.18781227463796293,
+      "val_loss": 0.49964012928123236,
+      "val_entity_precision": 0.8911350703803534,
+      "val_entity_recall": 0.9015300712013331,
+      "val_entity_f1": 0.8963024324120793,
+      "learning_rate": 4.44453337602049e-06,
+      "epoch_elapsed_seconds": 1097.3334357000422,
+      "global_step": 22212,
+      "optimizer_steps_in_epoch": 5553,
+      "cumulative_completed_epoch_seconds": 5071.968874300132,
+      "selected_best": false,
+      "checkpoint_sha256": "90f8d35738ac4193585c7cbc738e613968481f3d1a3ba55144d1167131f304aa"
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.13030616565960154,
+      "val_loss": 0.6008118890542,
+      "val_entity_precision": 0.8916005390028447,
+      "val_entity_recall": 0.9021360399939403,
+      "val_entity_f1": 0.8968373493975903,
+      "learning_rate": 0.0,
+      "epoch_elapsed_seconds": 1102.327916600043,
+      "global_step": 27765,
+      "optimizer_steps_in_epoch": 5553,
+      "cumulative_completed_epoch_seconds": 6174.2967909001745,
+      "selected_best": true,
+      "checkpoint_sha256": "220b237d3f6e545a8b86459adccb38c16e0c79cc9f541dc5f975c3bfe321b9e9"
+    }
+  ],
+  "best": {
+    "epoch": 5,
+    "entity_micro": {
+      "precision": 0.8916005390028447,
+      "recall": 0.9021360399939403,
+      "f1": 0.8968373493975903,
+      "tp": 5955,
+      "fp": 724,
+      "fn": 646,
+      "predicted": 6679,
+      "gold": 6601
+    },
+    "entity_macro_f1": 0.8957733263889175,
+    "per_type": {
+      "Symptom": {
+        "precision": 0.8889380530973451,
+        "recall": 0.9035304699797616,
+        "f1": 0.896174863387978,
+        "tp": 4018,
+        "fp": 502,
+        "fn": 429,
+        "predicted": 4520,
+        "gold": 4447
+      },
+      "Drug": {
+        "precision": 0.9265927977839336,
+        "recall": 0.9227586206896552,
+        "f1": 0.9246717346233587,
+        "tp": 669,
+        "fp": 53,
+        "fn": 56,
+        "predicted": 722,
+        "gold": 725
+      },
+      "Drug_Category": {
+        "precision": 0.90020366598778,
+        "recall": 0.9020408163265307,
+        "f1": 0.9011213047910296,
+        "tp": 442,
+        "fp": 49,
+        "fn": 48,
+        "predicted": 491,
+        "gold": 490
+      },
+      "Medical_Examination": {
+        "precision": 0.8703403565640194,
+        "recall": 0.8731707317073171,
+        "f1": 0.8717532467532467,
+        "tp": 537,
+        "fp": 80,
+        "fn": 78,
+        "predicted": 617,
+        "gold": 615
+      },
+      "Operation": {
+        "precision": 0.878419452887538,
+        "recall": 0.8919753086419753,
+        "f1": 0.885145482388974,
+        "tp": 289,
+        "fp": 40,
+        "fn": 35,
+        "predicted": 329,
+        "gold": 324
+      }
+    },
+    "validation_loss": 0.6008118890542,
+    "checkpoint_sha256": "220b237d3f6e545a8b86459adccb38c16e0c79cc9f541dc5f975c3bfe321b9e9",
+    "checkpoint_bytes": 1220509451,
+    "checkpoint_local_relative_path": "experiments/bert_crf/20261020T215116+0800_real_training_76608cc3/checkpoints/epoch_0005.pt"
+  },
+  "selection_rule": "Max internal-val strict entity Micro F1; exact ties retain earlier epoch.",
+  "timing_and_updates": {
+    "completed_epoch_seconds_sum": 6174.2967909001745,
+    "original_start_to_stop_wall_seconds": 3186.238563,
+    "original_fit_timer_seconds": null,
+    "resumed_fit_seconds": 3384.7140045000706,
+    "combined_active_time_estimate_seconds": 6570.9525675000705,
+    "combined_active_time_estimate_scope": "Original manifest start-to-confirmed-stop wall + resumed fit timer; slightly different timing boundaries, excludes long pause",
+    "end_to_end_wall_seconds_including_pause": 13997.661449,
+    "pause_between_runs_manifest_seconds": 7425.777556,
+    "retained_optimizer_steps": 27765,
+    "resumed_optimizer_steps": 16659,
+    "logged_updates_all_invocations": 29368,
+    "logged_discarded_partial_epoch_updates": 1603,
+    "exact_physical_updates": null,
+    "physical_count_limitation": "Forced stop could interrupt after optimizer.step before batch log; logged count is a lower bound, retained lineage count is exact.",
+    "early_stopping_triggered": false,
+    "configured_epochs_completed": 5
+  },
+  "historical_audit_verification": {
+    "source": "Prior independent audit; not re-run during publication.",
+    "five_epochs_saved_predictions_independently_rescored": true,
+    "all_five_checkpoints_readable": true,
+    "best_checkpoint_inference_verified_samples": 47,
+    "all_sample_predictions_match": true,
+    "gold_removed_predictions_match": true,
+    "full_validation_reinference_performed": false,
+    "recovery_optimizer_scheduler_rng_and_early_stop_verified": true
+  },
+  "error_analysis": {
+    "sentences_with_entity_error": 814,
+    "original_side_categories": {
+      "FN": {
+        "no_overlapping_counterpart": 225,
+        "boundary_same_type_overlap": 341,
+        "type_only_exact_span": 38,
+        "boundary_and_type_overlap": 42
+      },
+      "FP": {
+        "boundary_same_type_overlap": 355,
+        "type_only_exact_span": 38,
+        "no_overlapping_counterpart": 292,
+        "boundary_and_type_overlap": 39
+      }
+    },
+    "component_partition": {
+      "isolated_gold_miss": {
+        "components": 225,
+        "fn": 225,
+        "fp": 0
+      },
+      "one_to_one_same_type_boundary": {
+        "components": 277,
+        "fn": 277,
+        "fp": 277
+      },
+      "one_to_one_type_only": {
+        "components": 38,
+        "fn": 38,
+        "fp": 38
+      },
+      "isolated_prediction_spurious": {
+        "components": 292,
+        "fn": 0,
+        "fp": 292
+      },
+      "one_to_one_boundary_and_type": {
+        "components": 31,
+        "fn": 31,
+        "fp": 31
+      },
+      "one_gold_to_many_predictions_split_candidate": {
+        "components": 32,
+        "fn": 32,
+        "fp": 64
+      },
+      "many_gold_to_one_prediction_merge_candidate": {
+        "components": 20,
+        "fn": 41,
+        "fp": 20
+      },
+      "many_to_many_complex": {
+        "components": 1,
+        "fn": 2,
+        "fp": 2
+      }
+    },
+    "boundary_shapes": {
+      "overextended": 155,
+      "undercovered": 119,
+      "shifted": 3
+    },
+    "representative_cases_reviewed_locally": 23,
+    "representative_case_text_published": false,
+    "group_statistics": "docs/bert_crf/analysis/grouped_error_statistics.csv",
+    "findings": [
+      "同类边界不一致是最大的错误侧桶；孤立漏/误识别也占重要部分。",
+      "Medical_Examination长实体组表现较低，且存在检查/症状/操作语义混淆。",
+      "Symptom错误绝对贡献大，与其金标支持数占比接近；较长表达明显较弱。",
+      "控制精确实体数与密度后长句相关性仍在，不能归因于单一模型因素。",
+      "共享Token与数字/英文强相关，完全控制后共同支持很窄，不足以认定映射缺陷或排除表示影响。"
+    ],
+    "no_reproducible_character_mapping_implementation_mismatch_found": true
+  },
+  "source_evidence_local_only": [
+    {
+      "role": "independent_baseline_audit",
+      "directory": "docs/bert_crf/evidence/20261020T230513+0800_baseline_run1_audit",
+      "report": "baseline_audit_report.md",
+      "report_sha256": "ca5ee812571d5a08a1e66ed9c2376b102bb19a4ac286ba6036f1f4994f55522a",
+      "summary": "baseline_audit_summary.json",
+      "summary_sha256": "fef901c2e6640861ba6f7070a1f2755069f8c97e23ed9045482f87bbcfc1914f"
+    },
+    {
+      "role": "targeted_error_analysis",
+      "directory": "docs/bert_crf/evidence/20261020T234238+0800_baseline_error_analysis",
+      "report": "error_analysis_report.md",
+      "report_sha256": "d7b4159834782ef6dd971ee7caa3b3240ffef4c250fef45b7b9f41a043cdf6f7",
+      "summary": "error_analysis_summary.json",
+      "summary_sha256": "525e4f06fd10c567c1497e35168c52050a4ab671400f9fe7937222e530b705b4"
+    }
+  ],
+  "limitations": [
+    "Single seed and baseline; no causal hyperparameter conclusions.",
+    "No official dev/test result.",
+    "Local data, fixed split, pretrained weights and checkpoints are required; GitHub documents alone do not reproduce training.",
+    "Interruption leaves exact physical optimizer update count and original total fit timer unavailable; retained lineage is exact.",
+    "Case semantics and annotation policy require human review; conditional analyses have residual confounding and limited common support."
+  ],
+  "next_action": "Human review of annotation/boundary conventions first; then consider only output-head Dropout 0.1 to 0.2, all other settings fixed.",
+  "new_training_or_inference_during_archiving": false
+}

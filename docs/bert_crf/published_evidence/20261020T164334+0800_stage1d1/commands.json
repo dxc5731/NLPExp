@@ -1,0 +1,96 @@
+[
+  {
+    "name": "new_tests_01",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "pytest",
+      "tests/bert_crf/test_character_adapter.py",
+      "-q",
+      "--basetemp=.local/bert_crf/20261020T164334+0800_stage1d1/pytest_new_01",
+      "--junitxml=docs/bert_crf/evidence/20261020T164334+0800_stage1d1/new_tests_01.xml"
+    ],
+    "exit_code": 1,
+    "elapsed_seconds": 13.660726200090721,
+    "log_sha256": "64519920d9b1112158f45468150eb3f9043f2aa49e0a778b2eec27280865ebad"
+  },
+  {
+    "name": "new_tests_02",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "pytest",
+      "tests/bert_crf/test_character_adapter.py",
+      "-q",
+      "--basetemp=.local/bert_crf/20261020T164334+0800_stage1d1/pytest_new_02",
+      "--junitxml=docs/bert_crf/evidence/20261020T164334+0800_stage1d1/new_tests_02.xml"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 10.09437320008874,
+    "log_sha256": "4801db94fe597652a8e1a959fc4941ed23825f4e8e12ea5cb6f7b61cd45695ea"
+  },
+  {
+    "name": "full_coverage_01",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "docs/bert_crf/stage1d1_integration_check.py",
+      "scan"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 127.71600989997387,
+    "log_sha256": "2a50d261bc37507e2fc64c0d4f226374d59db415b4484c31a9697cfa8ae43934"
+  },
+  {
+    "name": "real_cuda_01",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "docs/bert_crf/stage1d1_integration_check.py",
+      "cuda"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 15.885654899990186,
+    "log_sha256": "8101e17eae31f085cf3575acccb4e92aecefdddcc769881492d10976494485d3"
+  },
+  {
+    "name": "full_regression_01",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "pytest",
+      "tests/bert_crf",
+      "-v",
+      "-s",
+      "--basetemp=.local/bert_crf/20261020T164334+0800_stage1d1/pytest_all_01",
+      "--pretrained-dir=.local/bert_crf/20261019T174356+0800_stage1b/pretrained",
+      "--smoke-output=docs/bert_crf/evidence/20261020T164334+0800_stage1d1/core_gpu_regression.json",
+      "--checkpoint-dir=.local/bert_crf/20261020T164334+0800_stage1d1/core_regression_checkpoint",
+      "--trainer-smoke-summary=docs/bert_crf/evidence/20261019T192215+0800_stage1c/pretrained_trainer_final.json",
+      "--junitxml=docs/bert_crf/evidence/20261020T164334+0800_stage1d1/full_regression_01.xml"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 23.883799099829048,
+    "log_sha256": "c02c9a4c1cf482ad0540729b3f47919cc3ef44fbd9d1267c17cccd4c9a4fbf1d"
+  },
+  {
+    "name": "finalize",
+    "command": [
+      "<PROJECT>/.venv-bert-crf/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "docs/bert_crf/stage1d1_finalize.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.61218969989568,
+    "log_sha256": "fc764728b37d935e6fba91e24e8159cd18056940bf1261b0ca56e54657294e36"
+  }
+]

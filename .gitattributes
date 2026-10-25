@@ -1,5 +1,6 @@
-# Hashes in fixtures and evidence refer to raw bytes; do not convert line endings.
+# 证据与 fixture 的哈希按原始字节计算，不做换行转换
 evaluation/** -text
+docs/bert_crf/published_evidence/** -text -whitespace
 README.md text eol=lf
 .gitignore text eol=lf
 .gitattributes text eol=lf

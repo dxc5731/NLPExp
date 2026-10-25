@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-10-19T16:07:20.496607+08:00",
+  "scope": "Official train only. No dev/test label parsing.",
+  "dialogue_fields": [
+    "diagnosis",
+    "dialogue",
+    "explicit_info",
+    "implicit_info",
+    "report",
+    "self_report"
+  ],
+  "sentence_fields": [
+    "BIO_label",
+    "dialogue_act",
+    "local_implicit_info",
+    "sentence",
+    "sentence_id",
+    "speaker",
+    "symptom_norm",
+    "symptom_type"
+  ],
+  "mapping_bio2id": {
+    "PAD": 0,
+    "O": 1,
+    "B-Symptom": 2,
+    "I-Symptom": 3
+  },
+  "mapping_id2bio": {
+    "0": "PAD",
+    "1": "O",
+    "2": "B-Symptom",
+    "3": "I-Symptom"
+  },
+  "illegal_BIO_transitions": 0,
+  "illegal_BIO_examples_no_text": [],
+  "duplicate_sentence_ids_within_dialogue": 0,
+  "empty_sentences": 0,
+  "sentences_with_whitespace": 0,
+  "sentences_with_nonbmp": 0
+}

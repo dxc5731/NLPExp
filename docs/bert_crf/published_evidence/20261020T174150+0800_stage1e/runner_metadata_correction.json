@@ -1,0 +1,6 @@
+{
+  "field": "started_at",
+  "inherited_prior_stage_value": "2026-10-20T16:43:34.763804+08:00",
+  "correct_stage1e_start": "2026-10-20T17:41:50+08:00",
+  "basis": "Actual unique prepare run timestamp; initial files/logs unchanged"
+}

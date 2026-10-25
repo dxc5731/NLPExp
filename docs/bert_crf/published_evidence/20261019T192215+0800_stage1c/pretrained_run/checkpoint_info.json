@@ -1,0 +1,13 @@
+{
+  "artifact_kind": "synthetic_smoke_test",
+  "latest": "C:\\userProgram\\NLPexp\\experiments\\bert_crf\\20261019T192609+0800_synthetic_smoke_test_61102491\\checkpoints\\epoch_0003.pt",
+  "latest_sha256": "bd5b93f40cdf0cbaac2c12d1386c5f50dab38a1c5218b8a6b0b7010d38fb1d68",
+  "epoch": 3,
+  "global_step": 6,
+  "best_value": 0.4,
+  "best_epoch": 1,
+  "bad_epochs": 2,
+  "best_checkpoint": "C:\\userProgram\\NLPexp\\experiments\\bert_crf\\20261019T192609+0800_synthetic_smoke_test_61102491\\checkpoints\\epoch_0001.pt",
+  "best_checkpoint_sha256": "f775754eec5dcfc5bfc64c50c8b0f227975bd606023f5d45262ac43e20ae595b",
+  "selection_reason": "tie/insufficient improvement; earlier best retained"
+}

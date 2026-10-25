@@ -1,0 +1,17 @@
+[main 8276e09] Implement constrained character BERT-CRF core and GPU smoke tests
+ 15 files changed, 1263 insertions(+)
+ create mode 100644 configs/bert_crf/stage1b_core_smoke.json
+ create mode 100644 docs/bert_crf/02_model_core_and_smoke_tests.md
+ create mode 100644 docs/bert_crf/stage1b_finalize.py
+ create mode 100644 docs/bert_crf/stage1b_runner.py
+ create mode 100644 pytest.ini
+ create mode 100644 src/bert_crf/__init__.py
+ create mode 100644 src/bert_crf/config.py
+ create mode 100644 src/bert_crf/constraints.py
+ create mode 100644 src/bert_crf/crf.py
+ create mode 100644 src/bert_crf/model.py
+ create mode 100644 tests/bert_crf/conftest.py
+ create mode 100644 tests/bert_crf/test_constraints.py
+ create mode 100644 tests/bert_crf/test_crf.py
+ create mode 100644 tests/bert_crf/test_model.py
+ create mode 100644 tests/bert_crf/test_pretrained.py

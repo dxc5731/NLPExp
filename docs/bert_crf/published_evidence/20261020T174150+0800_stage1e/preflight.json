@@ -1,0 +1,62 @@
+{
+  "artifact_kind": "environment_check",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "configuration",
+      "status": "PASS",
+      "detail": "strict explicit schema; FP32; fixed BIO and selection policy"
+    },
+    {
+      "check": "output_paths",
+      "status": "PASS",
+      "detail": "new unique run directories; writable log/checkpoint/results root; disk budget"
+    },
+    {
+      "check": "inputs_and_providers",
+      "status": "PASS",
+      "detail": "all input file hashes verified; fixed complete disjoint IDs; original character gold"
+    },
+    {
+      "check": "full_character_coverage",
+      "status": "PASS",
+      "detail": {
+        "train": {
+          "sentences": 88842,
+          "characters": 1153312
+        },
+        "val": {
+          "sentences": 9687,
+          "characters": 126049
+        }
+      }
+    },
+    {
+      "check": "resource_contract",
+      "status": "PASS",
+      "detail": {
+        "batch_size": 16,
+        "gpu_total_bytes": 8546484224,
+        "free_bytes": 7385120768
+      }
+    },
+    {
+      "check": "real_forward_backward_and_validation",
+      "status": "PASS",
+      "detail": "finite loss/gradients, legal equal-length decode, parameter hashes unchanged"
+    }
+  ],
+  "optimizer_steps": 0,
+  "formal_config_identity": "aa71214c422727c99f60794345e48424c23293fa5e65e88f3169317e04b6145f",
+  "run_id": "preflight_final",
+  "started_at": "2026-10-20T17:57:50.237375+08:00",
+  "code": {
+    "commit": "663f727949a4b923fa84c3b76ec64efad7bd72a1",
+    "dirty_status": "M src/bert_crf/checkpoint.py\n M src/bert_crf/config.py\n M src/bert_crf/experiment.py\n M src/bert_crf/train.py\n M src/bert_crf/trainer.py\n M src/bert_crf/training_config.py\n?? configs/bert_crf/first_baseline.json\n?? configs/bert_crf/stage1d1_integration.json\n?? docs/bert_crf/04_interface_v2_audit.md\n?? docs/bert_crf/05_character_adapter_integration.md\n?? docs/bert_crf/06_pretraining_readiness_review.md\n?? docs/bert_crf/interface_v2_alignment_audit.py\n?? docs/bert_crf/interface_v2_finalize.py\n?? docs/bert_crf/interface_v2_runner.py\n?? docs/bert_crf/published_evidence/20261020T174150+0800_stage1e/\n?? docs/bert_crf/stage1d1_finalize.py\n?? docs/bert_crf/stage1d1_integration_check.py\n?? docs/bert_crf/stage1d1_runner.py\n?? docs/bert_crf/stage1d_closeout_review.py\n?? docs/bert_crf/stage1e_checks.py\n?? docs/bert_crf/stage1e_runner.py\n?? scripts/\n?? src/bert_crf/character_mapping.py\n?? src/bert_crf/data_adapter.py\n?? src/bert_crf/formal_config.py\n?? src/bert_crf/preflight.py\n?? src/bert_crf/real_data.py\n?? src/bert_crf/run_artifacts.py\n?? tests/bert_crf/test_character_adapter.py\n?? tests/bert_crf/test_character_real_integration.py\n?? tests/bert_crf/test_formal_training.py",
+    "source_manifest_sha256": "54ee5870a10583510604053ddcfaeb9a865523069bee06bf082e4efef1574a02",
+    "source_snapshot": "source_snapshot/",
+    "tracked_patch": "tracked_changes.patch"
+  },
+  "completed_at": "2026-10-20T17:58:58.650864+08:00",
+  "elapsed_seconds": 68.4136413000524
+}

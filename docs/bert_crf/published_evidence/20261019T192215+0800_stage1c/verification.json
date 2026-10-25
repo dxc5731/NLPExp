@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-10-19T19:30:19.717386+08:00",
+  "tests": {
+    "tests": 130,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "public_interface_unchanged_files": 16,
+  "unchanged_stage1b_sources": [
+    "src/bert_crf/model.py",
+    "src/bert_crf/crf.py",
+    "src/bert_crf/constraints.py",
+    "src/bert_crf/config.py"
+  ],
+  "tested_current_source_count": 24,
+  "real_data_used": false,
+  "weights_downloaded": false,
+  "canonical_run": "C:\\userProgram\\NLPexp\\experiments\\bert_crf\\20261019T192609+0800_synthetic_smoke_test_61102491",
+  "checkpoint_published": false
+}

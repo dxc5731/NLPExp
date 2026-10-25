@@ -1,0 +1,255 @@
+{
+  "artifact_kind": "real_data_integration_test",
+  "status": "PASS",
+  "model_config": {
+    "schema_version": "1.0",
+    "artifact_kind": "real_data_integration_test",
+    "bert_model_name": "google-bert/bert-base-chinese",
+    "bert_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+    "hidden_size": 768,
+    "num_labels": 11,
+    "labels": [
+      "O",
+      "B-Symptom",
+      "I-Symptom",
+      "B-Drug",
+      "I-Drug",
+      "B-Drug_Category",
+      "I-Drug_Category",
+      "B-Medical_Examination",
+      "I-Medical_Examination",
+      "B-Operation",
+      "I-Operation"
+    ],
+    "dropout": 0.1,
+    "bio_constraints": true,
+    "constraint_rule_version": "strict_bio_v1",
+    "seed": 1729,
+    "device": "cuda",
+    "precision": "float32",
+    "deterministic_algorithms": true
+  },
+  "parameters": 101685658,
+  "pretrained_path": "<PROJECT>\\.local\\bert_crf\\20261019T174356+0800_stage1b\\pretrained",
+  "pretrained_weights_sha256": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3",
+  "pretrained_load_seconds": 1.508818699978292,
+  "batches": {
+    "train": {
+      "tensors": {
+        "input_ids": {
+          "shape": [
+            2,
+            10
+          ],
+          "dtype": "torch.int64"
+        },
+        "attention_mask": {
+          "shape": [
+            2,
+            10
+          ],
+          "dtype": "torch.int64"
+        },
+        "offsets": {
+          "shape": [
+            2,
+            10,
+            2
+          ],
+          "dtype": "torch.int64"
+        },
+        "character_labels": {
+          "shape": [
+            2,
+            8
+          ],
+          "dtype": "torch.int64"
+        },
+        "character_mask": {
+          "shape": [
+            2,
+            8
+          ],
+          "dtype": "torch.bool"
+        },
+        "character_lengths": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.int64"
+        },
+        "special_tokens_mask": {
+          "shape": [
+            2,
+            10
+          ],
+          "dtype": "torch.bool"
+        }
+      },
+      "ids": [
+        [
+          "10000795",
+          "1"
+        ],
+        [
+          "10000795",
+          "2"
+        ]
+      ],
+      "character_lengths": [
+        2,
+        8
+      ],
+      "text_sha256": [
+        "609bc0751d56eb467961e2bc6f798f7d44627696248e52315e1d6d091bdf502a",
+        "8429e0331fcad22521259f89cd95b7a5c6e9109aafd9e191cade0779004d8017"
+      ],
+      "gold_source": "Dataset.char_labels via verified composite ID; token labels unused",
+      "metadata_fields": [
+        "dialogue_ids",
+        "sentence_ids",
+        "texts"
+      ],
+      "medical_text_omitted": true,
+      "loss": 11.773172378540039,
+      "forward_backward_seconds": 0.738567299908027,
+      "gradients": {
+        "bert": {
+          "trainable_tensors": 197,
+          "finite_gradient_tensors": 197,
+          "nonzero_gradient_tensors": 197,
+          "missing": [],
+          "nonfinite": []
+        },
+        "linear": {
+          "trainable_tensors": 2,
+          "finite_gradient_tensors": 2,
+          "nonzero_gradient_tensors": 2,
+          "missing": [],
+          "nonfinite": []
+        },
+        "crf": {
+          "trainable_tensors": 3,
+          "finite_gradient_tensors": 3,
+          "nonzero_gradient_tensors": 3,
+          "missing": [],
+          "nonfinite": []
+        }
+      },
+      "prediction_lengths": [
+        2,
+        8
+      ],
+      "optimizer_created": false,
+      "optimizer_steps": 0
+    },
+    "val": {
+      "tensors": {
+        "input_ids": {
+          "shape": [
+            2,
+            40
+          ],
+          "dtype": "torch.int64"
+        },
+        "attention_mask": {
+          "shape": [
+            2,
+            40
+          ],
+          "dtype": "torch.int64"
+        },
+        "offsets": {
+          "shape": [
+            2,
+            40,
+            2
+          ],
+          "dtype": "torch.int64"
+        },
+        "character_labels": {
+          "shape": [
+            2,
+            39
+          ],
+          "dtype": "torch.int64"
+        },
+        "character_mask": {
+          "shape": [
+            2,
+            39
+          ],
+          "dtype": "torch.bool"
+        },
+        "character_lengths": {
+          "shape": [
+            2
+          ],
+          "dtype": "torch.int64"
+        },
+        "special_tokens_mask": {
+          "shape": [
+            2,
+            40
+          ],
+          "dtype": "torch.bool"
+        }
+      },
+      "ids": [
+        [
+          "10001003",
+          "1"
+        ],
+        [
+          "10001003",
+          "2"
+        ]
+      ],
+      "character_lengths": [
+        39,
+        5
+      ],
+      "text_sha256": [
+        "839ec6e3f5239bf0ed08c101aef2a301f81ecee83ece64c6d7d7ea1ca7532e5d",
+        "34f850120d317043a9f4bf1bab27d17f46f6b10c250a66e3f1479998814ea7ff"
+      ],
+      "gold_source": "Dataset.char_labels via verified composite ID; token labels unused",
+      "metadata_fields": [
+        "dialogue_ids",
+        "sentence_ids",
+        "texts"
+      ],
+      "medical_text_omitted": true,
+      "loss": 53.44755554199219,
+      "forward_decode_seconds": 0.03310770005919039,
+      "prediction_lengths": [
+        39,
+        5
+      ],
+      "strict_bio_legal": true,
+      "performance_metrics_computed": false,
+      "model_selection": false
+    }
+  },
+  "parameter_hash_before": "e09c1165d7e6e7291dddc24741b141da9a270f1214dfec0388761e98f2498f71",
+  "parameter_hash_after": "e09c1165d7e6e7291dddc24741b141da9a270f1214dfec0388761e98f2498f71",
+  "parameter_version_counters_unchanged": true,
+  "optimizer_created": false,
+  "optimizer_steps": 0,
+  "gold_free_decode_identical": true,
+  "mapping_policy": "offset_share_unique_v1",
+  "memory_before_reload": {
+    "max_allocated_bytes": 997216768,
+    "max_reserved_bytes": 1082130432
+  },
+  "checkpoint": {
+    "path": "<PROJECT>\\.local\\bert_crf\\20261020T164334+0800_stage1d1\\integrated_checkpoint",
+    "same_policy": "offset_share_unique_v1",
+    "parameter_hash_equal": true,
+    "eval_emissions_bitwise_equal": true,
+    "paths_equal": true,
+    "reload_seconds": 1.1806811999995261
+  },
+  "elapsed_seconds": 9.157890800153837,
+  "performance_metrics_computed": false
+}

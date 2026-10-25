@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-19T16:27:00.125711+08:00",
+  "python_strategy": "venv from existing CPython 3.13.5; no system site packages",
+  "official_install_page": "https://pytorch.org/get-started/locally/",
+  "page_sha256": "f2b8c3ddcf412b5450af8f6654e1a2ae86e885846cb0a5e6a7ee20664ce663c3",
+  "official_stable_metadata": "https://pypi.org/pypi/torch/json",
+  "torch_stable_version": "2.14.1",
+  "wheel_index": "https://download.pytorch.org/whl/cu132/torch/",
+  "wheel_index_sha256": "6f8c21ac53413c1de39f7609d09897fcc9b6cd67190887b44152a75691fd8757",
+  "selected_wheels": [
+    "torch-2.14.1+cu132-cp313-cp313-win_amd64.whl"
+  ],
+  "torch_requirement": "torch==2.14.1+cu132",
+  "selection_reason": "Official stable CUDA channel; verify sm_120 architecture AND real kernels after install, not inferred from driver alone",
+  "other_dependencies": "Reuse v1 exact pins except torch; add pytest. Record installed transitive versions.",
+  "crf_dependency": "Deferred: not needed for data audit or GPU smoke test"
+}

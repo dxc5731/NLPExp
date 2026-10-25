@@ -1,0 +1,55 @@
+{
+  "training": {
+    "artifact_kind": "synthetic_smoke_test",
+    "epochs": 3,
+    "batch_size": 2,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_epsilon": 1e-08,
+    "scheduler": "linear",
+    "warmup_steps": 1,
+    "gradient_clip_norm": 1.0,
+    "seed": 1729,
+    "device": "cuda",
+    "precision": "float32",
+    "deterministic_algorithms": true,
+    "shuffle": true,
+    "selection_metric": "entity.micro.f1",
+    "selection_mode": "max",
+    "min_delta": 0.0,
+    "early_stopping_patience": null,
+    "model_config_path": "configs/bert_crf/stage1b_core_smoke.json"
+  },
+  "model": {
+    "schema_version": "1.0",
+    "artifact_kind": "synthetic_smoke_test",
+    "bert_model_name": "google-bert/bert-base-chinese",
+    "bert_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+    "hidden_size": 768,
+    "num_labels": 11,
+    "labels": [
+      "O",
+      "B-Symptom",
+      "I-Symptom",
+      "B-Drug",
+      "I-Drug",
+      "B-Drug_Category",
+      "I-Drug_Category",
+      "B-Medical_Examination",
+      "I-Medical_Examination",
+      "B-Operation",
+      "I-Operation"
+    ],
+    "dropout": 0.1,
+    "bio_constraints": true,
+    "constraint_rule_version": "strict_bio_v1",
+    "seed": 1729,
+    "device": "cuda",
+    "precision": "float32",
+    "deterministic_algorithms": true
+  }
+}

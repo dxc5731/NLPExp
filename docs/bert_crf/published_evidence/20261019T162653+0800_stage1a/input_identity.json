@@ -1,0 +1,10 @@
+{
+  "data_archive_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67",
+  "interface_archive_sha256": "96d259bc1b411a972b46869573f095b0af1de68e2750bdb9ba72450526723df6",
+  "train_source_sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24",
+  "split_sha256": "497f21cf13d8f5accb83f86ffda16a4a59ba716c064ec347e990a219e8957072",
+  "extracted_dataset_members": [
+    "IMCS-V2-NER/IMCS-V2_train.json"
+  ],
+  "dev_test_policy": "Not extracted or parsed in stage1A"
+}

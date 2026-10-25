@@ -1,0 +1,76 @@
+{
+  "artifact_kind": "stage1b_core_smoke_test",
+  "time": "2026-10-19T17:56:15.997523+08:00",
+  "commit": "8276e09e28ba410ad080c0c58889c5115bcc8d4b",
+  "status": "",
+  "commit_files": [
+    "configs/bert_crf/stage1b_core_smoke.json",
+    "docs/bert_crf/02_model_core_and_smoke_tests.md",
+    "docs/bert_crf/stage1b_finalize.py",
+    "docs/bert_crf/stage1b_runner.py",
+    "pytest.ini",
+    "src/bert_crf/__init__.py",
+    "src/bert_crf/config.py",
+    "src/bert_crf/constraints.py",
+    "src/bert_crf/crf.py",
+    "src/bert_crf/model.py",
+    "tests/bert_crf/conftest.py",
+    "tests/bert_crf/test_constraints.py",
+    "tests/bert_crf/test_crf.py",
+    "tests/bert_crf/test_model.py",
+    "tests/bert_crf/test_pretrained.py"
+  ],
+  "all_source_hashes_verified": true,
+  "all_completed_log_hashes_verified": true,
+  "commands": [
+    {
+      "name": "core_tests_first",
+      "returncode": 0
+    },
+    {
+      "name": "dependency_check",
+      "returncode": 0
+    },
+    {
+      "name": "pretrained_download",
+      "returncode": 0
+    },
+    {
+      "name": "complete_tests",
+      "returncode": 1
+    },
+    {
+      "name": "complete_tests_reporting_fix",
+      "returncode": 0
+    },
+    {
+      "name": "freeze",
+      "returncode": 0
+    },
+    {
+      "name": "acceptance",
+      "returncode": 0
+    },
+    {
+      "name": "source_snapshot",
+      "returncode": 0
+    },
+    {
+      "name": "git_whitespace_first",
+      "returncode": 2
+    },
+    {
+      "name": "git_whitespace_final",
+      "returncode": 0
+    },
+    {
+      "name": "final_source_snapshot",
+      "returncode": 0
+    },
+    {
+      "name": "git_commit",
+      "returncode": 0
+    }
+  ],
+  "source_manifest_sha256": "57b7ae825a123c7cb28a168a73e6004032fada94990ce9a3531c6310d7980895"
+}

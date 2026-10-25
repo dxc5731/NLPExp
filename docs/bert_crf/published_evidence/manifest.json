@@ -1,0 +1,421 @@
+{
+  "artifact_kind": "published_development_evidence",
+  "exported_at": "2026-10-19T19:07:53.407775+08:00",
+  "experiment_times": "Unmodified original timestamps in each run; export is not a new experiment",
+  "excluded": [
+    "medical original text and demo log",
+    "private alignment samples",
+    "datasets and split lists",
+    "model weights and checkpoints",
+    "environments and SSH keys",
+    "duplicated third-party source snapshots"
+  ],
+  "files": [
+    {
+      "source": "docs/bert_crf/evidence/20261019T160537+0800/dataset_archive_manifest.json",
+      "published": "docs/bert_crf/published_evidence/20261019T160537+0800/dataset_archive_manifest.json",
+      "bytes": 1124,
+      "sha256": "1aafd82e417725ef0e4b62aab1a2535d88833603db837d07f42a7ebbac60dff3",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T160537+0800/environment.json",
+      "published": "docs/bert_crf/published_evidence/20261019T160537+0800/environment.json",
+      "bytes": 679,
+      "sha256": "66af68ca0e58394f24cedfc0d307df048bf09689515b29325c81ee92984fd7d0",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T160537+0800/input_manifest.json",
+      "published": "docs/bert_crf/published_evidence/20261019T160537+0800/input_manifest.json",
+      "bytes": 964,
+      "sha256": "00307c3af7f8739ca8d3785794d349cfe3f2761b4a034d80a6bb1d074297021e",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T160537+0800/interface_manifest.json",
+      "published": "docs/bert_crf/published_evidence/20261019T160537+0800/interface_manifest.json",
+      "bytes": 2475,
+      "sha256": "6067612a1baa80c14b0255bee3a652697aa039911d8a5afb95b893de9d0b2cd4",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T160537+0800/pure_alignment_probes.json",
+      "published": "docs/bert_crf/published_evidence/20261019T160537+0800/pure_alignment_probes.json",
+      "bytes": 917,
+      "sha256": "858439b6c0cc2977bd3fff078e681c1b134c9310f6583e4602d76adee17e7a3e",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T160537+0800/secondary_environment.json",
+      "published": "docs/bert_crf/published_evidence/20261019T160537+0800/secondary_environment.json",
+      "bytes": 724,
+      "sha256": "28a69cea5cb76c9f0de40ff6536408ceeb78d781591cd966fb5fd2ff1aab55ba",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T160537+0800/shell_failure_note.json",
+      "published": "docs/bert_crf/published_evidence/20261019T160537+0800/shell_failure_note.json",
+      "bytes": 520,
+      "sha256": "c3e9d32dc9212e2e74a6dd8d3ec1c1043d20cab65118021fe307f1a83e902eb7",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T160537+0800/source_integrity_check.json",
+      "published": "docs/bert_crf/published_evidence/20261019T160537+0800/source_integrity_check.json",
+      "bytes": 2250,
+      "sha256": "93be82f0b322af6587441483927d74b2f02cf364b4b3198377f8a1264c93deb2",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T160537+0800/split_verification.json",
+      "published": "docs/bert_crf/published_evidence/20261019T160537+0800/split_verification.json",
+      "bytes": 1435,
+      "sha256": "0ed35f1165e9532853539320bba8222481862d50b1baec00c1e74a3f471ab638",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T160537+0800/torch_wheel_index_check.json",
+      "published": "docs/bert_crf/published_evidence/20261019T160537+0800/torch_wheel_index_check.json",
+      "bytes": 600,
+      "sha256": "80a0335315cc8ae4b3103b0846634575e72d0da3ad5fcdb29d0fbe823542bc03",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T160537+0800/train_contract_checks.json",
+      "published": "docs/bert_crf/published_evidence/20261019T160537+0800/train_contract_checks.json",
+      "bytes": 869,
+      "sha256": "c0c3e3e63da47c45b1680094126ae04db8b79dd071c8a5d8d5ddf17804d71d8d",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T160537+0800/upstream_manifest.json",
+      "published": "docs/bert_crf/published_evidence/20261019T160537+0800/upstream_manifest.json",
+      "bytes": 2608,
+      "sha256": "a1b2602df70ccd87ab4ff615b7003b97e0b22b2170e61e089349a0b700fac8e0",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/alignment_audit.json",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/alignment_audit.json",
+      "bytes": 17678,
+      "sha256": "a782d535b0786a1da4196436e915e8fe5b40d060c49a8110e43a9d68614b55fe",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/batch_checks.json",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/batch_checks.json",
+      "bytes": 4006,
+      "sha256": "32dc13c8653f1bbcdbf64b04a966fa70ff0455e3d3d793ab6936ba079e46c5b8",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/commands.jsonl",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/commands.jsonl",
+      "bytes": 16791,
+      "sha256": "4e2b196fc4f7587509c0ff7cd40ce383280dd62d2548dd37638a2cf5bd655e03",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/contract_checks.json",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/contract_checks.json",
+      "bytes": 3207,
+      "sha256": "879c927e546d18a67282c418ca5aee393e941adb2c60dbe81dbeac48bca6cd3e",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/execution_summary.json",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/execution_summary.json",
+      "bytes": 8805,
+      "sha256": "b81b629e118c2543f3c42ddffb9ee89c5e8e12a9a6979f554973a44d3c8d629a",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/gpu_smoke.json",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/gpu_smoke.json",
+      "bytes": 1349,
+      "sha256": "b10459606a51d547d4b3c2b980b1dcba002ca178a80a67ba64c2a4aa3eb9b93e",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/input_identity.json",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/input_identity.json",
+      "bytes": 517,
+      "sha256": "199cb93deca5fabe3a5da7e4c09c9b6e6d3ee8b54b9377bbd32222297bc86b77",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/installation_plan.json",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/installation_plan.json",
+      "bytes": 1029,
+      "sha256": "5e3c1e7e6336fb25081fb7502b58baa696f89f40b28f263dc3d49ba3c9904a3f",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/installation_sources.json",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/installation_sources.json",
+      "bytes": 27745,
+      "sha256": "5481e307838185c466859d8272e6d7dfa193aa65c34b9d806cbf7f03b4d688a2",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/interface_manifest.json",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/interface_manifest.json",
+      "bytes": 2164,
+      "sha256": "29876e2e6b6c92a2b0de9adf9239020be0b8653f97da0717dbf43c3ec335eb45",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/requirements-stage1a.in",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/requirements-stage1a.in",
+      "bytes": 118,
+      "sha256": "88e2d62b2da93e9e8b95e252230bf156a6acd8c7e5e1d36521c725395b628c6b",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/run_context.json",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/run_context.json",
+      "bytes": 661,
+      "sha256": "5f4a9bf6fda6bf87dbb5a9564d8fa5b47a8d8c5a8e37aa5d75e5b799156e3d36",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T162653+0800_stage1a/tokenizer_manifest.json",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/tokenizer_manifest.json",
+      "bytes": 1446,
+      "sha256": "29efcadbc815321a027c6d2f317244528d7f84dea83d382f9700c1e8c17cff22",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/acceptance.json",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/acceptance.json",
+      "bytes": 7303,
+      "sha256": "95092cc543420cac9fbafd4fa42a2046d19cf4b0b56fd6c647879b278cb9d788",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/acceptance.log",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/acceptance.log",
+      "bytes": 94,
+      "sha256": "d3c63611656c48e8a5ae6193dd77b608b70339bae6d4a5de34aa047613250c99",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/commands.jsonl",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/commands.jsonl",
+      "bytes": 10778,
+      "sha256": "9fbb3d8609a20e747f20d152f8b285fb9df1aa3668c2d2ea957a4781bba62a0e",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/complete_tests.log",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/complete_tests.log",
+      "bytes": 20792,
+      "sha256": "69e9b13acde6da62463054ca58eed01239bd2c43320d26d6b1602d52e838751a",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/complete_tests.xml",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/complete_tests.xml",
+      "bytes": 17186,
+      "sha256": "87be31622b8a5d20618a626f704c0e084f9c251d176f9a364f022057c29db01a",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/complete_tests_reporting_fix.log",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/complete_tests_reporting_fix.log",
+      "bytes": 11957,
+      "sha256": "28e782b212cfb88025f4368aceb04036f129212ade047f088d234d7a724fcdef",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/complete_tests_reporting_fix.xml",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/complete_tests_reporting_fix.xml",
+      "bytes": 5978,
+      "sha256": "4eb46c3eae305ec304c73c73b3264dff6560ce5c7ff725fff3b8e7557a771f6a",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/core_tests_first.log",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/core_tests_first.log",
+      "bytes": 5054,
+      "sha256": "4d7212974960d76863f25c6e53736825cd3c3c2ca52feab4a0f98e4a7aae7a4a",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/core_tests_first.xml",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/core_tests_first.xml",
+      "bytes": 5857,
+      "sha256": "7dafb8b87aaf147d54c240d49c036c7136088e5cb80c8ee9b251a4bec728d5b7",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/dependency_check.log",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/dependency_check.log",
+      "bytes": 31,
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/formatting_record.json",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/formatting_record.json",
+      "bytes": 848,
+      "sha256": "05aad766a695f88218e0af1734209883a81d1a566c2d0b61407759e63574a384",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/freeze.log",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/freeze.log",
+      "bytes": 820,
+      "sha256": "2920bc797f4cdf3564ecc154d2647208ea9a48d48490d9884d38eafa54ed1123",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/git_commit.log",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/git_commit.log",
+      "bytes": 854,
+      "sha256": "47670a9fd49f001bd09ac0733cf6e68583975bd10b47a2be0376efd30a67030b",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/git_final.json",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/git_final.json",
+      "bytes": 1837,
+      "sha256": "f7152653abb8391a79bc161df58575d2c623f128b1d58ede5f428104d998bbc1",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/git_final.log",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/git_final.log",
+      "bytes": 48,
+      "sha256": "092fd1ce827afcc7fbca049a6b0d0f8dc25e85f09f3e88a0b601b2237a02965f",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/git_whitespace_final.log",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/git_whitespace_final.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/git_whitespace_first.log",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/git_whitespace_first.log",
+      "bytes": 171,
+      "sha256": "297a6acf45032558dace5ba359c9b35e0c8230e8f478ae6d77950949ab17b434",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/pretrained_download.log",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/pretrained_download.log",
+      "bytes": 573,
+      "sha256": "9c302f6dea6c80c3c78f12fb66f8cf940ee0667c9e3d13002d80e7ece08e5689",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/pretrained_gpu_smoke.json",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/pretrained_gpu_smoke.json",
+      "bytes": 3620,
+      "sha256": "a2c9d546026bb08d19b0f878e21c5e89540631894f939c668685569ea5a6a56c",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/pretrained_manifest.json",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/pretrained_manifest.json",
+      "bytes": 3290,
+      "sha256": "5ef1c2be5b30ee3d0655a4aee332827387aa5d4ee3cfd01cfec37b6de1dc575c",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/run_context.json",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/run_context.json",
+      "bytes": 1192,
+      "sha256": "d15f0b1197ae4f2a114917d571311c31c114abfa98e9c28f7d8d5f592b73c00f",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/source_manifest.json",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/source_manifest.json",
+      "bytes": 1455,
+      "sha256": "57b7ae825a123c7cb28a168a73e6004032fada94990ce9a3531c6310d7980895",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/source_manifest_tested.json",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/source_manifest_tested.json",
+      "bytes": 1455,
+      "sha256": "b0089b531288d47d49a74f4562247b8941ee816a4ef366630404f82f7ace25ab",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": "docs/bert_crf/evidence/20261019T174356+0800_stage1b/test_pretrained_before_reporting_fix.py",
+      "published": "docs/bert_crf/published_evidence/20261019T174356+0800_stage1b/test_pretrained_before_reporting_fix.py",
+      "bytes": 9220,
+      "sha256": "acddffbd477582b432ccc626eb53be26c236334eaef5745dfc76455208dc02f4",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": ".local/bert_crf/20261019T162653+0800_stage1a/logs/00_create_venv.log",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/logs/00_create_venv.log",
+      "bytes": 95,
+      "sha256": "e343e9eb9a2faeb012cf53e426590a73bc64285a6f259124d49162f88788476c",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": ".local/bert_crf/20261019T162653+0800_stage1a/logs/03_cuda_smoke.log",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/logs/03_cuda_smoke.log",
+      "bytes": 2588,
+      "sha256": "989b2756d4505448dbda5e39628ebbd494dc8e01b128762509b6ddb0362409d6",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": ".local/bert_crf/20261019T162653+0800_stage1a/logs/05_cuda_smoke_retry.log",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/logs/05_cuda_smoke_retry.log",
+      "bytes": 1484,
+      "sha256": "9fb904a9150ddd35cb4173f29388d0b8fac58437dc7230993dc3cb66a509af39",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": ".local/bert_crf/20261019T162653+0800_stage1a/logs/07_public_unittest.log",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/logs/07_public_unittest.log",
+      "bytes": 1089,
+      "sha256": "cd662798284c4ee20e9c9cdb47ef726bdcb7cdaa602020a9c14fc27d0cdd807c",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": ".local/bert_crf/20261019T162653+0800_stage1a/logs/08_full_alignment_audit.log",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/logs/08_full_alignment_audit.log",
+      "bytes": 4465,
+      "sha256": "d106e35eb1fea83f9916d67bb32fc336a7d121a28d2e6250cec90e7e9883e355",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": ".local/bert_crf/20261019T162653+0800_stage1a/logs/09_pip_check.log",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/logs/09_pip_check.log",
+      "bytes": 144,
+      "sha256": "cb857c84e8c32bcdf0e4301111537a6895b5d8b993989d2cdf94826b4d5a5f40",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": ".local/bert_crf/20261019T162653+0800_stage1a/logs/11_freeze.log",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/logs/11_freeze.log",
+      "bytes": 943,
+      "sha256": "ee5967f4b30c70c2870385eed092b98c0f28cb22d0722c55f53d4ac81beaebdf",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": ".local/bert_crf/20261019T162653+0800_stage1a/logs/12_projected_gold_and_contract.log",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/logs/12_projected_gold_and_contract.log",
+      "bytes": 723,
+      "sha256": "244e02253e8ba6e36a124fe544a6f643233d9d54a44744cc89c0e8fc476bb16f",
+      "transformation": "none; byte-identical copy"
+    },
+    {
+      "source": ".local/bert_crf/20261019T162653+0800_stage1a/logs/13_cuda_recheck.log",
+      "published": "docs/bert_crf/published_evidence/20261019T162653+0800_stage1a/logs/13_cuda_recheck.log",
+      "bytes": 425,
+      "sha256": "ecf354a57053a1ee4d656093f19359a65a854fd61fd0d51088f27658456dc256",
+      "transformation": "none; byte-identical copy"
+    }
+  ]
+}

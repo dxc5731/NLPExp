@@ -1,0 +1,13 @@
+{
+  "artifact_kind": "synthetic_smoke_test",
+  "latest": "<PROJECT>\\.local\\bert_crf\\20261020T174150+0800_stage1e\\synthetic_runs\\20261020T175501+0800_synthetic_smoke_test_bbe90894\\checkpoints\\epoch_0002.pt",
+  "latest_sha256": "76249c9eab5dfa718ae1879db80d3d3cc8f5abc5d70bdcf5786f29f7e9e7895c",
+  "epoch": 2,
+  "global_step": 4,
+  "best_value": 1.0,
+  "best_epoch": 2,
+  "bad_epochs": 0,
+  "best_checkpoint": "<PROJECT>\\.local\\bert_crf\\20261020T174150+0800_stage1e\\synthetic_runs\\20261020T175501+0800_synthetic_smoke_test_bbe90894\\checkpoints\\epoch_0002.pt",
+  "best_checkpoint_sha256": "76249c9eab5dfa718ae1879db80d3d3cc8f5abc5d70bdcf5786f29f7e9e7895c",
+  "selection_reason": "strict improvement"
+}

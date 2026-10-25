@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-10-19T16:05:37.077050+08:00",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "executable": "C:\\apps\\anaconda\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "modules_available": {
+    "torch": false,
+    "transformers": false,
+    "tokenizers": false,
+    "torchcrf": false,
+    "TorchCRF": false,
+    "numpy": true,
+    "pytest": true,
+    "seqeval": false
+  },
+  "demo_environment_overrides": {
+    "PYTHONUTF8": "1",
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1"
+  }
+}

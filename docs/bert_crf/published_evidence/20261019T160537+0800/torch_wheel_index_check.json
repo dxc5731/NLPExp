@@ -1,0 +1,14 @@
+{
+  "url": "https://download.pytorch.org/whl/cu124/torch/",
+  "index_sha256": "407fb416a2fa1eb41951c8607b1e2d141cc343d63e0865e49f89e6c396ad2ddd",
+  "timestamp": "2026-10-19T16:08:19.001737+08:00",
+  "torch_2_6_windows_wheels": [
+    "torch-2.6.0+cu124-cp310-cp310-win_amd64.whl",
+    "torch-2.6.0+cu124-cp311-cp311-win_amd64.whl",
+    "torch-2.6.0+cu124-cp312-cp312-win_amd64.whl",
+    "torch-2.6.0+cu124-cp313-cp313-win_amd64.whl",
+    "torch-2.6.0+cu124-cp39-cp39-win_amd64.whl"
+  ],
+  "cp313_windows_available": true,
+  "scope": "Index metadata only; no wheel download or install"
+}

@@ -1,31 +1,57 @@
-# NLPExp：中文医患对话医疗实体识别
+# NLPExp — IMCS-V2-NER 医疗命名实体识别
 
-自然语言处理课程项目，范围为 **IMCS-V2-NER / Task1**，比较规则词典、BERT-Softmax 和字符级 BERT-CRF。
+《自然语言处理》课程项目，方向 **B：信息抽取 / 序列标注**。
 
-当前为 **evaluation** 分支，集中展示预测交接、格式与 BIO 校验、严格实体级及字符级指标、统一重评分和结果复核。模型训练及词典构建由对应成员负责，归属见[来源与贡献](evaluation/docs/source_and_contributions.md)。
+- **数据**：IMCS-V2-NER（CBLUE 医疗基准，公开数据集，[天池入口](https://tianchi.aliyun.com/dataset/95414)）
+- **任务**：给定医患对话中的一句话，为每个字符打 BIO 标签，识别 5 类实体
+  （症状 / 药物 / 药物类别 / 检查 / 操作）
+- **交付**：逐字符 BIO 预测，双层 ID 结构 `对话ID -> 句子ID -> 标签串`
 
-## 主要结果
+## 仓库结构
 
-以下为同一官方 dev 上的真实统一评估：833 对话、33,267 句，23,578 个金标实体。
+本项目由三条各自独立开发的分支合并而成，按模块分目录：
 
-|方法|实体 Precision|实体 Recall|实体 Micro-F1|
-|---|---:|---:|---:|
-|规则词典 mc10|75.6379%|77.5723%|76.5929%|
-|BERT-Softmax|85.3195%|90.8813%|88.0127%|
-|字符级 BERT-CRF|87.5743%|91.1994%|89.3501%|
+| 目录 | 模块 | 内容 |
+|---|---|---|
+| `code/` | 公共数据 + BERT-Softmax | 数据切分与子词对齐、Dataset/DataLoader、BERT 微调、dev/test 预测导出 |
+| `src/bert_crf/` `configs/bert_crf/` `tests/bert_crf/` `docs/bert_crf/` | BERT-CRF | 字符级 CRF、BIO 硬约束、训练器与阶段验收记录 |
+| `evaluation/` | 统一评估 | 预测格式校验、实体级/字符级评分、错误导出、复现证据核查、多模型比较 |
+| `doc/` | 文档 | 课程文档、组内分工、接口说明、实验记录 |
 
-[评估模块与图表](evaluation/README.md) · [聚合结果](evaluation/results/evaluation_summary.csv) · [参数比较](evaluation/results/parameter_comparison.csv) · [结果证据来源](evaluation/docs/results_provenance.md) · [实际工作记录](evaluation/docs/evaluation_work_summary.md)
+各模块的详细说明看各自的 README：
 
-## 离线验证
+- BERT-Softmax：`doc/组内有用的文档/BERT数据接口说明_v2.md`
+- BERT-CRF：[`src/bert_crf/`](src/bert_crf/)、[`docs/bert_crf/README.md`](docs/bert_crf/README.md)
+- 评估：[`evaluation/README.md`](evaluation/README.md)
 
-Python 3.10+，标准库、普通 CPU 即可。进入评估目录执行：
+## 快速开始（BERT-Softmax 模块）
+
+```bash
+cd code
+pip install -r requirements.txt          # torch 需按 CUDA 版本另装
+python -m unittest discover -s tests -v  # 13 个单元测试
+```
+
+数据放到 `doc/数据/IMCS-V2-NER/IMCS-V2-NER/`，或设环境变量 `IMCS_DATA_DIR` 指向它。
+模型权重放在 `code/models/bert-base-chinese/`，或设 `BERT_MODEL_DIR`。
+
+```bash
+python -m src.train --lr 5e-5 --epochs 3           # 训练
+python -m src.predict --run-id <run_id> --split dev  # 推理导出
+```
+
+## 评估模块
 
 ```bash
 cd evaluation
-python -X utf8 -m unittest discover -s tests -v
-python -X utf8 src/run_evaluation_batch.py --manifest examples/pipeline_validation/evaluation_runs.json --output-dir outputs/synthetic_batch
+python -X utf8 src/validate_predictions.py --data <数据> --predictions <预测> --split dev --report <报告>
+python -X utf8 src/evaluate_predictions.py --data <数据> --predictions <预测> --split dev --purpose model_evaluation
+python -X utf8 src/check_run_info.py --evaluation <评分结果> --run-info <run_info.json> --run-id <id> --method <方法名> --output-dir <输出>
 ```
 
-预期 135 项测试通过，批量流程返回 `SUCCESS`、`self_check=PASS`。演示使用人工合成样本，演示分数不代表模型成绩。
+## 约定
 
-真实数据从[天池](https://tianchi.aliyun.com/dataset/95414)自行获取并遵守许可。本次公开材料不包含原始医疗对话、完整预测、模型权重或完整训练日志；完整模型复现仍需训练方资产。评价口径、受控重评分命令和公开测试范围见[评价协议](evaluation/docs/evaluation_protocol.md)及[复现说明](evaluation/docs/reproducibility.md)。
+- 原始医疗数据、模型权重、Checkpoint、虚拟环境**不入库**，只用链接或路径定位。
+- 官方 **dev 不参与训练、调参或模型选择**，只用于最终预测与报告。
+- 原始对话 ID 和句子 ID 原样保留，不重新编号；每个原始字符一个标签（含标点与空格）。
+- 各模块的 AI 使用范围与程序验证方式见各自文档；正式实验设计、结果分析与个人贡献声明由组员本人完成。

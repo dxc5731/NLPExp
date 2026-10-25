@@ -1,0 +1,724 @@
+{
+  "kind": "synthetic_smoke_test",
+  "runs": [
+    {
+      "artifact_kind": "synthetic_smoke_test",
+      "directory": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_0",
+      "device": "cpu",
+      "checkpoint_state_bitwise_equal": {
+        "model": true,
+        "optimizer": true,
+        "scheduler": true,
+        "rng": true
+      },
+      "continuous_state": {
+        "epoch": 3,
+        "global_step": 6,
+        "best_value": 0.6666666666666666,
+        "best_epoch": 3,
+        "bad_epochs": 0,
+        "best_checkpoint": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_0\\continuous\\checkpoints\\epoch_0003.pt",
+        "best_checkpoint_sha256": null
+      },
+      "resumed_state": {
+        "epoch": 3,
+        "global_step": 6,
+        "best_value": 0.6666666666666666,
+        "best_epoch": 3,
+        "bad_epochs": 0,
+        "best_checkpoint": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_0\\resumed\\checkpoints\\epoch_0003.pt",
+        "best_checkpoint_sha256": null
+      },
+      "manifests": {
+        "continuous": {
+          "schema_version": "1.0",
+          "artifact_kind": "synthetic_smoke_test",
+          "run_id": "continuous",
+          "started_at": "2026-10-19T19:26:39.574542+08:00",
+          "status": "completed",
+          "command": [
+            "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Scripts\\python.exe",
+            "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Lib\\site-packages\\pytest\\__main__.py",
+            "tests/bert_crf",
+            "-v",
+            "-s",
+            "--basetemp=.local/bert_crf/20261019T192215+0800_stage1c/tests-regression",
+            "--pretrained-dir=.local/bert_crf/20261019T174356+0800_stage1b/pretrained",
+            "--smoke-output=docs/bert_crf/evidence/20261019T192215+0800_stage1c/stage1b_regression_gpu.json",
+            "--checkpoint-dir=.local/bert_crf/20261019T192215+0800_stage1c/stage1b_regression_checkpoint",
+            "--trainer-smoke-summary=docs/bert_crf/evidence/20261019T192215+0800_stage1c/pretrained_trainer_final.json",
+            "--junitxml=docs/bert_crf/evidence/20261019T192215+0800_stage1c/full_regression.xml"
+          ],
+          "cwd": "C:\\userProgram\\NLPexp",
+          "metadata": {
+            "train": {
+              "artifact_kind": "synthetic_smoke_test",
+              "data_version": "synthetic_char_v1",
+              "split": "synthetic_train",
+              "ids_sha256": "85b172db0290a02a51873d70ed455229b765c87361ada58abed36f39be184743",
+              "data_sha256": "3c0ce9eac3368db06ce6ed8a391b9a74e84cf316f0715315ca9d01f4f1bf7c21",
+              "alignment_version": "SYNTHETIC_ONLY_verified_one_to_one_v1",
+              "source": "invented_token_ids"
+            },
+            "validation": {
+              "artifact_kind": "synthetic_smoke_test",
+              "data_version": "synthetic_char_v1",
+              "split": "synthetic_val",
+              "ids_sha256": "7821f127c987c39428e82d0083e7ae07b56657b2ddf1ac4fffd25c099c695e55",
+              "data_sha256": "3c0ce9eac3368db06ce6ed8a391b9a74e84cf316f0715315ca9d01f4f1bf7c21",
+              "alignment_version": "SYNTHETIC_ONLY_verified_one_to_one_v1",
+              "source": "invented_token_ids"
+            },
+            "model_identity": "52359998cd54359665038c5335ad35bb8a5b3136539ffd6bf4b97b8c46cc9c62",
+            "loader_policy": "epoch-seeded provider; no persistent sampler cursor; num_workers=0 in synthetic tests",
+            "selection": {
+              "metric": "entity.micro.f1",
+              "mode": "max",
+              "tie": "retain earlier best; min_delta is strict",
+              "patience": null
+            },
+            "user_metadata": {}
+          },
+          "code": {
+            "commit": "2706f861d29a72f40e7db9ffedbf56db8073a203",
+            "dirty_status": "M .gitignore\n M tests/bert_crf/conftest.py\n?? configs/bert_crf/stage1c_trainer_smoke.json\n?? docs/bert_crf/experiment_record_template.md\n?? docs/bert_crf/stage1c_runner.py\n?? src/bert_crf/checkpoint.py\n?? src/bert_crf/experiment.py\n?? src/bert_crf/metrics.py\n?? src/bert_crf/synthetic_smoke.py\n?? src/bert_crf/train.py\n?? src/bert_crf/trainer.py\n?? src/bert_crf/training_config.py\n?? tests/bert_crf/test_metrics.py\n?? tests/bert_crf/test_trainer.py\n?? tests/bert_crf/test_trainer_pretrained.py",
+            "source_manifest_sha256": "bd762946a5ea569b7576164029e415a0c5c4e122fac94aee9762f4145d3832ed",
+            "source_snapshot": "source_snapshot/",
+            "tracked_patch": "tracked_changes.patch"
+          },
+          "updated_at": "2026-10-19T19:26:39.730006+08:00",
+          "elapsed_seconds": 0.053487899946048856,
+          "state": {
+            "epoch": 3,
+            "global_step": 6,
+            "best_value": 0.6666666666666666,
+            "best_epoch": 3,
+            "bad_epochs": 0,
+            "best_checkpoint": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_0\\continuous\\checkpoints\\epoch_0003.pt",
+            "best_checkpoint_sha256": "4bfc3e003a7f7190d655483793a813c9da0abfd46cb3710920e31de6f0f4b281"
+          },
+          "timing_scope": "fit includes updates, validation, logging and checkpoint I/O; excludes initial model/provider load",
+          "peak_allocated_bytes": null,
+          "peak_reserved_bytes": null
+        },
+        "interrupted": {
+          "schema_version": "1.0",
+          "artifact_kind": "synthetic_smoke_test",
+          "run_id": "interrupted",
+          "started_at": "2026-10-19T19:26:39.743659+08:00",
+          "status": "interrupted",
+          "command": [
+            "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Scripts\\python.exe",
+            "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Lib\\site-packages\\pytest\\__main__.py",
+            "tests/bert_crf",
+            "-v",
+            "-s",
+            "--basetemp=.local/bert_crf/20261019T192215+0800_stage1c/tests-regression",
+            "--pretrained-dir=.local/bert_crf/20261019T174356+0800_stage1b/pretrained",
+            "--smoke-output=docs/bert_crf/evidence/20261019T192215+0800_stage1c/stage1b_regression_gpu.json",
+            "--checkpoint-dir=.local/bert_crf/20261019T192215+0800_stage1c/stage1b_regression_checkpoint",
+            "--trainer-smoke-summary=docs/bert_crf/evidence/20261019T192215+0800_stage1c/pretrained_trainer_final.json",
+            "--junitxml=docs/bert_crf/evidence/20261019T192215+0800_stage1c/full_regression.xml"
+          ],
+          "cwd": "C:\\userProgram\\NLPexp",
+          "metadata": {
+            "train": {
+              "artifact_kind": "synthetic_smoke_test",
+              "data_version": "synthetic_char_v1",
+              "split": "synthetic_train",
+              "ids_sha256": "85b172db0290a02a51873d70ed455229b765c87361ada58abed36f39be184743",
+              "data_sha256": "3c0ce9eac3368db06ce6ed8a391b9a74e84cf316f0715315ca9d01f4f1bf7c21",
+              "alignment_version": "SYNTHETIC_ONLY_verified_one_to_one_v1",
+              "source": "invented_token_ids"
+            },
+            "validation": {
+              "artifact_kind": "synthetic_smoke_test",
+              "data_version": "synthetic_char_v1",
+              "split": "synthetic_val",
+              "ids_sha256": "7821f127c987c39428e82d0083e7ae07b56657b2ddf1ac4fffd25c099c695e55",
+              "data_sha256": "3c0ce9eac3368db06ce6ed8a391b9a74e84cf316f0715315ca9d01f4f1bf7c21",
+              "alignment_version": "SYNTHETIC_ONLY_verified_one_to_one_v1",
+              "source": "invented_token_ids"
+            },
+            "model_identity": "52359998cd54359665038c5335ad35bb8a5b3136539ffd6bf4b97b8c46cc9c62",
+            "loader_policy": "epoch-seeded provider; no persistent sampler cursor; num_workers=0 in synthetic tests",
+            "selection": {
+              "metric": "entity.micro.f1",
+              "mode": "max",
+              "tie": "retain earlier best; min_delta is strict",
+              "patience": null
+            },
+            "user_metadata": {}
+          },
+          "code": {
+            "commit": "2706f861d29a72f40e7db9ffedbf56db8073a203",
+            "dirty_status": "M .gitignore\n M tests/bert_crf/conftest.py\n?? configs/bert_crf/stage1c_trainer_smoke.json\n?? docs/bert_crf/experiment_record_template.md\n?? docs/bert_crf/stage1c_runner.py\n?? src/bert_crf/checkpoint.py\n?? src/bert_crf/experiment.py\n?? src/bert_crf/metrics.py\n?? src/bert_crf/synthetic_smoke.py\n?? src/bert_crf/train.py\n?? src/bert_crf/trainer.py\n?? src/bert_crf/training_config.py\n?? tests/bert_crf/test_metrics.py\n?? tests/bert_crf/test_trainer.py\n?? tests/bert_crf/test_trainer_pretrained.py",
+            "source_manifest_sha256": "bd762946a5ea569b7576164029e415a0c5c4e122fac94aee9762f4145d3832ed",
+            "source_snapshot": "source_snapshot/",
+            "tracked_patch": "tracked_changes.patch"
+          },
+          "updated_at": "2026-10-19T19:26:39.863583+08:00",
+          "elapsed_seconds": 0.019118899945169687,
+          "state": {
+            "epoch": 1,
+            "global_step": 2,
+            "best_value": 0.28571428571428575,
+            "best_epoch": 1,
+            "bad_epochs": 0,
+            "best_checkpoint": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_0\\interrupted\\checkpoints\\epoch_0001.pt",
+            "best_checkpoint_sha256": "33c42e553f56ec38ff68d36d487a09e9abdd545c7717a8a001d507b1fa4de5c7"
+          },
+          "timing_scope": "fit includes updates, validation, logging and checkpoint I/O; excludes initial model/provider load",
+          "peak_allocated_bytes": null,
+          "peak_reserved_bytes": null
+        },
+        "resumed": {
+          "schema_version": "1.0",
+          "artifact_kind": "synthetic_smoke_test",
+          "run_id": "resumed",
+          "started_at": "2026-10-19T19:26:39.874739+08:00",
+          "status": "completed",
+          "command": [
+            "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Scripts\\python.exe",
+            "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Lib\\site-packages\\pytest\\__main__.py",
+            "tests/bert_crf",
+            "-v",
+            "-s",
+            "--basetemp=.local/bert_crf/20261019T192215+0800_stage1c/tests-regression",
+            "--pretrained-dir=.local/bert_crf/20261019T174356+0800_stage1b/pretrained",
+            "--smoke-output=docs/bert_crf/evidence/20261019T192215+0800_stage1c/stage1b_regression_gpu.json",
+            "--checkpoint-dir=.local/bert_crf/20261019T192215+0800_stage1c/stage1b_regression_checkpoint",
+            "--trainer-smoke-summary=docs/bert_crf/evidence/20261019T192215+0800_stage1c/pretrained_trainer_final.json",
+            "--junitxml=docs/bert_crf/evidence/20261019T192215+0800_stage1c/full_regression.xml"
+          ],
+          "cwd": "C:\\userProgram\\NLPexp",
+          "metadata": {
+            "train": {
+              "artifact_kind": "synthetic_smoke_test",
+              "data_version": "synthetic_char_v1",
+              "split": "synthetic_train",
+              "ids_sha256": "85b172db0290a02a51873d70ed455229b765c87361ada58abed36f39be184743",
+              "data_sha256": "3c0ce9eac3368db06ce6ed8a391b9a74e84cf316f0715315ca9d01f4f1bf7c21",
+              "alignment_version": "SYNTHETIC_ONLY_verified_one_to_one_v1",
+              "source": "invented_token_ids"
+            },
+            "validation": {
+              "artifact_kind": "synthetic_smoke_test",
+              "data_version": "synthetic_char_v1",
+              "split": "synthetic_val",
+              "ids_sha256": "7821f127c987c39428e82d0083e7ae07b56657b2ddf1ac4fffd25c099c695e55",
+              "data_sha256": "3c0ce9eac3368db06ce6ed8a391b9a74e84cf316f0715315ca9d01f4f1bf7c21",
+              "alignment_version": "SYNTHETIC_ONLY_verified_one_to_one_v1",
+              "source": "invented_token_ids"
+            },
+            "model_identity": "52359998cd54359665038c5335ad35bb8a5b3136539ffd6bf4b97b8c46cc9c62",
+            "loader_policy": "epoch-seeded provider; no persistent sampler cursor; num_workers=0 in synthetic tests",
+            "selection": {
+              "metric": "entity.micro.f1",
+              "mode": "max",
+              "tie": "retain earlier best; min_delta is strict",
+              "patience": null
+            },
+            "user_metadata": {}
+          },
+          "code": {
+            "commit": "2706f861d29a72f40e7db9ffedbf56db8073a203",
+            "dirty_status": "M .gitignore\n M tests/bert_crf/conftest.py\n?? configs/bert_crf/stage1c_trainer_smoke.json\n?? docs/bert_crf/experiment_record_template.md\n?? docs/bert_crf/stage1c_runner.py\n?? src/bert_crf/checkpoint.py\n?? src/bert_crf/experiment.py\n?? src/bert_crf/metrics.py\n?? src/bert_crf/synthetic_smoke.py\n?? src/bert_crf/train.py\n?? src/bert_crf/trainer.py\n?? src/bert_crf/training_config.py\n?? tests/bert_crf/test_metrics.py\n?? tests/bert_crf/test_trainer.py\n?? tests/bert_crf/test_trainer_pretrained.py",
+            "source_manifest_sha256": "bd762946a5ea569b7576164029e415a0c5c4e122fac94aee9762f4145d3832ed",
+            "source_snapshot": "source_snapshot/",
+            "tracked_patch": "tracked_changes.patch"
+          },
+          "updated_at": "2026-10-19T19:26:40.022549+08:00",
+          "resumed_from": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_0\\interrupted\\checkpoints\\epoch_0001.pt",
+          "resumed_from_sha256": "33c42e553f56ec38ff68d36d487a09e9abdd545c7717a8a001d507b1fa4de5c7",
+          "elapsed_seconds": 0.0469565000385046,
+          "state": {
+            "epoch": 3,
+            "global_step": 6,
+            "best_value": 0.6666666666666666,
+            "best_epoch": 3,
+            "bad_epochs": 0,
+            "best_checkpoint": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_0\\resumed\\checkpoints\\epoch_0003.pt",
+            "best_checkpoint_sha256": "aa6d057acb9eed18ad0d19828dc0344d44d97aa01397276cb86e91601eae5fbb"
+          },
+          "timing_scope": "fit includes updates, validation, logging and checkpoint I/O; excludes initial model/provider load",
+          "peak_allocated_bytes": null,
+          "peak_reserved_bytes": null
+        }
+      },
+      "history": {
+        "continuous": [
+          {
+            "epoch": "1",
+            "train_loss": "4.832043647766113",
+            "val_loss": "3.601124882698059",
+            "val_char_precision": "0.25",
+            "val_char_recall": "0.3333333333333333",
+            "val_char_f1": "0.28571428571428575",
+            "val_entity_precision": "0.25",
+            "val_entity_recall": "0.3333333333333333",
+            "val_entity_f1": "0.28571428571428575",
+            "learning_rate": "0.004",
+            "epoch_elapsed_seconds": "0.01749200001358986",
+            "global_step": "2"
+          },
+          {
+            "epoch": "2",
+            "train_loss": "3.2248668670654297",
+            "val_loss": "2.5352648496627808",
+            "val_char_precision": "0.2857142857142857",
+            "val_char_recall": "0.3333333333333333",
+            "val_char_f1": "0.30769230769230765",
+            "val_entity_precision": "0.3333333333333333",
+            "val_entity_recall": "0.3333333333333333",
+            "val_entity_f1": "0.3333333333333333",
+            "learning_rate": "0.002",
+            "epoch_elapsed_seconds": "0.015260800020769238",
+            "global_step": "4"
+          },
+          {
+            "epoch": "3",
+            "train_loss": "2.852131962776184",
+            "val_loss": "2.207643985748291",
+            "val_char_precision": "0.5714285714285714",
+            "val_char_recall": "0.6666666666666666",
+            "val_char_f1": "0.6153846153846153",
+            "val_entity_precision": "0.6666666666666666",
+            "val_entity_recall": "0.6666666666666666",
+            "val_entity_f1": "0.6666666666666666",
+            "learning_rate": "0.0",
+            "epoch_elapsed_seconds": "0.01560030016116798",
+            "global_step": "6"
+          }
+        ],
+        "interrupted": [
+          {
+            "epoch": "1",
+            "train_loss": "4.832043647766113",
+            "val_loss": "3.601124882698059",
+            "val_char_precision": "0.25",
+            "val_char_recall": "0.3333333333333333",
+            "val_char_f1": "0.28571428571428575",
+            "val_entity_precision": "0.25",
+            "val_entity_recall": "0.3333333333333333",
+            "val_entity_f1": "0.28571428571428575",
+            "learning_rate": "0.004",
+            "epoch_elapsed_seconds": "0.016855600057169795",
+            "global_step": "2"
+          }
+        ],
+        "resumed": [
+          {
+            "epoch": "2",
+            "train_loss": "3.2248668670654297",
+            "val_loss": "2.5352648496627808",
+            "val_char_precision": "0.2857142857142857",
+            "val_char_recall": "0.3333333333333333",
+            "val_char_f1": "0.30769230769230765",
+            "val_entity_precision": "0.3333333333333333",
+            "val_entity_recall": "0.3333333333333333",
+            "val_entity_f1": "0.3333333333333333",
+            "learning_rate": "0.002",
+            "epoch_elapsed_seconds": "0.015721100149676204",
+            "global_step": "4"
+          },
+          {
+            "epoch": "3",
+            "train_loss": "2.852131962776184",
+            "val_loss": "2.207643985748291",
+            "val_char_precision": "0.5714285714285714",
+            "val_char_recall": "0.6666666666666666",
+            "val_char_f1": "0.6153846153846153",
+            "val_entity_precision": "0.6666666666666666",
+            "val_entity_recall": "0.6666666666666666",
+            "val_entity_f1": "0.6666666666666666",
+            "learning_rate": "0.0",
+            "epoch_elapsed_seconds": "0.015438700094819069",
+            "global_step": "6"
+          }
+        ]
+      },
+      "original_logs": {
+        "continuous": {
+          "source": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_0\\continuous\\train.log",
+          "sha256": "9dcb03e1523a54a427ed96b875ac3462e58533de3a3d243cd562f4f4882d02a5",
+          "content": "{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 1, \"event\": \"train_batch\", \"global_step\": 1, \"gradient_norm_before_clipping\": 47.5052375793457, \"learning_rate_used\": 0.0, \"loss\": 5.539411544799805, \"samples\": 2, \"time\": \"2026-10-19T19:26:39.683036+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 1, \"event\": \"train_batch\", \"global_step\": 2, \"gradient_norm_before_clipping\": 41.625003814697266, \"learning_rate_used\": 0.005, \"loss\": 4.124675750732422, \"samples\": 2, \"time\": \"2026-10-19T19:26:39.687189+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 1, \"event\": \"checkpoint\", \"improved\": true, \"metric\": \"entity.micro.f1\", \"path\": \"C:\\\\userProgram\\\\NLPexp\\\\.local\\\\bert_crf\\\\20261019T192215+0800_stage1c\\\\tests-regression\\\\test_epoch_resume_exact_model_0\\\\continuous\\\\checkpoints\\\\epoch_0001.pt\", \"sha256\": \"258e60a70448db2149ba19ad6c5f2f6f114be498d8c7c2094d8039e2744be69a\", \"time\": \"2026-10-19T19:26:39.694390+08:00\", \"value\": 0.28571428571428575}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"event\": \"epoch_complete\", \"history\": {\"epoch\": 1, \"epoch_elapsed_seconds\": 0.01749200001358986, \"global_step\": 2, \"learning_rate\": 0.004, \"train_loss\": 4.832043647766113, \"val_char_f1\": 0.28571428571428575, \"val_char_precision\": 0.25, \"val_char_recall\": 0.3333333333333333, \"val_entity_f1\": 0.28571428571428575, \"val_entity_precision\": 0.25, \"val_entity_recall\": 0.3333333333333333, \"val_loss\": 3.601124882698059}, \"time\": \"2026-10-19T19:26:39.694738+08:00\", \"validation\": {\"character\": {\"macro\": {\"f1\": 0.1142857142857143, \"precision\": 0.08, \"recall\": 0.2}, \"micro\": {\"f1\": 0.28571428571428575, \"gold\": 6, \"precision\": 0.25, \"predicted\": 8, \"recall\": 0.3333333333333333, \"true_positive\": 2}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 3, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.5714285714285715, \"gold\": 2, \"precision\": 0.4, \"predicted\": 5, \"recall\": 1.0, \"true_positive\": 2}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}}}, \"character_accuracy_including_O\": 0.25, \"characters\": 8, \"entity\": {\"macro\": {\"f1\": 0.13333333333333333, \"precision\": 0.1, \"recall\": 0.2}, \"micro\": {\"f1\": 0.28571428571428575, \"gold\": 3, \"precision\": 0.25, \"predicted\": 4, \"recall\": 0.3333333333333333, \"true_positive\": 1}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 2, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.6666666666666666, \"gold\": 1, \"precision\": 0.5, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 1}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}}}, \"loss\": 3.601124882698059, \"protocol\": \"strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0\", \"sentences\": 4}}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 2, \"event\": \"train_batch\", \"global_step\": 3, \"gradient_norm_before_clipping\": 34.181522369384766, \"learning_rate_used\": 0.004, \"loss\": 3.232177972793579, \"samples\": 2, \"time\": \"2026-10-19T19:26:39.700011+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 2, \"event\": \"train_batch\", \"global_step\": 4, \"gradient_norm_before_clipping\": 30.14020347595215, \"learning_rate_used\": 0.003, \"loss\": 3.2175557613372803, \"samples\": 2, \"time\": \"2026-10-19T19:26:39.703951+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 2, \"event\": \"checkpoint\", \"improved\": true, \"metric\": \"entity.micro.f1\", \"path\": \"C:\\\\userProgram\\\\NLPexp\\\\.local\\\\bert_crf\\\\20261019T192215+0800_stage1c\\\\tests-regression\\\\test_epoch_resume_exact_model_0\\\\continuous\\\\checkpoints\\\\epoch_0002.pt\", \"sha256\": \"f6ccef595b0cb5cb7e9db0a2ff496d7e083e070db77bcb2565d5901c15cb86c2\", \"time\": \"2026-10-19T19:26:39.711134+08:00\", \"value\": 0.3333333333333333}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"event\": \"epoch_complete\", \"history\": {\"epoch\": 2, \"epoch_elapsed_seconds\": 0.015260800020769238, \"global_step\": 4, \"learning_rate\": 0.002, \"train_loss\": 3.2248668670654297, \"val_char_f1\": 0.30769230769230765, \"val_char_precision\": 0.2857142857142857, \"val_char_recall\": 0.3333333333333333, \"val_entity_f1\": 0.3333333333333333, \"val_entity_precision\": 0.3333333333333333, \"val_entity_recall\": 0.3333333333333333, \"val_loss\": 2.5352648496627808}, \"time\": \"2026-10-19T19:26:39.711371+08:00\", \"validation\": {\"character\": {\"macro\": {\"f1\": 0.08888888888888889, \"precision\": 0.05714285714285714, \"recall\": 0.2}, \"micro\": {\"f1\": 0.30769230769230765, \"gold\": 6, \"precision\": 0.2857142857142857, \"predicted\": 7, \"recall\": 0.3333333333333333, \"true_positive\": 2}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.4444444444444445, \"gold\": 2, \"precision\": 0.2857142857142857, \"predicted\": 7, \"recall\": 1.0, \"true_positive\": 2}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}}}, \"character_accuracy_including_O\": 0.375, \"characters\": 8, \"entity\": {\"macro\": {\"f1\": 0.1, \"precision\": 0.06666666666666667, \"recall\": 0.2}, \"micro\": {\"f1\": 0.3333333333333333, \"gold\": 3, \"precision\": 0.3333333333333333, \"predicted\": 3, \"recall\": 0.3333333333333333, \"true_positive\": 1}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.5, \"gold\": 1, \"precision\": 0.3333333333333333, \"predicted\": 3, \"recall\": 1.0, \"true_positive\": 1}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}}}, \"loss\": 2.5352648496627808, \"protocol\": \"strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0\", \"sentences\": 4}}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 3, \"event\": \"train_batch\", \"global_step\": 5, \"gradient_norm_before_clipping\": 26.03850555419922, \"learning_rate_used\": 0.002, \"loss\": 2.25113844871521, \"samples\": 2, \"time\": \"2026-10-19T19:26:39.716769+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 3, \"event\": \"train_batch\", \"global_step\": 6, \"gradient_norm_before_clipping\": 30.041996002197266, \"learning_rate_used\": 0.001, \"loss\": 3.453125476837158, \"samples\": 2, \"time\": \"2026-10-19T19:26:39.720804+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 3, \"event\": \"checkpoint\", \"improved\": true, \"metric\": \"entity.micro.f1\", \"path\": \"C:\\\\userProgram\\\\NLPexp\\\\.local\\\\bert_crf\\\\20261019T192215+0800_stage1c\\\\tests-regression\\\\test_epoch_resume_exact_model_0\\\\continuous\\\\checkpoints\\\\epoch_0003.pt\", \"sha256\": \"4bfc3e003a7f7190d655483793a813c9da0abfd46cb3710920e31de6f0f4b281\", \"time\": \"2026-10-19T19:26:39.728222+08:00\", \"value\": 0.6666666666666666}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"event\": \"epoch_complete\", \"history\": {\"epoch\": 3, \"epoch_elapsed_seconds\": 0.01560030016116798, \"global_step\": 6, \"learning_rate\": 0.0, \"train_loss\": 2.852131962776184, \"val_char_f1\": 0.6153846153846153, \"val_char_precision\": 0.5714285714285714, \"val_char_recall\": 0.6666666666666666, \"val_entity_f1\": 0.6666666666666666, \"val_entity_precision\": 0.6666666666666666, \"val_entity_recall\": 0.6666666666666666, \"val_loss\": 2.207643985748291}, \"time\": \"2026-10-19T19:26:39.728438+08:00\", \"validation\": {\"character\": {\"macro\": {\"f1\": 0.31428571428571433, \"precision\": 0.27999999999999997, \"recall\": 0.4}, \"micro\": {\"f1\": 0.6153846153846153, \"gold\": 6, \"precision\": 0.5714285714285714, \"predicted\": 7, \"recall\": 0.6666666666666666, \"true_positive\": 4}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.5714285714285715, \"gold\": 2, \"precision\": 0.4, \"predicted\": 5, \"recall\": 1.0, \"true_positive\": 2}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 1.0, \"gold\": 2, \"precision\": 1.0, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 2}}}, \"character_accuracy_including_O\": 0.625, \"characters\": 8, \"entity\": {\"macro\": {\"f1\": 0.3333333333333333, \"precision\": 0.3, \"recall\": 0.4}, \"micro\": {\"f1\": 0.6666666666666666, \"gold\": 3, \"precision\": 0.6666666666666666, \"predicted\": 3, \"recall\": 0.6666666666666666, \"true_positive\": 2}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.6666666666666666, \"gold\": 1, \"precision\": 0.5, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 1}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 1.0, \"gold\": 1, \"precision\": 1.0, \"predicted\": 1, \"recall\": 1.0, \"true_positive\": 1}}}, \"loss\": 2.207643985748291, \"protocol\": \"strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0\", \"sentences\": 4}}\n"
+        },
+        "interrupted": {
+          "source": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_0\\interrupted\\train.log",
+          "sha256": "9536ab97387cceae8e7be95e0c14c4d7f53623c2418c60758d57fcbdcf4308e7",
+          "content": "{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 1, \"event\": \"train_batch\", \"global_step\": 1, \"gradient_norm_before_clipping\": 47.5052375793457, \"learning_rate_used\": 0.0, \"loss\": 5.539411544799805, \"samples\": 2, \"time\": \"2026-10-19T19:26:39.850001+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 1, \"event\": \"train_batch\", \"global_step\": 2, \"gradient_norm_before_clipping\": 41.625003814697266, \"learning_rate_used\": 0.005, \"loss\": 4.124675750732422, \"samples\": 2, \"time\": \"2026-10-19T19:26:39.854266+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 1, \"event\": \"checkpoint\", \"improved\": true, \"metric\": \"entity.micro.f1\", \"path\": \"C:\\\\userProgram\\\\NLPexp\\\\.local\\\\bert_crf\\\\20261019T192215+0800_stage1c\\\\tests-regression\\\\test_epoch_resume_exact_model_0\\\\interrupted\\\\checkpoints\\\\epoch_0001.pt\", \"sha256\": \"33c42e553f56ec38ff68d36d487a09e9abdd545c7717a8a001d507b1fa4de5c7\", \"time\": \"2026-10-19T19:26:39.861664+08:00\", \"value\": 0.28571428571428575}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"event\": \"epoch_complete\", \"history\": {\"epoch\": 1, \"epoch_elapsed_seconds\": 0.016855600057169795, \"global_step\": 2, \"learning_rate\": 0.004, \"train_loss\": 4.832043647766113, \"val_char_f1\": 0.28571428571428575, \"val_char_precision\": 0.25, \"val_char_recall\": 0.3333333333333333, \"val_entity_f1\": 0.28571428571428575, \"val_entity_precision\": 0.25, \"val_entity_recall\": 0.3333333333333333, \"val_loss\": 3.601124882698059}, \"time\": \"2026-10-19T19:26:39.862069+08:00\", \"validation\": {\"character\": {\"macro\": {\"f1\": 0.1142857142857143, \"precision\": 0.08, \"recall\": 0.2}, \"micro\": {\"f1\": 0.28571428571428575, \"gold\": 6, \"precision\": 0.25, \"predicted\": 8, \"recall\": 0.3333333333333333, \"true_positive\": 2}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 3, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.5714285714285715, \"gold\": 2, \"precision\": 0.4, \"predicted\": 5, \"recall\": 1.0, \"true_positive\": 2}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}}}, \"character_accuracy_including_O\": 0.25, \"characters\": 8, \"entity\": {\"macro\": {\"f1\": 0.13333333333333333, \"precision\": 0.1, \"recall\": 0.2}, \"micro\": {\"f1\": 0.28571428571428575, \"gold\": 3, \"precision\": 0.25, \"predicted\": 4, \"recall\": 0.3333333333333333, \"true_positive\": 1}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 2, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.6666666666666666, \"gold\": 1, \"precision\": 0.5, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 1}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}}}, \"loss\": 3.601124882698059, \"protocol\": \"strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0\", \"sentences\": 4}}\n"
+        },
+        "resumed": {
+          "source": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_0\\resumed\\train.log",
+          "sha256": "ec28db39388f311855013deaaa3b4f4358f0a2a604af039bc0363cb8a9cb3d02",
+          "content": "{\"artifact_kind\": \"synthetic_smoke_test\", \"event\": \"resume\", \"state\": {\"bad_epochs\": 0, \"best_checkpoint\": \"C:\\\\userProgram\\\\NLPexp\\\\.local\\\\bert_crf\\\\20261019T192215+0800_stage1c\\\\tests-regression\\\\test_epoch_resume_exact_model_0\\\\interrupted\\\\checkpoints\\\\epoch_0001.pt\", \"best_checkpoint_sha256\": \"33c42e553f56ec38ff68d36d487a09e9abdd545c7717a8a001d507b1fa4de5c7\", \"best_epoch\": 1, \"best_value\": 0.28571428571428575, \"epoch\": 1, \"global_step\": 2}, \"time\": \"2026-10-19T19:26:39.987488+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 2, \"event\": \"train_batch\", \"global_step\": 3, \"gradient_norm_before_clipping\": 34.181522369384766, \"learning_rate_used\": 0.004, \"loss\": 3.232177972793579, \"samples\": 2, \"time\": \"2026-10-19T19:26:39.992210+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 2, \"event\": \"train_batch\", \"global_step\": 4, \"gradient_norm_before_clipping\": 30.14020347595215, \"learning_rate_used\": 0.003, \"loss\": 3.2175557613372803, \"samples\": 2, \"time\": \"2026-10-19T19:26:39.996147+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 2, \"event\": \"checkpoint\", \"improved\": true, \"metric\": \"entity.micro.f1\", \"path\": \"C:\\\\userProgram\\\\NLPexp\\\\.local\\\\bert_crf\\\\20261019T192215+0800_stage1c\\\\tests-regression\\\\test_epoch_resume_exact_model_0\\\\resumed\\\\checkpoints\\\\epoch_0002.pt\", \"sha256\": \"f00d08f2fed05787bbec691c76b01ade8d532253e69cac6429f14458a4abc8e2\", \"time\": \"2026-10-19T19:26:40.003234+08:00\", \"value\": 0.3333333333333333}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"event\": \"epoch_complete\", \"history\": {\"epoch\": 2, \"epoch_elapsed_seconds\": 0.015721100149676204, \"global_step\": 4, \"learning_rate\": 0.002, \"train_loss\": 3.2248668670654297, \"val_char_f1\": 0.30769230769230765, \"val_char_precision\": 0.2857142857142857, \"val_char_recall\": 0.3333333333333333, \"val_entity_f1\": 0.3333333333333333, \"val_entity_precision\": 0.3333333333333333, \"val_entity_recall\": 0.3333333333333333, \"val_loss\": 2.5352648496627808}, \"time\": \"2026-10-19T19:26:40.003511+08:00\", \"validation\": {\"character\": {\"macro\": {\"f1\": 0.08888888888888889, \"precision\": 0.05714285714285714, \"recall\": 0.2}, \"micro\": {\"f1\": 0.30769230769230765, \"gold\": 6, \"precision\": 0.2857142857142857, \"predicted\": 7, \"recall\": 0.3333333333333333, \"true_positive\": 2}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.4444444444444445, \"gold\": 2, \"precision\": 0.2857142857142857, \"predicted\": 7, \"recall\": 1.0, \"true_positive\": 2}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}}}, \"character_accuracy_including_O\": 0.375, \"characters\": 8, \"entity\": {\"macro\": {\"f1\": 0.1, \"precision\": 0.06666666666666667, \"recall\": 0.2}, \"micro\": {\"f1\": 0.3333333333333333, \"gold\": 3, \"precision\": 0.3333333333333333, \"predicted\": 3, \"recall\": 0.3333333333333333, \"true_positive\": 1}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.5, \"gold\": 1, \"precision\": 0.3333333333333333, \"predicted\": 3, \"recall\": 1.0, \"true_positive\": 1}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}}}, \"loss\": 2.5352648496627808, \"protocol\": \"strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0\", \"sentences\": 4}}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 3, \"event\": \"train_batch\", \"global_step\": 5, \"gradient_norm_before_clipping\": 26.03850555419922, \"learning_rate_used\": 0.002, \"loss\": 2.25113844871521, \"samples\": 2, \"time\": \"2026-10-19T19:26:40.008992+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 3, \"event\": \"train_batch\", \"global_step\": 6, \"gradient_norm_before_clipping\": 30.041996002197266, \"learning_rate_used\": 0.001, \"loss\": 3.453125476837158, \"samples\": 2, \"time\": \"2026-10-19T19:26:40.012748+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 3, \"event\": \"checkpoint\", \"improved\": true, \"metric\": \"entity.micro.f1\", \"path\": \"C:\\\\userProgram\\\\NLPexp\\\\.local\\\\bert_crf\\\\20261019T192215+0800_stage1c\\\\tests-regression\\\\test_epoch_resume_exact_model_0\\\\resumed\\\\checkpoints\\\\epoch_0003.pt\", \"sha256\": \"aa6d057acb9eed18ad0d19828dc0344d44d97aa01397276cb86e91601eae5fbb\", \"time\": \"2026-10-19T19:26:40.020185+08:00\", \"value\": 0.6666666666666666}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"event\": \"epoch_complete\", \"history\": {\"epoch\": 3, \"epoch_elapsed_seconds\": 0.015438700094819069, \"global_step\": 6, \"learning_rate\": 0.0, \"train_loss\": 2.852131962776184, \"val_char_f1\": 0.6153846153846153, \"val_char_precision\": 0.5714285714285714, \"val_char_recall\": 0.6666666666666666, \"val_entity_f1\": 0.6666666666666666, \"val_entity_precision\": 0.6666666666666666, \"val_entity_recall\": 0.6666666666666666, \"val_loss\": 2.207643985748291}, \"time\": \"2026-10-19T19:26:40.020423+08:00\", \"validation\": {\"character\": {\"macro\": {\"f1\": 0.31428571428571433, \"precision\": 0.27999999999999997, \"recall\": 0.4}, \"micro\": {\"f1\": 0.6153846153846153, \"gold\": 6, \"precision\": 0.5714285714285714, \"predicted\": 7, \"recall\": 0.6666666666666666, \"true_positive\": 4}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.5714285714285715, \"gold\": 2, \"precision\": 0.4, \"predicted\": 5, \"recall\": 1.0, \"true_positive\": 2}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 1.0, \"gold\": 2, \"precision\": 1.0, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 2}}}, \"character_accuracy_including_O\": 0.625, \"characters\": 8, \"entity\": {\"macro\": {\"f1\": 0.3333333333333333, \"precision\": 0.3, \"recall\": 0.4}, \"micro\": {\"f1\": 0.6666666666666666, \"gold\": 3, \"precision\": 0.6666666666666666, \"predicted\": 3, \"recall\": 0.6666666666666666, \"true_positive\": 2}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.6666666666666666, \"gold\": 1, \"precision\": 0.5, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 1}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 1.0, \"gold\": 1, \"precision\": 1.0, \"predicted\": 1, \"recall\": 1.0, \"true_positive\": 1}}}, \"loss\": 2.207643985748291, \"protocol\": \"strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0\", \"sentences\": 4}}\n"
+        }
+      },
+      "checkpoint_hashes": {
+        "continuous": "4bfc3e003a7f7190d655483793a813c9da0abfd46cb3710920e31de6f0f4b281",
+        "resumed": "aa6d057acb9eed18ad0d19828dc0344d44d97aa01397276cb86e91601eae5fbb"
+      }
+    },
+    {
+      "artifact_kind": "synthetic_smoke_test",
+      "directory": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_1",
+      "device": "cuda",
+      "checkpoint_state_bitwise_equal": {
+        "model": true,
+        "optimizer": true,
+        "scheduler": true,
+        "rng": true
+      },
+      "continuous_state": {
+        "epoch": 3,
+        "global_step": 6,
+        "best_value": 0.6666666666666666,
+        "best_epoch": 2,
+        "bad_epochs": 1,
+        "best_checkpoint": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_1\\continuous\\checkpoints\\epoch_0002.pt",
+        "best_checkpoint_sha256": "ce4a55477d1fe71a86af1a5e89a1dac099daab0ba6d65a92200f07671c2ebd46"
+      },
+      "resumed_state": {
+        "epoch": 3,
+        "global_step": 6,
+        "best_value": 0.6666666666666666,
+        "best_epoch": 2,
+        "bad_epochs": 1,
+        "best_checkpoint": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_1\\resumed\\checkpoints\\epoch_0002.pt",
+        "best_checkpoint_sha256": "95505211181d363b8cda2bcfc15e07c7718a9bf007a61a228d23f195cb1ca343"
+      },
+      "manifests": {
+        "continuous": {
+          "schema_version": "1.0",
+          "artifact_kind": "synthetic_smoke_test",
+          "run_id": "continuous",
+          "started_at": "2026-10-19T19:26:40.049363+08:00",
+          "status": "completed",
+          "command": [
+            "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Scripts\\python.exe",
+            "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Lib\\site-packages\\pytest\\__main__.py",
+            "tests/bert_crf",
+            "-v",
+            "-s",
+            "--basetemp=.local/bert_crf/20261019T192215+0800_stage1c/tests-regression",
+            "--pretrained-dir=.local/bert_crf/20261019T174356+0800_stage1b/pretrained",
+            "--smoke-output=docs/bert_crf/evidence/20261019T192215+0800_stage1c/stage1b_regression_gpu.json",
+            "--checkpoint-dir=.local/bert_crf/20261019T192215+0800_stage1c/stage1b_regression_checkpoint",
+            "--trainer-smoke-summary=docs/bert_crf/evidence/20261019T192215+0800_stage1c/pretrained_trainer_final.json",
+            "--junitxml=docs/bert_crf/evidence/20261019T192215+0800_stage1c/full_regression.xml"
+          ],
+          "cwd": "C:\\userProgram\\NLPexp",
+          "metadata": {
+            "train": {
+              "artifact_kind": "synthetic_smoke_test",
+              "data_version": "synthetic_char_v1",
+              "split": "synthetic_train",
+              "ids_sha256": "85b172db0290a02a51873d70ed455229b765c87361ada58abed36f39be184743",
+              "data_sha256": "3c0ce9eac3368db06ce6ed8a391b9a74e84cf316f0715315ca9d01f4f1bf7c21",
+              "alignment_version": "SYNTHETIC_ONLY_verified_one_to_one_v1",
+              "source": "invented_token_ids"
+            },
+            "validation": {
+              "artifact_kind": "synthetic_smoke_test",
+              "data_version": "synthetic_char_v1",
+              "split": "synthetic_val",
+              "ids_sha256": "7821f127c987c39428e82d0083e7ae07b56657b2ddf1ac4fffd25c099c695e55",
+              "data_sha256": "3c0ce9eac3368db06ce6ed8a391b9a74e84cf316f0715315ca9d01f4f1bf7c21",
+              "alignment_version": "SYNTHETIC_ONLY_verified_one_to_one_v1",
+              "source": "invented_token_ids"
+            },
+            "model_identity": "d5683cd392cdc20e415b304b6bc2f9376bfafc855d7051262d8f5272282dcee5",
+            "loader_policy": "epoch-seeded provider; no persistent sampler cursor; num_workers=0 in synthetic tests",
+            "selection": {
+              "metric": "entity.micro.f1",
+              "mode": "max",
+              "tie": "retain earlier best; min_delta is strict",
+              "patience": null
+            },
+            "user_metadata": {}
+          },
+          "code": {
+            "commit": "2706f861d29a72f40e7db9ffedbf56db8073a203",
+            "dirty_status": "M .gitignore\n M tests/bert_crf/conftest.py\n?? configs/bert_crf/stage1c_trainer_smoke.json\n?? docs/bert_crf/experiment_record_template.md\n?? docs/bert_crf/stage1c_runner.py\n?? src/bert_crf/checkpoint.py\n?? src/bert_crf/experiment.py\n?? src/bert_crf/metrics.py\n?? src/bert_crf/synthetic_smoke.py\n?? src/bert_crf/train.py\n?? src/bert_crf/trainer.py\n?? src/bert_crf/training_config.py\n?? tests/bert_crf/test_metrics.py\n?? tests/bert_crf/test_trainer.py\n?? tests/bert_crf/test_trainer_pretrained.py",
+            "source_manifest_sha256": "bd762946a5ea569b7576164029e415a0c5c4e122fac94aee9762f4145d3832ed",
+            "source_snapshot": "source_snapshot/",
+            "tracked_patch": "tracked_changes.patch"
+          },
+          "updated_at": "2026-10-19T19:26:40.553823+08:00",
+          "elapsed_seconds": 0.40534759988076985,
+          "state": {
+            "epoch": 3,
+            "global_step": 6,
+            "best_value": 0.6666666666666666,
+            "best_epoch": 2,
+            "bad_epochs": 1,
+            "best_checkpoint": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_1\\continuous\\checkpoints\\epoch_0002.pt",
+            "best_checkpoint_sha256": "ce4a55477d1fe71a86af1a5e89a1dac099daab0ba6d65a92200f07671c2ebd46"
+          },
+          "timing_scope": "fit includes updates, validation, logging and checkpoint I/O; excludes initial model/provider load",
+          "peak_allocated_bytes": 67426304,
+          "peak_reserved_bytes": 511705088
+        },
+        "interrupted": {
+          "schema_version": "1.0",
+          "artifact_kind": "synthetic_smoke_test",
+          "run_id": "interrupted",
+          "started_at": "2026-10-19T19:26:40.568166+08:00",
+          "status": "interrupted",
+          "command": [
+            "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Scripts\\python.exe",
+            "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Lib\\site-packages\\pytest\\__main__.py",
+            "tests/bert_crf",
+            "-v",
+            "-s",
+            "--basetemp=.local/bert_crf/20261019T192215+0800_stage1c/tests-regression",
+            "--pretrained-dir=.local/bert_crf/20261019T174356+0800_stage1b/pretrained",
+            "--smoke-output=docs/bert_crf/evidence/20261019T192215+0800_stage1c/stage1b_regression_gpu.json",
+            "--checkpoint-dir=.local/bert_crf/20261019T192215+0800_stage1c/stage1b_regression_checkpoint",
+            "--trainer-smoke-summary=docs/bert_crf/evidence/20261019T192215+0800_stage1c/pretrained_trainer_final.json",
+            "--junitxml=docs/bert_crf/evidence/20261019T192215+0800_stage1c/full_regression.xml"
+          ],
+          "cwd": "C:\\userProgram\\NLPexp",
+          "metadata": {
+            "train": {
+              "artifact_kind": "synthetic_smoke_test",
+              "data_version": "synthetic_char_v1",
+              "split": "synthetic_train",
+              "ids_sha256": "85b172db0290a02a51873d70ed455229b765c87361ada58abed36f39be184743",
+              "data_sha256": "3c0ce9eac3368db06ce6ed8a391b9a74e84cf316f0715315ca9d01f4f1bf7c21",
+              "alignment_version": "SYNTHETIC_ONLY_verified_one_to_one_v1",
+              "source": "invented_token_ids"
+            },
+            "validation": {
+              "artifact_kind": "synthetic_smoke_test",
+              "data_version": "synthetic_char_v1",
+              "split": "synthetic_val",
+              "ids_sha256": "7821f127c987c39428e82d0083e7ae07b56657b2ddf1ac4fffd25c099c695e55",
+              "data_sha256": "3c0ce9eac3368db06ce6ed8a391b9a74e84cf316f0715315ca9d01f4f1bf7c21",
+              "alignment_version": "SYNTHETIC_ONLY_verified_one_to_one_v1",
+              "source": "invented_token_ids"
+            },
+            "model_identity": "d5683cd392cdc20e415b304b6bc2f9376bfafc855d7051262d8f5272282dcee5",
+            "loader_policy": "epoch-seeded provider; no persistent sampler cursor; num_workers=0 in synthetic tests",
+            "selection": {
+              "metric": "entity.micro.f1",
+              "mode": "max",
+              "tie": "retain earlier best; min_delta is strict",
+              "patience": null
+            },
+            "user_metadata": {}
+          },
+          "code": {
+            "commit": "2706f861d29a72f40e7db9ffedbf56db8073a203",
+            "dirty_status": "M .gitignore\n M tests/bert_crf/conftest.py\n?? configs/bert_crf/stage1c_trainer_smoke.json\n?? docs/bert_crf/experiment_record_template.md\n?? docs/bert_crf/stage1c_runner.py\n?? src/bert_crf/checkpoint.py\n?? src/bert_crf/experiment.py\n?? src/bert_crf/metrics.py\n?? src/bert_crf/synthetic_smoke.py\n?? src/bert_crf/train.py\n?? src/bert_crf/trainer.py\n?? src/bert_crf/training_config.py\n?? tests/bert_crf/test_metrics.py\n?? tests/bert_crf/test_trainer.py\n?? tests/bert_crf/test_trainer_pretrained.py",
+            "source_manifest_sha256": "bd762946a5ea569b7576164029e415a0c5c4e122fac94aee9762f4145d3832ed",
+            "source_snapshot": "source_snapshot/",
+            "tracked_patch": "tracked_changes.patch"
+          },
+          "updated_at": "2026-10-19T19:26:40.761167+08:00",
+          "elapsed_seconds": 0.08795699989423156,
+          "state": {
+            "epoch": 1,
+            "global_step": 2,
+            "best_value": 0.28571428571428575,
+            "best_epoch": 1,
+            "bad_epochs": 0,
+            "best_checkpoint": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_1\\interrupted\\checkpoints\\epoch_0001.pt",
+            "best_checkpoint_sha256": "807d66f4fad1b9cb1b5c55eb2e67c60286866ba96d50ffdcb1c83b1352313485"
+          },
+          "timing_scope": "fit includes updates, validation, logging and checkpoint I/O; excludes initial model/provider load",
+          "peak_allocated_bytes": 67646464,
+          "peak_reserved_bytes": 511705088
+        },
+        "resumed": {
+          "schema_version": "1.0",
+          "artifact_kind": "synthetic_smoke_test",
+          "run_id": "resumed",
+          "started_at": "2026-10-19T19:26:40.774484+08:00",
+          "status": "completed",
+          "command": [
+            "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Scripts\\python.exe",
+            "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Lib\\site-packages\\pytest\\__main__.py",
+            "tests/bert_crf",
+            "-v",
+            "-s",
+            "--basetemp=.local/bert_crf/20261019T192215+0800_stage1c/tests-regression",
+            "--pretrained-dir=.local/bert_crf/20261019T174356+0800_stage1b/pretrained",
+            "--smoke-output=docs/bert_crf/evidence/20261019T192215+0800_stage1c/stage1b_regression_gpu.json",
+            "--checkpoint-dir=.local/bert_crf/20261019T192215+0800_stage1c/stage1b_regression_checkpoint",
+            "--trainer-smoke-summary=docs/bert_crf/evidence/20261019T192215+0800_stage1c/pretrained_trainer_final.json",
+            "--junitxml=docs/bert_crf/evidence/20261019T192215+0800_stage1c/full_regression.xml"
+          ],
+          "cwd": "C:\\userProgram\\NLPexp",
+          "metadata": {
+            "train": {
+              "artifact_kind": "synthetic_smoke_test",
+              "data_version": "synthetic_char_v1",
+              "split": "synthetic_train",
+              "ids_sha256": "85b172db0290a02a51873d70ed455229b765c87361ada58abed36f39be184743",
+              "data_sha256": "3c0ce9eac3368db06ce6ed8a391b9a74e84cf316f0715315ca9d01f4f1bf7c21",
+              "alignment_version": "SYNTHETIC_ONLY_verified_one_to_one_v1",
+              "source": "invented_token_ids"
+            },
+            "validation": {
+              "artifact_kind": "synthetic_smoke_test",
+              "data_version": "synthetic_char_v1",
+              "split": "synthetic_val",
+              "ids_sha256": "7821f127c987c39428e82d0083e7ae07b56657b2ddf1ac4fffd25c099c695e55",
+              "data_sha256": "3c0ce9eac3368db06ce6ed8a391b9a74e84cf316f0715315ca9d01f4f1bf7c21",
+              "alignment_version": "SYNTHETIC_ONLY_verified_one_to_one_v1",
+              "source": "invented_token_ids"
+            },
+            "model_identity": "d5683cd392cdc20e415b304b6bc2f9376bfafc855d7051262d8f5272282dcee5",
+            "loader_policy": "epoch-seeded provider; no persistent sampler cursor; num_workers=0 in synthetic tests",
+            "selection": {
+              "metric": "entity.micro.f1",
+              "mode": "max",
+              "tie": "retain earlier best; min_delta is strict",
+              "patience": null
+            },
+            "user_metadata": {}
+          },
+          "code": {
+            "commit": "2706f861d29a72f40e7db9ffedbf56db8073a203",
+            "dirty_status": "M .gitignore\n M tests/bert_crf/conftest.py\n?? configs/bert_crf/stage1c_trainer_smoke.json\n?? docs/bert_crf/experiment_record_template.md\n?? docs/bert_crf/stage1c_runner.py\n?? src/bert_crf/checkpoint.py\n?? src/bert_crf/experiment.py\n?? src/bert_crf/metrics.py\n?? src/bert_crf/synthetic_smoke.py\n?? src/bert_crf/train.py\n?? src/bert_crf/trainer.py\n?? src/bert_crf/training_config.py\n?? tests/bert_crf/test_metrics.py\n?? tests/bert_crf/test_trainer.py\n?? tests/bert_crf/test_trainer_pretrained.py",
+            "source_manifest_sha256": "bd762946a5ea569b7576164029e415a0c5c4e122fac94aee9762f4145d3832ed",
+            "source_snapshot": "source_snapshot/",
+            "tracked_patch": "tracked_changes.patch"
+          },
+          "updated_at": "2026-10-19T19:26:41.040397+08:00",
+          "resumed_from": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_1\\interrupted\\checkpoints\\epoch_0001.pt",
+          "resumed_from_sha256": "807d66f4fad1b9cb1b5c55eb2e67c60286866ba96d50ffdcb1c83b1352313485",
+          "elapsed_seconds": 0.1661934000439942,
+          "state": {
+            "epoch": 3,
+            "global_step": 6,
+            "best_value": 0.6666666666666666,
+            "best_epoch": 2,
+            "bad_epochs": 1,
+            "best_checkpoint": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_1\\resumed\\checkpoints\\epoch_0002.pt",
+            "best_checkpoint_sha256": "95505211181d363b8cda2bcfc15e07c7718a9bf007a61a228d23f195cb1ca343"
+          },
+          "timing_scope": "fit includes updates, validation, logging and checkpoint I/O; excludes initial model/provider load",
+          "peak_allocated_bytes": 67866624,
+          "peak_reserved_bytes": 511705088
+        }
+      },
+      "history": {
+        "continuous": [
+          {
+            "epoch": "1",
+            "train_loss": "4.883373022079468",
+            "val_loss": "3.5734535455703735",
+            "val_char_precision": "0.25",
+            "val_char_recall": "0.3333333333333333",
+            "val_char_f1": "0.28571428571428575",
+            "val_entity_precision": "0.25",
+            "val_entity_recall": "0.3333333333333333",
+            "val_entity_f1": "0.28571428571428575",
+            "learning_rate": "0.004",
+            "epoch_elapsed_seconds": "0.22773879999294877",
+            "global_step": "2"
+          },
+          {
+            "epoch": "2",
+            "train_loss": "3.1811617612838745",
+            "val_loss": "2.5305159091949463",
+            "val_char_precision": "0.5714285714285714",
+            "val_char_recall": "0.6666666666666666",
+            "val_char_f1": "0.6153846153846153",
+            "val_entity_precision": "0.6666666666666666",
+            "val_entity_recall": "0.6666666666666666",
+            "val_entity_f1": "0.6666666666666666",
+            "learning_rate": "0.002",
+            "epoch_elapsed_seconds": "0.08930059988051653",
+            "global_step": "4"
+          },
+          {
+            "epoch": "3",
+            "train_loss": "2.662991523742676",
+            "val_loss": "2.204817056655884",
+            "val_char_precision": "0.5714285714285714",
+            "val_char_recall": "0.6666666666666666",
+            "val_char_f1": "0.6153846153846153",
+            "val_entity_precision": "0.6666666666666666",
+            "val_entity_recall": "0.6666666666666666",
+            "val_entity_f1": "0.6666666666666666",
+            "learning_rate": "0.0",
+            "epoch_elapsed_seconds": "0.06562720006331801",
+            "global_step": "6"
+          }
+        ],
+        "interrupted": [
+          {
+            "epoch": "1",
+            "train_loss": "4.883373022079468",
+            "val_loss": "3.5734535455703735",
+            "val_char_precision": "0.25",
+            "val_char_recall": "0.3333333333333333",
+            "val_char_f1": "0.28571428571428575",
+            "val_entity_precision": "0.25",
+            "val_entity_recall": "0.3333333333333333",
+            "val_entity_f1": "0.28571428571428575",
+            "learning_rate": "0.004",
+            "epoch_elapsed_seconds": "0.08542619994841516",
+            "global_step": "2"
+          }
+        ],
+        "resumed": [
+          {
+            "epoch": "2",
+            "train_loss": "3.1811617612838745",
+            "val_loss": "2.5305159091949463",
+            "val_char_precision": "0.5714285714285714",
+            "val_char_recall": "0.6666666666666666",
+            "val_char_f1": "0.6153846153846153",
+            "val_entity_precision": "0.6666666666666666",
+            "val_entity_recall": "0.6666666666666666",
+            "val_entity_f1": "0.6666666666666666",
+            "learning_rate": "0.002",
+            "epoch_elapsed_seconds": "0.07297879992984235",
+            "global_step": "4"
+          },
+          {
+            "epoch": "3",
+            "train_loss": "2.662991523742676",
+            "val_loss": "2.204817056655884",
+            "val_char_precision": "0.5714285714285714",
+            "val_char_recall": "0.6666666666666666",
+            "val_char_f1": "0.6153846153846153",
+            "val_entity_precision": "0.6666666666666666",
+            "val_entity_recall": "0.6666666666666666",
+            "val_entity_f1": "0.6666666666666666",
+            "learning_rate": "0.0",
+            "epoch_elapsed_seconds": "0.07756679994054139",
+            "global_step": "6"
+          }
+        ]
+      },
+      "original_logs": {
+        "continuous": {
+          "source": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_1\\continuous\\train.log",
+          "sha256": "1252b062efaeb9508dd141b57ec5d036b267c9b3a3d83beb2b26f58f19dfa16d",
+          "content": "{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 1, \"event\": \"train_batch\", \"global_step\": 1, \"gradient_norm_before_clipping\": 42.14115524291992, \"learning_rate_used\": 0.0, \"loss\": 5.819952964782715, \"samples\": 2, \"time\": \"2026-10-19T19:26:40.321961+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 1, \"event\": \"train_batch\", \"global_step\": 2, \"gradient_norm_before_clipping\": 34.3818473815918, \"learning_rate_used\": 0.005, \"loss\": 3.9467930793762207, \"samples\": 2, \"time\": \"2026-10-19T19:26:40.340934+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 1, \"event\": \"checkpoint\", \"improved\": true, \"metric\": \"entity.micro.f1\", \"path\": \"C:\\\\userProgram\\\\NLPexp\\\\.local\\\\bert_crf\\\\20261019T192215+0800_stage1c\\\\tests-regression\\\\test_epoch_resume_exact_model_1\\\\continuous\\\\checkpoints\\\\epoch_0001.pt\", \"sha256\": \"281a413dc83d64413be8d8c4c218c935deb1673fde443f51bc63c9c8cddb57ec\", \"time\": \"2026-10-19T19:26:40.375973+08:00\", \"value\": 0.28571428571428575}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"event\": \"epoch_complete\", \"history\": {\"epoch\": 1, \"epoch_elapsed_seconds\": 0.22773879999294877, \"global_step\": 2, \"learning_rate\": 0.004, \"train_loss\": 4.883373022079468, \"val_char_f1\": 0.28571428571428575, \"val_char_precision\": 0.25, \"val_char_recall\": 0.3333333333333333, \"val_entity_f1\": 0.28571428571428575, \"val_entity_precision\": 0.25, \"val_entity_recall\": 0.3333333333333333, \"val_loss\": 3.5734535455703735}, \"time\": \"2026-10-19T19:26:40.376630+08:00\", \"validation\": {\"character\": {\"macro\": {\"f1\": 0.1142857142857143, \"precision\": 0.08, \"recall\": 0.2}, \"micro\": {\"f1\": 0.28571428571428575, \"gold\": 6, \"precision\": 0.25, \"predicted\": 8, \"recall\": 0.3333333333333333, \"true_positive\": 2}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 3, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.5714285714285715, \"gold\": 2, \"precision\": 0.4, \"predicted\": 5, \"recall\": 1.0, \"true_positive\": 2}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}}}, \"character_accuracy_including_O\": 0.25, \"characters\": 8, \"entity\": {\"macro\": {\"f1\": 0.13333333333333333, \"precision\": 0.1, \"recall\": 0.2}, \"micro\": {\"f1\": 0.28571428571428575, \"gold\": 3, \"precision\": 0.25, \"predicted\": 4, \"recall\": 0.3333333333333333, \"true_positive\": 1}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 2, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.6666666666666666, \"gold\": 1, \"precision\": 0.5, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 1}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}}}, \"loss\": 3.5734535455703735, \"protocol\": \"strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0\", \"sentences\": 4}}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 2, \"event\": \"train_batch\", \"global_step\": 3, \"gradient_norm_before_clipping\": 38.18210220336914, \"learning_rate_used\": 0.004, \"loss\": 2.981426477432251, \"samples\": 2, \"time\": \"2026-10-19T19:26:40.408217+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 2, \"event\": \"train_batch\", \"global_step\": 4, \"gradient_norm_before_clipping\": 29.115184783935547, \"learning_rate_used\": 0.003, \"loss\": 3.380897045135498, \"samples\": 2, \"time\": \"2026-10-19T19:26:40.432791+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 2, \"event\": \"checkpoint\", \"improved\": true, \"metric\": \"entity.micro.f1\", \"path\": \"C:\\\\userProgram\\\\NLPexp\\\\.local\\\\bert_crf\\\\20261019T192215+0800_stage1c\\\\tests-regression\\\\test_epoch_resume_exact_model_1\\\\continuous\\\\checkpoints\\\\epoch_0002.pt\", \"sha256\": \"ce4a55477d1fe71a86af1a5e89a1dac099daab0ba6d65a92200f07671c2ebd46\", \"time\": \"2026-10-19T19:26:40.467156+08:00\", \"value\": 0.6666666666666666}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"event\": \"epoch_complete\", \"history\": {\"epoch\": 2, \"epoch_elapsed_seconds\": 0.08930059988051653, \"global_step\": 4, \"learning_rate\": 0.002, \"train_loss\": 3.1811617612838745, \"val_char_f1\": 0.6153846153846153, \"val_char_precision\": 0.5714285714285714, \"val_char_recall\": 0.6666666666666666, \"val_entity_f1\": 0.6666666666666666, \"val_entity_precision\": 0.6666666666666666, \"val_entity_recall\": 0.6666666666666666, \"val_loss\": 2.5305159091949463}, \"time\": \"2026-10-19T19:26:40.467448+08:00\", \"validation\": {\"character\": {\"macro\": {\"f1\": 0.31428571428571433, \"precision\": 0.27999999999999997, \"recall\": 0.4}, \"micro\": {\"f1\": 0.6153846153846153, \"gold\": 6, \"precision\": 0.5714285714285714, \"predicted\": 7, \"recall\": 0.6666666666666666, \"true_positive\": 4}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.5714285714285715, \"gold\": 2, \"precision\": 0.4, \"predicted\": 5, \"recall\": 1.0, \"true_positive\": 2}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 1.0, \"gold\": 2, \"precision\": 1.0, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 2}}}, \"character_accuracy_including_O\": 0.625, \"characters\": 8, \"entity\": {\"macro\": {\"f1\": 0.3333333333333333, \"precision\": 0.3, \"recall\": 0.4}, \"micro\": {\"f1\": 0.6666666666666666, \"gold\": 3, \"precision\": 0.6666666666666666, \"predicted\": 3, \"recall\": 0.6666666666666666, \"true_positive\": 2}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.6666666666666666, \"gold\": 1, \"precision\": 0.5, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 1}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 1.0, \"gold\": 1, \"precision\": 1.0, \"predicted\": 1, \"recall\": 1.0, \"true_positive\": 1}}}, \"loss\": 2.5305159091949463, \"protocol\": \"strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0\", \"sentences\": 4}}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 3, \"event\": \"train_batch\", \"global_step\": 5, \"gradient_norm_before_clipping\": 24.548856735229492, \"learning_rate_used\": 0.002, \"loss\": 2.201965808868408, \"samples\": 2, \"time\": \"2026-10-19T19:26:40.506712+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 3, \"event\": \"train_batch\", \"global_step\": 6, \"gradient_norm_before_clipping\": 28.19596290588379, \"learning_rate_used\": 0.001, \"loss\": 3.1240172386169434, \"samples\": 2, \"time\": \"2026-10-19T19:26:40.525217+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 3, \"event\": \"checkpoint\", \"improved\": false, \"metric\": \"entity.micro.f1\", \"path\": \"C:\\\\userProgram\\\\NLPexp\\\\.local\\\\bert_crf\\\\20261019T192215+0800_stage1c\\\\tests-regression\\\\test_epoch_resume_exact_model_1\\\\continuous\\\\checkpoints\\\\epoch_0003.pt\", \"sha256\": \"29595ba0c83a04f66a167b5fae39a71127815f4cc15a94d71fa61d93d882295f\", \"time\": \"2026-10-19T19:26:40.551559+08:00\", \"value\": 0.6666666666666666}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"event\": \"epoch_complete\", \"history\": {\"epoch\": 3, \"epoch_elapsed_seconds\": 0.06562720006331801, \"global_step\": 6, \"learning_rate\": 0.0, \"train_loss\": 2.662991523742676, \"val_char_f1\": 0.6153846153846153, \"val_char_precision\": 0.5714285714285714, \"val_char_recall\": 0.6666666666666666, \"val_entity_f1\": 0.6666666666666666, \"val_entity_precision\": 0.6666666666666666, \"val_entity_recall\": 0.6666666666666666, \"val_loss\": 2.204817056655884}, \"time\": \"2026-10-19T19:26:40.551869+08:00\", \"validation\": {\"character\": {\"macro\": {\"f1\": 0.31428571428571433, \"precision\": 0.27999999999999997, \"recall\": 0.4}, \"micro\": {\"f1\": 0.6153846153846153, \"gold\": 6, \"precision\": 0.5714285714285714, \"predicted\": 7, \"recall\": 0.6666666666666666, \"true_positive\": 4}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.5714285714285715, \"gold\": 2, \"precision\": 0.4, \"predicted\": 5, \"recall\": 1.0, \"true_positive\": 2}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 1.0, \"gold\": 2, \"precision\": 1.0, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 2}}}, \"character_accuracy_including_O\": 0.625, \"characters\": 8, \"entity\": {\"macro\": {\"f1\": 0.3333333333333333, \"precision\": 0.3, \"recall\": 0.4}, \"micro\": {\"f1\": 0.6666666666666666, \"gold\": 3, \"precision\": 0.6666666666666666, \"predicted\": 3, \"recall\": 0.6666666666666666, \"true_positive\": 2}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.6666666666666666, \"gold\": 1, \"precision\": 0.5, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 1}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 1.0, \"gold\": 1, \"precision\": 1.0, \"predicted\": 1, \"recall\": 1.0, \"true_positive\": 1}}}, \"loss\": 2.204817056655884, \"protocol\": \"strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0\", \"sentences\": 4}}\n"
+        },
+        "interrupted": {
+          "source": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_1\\interrupted\\train.log",
+          "sha256": "11a8d95b1e107ba28f98b9cbdb9993ce5ebf17049a47963ec0e7ea23a567b876",
+          "content": "{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 1, \"event\": \"train_batch\", \"global_step\": 1, \"gradient_norm_before_clipping\": 42.14115524291992, \"learning_rate_used\": 0.0, \"loss\": 5.819952964782715, \"samples\": 2, \"time\": \"2026-10-19T19:26:40.701175+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 1, \"event\": \"train_batch\", \"global_step\": 2, \"gradient_norm_before_clipping\": 34.3818473815918, \"learning_rate_used\": 0.005, \"loss\": 3.9467930793762207, \"samples\": 2, \"time\": \"2026-10-19T19:26:40.723889+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 1, \"event\": \"checkpoint\", \"improved\": true, \"metric\": \"entity.micro.f1\", \"path\": \"C:\\\\userProgram\\\\NLPexp\\\\.local\\\\bert_crf\\\\20261019T192215+0800_stage1c\\\\tests-regression\\\\test_epoch_resume_exact_model_1\\\\interrupted\\\\checkpoints\\\\epoch_0001.pt\", \"sha256\": \"807d66f4fad1b9cb1b5c55eb2e67c60286866ba96d50ffdcb1c83b1352313485\", \"time\": \"2026-10-19T19:26:40.756294+08:00\", \"value\": 0.28571428571428575}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"event\": \"epoch_complete\", \"history\": {\"epoch\": 1, \"epoch_elapsed_seconds\": 0.08542619994841516, \"global_step\": 2, \"learning_rate\": 0.004, \"train_loss\": 4.883373022079468, \"val_char_f1\": 0.28571428571428575, \"val_char_precision\": 0.25, \"val_char_recall\": 0.3333333333333333, \"val_entity_f1\": 0.28571428571428575, \"val_entity_precision\": 0.25, \"val_entity_recall\": 0.3333333333333333, \"val_loss\": 3.5734535455703735}, \"time\": \"2026-10-19T19:26:40.759497+08:00\", \"validation\": {\"character\": {\"macro\": {\"f1\": 0.1142857142857143, \"precision\": 0.08, \"recall\": 0.2}, \"micro\": {\"f1\": 0.28571428571428575, \"gold\": 6, \"precision\": 0.25, \"predicted\": 8, \"recall\": 0.3333333333333333, \"true_positive\": 2}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 3, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.5714285714285715, \"gold\": 2, \"precision\": 0.4, \"predicted\": 5, \"recall\": 1.0, \"true_positive\": 2}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}}}, \"character_accuracy_including_O\": 0.25, \"characters\": 8, \"entity\": {\"macro\": {\"f1\": 0.13333333333333333, \"precision\": 0.1, \"recall\": 0.2}, \"micro\": {\"f1\": 0.28571428571428575, \"gold\": 3, \"precision\": 0.25, \"predicted\": 4, \"recall\": 0.3333333333333333, \"true_positive\": 1}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 2, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.6666666666666666, \"gold\": 1, \"precision\": 0.5, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 1}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}}}, \"loss\": 3.5734535455703735, \"protocol\": \"strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0\", \"sentences\": 4}}\n"
+        },
+        "resumed": {
+          "source": "C:\\userProgram\\NLPexp\\.local\\bert_crf\\20261019T192215+0800_stage1c\\tests-regression\\test_epoch_resume_exact_model_1\\resumed\\train.log",
+          "sha256": "8199bd38577423d305adbb380e40edcfbe61d2e5138f0157394f1c8400696dbd",
+          "content": "{\"artifact_kind\": \"synthetic_smoke_test\", \"event\": \"resume\", \"state\": {\"bad_epochs\": 0, \"best_checkpoint\": \"C:\\\\userProgram\\\\NLPexp\\\\.local\\\\bert_crf\\\\20261019T192215+0800_stage1c\\\\tests-regression\\\\test_epoch_resume_exact_model_1\\\\interrupted\\\\checkpoints\\\\epoch_0001.pt\", \"best_checkpoint_sha256\": \"807d66f4fad1b9cb1b5c55eb2e67c60286866ba96d50ffdcb1c83b1352313485\", \"best_epoch\": 1, \"best_value\": 0.28571428571428575, \"epoch\": 1, \"global_step\": 2}, \"time\": \"2026-10-19T19:26:40.886046+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 2, \"event\": \"train_batch\", \"global_step\": 3, \"gradient_norm_before_clipping\": 38.18210220336914, \"learning_rate_used\": 0.004, \"loss\": 2.981426477432251, \"samples\": 2, \"time\": \"2026-10-19T19:26:40.904861+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 2, \"event\": \"train_batch\", \"global_step\": 4, \"gradient_norm_before_clipping\": 29.115184783935547, \"learning_rate_used\": 0.003, \"loss\": 3.380897045135498, \"samples\": 2, \"time\": \"2026-10-19T19:26:40.926706+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 2, \"event\": \"checkpoint\", \"improved\": true, \"metric\": \"entity.micro.f1\", \"path\": \"C:\\\\userProgram\\\\NLPexp\\\\.local\\\\bert_crf\\\\20261019T192215+0800_stage1c\\\\tests-regression\\\\test_epoch_resume_exact_model_1\\\\resumed\\\\checkpoints\\\\epoch_0002.pt\", \"sha256\": \"95505211181d363b8cda2bcfc15e07c7718a9bf007a61a228d23f195cb1ca343\", \"time\": \"2026-10-19T19:26:40.959007+08:00\", \"value\": 0.6666666666666666}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"event\": \"epoch_complete\", \"history\": {\"epoch\": 2, \"epoch_elapsed_seconds\": 0.07297879992984235, \"global_step\": 4, \"learning_rate\": 0.002, \"train_loss\": 3.1811617612838745, \"val_char_f1\": 0.6153846153846153, \"val_char_precision\": 0.5714285714285714, \"val_char_recall\": 0.6666666666666666, \"val_entity_f1\": 0.6666666666666666, \"val_entity_precision\": 0.6666666666666666, \"val_entity_recall\": 0.6666666666666666, \"val_loss\": 2.5305159091949463}, \"time\": \"2026-10-19T19:26:40.959365+08:00\", \"validation\": {\"character\": {\"macro\": {\"f1\": 0.31428571428571433, \"precision\": 0.27999999999999997, \"recall\": 0.4}, \"micro\": {\"f1\": 0.6153846153846153, \"gold\": 6, \"precision\": 0.5714285714285714, \"predicted\": 7, \"recall\": 0.6666666666666666, \"true_positive\": 4}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.5714285714285715, \"gold\": 2, \"precision\": 0.4, \"predicted\": 5, \"recall\": 1.0, \"true_positive\": 2}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 1.0, \"gold\": 2, \"precision\": 1.0, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 2}}}, \"character_accuracy_including_O\": 0.625, \"characters\": 8, \"entity\": {\"macro\": {\"f1\": 0.3333333333333333, \"precision\": 0.3, \"recall\": 0.4}, \"micro\": {\"f1\": 0.6666666666666666, \"gold\": 3, \"precision\": 0.6666666666666666, \"predicted\": 3, \"recall\": 0.6666666666666666, \"true_positive\": 2}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.6666666666666666, \"gold\": 1, \"precision\": 0.5, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 1}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 1.0, \"gold\": 1, \"precision\": 1.0, \"predicted\": 1, \"recall\": 1.0, \"true_positive\": 1}}}, \"loss\": 2.5305159091949463, \"protocol\": \"strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0\", \"sentences\": 4}}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 3, \"event\": \"train_batch\", \"global_step\": 5, \"gradient_norm_before_clipping\": 24.548856735229492, \"learning_rate_used\": 0.002, \"loss\": 2.201965808868408, \"samples\": 2, \"time\": \"2026-10-19T19:26:40.983396+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 3, \"event\": \"train_batch\", \"global_step\": 6, \"gradient_norm_before_clipping\": 28.19596290588379, \"learning_rate_used\": 0.001, \"loss\": 3.1240172386169434, \"samples\": 2, \"time\": \"2026-10-19T19:26:41.005429+08:00\"}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"epoch\": 3, \"event\": \"checkpoint\", \"improved\": false, \"metric\": \"entity.micro.f1\", \"path\": \"C:\\\\userProgram\\\\NLPexp\\\\.local\\\\bert_crf\\\\20261019T192215+0800_stage1c\\\\tests-regression\\\\test_epoch_resume_exact_model_1\\\\resumed\\\\checkpoints\\\\epoch_0003.pt\", \"sha256\": \"67f311e4bbd68aebd048733ace0b1ec96f75d0d090b042acf9fe34911544693b\", \"time\": \"2026-10-19T19:26:41.038018+08:00\", \"value\": 0.6666666666666666}\n{\"artifact_kind\": \"synthetic_smoke_test\", \"event\": \"epoch_complete\", \"history\": {\"epoch\": 3, \"epoch_elapsed_seconds\": 0.07756679994054139, \"global_step\": 6, \"learning_rate\": 0.0, \"train_loss\": 2.662991523742676, \"val_char_f1\": 0.6153846153846153, \"val_char_precision\": 0.5714285714285714, \"val_char_recall\": 0.6666666666666666, \"val_entity_f1\": 0.6666666666666666, \"val_entity_precision\": 0.6666666666666666, \"val_entity_recall\": 0.6666666666666666, \"val_loss\": 2.204817056655884}, \"time\": \"2026-10-19T19:26:41.038470+08:00\", \"validation\": {\"character\": {\"macro\": {\"f1\": 0.31428571428571433, \"precision\": 0.27999999999999997, \"recall\": 0.4}, \"micro\": {\"f1\": 0.6153846153846153, \"gold\": 6, \"precision\": 0.5714285714285714, \"predicted\": 7, \"recall\": 0.6666666666666666, \"true_positive\": 4}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 2, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.5714285714285715, \"gold\": 2, \"precision\": 0.4, \"predicted\": 5, \"recall\": 1.0, \"true_positive\": 2}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 1.0, \"gold\": 2, \"precision\": 1.0, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 2}}}, \"character_accuracy_including_O\": 0.625, \"characters\": 8, \"entity\": {\"macro\": {\"f1\": 0.3333333333333333, \"precision\": 0.3, \"recall\": 0.4}, \"micro\": {\"f1\": 0.6666666666666666, \"gold\": 3, \"precision\": 0.6666666666666666, \"predicted\": 3, \"recall\": 0.6666666666666666, \"true_positive\": 2}, \"per_type\": {\"Drug\": {\"f1\": 0.0, \"gold\": 1, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Drug_Category\": {\"f1\": 0.6666666666666666, \"gold\": 1, \"precision\": 0.5, \"predicted\": 2, \"recall\": 1.0, \"true_positive\": 1}, \"Medical_Examination\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Operation\": {\"f1\": 0.0, \"gold\": 0, \"precision\": 0.0, \"predicted\": 0, \"recall\": 0.0, \"true_positive\": 0}, \"Symptom\": {\"f1\": 1.0, \"gold\": 1, \"precision\": 1.0, \"predicted\": 1, \"recall\": 1.0, \"true_positive\": 1}}}, \"loss\": 2.204817056655884, \"protocol\": \"strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0\", \"sentences\": 4}}\n"
+        }
+      },
+      "checkpoint_hashes": {
+        "continuous": "29595ba0c83a04f66a167b5fae39a71127815f4cc15a94d71fa61d93d882295f",
+        "resumed": "67f311e4bbd68aebd048733ace0b1ec96f75d0d090b042acf9fe34911544693b"
+      }
+    }
+  ],
+  "scope": "Tiny random BERT only; comparisons reread actual checkpoints; next RNG-value assertions are in pytest."
+}

@@ -1,0 +1,5 @@
+ARGV ["C:/userProgram/NLPexp/.venv-bert-crf/Scripts/python.exe", "-X", "utf8", "docs/bert_crf/stage1a_contract_checks.py"]
+CWD C:\userProgram\NLPexp
+train {"sentences": 88842, "original_gold_illegal_transitions": 0, "projected_token_gold_illegal_transitions": 2, "projected_token_gold_illegal_sentences": 2, "wordpiece_continuations": 307, "wordpiece_continuations_ignored": 0}
+val {"sentences": 9687, "original_gold_illegal_transitions": 0, "projected_token_gold_illegal_transitions": 0, "projected_token_gold_illegal_sentences": 0, "wordpiece_continuations": 26, "wordpiece_continuations_ignored": 0}
+CONTRACT CHECKS SAVED C:\userProgram\NLPexp\docs\bert_crf\evidence\20261019T162653+0800_stage1a\contract_checks.json

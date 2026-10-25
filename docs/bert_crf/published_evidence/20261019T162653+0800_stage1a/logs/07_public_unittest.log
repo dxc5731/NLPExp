@@ -1,0 +1,15 @@
+ARGV ["C:/userProgram/NLPexp/.venv-bert-crf/Scripts/python.exe", "-X", "utf8", "-m", "unittest", "discover", "-s", "tests", "-v"]
+CWD C:/userProgram/NLPexp/.local/bert_crf/20261019T162653+0800_stage1a/interface/code
+test_collate_pads_with_ignore_index (test_align.AlignTest.test_collate_pads_with_ignore_index) ... ok
+test_leading_i_is_repaired_to_b (test_align.AlignTest.test_leading_i_is_repaired_to_b)
+句首出现 I-X 是非法 BIO，还原时必须改写成 B-X。 ... ok
+test_multichar_token_expands_b_to_i (test_align.AlignTest.test_multichar_token_expands_b_to_i)
+一个词片覆盖两个字符时，第二个字符不能也是 B，否则实体被截成两个。 ... ok
+test_offsets_cover_every_char_once (test_align.AlignTest.test_offsets_cover_every_char_once) ... ok
+test_roundtrip_on_plain_sentence (test_align.AlignTest.test_roundtrip_on_plain_sentence) ... ok
+test_special_tokens_get_ignore_index (test_align.AlignTest.test_special_tokens_get_ignore_index) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.661s
+
+OK

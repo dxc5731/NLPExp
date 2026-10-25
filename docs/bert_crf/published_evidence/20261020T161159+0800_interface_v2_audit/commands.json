@@ -1,0 +1,38 @@
+[
+  {
+    "name": "demo",
+    "exit_code": 0,
+    "elapsed_seconds": 7.9347999999299645,
+    "log_sha256": "07a7dcc3c87487a290f5c01f3aa5fdfbed8ccc72db927f6450335b93cb1c2a95"
+  },
+  {
+    "name": "supplied_tests",
+    "exit_code": 0,
+    "elapsed_seconds": 4.810248900204897,
+    "log_sha256": "fc487f7f4487d6c811db7873f63597567f9711b3c3d45696fdbf73ffeb665fe9"
+  },
+  {
+    "name": "full_alignment",
+    "exit_code": 0,
+    "elapsed_seconds": 23.25735570001416,
+    "log_sha256": "df57269cae3e243804152967864e079099980b38aa1ee12ee773e8358b5def0b"
+  },
+  {
+    "name": "dependency_check",
+    "exit_code": 0,
+    "elapsed_seconds": 0.696981200017035,
+    "log_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+  },
+  {
+    "name": "integrity_and_targeted_checks",
+    "exit_code": 0,
+    "elapsed_seconds": 7.856368399923667,
+    "log_sha256": "920335a31fae49c65e6d82f73f8a90071a394cd9b25342fd4b7d7adf0fc1e3d4"
+  },
+  {
+    "name": "final_review",
+    "exit_code": 0,
+    "elapsed_seconds": 0.30854699993506074,
+    "log_sha256": "0fd948e38dcacdc52ec3fc3a905416344ab930c67fcbbee91e963d94743b9863"
+  }
+]

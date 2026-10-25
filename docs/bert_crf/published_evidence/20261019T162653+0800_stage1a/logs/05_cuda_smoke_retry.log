@@ -1,0 +1,53 @@
+ARGV ["C:/userProgram/NLPexp/.venv-bert-crf/Scripts/python.exe", "-X", "utf8", "docs/bert_crf/gpu_smoke.py"]
+CWD C:\userProgram\NLPexp
+{
+  "started_at": "2026-10-19T16:33:41.671410+08:00",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "executable": "C:\\userProgram\\NLPexp\\.venv-bert-crf\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.14.1+cu132",
+  "torch_cuda_runtime": "13.2",
+  "cuda_available": true,
+  "scope": "Tensor arithmetic, matmul and autograd only; no model training",
+  "versions": {
+    "torch": "2.14.1+cu132",
+    "transformers": "5.20.1",
+    "tokenizers": "0.23.3",
+    "huggingface-hub": "2.2.0",
+    "numpy": "2.4.6",
+    "pytest": "9.1.1"
+  },
+  "gpu_name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "compiled_arches": [
+    "sm_75",
+    "sm_80",
+    "sm_86",
+    "sm_90",
+    "sm_100",
+    "sm_120"
+  ],
+  "gpu_total_memory_bytes": 8546484224,
+  "seed": 1729,
+  "status": "PASS",
+  "tensor_sum": 6432.0,
+  "matmul_shape": [
+    [
+      128,
+      256
+    ],
+    [
+      256,
+      64
+    ]
+  ],
+  "loss_cpu": 255.1049041748047,
+  "loss_cuda": 255.10491943359375,
+  "x_grad_max_abs_difference": 5.960464477539063e-08,
+  "w_grad_max_abs_difference": 1.043081283569336e-07,
+  "compute_elapsed_seconds": 0.3367530999239534,
+  "peak_memory_allocated_bytes": 67536896
+}

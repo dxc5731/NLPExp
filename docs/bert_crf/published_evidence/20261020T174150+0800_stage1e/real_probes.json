@@ -1,0 +1,145 @@
+{
+  "artifact_kind": "real_data_integration_test",
+  "train": {
+    "status": "PASS",
+    "batch_size": 16,
+    "token_shape": [
+      16,
+      201
+    ],
+    "character_shape": [
+      16,
+      199
+    ],
+    "token_lengths": [
+      201,
+      201,
+      201,
+      201,
+      201,
+      200,
+      197,
+      196,
+      196,
+      193,
+      193,
+      193,
+      193,
+      193,
+      193,
+      193
+    ],
+    "character_lengths": [
+      199,
+      199,
+      199,
+      199,
+      199,
+      198,
+      195,
+      194,
+      194,
+      193,
+      193,
+      193,
+      193,
+      193,
+      193,
+      193
+    ],
+    "loss": 359.17974853515625,
+    "elapsed_seconds": 1.1545744999311864,
+    "backward": true,
+    "gradients": {
+      "bert": {
+        "tensors": 197,
+        "finite": 197,
+        "nonzero": 197
+      },
+      "linear": {
+        "tensors": 2,
+        "finite": 2,
+        "nonzero": 2
+      },
+      "crf": {
+        "tensors": 3,
+        "finite": 3,
+        "nonzero": 3
+      }
+    },
+    "optimizer_steps": 0,
+    "reserve_multiplier": 3,
+    "reserve_bytes": 1220227896,
+    "peak_allocated_bytes": 3862691840,
+    "peak_reserved_bytes": 4099932160,
+    "free_bytes_at_peak_end": 3192913920,
+    "parameter_hash_before": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+    "parameter_hash_after": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+    "parameter_versions_unchanged": true,
+    "timing_scope": "allocation, GPU forward/backward or decode, gradient checks; excludes tokenizer, hashing, optimizer step and I/O"
+  },
+  "validation": {
+    "status": "PASS",
+    "batch_size": 16,
+    "token_shape": [
+      16,
+      40
+    ],
+    "character_shape": [
+      16,
+      39
+    ],
+    "token_lengths": [
+      40,
+      7,
+      25,
+      15,
+      10,
+      23,
+      18,
+      32,
+      16,
+      21,
+      14,
+      15,
+      11,
+      14,
+      25,
+      18
+    ],
+    "character_lengths": [
+      39,
+      5,
+      23,
+      13,
+      8,
+      21,
+      16,
+      30,
+      14,
+      19,
+      12,
+      13,
+      9,
+      12,
+      23,
+      16
+    ],
+    "loss": 32.000972747802734,
+    "elapsed_seconds": 0.06236979993991554,
+    "backward": false,
+    "gradients": {},
+    "optimizer_steps": 0,
+    "reserve_multiplier": 0,
+    "reserve_bytes": 0,
+    "peak_allocated_bytes": 496571904,
+    "peak_reserved_bytes": 532676608,
+    "free_bytes_at_peak_end": 6760169472,
+    "parameter_hash_before": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+    "parameter_hash_after": "40a931169dde20c0862a4ad0bcc1799de1c7a12187fa366b6ceb2e46668b088a",
+    "parameter_versions_unchanged": true,
+    "timing_scope": "allocation, GPU forward/backward or decode, gradient checks; excludes tokenizer, hashing, optimizer step and I/O"
+  },
+  "optimizer_steps": 0,
+  "performance_metrics_computed": false
+}

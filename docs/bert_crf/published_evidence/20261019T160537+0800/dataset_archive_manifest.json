@@ -1,0 +1,37 @@
+[
+  {
+    "path": "IMCS-V2-NER/IMCS-V2_dev.json",
+    "bytes": 17175331,
+    "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+  },
+  {
+    "path": "IMCS-V2-NER/mappings.json",
+    "bytes": 18192,
+    "sha256": "53871e27d91a66bf9ff43651130b4e426886cfd6f9abbf0d7d899344f2278c2b"
+  },
+  {
+    "path": "IMCS-V2-NER/IMCS-V2_test.json",
+    "bytes": 5984788,
+    "sha256": "46ee2e8bbffdc722cad7b813e5d8223c5842904924a164faaf0db523e7c0f09d"
+  },
+  {
+    "path": "IMCS-V2-NER/README.txt",
+    "bytes": 471,
+    "sha256": "d9a7e2be46061e4589cf222ce69bee083865326814fc4c68e0912cb30392984e"
+  },
+  {
+    "path": "IMCS-V2-NER/IMCS-V2-NER_test.json",
+    "bytes": 470013,
+    "sha256": "702d13ba02a22599f6a897a55f9e87a2edcd0cab6e480417ccf6982518ff6e66"
+  },
+  {
+    "path": "IMCS-V2-NER/example_pred.json",
+    "bytes": 5183,
+    "sha256": "b151cc03be803fd67753f5f88ca2d18aebafafef69436dfbdefe10fd7837a135"
+  },
+  {
+    "path": "IMCS-V2-NER/IMCS-V2_train.json",
+    "bytes": 50868537,
+    "sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24"
+  }
+]

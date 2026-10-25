@@ -1,0 +1,129 @@
+{
+  "artifact_kind": "synthetic_smoke_test",
+  "best_epoch": 2,
+  "best_metric": 1.0,
+  "validation": {
+    "loss": 2.7556463479995728,
+    "sentences": 4,
+    "characters": 10,
+    "character_accuracy_including_O": 1.0,
+    "protocol": "strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0",
+    "character": {
+      "micro": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "true_positive": 6,
+        "predicted": 6,
+        "gold": 6
+      },
+      "macro": {
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1": 0.6
+      },
+      "per_type": {
+        "Symptom": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 2,
+          "predicted": 2,
+          "gold": 2
+        },
+        "Drug": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 2,
+          "predicted": 2,
+          "gold": 2
+        },
+        "Drug_Category": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 2,
+          "predicted": 2,
+          "gold": 2
+        },
+        "Medical_Examination": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 0
+        },
+        "Operation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 0
+        }
+      }
+    },
+    "entity": {
+      "micro": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "true_positive": 3,
+        "predicted": 3,
+        "gold": 3
+      },
+      "macro": {
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1": 0.6
+      },
+      "per_type": {
+        "Symptom": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 1,
+          "predicted": 1,
+          "gold": 1
+        },
+        "Drug": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 1,
+          "predicted": 1,
+          "gold": 1
+        },
+        "Drug_Category": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 1,
+          "predicted": 1,
+          "gold": 1
+        },
+        "Medical_Examination": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 0
+        },
+        "Operation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "true_positive": 0,
+          "predicted": 0,
+          "gold": 0
+        }
+      }
+    }
+  },
+  "validation_source_run": "<PROJECT>\\.local\\bert_crf\\20261020T174150+0800_stage1e\\synthetic_runs\\20261020T175501+0800_synthetic_smoke_test_bbe90894",
+  "validation_elapsed_seconds": 0.02979400008916855,
+  "timing_scope": "internal validation loader/adaptation, GPU forward/decode, metrics and JSONL writes; excludes model loading and optimizer updates"
+}

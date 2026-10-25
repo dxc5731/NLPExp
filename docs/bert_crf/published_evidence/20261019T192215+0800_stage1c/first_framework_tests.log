@@ -1,0 +1,82 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.5, pytest-9.1.1, pluggy-1.7.0 -- C:\userProgram\NLPexp\.venv-bert-crf\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\userProgram\NLPexp
+configfile: pytest.ini
+plugins: anyio-4.15.1
+collecting ... collected 70 items
+
+tests/bert_crf/test_metrics.py::test_known_character_and_strict_entity_counts PASSED
+tests/bert_crf/test_metrics.py::test_adjacent_same_type_is_two_entities_and_bio_mismatch_is_character_error PASSED
+tests/bert_crf/test_metrics.py::test_wrong_type_no_partial_credit PASSED
+tests/bert_crf/test_metrics.py::test_zero_denominators[gold0-predicted0] PASSED
+tests/bert_crf/test_metrics.py::test_zero_denominators[gold1-predicted1] PASSED
+tests/bert_crf/test_metrics.py::test_zero_denominators[gold2-predicted2] PASSED
+tests/bert_crf/test_metrics.py::test_single_character_all_categories_micro_macro PASSED
+tests/bert_crf/test_metrics.py::test_sentence_and_dialogue_ids_prevent_cross_sentence_matches PASSED
+tests/bert_crf/test_metrics.py::test_invalid_bio_refused[tags0] PASSED
+tests/bert_crf/test_metrics.py::test_invalid_bio_refused[tags1] PASSED
+tests/bert_crf/test_metrics.py::test_invalid_bio_refused[tags2] PASSED
+tests/bert_crf/test_metrics.py::test_invalid_bio_refused[tags3] PASSED
+tests/bert_crf/test_metrics.py::test_invalid_bio_refused[tags4] PASSED
+tests/bert_crf/test_metrics.py::test_invalid_bio_refused[tags5] PASSED
+tests/bert_crf/test_metrics.py::test_invalid_bio_refused[tags6] PASSED
+tests/bert_crf/test_metrics.py::test_invalid_bio_refused[tags7] PASSED
+tests/bert_crf/test_metrics.py::test_invalid_bio_refused[tags8] PASSED
+tests/bert_crf/test_metrics.py::test_metric_length_and_id_validation PASSED
+tests/bert_crf/test_metrics.py::test_accumulation_equivalence PASSED
+tests/bert_crf/test_trainer.py::test_actual_updates_zero_grad_modes_scheduler_and_log_consistency PASSED
+tests/bert_crf/test_trainer.py::test_epoch_resume_exact_model_optimizer_scheduler_rng_and_next_values SYNTHETIC CPU: continuous vs epoch-boundary resume: model/AdamW/scheduler/RNG bitwise equal
+PASSED
+tests/bert_crf/test_trainer.py::test_best_tie_and_selection_direction[max-entity.micro.f1-values0-1] PASSED
+tests/bert_crf/test_trainer.py::test_best_tie_and_selection_direction[min-loss-values1-2] PASSED
+tests/bert_crf/test_trainer.py::test_early_stop_state_and_resume_stays_stopped PASSED
+tests/bert_crf/test_trainer.py::test_rng_capture_roundtrip_all_used_generators PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes0] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes1] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes2] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes3] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes4] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes5] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes6] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes7] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes8] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes9] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes10] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes11] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes12] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes13] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes14] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes15] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes16] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes17] PASSED
+tests/bert_crf/test_trainer.py::test_training_config_rejects_invalid[changes18] PASSED
+tests/bert_crf/test_trainer.py::test_bad_selection_value[None] PASSED
+tests/bert_crf/test_trainer.py::test_bad_selection_value[nan] PASSED
+tests/bert_crf/test_trainer.py::test_bad_selection_value[inf] PASSED
+tests/bert_crf/test_trainer.py::test_bad_selection_value[0.5] PASSED
+tests/bert_crf/test_trainer.py::test_missing_selection_metric PASSED
+tests/bert_crf/test_trainer.py::test_no_real_or_unmarked_training_even_with_synthetic_provider[real_training] PASSED
+tests/bert_crf/test_trainer.py::test_no_real_or_unmarked_training_even_with_synthetic_provider[real_validation] PASSED
+tests/bert_crf/test_trainer.py::test_no_real_or_unmarked_training_even_with_synthetic_provider[real_inference] PASSED
+tests/bert_crf/test_trainer.py::test_no_real_or_unmarked_training_even_with_synthetic_provider[unit_test] PASSED
+tests/bert_crf/test_trainer.py::test_provider_kind_mismatch PASSED
+tests/bert_crf/test_trainer.py::test_empty_data_and_impossible_warmup PASSED
+tests/bert_crf/test_trainer.py::test_log_path_unwritable_and_run_no_overwrite PASSED
+tests/bert_crf/test_trainer.py::test_failures_are_rejected_and_recorded[nan_loss] PASSED
+tests/bert_crf/test_trainer.py::test_failures_are_rejected_and_recorded[inf_loss] PASSED
+tests/bert_crf/test_trainer.py::test_failures_are_rejected_and_recorded[nan_gradient] PASSED
+tests/bert_crf/test_trainer.py::test_failures_are_rejected_and_recorded[oom] PASSED
+tests/bert_crf/test_trainer.py::test_failures_are_rejected_and_recorded[missing_labels] PASSED
+tests/bert_crf/test_trainer.py::test_failures_are_rejected_and_recorded[mask_hole] PASSED
+tests/bert_crf/test_trainer.py::test_failures_are_rejected_and_recorded[wrong_count] PASSED
+tests/bert_crf/test_trainer.py::test_failures_are_rejected_and_recorded[missing_paths] PASSED
+tests/bert_crf/test_trainer.py::test_invalid_checkpoint_and_config_provider_mismatch PASSED
+tests/bert_crf/test_trainer.py::test_scheduler_constant_and_finite_clipping PASSED
+tests/bert_crf/test_trainer.py::test_duplicate_validation_ids_and_prediction_lengths_rejected PASSED
+tests/bert_crf/test_trainer.py::test_no_second_fit_same_run PASSED
+tests/bert_crf/test_trainer.py::test_padding_does_not_affect_trainer_validation PASSED
+tests/bert_crf/test_trainer.py::test_all_record_types_are_distinct PASSED
+
+- generated xml file: C:\userProgram\NLPexp\docs\bert_crf\evidence\20261019T192215+0800_stage1c\first_framework_tests.xml -
+============================= 70 passed in 11.27s =============================

@@ -1,0 +1,17 @@
+{
+  "resolved_test_failure": {
+    "log": "<PROJECT>\\.local\\bert_crf\\20261020T164334+0800_stage1d1\\logs\\new_tests_01.log",
+    "cause": "abc is a three-character token, so assigning endpoint 3 did not mutate offset",
+    "fix": "Increment the real endpoint instead; retain original failure and passing rerun logs",
+    "gold_modified": false
+  },
+  "real_data_problems_unresolved": [],
+  "limitations": [
+    "Whitespace/normalizer gaps, overlaps, empty strings and overlong inputs reject; no fallback/windowing",
+    "Characters inside a shared token have identical initial representations; quality remains unmeasured",
+    "Formal Trainer remains synthetic-only; no real optimizer/resume/selection run performed",
+    "No final prediction exporter or full platform dev/test inference tested",
+    "Full GPU forward performed only on tiny real batches/eight anomalies, not the entire dataset"
+  ],
+  "ai_use": "Codex implemented adapters, artificial tests and audit tools; programs executed recorded checks. No research conclusion/contribution declaration written."
+}

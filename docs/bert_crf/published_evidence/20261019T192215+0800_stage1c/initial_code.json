@@ -1,0 +1,7 @@
+{
+  "commit": "2706f861d29a72f40e7db9ffedbf56db8073a203",
+  "dirty_status": "M .gitignore\n?? configs/bert_crf/stage1c_trainer_smoke.json\n?? docs/bert_crf/stage1c_runner.py\n?? src/bert_crf/checkpoint.py\n?? src/bert_crf/experiment.py\n?? src/bert_crf/metrics.py\n?? src/bert_crf/synthetic_smoke.py\n?? src/bert_crf/train.py\n?? src/bert_crf/trainer.py\n?? src/bert_crf/training_config.py",
+  "source_manifest_sha256": "2208f1a53a20fcd253d84fe01c67aa4b24b71cb4f0c4e2f3a8a0333895b59c75",
+  "source_snapshot": "source_snapshot/",
+  "tracked_patch": "tracked_changes.patch"
+}

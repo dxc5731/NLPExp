@@ -1,0 +1,3 @@
+ARGV ["C:/userProgram/NLPexp/.venv-bert-crf/Scripts/python.exe", "-c", "import torch; torch.manual_seed(1729); x=torch.randn(32,32,device='cuda',requires_grad=True); (x@x).square().mean().backward(); torch.cuda.synchronize(); print(torch.__version__, torch.version.cuda, torch.cuda.get_device_name(0), bool(torch.isfinite(x.grad).all()))"]
+CWD C:\userProgram\NLPexp
+2.14.1+cu132 13.2 NVIDIA GeForce RTX 5060 Laptop GPU True

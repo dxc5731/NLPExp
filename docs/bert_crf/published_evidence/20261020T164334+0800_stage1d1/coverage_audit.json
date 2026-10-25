@@ -1,0 +1,62 @@
+{
+  "artifact_kind": "real_data_integration_test",
+  "status": "PASS",
+  "splits": {
+    "train": {
+      "dialogues": 2225,
+      "sentences": 88842,
+      "characters": 1153312,
+      "accepted_sentences": 88842,
+      "characters_covered_exactly_once": 1153312,
+      "coverage_gap_characters": 0,
+      "coverage_overlap_characters": 0,
+      "invalid_offset_sentences": 0,
+      "gold_length_mismatch_sentences": 0,
+      "illegal_gold_bio_sentences": 0,
+      "rejected_sentences": 0,
+      "gold_unchanged_sentences": 88842,
+      "multichar_tokens": 3440,
+      "unlabeled_records_checked": 9
+    },
+    "val": {
+      "dialogues": 247,
+      "sentences": 9687,
+      "characters": 126049,
+      "accepted_sentences": 9687,
+      "characters_covered_exactly_once": 126049,
+      "coverage_gap_characters": 0,
+      "coverage_overlap_characters": 0,
+      "invalid_offset_sentences": 0,
+      "gold_length_mismatch_sentences": 0,
+      "illegal_gold_bio_sentences": 0,
+      "rejected_sentences": 0,
+      "gold_unchanged_sentences": 9687,
+      "multichar_tokens": 385,
+      "unlabeled_records_checked": 3
+    }
+  },
+  "total": {
+    "dialogues": 2472,
+    "sentences": 98529,
+    "characters": 1279361,
+    "accepted_sentences": 98529,
+    "characters_covered_exactly_once": 1279361,
+    "coverage_gap_characters": 0,
+    "coverage_overlap_characters": 0,
+    "invalid_offset_sentences": 0,
+    "gold_length_mismatch_sentences": 0,
+    "illegal_gold_bio_sentences": 0,
+    "rejected_sentences": 0,
+    "gold_unchanged_sentences": 98529,
+    "multichar_tokens": 3825,
+    "unlabeled_records_checked": 12
+  },
+  "issues": [],
+  "rejection_reasons": {},
+  "source": "official train ONLY, fixed internal train/val",
+  "offset_unit": "python_unicode_codepoint",
+  "mapping_policy": "offset_share_unique_v1",
+  "full_bert_forward": false,
+  "optimizer_steps": 0,
+  "elapsed_seconds": 119.42663459992036
+}
