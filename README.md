@@ -41,6 +41,9 @@ python reproduce.py --full
 **随机种子**：`seed = 42`，同时固定 Python / NumPy / PyTorch 种子并开启 `cudnn.deterministic`。
 同机器、同环境下重跑结果一致；不同 GPU 之间可能有 ±0.001 量级差异。
 
+**没有 GPU 也能跑**：`--check` 与 `--quick` 在 CPU 上可用（`--quick` 约 5—10 分钟），
+`--full` 建议在 GPU 上跑。
+
 **耗时参考**：见 [`doc/耗时参考.md`](doc/耗时参考.md)。
 
 ## 仓库结构
