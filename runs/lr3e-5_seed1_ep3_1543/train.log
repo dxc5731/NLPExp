@@ -1,0 +1,49 @@
+run_id=lr3e-5_seed1_ep3_1543
+配置: {"lr": 3e-05, "batch_size": 32, "epochs": 3, "warmup_ratio": 0.1, "weight_decay": 0.01, "max_grad_norm": 1.0, "dropout": 0.1, "seed": 1, "max_len": 256}
+设备: cuda  NVIDIA A800-SXM4-40GB
+训练句数 88842，验证句数 9687
+参数量 101.7M
+epoch 1 训练损失 0.1689 验证损失 0.0768 token准 0.9738 token宏F1 0.9124 实体P 0.8455 R 0.8909 F1 0.8676
+                     precision    recall  f1-score   support
+
+               Drug     0.9004    0.9103    0.9053       725
+      Drug_Category     0.8574    0.8837    0.8704       490
+Medical_Examination     0.8320    0.8455    0.8387       615
+          Operation     0.8006    0.8673    0.8326       324
+            Symptom     0.8408    0.8966    0.8678      4447
+
+          micro avg     0.8455    0.8909    0.8676      6601
+          macro avg     0.8462    0.8807    0.8630      6601
+       weighted avg     0.8458    0.8909    0.8677      6601
+
+  已保存最优模型（实体 F1 0.8676）
+epoch 2 训练损失 0.0641 验证损失 0.0777 token准 0.9748 token宏F1 0.9173 实体P 0.8548 R 0.8999 F1 0.8768
+                     precision    recall  f1-score   support
+
+               Drug     0.9051    0.9214    0.9132       725
+      Drug_Category     0.8848    0.8939    0.8893       490
+Medical_Examination     0.8098    0.8585    0.8335       615
+          Operation     0.8039    0.8858    0.8429       324
+            Symptom     0.8538    0.9038    0.8781      4447
+
+          micro avg     0.8548    0.8999    0.8768      6601
+          macro avg     0.8515    0.8927    0.8714      6601
+       weighted avg     0.8552    0.8999    0.8769      6601
+
+  已保存最优模型（实体 F1 0.8768）
+epoch 3 训练损失 0.0421 验证损失 0.0811 token准 0.9753 token宏F1 0.9210 实体P 0.8712 R 0.8999 F1 0.8853
+                     precision    recall  f1-score   support
+
+               Drug     0.9103    0.9241    0.9172       725
+      Drug_Category     0.8738    0.9041    0.8887       490
+Medical_Examination     0.8245    0.8634    0.8435       615
+          Operation     0.8491    0.8858    0.8671       324
+            Symptom     0.8728    0.9015    0.8869      4447
+
+          micro avg     0.8712    0.8999    0.8853      6601
+          macro avg     0.8661    0.8958    0.8807      6601
+       weighted avg     0.8714    0.8999    0.8854      6601
+
+  已保存最优模型（实体 F1 0.8853）
+完成，总耗时 2906.7 秒，最优实体 F1 0.8853
+输出目录 /mnt2/hpc/ltm/nlp_bert_training/nlp_train_pkg/runs/lr3e-5_seed1_ep3_1543

@@ -1,0 +1,49 @@
+run_id=baseline_lr3e-5_bs32
+配置: {"lr": 3e-05, "batch_size": 32, "epochs": 3, "warmup_ratio": 0.1, "weight_decay": 0.01, "max_grad_norm": 1.0, "dropout": 0.1, "seed": 42, "max_len": 256}
+设备: cuda  NVIDIA GeForce RTX 4060 Laptop GPU
+训练句数 88842，验证句数 9687
+参数量 101.7M
+epoch 1 训练损失 0.1590 验证损失 0.0789 token准 0.9737 token宏F1 0.9100 实体P 0.8619 R 0.8899 F1 0.8757
+                     precision    recall  f1-score   support
+
+               Drug     0.8996    0.9269    0.9130       725
+      Drug_Category     0.8533    0.9020    0.8770       490
+Medical_Examination     0.7812    0.8650    0.8210       615
+          Operation     0.8023    0.8642    0.8321       324
+            Symptom     0.8735    0.8878    0.8806      4447
+
+          micro avg     0.8619    0.8899    0.8757      6601
+          macro avg     0.8420    0.8892    0.8647      6601
+       weighted avg     0.8627    0.8899    0.8759      6601
+
+  已保存最优模型（实体 F1 0.8757）
+epoch 2 训练损失 0.0638 验证损失 0.0729 token准 0.9751 token宏F1 0.9171 实体P 0.8632 R 0.8965 F1 0.8795
+                     precision    recall  f1-score   support
+
+               Drug     0.9005    0.9241    0.9122       725
+      Drug_Category     0.8170    0.9020    0.8574       490
+Medical_Examination     0.8027    0.8602    0.8305       615
+          Operation     0.8382    0.8796    0.8584       324
+            Symptom     0.8731    0.8977    0.8852      4447
+
+          micro avg     0.8632    0.8965    0.8795      6601
+          macro avg     0.8463    0.8927    0.8687      6601
+       weighted avg     0.8637    0.8965    0.8797      6601
+
+  已保存最优模型（实体 F1 0.8795）
+epoch 3 训练损失 0.0413 验证损失 0.0829 token准 0.9750 token宏F1 0.9178 实体P 0.8698 R 0.9014 F1 0.8853
+                     precision    recall  f1-score   support
+
+               Drug     0.9132    0.9283    0.9207       725
+      Drug_Category     0.8469    0.8918    0.8688       490
+Medical_Examination     0.8370    0.8683    0.8524       615
+          Operation     0.8256    0.8765    0.8503       324
+            Symptom     0.8732    0.9044    0.8885      4447
+
+          micro avg     0.8698    0.9014    0.8853      6601
+          macro avg     0.8592    0.8939    0.8761      6601
+       weighted avg     0.8699    0.9014    0.8854      6601
+
+  已保存最优模型（实体 F1 0.8853）
+完成，总耗时 4290.3 秒，最优实体 F1 0.8853
+输出目录 D:\agent-chat\dsh-deepseek\nlp\runs\baseline_lr3e-5_bs32

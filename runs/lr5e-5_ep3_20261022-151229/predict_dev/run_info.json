@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "artifact_kind": "model_prediction",
+  "run_id": "lr5e-5_ep3_20261022-151229",
+  "method": {
+    "name": "BERT + Softmax（逐位置分类，无 CRF）",
+    "kind": "bert",
+    "method_version": "checkpoint: runs/lr5e-5_ep3_20261022-151229/checkpoints/best.pt"
+  },
+  "data": {
+    "version": "IMCS-V2-NER（CBLUE）",
+    "split": "dev",
+    "source_file": "/mnt2/hpc/ltm/nlp_bert_training/nlp_train_pkg/doc/数据/IMCS-V2-NER/IMCS-V2-NER/IMCS-V2_dev.json",
+    "source_sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f",
+    "archive_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67",
+    "archive_sha256_note": "取自《预测结果交接规范》给定的原始 ZIP 固定哈希；本机使用解压后的 JSON，未直接核对 ZIP 字节"
+  },
+  "code": {
+    "git_revision": null,
+    "git_dirty": null,
+    "source_snapshot": "code/src/*.py",
+    "source_sha256": "5b0168ead1769955e81f54fcc6d2bb7fed08cce944130c3bd732cb88af0cd0ba",
+    "note": "运行环境没有 git 仓库，用源码文件哈希代表代码版本"
+  },
+  "config": {
+    "training_config": {
+      "lr": 5e-05,
+      "batch_size": 32,
+      "epochs": 3,
+      "warmup_ratio": 0.1,
+      "weight_decay": 0.01,
+      "max_grad_norm": 1.0,
+      "dropout": 0.1,
+      "seed": 42,
+      "max_len": 256
+    },
+    "max_len": 256,
+    "label_set": [
+      "O",
+      "B-Symptom",
+      "I-Symptom",
+      "B-Drug",
+      "I-Drug",
+      "B-Drug_Category",
+      "I-Drug_Category",
+      "B-Medical_Examination",
+      "I-Medical_Examination",
+      "B-Operation",
+      "I-Operation"
+    ]
+  },
+  "preprocessing": {
+    "tokenizer": "bert-base-chinese（WordPiece，fast）",
+    "truncation": "无。最长句 201 词片，上限 256，超长会直接报错而不是截断",
+    "special_tokens": "[CLS]/[SEP]/补位不参与预测，也不出现在输出里"
+  },
+  "alignment": {
+    "rule": "词片预测按 offset 摊回原始字符；一个词片覆盖多个字时首字用原标签、其余 B-X 降级为 I-X",
+    "illegal_bio_repairs": 526,
+    "note": "修复只作用于预测结果；对齐校验路径不做任何修复"
+  },
+  "prediction": {
+    "file": "predictions_dev.json",
+    "sha256": "f89864650eb08e1333f78781776c9c74e20ec65e815a4348ba396489eee3e51a",
+    "dialogues": 833,
+    "sentences": 33267
+  },
+  "inference_command": "python -X utf8 -m src.predict --run-id lr5e-5_ep3_20261022-151229 --split dev --batch-size 64",
+  "inference_working_directory": "code/",
+  "device": "cuda",
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Linux-5.15.0-94-generic-x86_64-with-glibc2.35",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA A800-SXM4-40GB"
+  },
+  "inference_elapsed_seconds": 28.59,
+  "inference_pure_seconds": 25.38,
+  "timing_scope": "含模型加载、分词、推理和写盘；不含训练",
+  "random_seeds": {
+    "seed": 42,
+    "note": "推理无随机过程，argmax 确定性"
+  },
+  "training": {
+    "train_split": "code/artifacts/split_v1.json 的 train 列表（2225 段对话）",
+    "command": "python -X utf8 -m src.train --run-id lr5e-5_ep3_20261022-151229",
+    "config_path": "runs/lr5e-5_ep3_20261022-151229/config.json",
+    "log_path": "runs/lr5e-5_ep3_20261022-151229/train.log",
+    "checkpoint": "runs/lr5e-5_ep3_20261022-151229/checkpoints/best.pt",
+    "checkpoint_sha256": "93322262dd14252203966cd56499086430a51b13d1112aa0162fcf18b87f6adb"
+  },
+  "created_at": "2026-10-22T17:01:08+0800"
+}
