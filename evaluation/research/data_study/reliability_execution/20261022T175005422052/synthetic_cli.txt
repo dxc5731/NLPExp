@@ -1,0 +1,1 @@
+PASS: 8 synthetic legal cases; 2 expected protocol differences; <PROJECT_ROOT>\research\data_study\reliability_runs\20261022T175006104092_z82c4ymo\scoring_crosscheck.json

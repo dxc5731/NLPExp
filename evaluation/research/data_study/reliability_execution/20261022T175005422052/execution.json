@@ -1,0 +1,43 @@
+{
+  "publication_note": {
+    "kind": "public_projection_of_existing_record",
+    "original_sha256": "049cc439a8a037320d5c8f667777c915d92b1d7dc305ad38736db64bb1d6dc91",
+    "prepared_at": "2026-10-25T18:38:13+08:00",
+    "changes": "Local absolute paths and private split-container location replaced by placeholders; numerical results, dates, counts and historical source/artifact hashes retained."
+  },
+  "records": [
+    {
+      "name": "unit_tests",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/data_study",
+        "-p",
+        "test_verify_scoring.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "transcript": "<PROJECT_ROOT>/research/data_study/reliability_execution/20261022T175005422052/unit_tests.txt"
+    },
+    {
+      "name": "synthetic_cli",
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "research/data_study/verify_scoring.py",
+        "--output-dir",
+        "research/data_study/reliability_runs"
+      ],
+      "exit_code": 0,
+      "transcript": "<PROJECT_ROOT>/research/data_study/reliability_execution/20261022T175005422052/synthetic_cli.txt"
+    }
+  ]
+}

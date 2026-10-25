@@ -1,0 +1,1603 @@
+{
+  "schema_version": "1.0",
+  "purpose": "scorer_validation",
+  "status": "PASS",
+  "notice": "Entirely synthetic verification; not model results, not a full author CLI/seqeval/Tianchi server run.",
+  "created_at": "2026-10-22T17:50:06+08:00",
+  "anchor": {
+    "gold_entities": 5,
+    "predicted_entities": 5,
+    "tp": 5,
+    "reason": "Make all five gold classes present for legal author comparisons; manual counts explicitly include this anchor."
+  },
+  "environment": {
+    "python": "3.14.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "sources": {
+    "author_url": "https://github.com/lemuria-wchen/imcs21-cblue/blob/8d512c6635029bf068712d62cf2428e65c5e4a58/task1/eval_task1.py",
+    "author_path": "<PROJECT_ROOT>/docs/前期核验/eval_task1_upstream.py",
+    "author_sha256": "9af0a1bdbdc813ff8f60b149c41e32d0d0b96f0cecb32b2bf0e37d568563d919",
+    "reference_adapter_sha256": "bb261d062409648faa7b933ba3212b512e2fff19d959ba5beb93c5f73e099dc0",
+    "our_metrics_sha256": "5e02e13834e07560a3586038c832a603e675115bf0b3a2d0b8d3ebedf2356074",
+    "validator_sha256": "75dc966361d216bdb9500acb63bce6be4313b708136290cd26b1195dfb7c1dcb",
+    "verification_script_sha256": "d1eb21267145b5b5b0f436f20e8b5c03e98a3197b4d36bbe782eb518077b580a"
+  },
+  "tolerances": {
+    "overall": 1e-12,
+    "author_per_type_rounded": 5.0000001e-05
+  },
+  "legal_cases": [
+    {
+      "name": "exact_match",
+      "status": "PASS",
+      "manual_counts": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0
+      },
+      "manual_prf_fractions": {
+        "precision": "1",
+        "recall": "1",
+        "f1": "1"
+      },
+      "ours_micro": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 7,
+        "predicted": 7
+      },
+      "author_counts": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0
+      },
+      "author_micro": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "author_overall_f1": 1.0,
+      "per_type": {
+        "Symptom": {
+          "manual_counts": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2,
+            "predicted": 2
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Drug": {
+          "manual_counts": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2,
+            "predicted": 2
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Drug_Category": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Medical_Examination": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Operation": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "synthetic_sequences": [
+        {
+          "dialogue_id": "anchor",
+          "sentence_id": "five_types",
+          "gold": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ]
+        },
+        {
+          "dialogue_id": "d",
+          "sentence_id": "1",
+          "gold": [
+            "B-Symptom",
+            "I-Symptom",
+            "O",
+            "B-Drug"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "I-Symptom",
+            "O",
+            "B-Drug"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "shifted_start",
+      "status": "PASS",
+      "manual_counts": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1
+      },
+      "manual_prf_fractions": {
+        "precision": "5/6",
+        "recall": "5/6",
+        "f1": "5/6"
+      },
+      "ours_micro": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334,
+        "support": 6,
+        "predicted": 6
+      },
+      "author_counts": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1
+      },
+      "author_micro": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334
+      },
+      "author_overall_f1": 0.8333333333333334,
+      "per_type": {
+        "Symptom": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5,
+            "support": 2,
+            "predicted": 2
+          },
+          "author_rounded": {
+            "acc": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          }
+        },
+        "Drug": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Drug_Category": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Medical_Examination": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Operation": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "synthetic_sequences": [
+        {
+          "dialogue_id": "anchor",
+          "sentence_id": "five_types",
+          "gold": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ]
+        },
+        {
+          "dialogue_id": "d",
+          "sentence_id": "1",
+          "gold": [
+            "O",
+            "B-Symptom",
+            "I-Symptom",
+            "O"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "I-Symptom",
+            "I-Symptom",
+            "O"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wrong_type",
+      "status": "PASS",
+      "manual_counts": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1
+      },
+      "manual_prf_fractions": {
+        "precision": "5/6",
+        "recall": "5/6",
+        "f1": "5/6"
+      },
+      "ours_micro": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334,
+        "support": 6,
+        "predicted": 6
+      },
+      "author_counts": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1
+      },
+      "author_micro": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334
+      },
+      "author_overall_f1": 0.8333333333333334,
+      "per_type": {
+        "Symptom": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "support": 2,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          }
+        },
+        "Drug": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 1,
+            "predicted": 2
+          },
+          "author_rounded": {
+            "acc": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          }
+        },
+        "Drug_Category": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Medical_Examination": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Operation": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "synthetic_sequences": [
+        {
+          "dialogue_id": "anchor",
+          "sentence_id": "five_types",
+          "gold": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ]
+        },
+        {
+          "dialogue_id": "d",
+          "sentence_id": "1",
+          "gold": [
+            "B-Symptom",
+            "I-Symptom"
+          ],
+          "prediction": [
+            "B-Drug",
+            "I-Drug"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "merge_adjacent_entities",
+      "status": "PASS",
+      "manual_counts": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 2
+      },
+      "manual_prf_fractions": {
+        "precision": "5/6",
+        "recall": "5/7",
+        "f1": "10/13"
+      },
+      "ours_micro": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.8333333333333334,
+        "recall": 0.7142857142857143,
+        "f1": 0.7692307692307693,
+        "support": 7,
+        "predicted": 6
+      },
+      "author_counts": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 2
+      },
+      "author_micro": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.8333333333333334,
+        "recall": 0.7142857142857143,
+        "f1": 0.7692307692307692
+      },
+      "author_overall_f1": 0.7692307692307692,
+      "per_type": {
+        "Symptom": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 2
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 2,
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "f1": 0.4,
+            "support": 3,
+            "predicted": 2
+          },
+          "author_rounded": {
+            "acc": 0.5,
+            "recall": 0.3333,
+            "f1": 0.4
+          }
+        },
+        "Drug": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Drug_Category": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Medical_Examination": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Operation": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "synthetic_sequences": [
+        {
+          "dialogue_id": "anchor",
+          "sentence_id": "five_types",
+          "gold": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ]
+        },
+        {
+          "dialogue_id": "d",
+          "sentence_id": "1",
+          "gold": [
+            "B-Symptom",
+            "I-Symptom",
+            "B-Symptom",
+            "I-Symptom"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "I-Symptom",
+            "I-Symptom",
+            "I-Symptom"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "split_one_entity",
+      "status": "PASS",
+      "manual_counts": {
+        "tp": 5,
+        "fp": 2,
+        "fn": 1
+      },
+      "manual_prf_fractions": {
+        "precision": "5/7",
+        "recall": "5/6",
+        "f1": "10/13"
+      },
+      "ours_micro": {
+        "tp": 5,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.7142857142857143,
+        "recall": 0.8333333333333334,
+        "f1": 0.7692307692307693,
+        "support": 6,
+        "predicted": 7
+      },
+      "author_counts": {
+        "tp": 5,
+        "fp": 2,
+        "fn": 1
+      },
+      "author_micro": {
+        "tp": 5,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.7142857142857143,
+        "recall": 0.8333333333333334,
+        "f1": 0.7692307692307692
+      },
+      "author_overall_f1": 0.7692307692307692,
+      "per_type": {
+        "Symptom": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 1
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 1,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4,
+            "support": 2,
+            "predicted": 3
+          },
+          "author_rounded": {
+            "acc": 0.3333,
+            "recall": 0.5,
+            "f1": 0.4
+          }
+        },
+        "Drug": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Drug_Category": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Medical_Examination": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Operation": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "synthetic_sequences": [
+        {
+          "dialogue_id": "anchor",
+          "sentence_id": "five_types",
+          "gold": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ]
+        },
+        {
+          "dialogue_id": "d",
+          "sentence_id": "1",
+          "gold": [
+            "B-Symptom",
+            "I-Symptom",
+            "I-Symptom",
+            "I-Symptom"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "I-Symptom",
+            "B-Symptom",
+            "I-Symptom"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "adjacent_same_type_kept_separate",
+      "status": "PASS",
+      "manual_counts": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0
+      },
+      "manual_prf_fractions": {
+        "precision": "1",
+        "recall": "1",
+        "f1": "1"
+      },
+      "ours_micro": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 7,
+        "predicted": 7
+      },
+      "author_counts": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0
+      },
+      "author_micro": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "author_overall_f1": 1.0,
+      "per_type": {
+        "Symptom": {
+          "manual_counts": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3,
+            "predicted": 3
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Drug": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Drug_Category": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Medical_Examination": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Operation": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "synthetic_sequences": [
+        {
+          "dialogue_id": "anchor",
+          "sentence_id": "five_types",
+          "gold": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ]
+        },
+        {
+          "dialogue_id": "d",
+          "sentence_id": "1",
+          "gold": [
+            "B-Symptom",
+            "B-Symptom"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "B-Symptom"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sentence_identity_isolation",
+      "status": "PASS",
+      "manual_counts": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1
+      },
+      "manual_prf_fractions": {
+        "precision": "5/6",
+        "recall": "5/6",
+        "f1": "5/6"
+      },
+      "ours_micro": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334,
+        "support": 6,
+        "predicted": 6
+      },
+      "author_counts": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1
+      },
+      "author_micro": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334
+      },
+      "author_overall_f1": 0.8333333333333334,
+      "per_type": {
+        "Symptom": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5,
+            "support": 2,
+            "predicted": 2
+          },
+          "author_rounded": {
+            "acc": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          }
+        },
+        "Drug": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Drug_Category": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Medical_Examination": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Operation": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "synthetic_sequences": [
+        {
+          "dialogue_id": "anchor",
+          "sentence_id": "five_types",
+          "gold": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ]
+        },
+        {
+          "dialogue_id": "d",
+          "sentence_id": "1",
+          "gold": [
+            "B-Symptom",
+            "I-Symptom"
+          ],
+          "prediction": [
+            "O",
+            "O"
+          ]
+        },
+        {
+          "dialogue_id": "d",
+          "sentence_id": "2",
+          "gold": [
+            "O",
+            "O"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "I-Symptom"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dialogue_identity_isolation",
+      "status": "PASS",
+      "manual_counts": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1
+      },
+      "manual_prf_fractions": {
+        "precision": "5/6",
+        "recall": "5/6",
+        "f1": "5/6"
+      },
+      "ours_micro": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334,
+        "support": 6,
+        "predicted": 6
+      },
+      "author_counts": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1
+      },
+      "author_micro": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334
+      },
+      "author_overall_f1": 0.8333333333333334,
+      "per_type": {
+        "Symptom": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5,
+            "support": 2,
+            "predicted": 2
+          },
+          "author_rounded": {
+            "acc": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          }
+        },
+        "Drug": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Drug_Category": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Medical_Examination": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "Operation": {
+          "manual_counts": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ours": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1,
+            "predicted": 1
+          },
+          "author_rounded": {
+            "acc": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "synthetic_sequences": [
+        {
+          "dialogue_id": "anchor",
+          "sentence_id": "five_types",
+          "gold": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "B-Drug",
+            "B-Drug_Category",
+            "B-Medical_Examination",
+            "B-Operation"
+          ]
+        },
+        {
+          "dialogue_id": "d1",
+          "sentence_id": "1",
+          "gold": [
+            "B-Symptom",
+            "I-Symptom"
+          ],
+          "prediction": [
+            "O",
+            "O"
+          ]
+        },
+        {
+          "dialogue_id": "d2",
+          "sentence_id": "1",
+          "gold": [
+            "O",
+            "O"
+          ],
+          "prediction": [
+            "B-Symptom",
+            "I-Symptom"
+          ]
+        }
+      ]
+    }
+  ],
+  "legal_case_count": 8,
+  "protocol_checks": [
+    {
+      "name": "no_entities_zero_and_missing_classes",
+      "status": "EXPECTED_PROTOCOL_DIFFERENCE",
+      "ours": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0,
+        "predicted": 0
+      },
+      "author_original_helpers_zero_prf": [
+        0,
+        0,
+        0.0
+      ],
+      "author_full_entity_prefix": {
+        "type": "KeyError",
+        "missing_key": "Symptom"
+      },
+      "meaning": "Helper formulas agree at zero; the unmodified full author entity prefix assumes all five gold classes exist."
+    },
+    {
+      "name": "illegal_bio_policy",
+      "status": "EXPECTED_PROTOCOL_DIFFERENCE",
+      "cases": [
+        {
+          "prediction": [
+            "I-Symptom"
+          ],
+          "ours": "REJECTED",
+          "author_helper_entities": []
+        },
+        {
+          "prediction": [
+            "B-Symptom",
+            "I-Drug"
+          ],
+          "ours": "REJECTED",
+          "author_helper_entities": [
+            [
+              "Symptom",
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "meaning": "Invalid BIO is refused before our scoring; permissive author helper output is not a valid score comparison."
+    }
+  ],
+  "protocol_check_count": 2,
+  "elapsed_seconds": 0.1146125000086613,
+  "remaining_limits": [
+    "No real prediction or official dev gold was read.",
+    "Character metrics were not independently reimplemented or crosschecked here.",
+    "No third-party seqeval execution, full author CLI or Tianchi server verification.",
+    "Correct scoring does not prove honest training, no leakage, or faithful tokenizer alignment."
+  ],
+  "command": [
+    "python",
+    "research/data_study/verify_scoring.py",
+    "--output-dir",
+    "research/data_study/reliability_runs"
+  ],
+  "publication_note": {
+    "kind": "public_projection_of_existing_record",
+    "original_sha256": "3985bc39e85c08a7cfc6feb5ea9dc3169ce1c0cd41fb339fd0656d3d7f57fd5f",
+    "prepared_at": "2026-10-25T18:38:13+08:00",
+    "changes": "Local absolute paths and private split-container location replaced by placeholders; numerical results, dates, counts and historical source/artifact hashes retained."
+  }
+}

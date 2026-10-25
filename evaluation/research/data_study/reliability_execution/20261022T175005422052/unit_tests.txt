@@ -1,0 +1,12 @@
+test_eight_cases_match_manual_counts_and_author (test_verify_scoring.VerificationTests.test_eight_cases_match_manual_counts_and_author) ... ok
+test_identity_isolation_cannot_increase_true_positives (test_verify_scoring.VerificationTests.test_identity_isolation_cannot_increase_true_positives) ... ok
+test_incorrect_manual_expectation_is_not_silently_accepted (test_verify_scoring.VerificationTests.test_incorrect_manual_expectation_is_not_silently_accepted) ... ok
+test_invalid_bio_is_rejected_and_author_behavior_disclosed (test_verify_scoring.VerificationTests.test_invalid_bio_is_rejected_and_author_behavior_disclosed) ... ok
+test_merge_and_split_have_distinct_counts (test_verify_scoring.VerificationTests.test_merge_and_split_have_distinct_counts) ... ok
+test_report_is_traceable_and_repeat_writes_never_overwrite (test_verify_scoring.VerificationTests.test_report_is_traceable_and_repeat_writes_never_overwrite) ... ok
+test_zero_entity_difference_is_explicit_not_numeric_failure (test_verify_scoring.VerificationTests.test_zero_entity_difference_is_explicit_not_numeric_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.196s
+
+OK

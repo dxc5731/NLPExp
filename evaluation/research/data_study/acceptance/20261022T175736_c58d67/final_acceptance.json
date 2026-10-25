@@ -1,0 +1,319 @@
+{
+  "created_at": "2026-10-22T18:02:02.864699+08:00",
+  "purpose": "training_data_and_scorer_preparation_not_model_results",
+  "status": "PASS",
+  "checks": {
+    "both_test_suites_pass": true,
+    "expected_original_test_counts": true,
+    "existing_files_unchanged_this_round_check": true,
+    "original_15_source_test_files_match_historical": true,
+    "all_profile_artifact_hashes_match": true,
+    "train_annotation_audit_pass": true,
+    "aggregate_arithmetic_pass": true,
+    "new_author_cases_pass": true,
+    "utf8_no_replacement_chars": true,
+    "local_readme_links_resolve": true
+  },
+  "test_counts": {
+    "existing_by_module": {
+      "test_evaluate_predictions": 47,
+      "test_evaluation_pipeline": 49,
+      "test_validate_predictions": 42
+    },
+    "existing_total": 138,
+    "new_profile": 12,
+    "new_scoring": 7,
+    "new_total": 19,
+    "combined": 157
+  },
+  "test_execution": {
+    "existing_regression": {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 15.679887999955099,
+      "transcript": "existing_regression.txt",
+      "last_lines": [
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 138 tests in 14.695s",
+        "",
+        "OK"
+      ]
+    },
+    "new_study_tests": {
+      "command": [
+        "python",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/data_study",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.0002047999878414,
+      "transcript": "new_study_tests.txt",
+      "last_lines": [
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 19 tests in 0.428s",
+        "",
+        "OK"
+      ]
+    }
+  },
+  "preservation_correction": {
+    "initial_record": "tests_and_preservation.json",
+    "reason": "Initial acceptance helper compared Windows-backslash keys against forward-slash historical manifest keys; all tests had already passed. Normalizing relative paths confirms hashes; no source or tests required repair. Original FAIL evidence retained.",
+    "files": [
+      {
+        "path": "src/.gitkeep",
+        "expected_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "actual_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "status": "PASS"
+      },
+      {
+        "path": "src/check_run_info.py",
+        "expected_sha256": "ba4cd48b9a02a25da0fde6f5991ad928728c9b26f773caae35ad51e12b03c82c",
+        "actual_sha256": "ba4cd48b9a02a25da0fde6f5991ad928728c9b26f773caae35ad51e12b03c82c",
+        "status": "PASS"
+      },
+      {
+        "path": "src/compare_evaluations.py",
+        "expected_sha256": "03eaefb5975f73ce2cc4e4c53776c7d589b3caf4309aadb54e0e4e9e937f5f11",
+        "actual_sha256": "03eaefb5975f73ce2cc4e4c53776c7d589b3caf4309aadb54e0e4e9e937f5f11",
+        "status": "PASS"
+      },
+      {
+        "path": "src/evaluate_predictions.py",
+        "expected_sha256": "7c75016ae1f4cc07d4037bfeb39ffb63aaee8d43fc7a1da10c15fe258c3dc173",
+        "actual_sha256": "7c75016ae1f4cc07d4037bfeb39ffb63aaee8d43fc7a1da10c15fe258c3dc173",
+        "status": "PASS"
+      },
+      {
+        "path": "src/evaluation_io.py",
+        "expected_sha256": "8863d424b22d05ecd1300cda2dce9f382ba043e80c12039471ecb201c1781335",
+        "actual_sha256": "8863d424b22d05ecd1300cda2dce9f382ba043e80c12039471ecb201c1781335",
+        "status": "PASS"
+      },
+      {
+        "path": "src/export_errors.py",
+        "expected_sha256": "6bf80ffc670b9795f50ef4b6a569373cb8c06432e9d3b01e6b7dba234d81e003",
+        "actual_sha256": "6bf80ffc670b9795f50ef4b6a569373cb8c06432e9d3b01e6b7dba234d81e003",
+        "status": "PASS"
+      },
+      {
+        "path": "src/ner_metrics.py",
+        "expected_sha256": "5e02e13834e07560a3586038c832a603e675115bf0b3a2d0b8d3ebedf2356074",
+        "actual_sha256": "5e02e13834e07560a3586038c832a603e675115bf0b3a2d0b8d3ebedf2356074",
+        "status": "PASS"
+      },
+      {
+        "path": "src/run_evaluation_batch.py",
+        "expected_sha256": "ebbdc4b3eec92d2025b57c70e5ea3cf36b1139b10d83703b96ecf9eab6997327",
+        "actual_sha256": "ebbdc4b3eec92d2025b57c70e5ea3cf36b1139b10d83703b96ecf9eab6997327",
+        "status": "PASS"
+      },
+      {
+        "path": "src/validate_predictions.py",
+        "expected_sha256": "75dc966361d216bdb9500acb63bce6be4313b708136290cd26b1195dfb7c1dcb",
+        "actual_sha256": "75dc966361d216bdb9500acb63bce6be4313b708136290cd26b1195dfb7c1dcb",
+        "status": "PASS"
+      },
+      {
+        "path": "tests/author_entity_reference.py",
+        "expected_sha256": "bb261d062409648faa7b933ba3212b512e2fff19d959ba5beb93c5f73e099dc0",
+        "actual_sha256": "bb261d062409648faa7b933ba3212b512e2fff19d959ba5beb93c5f73e099dc0",
+        "status": "PASS"
+      },
+      {
+        "path": "tests/crosscheck_author.py",
+        "expected_sha256": "431c80213eae4ed3a1cf6d98b5a5be1cb88d9cf151a8c5aae8691a12be6f4e4c",
+        "actual_sha256": "431c80213eae4ed3a1cf6d98b5a5be1cb88d9cf151a8c5aae8691a12be6f4e4c",
+        "status": "PASS"
+      },
+      {
+        "path": "tests/run_pipeline_acceptance.py",
+        "expected_sha256": "7cbf29a35fe995ffe54d28e7260069e126113ada4511d9b232d468ff4646ecc9",
+        "actual_sha256": "7cbf29a35fe995ffe54d28e7260069e126113ada4511d9b232d468ff4646ecc9",
+        "status": "PASS"
+      },
+      {
+        "path": "tests/test_evaluate_predictions.py",
+        "expected_sha256": "d1e5c35882c0c9e1b07492fa25e82c7c9de1c3617f6acf6faa61bc79ae042ce0",
+        "actual_sha256": "d1e5c35882c0c9e1b07492fa25e82c7c9de1c3617f6acf6faa61bc79ae042ce0",
+        "status": "PASS"
+      },
+      {
+        "path": "tests/test_evaluation_pipeline.py",
+        "expected_sha256": "053e5efa98d5fd4ce145b4a88425f2eefa2fbfcb6141bcb1dab6801a6478eb25",
+        "actual_sha256": "053e5efa98d5fd4ce145b4a88425f2eefa2fbfcb6141bcb1dab6801a6478eb25",
+        "status": "PASS"
+      },
+      {
+        "path": "tests/test_validate_predictions.py",
+        "expected_sha256": "99a7448b51469bb33b12231ddbc1b11ac02dbc1870fc667ffe99c37c5d1cc98d",
+        "actual_sha256": "99a7448b51469bb33b12231ddbc1b11ac02dbc1870fc667ffe99c37c5d1cc98d",
+        "status": "PASS"
+      }
+    ]
+  },
+  "data_profile": {
+    "statistics": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\statistics.json",
+    "source": {
+      "data": {
+        "requested_path": "<PROJECT_ROOT>/IMCS-V2-NER.zip",
+        "path": "<PROJECT_ROOT>/IMCS-V2-NER.zip",
+        "member": "IMCS-V2-NER/IMCS-V2_train.json",
+        "archive_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67",
+        "sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24"
+      },
+      "split": {
+        "path": "<LOCAL_SPLIT_CONTAINER>/BERT数据接口_v1.zip",
+        "member": "code/artifacts/split_v1.json",
+        "container_sha256": "96d259bc1b411a972b46869573f095b0af1de68e2750bdb9ba72450526723df6",
+        "manifest_sha256": "497f21cf13d8f5accb83f86ffda16a4a59ba716c064ec347e990a219e8957072",
+        "version": "v1",
+        "seed": 42
+      }
+    },
+    "scope": "internal_train",
+    "totals": {
+      "dialogues": 2225,
+      "sentences": 88842,
+      "chars": 1153312,
+      "entities": 62671,
+      "entity_chars": 194112,
+      "no_entity": 51056,
+      "multi_entity": 14533,
+      "multi_type": 5723,
+      "empty": 0,
+      "long_entity": 939,
+      "adjacent_pairs": 1737,
+      "adjacent_sentences": 1533,
+      "direct_b_tags": 62671,
+      "no_entity_share": 0.574683145359177,
+      "multi_entity_share": 0.16358253978973908,
+      "multi_type_share": 0.06441773035276108,
+      "o_character_share": 0.8316916844704642,
+      "entity_character_coverage": 0.16830831552953582,
+      "largest_smallest_type_ratio": 16.234615384615385,
+      "adjacent_same_type_pairs": 1519
+    },
+    "execution": "research\\data_study\\profile_execution\\20261022T175736_619874\\execution.json",
+    "output_hash_checks": [
+      {
+        "path": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\adjacent_type_pairs.csv",
+        "status": "PASS"
+      },
+      {
+        "path": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\entities_per_sentence.csv",
+        "status": "PASS"
+      },
+      {
+        "path": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\entity_lengths.csv",
+        "status": "PASS"
+      },
+      {
+        "path": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\entity_types.csv",
+        "status": "PASS"
+      },
+      {
+        "path": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\sentence_complexity.csv",
+        "status": "PASS"
+      },
+      {
+        "path": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\statistics.json",
+        "status": "PASS"
+      },
+      {
+        "path": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\figures\\01_entity_distribution.png",
+        "status": "PASS"
+      },
+      {
+        "path": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\figures\\01_entity_distribution.svg",
+        "status": "PASS"
+      },
+      {
+        "path": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\figures\\02_entity_lengths.png",
+        "status": "PASS"
+      },
+      {
+        "path": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\figures\\02_entity_lengths.svg",
+        "status": "PASS"
+      },
+      {
+        "path": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\figures\\03_sentence_lengths.png",
+        "status": "PASS"
+      },
+      {
+        "path": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\figures\\03_sentence_lengths.svg",
+        "status": "PASS"
+      },
+      {
+        "path": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\figures\\04_sentence_complexity.png",
+        "status": "PASS"
+      },
+      {
+        "path": "research\\data_study\\outputs\\20261022T175736_profile_l4is4ju_\\figures\\04_sentence_complexity.svg",
+        "status": "PASS"
+      }
+    ]
+  },
+  "scoring_reference": {
+    "report": "research\\data_study\\reliability_runs\\20261022T175006104092_z82c4ymo\\scoring_crosscheck.json",
+    "legal_cases": 8,
+    "protocol_boundaries": 2,
+    "full_author_cli_or_server_executed": false
+  },
+  "independent_train_check": {
+    "path": "research\\data_study\\test_evidence\\20261022T175447132117\\independent_train_check.json",
+    "status": "PASS",
+    "notice": "Direct B-tag/non-O/length counting, independent of profile analyzer and entity extractor."
+  },
+  "visual_review": {
+    "status": "PASS",
+    "reviewed": "research/data_study/qa/figures_review_final.png",
+    "png_count": 4,
+    "svg_count": 4,
+    "changes": "Reserved footer/legend space; rare sentence bins show count and nonzero rounded share."
+  },
+  "encoding_checks": {
+    "research\\data_study\\profile_data.py": true,
+    "research\\data_study\\README.md": true,
+    "research\\data_study\\test_profile_data.py": true,
+    "research\\data_study\\test_verify_scoring.py": true,
+    "research\\data_study\\verify_scoring.py": true
+  },
+  "missing_links": [],
+  "limits": [
+    "No real model scores or new dev/test content analysis.",
+    "Split integrity does not prove actual training compliance.",
+    "Author comparison limited to original entity AST and helper functions.",
+    "New profile/statistics remain separate from formal results."
+  ],
+  "publication_note": {
+    "kind": "public_projection_of_existing_record",
+    "original_sha256": "33326c821a91fa53b6d0ea74c0036170f9dea0818e3003a580cf1f19e78b8439",
+    "prepared_at": "2026-10-25T18:38:13+08:00",
+    "changes": "Local absolute paths and private split-container location replaced by placeholders; numerical results, dates, counts and historical source/artifact hashes retained."
+  }
+}

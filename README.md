@@ -1,4 +1,4 @@
-# NLPExp — IMCS-V2-NER 医疗命名实体识别
+﻿# NLPExp — IMCS-V2-NER 医疗命名实体识别
 
 《自然语言处理》课程项目，方向 **B：信息抽取 / 序列标注**。
 
@@ -82,6 +82,11 @@ python -X utf8 src/check_run_info.py --evaluation <评分结果> --run-info <run
 - 官方 **dev 不参与训练、调参或模型选择**，只用于最终预测与报告。
 - 原始对话 ID 和句子 ID 原样保留，不重新编号；每个原始字符一个标签（含标点与空格）。
 - 各模块的 AI 使用范围与程序验证方式见各自文档；正式实验设计、结果分析与个人贡献声明由组员本人完成。
+
+## 训练数据研究与评分核验
+
+[研究成果](evaluation/research/data_study/README.md)包含内部训练集的聚合统计、4 张 PNG/SVG 图、5 份 CSV、研究脚本与 19 项测试，以及八个人工评分场景的手算 / 本项目 / 作者实体评分对照。
+[数据来源核查](evaluation/research/data_study/天池与GitHub数据来源核查.md)说明平台 ZIP 与作者仓库的实际版本及标注差异。
 
 ## 复现
 

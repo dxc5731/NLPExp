@@ -1,0 +1,60 @@
+{
+  "purpose": "independent_read_only_internal_train_aggregate_check_not_model_evaluation",
+  "implementation": "Direct raw B-tag counting; did not call profile_data.analyze or ner_metrics",
+  "data_path": "<PROJECT_ROOT>/IMCS-V2-NER.zip",
+  "opened_data_member": "IMCS-V2-NER/IMCS-V2_train.json",
+  "split_path": "<LOCAL_SPLIT_CONTAINER>/BERT数据接口_v1.zip",
+  "opened_split_member": "code/artifacts/split_v1.json",
+  "source_sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24",
+  "split_sha256": "497f21cf13d8f5accb83f86ffda16a4a59ba716c064ec347e990a219e8957072",
+  "counts": {
+    "dialogues": 2225,
+    "sentences": 88842,
+    "chars": 1153312,
+    "entities": 62671,
+    "entity_chars": 194112,
+    "entity_counts": {
+      "Symptom": 42210,
+      "Drug": 7418,
+      "Medical_Examination": 5766,
+      "Operation": 2600,
+      "Drug_Category": 4677
+    }
+  },
+  "expected": {
+    "dialogues": 2225,
+    "sentences": 88842,
+    "chars": 1153312,
+    "entities": 62671,
+    "entity_counts": {
+      "Symptom": 42210,
+      "Drug": 7418,
+      "Drug_Category": 4677,
+      "Medical_Examination": 5766,
+      "Operation": 2600
+    }
+  },
+  "checks": {
+    "dialogues": true,
+    "sentences": true,
+    "chars": true,
+    "entities": true,
+    "entity_counts": true,
+    "all_character_lengths_aligned": true,
+    "source_hash": true
+  },
+  "status": "PASS",
+  "boundaries": {
+    "dev_test_members_opened": false,
+    "val_BIO_accessed": false,
+    "raw_text_or_ids_exported": false
+  },
+  "elapsed_seconds": 0.7720350000308827,
+  "recorded_at": "2026-10-22T17:55:48.118457+08:00",
+  "publication_note": {
+    "kind": "public_projection_of_existing_record",
+    "original_sha256": "b0e3c255fdf0c6f4133042c54e45556677591fb0f86825a4cd127fc00b2ff61e",
+    "prepared_at": "2026-10-25T18:38:13+08:00",
+    "changes": "Local absolute paths and private split-container location replaced by placeholders; numerical results, dates, counts and historical source/artifact hashes retained."
+  }
+}
