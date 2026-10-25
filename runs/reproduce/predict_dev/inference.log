@@ -1,0 +1,34 @@
+run_id=reproduce
+checkpoint=D:\agent-chat\dsh-deepseek\nlp\runs\reproduce\checkpoints\best.pt
+split=dev
+训练配置: {"lr": 5e-05, "batch_size": 32, "epochs": 1, "warmup_ratio": 0.1, "weight_decay": 0.01, "max_grad_norm": 1.0, "dropout": 0.1, "seed": 42, "max_len": 256}
+该 checkpoint 来自第 1 轮，验证集实体 F1 0.7227597812368532
+句子数 33267，对话数 833
+  已处理 5056/33267 句
+  已处理 10048/33267 句
+  已处理 15040/33267 句
+  已处理 20032/33267 句
+  已处理 25024/33267 句
+  已处理 30016/33267 句
+自检通过：833 段对话 / 33267 句，标签数与字符数全部一致
+非法 BIO 修复 4860 处
+预测写入 D:\agent-chat\dsh-deepseek\nlp\runs\reproduce\predict_dev\predictions_dev.json  (1.9 MB)
+run_info 写入 D:\agent-chat\dsh-deepseek\nlp\runs\reproduce\predict_dev\run_info.json
+总耗时 61.4 秒（纯推理 57.6 秒）
+run_id=reproduce
+checkpoint=D:\agent-chat\dsh-deepseek\nlp\runs\reproduce\checkpoints\best.pt
+split=dev
+训练配置: {"lr": 5e-05, "batch_size": 32, "epochs": 1, "warmup_ratio": 0.1, "weight_decay": 0.01, "max_grad_norm": 1.0, "dropout": 0.1, "seed": 42, "max_len": 256}
+该 checkpoint 来自第 1 轮，验证集实体 F1 0.7227597812368532
+句子数 33267，对话数 833
+  已处理 5056/33267 句
+  已处理 10048/33267 句
+  已处理 15040/33267 句
+  已处理 20032/33267 句
+  已处理 25024/33267 句
+  已处理 30016/33267 句
+自检通过：833 段对话 / 33267 句，标签数与字符数全部一致
+非法 BIO 修复 4860 处
+预测写入 D:\agent-chat\dsh-deepseek\nlp\runs\reproduce\predict_dev\predictions_dev.json  (1.9 MB)
+run_info 写入 D:\agent-chat\dsh-deepseek\nlp\runs\reproduce\predict_dev\run_info.json
+总耗时 62.5 秒（纯推理 58.5 秒）

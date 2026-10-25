@@ -1,4 +1,4 @@
-# 附录 A：复现指南
+﻿# 附录 A：复现指南
 
 > 本附录给出"别人拿到仓库后怎么跑起来"的完整步骤，以及 2026-10-25 实际执行的一次复现记录。
 
@@ -27,7 +27,32 @@ $env:BERT_MODEL_DIR = 'D:\models\bert-base-chinese'
 
 两者缺任一个，程序会直接说明缺哪个目录、该设哪个变量。
 
-## 2. BERT-Softmax 模块
+## 2. 一条命令复现
+
+```bash
+python reproduce.py --check     # 只检查环境与数据，约 5 秒
+python reproduce.py --quick     # 快速复现：100 段对话、1 轮，约 2 分钟
+python reproduce.py --full      # 全量复现：88842 句、3 轮，A800 约 11 分钟
+```
+
+脚本依次执行：环境/数据/模型检查 → 13 个单元测试 → 训练 → dev 预测 → 官方校验器 → 官方评分器，
+最后打印一张「预期 vs 实际」的汇总表，全部 PASS 才算复现成功。
+
+**预期值**（seed = 42）：
+
+| 模式 | 阶段 | 预期 | 容差 |
+|---|---|---|---|
+| quick | 单元测试 | 13 passed | — |
+| quick | 验证集实体 F1 | 0.7228 | ±0.06 |
+| quick | 官方校验器 | PASS，errors = 0 | 精确 |
+| full | 验证集实体 F1 | 0.8885 | ±0.005 |
+| full | dev 实体 F1 | 0.8801 | ±0.005 |
+
+`--quick` 的模型只在 100 段对话上训练过，分数只用于确认流程，**不代表模型效果**。
+
+## 3. 分模块手动执行（等价于上面的脚本）
+
+### BERT-Softmax 模块
 
 ```bash
 cd code
@@ -42,7 +67,7 @@ python -m src.predict --run-id <run_id> --split dev   # 导出预测
 预测打印 `自检通过：833 段对话 / 33267 句`，并在 `runs/<run_id>/predict_dev/` 下生成
 `predictions_dev.json` 和 `run_info.json`。
 
-## 3. 评估模块
+## 4. 评估模块
 
 ```bash
 cd evaluation
@@ -52,15 +77,15 @@ python -X utf8 src/evaluate_predictions.py --data <数据> --predictions <预测
 
 **预期输出**：校验器打印 `PASS ... errors=0`；评分器打印实体级 P/R/F1 与字符级准确率。
 
-## 4. BERT-CRF 模块
+## 5. BERT-CRF 模块
 
 见 [`docs/bert_crf/README.md`](../docs/bert_crf/README.md) 与
 [`docs/bert_crf/08_training_preflight_and_integration.md`](../docs/bert_crf/08_training_preflight_and_integration.md)，
 该模块使用独立的 `.venv-bert-crf` 环境。
 
-## 5. 2026-10-25 实际复现记录
+## 6. 实际复现记录
 
-从仓库导出干净检出（`git archive HEAD`，文件内容与 `git clone` 一致，不含 `.git`、数据、模型、虚拟环境），当时的检出共 **484 个文件**（此后仓库又补了两个脚本和本附录）。
+**2026-10-25（手动分步）**：从仓库导出干净检出（`git archive HEAD`，文件内容与 `git clone` 一致，不含 `.git`、数据、模型、虚拟环境），当时的检出共 **484 个文件**（此后仓库又补了两个脚本和本附录）。
 
 | 步骤 | 命令 | 实际结果 | 耗时 |
 |---|---|---|---|
@@ -70,9 +95,12 @@ python -X utf8 src/evaluate_predictions.py --data <数据> --predictions <预测
 | 官方校验器 | `python src/validate_predictions.py --split dev` | **PASS, errors=0** | 3 秒 |
 | 评估模块测试 | `python -m unittest discover -s tests -q` | **135 passed, 0 failed** | 74 秒 |
 
+**2026-10-25（一键脚本）**：`python reproduce.py --quick` 全流程通过——13 个单元测试、训练 23.5 秒、
+dev 预测、官方校验器 PASS（errors=0）、官方评分器正常出分，总耗时 2.3 分钟，汇总表 5 项全 PASS。
+
 说明：小规模训练只用于验证流程可跑通，**其 F1 不代表模型效果**；正式结果见报告第⑤节。
 
-## 6. 已知限制
+## 7. 已知限制
 
 - 干净检出不含数据、模型、权重与 Checkpoint，需要按第 1 步自行准备。
 - 所有路径都可用环境变量覆盖，不需要改代码。

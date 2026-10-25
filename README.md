@@ -7,6 +7,42 @@
   （症状 / 药物 / 药物类别 / 检查 / 操作）
 - **交付**：逐字符 BIO 预测，双层 ID 结构 `对话ID -> 句子ID -> 标签串`
 
+## 一条命令复现
+
+**前提**：Python 3.9+，装好 `code/requirements.txt` 里的依赖（torch 需按 CUDA 版本另装）。
+数据和模型**不随仓库分发**，按下面第 0 步准备。
+
+```bash
+# 0) 准备：下载预训练模型（约 400MB）；数据从天池下载后解压到 doc/数据/IMCS-V2-NER/IMCS-V2-NER/
+python reproduce.py --download-model
+
+# 1) 只检查环境和数据（约 5 秒）
+python reproduce.py --check
+
+# 2) 快速复现（约 2 分钟）：验证流程与输出是否对得上
+python reproduce.py --quick
+
+# 3) 全量复现（A800 约 11 分钟 / RTX 4060 约 71 分钟）：复现主结果
+python reproduce.py --full
+```
+
+**预期输出**（seed = 42）：
+
+| 模式 | 阶段 | 预期值 | 容差 |
+|---|---|---|---|
+| quick | 单元测试 | 13 passed | — |
+| quick | 验证集实体 F1（100 段对话、1 轮） | 0.7228 | ±0.06 |
+| quick | 官方校验器 | PASS，errors = 0 | 精确 |
+| full | 验证集实体 F1（全量 88842 句、3 轮） | 0.8885 | ±0.005 |
+| full | dev 实体 F1 | 0.8801 | ±0.005 |
+
+**看到什么算成功**：脚本最后打印的汇总表全部 `PASS`，退出码为 0。
+
+**随机种子**：`seed = 42`，同时固定 Python / NumPy / PyTorch 种子并开启 `cudnn.deterministic`。
+同机器、同环境下重跑结果一致；不同 GPU 之间可能有 ±0.001 量级差异。
+
+**耗时参考**：见 [`doc/耗时参考.md`](doc/耗时参考.md)。
+
 ## 仓库结构
 
 本项目由多条各自独立开发的分支合并而成，按模块分目录：
