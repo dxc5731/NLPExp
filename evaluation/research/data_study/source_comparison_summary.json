@@ -1,0 +1,242 @@
+{
+  "checked_at": "2026-10-25T18:32:56+08:00",
+  "github_commit": "836048f491704011dba229a5bd04db5f7f4d2bbe",
+  "github_test_answers_opened": false,
+  "platform_zip_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67",
+  "comparison": {
+    "train": {
+      "github_dialogues": 2472,
+      "platform_dialogues": 2472,
+      "github_sentences": 98529,
+      "platform_sentences": 98529,
+      "shared_ids": 98529,
+      "github_only_ids": 0,
+      "platform_only_ids": 0,
+      "text_different": 0,
+      "bio_string_different": 17653,
+      "bio_token_sequence_different": 17653,
+      "changed_character_labels": 70684,
+      "github_sentence_fields": {
+        "sentence_id": 98529,
+        "speaker": 98529,
+        "sentence": 98529,
+        "dialogue_act": 98529,
+        "BIO_label": 98529,
+        "symptom_norm": 98529,
+        "symptom_type": 98529
+      },
+      "platform_sentence_fields": {
+        "sentence_id": 98529,
+        "speaker": 98529,
+        "sentence": 98529,
+        "dialogue_act": 98529,
+        "BIO_label": 98529,
+        "symptom_norm": 98529,
+        "symptom_type": 98529,
+        "local_implicit_info": 98529
+      },
+      "github_top_level_fields": {
+        "diagnosis": 2472,
+        "self_report": 2472,
+        "explicit_info": 2472,
+        "dialogue": 2472,
+        "report": 2472,
+        "implicit_info": 2472
+      },
+      "platform_top_level_fields": {
+        "diagnosis": 2472,
+        "self_report": 2472,
+        "explicit_info": 2472,
+        "dialogue": 2472,
+        "report": 2472,
+        "implicit_info": 2472
+      },
+      "github_tags": [
+        "B-Drug",
+        "B-Drug_Category",
+        "B-Medical_Examination",
+        "B-Operation",
+        "B-Symptom",
+        "I-Drug",
+        "I-Drug_Category",
+        "I-Medical_Examination",
+        "I-Operation",
+        "I-Symptom",
+        "O"
+      ],
+      "platform_tags": [
+        "B-Drug",
+        "B-Drug_Category",
+        "B-Medical_Examination",
+        "B-Operation",
+        "B-Symptom",
+        "I-Drug",
+        "I-Drug_Category",
+        "I-Medical_Examination",
+        "I-Operation",
+        "I-Symptom",
+        "O"
+      ],
+      "github_bytes": 43441711,
+      "platform_bytes": 50868537,
+      "github_sha256": "2760c987d0f438785992ed7e7a622ea1a45ad9231506f4f926e8dce840d3d117",
+      "platform_sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24",
+      "github_url": "https://raw.githubusercontent.com/lemuria-wchen/imcs21/836048f491704011dba229a5bd04db5f7f4d2bbe/dataset/train.json",
+      "shared_sentence_field_differences": {
+        "BIO_label": 17653,
+        "dialogue_act": 0,
+        "sentence": 0,
+        "sentence_id": 0,
+        "speaker": 0,
+        "symptom_norm": 10335,
+        "symptom_type": 14096
+      },
+      "label_length_mismatches": {
+        "github": 0,
+        "platform": 0
+      }
+    },
+    "dev": {
+      "github_dialogues": 833,
+      "platform_dialogues": 833,
+      "github_sentences": 33267,
+      "platform_sentences": 33267,
+      "shared_ids": 33267,
+      "github_only_ids": 0,
+      "platform_only_ids": 0,
+      "text_different": 0,
+      "bio_string_different": 5845,
+      "bio_token_sequence_different": 5845,
+      "changed_character_labels": 22007,
+      "github_sentence_fields": {
+        "sentence_id": 33267,
+        "speaker": 33267,
+        "sentence": 33267,
+        "dialogue_act": 33267,
+        "BIO_label": 33267,
+        "symptom_norm": 33267,
+        "symptom_type": 33267
+      },
+      "platform_sentence_fields": {
+        "sentence_id": 33267,
+        "speaker": 33267,
+        "sentence": 33267,
+        "dialogue_act": 33267,
+        "BIO_label": 33267,
+        "symptom_norm": 33267,
+        "symptom_type": 33267,
+        "local_implicit_info": 33267
+      },
+      "github_top_level_fields": {
+        "diagnosis": 833,
+        "self_report": 833,
+        "explicit_info": 833,
+        "dialogue": 833,
+        "report": 833,
+        "implicit_info": 833
+      },
+      "platform_top_level_fields": {
+        "diagnosis": 833,
+        "self_report": 833,
+        "explicit_info": 833,
+        "dialogue": 833,
+        "report": 833,
+        "implicit_info": 833
+      },
+      "github_tags": [
+        "B-Drug",
+        "B-Drug_Category",
+        "B-Medical_Examination",
+        "B-Operation",
+        "B-Symptom",
+        "I-Drug",
+        "I-Drug_Category",
+        "I-Medical_Examination",
+        "I-Operation",
+        "I-Symptom",
+        "O"
+      ],
+      "platform_tags": [
+        "B-Drug",
+        "B-Drug_Category",
+        "B-Medical_Examination",
+        "B-Operation",
+        "B-Symptom",
+        "I-Drug",
+        "I-Drug_Category",
+        "I-Medical_Examination",
+        "I-Operation",
+        "I-Symptom",
+        "O"
+      ],
+      "github_bytes": 14762499,
+      "platform_bytes": 17175331,
+      "github_sha256": "e1c354383a9b3769015411651ad362ce4bd8fb4944cf46fe1114b474ab9bee80",
+      "platform_sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f",
+      "github_url": "https://raw.githubusercontent.com/lemuria-wchen/imcs21/836048f491704011dba229a5bd04db5f7f4d2bbe/dataset/dev.json",
+      "shared_sentence_field_differences": {
+        "BIO_label": 5845,
+        "dialogue_act": 0,
+        "sentence": 0,
+        "sentence_id": 0,
+        "speaker": 0,
+        "symptom_norm": 3138,
+        "symptom_type": 4227
+      },
+      "label_length_mismatches": {
+        "github": 0,
+        "platform": 0
+      }
+    }
+  },
+  "platform_test": {
+    "dialogues": 811,
+    "sentences": 32935,
+    "sentence_fields": {
+      "sentence_id": 32935,
+      "speaker": 32935,
+      "sentence": 32935
+    },
+    "template_dialogues": 811,
+    "template_sentence_count": 32935,
+    "template_all_empty": true
+  },
+  "repositories": {
+    "lemuria-wchen/imcs21": {
+      "sha": "836048f491704011dba229a5bd04db5f7f4d2bbe",
+      "commit_date": "2022-12-24T07:18:23Z"
+    },
+    "lemuria-wchen/imcs21-cblue": {
+      "sha": "8d512c6635029bf068712d62cf2428e65c5e4a58",
+      "commit_date": "2022-12-27T02:10:02Z"
+    },
+    "CBLUEbenchmark/CBLUE": {
+      "sha": "6a2c54f6a69265a33181c752a5350277149b8883",
+      "commit_date": "2023-05-03T15:28:49Z"
+    }
+  },
+  "scope": "Read-only aggregate comparison of official Github train/dev against the local Tianchi package. No medical text or raw records included; original Github test answers were not opened.",
+  "tianchi_live_review": {
+    "page": "https://tianchi.aliyun.com/dataset/95414",
+    "reviewed_at": "2026-10-25T18:37:10+08:00",
+    "capture_sha256": "3ff22bc9e0dee9b5d7f871661fd3c255f361f5815576fad30a3fd244d5c7478b",
+    "updates": [
+      {
+        "date": "2022-06-05",
+        "content": "新增IMCS-V2，扩充疾病类型和新增标注语料。"
+      },
+      {
+        "date": "2022-12-26",
+        "content": "更新IMCS-V2数据集，修复NER和SR任务标注错误，SR拓展为局部句子级与全局对话级双指标。"
+      }
+    ],
+    "download_rule": "完成学生认证，免审批下载数据集；FAQ说明申请审核通过后可下载。",
+    "file_listing": {
+      "name": "IMCS-V2-NER.zip",
+      "displayed_upload_date": "2023-03-14",
+      "displayed_size": "6.07MB"
+    },
+    "faq_recommends_latest": true,
+    "browser_context": "public anonymous page; does not establish user account certification"
+  }
+}

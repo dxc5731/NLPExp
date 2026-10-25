@@ -29,3 +29,7 @@ python -X utf8 src/run_evaluation_batch.py --manifest examples/pipeline_validati
 预期 135 项测试通过，批量流程返回 `SUCCESS`、`self_check=PASS`。演示使用人工合成样本，演示分数不代表模型成绩。
 
 真实数据从[天池](https://tianchi.aliyun.com/dataset/95414)自行获取并遵守许可。本次公开材料不包含原始医疗对话、完整预测、模型权重或完整训练日志；完整模型复现仍需训练方资产。评价口径、受控重评分命令和公开测试范围见[评价协议](evaluation/docs/evaluation_protocol.md)及[复现说明](evaluation/docs/reproducibility.md)。
+
+## 训练数据研究与评分核验
+
+[研究成果](evaluation/research/data_study/README.md)包含内部训练集聚合统计、4张PNG/SVG图、5份CSV、研究脚本与19项测试，以及八个人工评分场景的手算/本项目/作者实体评分对照。[数据来源核查](evaluation/research/data_study/天池与GitHub数据来源核查.md)说明平台ZIP与作者仓库的实际版本及标注差异。

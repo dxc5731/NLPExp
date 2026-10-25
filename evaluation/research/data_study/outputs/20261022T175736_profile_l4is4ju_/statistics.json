@@ -1,0 +1,914 @@
+{
+  "schema_version": "1.0",
+  "purpose": "training_data_profile_not_model_evaluation",
+  "status": "PASS",
+  "scope": "internal_train",
+  "inputs": {
+    "data": {
+      "requested_path": "<PROJECT_ROOT>/IMCS-V2-NER.zip",
+      "path": "<PROJECT_ROOT>/IMCS-V2-NER.zip",
+      "member": "IMCS-V2-NER/IMCS-V2_train.json",
+      "archive_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67",
+      "sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24"
+    },
+    "split": {
+      "path": "<LOCAL_SPLIT_CONTAINER>/BERT数据接口_v1.zip",
+      "member": "code/artifacts/split_v1.json",
+      "container_sha256": "96d259bc1b411a972b46869573f095b0af1de68e2750bdb9ba72450526723df6",
+      "manifest_sha256": "497f21cf13d8f5accb83f86ffda16a4a59ba716c064ec347e990a219e8957072",
+      "version": "v1",
+      "seed": 42
+    }
+  },
+  "split_check": {
+    "status": "PASS",
+    "disjoint": true,
+    "complete": true,
+    "counts": {
+      "train": {
+        "dialogues": 2225,
+        "sentences": 88842,
+        "chars": 1153312
+      },
+      "val": {
+        "dialogues": 247,
+        "sentences": 9687,
+        "chars": 126049
+      }
+    },
+    "val_scope": "Membership/sentence/character counts only; no val BIO analysis."
+  },
+  "definitions": {
+    "character_unit": "Python Unicode code points including spaces/punctuation; no normalization",
+    "entity_unit": "BIO occurrence, strict extract_entities, [start,end); no string deduplication",
+    "entity_length_bins": [
+      [
+        "1",
+        1,
+        1
+      ],
+      [
+        "2",
+        2,
+        2
+      ],
+      [
+        "3–4",
+        3,
+        4
+      ],
+      [
+        "5–8",
+        5,
+        8
+      ],
+      [
+        "9+",
+        9,
+        null
+      ]
+    ],
+    "sentence_length_bins": [
+      [
+        "0–10",
+        0,
+        10
+      ],
+      [
+        "11–20",
+        11,
+        20
+      ],
+      [
+        "21–40",
+        21,
+        40
+      ],
+      [
+        "41–80",
+        41,
+        80
+      ],
+      [
+        "81–160",
+        81,
+        160
+      ],
+      [
+        "161+",
+        161,
+        null
+      ]
+    ],
+    "quantile": "linear interpolation at (n-1)*q",
+    "multi_entity": ">=2 entities per sentence",
+    "multi_type": ">=2 distinct entity types per sentence",
+    "long_entity": ">=9 code points",
+    "adjacent": "ordered consecutive spans with left.end == right.start",
+    "density": "entity occurrences per 100 sentence code points; separately report entity character coverage",
+    "ratios": "shares are fractions [0,1], empty-group shares=0; per-100 density and largest/smallest ratio are unbounded; missing smallest class ratio=null; empty distribution=null"
+  },
+  "statistics": {
+    "totals": {
+      "dialogues": 2225,
+      "sentences": 88842,
+      "chars": 1153312,
+      "entities": 62671,
+      "entity_chars": 194112,
+      "no_entity": 51056,
+      "multi_entity": 14533,
+      "multi_type": 5723,
+      "empty": 0,
+      "long_entity": 939,
+      "adjacent_pairs": 1737,
+      "adjacent_sentences": 1533,
+      "direct_b_tags": 62671,
+      "no_entity_share": 0.574683145359177,
+      "multi_entity_share": 0.16358253978973908,
+      "multi_type_share": 0.06441773035276108,
+      "o_character_share": 0.8316916844704642,
+      "entity_character_coverage": 0.16830831552953582,
+      "largest_smallest_type_ratio": 16.234615384615385,
+      "adjacent_same_type_pairs": 1519
+    },
+    "entity_types": [
+      {
+        "entity_type": "Symptom",
+        "entities": 42210,
+        "entity_share": 0.6735172567854351,
+        "sentences_containing_type": 27406,
+        "sentence_share": 0.3084802233178001,
+        "length": {
+          "count": 42210,
+          "mean": 2.8580431177446104,
+          "median": 2.0,
+          "p90": 5.0,
+          "p95": 6.0,
+          "min": 1,
+          "max": 33
+        }
+      },
+      {
+        "entity_type": "Drug",
+        "entities": 7418,
+        "entity_share": 0.11836415567008664,
+        "sentences_containing_type": 5793,
+        "sentence_share": 0.06520564597825353,
+        "length": {
+          "count": 7418,
+          "mean": 4.1608250202210835,
+          "median": 4.0,
+          "p90": 7.0,
+          "p95": 8.0,
+          "min": 1,
+          "max": 13
+        }
+      },
+      {
+        "entity_type": "Drug_Category",
+        "entities": 4677,
+        "entity_share": 0.07462781828916086,
+        "sentences_containing_type": 4185,
+        "sentence_share": 0.04710609846694131,
+        "length": {
+          "count": 4677,
+          "mean": 3.5931152448150523,
+          "median": 3,
+          "p90": 6.0,
+          "p95": 7.0,
+          "min": 1,
+          "max": 13
+        }
+      },
+      {
+        "entity_type": "Medical_Examination",
+        "entities": 5766,
+        "entity_share": 0.09200427630004308,
+        "sentences_containing_type": 4498,
+        "sentence_share": 0.050629206906643257,
+        "length": {
+          "count": 5766,
+          "mean": 3.293964620187305,
+          "median": 3.0,
+          "p90": 5.0,
+          "p95": 5.0,
+          "min": 1,
+          "max": 13
+        }
+      },
+      {
+        "entity_type": "Operation",
+        "entities": 2600,
+        "entity_share": 0.041486492955274366,
+        "sentences_containing_type": 2378,
+        "sentence_share": 0.026766619391729137,
+        "length": {
+          "count": 2600,
+          "mean": 2.6196153846153845,
+          "median": 2.0,
+          "p90": 4.0,
+          "p95": 5.0,
+          "min": 1,
+          "max": 11
+        }
+      }
+    ],
+    "entity_length_summary": {
+      "count": 62671,
+      "mean": 3.097317738667007,
+      "median": 3,
+      "p90": 5.0,
+      "p95": 7.0,
+      "min": 1,
+      "max": 33
+    },
+    "entity_length_bins": [
+      {
+        "entity_type": "ALL",
+        "length_bin": "1",
+        "count": 4826,
+        "share_within_type": 0.07700531346236697
+      },
+      {
+        "entity_type": "ALL",
+        "length_bin": "2",
+        "count": 26253,
+        "share_within_type": 0.41890188444416077
+      },
+      {
+        "entity_type": "ALL",
+        "length_bin": "3–4",
+        "count": 21307,
+        "share_within_type": 0.3399818097684735
+      },
+      {
+        "entity_type": "ALL",
+        "length_bin": "5–8",
+        "count": 9309,
+        "share_within_type": 0.1485376011233266
+      },
+      {
+        "entity_type": "ALL",
+        "length_bin": "9+",
+        "count": 976,
+        "share_within_type": 0.015573391201672225
+      },
+      {
+        "entity_type": "Symptom",
+        "length_bin": "1",
+        "count": 4731,
+        "share_within_type": 0.11208244491826581
+      },
+      {
+        "entity_type": "Symptom",
+        "length_bin": "2",
+        "count": 22082,
+        "share_within_type": 0.5231461738924426
+      },
+      {
+        "entity_type": "Symptom",
+        "length_bin": "3–4",
+        "count": 9047,
+        "share_within_type": 0.21433309642264867
+      },
+      {
+        "entity_type": "Symptom",
+        "length_bin": "5–8",
+        "count": 5727,
+        "share_within_type": 0.13567874911158492
+      },
+      {
+        "entity_type": "Symptom",
+        "length_bin": "9+",
+        "count": 623,
+        "share_within_type": 0.014759535655058043
+      },
+      {
+        "entity_type": "Drug",
+        "length_bin": "1",
+        "count": 19,
+        "share_within_type": 0.0025613372876786195
+      },
+      {
+        "entity_type": "Drug",
+        "length_bin": "2",
+        "count": 881,
+        "share_within_type": 0.11876516581288757
+      },
+      {
+        "entity_type": "Drug",
+        "length_bin": "3–4",
+        "count": 4265,
+        "share_within_type": 0.5749528174710165
+      },
+      {
+        "entity_type": "Drug",
+        "length_bin": "5–8",
+        "count": 1969,
+        "share_within_type": 0.26543542733890535
+      },
+      {
+        "entity_type": "Drug",
+        "length_bin": "9+",
+        "count": 284,
+        "share_within_type": 0.038285252089512
+      },
+      {
+        "entity_type": "Drug_Category",
+        "length_bin": "1",
+        "count": 62,
+        "share_within_type": 0.013256360915116528
+      },
+      {
+        "entity_type": "Drug_Category",
+        "length_bin": "2",
+        "count": 132,
+        "share_within_type": 0.028223220012828735
+      },
+      {
+        "entity_type": "Drug_Category",
+        "length_bin": "3–4",
+        "count": 3654,
+        "share_within_type": 0.7812700449005773
+      },
+      {
+        "entity_type": "Drug_Category",
+        "length_bin": "5–8",
+        "count": 788,
+        "share_within_type": 0.16848407098567458
+      },
+      {
+        "entity_type": "Drug_Category",
+        "length_bin": "9+",
+        "count": 41,
+        "share_within_type": 0.008766303185802866
+      },
+      {
+        "entity_type": "Medical_Examination",
+        "length_bin": "1",
+        "count": 7,
+        "share_within_type": 0.0012140131807145335
+      },
+      {
+        "entity_type": "Medical_Examination",
+        "length_bin": "2",
+        "count": 1408,
+        "share_within_type": 0.24419007977800902
+      },
+      {
+        "entity_type": "Medical_Examination",
+        "length_bin": "3–4",
+        "count": 3643,
+        "share_within_type": 0.6318071453347208
+      },
+      {
+        "entity_type": "Medical_Examination",
+        "length_bin": "5–8",
+        "count": 688,
+        "share_within_type": 0.11932015261879986
+      },
+      {
+        "entity_type": "Medical_Examination",
+        "length_bin": "9+",
+        "count": 20,
+        "share_within_type": 0.00346860908775581
+      },
+      {
+        "entity_type": "Operation",
+        "length_bin": "1",
+        "count": 7,
+        "share_within_type": 0.002692307692307692
+      },
+      {
+        "entity_type": "Operation",
+        "length_bin": "2",
+        "count": 1750,
+        "share_within_type": 0.6730769230769231
+      },
+      {
+        "entity_type": "Operation",
+        "length_bin": "3–4",
+        "count": 698,
+        "share_within_type": 0.2684615384615385
+      },
+      {
+        "entity_type": "Operation",
+        "length_bin": "5–8",
+        "count": 137,
+        "share_within_type": 0.05269230769230769
+      },
+      {
+        "entity_type": "Operation",
+        "length_bin": "9+",
+        "count": 8,
+        "share_within_type": 0.003076923076923077
+      }
+    ],
+    "sentence_length_summary": {
+      "count": 88842,
+      "mean": 12.981607798113505,
+      "median": 9.0,
+      "p90": 28.0,
+      "p95": 38.0,
+      "min": 1,
+      "max": 199
+    },
+    "sentence_length_bins": [
+      {
+        "length_bin": "0–10",
+        "low_inclusive": 0,
+        "high_inclusive": 10,
+        "sentences": 49943,
+        "entities": 14116,
+        "chars": 268196,
+        "entity_chars": 38146,
+        "multi_entity": 1406,
+        "multi_type": 202,
+        "long_entity": 47,
+        "sentence_share": 0.5621552869138471,
+        "entities_per_100_chars": 5.263314889110949,
+        "entity_character_coverage": 0.14223180062342466,
+        "multi_entity_share": 0.028152093386460565,
+        "multi_type_share": 0.004044610856376269
+      },
+      {
+        "length_bin": "11–20",
+        "low_inclusive": 11,
+        "high_inclusive": 20,
+        "sentences": 23703,
+        "entities": 20052,
+        "chars": 343856,
+        "entity_chars": 62604,
+        "multi_entity": 5159,
+        "multi_type": 1611,
+        "long_entity": 339,
+        "sentence_share": 0.2667994867292497,
+        "entities_per_100_chars": 5.831510865013261,
+        "entity_character_coverage": 0.1820645851751896,
+        "multi_entity_share": 0.21765177403704172,
+        "multi_type_share": 0.06796608024300721
+      },
+      {
+        "length_bin": "21–40",
+        "low_inclusive": 21,
+        "high_inclusive": 40,
+        "sentences": 11453,
+        "entities": 16818,
+        "chars": 319833,
+        "entity_chars": 54454,
+        "multi_entity": 5170,
+        "multi_type": 2243,
+        "long_entity": 320,
+        "sentence_share": 0.1289142522680714,
+        "entities_per_100_chars": 5.258369211432217,
+        "entity_character_coverage": 0.17025760318666305,
+        "multi_entity_share": 0.45141011088797695,
+        "multi_type_share": 0.19584388369859426
+      },
+      {
+        "length_bin": "41–80",
+        "low_inclusive": 41,
+        "high_inclusive": 80,
+        "sentences": 3367,
+        "entities": 9785,
+        "chars": 180460,
+        "entity_chars": 32407,
+        "multi_entity": 2476,
+        "multi_type": 1419,
+        "long_entity": 190,
+        "sentence_share": 0.03789874158618672,
+        "entities_per_100_chars": 5.422254239166574,
+        "entity_character_coverage": 0.17957996231851933,
+        "multi_entity_share": 0.7353727353727354,
+        "multi_type_share": 0.42144342144342145
+      },
+      {
+        "length_bin": "81–160",
+        "low_inclusive": 81,
+        "high_inclusive": 160,
+        "sentences": 343,
+        "entities": 1636,
+        "chars": 34866,
+        "entity_chars": 5520,
+        "multi_entity": 290,
+        "multi_type": 220,
+        "long_entity": 30,
+        "sentence_share": 0.0038607865649129916,
+        "entities_per_100_chars": 4.692250329834223,
+        "entity_character_coverage": 0.1583204267768026,
+        "multi_entity_share": 0.8454810495626822,
+        "multi_type_share": 0.641399416909621
+      },
+      {
+        "length_bin": "161+",
+        "low_inclusive": 161,
+        "high_inclusive": null,
+        "sentences": 33,
+        "entities": 264,
+        "chars": 6101,
+        "entity_chars": 981,
+        "multi_entity": 32,
+        "multi_type": 28,
+        "long_entity": 13,
+        "sentence_share": 0.00037144593773215373,
+        "entities_per_100_chars": 4.327159482052123,
+        "entity_character_coverage": 0.16079331257170956,
+        "multi_entity_share": 0.9696969696969697,
+        "multi_type_share": 0.8484848484848485
+      }
+    ],
+    "entities_per_sentence": [
+      {
+        "entities": 0,
+        "sentences": 51056
+      },
+      {
+        "entities": 1,
+        "sentences": 23253
+      },
+      {
+        "entities": 2,
+        "sentences": 8887
+      },
+      {
+        "entities": 3,
+        "sentences": 3161
+      },
+      {
+        "entities": 4,
+        "sentences": 1353
+      },
+      {
+        "entities": 5,
+        "sentences": 598
+      },
+      {
+        "entities": 6,
+        "sentences": 263
+      },
+      {
+        "entities": 7,
+        "sentences": 140
+      },
+      {
+        "entities": 8,
+        "sentences": 62
+      },
+      {
+        "entities": 9,
+        "sentences": 35
+      },
+      {
+        "entities": 10,
+        "sentences": 18
+      },
+      {
+        "entities": 11,
+        "sentences": 5
+      },
+      {
+        "entities": 12,
+        "sentences": 4
+      },
+      {
+        "entities": 13,
+        "sentences": 2
+      },
+      {
+        "entities": 14,
+        "sentences": 2
+      },
+      {
+        "entities": 15,
+        "sentences": 1
+      },
+      {
+        "entities": 16,
+        "sentences": 1
+      },
+      {
+        "entities": 22,
+        "sentences": 1
+      }
+    ],
+    "adjacent_type_pairs": [
+      {
+        "left_type": "Drug",
+        "right_type": "Drug",
+        "pairs": 60
+      },
+      {
+        "left_type": "Drug",
+        "right_type": "Drug_Category",
+        "pairs": 22
+      },
+      {
+        "left_type": "Drug",
+        "right_type": "Operation",
+        "pairs": 27
+      },
+      {
+        "left_type": "Drug",
+        "right_type": "Symptom",
+        "pairs": 29
+      },
+      {
+        "left_type": "Drug_Category",
+        "right_type": "Drug",
+        "pairs": 13
+      },
+      {
+        "left_type": "Drug_Category",
+        "right_type": "Drug_Category",
+        "pairs": 12
+      },
+      {
+        "left_type": "Drug_Category",
+        "right_type": "Operation",
+        "pairs": 3
+      },
+      {
+        "left_type": "Drug_Category",
+        "right_type": "Symptom",
+        "pairs": 12
+      },
+      {
+        "left_type": "Medical_Examination",
+        "right_type": "Medical_Examination",
+        "pairs": 151
+      },
+      {
+        "left_type": "Medical_Examination",
+        "right_type": "Operation",
+        "pairs": 1
+      },
+      {
+        "left_type": "Medical_Examination",
+        "right_type": "Symptom",
+        "pairs": 13
+      },
+      {
+        "left_type": "Operation",
+        "right_type": "Drug",
+        "pairs": 15
+      },
+      {
+        "left_type": "Operation",
+        "right_type": "Drug_Category",
+        "pairs": 13
+      },
+      {
+        "left_type": "Operation",
+        "right_type": "Medical_Examination",
+        "pairs": 4
+      },
+      {
+        "left_type": "Operation",
+        "right_type": "Operation",
+        "pairs": 14
+      },
+      {
+        "left_type": "Operation",
+        "right_type": "Symptom",
+        "pairs": 18
+      },
+      {
+        "left_type": "Symptom",
+        "right_type": "Drug",
+        "pairs": 3
+      },
+      {
+        "left_type": "Symptom",
+        "right_type": "Drug_Category",
+        "pairs": 9
+      },
+      {
+        "left_type": "Symptom",
+        "right_type": "Medical_Examination",
+        "pairs": 13
+      },
+      {
+        "left_type": "Symptom",
+        "right_type": "Operation",
+        "pairs": 23
+      },
+      {
+        "left_type": "Symptom",
+        "right_type": "Symptom",
+        "pairs": 1282
+      }
+    ],
+    "checks": {
+      "entities_equal_B_tags": true,
+      "entity_type_sum": true,
+      "entity_length_sum": true,
+      "sentence_bin_sum": true,
+      "entity_count_sentence_sum": true,
+      "entity_count_weighted_sum": true,
+      "entity_chars_equal_non_O": true,
+      "adjacency_pair_sum": true
+    }
+  },
+  "annotation_validation": {
+    "schema_version": "1.0",
+    "purpose": "input_validation_only",
+    "mode": "data_audit",
+    "created_at": "2026-10-22T17:57:41+08:00",
+    "python_version": "3.14.0",
+    "split": "train",
+    "status": "PASS",
+    "character_unit": "Python len(str): Unicode code points, no normalization",
+    "inputs": {
+      "data": {
+        "requested_path": "<PROJECT_ROOT>/IMCS-V2-NER.zip",
+        "path": "<PROJECT_ROOT>/IMCS-V2-NER.zip",
+        "member": "IMCS-V2-NER/IMCS-V2_train.json",
+        "archive_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67",
+        "sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24"
+      }
+    },
+    "data": {
+      "format": "raw",
+      "dialogues": 2225,
+      "sentences": 88842,
+      "unique_sentence_ids": 88842,
+      "sentences_with_text": 88842,
+      "characters": 1153312,
+      "sentences_with_gold": 88842,
+      "dialogue_fields": [
+        "diagnosis",
+        "dialogue",
+        "explicit_info",
+        "implicit_info",
+        "report",
+        "self_report"
+      ],
+      "sentence_fields": [
+        "BIO_label",
+        "dialogue_act",
+        "local_implicit_info",
+        "sentence",
+        "sentence_id",
+        "speaker",
+        "symptom_norm",
+        "symptom_type"
+      ]
+    },
+    "predictions": null,
+    "required_checks": [
+      "data_json",
+      "data_structure",
+      "gold_presence",
+      "gold_format",
+      "gold_labels",
+      "gold_bio",
+      "gold_alignment"
+    ],
+    "checks": {
+      "data_json": {
+        "checked": 1,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "data_structure": {
+        "checked": 1,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "gold_presence": {
+        "checked": 88842,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "gold_format": {
+        "checked": 88842,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "gold_labels": {
+        "checked": 88842,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "gold_bio": {
+        "checked": 88842,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "gold_alignment": {
+        "checked": 88842,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "prediction_json": {
+        "checked": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [
+          "not_applicable_or_dependency_unavailable"
+        ],
+        "status": "NOT_RUN"
+      },
+      "prediction_structure": {
+        "checked": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [
+          "not_applicable_or_dependency_unavailable"
+        ],
+        "status": "NOT_RUN"
+      },
+      "id_coverage": {
+        "checked": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [
+          "not_applicable_or_dependency_unavailable"
+        ],
+        "status": "NOT_RUN"
+      },
+      "record_counts": {
+        "checked": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [
+          "not_applicable_or_dependency_unavailable"
+        ],
+        "status": "NOT_RUN"
+      },
+      "prediction_format": {
+        "checked": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [
+          "not_applicable_or_dependency_unavailable"
+        ],
+        "status": "NOT_RUN"
+      },
+      "prediction_labels": {
+        "checked": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [
+          "not_applicable_or_dependency_unavailable"
+        ],
+        "status": "NOT_RUN"
+      },
+      "prediction_bio": {
+        "checked": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [
+          "not_applicable_or_dependency_unavailable"
+        ],
+        "status": "NOT_RUN"
+      },
+      "prediction_alignment": {
+        "checked": 0,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [
+          "not_applicable_or_dependency_unavailable"
+        ],
+        "status": "NOT_RUN"
+      }
+    },
+    "errors": {
+      "total": 0,
+      "by_code": {},
+      "examples": [],
+      "examples_omitted": 0
+    }
+  },
+  "boundaries": {
+    "dev_test_members_opened": false,
+    "val_BIO_analyzed": false,
+    "medical_text_exported": false,
+    "tokenizer_audit_repeated": false
+  },
+  "plot_environment": {
+    "matplotlib": "3.10.8",
+    "font": "C:\\Windows\\Fonts\\msyh.ttc"
+  },
+  "elapsed_seconds": 11.584075499966275,
+  "publication_note": {
+    "kind": "public_projection_of_existing_record",
+    "original_sha256": "d0425c62d5b3b7863000192d6b7aa4dec79895525e20456deabb3b7676048b7b",
+    "prepared_at": "2026-10-25T18:38:13+08:00",
+    "changes": "Local absolute paths and private split-container location replaced by placeholders; numerical results, dates, counts and historical source/artifact hashes retained."
+  }
+}

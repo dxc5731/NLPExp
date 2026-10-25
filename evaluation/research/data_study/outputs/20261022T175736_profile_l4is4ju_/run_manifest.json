@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "created_at": "2026-10-22T17:57:48.648882+08:00",
+  "command": [
+    "python",
+    "research/data_study/profile_data.py",
+    "--data",
+    "IMCS-V2-NER.zip",
+    "--split-manifest",
+    "<LOCAL_SPLIT_CONTAINER>/BERT数据接口_v1.zip"
+  ],
+  "python": "3.14.0",
+  "scripts": {
+    "<PROJECT_ROOT>/research/data_study/profile_data.py": "4fead6fc67dc18dce976ef7dbd79f515535db49775c92a1e8eb8270b53aa0715",
+    "src/validate_predictions.py": "75dc966361d216bdb9500acb63bce6be4313b708136290cd26b1195dfb7c1dcb",
+    "src/ner_metrics.py": "5e02e13834e07560a3586038c832a603e675115bf0b3a2d0b8d3ebedf2356074"
+  },
+  "inputs": {
+    "data": {
+      "requested_path": "<PROJECT_ROOT>/IMCS-V2-NER.zip",
+      "path": "<PROJECT_ROOT>/IMCS-V2-NER.zip",
+      "member": "IMCS-V2-NER/IMCS-V2_train.json",
+      "archive_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67",
+      "sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24"
+    },
+    "split": {
+      "path": "<LOCAL_SPLIT_CONTAINER>/BERT数据接口_v1.zip",
+      "member": "code/artifacts/split_v1.json",
+      "container_sha256": "96d259bc1b411a972b46869573f095b0af1de68e2750bdb9ba72450526723df6",
+      "manifest_sha256": "497f21cf13d8f5accb83f86ffda16a4a59ba716c064ec347e990a219e8957072",
+      "version": "v1",
+      "seed": 42
+    }
+  },
+  "artifacts": {
+    "adjacent_type_pairs.csv": "b7561891b5c32902141e8cd9b63f67c3e761376be2da28ea132fcbb1ad6fe77e",
+    "entities_per_sentence.csv": "041dd91e52388debeb1ff2e2598d6d098603cb9fe4d3a87813d07421f707e7f2",
+    "entity_lengths.csv": "3047238962892a365f255125d7c67365713f89b31f4fa02e0030b102f1d885a9",
+    "entity_types.csv": "d7c13bfb4ec4d134d91c715e4de54748139dbb6c411c521c3bf050e31ebdb26f",
+    "sentence_complexity.csv": "a04780bfdcb03b596c5433225aa5bb7766578acc5fed4947abd3870491906f74",
+    "statistics.json": "d0425c62d5b3b7863000192d6b7aa4dec79895525e20456deabb3b7676048b7b",
+    "figures\\01_entity_distribution.png": "860f36af9b3ce6a7f7a5477681c7578e6dd4b9d47322ab54a8f12c54d29e4578",
+    "figures\\01_entity_distribution.svg": "91df9648e0c733ca6d3a6df62e26fba9c9ec8c1719dbd3f058524d2a532be3fd",
+    "figures\\02_entity_lengths.png": "4720fb186c6f99cb308d5f6b355a11c4c87b1ea3af1341cfaa573433673eb6f7",
+    "figures\\02_entity_lengths.svg": "ce5af157a15e06778a037292bbaeeba6fc7b60feafa26ba41d7107a12f69dea8",
+    "figures\\03_sentence_lengths.png": "1e0ccc79a7bf9c2764d886782297a22af4d0dc8d9c9c3fa05559f4790dce5cce",
+    "figures\\03_sentence_lengths.svg": "be5763cb79e2718b41c7b18b1be6d851c6dc492f9f607a46c806c59e8d5f4562",
+    "figures\\04_sentence_complexity.png": "3001318c41792a0fde0e80e1bab712cb318a002df0fa9a74b8d8fdd424fa1bd0",
+    "figures\\04_sentence_complexity.svg": "9b4943f6d649ea65c2c7a89384f178f70b6ec2ddb411a745aaa9f38511b6794a"
+  },
+  "saved_JSON_CSV_self_check": "PASS",
+  "publication_note": {
+    "kind": "public_projection_of_existing_record",
+    "original_sha256": "fb59915680fe3a50da3ca768e1971c9572256477bec638f93815a6c62cd2cde2",
+    "prepared_at": "2026-10-25T18:38:13+08:00",
+    "changes": "Local absolute paths and private split-container location replaced by placeholders; numerical results, dates, counts and historical source/artifact hashes retained."
+  }
+}

@@ -48,3 +48,7 @@ python -X utf8 src/evaluate_predictions.py --data examples/scorer_validation/dat
 公开样例与评估程序可独立运行。真实 dev 重评分还需合法取得平台版数据及经授权的原预测；模型从输入到预测的全流程另需训练方代码、权重、Tokenizer 和环境。Softmax 正式权重与原 Tokenizer 尚缺；本包不能单独重训或重现全部模型成绩。test 无公开金标，代码拒绝本地评分。
 
 [评价协议](docs/evaluation_protocol.md) · [复现步骤与测试范围](docs/reproducibility.md) · [实际工作记录](docs/evaluation_work_summary.md)
+
+## 训练数据特征与评分可信度
+
+[research/data_study](research/data_study/README.md)正式保存2026年10月22日研究：2225组内部训练对话、88842句、62671个实体的统计与4图5表；八个合法人工场景的TP/FP/FN和P/R/F1三方核验，以及独立19项研究测试。原138项与公开135项的范围、来源哈希和复核命令在研究README中分别说明。

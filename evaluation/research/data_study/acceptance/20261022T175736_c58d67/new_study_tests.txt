@@ -1,0 +1,24 @@
+test_adjacency_multitype_and_entity_count_histogram (test_profile_data.ProfileDataTests.test_adjacency_multitype_and_entity_count_histogram) ... ok
+test_csv_roundtrip_totals_and_no_overwrite (test_profile_data.ProfileDataTests.test_csv_roundtrip_totals_and_no_overwrite) ... ok
+test_duplicate_split_ids_and_json_keys_are_rejected (test_profile_data.ProfileDataTests.test_duplicate_split_ids_and_json_keys_are_rejected) ... ok
+test_empty_data_and_no_entity_distribution_are_explicit (test_profile_data.ProfileDataTests.test_empty_data_and_no_entity_distribution_are_explicit) ... ok
+test_fixed_bins_cover_inclusive_edges (test_profile_data.ProfileDataTests.test_fixed_bins_cover_inclusive_edges) ... ok
+test_invalid_bio_and_mismatched_length_are_rejected (test_profile_data.ProfileDataTests.test_invalid_bio_and_mismatched_length_are_rejected) ... ok
+test_occurrences_differ_from_sentence_support (test_profile_data.ProfileDataTests.test_occurrences_differ_from_sentence_support) ... ok
+test_quantile_has_defined_interpolation_and_empty_policy (test_profile_data.ProfileDataTests.test_quantile_has_defined_interpolation_and_empty_policy) ... ok
+test_split_integrity_does_not_require_val_bio (test_profile_data.ProfileDataTests.test_split_integrity_does_not_require_val_bio) ... ok
+test_split_overlap_and_missing_dialogues_are_rejected (test_profile_data.ProfileDataTests.test_split_overlap_and_missing_dialogues_are_rejected) ... ok
+test_split_source_and_declared_counts_must_match (test_profile_data.ProfileDataTests.test_split_source_and_declared_counts_must_match) ... ok
+test_unicode_punctuation_spaces_and_empty_sentence (test_profile_data.ProfileDataTests.test_unicode_punctuation_spaces_and_empty_sentence) ... ok
+test_eight_cases_match_manual_counts_and_author (test_verify_scoring.VerificationTests.test_eight_cases_match_manual_counts_and_author) ... ok
+test_identity_isolation_cannot_increase_true_positives (test_verify_scoring.VerificationTests.test_identity_isolation_cannot_increase_true_positives) ... ok
+test_incorrect_manual_expectation_is_not_silently_accepted (test_verify_scoring.VerificationTests.test_incorrect_manual_expectation_is_not_silently_accepted) ... ok
+test_invalid_bio_is_rejected_and_author_behavior_disclosed (test_verify_scoring.VerificationTests.test_invalid_bio_is_rejected_and_author_behavior_disclosed) ... ok
+test_merge_and_split_have_distinct_counts (test_verify_scoring.VerificationTests.test_merge_and_split_have_distinct_counts) ... ok
+test_report_is_traceable_and_repeat_writes_never_overwrite (test_verify_scoring.VerificationTests.test_report_is_traceable_and_repeat_writes_never_overwrite) ... ok
+test_zero_entity_difference_is_explicit_not_numeric_failure (test_verify_scoring.VerificationTests.test_zero_entity_difference_is_explicit_not_numeric_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.428s
+
+OK
