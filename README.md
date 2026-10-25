@@ -1,4 +1,4 @@
-﻿# NLPExp — IMCS-V2-NER 医疗命名实体识别
+# NLPExp — IMCS-V2-NER 医疗命名实体识别
 
 《自然语言处理》课程项目，方向 **B：信息抽取 / 序列标注**。
 
@@ -16,15 +16,26 @@
 | `baseline/` | 规则 / 词典基线 | 训练集实体词典、最长匹配、阈值与组合策略、错误分析 |
 | `code/` | 公共数据 + BERT-Softmax | 数据切分与子词对齐、Dataset/DataLoader、BERT 微调、dev/test 预测导出 |
 | `src/` `configs/` `tests/` `docs/` | BERT-CRF | 字符级 CRF、BIO 硬约束、训练器与阶段验收记录 |
+| `handoff_packages/` | BERT-CRF 结果包 | dev/test 预测、run_info、评分与复现证据（**zip 形式，见目录内 README**） |
 | `evaluation/` | 统一评估 | 预测格式校验、实体级/字符级评分、错误导出、复现证据核查、多模型比较 |
 | `doc/` | 文档 | 课程文档、组内分工、接口说明、实验记录、附录材料 |
 | `deploy/` | 服务器脚本 | 训练包打包与运行脚本 |
+
+## 三种方法的预测产物在哪
+
+| 方法 | 预测文件 | dev 实体 F1 |
+|---|---|---:|
+| 规则 / 词典基线 | [`baseline/out_dev/pred_rule_min10_dev.json`](baseline/out_dev/pred_rule_min10_dev.json) | 0.7659 |
+| BERT-Softmax | [`runs/lr5e-5_ep3_20261022-151229/predict_dev/predictions_dev.json`](runs/lr5e-5_ep3_20261022-151229/predict_dev/predictions_dev.json) | 0.8801 |
+| BERT-CRF | [`handoff_packages/`](handoff_packages/README.md) 内 v1.1 压缩包的 `dev/predictions_dev.json` | 0.8935 |
+
+三份预测都在 dev 上、用 `evaluation/` 的同一个评分器计算，口径一致。
 
 各模块的详细说明：
 
 - 规则基线：[`baseline/`](baseline/)、[`RESULTS.md`](RESULTS.md)
 - BERT-Softmax：`doc/组内有用的文档/BERT数据接口说明_v2.md`
-- BERT-CRF：[`src/bert_crf/`](src/bert_crf/)、[`docs/bert_crf/README.md`](docs/bert_crf/README.md)
+- BERT-CRF：代码 [`src/bert_crf/`](src/bert_crf/)、阶段记录 [`docs/bert_crf/README.md`](docs/bert_crf/README.md)、**结果包 [`handoff_packages/README.md`](handoff_packages/README.md)**
 - 评估：[`evaluation/README.md`](evaluation/README.md)
 
 ## 快速开始（规则基线，无需 GPU）
