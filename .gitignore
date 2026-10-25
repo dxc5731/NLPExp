@@ -24,3 +24,6 @@ checkpoints/
 .ipynb_checkpoints/
 .DS_Store
 Thumbs.db
+
+# Local interaction records stay outside public version control.
+AI交互记录.md
