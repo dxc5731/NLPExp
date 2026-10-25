@@ -60,7 +60,7 @@ python -X utf8 src/evaluate_predictions.py --data <数据> --predictions <预测
 
 ## 5. 2026-10-25 实际复现记录
 
-从仓库导出干净检出（`git archive HEAD`，文件内容与 `git clone` 一致，不含 `.git`、数据、模型、虚拟环境），共 **484 个文件**。
+从仓库导出干净检出（`git archive HEAD`，文件内容与 `git clone` 一致，不含 `.git`、数据、模型、虚拟环境），当时的检出共 **484 个文件**（此后仓库又补了两个脚本和本附录）。
 
 | 步骤 | 命令 | 实际结果 | 耗时 |
 |---|---|---|---|
