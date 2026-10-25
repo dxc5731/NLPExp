@@ -60,3 +60,6 @@ Thumbs.db
 # ---- 说明：baseline/out/ 与 baseline/out_dev/ 里的结果文件
 #      （eval_*.json、*_log.txt、error_analysis*.json、dev 预测与标准）
 #      是 RESULTS.md 引用的证据，保留入库。----
+
+# 一键复现的临时产物，可随时重新生成
+runs/reproduce/
