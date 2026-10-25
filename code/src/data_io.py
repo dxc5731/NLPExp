@@ -4,7 +4,7 @@
 import hashlib
 import json
 
-from .config import DATA_DIR
+from .config import DATA_DIR, require_data_dir
 
 SPLITS = {
     "train": "IMCS-V2_train.json",
@@ -19,7 +19,14 @@ def split_path(split: str):
 
 def load_split(split: str) -> dict:
     """读一个官方划分，返回 {对话ID: 对话字典}。"""
-    with open(split_path(split), "r", encoding="utf-8") as f:
+    require_data_dir()
+    path = split_path(split)
+    if not path.exists():
+        raise FileNotFoundError(
+            f"找不到 {split} 划分文件：{path}\n"
+            f"请确认数据集完整（train/dev/test 三个 JSON 都在）。"
+        )
+    with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 

@@ -8,11 +8,12 @@
 
 from transformers import AutoModelForTokenClassification
 
-from .config import MODEL_DIR
+from .config import MODEL_DIR, require_model_dir
 from .labels import ID2LABEL, LABEL2ID, LABELS
 
 
 def build_model(dropout: float = 0.1, local_files_only: bool = True):
+    require_model_dir()
     model = AutoModelForTokenClassification.from_pretrained(
         str(MODEL_DIR),
         num_labels=len(LABELS),

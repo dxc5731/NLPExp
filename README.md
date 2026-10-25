@@ -26,17 +26,32 @@
 
 ## 快速开始（BERT-Softmax 模块）
 
+**第 0 步：准备数据和模型（两者都不在仓库里）**
+
+```powershell
+# 数据集：从 https://tianchi.aliyun.com/dataset/95414 下载后解压到
+#   doc/数据/IMCS-V2-NER/IMCS-V2-NER/    （或设 IMCS_DATA_DIR 指向它）
+
+# 预训练模型：下载 bert-base-chinese 到 code/models/bert-base-chinese/
+#   （或设 BERT_MODEL_DIR 指向已下载的模型目录）
+$env:BERT_MODEL_DIR = 'D:\models\bert-base-chinese'
+$env:IMCS_DATA_DIR  = 'D:\datasets\IMCS-V2-NER\IMCS-V2-NER'
+```
+
+没设对的话，程序会直接告诉你缺哪个目录、该设哪个变量，不会抛底层库的奇怪报错。
+
+**第 1 步：装依赖并跑单元测试**
+
 ```bash
 cd code
 pip install -r requirements.txt          # torch 需按 CUDA 版本另装
-python -m unittest discover -s tests -v  # 13 个单元测试
+python -m unittest discover -s tests -v  # 13 个单元测试，约 12 秒
 ```
 
-数据放到 `doc/数据/IMCS-V2-NER/IMCS-V2-NER/`，或设环境变量 `IMCS_DATA_DIR` 指向它。
-模型权重放在 `code/models/bert-base-chinese/`，或设 `BERT_MODEL_DIR`。
+**第 2 步：训练与预测**
 
 ```bash
-python -m src.train --lr 5e-5 --epochs 3           # 训练
+python -m src.train --lr 5e-5 --epochs 3             # 训练
 python -m src.predict --run-id <run_id> --split dev  # 推理导出
 ```
 

@@ -23,3 +23,25 @@ RUNS = ROOT / "runs"
 
 # 最长句 199 字符，加上 [CLS]/[SEP] 也远小于 256，不需要滑窗。
 MAX_LEN = 256
+
+
+def require_model_dir() -> Path:
+    """模型目录不存在时给一句人能看懂的话，而不是让 transformers 抛奇怪的报错。"""
+    if not MODEL_DIR.exists():
+        raise FileNotFoundError(
+            f"找不到模型目录：{MODEL_DIR}\n"
+            f"请下载 bert-base-chinese 放到该目录，或设置环境变量 BERT_MODEL_DIR 指向已下载的模型目录。\n"
+            f"例如（PowerShell）：$env:BERT_MODEL_DIR='D:\\models\\bert-base-chinese'"
+        )
+    return MODEL_DIR
+
+
+def require_data_dir() -> Path:
+    """数据目录不存在时同样给明确提示。"""
+    if not DATA_DIR.exists():
+        raise FileNotFoundError(
+            f"找不到数据目录：{DATA_DIR}\n"
+            f"请把 IMCS-V2-NER 数据集放到该目录，或设置环境变量 IMCS_DATA_DIR 指向含 JSON 的目录。\n"
+            f"例如（PowerShell）：$env:IMCS_DATA_DIR='D:\\datasets\\IMCS-V2-NER\\IMCS-V2-NER'"
+        )
+    return DATA_DIR

@@ -45,8 +45,9 @@ class Encoded:
 def load_tokenizer():
     from transformers import AutoTokenizer
 
-    from .config import MODEL_DIR
+    from .config import MODEL_DIR, require_model_dir
 
+    require_model_dir()
     return AutoTokenizer.from_pretrained(str(MODEL_DIR), use_fast=True)
 
 
