@@ -9,20 +9,32 @@
 
 ## 仓库结构
 
-本项目由三条各自独立开发的分支合并而成，按模块分目录：
+本项目由多条各自独立开发的分支合并而成，按模块分目录：
 
 | 目录 | 模块 | 内容 |
 |---|---|---|
+| `baseline/` | 规则 / 词典基线 | 训练集实体词典、最长匹配、阈值与组合策略、错误分析 |
 | `code/` | 公共数据 + BERT-Softmax | 数据切分与子词对齐、Dataset/DataLoader、BERT 微调、dev/test 预测导出 |
-| `src/bert_crf/` `configs/bert_crf/` `tests/bert_crf/` `docs/bert_crf/` | BERT-CRF | 字符级 CRF、BIO 硬约束、训练器与阶段验收记录 |
+| `src/` `configs/` `tests/` `docs/` | BERT-CRF | 字符级 CRF、BIO 硬约束、训练器与阶段验收记录 |
 | `evaluation/` | 统一评估 | 预测格式校验、实体级/字符级评分、错误导出、复现证据核查、多模型比较 |
-| `doc/` | 文档 | 课程文档、组内分工、接口说明、实验记录 |
+| `doc/` | 文档 | 课程文档、组内分工、接口说明、实验记录、附录材料 |
+| `deploy/` | 服务器脚本 | 训练包打包与运行脚本 |
 
-各模块的详细说明看各自的 README：
+各模块的详细说明：
 
+- 规则基线：[`baseline/`](baseline/)、[`RESULTS.md`](RESULTS.md)
 - BERT-Softmax：`doc/组内有用的文档/BERT数据接口说明_v2.md`
 - BERT-CRF：[`src/bert_crf/`](src/bert_crf/)、[`docs/bert_crf/README.md`](docs/bert_crf/README.md)
 - 评估：[`evaluation/README.md`](evaluation/README.md)
+
+## 快速开始（规则基线，无需 GPU）
+
+```bash
+# 数据放项目根 IMCS-V2-NER/，程序会自动找到
+python baseline/run_rule.py 10 min10
+```
+
+结果与参数对比见 [`RESULTS.md`](RESULTS.md)。
 
 ## 快速开始（BERT-Softmax 模块）
 
@@ -70,3 +82,8 @@ python -X utf8 src/check_run_info.py --evaluation <评分结果> --run-info <run
 - 官方 **dev 不参与训练、调参或模型选择**，只用于最终预测与报告。
 - 原始对话 ID 和句子 ID 原样保留，不重新编号；每个原始字符一个标签（含标点与空格）。
 - 各模块的 AI 使用范围与程序验证方式见各自文档；正式实验设计、结果分析与个人贡献声明由组员本人完成。
+
+## 复现
+
+复现步骤与 2026-10-25 的实测记录见 [`doc/附录A_复现指南.md`](doc/附录A_复现指南.md)，
+代码结构说明见 [`doc/附录B_代码结构说明.md`](doc/附录B_代码结构说明.md)。

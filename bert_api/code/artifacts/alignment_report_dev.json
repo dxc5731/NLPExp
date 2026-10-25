@@ -1,0 +1,22 @@
+{
+  "split": "dev",
+  "sentences": 33267,
+  "chars": 441339,
+  "max_tokens": 201,
+  "truncated": 0,
+  "uncovered_chars": 0,
+  "over_covered_chars": 0,
+  "offset_overlap": 0,
+  "unk_tokens": 210,
+  "multi_char_tokens": {
+    "2": 1153,
+    "3": 156,
+    "4": 19,
+    "5": 4,
+    "6": 2,
+    "8": 2,
+    "32": 1
+  },
+  "roundtrip_mismatch_sentences": 7,
+  "roundtrip_mismatch_ratio": 0.00021041873327922565
+}

@@ -1,0 +1,75 @@
+﻿词表载入：570 词（跨类冲突丢弃 7 个）
+val 对话数=247  句子数=9687
+
+==============================================================
+指标（统一口径，口径定义见 baseline/eval_pred.py 文件头）
+==============================================================
+
+【逐字级 char-level】
+  字符总数 126049   完全正确率 acc=0.9421
+  P=0.8647  R=0.7018  F1=0.7748   (tp=14115 fp=2209 fn=5997)
+  类型                         支持        P        R       F1
+  Symptom                 12580   0.8905   0.7273   0.8006
+  Drug                     2943   0.9626   0.6035   0.7419
+  Drug_Category            1747   0.9363   0.7819   0.8522
+  Medical_Examination      2002   0.5728   0.5954   0.5839
+  Operation                 840   0.9504   0.7524   0.8399
+
+【实体级 entity-level】
+  标准实体 6601   预测实体 6583   命中 5023
+  P=0.7630  R=0.7609  F1=0.7620   (tp=5023 fp=1560 fn=1578)
+  类型                         支持        P        R       F1
+  Symptom                  4447   0.7812   0.8021   0.7915
+  Drug                      725   0.8655   0.6124   0.7173
+  Drug_Category             490   0.8806   0.7980   0.8373
+  Medical_Examination       615   0.4656   0.5935   0.5218
+  Operation                 324   0.9275   0.7901   0.8533
+
+预测文件：D:\Research Project\demo\自然语言处理作业\baseline\out\pred_rule_min10.json
+标准文件：D:\Research Project\demo\自然语言处理作业\baseline\out\val_gold.json
+
+==============================================================
+肉眼抽查（前 10 句）
+==============================================================
+
+原文: 你好16天的宝宝一般吃完奶后肚子都比较大孩子吃奶挺好吧?母乳够吗?有没有腹泻?
+标准: O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O B-Symptom I-Symptom O
+预测: O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O B-Symptom I-Symptom O
+
+原文: 你好在吗?
+标准: O O O O O
+预测: O O O O O
+
+原文: 一天拉6到7次，有多有少，母乳够，拍肚子有鼓音
+标准: B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom O O O O O O O O O O B-Symptom I-Symptom I-Symptom I-Symptom I-Symptom I-Symptom
+预测: O O B-Symptom O O O O O O O O O O O O O O O O O O O O
+
+原文: 你好给宝宝查过大便常规吗?
+标准: O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination I-Medical_Examination O O
+预测: O O O O O O O B-Medical_Examination I-Medical_Examination I-Medical_Examination I-Medical_Examination O O
+
+原文: 最近怎么治疗的?
+标准: O O O O O O O O
+预测: O O O O O O O O
+
+原文: 很会打嗝，要紧吗，昨晚2点到现在睡眠很浅，
+标准: O O B-Symptom I-Symptom O O O O O O O O O O O O B-Symptom I-Symptom I-Symptom I-Symptom O
+预测: O O B-Symptom I-Symptom O O O O O O O O O O O O O O O O O
+
+原文: 没有治疗，在做月子，孩子没出去。
+标准: O O O O O O O O O O O O O O O O
+预测: O O O O O O O O O O O O O O O O
+
+原文: 这种情况跟消化不良有关系可以顺时针给宝宝揉揉肚子注意腹部保暖
+标准: O O O O O B-Symptom I-Symptom I-Symptom I-Symptom O O O O O O O O O O O O O O O O O O O O O
+预测: O O O O O B-Symptom I-Symptom I-Symptom I-Symptom O O O O O O O O O O O O O O O O O O O O O
+
+原文: 吃完奶后竖起来抱一会顺一下奶
+标准: O O O O O O O O O O O O O O
+预测: O O O O O O O O O O O O O O
+
+原文: 有，我也揉肚子，到现在宝宝一直哭闹不睡
+标准: O O O O O O O O O O O O O O O B-Symptom I-Symptom B-Symptom I-Symptom
+预测: O O O O O O O O O O O O O O O B-Symptom I-Symptom O O
+
+[提示] 错例分析请改用：python baseline/error_analysis.py
