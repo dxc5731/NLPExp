@@ -1,0 +1,14 @@
+{
+  "split": "test",
+  "sentences": 32935,
+  "chars": 431570,
+  "max_tokens": 197,
+  "max_len": 256,
+  "too_long_errors": 0,
+  "ambiguous_tokens": 0,
+  "ambiguous_chars": 0,
+  "ambiguous_sentences": 0,
+  "consistent_sentences": 0,
+  "non_ambiguous_mismatches": 0,
+  "ambiguous_detail": []
+}

@@ -1,0 +1,101 @@
+{
+  "split": "dev",
+  "sentences": 33267,
+  "chars": 441339,
+  "max_tokens": 201,
+  "max_len": 256,
+  "too_long_errors": 0,
+  "ambiguous_tokens": 7,
+  "ambiguous_chars": 16,
+  "ambiguous_sentences": 7,
+  "consistent_sentences": 33260,
+  "non_ambiguous_mismatches": 0,
+  "ambiguous_detail": [
+    {
+      "dialogue_id": "10195833",
+      "sentence_id": "3",
+      "sentence": "孩子正常体温是36.037.4波动",
+      "start": 10,
+      "end": 12,
+      "text": "03",
+      "tags": [
+        "O",
+        "B-Symptom"
+      ]
+    },
+    {
+      "dialogue_id": "10205178",
+      "sentence_id": "5",
+      "sentence": "3838.5",
+      "start": 0,
+      "end": 3,
+      "text": "383",
+      "tags": [
+        "B-Symptom",
+        "I-Symptom",
+        "B-Symptom"
+      ]
+    },
+    {
+      "dialogue_id": "10240855",
+      "sentence_id": "12",
+      "sentence": "都在37.537.9，有时候这个时间段温度也正常",
+      "start": 5,
+      "end": 7,
+      "text": "53",
+      "tags": [
+        "I-Symptom",
+        "B-Symptom"
+      ]
+    },
+    {
+      "dialogue_id": "10240855",
+      "sentence_id": "22",
+      "sentence": "肛门温度36.537.5",
+      "start": 7,
+      "end": 9,
+      "text": "53",
+      "tags": [
+        "O",
+        "B-Symptom"
+      ]
+    },
+    {
+      "dialogue_id": "10313994",
+      "sentence_id": "29",
+      "sentence": "一般吃药老是38.539.5反反复复，退不了正常温，这是正常吗？",
+      "start": 9,
+      "end": 12,
+      "text": "539",
+      "tags": [
+        "I-Symptom",
+        "B-Symptom",
+        "I-Symptom"
+      ]
+    },
+    {
+      "dialogue_id": "10531041",
+      "sentence_id": "33",
+      "sentence": "一般37.538.5,可以退烧贴",
+      "start": 5,
+      "end": 7,
+      "text": "53",
+      "tags": [
+        "I-Symptom",
+        "B-Symptom"
+      ]
+    },
+    {
+      "dialogue_id": "10716244",
+      "sentence_id": "5",
+      "sentence": "申医生您好！我宝宝4个月了，昨天上午打了2针疫苗百白破和脊髓灰质减毒活疫苗，昨天人还蛮好，今天下午1点左右开始发烧，但不高，目前最高时38.37度！我该怎么办？",
+      "start": 70,
+      "end": 72,
+      "text": "37",
+      "tags": [
+        "I-Symptom",
+        "O"
+      ]
+    }
+  ]
+}

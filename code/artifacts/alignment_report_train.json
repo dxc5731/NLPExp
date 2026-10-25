@@ -1,0 +1,116 @@
+{
+  "split": "train",
+  "sentences": 98529,
+  "chars": 1279361,
+  "max_tokens": 201,
+  "max_len": 256,
+  "too_long_errors": 0,
+  "ambiguous_tokens": 8,
+  "ambiguous_chars": 21,
+  "ambiguous_sentences": 8,
+  "consistent_sentences": 98521,
+  "non_ambiguous_mismatches": 0,
+  "ambiguous_detail": [
+    {
+      "dialogue_id": "10034734",
+      "sentence_id": "2",
+      "sentence": "宝宝37.838属于低热",
+      "start": 5,
+      "end": 8,
+      "text": "838",
+      "tags": [
+        "I-Symptom",
+        "B-Symptom",
+        "I-Symptom"
+      ]
+    },
+    {
+      "dialogue_id": "10098865",
+      "sentence_id": "21",
+      "sentence": "3637.4正常的",
+      "start": 0,
+      "end": 3,
+      "text": "363",
+      "tags": [
+        "O",
+        "O",
+        "B-Symptom"
+      ]
+    },
+    {
+      "dialogue_id": "10193361",
+      "sentence_id": "25",
+      "sentence": "37.338.5可以贴降温贴，多喝温水，物理降温",
+      "start": 3,
+      "end": 6,
+      "text": "338",
+      "tags": [
+        "I-Symptom",
+        "B-Symptom",
+        "I-Symptom"
+      ]
+    },
+    {
+      "dialogue_id": "10206772",
+      "sentence_id": "25",
+      "sentence": "37.338.5度可以贴降温贴，多喝温水，物理降温",
+      "start": 3,
+      "end": 6,
+      "text": "338",
+      "tags": [
+        "I-Symptom",
+        "B-Symptom",
+        "I-Symptom"
+      ]
+    },
+    {
+      "dialogue_id": "10491432",
+      "sentence_id": "7",
+      "sentence": "宝宝8个月了！现在总是反复发烧！37.538度！",
+      "start": 19,
+      "end": 21,
+      "text": "53",
+      "tags": [
+        "I-Symptom",
+        "B-Symptom"
+      ]
+    },
+    {
+      "dialogue_id": "10506585",
+      "sentence_id": "10",
+      "sentence": "体温的确不是很高，就太阳穴那个地方最高就38度多一点点。",
+      "start": 20,
+      "end": 22,
+      "text": "38",
+      "tags": [
+        "O",
+        "B-Symptom"
+      ]
+    },
+    {
+      "dialogue_id": "10515756",
+      "sentence_id": "10",
+      "sentence": "一直37.638,昨晚退了,今天又来",
+      "start": 5,
+      "end": 7,
+      "text": "63",
+      "tags": [
+        "I-Symptom",
+        "B-Symptom"
+      ]
+    },
+    {
+      "dialogue_id": "10731191",
+      "sentence_id": "31",
+      "sentence": "胆红素303，这个数字是相当高的呀",
+      "start": 3,
+      "end": 6,
+      "text": "303",
+      "tags": [
+        "I-Medical_Examination",
+        "O",
+        "O"
+      ]
+    }
+  ]
+}
