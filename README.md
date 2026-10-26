@@ -22,7 +22,7 @@ python reproduce.py --check
 # 2) 快速复现（约 2 分钟）：验证流程与输出是否对得上
 python reproduce.py --quick
 
-# 3) 全量复现（云服务器约 11 分钟 / RTX 本地 GPU 约 71 分钟）：复现主结果
+# 3) 全量复现（云服务器约 11 分钟 / 本地 GPU 约 71 分钟）：复现主结果
 python reproduce.py --full
 ```
 
