@@ -1,0 +1,21 @@
+{
+  "schema_version": "nlpexp_demo_local_v1",
+  "project_root": "C:/path/to/NLPExp",
+  "ml_python": "C:/path/to/NLPExp/.venv-bert-crf/Scripts/python.exe",
+  "dev": "C:/controlled/imcs/IMCS-V2_dev.json",
+  "data_dir": "C:/controlled/imcs",
+  "softmax_model_dir": "C:/controlled/bert-base-chinese",
+  "softmax_checkpoint": "C:/path/to/NLPExp/runs/lr5e-5_ep3_20261022-151229/checkpoints/best.pt",
+  "softmax_checkpoint_sha256": "93322262dd14252203966cd56499086430a51b13d1112aa0162fcf18b87f6adb",
+  "softmax_source_run": "lr5e-5_ep3_20261022-151229",
+  "crf_checkpoint": "C:/path/to/NLPExp/experiments/bert_crf/20261021T195736+0800_real_training_95abb833/checkpoints/epoch_0005.pt",
+  "crf_checkpoint_sha256": "e5ee6aaa8d4a00a4626553002aa9a63253a8ee0139463fec2bb41427bf391bed",
+  "crf_reproduce": "C:/path/to/NLPExp/.local/demo_app/frozen_e5",
+  "crf_inference_config": "C:/controlled/e5_handoff/dev/config/inference.json",
+  "crf_training_run": "C:/path/to/NLPExp/experiments/bert_crf/20261021T195736+0800_real_training_95abb833",
+  "original_train": "C:/controlled/imcs/IMCS-V2_train.json",
+  "stage1_audit": "C:/controlled/stage1_audit",
+  "demo_runs": "C:/path/to/NLPExp/runs/demo_runs",
+  "text_runs": "C:/path/to/NLPExp/runs/demo_text_runs",
+  "evidence": "C:/controlled/demo_evidence"
+}
