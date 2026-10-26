@@ -10,7 +10,7 @@
 | Python | 3.11（本地）/ 3.13.5（服务器） |
 | PyTorch | 2.6.0+cu124 |
 | transformers | 5.20.1 |
-| GPU | 本地 GPU（8GB 级）/ 云服务器 GPU |
+| GPU | RTX 4060 Laptop 8G（本地）/ A800-SXM4-40GB（服务器） |
 
 只跑单元测试和评估模块**不需要 GPU**；训练需要 GPU（CPU 也能跑，但慢一个数量级）。
 
@@ -32,7 +32,7 @@ $env:BERT_MODEL_DIR = 'D:\models\bert-base-chinese'
 ```bash
 python reproduce.py --check     # 只检查环境与数据，约 5 秒
 python reproduce.py --quick     # 快速复现：100 段对话、1 轮，约 2 分钟
-python reproduce.py --full      # 全量复现：88842 句、3 轮，云服务器约 11 分钟
+python reproduce.py --full      # 全量复现：88842 句、3 轮，A800 约 11 分钟
 ```
 
 脚本依次执行：环境/数据/模型检查 → 13 个单元测试 → 训练 → dev 预测 → 官方校验器 → 官方评分器，
@@ -59,7 +59,7 @@ cd code
 pip install -r requirements.txt                 # torch 按 CUDA 版本另装
 python -m unittest discover -s tests -v         # 13 个单元测试
 
-python -m src.train --lr 5e-5 --epochs 3        # 训练（全量约 11 分钟 @ 云服务器）
+python -m src.train --lr 5e-5 --epochs 3        # 训练（全量约 11 分钟 @ A800）
 python -m src.predict --run-id <run_id> --split dev   # 导出预测
 ```
 

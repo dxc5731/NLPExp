@@ -66,3 +66,6 @@ runs/reproduce/
 
 # Local interaction records stay outside public version control.
 AI交互记录.md
+
+# 组内提交用的 Word 文档，不入代码仓库
+可能要拿去提交的文档/
