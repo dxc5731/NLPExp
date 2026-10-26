@@ -5,7 +5,7 @@
 
     python reproduce.py --check     # 只检查环境，不训练（约 5 秒）
     python reproduce.py --quick     # 快速复现：100 段对话 1 轮（约 1—2 分钟）
-    python reproduce.py --full      # 全量复现：88842 句 3 轮（A800 约 11 分钟，4060 约 71 分钟）
+    python reproduce.py --full      # 全量复现：88842 句 3 轮（云服务器约 11 分钟，本地 GPU 约 71 分钟）
     python reproduce.py --download-model   # 只下载预训练模型到 code/models/
 
 所有命令都用当前 Python 解释器执行（`sys.executable`），
@@ -40,7 +40,7 @@ DATA_HASHES = {
 # quick 用的是 lr 5e-5、100 段对话、1 轮，数值本身不代表模型效果，只用来确认流程通
 EXPECT = {
     "quick": {"f1": 0.7228, "f1_tol": 0.06, "minutes": "1—2"},
-    "full": {"f1": 0.8885, "f1_tol": 0.005, "minutes": "11（A800）/ 71（4060）"},
+    "full": {"f1": 0.8885, "f1_tol": 0.005, "minutes": "11（云服务器）/ 71（本地 GPU）"},
 }
 
 _results = []
