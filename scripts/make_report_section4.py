@@ -107,9 +107,9 @@ doc.add_paragraph(
 
 doc.add_heading("4.4 运行环境与工程约束", level=2)
 doc.add_paragraph(
-    "训练在两类机器上完成：本地为 Python 3.11、PyTorch 2.6.0+cu124、transformers 5.20.1、"
-    "本地 GPU（8GB 级）；服务器为 Python 3.13.5、同版本 PyTorch 与 transformers、"
-    "云服务器 GPU。同一配置在两台机器上的验证集实体 F1 相差 0.0006，说明种子与确定性设置有效。"
+    "训练在本地环境与云服务器上完成，两处均使用 Python 3.11 / 3.13.5、"
+    "PyTorch 2.6.0+cu124 与 transformers 5.20.1。同一配置在两处环境上的验证集实体 "
+    "F1 相差 0.0006，说明种子与确定性设置有效。"
 )
 doc.add_paragraph(
     "数据与权重均不进入仓库：仓库只保存源码、配置、切分名单、训练日志与预测结果，"
