@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "purpose": "input_validation_only",
+  "mode": "prediction_validation",
+  "created_at": "2026-10-27T04:06:48+08:00",
+  "python_version": "3.13.5",
+  "split": "dev",
+  "status": "PASS",
+  "character_unit": "Python len(str): Unicode code points, no normalization",
+  "inputs": {
+    "data": {
+      "requested_path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+      "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+      "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+    },
+    "predictions": {
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\prediction\\predictions_dev.json",
+      "sha256": "32001c71c939a2f5f73dfabed044032a1e220548e79b9db7c1c1a1b8e2ac5a4d"
+    }
+  },
+  "data": {
+    "format": "raw",
+    "dialogues": 833,
+    "sentences": 33267,
+    "unique_sentence_ids": 33267,
+    "sentences_with_text": 33267,
+    "characters": 441339,
+    "sentences_with_gold": 33267,
+    "dialogue_fields": [
+      "diagnosis",
+      "dialogue",
+      "explicit_info",
+      "implicit_info",
+      "report",
+      "self_report"
+    ],
+    "sentence_fields": [
+      "BIO_label",
+      "dialogue_act",
+      "local_implicit_info",
+      "sentence",
+      "sentence_id",
+      "speaker",
+      "symptom_norm",
+      "symptom_type"
+    ]
+  },
+  "predictions": {
+    "dialogues": 833,
+    "sentences": 33267,
+    "unique_sentence_ids": 33267,
+    "matched_sentence_ids": 33267,
+    "expected_sentences": {
+      "passed": 33267,
+      "failed": 0,
+      "not_fully_checked": 0
+    }
+  },
+  "required_checks": [
+    "data_json",
+    "data_structure",
+    "gold_presence",
+    "gold_format",
+    "gold_labels",
+    "gold_bio",
+    "gold_alignment",
+    "prediction_json",
+    "prediction_structure",
+    "prediction_format",
+    "prediction_labels",
+    "prediction_bio",
+    "prediction_alignment",
+    "id_coverage",
+    "record_counts"
+  ],
+  "checks": {
+    "data_json": {
+      "checked": 1,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "data_structure": {
+      "checked": 1,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "gold_presence": {
+      "checked": 33267,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "gold_format": {
+      "checked": 33267,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "gold_labels": {
+      "checked": 33267,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "gold_bio": {
+      "checked": 33267,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "gold_alignment": {
+      "checked": 33267,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "prediction_json": {
+      "checked": 1,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "prediction_structure": {
+      "checked": 1,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "id_coverage": {
+      "checked": 1,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "record_counts": {
+      "checked": 1,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "prediction_format": {
+      "checked": 33267,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "prediction_labels": {
+      "checked": 33267,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "prediction_bio": {
+      "checked": 33267,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    },
+    "prediction_alignment": {
+      "checked": 33267,
+      "errors": 0,
+      "skipped": 0,
+      "reasons": [],
+      "status": "PASS"
+    }
+  },
+  "errors": {
+    "total": 0,
+    "by_code": {},
+    "examples": [],
+    "examples_omitted": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "model": "BERT-Softmax",
+  "source_run": "lr5e-5_ep3_20261022-151229",
+  "epoch": 3,
+  "checkpoint": "weights/best.pt",
+  "checkpoint_sha256": "93322262dd14252203966cd56499086430a51b13d1112aa0162fcf18b87f6adb",
+  "training_config": {
+    "lr": 5e-05,
+    "batch_size": 32,
+    "epochs": 3,
+    "warmup_ratio": 0.1,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "dropout": 0.1,
+    "seed": 42,
+    "max_len": 256
+  },
+  "internal_val_entity_f1": 0.8884913536076328,
+  "official_dev_entity_f1": 0.8801265068901074,
+  "runtime_files": {
+    "source/src/__init__.py": "9552f854fcf77389160a08cfb4be2eb902cd9a0c0af76ab57df02cbf9125d369",
+    "source/src/align.py": "b1a8c73af37c6e291d0fcbaf6b4411f440cc04338d0dce4cd74ab3d8864f479b",
+    "source/src/config.py": "99bc053b3a41dac4e8d0e9397689e1b099295590598f42669d5396a2f6f0eb7a",
+    "source/src/dataset.py": "7f6e2188c22f979d95cd8b51bd062b499ee7ce31b14b257f6806cc058554a24f",
+    "source/src/labels.py": "89737f2f4c751ff59d51ae6a0897e63f43eb7c7cbd475727bce3d3592fe5986d",
+    "source/src/metrics.py": "8e319d50ca7fdf67013c15d5c24a510ac359ca674232cba4c338bf1f79e5d77f",
+    "tokenizer/config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+    "tokenizer/tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+    "tokenizer/tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+    "tokenizer/vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+  }
+}

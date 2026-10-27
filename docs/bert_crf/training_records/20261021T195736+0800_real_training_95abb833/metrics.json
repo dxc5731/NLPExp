@@ -1,0 +1,129 @@
+{
+  "artifact_kind": "real_training",
+  "best_epoch": 5,
+  "best_metric": 0.8999020863146795,
+  "validation": {
+    "loss": 0.495046121928669,
+    "sentences": 9687,
+    "characters": 126049,
+    "character_accuracy_including_O": 0.9749779847519615,
+    "protocol": "strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0",
+    "character": {
+      "micro": {
+        "precision": 0.9042121226945844,
+        "recall": 0.9190035799522673,
+        "f1": 0.9115478509604715,
+        "true_positive": 18483,
+        "predicted": 20441,
+        "gold": 20112
+      },
+      "macro": {
+        "precision": 0.903682095960581,
+        "recall": 0.9257747707219641,
+        "f1": 0.9144716026568889
+      },
+      "per_type": {
+        "Symptom": {
+          "precision": 0.8959361052384308,
+          "recall": 0.9095389507154213,
+          "f1": 0.9026862845647114,
+          "true_positive": 11442,
+          "predicted": 12771,
+          "gold": 12580
+        },
+        "Drug": {
+          "precision": 0.9581774906494389,
+          "recall": 0.9575263336731227,
+          "f1": 0.9578518014955812,
+          "true_positive": 2818,
+          "predicted": 2941,
+          "gold": 2943
+        },
+        "Drug_Category": {
+          "precision": 0.9128466327108092,
+          "recall": 0.9232970807097882,
+          "f1": 0.9180421172453044,
+          "true_positive": 1613,
+          "predicted": 1767,
+          "gold": 1747
+        },
+        "Medical_Examination": {
+          "precision": 0.8895348837209303,
+          "recall": 0.9170829170829171,
+          "f1": 0.9030988686669946,
+          "true_positive": 1836,
+          "predicted": 2064,
+          "gold": 2002
+        },
+        "Operation": {
+          "precision": 0.8619153674832962,
+          "recall": 0.9214285714285714,
+          "f1": 0.8906789413118527,
+          "true_positive": 774,
+          "predicted": 898,
+          "gold": 840
+        }
+      }
+    },
+    "entity": {
+      "micro": {
+        "precision": 0.8948472139005392,
+        "recall": 0.9050143917588244,
+        "f1": 0.8999020863146795,
+        "true_positive": 5974,
+        "predicted": 6676,
+        "gold": 6601
+      },
+      "macro": {
+        "precision": 0.8937049549695258,
+        "recall": 0.901096932399206,
+        "f1": 0.8973465368833914
+      },
+      "per_type": {
+        "Symptom": {
+          "precision": 0.8943053401285176,
+          "recall": 0.9075781425680234,
+          "f1": 0.900892857142857,
+          "true_positive": 4036,
+          "predicted": 4513,
+          "gold": 4447
+        },
+        "Drug": {
+          "precision": 0.9263888888888889,
+          "recall": 0.92,
+          "f1": 0.9231833910034603,
+          "true_positive": 667,
+          "predicted": 720,
+          "gold": 725
+        },
+        "Drug_Category": {
+          "precision": 0.9075975359342916,
+          "recall": 0.9020408163265307,
+          "f1": 0.9048106448311156,
+          "true_positive": 442,
+          "predicted": 487,
+          "gold": 490
+        },
+        "Medical_Examination": {
+          "precision": 0.8603531300160514,
+          "recall": 0.8715447154471545,
+          "f1": 0.8659127625201939,
+          "true_positive": 536,
+          "predicted": 623,
+          "gold": 615
+        },
+        "Operation": {
+          "precision": 0.8798798798798799,
+          "recall": 0.904320987654321,
+          "f1": 0.8919330289193304,
+          "true_positive": 293,
+          "predicted": 333,
+          "gold": 324
+        }
+      }
+    }
+  },
+  "validation_source_run": "${PROJECT}\\experiments\\bert_crf\\20261021T195736+0800_real_training_95abb833",
+  "validation_elapsed_seconds": 40.30581160006113,
+  "timing_scope": "internal validation loader/adaptation, GPU forward/decode, metrics and JSONL writes; excludes model loading and optimizer updates"
+}

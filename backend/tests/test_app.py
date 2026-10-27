@@ -62,9 +62,38 @@ class ApiSafetyTests(unittest.TestCase):
             with self.assertRaises(FileNotFoundError):verify_assets('softmax')
     def test_case_verified_on_original_only(self):
         from backend.text_service import verified_case
-        c=verified_case()
-        self.assertNotEqual(c['raw_text'],'今天一直是38度左右')
-        self.assertEqual(c['gold_entities'][0]['text'],'38度')
-        self.assertEqual(c['historical']['crf']['entities'][0]['text'],'38度左右')
+        import json
+        # Synthetic fixture; no official medical conversation is distributed.
+        with tempfile.TemporaryDirectory() as tmp:
+            data={'id':'synthetic','raw_text':'发热。','gold_tags':['B-Symptom','I-Symptom','O'],'historical':{}}
+            (Path(tmp)/'verified_case.json').write_text(json.dumps(data),encoding='utf-8')
+            with patch('backend.text_service.RUNTIME',Path(tmp)):
+                c=verified_case()
+                self.assertEqual(c['gold_entities'][0]['text'],'发热')
+                self.assertNotEqual(c['raw_text'],'发热')
+
+    def test_clean_clone_history_without_runtime_or_inference(self):
+        from backend.app import historical
+        historical.cache_clear()
+        with tempfile.TemporaryDirectory() as tmp, patch('backend.common.RUNTIME',Path(tmp)), patch('backend.text_service.RUNTIME',Path(tmp)), patch('backend.text_service.Worker.predict',side_effect=AssertionError('must not predict')):
+            project=self.client.get('/api/project')
+            self.assertEqual(project.status_code,200)
+            rows=project.json()['historical']
+            self.assertEqual([r['method'] for r in rows],['rule','softmax','crf'])
+            self.assertEqual([r['metrics']['tp'] for r in rows],[18290,21428,21503])
+            self.assertEqual(project.json()['counts']['sentences'],33267)
+            self.assertEqual(self.client.get('/api/cases').json(),[])
+            self.assertEqual(self.client.get('/api/runs').json(),[])
+            self.assertEqual(self.client.get('/api/experiments').status_code,200)
+            response=self.client.post('/api/text/infer',json={'text':'synthetic test'})
+            self.assertEqual(response.status_code,409)
+            self.assertIn('历史浏览模式',response.json()['detail'])
+
+    def test_history_integrity_rejects_changed_score(self):
+        from backend.app import historical
+        historical.cache_clear()
+        with patch('backend.app.sha',return_value='mismatch'):
+            with self.assertRaisesRegex(ValueError,'身份不匹配'):historical()
+        historical.cache_clear()
 
 if __name__=='__main__':unittest.main()

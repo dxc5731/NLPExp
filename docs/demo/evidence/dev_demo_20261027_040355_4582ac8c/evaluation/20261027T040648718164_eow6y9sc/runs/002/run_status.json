@@ -1,0 +1,16 @@
+{
+  "index": 2,
+  "run_id": "dev_demo_20261027_040355_4582ac8c_softmax",
+  "method_name": "BERT-Softmax",
+  "data_path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+  "split": "dev",
+  "prediction_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\prediction\\predictions_dev.json",
+  "run_info_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\run_info.json",
+  "status": "SCORED",
+  "evaluation_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\002\\evaluation.json",
+  "evaluation_sha256": "dfadabf4a8aecef9fb7861f33269901752223d5229e17d46e98741d460dd1b2d",
+  "metadata_status": "NEEDS_REVIEW",
+  "automated_metadata_status": "PASS",
+  "entity_micro_f1": 0.8801265068901074,
+  "error_export": "PASS"
+}

@@ -1,0 +1,25 @@
+{
+  "dialogue_id_sets_identical": true,
+  "sentence_id_sets_identical": true,
+  "dialogues": 833,
+  "sentences": 33267,
+  "characters": 441339,
+  "different_sentences": 0,
+  "different_character_labels": 0,
+  "all_character_labels_identical": true,
+  "bytes_identical": true,
+  "new": {
+    "path": "${PROJECT}\\runs\\lr5e-5_ep3_20261022-151229\\softmax_dev_acceptance_20261027T024216+0800\\prediction\\predictions_dev.json",
+    "exists": true,
+    "bytes": 1896728,
+    "sha256": "f89864650eb08e1333f78781776c9c74e20ec65e815a4348ba396489eee3e51a"
+  },
+  "original": {
+    "path": "${PROJECT}\\runs\\lr5e-5_ep3_20261022-151229\\predict_dev\\predictions_dev.json",
+    "exists": true,
+    "bytes": 1896728,
+    "sha256": "f89864650eb08e1333f78781776c9c74e20ec65e815a4348ba396489eee3e51a"
+  },
+  "transition_counts": [],
+  "comparison_rule": "Compare same original dialogue_id/sentence_id and each original character position. No text normalization, no label repair in comparison. Source inference BIO repair remains existing algorithm and is logged."
+}

@@ -46,6 +46,8 @@ atexit.register(shutdown)
 gate=threading.Lock()
 
 def verified_case():
+    if not (RUNTIME/'verified_case.json').is_file():
+        return None
     c=load(RUNTIME/'verified_case.json')
     c['gold_entities']=entities(c['raw_text'],c['gold_tags'])
     for h in c['historical'].values():h['entities']=entities(c['raw_text'],h['tags'])
@@ -54,6 +56,8 @@ def verified_case():
 def infer(text):
     if not isinstance(text,str) or not text.strip():raise ValueError('请输入非空文本')
     if len(text)>500:raise ValueError('最多500个原始Unicode字符；BERT另有冻结token上限，超限会明确拒绝')
+    if 'ml_python' not in config():
+        raise RuntimeError('当前为历史浏览模式；真实推理需要先配置本地模型与 runtime.json')
     if not gate.acquire(blocking=False):raise RuntimeError('另一个短文本任务正在运行，请稍后重试')
     started=now();run_id=uid('text');directory=Path(config()['text_runs'])/run_id
     directory.mkdir(parents=True,exist_ok=False)
@@ -63,7 +67,7 @@ def infer(text):
     try:
         case=verified_case()
         # A gold record is only applicable to the exact original string.
-        if text==case['raw_text']:result['gold']={'case_id':case['id'],'tags':case['gold_tags'],'entities':case['gold_entities'],'source':case['source']}
+        if case and text==case['raw_text']:result['gold']={'case_id':case['id'],'tags':case['gold_tags'],'entities':case['gold_entities'],'source':case['source']}
         with gpu_lock():
             for method,worker in workers.items():
                 tick=time.perf_counter()

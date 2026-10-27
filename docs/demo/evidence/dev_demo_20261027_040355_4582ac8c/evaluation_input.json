@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "purpose": "model_evaluation",
+  "data": {
+    "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+    "split": "dev"
+  },
+  "runs": [
+    {
+      "run_id": "dev_demo_20261027_040355_4582ac8c_rule",
+      "method_name": "规则 mc10",
+      "predictions": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\prediction\\predictions_dev.json",
+      "run_info": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\run_info.json"
+    },
+    {
+      "run_id": "dev_demo_20261027_040355_4582ac8c_softmax",
+      "method_name": "BERT-Softmax",
+      "predictions": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\prediction\\predictions_dev.json",
+      "run_info": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\run_info.json"
+    },
+    {
+      "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+      "method_name": "BERT-CRF E5",
+      "predictions": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\prediction\\predictions_dev.json",
+      "run_info": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\run_info.json"
+    }
+  ]
+}

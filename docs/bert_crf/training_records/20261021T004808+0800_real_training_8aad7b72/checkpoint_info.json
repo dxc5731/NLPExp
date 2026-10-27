@@ -1,0 +1,13 @@
+{
+  "artifact_kind": "real_training",
+  "latest": "${PROJECT}\\experiments\\bert_crf\\20261021T004808+0800_real_training_8aad7b72\\checkpoints\\epoch_0005.pt",
+  "latest_sha256": "f66bfa6ebda99b587a85de0366771477aab4d7aa1cd593202c6401baa0be35f1",
+  "epoch": 5,
+  "global_step": 27765,
+  "best_value": 0.8986230897261309,
+  "best_epoch": 3,
+  "bad_epochs": 2,
+  "best_checkpoint": "${PROJECT}\\experiments\\bert_crf\\20261021T004808+0800_real_training_8aad7b72\\checkpoints\\epoch_0003.pt",
+  "best_checkpoint_sha256": "9d75ec3fb22cb5341af03478b6f4cda181fafc7fe6789e4030e936c8b044977f",
+  "selection_reason": "tie/insufficient improvement; earlier best retained"
+}

@@ -1,0 +1,44 @@
+{
+  "method": "softmax",
+  "split": "dev",
+  "batch_size": 64,
+  "min_count": null,
+  "assets": [
+    {
+      "path": "${PROJECT}\\runs\\lr5e-5_ep3_20261022-151229\\checkpoints\\best.pt",
+      "bytes": 406810499,
+      "sha256": "93322262dd14252203966cd56499086430a51b13d1112aa0162fcf18b87f6adb"
+    },
+    {
+      "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\bert-base-chinese\\config.json",
+      "bytes": 624,
+      "sha256": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c"
+    },
+    {
+      "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\bert-base-chinese\\model.safetensors",
+      "bytes": 411553788,
+      "sha256": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3"
+    },
+    {
+      "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\bert-base-chinese\\tokenizer.json",
+      "bytes": 268943,
+      "sha256": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae"
+    },
+    {
+      "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\bert-base-chinese\\tokenizer_config.json",
+      "bytes": 49,
+      "sha256": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8"
+    },
+    {
+      "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\bert-base-chinese\\vocab.txt",
+      "bytes": 109540,
+      "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+    }
+  ],
+  "no_training": true,
+  "data": {
+    "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+    "bytes": 17175331,
+    "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+  }
+}

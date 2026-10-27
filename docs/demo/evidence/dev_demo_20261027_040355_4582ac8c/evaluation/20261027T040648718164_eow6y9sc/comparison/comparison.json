@@ -1,0 +1,1650 @@
+{
+  "schema_version": "1.0",
+  "purpose": "model_evaluation",
+  "status": "COMPARED",
+  "scope": "metrics-compatible and automated metadata-complete; not proof of fair training or actual reproducibility",
+  "included": [
+    {
+      "evaluation_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\003\\evaluation.json",
+      "evaluation_sha256": "b81746f773f9a1f471d98f037dc8d6ce260c906680f1c5fa85a4e77ada097f81",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+      "method_name": "BERT-CRF E5",
+      "metadata_status": "NEEDS_REVIEW",
+      "run": {
+        "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+        "method_name": "BERT-CRF E5",
+        "method_version": "frozen:e5ee6aaa8d4a00a4626553002aa9a63253a8ee0139463fec2bb41427bf391bed",
+        "data_version": "IMCS-V2-NER platform archive v2",
+        "run_info_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\run_info.json",
+        "run_info_sha256": "839ca3918988844654418d36aea4321cb6309a2c55fb0dad204d65625679ab54"
+      },
+      "inputs": {
+        "data": {
+          "requested_path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+          "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+          "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+        },
+        "predictions": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\prediction\\predictions_dev.json",
+          "sha256": "32001c71c939a2f5f73dfabed044032a1e220548e79b9db7c1c1a1b8e2ac5a4d"
+        }
+      },
+      "entities": {
+        "micro": {
+          "tp": 21503,
+          "fp": 3051,
+          "fn": 2075,
+          "precision": 0.8757432597540116,
+          "recall": 0.9119942319111036,
+          "f1": 0.8935012050195297,
+          "support": 23578,
+          "predicted": 24554
+        },
+        "per_type": {
+          "Symptom": {
+            "tp": 14070,
+            "fp": 2159,
+            "fn": 1281,
+            "precision": 0.8669665413765482,
+            "recall": 0.9165526675786594,
+            "f1": 0.8910702976567447,
+            "support": 15351,
+            "predicted": 16229
+          },
+          "Drug": {
+            "tp": 2940,
+            "fp": 167,
+            "fn": 175,
+            "precision": 0.9462504023173479,
+            "recall": 0.9438202247191011,
+            "f1": 0.9450337512054002,
+            "support": 3115,
+            "predicted": 3107
+          },
+          "Drug_Category": {
+            "tp": 1573,
+            "fp": 182,
+            "fn": 144,
+            "precision": 0.8962962962962963,
+            "recall": 0.9161327897495631,
+            "f1": 0.9061059907834101,
+            "support": 1717,
+            "predicted": 1755
+          },
+          "Medical_Examination": {
+            "tp": 1959,
+            "fp": 394,
+            "fn": 357,
+            "precision": 0.8325541861453464,
+            "recall": 0.8458549222797928,
+            "f1": 0.8391518526451061,
+            "support": 2316,
+            "predicted": 2353
+          },
+          "Operation": {
+            "tp": 961,
+            "fp": 149,
+            "fn": 118,
+            "precision": 0.8657657657657658,
+            "recall": 0.8906394810009268,
+            "f1": 0.8780264961169484,
+            "support": 1079,
+            "predicted": 1110
+          }
+        },
+        "gold_total": 23578,
+        "predicted_total": 24554
+      },
+      "characters": {
+        "total": 441339,
+        "correct": 428335,
+        "accuracy": 0.9705351215278958,
+        "per_label": {
+          "O": {
+            "tp": 361698,
+            "fp": 3651,
+            "fn": 7802,
+            "precision": 0.9900068154011644,
+            "recall": 0.9788849797023004,
+            "f1": 0.9844144851527321,
+            "support": 369500,
+            "predicted": 365349
+          },
+          "B-Symptom": {
+            "tp": 14371,
+            "fp": 1858,
+            "fn": 980,
+            "precision": 0.8855135867890813,
+            "recall": 0.9361605107159142,
+            "f1": 0.9101329955668145,
+            "support": 15351,
+            "predicted": 16229
+          },
+          "I-Symptom": {
+            "tp": 24852,
+            "fp": 5222,
+            "fn": 2195,
+            "precision": 0.8263616412848308,
+            "recall": 0.9188449735645358,
+            "f1": 0.870152833458798,
+            "support": 27047,
+            "predicted": 30074
+          },
+          "B-Drug": {
+            "tp": 2977,
+            "fp": 130,
+            "fn": 138,
+            "precision": 0.9581589958158996,
+            "recall": 0.9556982343499197,
+            "f1": 0.9569270331083253,
+            "support": 3115,
+            "predicted": 3107
+          },
+          "I-Drug": {
+            "tp": 9091,
+            "fp": 254,
+            "fn": 318,
+            "precision": 0.9728196896736223,
+            "recall": 0.9662025720055266,
+            "f1": 0.969499840034126,
+            "support": 9409,
+            "predicted": 9345
+          },
+          "B-Drug_Category": {
+            "tp": 1590,
+            "fp": 165,
+            "fn": 127,
+            "precision": 0.905982905982906,
+            "recall": 0.926033779848573,
+            "f1": 0.9158986175115207,
+            "support": 1717,
+            "predicted": 1755
+          },
+          "I-Drug_Category": {
+            "tp": 4126,
+            "fp": 477,
+            "fn": 327,
+            "precision": 0.8963719313491202,
+            "recall": 0.9265663597574669,
+            "f1": 0.9112190812720848,
+            "support": 4453,
+            "predicted": 4603
+          },
+          "B-Medical_Examination": {
+            "tp": 2080,
+            "fp": 273,
+            "fn": 236,
+            "precision": 0.8839779005524862,
+            "recall": 0.8981001727115717,
+            "f1": 0.8909830798886271,
+            "support": 2316,
+            "predicted": 2353
+          },
+          "I-Medical_Examination": {
+            "tp": 4962,
+            "fp": 606,
+            "fn": 591,
+            "precision": 0.8911637931034483,
+            "recall": 0.8935710426796326,
+            "f1": 0.8923657944429457,
+            "support": 5553,
+            "predicted": 5568
+          },
+          "B-Operation": {
+            "tp": 1007,
+            "fp": 103,
+            "fn": 72,
+            "precision": 0.9072072072072072,
+            "recall": 0.933271547729379,
+            "f1": 0.920054819552307,
+            "support": 1079,
+            "predicted": 1110
+          },
+          "I-Operation": {
+            "tp": 1581,
+            "fp": 265,
+            "fn": 218,
+            "precision": 0.8564463705308776,
+            "recall": 0.8788215675375208,
+            "f1": 0.8674897119341564,
+            "support": 1799,
+            "predicted": 1846
+          }
+        },
+        "including_o": {
+          "labels": [
+            "O",
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "micro": {
+            "tp": 428335,
+            "fp": 13004,
+            "fn": 13004,
+            "precision": 0.9705351215278958,
+            "recall": 0.9705351215278958,
+            "f1": 0.9705351215278958,
+            "support": 441339,
+            "predicted": 441339
+          },
+          "macro_f1": 0.9171943901747671,
+          "macro_denominator": 11
+        },
+        "excluding_o": {
+          "labels": [
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "micro": {
+            "tp": 66637,
+            "fp": 9353,
+            "fn": 5202,
+            "precision": 0.876918015528359,
+            "recall": 0.9275880788986484,
+            "f1": 0.9015416460910918,
+            "support": 71839,
+            "predicted": 75990
+          },
+          "macro_f1": 0.9104723806769706,
+          "macro_denominator": 10
+        },
+        "confusion_matrix": {
+          "labels": [
+            "O",
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "rows": "gold",
+          "columns": "predicted",
+          "counts": [
+            [
+              361698,
+              1512,
+              4837,
+              52,
+              111,
+              95,
+              325,
+              152,
+              448,
+              70,
+              200
+            ],
+            [
+              637,
+              14371,
+              288,
+              4,
+              0,
+              7,
+              15,
+              26,
+              1,
+              1,
+              1
+            ],
+            [
+              1848,
+              277,
+              24852,
+              2,
+              11,
+              0,
+              11,
+              1,
+              41,
+              0,
+              4
+            ],
+            [
+              66,
+              2,
+              0,
+              2977,
+              18,
+              41,
+              1,
+              6,
+              0,
+              1,
+              3
+            ],
+            [
+              126,
+              1,
+              2,
+              32,
+              9091,
+              6,
+              112,
+              0,
+              33,
+              0,
+              6
+            ],
+            [
+              71,
+              4,
+              1,
+              29,
+              3,
+              1590,
+              13,
+              1,
+              0,
+              2,
+              3
+            ],
+            [
+              181,
+              25,
+              26,
+              0,
+              70,
+              13,
+              4126,
+              0,
+              4,
+              0,
+              8
+            ],
+            [
+              135,
+              28,
+              1,
+              1,
+              0,
+              2,
+              0,
+              2080,
+              48,
+              21,
+              0
+            ],
+            [
+              412,
+              8,
+              65,
+              0,
+              2,
+              1,
+              0,
+              78,
+              4962,
+              0,
+              25
+            ],
+            [
+              45,
+              1,
+              0,
+              3,
+              0,
+              0,
+              0,
+              7,
+              1,
+              1007,
+              15
+            ],
+            [
+              130,
+              0,
+              2,
+              7,
+              39,
+              0,
+              0,
+              2,
+              30,
+              8,
+              1581
+            ]
+          ],
+          "row_sums": [
+            369500,
+            15351,
+            27047,
+            3115,
+            9409,
+            1717,
+            4453,
+            2316,
+            5553,
+            1079,
+            1799
+          ],
+          "column_sums": [
+            365349,
+            16229,
+            30074,
+            3107,
+            9345,
+            1755,
+            4603,
+            2353,
+            5568,
+            1110,
+            1846
+          ]
+        }
+      },
+      "automated_metadata_status": "PASS",
+      "human_review_pending": [
+        "actual_model_identity",
+        "absence_of_data_leakage",
+        "faithful_character_alignment",
+        "actual_training_reproducibility",
+        "truth_of_inference_timing"
+      ]
+    },
+    {
+      "evaluation_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\002\\evaluation.json",
+      "evaluation_sha256": "dfadabf4a8aecef9fb7861f33269901752223d5229e17d46e98741d460dd1b2d",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_softmax",
+      "method_name": "BERT-Softmax",
+      "metadata_status": "NEEDS_REVIEW",
+      "run": {
+        "run_id": "dev_demo_20261027_040355_4582ac8c_softmax",
+        "method_name": "BERT-Softmax",
+        "method_version": "frozen:93322262dd14252203966cd56499086430a51b13d1112aa0162fcf18b87f6adb",
+        "data_version": "IMCS-V2-NER platform archive v2",
+        "run_info_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\run_info.json",
+        "run_info_sha256": "edb59744ee988efa05ad4d1550c41a9e036268f798bca8f07138a2c45c37a693"
+      },
+      "inputs": {
+        "data": {
+          "requested_path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+          "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+          "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+        },
+        "predictions": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\prediction\\predictions_dev.json",
+          "sha256": "f89864650eb08e1333f78781776c9c74e20ec65e815a4348ba396489eee3e51a"
+        }
+      },
+      "entities": {
+        "micro": {
+          "tp": 21428,
+          "fp": 3687,
+          "fn": 2150,
+          "precision": 0.8531953016125822,
+          "recall": 0.9088133005343965,
+          "f1": 0.8801265068901074,
+          "support": 23578,
+          "predicted": 25115
+        },
+        "per_type": {
+          "Symptom": {
+            "tp": 14007,
+            "fp": 2491,
+            "fn": 1344,
+            "precision": 0.8490120014547218,
+            "recall": 0.9124487004103967,
+            "f1": 0.8795880561399102,
+            "support": 15351,
+            "predicted": 16498
+          },
+          "Drug": {
+            "tp": 2924,
+            "fp": 231,
+            "fn": 191,
+            "precision": 0.9267828843106181,
+            "recall": 0.9386837881219904,
+            "f1": 0.9326953748006379,
+            "support": 3115,
+            "predicted": 3155
+          },
+          "Drug_Category": {
+            "tp": 1581,
+            "fp": 305,
+            "fn": 136,
+            "precision": 0.8382820784729587,
+            "recall": 0.9207920792079208,
+            "f1": 0.8776019983347211,
+            "support": 1717,
+            "predicted": 1886
+          },
+          "Medical_Examination": {
+            "tp": 1962,
+            "fp": 469,
+            "fn": 354,
+            "precision": 0.807075277663513,
+            "recall": 0.8471502590673575,
+            "f1": 0.8266273435854223,
+            "support": 2316,
+            "predicted": 2431
+          },
+          "Operation": {
+            "tp": 954,
+            "fp": 191,
+            "fn": 125,
+            "precision": 0.8331877729257642,
+            "recall": 0.8841519925857275,
+            "f1": 0.8579136690647482,
+            "support": 1079,
+            "predicted": 1145
+          }
+        },
+        "gold_total": 23578,
+        "predicted_total": 25115
+      },
+      "characters": {
+        "total": 441339,
+        "correct": 428340,
+        "accuracy": 0.9705464506875667,
+        "per_label": {
+          "O": {
+            "tp": 361703,
+            "fp": 3539,
+            "fn": 7797,
+            "precision": 0.9903105338378391,
+            "recall": 0.9788985115020298,
+            "f1": 0.984571455014141,
+            "support": 369500,
+            "predicted": 365242
+          },
+          "B-Symptom": {
+            "tp": 14396,
+            "fp": 2102,
+            "fn": 955,
+            "precision": 0.8725906170444903,
+            "recall": 0.9377890691160184,
+            "f1": 0.9040158246726742,
+            "support": 15351,
+            "predicted": 16498
+          },
+          "I-Symptom": {
+            "tp": 24753,
+            "fp": 4952,
+            "fn": 2294,
+            "precision": 0.8332940582393537,
+            "recall": 0.9151846785225718,
+            "f1": 0.8723216802932056,
+            "support": 27047,
+            "predicted": 29705
+          },
+          "B-Drug": {
+            "tp": 2991,
+            "fp": 164,
+            "fn": 124,
+            "precision": 0.9480190174326466,
+            "recall": 0.9601926163723916,
+            "f1": 0.9540669856459331,
+            "support": 3115,
+            "predicted": 3155
+          },
+          "I-Drug": {
+            "tp": 9090,
+            "fp": 271,
+            "fn": 319,
+            "precision": 0.9710501014848841,
+            "recall": 0.9660962907854183,
+            "f1": 0.9685668620138519,
+            "support": 9409,
+            "predicted": 9361
+          },
+          "B-Drug_Category": {
+            "tp": 1618,
+            "fp": 268,
+            "fn": 99,
+            "precision": 0.8579003181336161,
+            "recall": 0.9423412929528246,
+            "f1": 0.8981404385234527,
+            "support": 1717,
+            "predicted": 1886
+          },
+          "I-Drug_Category": {
+            "tp": 4157,
+            "fp": 499,
+            "fn": 296,
+            "precision": 0.8928264604810997,
+            "recall": 0.9335279586795419,
+            "f1": 0.9127236798770447,
+            "support": 4453,
+            "predicted": 4656
+          },
+          "B-Medical_Examination": {
+            "tp": 2120,
+            "fp": 311,
+            "fn": 196,
+            "precision": 0.872069107363225,
+            "recall": 0.9153713298791019,
+            "f1": 0.8931957025489783,
+            "support": 2316,
+            "predicted": 2431
+          },
+          "I-Medical_Examination": {
+            "tp": 4926,
+            "fp": 476,
+            "fn": 627,
+            "precision": 0.911884487226953,
+            "recall": 0.8870880605078336,
+            "f1": 0.8993153811045185,
+            "support": 5553,
+            "predicted": 5402
+          },
+          "B-Operation": {
+            "tp": 1007,
+            "fp": 138,
+            "fn": 72,
+            "precision": 0.879475982532751,
+            "recall": 0.933271547729379,
+            "f1": 0.9055755395683454,
+            "support": 1079,
+            "predicted": 1145
+          },
+          "I-Operation": {
+            "tp": 1579,
+            "fp": 279,
+            "fn": 220,
+            "precision": 0.8498385360602799,
+            "recall": 0.877709838799333,
+            "f1": 0.8635493573967733,
+            "support": 1799,
+            "predicted": 1858
+          }
+        },
+        "including_o": {
+          "labels": [
+            "O",
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "micro": {
+            "tp": 428340,
+            "fp": 12999,
+            "fn": 12999,
+            "precision": 0.9705464506875667,
+            "recall": 0.9705464506875667,
+            "f1": 0.9705464506875667,
+            "support": 441339,
+            "predicted": 441339
+          },
+          "macro_f1": 0.9141857187871744,
+          "macro_denominator": 11
+        },
+        "excluding_o": {
+          "labels": [
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "micro": {
+            "tp": 66637,
+            "fp": 9460,
+            "fn": 5202,
+            "precision": 0.875684981011078,
+            "recall": 0.9275880788986484,
+            "f1": 0.9008895738697815,
+            "support": 71839,
+            "predicted": 76097
+          },
+          "macro_f1": 0.9071471451644777,
+          "macro_denominator": 10
+        },
+        "confusion_matrix": {
+          "labels": [
+            "O",
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "rows": "gold",
+          "columns": "predicted",
+          "counts": [
+            [
+              361703,
+              1659,
+              4626,
+              69,
+              133,
+              169,
+              357,
+              157,
+              356,
+              81,
+              190
+            ],
+            [
+              630,
+              14396,
+              255,
+              6,
+              0,
+              5,
+              17,
+              39,
+              1,
+              1,
+              1
+            ],
+            [
+              1826,
+              380,
+              24753,
+              3,
+              10,
+              0,
+              12,
+              3,
+              55,
+              1,
+              4
+            ],
+            [
+              46,
+              2,
+              0,
+              2991,
+              20,
+              43,
+              1,
+              1,
+              0,
+              4,
+              7
+            ],
+            [
+              104,
+              0,
+              2,
+              46,
+              9090,
+              19,
+              98,
+              0,
+              0,
+              3,
+              47
+            ],
+            [
+              48,
+              4,
+              1,
+              21,
+              3,
+              1618,
+              14,
+              1,
+              0,
+              4,
+              3
+            ],
+            [
+              142,
+              23,
+              20,
+              6,
+              64,
+              30,
+              4157,
+              0,
+              4,
+              0,
+              7
+            ],
+            [
+              124,
+              19,
+              1,
+              1,
+              0,
+              1,
+              0,
+              2120,
+              38,
+              12,
+              0
+            ],
+            [
+              457,
+              13,
+              42,
+              0,
+              2,
+              1,
+              0,
+              95,
+              4926,
+              6,
+              11
+            ],
+            [
+              47,
+              1,
+              1,
+              3,
+              0,
+              0,
+              0,
+              11,
+              0,
+              1007,
+              9
+            ],
+            [
+              115,
+              1,
+              4,
+              9,
+              39,
+              0,
+              0,
+              4,
+              22,
+              26,
+              1579
+            ]
+          ],
+          "row_sums": [
+            369500,
+            15351,
+            27047,
+            3115,
+            9409,
+            1717,
+            4453,
+            2316,
+            5553,
+            1079,
+            1799
+          ],
+          "column_sums": [
+            365242,
+            16498,
+            29705,
+            3155,
+            9361,
+            1886,
+            4656,
+            2431,
+            5402,
+            1145,
+            1858
+          ]
+        }
+      },
+      "automated_metadata_status": "PASS",
+      "human_review_pending": [
+        "actual_model_identity",
+        "absence_of_data_leakage",
+        "faithful_character_alignment",
+        "actual_training_reproducibility",
+        "truth_of_inference_timing"
+      ]
+    },
+    {
+      "evaluation_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\001\\evaluation.json",
+      "evaluation_sha256": "03be788bfa33e53798095f97568aa7389af28f7ddbca2c3d24cc769854f60440",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_rule",
+      "method_name": "规则 mc10",
+      "metadata_status": "NEEDS_REVIEW",
+      "run": {
+        "run_id": "dev_demo_20261027_040355_4582ac8c_rule",
+        "method_name": "规则 mc10",
+        "method_version": "frozen:e46a19cecc959f80f6aea0adedf8e12f4d78176374a800ea51bc8f1d10ddc85a",
+        "data_version": "IMCS-V2-NER platform archive v2",
+        "run_info_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\run_info.json",
+        "run_info_sha256": "03c9be0015879bebfe08d2f4264e96c20227f9a861f599b663fc3f4142c5f059"
+      },
+      "inputs": {
+        "data": {
+          "requested_path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+          "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+          "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+        },
+        "predictions": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\prediction\\predictions_dev.json",
+          "sha256": "61d9bb7e268b37932d16a73b0caac5a8f4b1bc4c8cfd213be1c40d02efe3581b"
+        }
+      },
+      "entities": {
+        "micro": {
+          "tp": 18290,
+          "fp": 5891,
+          "fn": 5288,
+          "precision": 0.7563789752284852,
+          "recall": 0.7757231317329714,
+          "f1": 0.7659289348604451,
+          "support": 23578,
+          "predicted": 24181
+        },
+        "per_type": {
+          "Symptom": {
+            "tp": 12716,
+            "fp": 3837,
+            "fn": 2635,
+            "precision": 0.7681991179846553,
+            "recall": 0.8283499446290143,
+            "f1": 0.7971414242728184,
+            "support": 15351,
+            "predicted": 16553
+          },
+          "Drug": {
+            "tp": 1994,
+            "fp": 227,
+            "fn": 1121,
+            "precision": 0.8977937865826204,
+            "recall": 0.6401284109149278,
+            "f1": 0.7473763118440779,
+            "support": 3115,
+            "predicted": 2221
+          },
+          "Drug_Category": {
+            "tp": 1359,
+            "fp": 202,
+            "fn": 358,
+            "precision": 0.8705957719410634,
+            "recall": 0.7914967967384974,
+            "f1": 0.8291641244661379,
+            "support": 1717,
+            "predicted": 1561
+          },
+          "Medical_Examination": {
+            "tp": 1398,
+            "fp": 1541,
+            "fn": 918,
+            "precision": 0.4756719972779857,
+            "recall": 0.6036269430051814,
+            "f1": 0.5320647002854424,
+            "support": 2316,
+            "predicted": 2939
+          },
+          "Operation": {
+            "tp": 823,
+            "fp": 84,
+            "fn": 256,
+            "precision": 0.9073869900771775,
+            "recall": 0.76274328081557,
+            "f1": 0.8288016112789527,
+            "support": 1079,
+            "predicted": 907
+          }
+        },
+        "gold_total": 23578,
+        "predicted_total": 24181
+      },
+      "characters": {
+        "total": 441339,
+        "correct": 415947,
+        "accuracy": 0.9424659955272477,
+        "per_label": {
+          "O": {
+            "tp": 364100,
+            "fp": 16866,
+            "fn": 5400,
+            "precision": 0.9557283327121056,
+            "recall": 0.9853856562922869,
+            "f1": 0.9703304346899126,
+            "support": 369500,
+            "predicted": 380966
+          },
+          "B-Symptom": {
+            "tp": 13244,
+            "fp": 3309,
+            "fn": 2107,
+            "precision": 0.8000966592158522,
+            "recall": 0.8627450980392157,
+            "f1": 0.8302407221664995,
+            "support": 15351,
+            "predicted": 16553
+          },
+          "I-Symptom": {
+            "tp": 19213,
+            "fp": 1419,
+            "fn": 7834,
+            "precision": 0.9312233423807678,
+            "recall": 0.7103560468813547,
+            "f1": 0.8059313324524424,
+            "support": 27047,
+            "predicted": 20632
+          },
+          "B-Drug": {
+            "tp": 2129,
+            "fp": 92,
+            "fn": 986,
+            "precision": 0.9585772174696083,
+            "recall": 0.6834670947030498,
+            "f1": 0.797976011994003,
+            "support": 3115,
+            "predicted": 2221
+          },
+          "I-Drug": {
+            "tp": 5705,
+            "fp": 67,
+            "fn": 3704,
+            "precision": 0.9883922383922384,
+            "recall": 0.606334360718461,
+            "f1": 0.7515973914761873,
+            "support": 9409,
+            "predicted": 5772
+          },
+          "B-Drug_Category": {
+            "tp": 1389,
+            "fp": 172,
+            "fn": 328,
+            "precision": 0.8898142216527867,
+            "recall": 0.8089691322073383,
+            "f1": 0.8474679682733374,
+            "support": 1717,
+            "predicted": 1561
+          },
+          "I-Drug_Category": {
+            "tp": 3222,
+            "fp": 237,
+            "fn": 1231,
+            "precision": 0.9314830875975716,
+            "recall": 0.7235571524814731,
+            "f1": 0.8144590495449949,
+            "support": 4453,
+            "predicted": 3459
+          },
+          "B-Medical_Examination": {
+            "tp": 1487,
+            "fp": 1452,
+            "fn": 829,
+            "precision": 0.5059544062606328,
+            "recall": 0.6420552677029361,
+            "f1": 0.5659372026641294,
+            "support": 2316,
+            "predicted": 2939
+          },
+          "I-Medical_Examination": {
+            "tp": 3390,
+            "fp": 1651,
+            "fn": 2163,
+            "precision": 0.6724856179329498,
+            "recall": 0.6104808211777417,
+            "f1": 0.6399848971115726,
+            "support": 5553,
+            "predicted": 5041
+          },
+          "B-Operation": {
+            "tp": 863,
+            "fp": 44,
+            "fn": 216,
+            "precision": 0.9514884233737596,
+            "recall": 0.7998146431881371,
+            "f1": 0.8690835850956697,
+            "support": 1079,
+            "predicted": 907
+          },
+          "I-Operation": {
+            "tp": 1205,
+            "fp": 83,
+            "fn": 594,
+            "precision": 0.9355590062111802,
+            "recall": 0.669816564758199,
+            "f1": 0.7806932296728215,
+            "support": 1799,
+            "predicted": 1288
+          }
+        },
+        "including_o": {
+          "labels": [
+            "O",
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "micro": {
+            "tp": 415947,
+            "fp": 25392,
+            "fn": 25392,
+            "precision": 0.9424659955272477,
+            "recall": 0.9424659955272477,
+            "f1": 0.9424659955272477,
+            "support": 441339,
+            "predicted": 441339
+          },
+          "macro_f1": 0.7885183477401427,
+          "macro_denominator": 11
+        },
+        "excluding_o": {
+          "labels": [
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "micro": {
+            "tp": 51847,
+            "fp": 8526,
+            "fn": 19992,
+            "precision": 0.8587779305318602,
+            "recall": 0.7217110483163741,
+            "f1": 0.7843009711675188,
+            "support": 71839,
+            "predicted": 60373
+          },
+          "macro_f1": 0.7703371390451658,
+          "macro_denominator": 10
+        },
+        "confusion_matrix": {
+          "labels": [
+            "O",
+            "B-Symptom",
+            "I-Symptom",
+            "B-Drug",
+            "I-Drug",
+            "B-Drug_Category",
+            "I-Drug_Category",
+            "B-Medical_Examination",
+            "I-Medical_Examination",
+            "B-Operation",
+            "I-Operation"
+          ],
+          "rows": "gold",
+          "columns": "predicted",
+          "counts": [
+            [
+              364100,
+              1846,
+              1021,
+              10,
+              20,
+              67,
+              160,
+              1101,
+              1088,
+              9,
+              78
+            ],
+            [
+              1894,
+              13244,
+              45,
+              0,
+              0,
+              5,
+              3,
+              160,
+              0,
+              0,
+              0
+            ],
+            [
+              6616,
+              900,
+              19213,
+              2,
+              4,
+              3,
+              4,
+              56,
+              249,
+              0,
+              0
+            ],
+            [
+              905,
+              46,
+              0,
+              2129,
+              0,
+              34,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              3280,
+              208,
+              57,
+              60,
+              5705,
+              29,
+              69,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              282,
+              25,
+              4,
+              15,
+              0,
+              1389,
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              932,
+              154,
+              76,
+              0,
+              33,
+              30,
+              3222,
+              0,
+              4,
+              1,
+              1
+            ],
+            [
+              454,
+              71,
+              0,
+              2,
+              0,
+              2,
+              0,
+              1487,
+              300,
+              0,
+              0
+            ],
+            [
+              1767,
+              44,
+              206,
+              3,
+              10,
+              2,
+              0,
+              125,
+              3390,
+              3,
+              3
+            ],
+            [
+              207,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              8,
+              0,
+              863,
+              0
+            ],
+            [
+              529,
+              14,
+              10,
+              0,
+              0,
+              0,
+              0,
+              1,
+              10,
+              30,
+              1205
+            ]
+          ],
+          "row_sums": [
+            369500,
+            15351,
+            27047,
+            3115,
+            9409,
+            1717,
+            4453,
+            2316,
+            5553,
+            1079,
+            1799
+          ],
+          "column_sums": [
+            380966,
+            16553,
+            20632,
+            2221,
+            5772,
+            1561,
+            3459,
+            2939,
+            5041,
+            907,
+            1288
+          ]
+        }
+      },
+      "automated_metadata_status": "PASS",
+      "human_review_pending": [
+        "actual_model_identity",
+        "absence_of_data_leakage",
+        "faithful_character_alignment",
+        "truth_of_inference_timing"
+      ]
+    }
+  ],
+  "excluded": [],
+  "overview": [
+    {
+      "method_name": "BERT-CRF E5",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+      "method_version": "frozen:e5ee6aaa8d4a00a4626553002aa9a63253a8ee0139463fec2bb41427bf391bed",
+      "split": "dev",
+      "data_version": "IMCS-V2-NER platform archive v2",
+      "gold_sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f",
+      "entity_micro_precision": 0.8757432597540116,
+      "entity_micro_recall": 0.9119942319111036,
+      "entity_micro_f1": 0.8935012050195297,
+      "character_accuracy": 0.9705351215278958,
+      "character_micro_f1_excluding_o": 0.9015416460910918,
+      "sentences": 33267,
+      "inference_elapsed_seconds": null,
+      "metadata_status": "NEEDS_REVIEW",
+      "automated_metadata_status": "PASS",
+      "purpose": "model_evaluation",
+      "evaluation_sha256": "b81746f773f9a1f471d98f037dc8d6ce260c906680f1c5fa85a4e77ada097f81",
+      "prediction_sha256": "32001c71c939a2f5f73dfabed044032a1e220548e79b9db7c1c1a1b8e2ac5a4d"
+    },
+    {
+      "method_name": "BERT-Softmax",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_softmax",
+      "method_version": "frozen:93322262dd14252203966cd56499086430a51b13d1112aa0162fcf18b87f6adb",
+      "split": "dev",
+      "data_version": "IMCS-V2-NER platform archive v2",
+      "gold_sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f",
+      "entity_micro_precision": 0.8531953016125822,
+      "entity_micro_recall": 0.9088133005343965,
+      "entity_micro_f1": 0.8801265068901074,
+      "character_accuracy": 0.9705464506875667,
+      "character_micro_f1_excluding_o": 0.9008895738697815,
+      "sentences": 33267,
+      "inference_elapsed_seconds": null,
+      "metadata_status": "NEEDS_REVIEW",
+      "automated_metadata_status": "PASS",
+      "purpose": "model_evaluation",
+      "evaluation_sha256": "dfadabf4a8aecef9fb7861f33269901752223d5229e17d46e98741d460dd1b2d",
+      "prediction_sha256": "f89864650eb08e1333f78781776c9c74e20ec65e815a4348ba396489eee3e51a"
+    },
+    {
+      "method_name": "规则 mc10",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_rule",
+      "method_version": "frozen:e46a19cecc959f80f6aea0adedf8e12f4d78176374a800ea51bc8f1d10ddc85a",
+      "split": "dev",
+      "data_version": "IMCS-V2-NER platform archive v2",
+      "gold_sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f",
+      "entity_micro_precision": 0.7563789752284852,
+      "entity_micro_recall": 0.7757231317329714,
+      "entity_micro_f1": 0.7659289348604451,
+      "character_accuracy": 0.9424659955272477,
+      "character_micro_f1_excluding_o": 0.7843009711675188,
+      "sentences": 33267,
+      "inference_elapsed_seconds": null,
+      "metadata_status": "NEEDS_REVIEW",
+      "automated_metadata_status": "PASS",
+      "purpose": "model_evaluation",
+      "evaluation_sha256": "03be788bfa33e53798095f97568aa7389af28f7ddbca2c3d24cc769854f60440",
+      "prediction_sha256": "61d9bb7e268b37932d16a73b0caac5a8f4b1bc4c8cfd213be1c40d02efe3581b"
+    }
+  ],
+  "entity_types": [
+    {
+      "method_name": "BERT-CRF E5",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+      "entity_type": "Symptom",
+      "precision": 0.8669665413765482,
+      "recall": 0.9165526675786594,
+      "f1": 0.8910702976567447,
+      "tp": 14070,
+      "fp": 2159,
+      "fn": 1281,
+      "support": 15351
+    },
+    {
+      "method_name": "BERT-CRF E5",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+      "entity_type": "Drug",
+      "precision": 0.9462504023173479,
+      "recall": 0.9438202247191011,
+      "f1": 0.9450337512054002,
+      "tp": 2940,
+      "fp": 167,
+      "fn": 175,
+      "support": 3115
+    },
+    {
+      "method_name": "BERT-CRF E5",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+      "entity_type": "Drug_Category",
+      "precision": 0.8962962962962963,
+      "recall": 0.9161327897495631,
+      "f1": 0.9061059907834101,
+      "tp": 1573,
+      "fp": 182,
+      "fn": 144,
+      "support": 1717
+    },
+    {
+      "method_name": "BERT-CRF E5",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+      "entity_type": "Medical_Examination",
+      "precision": 0.8325541861453464,
+      "recall": 0.8458549222797928,
+      "f1": 0.8391518526451061,
+      "tp": 1959,
+      "fp": 394,
+      "fn": 357,
+      "support": 2316
+    },
+    {
+      "method_name": "BERT-CRF E5",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+      "entity_type": "Operation",
+      "precision": 0.8657657657657658,
+      "recall": 0.8906394810009268,
+      "f1": 0.8780264961169484,
+      "tp": 961,
+      "fp": 149,
+      "fn": 118,
+      "support": 1079
+    },
+    {
+      "method_name": "BERT-Softmax",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_softmax",
+      "entity_type": "Symptom",
+      "precision": 0.8490120014547218,
+      "recall": 0.9124487004103967,
+      "f1": 0.8795880561399102,
+      "tp": 14007,
+      "fp": 2491,
+      "fn": 1344,
+      "support": 15351
+    },
+    {
+      "method_name": "BERT-Softmax",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_softmax",
+      "entity_type": "Drug",
+      "precision": 0.9267828843106181,
+      "recall": 0.9386837881219904,
+      "f1": 0.9326953748006379,
+      "tp": 2924,
+      "fp": 231,
+      "fn": 191,
+      "support": 3115
+    },
+    {
+      "method_name": "BERT-Softmax",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_softmax",
+      "entity_type": "Drug_Category",
+      "precision": 0.8382820784729587,
+      "recall": 0.9207920792079208,
+      "f1": 0.8776019983347211,
+      "tp": 1581,
+      "fp": 305,
+      "fn": 136,
+      "support": 1717
+    },
+    {
+      "method_name": "BERT-Softmax",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_softmax",
+      "entity_type": "Medical_Examination",
+      "precision": 0.807075277663513,
+      "recall": 0.8471502590673575,
+      "f1": 0.8266273435854223,
+      "tp": 1962,
+      "fp": 469,
+      "fn": 354,
+      "support": 2316
+    },
+    {
+      "method_name": "BERT-Softmax",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_softmax",
+      "entity_type": "Operation",
+      "precision": 0.8331877729257642,
+      "recall": 0.8841519925857275,
+      "f1": 0.8579136690647482,
+      "tp": 954,
+      "fp": 191,
+      "fn": 125,
+      "support": 1079
+    },
+    {
+      "method_name": "规则 mc10",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_rule",
+      "entity_type": "Symptom",
+      "precision": 0.7681991179846553,
+      "recall": 0.8283499446290143,
+      "f1": 0.7971414242728184,
+      "tp": 12716,
+      "fp": 3837,
+      "fn": 2635,
+      "support": 15351
+    },
+    {
+      "method_name": "规则 mc10",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_rule",
+      "entity_type": "Drug",
+      "precision": 0.8977937865826204,
+      "recall": 0.6401284109149278,
+      "f1": 0.7473763118440779,
+      "tp": 1994,
+      "fp": 227,
+      "fn": 1121,
+      "support": 3115
+    },
+    {
+      "method_name": "规则 mc10",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_rule",
+      "entity_type": "Drug_Category",
+      "precision": 0.8705957719410634,
+      "recall": 0.7914967967384974,
+      "f1": 0.8291641244661379,
+      "tp": 1359,
+      "fp": 202,
+      "fn": 358,
+      "support": 1717
+    },
+    {
+      "method_name": "规则 mc10",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_rule",
+      "entity_type": "Medical_Examination",
+      "precision": 0.4756719972779857,
+      "recall": 0.6036269430051814,
+      "f1": 0.5320647002854424,
+      "tp": 1398,
+      "fp": 1541,
+      "fn": 918,
+      "support": 2316
+    },
+    {
+      "method_name": "规则 mc10",
+      "run_id": "dev_demo_20261027_040355_4582ac8c_rule",
+      "entity_type": "Operation",
+      "precision": 0.9073869900771775,
+      "recall": 0.76274328081557,
+      "f1": 0.8288016112789527,
+      "tp": 823,
+      "fp": 84,
+      "fn": 256,
+      "support": 1079
+    }
+  ],
+  "metric_policy": {
+    "version": "strict-ner-character-v1",
+    "scale": "fractions in [0,1], unrounded",
+    "primary_metric": "entities.micro.f1",
+    "zero_division": 0.0,
+    "entity_identity": [
+      "dialogue_id",
+      "sentence_id",
+      "entity_type",
+      "start",
+      "end"
+    ],
+    "span": "zero-based [start, end), Unicode code points",
+    "entity_matching": "exact type and boundaries within original dialogue and sentence",
+    "entity_micro": "pool TP/FP/FN globally before computing P/R/F1",
+    "bio_policy": "strict, reject invalid BIO without repair",
+    "character_unit": "Python len(str), original Unicode code points, no normalization",
+    "character_accuracy": "all positions including O; correct / total",
+    "character_micro": "sum one-vs-rest TP/FP/FN over selected labels, using all positions",
+    "character_macro": "unweighted mean over all fixed 11 labels (with O) or 10 (without O); absent F1=0",
+    "excluding_o": "exclude O label only, retain O->entity FP and entity->O FN; no position filtering",
+    "confusion_direction": "rows=gold, columns=predicted; fixed labels in characters.confusion_matrix.labels",
+    "support": "gold count for the entity type or character label"
+  }
+}

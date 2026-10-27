@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "purpose": "model_evaluation",
+  "status": "SUCCESS",
+  "created_at": "2026-10-27T04:06:48+08:00",
+  "manifest": {
+    "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation_input.json",
+    "sha256": "b51805ca6e652e413ed24545201a39a8b247aa56072322ae588873d7ec3c20e5"
+  },
+  "directory": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc",
+  "runs": [
+    {
+      "index": 1,
+      "run_id": "dev_demo_20261027_040355_4582ac8c_rule",
+      "method_name": "规则 mc10",
+      "data_path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+      "split": "dev",
+      "prediction_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\prediction\\predictions_dev.json",
+      "run_info_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\run_info.json",
+      "status": "SCORED",
+      "evaluation_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\001\\evaluation.json",
+      "evaluation_sha256": "03be788bfa33e53798095f97568aa7389af28f7ddbca2c3d24cc769854f60440",
+      "metadata_status": "NEEDS_REVIEW",
+      "automated_metadata_status": "PASS",
+      "entity_micro_f1": 0.7659289348604451,
+      "error_export": "PASS"
+    },
+    {
+      "index": 2,
+      "run_id": "dev_demo_20261027_040355_4582ac8c_softmax",
+      "method_name": "BERT-Softmax",
+      "data_path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+      "split": "dev",
+      "prediction_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\prediction\\predictions_dev.json",
+      "run_info_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\run_info.json",
+      "status": "SCORED",
+      "evaluation_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\002\\evaluation.json",
+      "evaluation_sha256": "dfadabf4a8aecef9fb7861f33269901752223d5229e17d46e98741d460dd1b2d",
+      "metadata_status": "NEEDS_REVIEW",
+      "automated_metadata_status": "PASS",
+      "entity_micro_f1": 0.8801265068901074,
+      "error_export": "PASS"
+    },
+    {
+      "index": 3,
+      "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+      "method_name": "BERT-CRF E5",
+      "data_path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+      "split": "dev",
+      "prediction_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\prediction\\predictions_dev.json",
+      "run_info_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\run_info.json",
+      "status": "SCORED",
+      "evaluation_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\003\\evaluation.json",
+      "evaluation_sha256": "b81746f773f9a1f471d98f037dc8d6ce260c906680f1c5fa85a4e77ada097f81",
+      "metadata_status": "NEEDS_REVIEW",
+      "automated_metadata_status": "PASS",
+      "entity_micro_f1": 0.8935012050195297,
+      "error_export": "PASS"
+    }
+  ],
+  "self_check": "PASS",
+  "notice": "Technical scores are retained even with incomplete metadata. Comparison eligibility is checked separately; no claim of fair training.",
+  "comparison": {
+    "status": "COMPARED",
+    "included": 3,
+    "excluded": [],
+    "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\comparison\\comparison.json"
+  },
+  "elapsed_seconds": 8.584853999782354,
+  "implementation": {
+    "check_run_info.py": "ba4cd48b9a02a25da0fde6f5991ad928728c9b26f773caae35ad51e12b03c82c",
+    "compare_evaluations.py": "03eaefb5975f73ce2cc4e4c53776c7d589b3caf4309aadb54e0e4e9e937f5f11",
+    "evaluate_predictions.py": "7c75016ae1f4cc07d4037bfeb39ffb63aaee8d43fc7a1da10c15fe258c3dc173",
+    "evaluation_io.py": "8863d424b22d05ecd1300cda2dce9f382ba043e80c12039471ecb201c1781335",
+    "export_errors.py": "6bf80ffc670b9795f50ef4b6a569373cb8c06432e9d3b01e6b7dba234d81e003",
+    "ner_metrics.py": "5e02e13834e07560a3586038c832a603e675115bf0b3a2d0b8d3ebedf2356074",
+    "run_evaluation_batch.py": "ebbdc4b3eec92d2025b57c70e5ea3cf36b1139b10d83703b96ecf9eab6997327",
+    "validate_predictions.py": "75dc966361d216bdb9500acb63bce6be4313b708136290cd26b1195dfb7c1dcb"
+  }
+}

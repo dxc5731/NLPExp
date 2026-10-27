@@ -1,0 +1,33 @@
+{
+  "argv": [
+    "${PROJECT}\\.venv-bert-crf\\Scripts\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "src/validate_predictions.py",
+    "--data",
+    "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+    "--predictions",
+    "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\prediction\\predictions_dev.json",
+    "--split",
+    "dev",
+    "--report",
+    "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\validation.json"
+  ],
+  "cwd": "${PROJECT}\\evaluation",
+  "started_at": "2026-10-27T04:03:56.406143+08:00",
+  "ended_at": "2026-10-27T04:03:57.663429+08:00",
+  "elapsed_seconds": 1.2572947000153363,
+  "exit_code": 0,
+  "log": {
+    "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule_validation.log",
+    "bytes": 183,
+    "sha256": "5fb2fb21e501fbf46b04929c1348b074143c2df02112ff07bba6ff9fddc8f5f4"
+  },
+  "environment_overrides": {
+    "IMCS_DATA_DIR": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data",
+    "BERT_MODEL_DIR": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\bert-base-chinese",
+    "HF_HUB_OFFLINE": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "artifact_kind": "model_prediction",
+  "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+  "method": {
+    "name": "BERT-CRF E5",
+    "kind": "bert"
+  },
+  "method_version": "frozen:e5ee6aaa8d4a00a4626553002aa9a63253a8ee0139463fec2bb41427bf391bed",
+  "data": {
+    "version": "IMCS-V2-NER platform archive v2",
+    "split": "dev",
+    "source_file": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+    "source_sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f",
+    "archive_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67"
+  },
+  "code": {
+    "revision": "bcdd42777942b5ccbbf1ed14a0d7fc2c0631dce4",
+    "branch": "dxc",
+    "dirty": true,
+    "note": "File snapshots identify untracked application/source code separately.",
+    "snapshot": {
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\source_snapshot.json",
+      "bytes": 17916,
+      "sha256": "ab4c872b98b79750f89adbfe169943892bf1909e9e223b444d20cd683a7a9bbc"
+    }
+  },
+  "config": {
+    "version": "demo_inference_adapter_v1",
+    "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\runtime_config.json",
+    "bytes": 2007,
+    "sha256": "dcef2863b2e9302e346cd53c1ae734fdf6711f8c0931fe7e382dded36a05046c"
+  },
+  "preprocessing": "原始Unicode字符不归一化；输入投影为原对话ID、句ID、文本；Gold不输入模型。",
+  "alignment": {
+    "tokenizer": "冻结Tokenizer，资产逐文件SHA记录",
+    "character_mapping": "冻结字符映射/CRF",
+    "special_tokens": "特殊token与Padding不输出",
+    "long_text": "超出冻结长度或覆盖失败即报错，不截断、不补O"
+  },
+  "prediction": {
+    "file": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\prediction\\predictions_dev.json",
+    "sha256": "32001c71c939a2f5f73dfabed044032a1e220548e79b9db7c1c1a1b8e2ac5a4d"
+  },
+  "logs": [
+    {
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf_inference.log",
+      "bytes": 2490,
+      "sha256": "45779c861b4c180ba6e2917d87f4ed90347f9283466dbcff80acfff02b92be73"
+    }
+  ],
+  "inference_command": "${PROJECT}\\.venv-bert-crf\\Scripts\\python.exe -B -u -X utf8 ${PROJECT}\\.local\\demo_app\\frozen_e5\\infer.py --config ${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\frozen_inference_config.json --project-root ${LOCAL_PARENT}/NLPexp --output ${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\prediction",
+  "inference_working_directory": "${PROJECT}",
+  "inference_elapsed_seconds": 102.54061930021271,
+  "timing_scope": "外层真实子进程墙钟时间，包含导入、资源检查、加载、预测与写盘，不含评分或训练。",
+  "device": "cuda",
+  "environment": {
+    "python": "3.13.5",
+    "packages": {
+      "torch": "2.14.1+cu132",
+      "transformers": "5.20.1",
+      "tokenizers": "0.23.3",
+      "numpy": "2.4.6",
+      "seqeval": "1.2.2"
+    },
+    "cuda": "13.2",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "cuda_available": true
+  },
+  "adaptation_notice": "New run metadata for actual execution; original historical run_info files untouched. Automatic evidence presence checks are not human attestations.",
+  "random_seeds": {
+    "training_seed": 42
+  },
+  "training": {
+    "command": "${PROJECT}\\.venv-bert-crf\\Scripts\\pythonw.exe ${PROJECT}\\scripts\\train_bert_crf.py --config ${PROJECT}\\configs\\bert_crf\\lr_1e-5.json --train --preflight-output ${PROJECT}\\.local\\bert_crf\\20261021T194908+0800_lr1e5_launch\\preflight_training",
+    "model_version": "E5训练source_snapshot及manifest可追溯；checkpoint:e5ee6aaa8d4a00a4626553002aa9a63253a8ee0139463fec2bb41427bf391bed",
+    "data": [
+      {
+        "path": "${PROJECT}\\.local\\bert_crf\\20261019T162653+0800_stage1a\\data\\IMCS-V2_train.json",
+        "bytes": 50868537,
+        "sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24",
+        "split": "train"
+      }
+    ],
+    "logs": [
+      {
+        "path": "${PROJECT}\\experiments\\bert_crf\\20261021T195736+0800_real_training_95abb833\\run.log",
+        "bytes": 7765123,
+        "sha256": "d95f6759feedb3c46a5b6e49bbf5ff9c21156004a6c3367d987b6fdc37990672"
+      }
+    ],
+    "config": {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\training_config.json",
+      "bytes": 5751,
+      "sha256": "3dcb3e0942bdc74b0a8d9f7db3a0a1d44c4b0f36b9fb7b8da3ec16347f77aef0"
+    }
+  }
+}

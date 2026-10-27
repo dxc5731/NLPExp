@@ -1,0 +1,18 @@
+{
+  "reason": "本次推理与统一评分使用同一绝对dev路径；数据字节哈希不变。冻结模型、Tokenizer、字符映射和参数不变。",
+  "original_config": {
+    "path": "${EXTERNAL_AUDIT}/NLPExp_stage1_audit_20261026T231851+0800\\handoff_v1_1_from_zip\\BERT-CRF-LR1e-5-E5-Dev-Test-Handoff-v1.1\\dev\\config\\inference.json",
+    "bytes": 2827,
+    "sha256": "0830b63519bc1a35bde818517956c59aca9ae8f72fd3aa5bdd65502432216324"
+  },
+  "changes": {
+    "run_id": {
+      "before": "20261022T205207+0800_frozen_e5_dev",
+      "after": "dev_demo_20261027_040355_4582ac8c_crf"
+    },
+    "source": {
+      "before": "docs/bert_crf/evidence/20261022T205207+0800_final_dev_test_handoff/data/IMCS-V2_dev.json",
+      "after": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json"
+    }
+  }
+}

@@ -1,0 +1,428 @@
+{
+  "schema_version": "bert_crf_internal_run_v1",
+  "artifact_kind": "real_training",
+  "run_id": "20261021T195736+0800_real_training_95abb833",
+  "status": "completed",
+  "method": "character_bert_crf",
+  "code": {
+    "commit": "f15da70b09dd0d7e1a3946f53bf346146ea5db2f",
+    "dirty_status": "?? configs/bert_crf/lr_1e-5.json",
+    "source_manifest_sha256": "9263f0d77330d6972411ac277be70e1c57683a431c09eb6255d422589afb2dc6",
+    "source_snapshot": "source_snapshot/",
+    "tracked_patch": "tracked_changes.patch"
+  },
+  "config_file": "config.json",
+  "config_sha256": "3253c334d6afecd85263eacbfc6949464fcade17b9a2770067b3d9285d873f75",
+  "environment_file": "environment.json",
+  "random_seed": 42,
+  "started_at": "2026-10-21T19:57:36.873234+08:00",
+  "updated_at": "2026-10-21T21:32:27.735453+08:00",
+  "ended_at": "2026-10-21T21:32:27.735453+08:00",
+  "fit_elapsed_seconds": 5689.893698500004,
+  "data": {
+    "train": {
+      "artifact_kind": "real_training",
+      "internal_split": "train",
+      "source": "official_train_only",
+      "data_version": "IMCS-V2-NER_train_sha256_07cdd379",
+      "split_version": "split_v1_sha256_497f21cf",
+      "input_identity": {
+        "official_train/.": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24",
+        "fixed_split/.": "497f21cf13d8f5accb83f86ffda16a4a59ba716c064ec347e990a219e8957072",
+        "interface/__init__.py": "8b084a9f378124b2b1a51563bf3c22444eb7ff33692017da28b2136ae56987ed",
+        "interface/align.py": "40d63734e9b0eb7da4c6a33c5fb835d35d73442382ac35257c828a7ba7e6ca3e",
+        "interface/config.py": "fbc669c1c807e31ba4ca570a15a3d408c60e48299e61f633a9ef833f94f9c4e3",
+        "interface/data_io.py": "1b2d60df7551f31db7b3987df5c3b5b645659387831c48c2d3de703d068152ef",
+        "interface/dataset.py": "9daae661ad7f8d8752561223c31ed956f1eb4c75c658cbc95c90ca5b16e31349",
+        "interface/labels.py": "bfe9c11aa337c9c4fb7a8157047d1921418b307bae9dceb0f7191e290d3a882c",
+        "interface/metrics.py": "6a74810fb76e187f7aeedfb26e70837b6d2f9815fd38d7ac5c28b8553173f0da",
+        "interface/model.py": "4a2a5d4298a3e70083f2488cae62f1457e5e83654c2d1d8189d83cd209dac480",
+        "interface/split.py": "b666ed7483688630e462ee1f7f43a5855cadb8412a44a67b5d91aad4314c07b5",
+        "tokenizer/config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+        "tokenizer/tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+        "tokenizer/tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+        "tokenizer/vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c",
+        "pretrained/config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+        "pretrained/model.safetensors": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3",
+        "pretrained/README.md": "80efb5c88f6c09c0f4b2f91380852a374f023e195954f21ff7221928487ce454",
+        "pretrained/tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+        "pretrained/tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+        "pretrained/vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+      },
+      "formal_config_identity": "477e710e9e42d5e3c6b15e4ffa46a30884c0d954413f67c0f8d7ac27f8b9be09",
+      "bert_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+      "tokenizer_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+      "num_workers": 0,
+      "sample_identity": "16094cc4625ddc8a424db1f37436e684d7cd28e0f3f1faa6505223aac442e218",
+      "mapping_policy": "offset_share_unique_v1",
+      "offset_unit": "python_unicode_codepoint",
+      "labels": [
+        "O",
+        "B-Symptom",
+        "I-Symptom",
+        "B-Drug",
+        "I-Drug",
+        "B-Drug_Category",
+        "I-Drug_Category",
+        "B-Medical_Examination",
+        "I-Medical_Examination",
+        "B-Operation",
+        "I-Operation"
+      ],
+      "coordinate_check": {
+        "offset_unit": "python_unicode_codepoint",
+        "probe": "non_bmp_v1",
+        "probe_length": 4,
+        "fast_tokenizer_class": "BertTokenizer"
+      }
+    },
+    "validation": {
+      "artifact_kind": "real_validation",
+      "internal_split": "val",
+      "source": "official_train_only",
+      "data_version": "IMCS-V2-NER_train_sha256_07cdd379",
+      "split_version": "split_v1_sha256_497f21cf",
+      "input_identity": {
+        "official_train/.": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24",
+        "fixed_split/.": "497f21cf13d8f5accb83f86ffda16a4a59ba716c064ec347e990a219e8957072",
+        "interface/__init__.py": "8b084a9f378124b2b1a51563bf3c22444eb7ff33692017da28b2136ae56987ed",
+        "interface/align.py": "40d63734e9b0eb7da4c6a33c5fb835d35d73442382ac35257c828a7ba7e6ca3e",
+        "interface/config.py": "fbc669c1c807e31ba4ca570a15a3d408c60e48299e61f633a9ef833f94f9c4e3",
+        "interface/data_io.py": "1b2d60df7551f31db7b3987df5c3b5b645659387831c48c2d3de703d068152ef",
+        "interface/dataset.py": "9daae661ad7f8d8752561223c31ed956f1eb4c75c658cbc95c90ca5b16e31349",
+        "interface/labels.py": "bfe9c11aa337c9c4fb7a8157047d1921418b307bae9dceb0f7191e290d3a882c",
+        "interface/metrics.py": "6a74810fb76e187f7aeedfb26e70837b6d2f9815fd38d7ac5c28b8553173f0da",
+        "interface/model.py": "4a2a5d4298a3e70083f2488cae62f1457e5e83654c2d1d8189d83cd209dac480",
+        "interface/split.py": "b666ed7483688630e462ee1f7f43a5855cadb8412a44a67b5d91aad4314c07b5",
+        "tokenizer/config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+        "tokenizer/tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+        "tokenizer/tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+        "tokenizer/vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c",
+        "pretrained/config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+        "pretrained/model.safetensors": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3",
+        "pretrained/README.md": "80efb5c88f6c09c0f4b2f91380852a374f023e195954f21ff7221928487ce454",
+        "pretrained/tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+        "pretrained/tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+        "pretrained/vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+      },
+      "formal_config_identity": "477e710e9e42d5e3c6b15e4ffa46a30884c0d954413f67c0f8d7ac27f8b9be09",
+      "bert_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+      "tokenizer_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+      "num_workers": 0,
+      "sample_identity": "6a90a4a8bab03d326907c84b751257c8483cc726a78829f95cd3b9a36fd57e38",
+      "mapping_policy": "offset_share_unique_v1",
+      "offset_unit": "python_unicode_codepoint",
+      "labels": [
+        "O",
+        "B-Symptom",
+        "I-Symptom",
+        "B-Drug",
+        "I-Drug",
+        "B-Drug_Category",
+        "I-Drug_Category",
+        "B-Medical_Examination",
+        "I-Medical_Examination",
+        "B-Operation",
+        "I-Operation"
+      ],
+      "coordinate_check": {
+        "offset_unit": "python_unicode_codepoint",
+        "probe": "non_bmp_v1",
+        "probe_length": 4,
+        "fast_tokenizer_class": "BertTokenizer"
+      }
+    }
+  },
+  "training_state": {
+    "epoch": 5,
+    "global_step": 27765,
+    "best_value": 0.8999020863146795,
+    "best_epoch": 5,
+    "bad_epochs": 0,
+    "best_checkpoint": "${PROJECT}\\experiments\\bert_crf\\20261021T195736+0800_real_training_95abb833\\checkpoints\\epoch_0005.pt",
+    "best_checkpoint_sha256": "e5ee6aaa8d4a00a4626553002aa9a63253a8ee0139463fec2bb41427bf391bed"
+  },
+  "last_validation": {
+    "artifact_kind": "real_training",
+    "split": "internal_val",
+    "sentences": 9687,
+    "metrics": {
+      "loss": 0.495046121928669,
+      "sentences": 9687,
+      "characters": 126049,
+      "character_accuracy_including_O": 0.9749779847519615,
+      "protocol": "strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0",
+      "character": {
+        "micro": {
+          "precision": 0.9042121226945844,
+          "recall": 0.9190035799522673,
+          "f1": 0.9115478509604715,
+          "true_positive": 18483,
+          "predicted": 20441,
+          "gold": 20112
+        },
+        "macro": {
+          "precision": 0.903682095960581,
+          "recall": 0.9257747707219641,
+          "f1": 0.9144716026568889
+        },
+        "per_type": {
+          "Symptom": {
+            "precision": 0.8959361052384308,
+            "recall": 0.9095389507154213,
+            "f1": 0.9026862845647114,
+            "true_positive": 11442,
+            "predicted": 12771,
+            "gold": 12580
+          },
+          "Drug": {
+            "precision": 0.9581774906494389,
+            "recall": 0.9575263336731227,
+            "f1": 0.9578518014955812,
+            "true_positive": 2818,
+            "predicted": 2941,
+            "gold": 2943
+          },
+          "Drug_Category": {
+            "precision": 0.9128466327108092,
+            "recall": 0.9232970807097882,
+            "f1": 0.9180421172453044,
+            "true_positive": 1613,
+            "predicted": 1767,
+            "gold": 1747
+          },
+          "Medical_Examination": {
+            "precision": 0.8895348837209303,
+            "recall": 0.9170829170829171,
+            "f1": 0.9030988686669946,
+            "true_positive": 1836,
+            "predicted": 2064,
+            "gold": 2002
+          },
+          "Operation": {
+            "precision": 0.8619153674832962,
+            "recall": 0.9214285714285714,
+            "f1": 0.8906789413118527,
+            "true_positive": 774,
+            "predicted": 898,
+            "gold": 840
+          }
+        }
+      },
+      "entity": {
+        "micro": {
+          "precision": 0.8948472139005392,
+          "recall": 0.9050143917588244,
+          "f1": 0.8999020863146795,
+          "true_positive": 5974,
+          "predicted": 6676,
+          "gold": 6601
+        },
+        "macro": {
+          "precision": 0.8937049549695258,
+          "recall": 0.901096932399206,
+          "f1": 0.8973465368833914
+        },
+        "per_type": {
+          "Symptom": {
+            "precision": 0.8943053401285176,
+            "recall": 0.9075781425680234,
+            "f1": 0.900892857142857,
+            "true_positive": 4036,
+            "predicted": 4513,
+            "gold": 4447
+          },
+          "Drug": {
+            "precision": 0.9263888888888889,
+            "recall": 0.92,
+            "f1": 0.9231833910034603,
+            "true_positive": 667,
+            "predicted": 720,
+            "gold": 725
+          },
+          "Drug_Category": {
+            "precision": 0.9075975359342916,
+            "recall": 0.9020408163265307,
+            "f1": 0.9048106448311156,
+            "true_positive": 442,
+            "predicted": 487,
+            "gold": 490
+          },
+          "Medical_Examination": {
+            "precision": 0.8603531300160514,
+            "recall": 0.8715447154471545,
+            "f1": 0.8659127625201939,
+            "true_positive": 536,
+            "predicted": 623,
+            "gold": 615
+          },
+          "Operation": {
+            "precision": 0.8798798798798799,
+            "recall": 0.904320987654321,
+            "f1": 0.8919330289193304,
+            "true_positive": 293,
+            "predicted": 333,
+            "gold": 324
+          }
+        }
+      }
+    },
+    "elapsed_seconds": 40.30581160006113,
+    "timing_scope": "internal validation loader/adaptation, GPU forward/decode, metrics and JSONL writes; excludes model loading and optimizer updates",
+    "predictions_sha256": "1e93bd9204e5434b2787d557ef7baebc7662218ba2dd3bc8a6328e30dd5b9afa",
+    "errors_sha256": "ae4480417327f2435333c2d13aa779018a7a8a6f3515e6ec4a8fb17ae77edc0f"
+  },
+  "selected_validation": {
+    "artifact_kind": "real_training",
+    "split": "internal_val",
+    "sentences": 9687,
+    "metrics": {
+      "loss": 0.495046121928669,
+      "sentences": 9687,
+      "characters": 126049,
+      "character_accuracy_including_O": 0.9749779847519615,
+      "protocol": "strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0",
+      "character": {
+        "micro": {
+          "precision": 0.9042121226945844,
+          "recall": 0.9190035799522673,
+          "f1": 0.9115478509604715,
+          "true_positive": 18483,
+          "predicted": 20441,
+          "gold": 20112
+        },
+        "macro": {
+          "precision": 0.903682095960581,
+          "recall": 0.9257747707219641,
+          "f1": 0.9144716026568889
+        },
+        "per_type": {
+          "Symptom": {
+            "precision": 0.8959361052384308,
+            "recall": 0.9095389507154213,
+            "f1": 0.9026862845647114,
+            "true_positive": 11442,
+            "predicted": 12771,
+            "gold": 12580
+          },
+          "Drug": {
+            "precision": 0.9581774906494389,
+            "recall": 0.9575263336731227,
+            "f1": 0.9578518014955812,
+            "true_positive": 2818,
+            "predicted": 2941,
+            "gold": 2943
+          },
+          "Drug_Category": {
+            "precision": 0.9128466327108092,
+            "recall": 0.9232970807097882,
+            "f1": 0.9180421172453044,
+            "true_positive": 1613,
+            "predicted": 1767,
+            "gold": 1747
+          },
+          "Medical_Examination": {
+            "precision": 0.8895348837209303,
+            "recall": 0.9170829170829171,
+            "f1": 0.9030988686669946,
+            "true_positive": 1836,
+            "predicted": 2064,
+            "gold": 2002
+          },
+          "Operation": {
+            "precision": 0.8619153674832962,
+            "recall": 0.9214285714285714,
+            "f1": 0.8906789413118527,
+            "true_positive": 774,
+            "predicted": 898,
+            "gold": 840
+          }
+        }
+      },
+      "entity": {
+        "micro": {
+          "precision": 0.8948472139005392,
+          "recall": 0.9050143917588244,
+          "f1": 0.8999020863146795,
+          "true_positive": 5974,
+          "predicted": 6676,
+          "gold": 6601
+        },
+        "macro": {
+          "precision": 0.8937049549695258,
+          "recall": 0.901096932399206,
+          "f1": 0.8973465368833914
+        },
+        "per_type": {
+          "Symptom": {
+            "precision": 0.8943053401285176,
+            "recall": 0.9075781425680234,
+            "f1": 0.900892857142857,
+            "true_positive": 4036,
+            "predicted": 4513,
+            "gold": 4447
+          },
+          "Drug": {
+            "precision": 0.9263888888888889,
+            "recall": 0.92,
+            "f1": 0.9231833910034603,
+            "true_positive": 667,
+            "predicted": 720,
+            "gold": 725
+          },
+          "Drug_Category": {
+            "precision": 0.9075975359342916,
+            "recall": 0.9020408163265307,
+            "f1": 0.9048106448311156,
+            "true_positive": 442,
+            "predicted": 487,
+            "gold": 490
+          },
+          "Medical_Examination": {
+            "precision": 0.8603531300160514,
+            "recall": 0.8715447154471545,
+            "f1": 0.8659127625201939,
+            "true_positive": 536,
+            "predicted": 623,
+            "gold": 615
+          },
+          "Operation": {
+            "precision": 0.8798798798798799,
+            "recall": 0.904320987654321,
+            "f1": 0.8919330289193304,
+            "true_positive": 293,
+            "predicted": 333,
+            "gold": 324
+          }
+        }
+      }
+    },
+    "elapsed_seconds": 40.30581160006113,
+    "timing_scope": "internal validation loader/adaptation, GPU forward/decode, metrics and JSONL writes; excludes model loading and optimizer updates",
+    "predictions_sha256": "1e93bd9204e5434b2787d557ef7baebc7662218ba2dd3bc8a6328e30dd5b9afa",
+    "errors_sha256": "ae4480417327f2435333c2d13aa779018a7a8a6f3515e6ec4a8fb17ae77edc0f"
+  },
+  "executor": "dxc",
+  "training_command": [
+    "${PROJECT}\\.venv-bert-crf\\Scripts\\pythonw.exe",
+    "${PROJECT}\\scripts\\train_bert_crf.py",
+    "--config",
+    "${PROJECT}\\configs\\bert_crf\\lr_1e-5.json",
+    "--train",
+    "--preflight-output",
+    "${PROJECT}\\.local\\bert_crf\\20261021T194908+0800_lr1e5_launch\\preflight_training"
+  ],
+  "alignment": {
+    "policy": "offset_share_unique_v1",
+    "offset_unit": "python_unicode_codepoint",
+    "gold": "original_character_bio",
+    "uncovered": "reject",
+    "overlap": "reject",
+    "truncation": "reject"
+  },
+  "official_handoff": {
+    "status": "not_run",
+    "schema_version": "1.0",
+    "reason": "Internal validation artifacts are not official dev/test predictions"
+  }
+}

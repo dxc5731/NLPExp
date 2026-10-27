@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "execution_id": "softmax_dev_acceptance_20261027T024216+0800",
+  "source_run_id": "lr5e-5_ep3_20261022-151229",
+  "completed_at": "2026-10-27T02:47:01.804889+08:00",
+  "checkpoint": {
+    "path": "${PROJECT}\\runs\\lr5e-5_ep3_20261022-151229\\checkpoints\\best.pt",
+    "exists": true,
+    "bytes": 406810499,
+    "sha256": "93322262dd14252203966cd56499086430a51b13d1112aa0162fcf18b87f6adb"
+  },
+  "metrics": {
+    "tp": 21428,
+    "fp": 3687,
+    "fn": 2150,
+    "precision": 0.8531953016125822,
+    "recall": 0.9088133005343965,
+    "f1": 0.8801265068901074,
+    "support": 23578,
+    "predicted": 25115
+  },
+  "expected_full_precision_metrics": {
+    "tp": 21428,
+    "fp": 3687,
+    "fn": 2150,
+    "precision": 0.8531953016125822,
+    "recall": 0.9088133005343965,
+    "f1": 0.8801265068901074
+  },
+  "counts": {
+    "dialogues": 833,
+    "sentences": 33267,
+    "characters": 441339
+  },
+  "validation": {
+    "path": "${PROJECT}\\runs\\lr5e-5_ep3_20261022-151229\\softmax_dev_acceptance_20261027T024216+0800\\validation_dev.json",
+    "exists": true,
+    "bytes": 4472,
+    "sha256": "c73d3561a14801425f30fd8c8569e9fe7d6a8629619233ee52303e75ec17ccd2"
+  },
+  "evaluation": {
+    "path": "${PROJECT}\\runs\\lr5e-5_ep3_20261022-151229\\softmax_dev_acceptance_20261027T024216+0800\\score\\20261027T024656349612_bzf8acl7\\evaluation.json",
+    "exists": true,
+    "bytes": 16438,
+    "sha256": "f0982b2e9290f8c2d517252ebf11ed847d631413af71267e06180faffdda1402"
+  },
+  "prediction": {
+    "path": "${PROJECT}\\runs\\lr5e-5_ep3_20261022-151229\\softmax_dev_acceptance_20261027T024216+0800\\prediction\\predictions_dev.json",
+    "exists": true,
+    "bytes": 1896728,
+    "sha256": "f89864650eb08e1333f78781776c9c74e20ec65e815a4348ba396489eee3e51a"
+  },
+  "run_info": {
+    "path": "${PROJECT}\\runs\\lr5e-5_ep3_20261022-151229\\softmax_dev_acceptance_20261027T024216+0800\\prediction\\run_info.json",
+    "exists": true,
+    "bytes": 3370,
+    "sha256": "267ef2359b2c10a103980940082b64ea5272a74d13decb60c73b05d179b8addf"
+  },
+  "prediction_comparison": {
+    "dialogue_id_sets_identical": true,
+    "sentence_id_sets_identical": true,
+    "dialogues": 833,
+    "sentences": 33267,
+    "characters": 441339,
+    "different_sentences": 0,
+    "different_character_labels": 0,
+    "all_character_labels_identical": true,
+    "bytes_identical": true,
+    "new": {
+      "path": "${PROJECT}\\runs\\lr5e-5_ep3_20261022-151229\\softmax_dev_acceptance_20261027T024216+0800\\prediction\\predictions_dev.json",
+      "exists": true,
+      "bytes": 1896728,
+      "sha256": "f89864650eb08e1333f78781776c9c74e20ec65e815a4348ba396489eee3e51a"
+    },
+    "original": {
+      "path": "${PROJECT}\\runs\\lr5e-5_ep3_20261022-151229\\predict_dev\\predictions_dev.json",
+      "exists": true,
+      "bytes": 1896728,
+      "sha256": "f89864650eb08e1333f78781776c9c74e20ec65e815a4348ba396489eee3e51a"
+    },
+    "transition_counts": [],
+    "comparison_rule": "Compare same original dialogue_id/sentence_id and each original character position. No text normalization, no label repair in comparison. Source inference BIO repair remains existing algorithm and is logged."
+  },
+  "bio_repairs": 526,
+  "inference_info_elapsed_seconds": 56.75,
+  "inference_pure_seconds": 50.91,
+  "subprocess_elapsed_seconds": 62.69754800014198,
+  "device": "cuda",
+  "checks": {
+    "archive_prefix_matches": true,
+    "checkpoint_sha256_matches": true,
+    "inference_exit_zero": true,
+    "validation_exit_zero": true,
+    "score_exit_zero": true,
+    "full_coverage": true,
+    "reference_counts_metrics_exact": true,
+    "team_rounded_acceptance": true,
+    "new_vs_old_labels_identical": true,
+    "all_original_run_files_unchanged": true,
+    "all_source_files_unchanged": true,
+    "resource_files_unchanged": true,
+    "data_input_unchanged": true
+  },
+  "full_training_executed": false,
+  "original_training_and_inference_files_modified": false,
+  "algorithm_modified": false,
+  "limitations": [
+    "Archive full expected SHA not provided; prefix matched, full actual digest recorded; inner checkpoint exact full historical digest matched.",
+    "Current inference source aggregate differs from historical aggregate; actual per-file hashes are recorded. Exact prediction comparison is checked separately.",
+    "Legacy native run_info format is retained; this acceptance is not a claim that strict batch provenance schema passes."
+  ]
+}

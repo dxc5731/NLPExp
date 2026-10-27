@@ -14,7 +14,6 @@
   "crf_inference_config": "C:/controlled/e5_handoff/dev/config/inference.json",
   "crf_training_run": "C:/path/to/NLPExp/experiments/bert_crf/20261021T195736+0800_real_training_95abb833",
   "original_train": "C:/controlled/imcs/IMCS-V2_train.json",
-  "stage1_audit": "C:/controlled/stage1_audit",
   "demo_runs": "C:/path/to/NLPExp/runs/demo_runs",
   "text_runs": "C:/path/to/NLPExp/runs/demo_text_runs",
   "evidence": "C:/controlled/demo_evidence"

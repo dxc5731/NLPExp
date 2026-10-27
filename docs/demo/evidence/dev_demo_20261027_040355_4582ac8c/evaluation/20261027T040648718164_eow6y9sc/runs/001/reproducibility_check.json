@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.0",
+  "run_id": "dev_demo_20261027_040355_4582ac8c_rule",
+  "method_name": "规则 mc10",
+  "automated_status": "PASS",
+  "status": "NEEDS_REVIEW",
+  "checks": [
+    {
+      "name": "schema_version",
+      "status": "PASS",
+      "message": "Supported metadata schema is 1.0."
+    },
+    {
+      "name": "artifact_kind",
+      "status": "PASS",
+      "message": "Synthetic fixtures and actual predictions must not be interchanged."
+    },
+    {
+      "name": "run_id",
+      "status": "PASS",
+      "message": "Must match manifest run_id."
+    },
+    {
+      "name": "method.name",
+      "status": "PASS",
+      "message": "Must match manifest method name."
+    },
+    {
+      "name": "method.kind",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "method_version",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "data.version",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "preprocessing",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "config.version",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "data.split",
+      "status": "PASS",
+      "message": "Must equal evaluated split."
+    },
+    {
+      "name": "data.source_sha256",
+      "status": "PASS",
+      "message": "Must equal scored gold bytes."
+    },
+    {
+      "name": "data.archive_sha256",
+      "status": "PASS",
+      "message": "Must match evaluated archive; real raw JSON also declares fixed platform archive provenance."
+    },
+    {
+      "name": "data.source_file",
+      "status": "PASS",
+      "message": "Must resolve to the scored source JSON."
+    },
+    {
+      "name": "prediction.sha256",
+      "status": "PASS",
+      "message": "Must match scored prediction bytes."
+    },
+    {
+      "name": "prediction.file",
+      "status": "PASS",
+      "message": "Must identify actual scored file."
+    },
+    {
+      "name": "input_files_unchanged",
+      "status": "PASS",
+      "message": "Actual source and prediction hashes match evaluation."
+    },
+    {
+      "name": "code.version",
+      "status": "PASS",
+      "message": "Provide Git revision+dirty or a local hashed source snapshot."
+    },
+    {
+      "name": "code.snapshot",
+      "status": "PASS",
+      "message": "Local file exists; declared hash checked when required/provided."
+    },
+    {
+      "name": "config.file",
+      "status": "PASS",
+      "message": "Local file exists; declared hash checked when required/provided."
+    },
+    {
+      "name": "logs",
+      "status": "PASS",
+      "message": "Provide at least one inference/evidence log reference."
+    },
+    {
+      "name": "logs[0]",
+      "status": "PASS",
+      "message": "Local file exists; declared hash checked when required/provided."
+    },
+    {
+      "name": "alignment",
+      "status": "PASS",
+      "message": "Describe original-character restoration, or explicitly no tokenizer."
+    },
+    {
+      "name": "inference_command",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "inference_working_directory",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "timing_scope",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "device",
+      "status": "PASS",
+      "message": "Record actual device; synthetic no-inference fixture may use null."
+    },
+    {
+      "name": "environment",
+      "status": "PASS",
+      "message": "Provide Python version and string package versions (empty packages allowed for stdlib rules)."
+    },
+    {
+      "name": "inference_elapsed_seconds",
+      "status": "PASS",
+      "message": "Measured finite nonnegative seconds; synthetic not-executed uses null."
+    },
+    {
+      "name": "training_applicability",
+      "status": "PASS",
+      "message": "Learned methods need training evidence; rules explicitly declare no training/build or supply construction records."
+    },
+    {
+      "name": "seed_applicability",
+      "status": "PASS",
+      "message": "Explicit deterministic/no-randomness declaration required."
+    },
+    {
+      "name": "actual_model_identity",
+      "status": "NEEDS_REVIEW",
+      "message": "Human evidence review required; not proven by this program."
+    },
+    {
+      "name": "absence_of_data_leakage",
+      "status": "NEEDS_REVIEW",
+      "message": "Human evidence review required; not proven by this program."
+    },
+    {
+      "name": "faithful_character_alignment",
+      "status": "NEEDS_REVIEW",
+      "message": "Human evidence review required; not proven by this program."
+    },
+    {
+      "name": "actual_training_reproducibility",
+      "status": "NOT_APPLICABLE",
+      "message": "Not applicable to this declared run."
+    },
+    {
+      "name": "truth_of_inference_timing",
+      "status": "NEEDS_REVIEW",
+      "message": "Human evidence review required; not proven by this program."
+    }
+  ],
+  "evidence": [
+    {
+      "label": "code.snapshot",
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\source_snapshot.json",
+      "sha256": "ab4c872b98b79750f89adbfe169943892bf1909e9e223b444d20cd683a7a9bbc"
+    },
+    {
+      "label": "config.file",
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\runtime_config.json",
+      "sha256": "06307373215877ef68c3b4d5e57eaeb1bffb586d1989a9e8ef07105f1b5a0a35"
+    },
+    {
+      "label": "logs[0]",
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule_inference.log",
+      "sha256": "d74f58186c3923b8dd3eb7d445124f570db5ae6b4babd8b612b15407c06a4200"
+    }
+  ],
+  "inference_elapsed_seconds_for_comparison": null,
+  "notice": "PASS checks file presence, type and consistency only; human claims are not automatically verified.",
+  "run_info": {
+    "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\run_info.json",
+    "sha256": "03c9be0015879bebfe08d2f4264e96c20227f9a861f599b663fc3f4142c5f059"
+  },
+  "method_kind": "rule",
+  "method_version": "frozen:e46a19cecc959f80f6aea0adedf8e12f4d78176374a800ea51bc8f1d10ddc85a",
+  "data_version": "IMCS-V2-NER platform archive v2"
+}

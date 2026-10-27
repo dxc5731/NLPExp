@@ -1,0 +1,5 @@
+1: dev_demo_20261027_040355_4582ac8c_rule: SCORED entity_micro_f1=0.7659289348604451 metadata=NEEDS_REVIEW
+2: dev_demo_20261027_040355_4582ac8c_softmax: SCORED entity_micro_f1=0.8801265068901074 metadata=NEEDS_REVIEW
+3: dev_demo_20261027_040355_4582ac8c_crf: SCORED entity_micro_f1=0.8935012050195297 metadata=NEEDS_REVIEW
+4: SUCCESS self_check= PASS seconds= 8.585
+5: Batch report: ${PROJECT}\runs\demo_runs\dev_demo_20261027_040355_4582ac8c\evaluation\20261027T040648718164_eow6y9sc\batch_report.json

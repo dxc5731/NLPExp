@@ -1,0 +1,35 @@
+{
+  "argv": [
+    "${PROJECT}\\.venv-bert-crf\\Scripts\\python.exe",
+    "-B",
+    "-u",
+    "-X",
+    "utf8",
+    "-m",
+    "src.predict",
+    "--run-id",
+    "lr5e-5_ep3_20261022-151229",
+    "--split",
+    "dev",
+    "--batch-size",
+    "64",
+    "--output-dir",
+    "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\prediction"
+  ],
+  "cwd": "${PROJECT}\\code",
+  "started_at": "2026-10-27T04:03:58.239273+08:00",
+  "ended_at": "2026-10-27T04:05:02.037436+08:00",
+  "elapsed_seconds": 63.7981843999587,
+  "exit_code": 0,
+  "log": {
+    "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax_inference.log",
+    "bytes": 2489,
+    "sha256": "67bb73f2149f4cb504b990524eeb1c084529d76543def1222d32378ccfd4aecd"
+  },
+  "environment_overrides": {
+    "IMCS_DATA_DIR": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data",
+    "BERT_MODEL_DIR": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\bert-base-chinese",
+    "HF_HUB_OFFLINE": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}

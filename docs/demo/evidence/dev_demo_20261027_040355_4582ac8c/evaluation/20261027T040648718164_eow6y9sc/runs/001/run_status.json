@@ -1,0 +1,16 @@
+{
+  "index": 1,
+  "run_id": "dev_demo_20261027_040355_4582ac8c_rule",
+  "method_name": "规则 mc10",
+  "data_path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+  "split": "dev",
+  "prediction_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\prediction\\predictions_dev.json",
+  "run_info_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\run_info.json",
+  "status": "SCORED",
+  "evaluation_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\001\\evaluation.json",
+  "evaluation_sha256": "03be788bfa33e53798095f97568aa7389af28f7ddbca2c3d24cc769854f60440",
+  "metadata_status": "NEEDS_REVIEW",
+  "automated_metadata_status": "PASS",
+  "entity_micro_f1": 0.7659289348604451,
+  "error_export": "PASS"
+}

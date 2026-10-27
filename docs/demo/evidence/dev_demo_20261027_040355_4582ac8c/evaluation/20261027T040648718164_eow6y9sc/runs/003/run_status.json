@@ -1,0 +1,16 @@
+{
+  "index": 3,
+  "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+  "method_name": "BERT-CRF E5",
+  "data_path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+  "split": "dev",
+  "prediction_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\prediction\\predictions_dev.json",
+  "run_info_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\run_info.json",
+  "status": "SCORED",
+  "evaluation_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\003\\evaluation.json",
+  "evaluation_sha256": "b81746f773f9a1f471d98f037dc8d6ce260c906680f1c5fa85a4e77ada097f81",
+  "metadata_status": "NEEDS_REVIEW",
+  "automated_metadata_status": "PASS",
+  "entity_micro_f1": 0.8935012050195297,
+  "error_export": "PASS"
+}

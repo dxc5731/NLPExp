@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "archive": "${PROJECT}\\model_delivery_20261027\\BERT_Final_Frozen_Weights_20261027.zip",
+  "archive_bytes": 1398482444,
+  "archive_sha256": "cd54d1b070d310145e40cd3f6ff74a671e5b2a8a89c91d20aa7f0b893b55ec0c",
+  "zip_crc": "PASS",
+  "archived_checkpoint_sha256": "PASS",
+  "package_files": 64,
+  "full_dev_comparison": "PASS for both models",
+  "original_files_unchanged": true
+}

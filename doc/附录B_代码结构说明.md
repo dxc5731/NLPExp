@@ -1,6 +1,6 @@
 # 附录 B：代码结构说明
 
-> 仓库由三条独立开发的分支合并而成，按模块分目录。顶层共 488 个文件。
+> 仓库由三条独立开发的分支合并而成，按模块分目录。本次交付文件清单以 `docs/delivery/source_files.json` 为准，避免旧计数失效。
 
 ## 顶层目录
 
@@ -9,7 +9,12 @@
 | `code/` | **公共数据 + BERT-Softmax**：切分、子词对齐、Dataset、训练、预测、导出 |
 | `src/` `configs/` `docs/` `tests/` | **BERT-CRF**：模型核心、配置、阶段文档与测试 |
 | `evaluation/` | **统一评估**：预测校验、评分、错误导出、复现证据核查、多模型比较 |
-| `doc/` | 课程文档、组内分工与接口说明、实验记录、耗时参考、附录材料 |
+| `doc/` | 有效组内文档、接口说明、实验记录、耗时参考和附录素材；课程任务书与模板已从交付移除 |
+| `frontend/` `backend/` | 演示前后端；历史成绩在 `backend/resources/history/` |
+| `docs/bert_crf/training_records/` | 四轮五个 run 的原始训练记录与日志摘录 |
+| `docs/report_assets/` | 报告图表、真实数据与绘图脚本 |
+| `docs/frozen_models/` `docs/demo/evidence/` | 冻结包身份、真实运行与验收摘要 |
+| `docs/delivery/` | 来源双哈希、交付清单与打包说明 |
 | `deploy/` | 服务器训练包脚本（setup / run / collect） |
 | `runs/` | 各次实验的配置、日志、指标（权重不入库） |
 | `deploy/` `handoff_packages/` | 交接包与生成工具 |

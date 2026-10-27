@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "kind": "archived_historical_scores",
+  "runs": [
+    {
+      "method_id": "rule",
+      "source_run_id": null,
+      "evidence_type": "current_rescore_of_historical_predictions",
+      "split": "official_dev",
+      "metric_policy": {
+        "version": "strict-ner-character-v1",
+        "scale": "fractions in [0,1], unrounded",
+        "primary_metric": "entities.micro.f1",
+        "zero_division": 0.0,
+        "entity_identity": [
+          "dialogue_id",
+          "sentence_id",
+          "entity_type",
+          "start",
+          "end"
+        ],
+        "span": "zero-based [start, end), Unicode code points",
+        "entity_matching": "exact type and boundaries within original dialogue and sentence",
+        "entity_micro": "pool TP/FP/FN globally before computing P/R/F1",
+        "bio_policy": "strict, reject invalid BIO without repair",
+        "character_unit": "Python len(str), original Unicode code points, no normalization",
+        "character_accuracy": "all positions including O; correct / total",
+        "character_micro": "sum one-vs-rest TP/FP/FN over selected labels, using all positions",
+        "character_macro": "unweighted mean over all fixed 11 labels (with O) or 10 (without O); absent F1=0",
+        "excluding_o": "exclude O label only, retain O->entity FP and entity->O FN; no position filtering",
+        "confusion_direction": "rows=gold, columns=predicted; fixed labels in characters.confusion_matrix.labels",
+        "support": "gold count for the entity type or character label"
+      },
+      "metrics": {
+        "tp": 18290,
+        "fp": 5891,
+        "fn": 5288,
+        "precision": 0.7563789752284852,
+        "recall": 0.7757231317329714,
+        "f1": 0.7659289348604451,
+        "support": 23578,
+        "predicted": 24181
+      },
+      "counts": {
+        "dialogues": 833,
+        "sentences": 33267,
+        "characters": 441339
+      },
+      "evaluation": {
+        "path": "backend/resources/history/rule_evaluation.json",
+        "bytes": 16021,
+        "sha256": "f6239a04bc09f2b591c9d6e461e75ab9575480b1482c4861e579ca59a5e0dced",
+        "original_sha256": "1eae79d0520c4316b7f2686119ddd1fa11355a2db891ccd1306fe56e3d29a780"
+      },
+      "prediction": {
+        "path": "${PROJECT}\\baseline\\out_dev\\pred_rule_min10_dev.json",
+        "sha256": "61d9bb7e268b37932d16a73b0caac5a8f4b1bc4c8cfd213be1c40d02efe3581b"
+      },
+      "gold": {
+        "requested_path": "${PROJECT}\\docs\\bert_crf\\evidence\\20261022T205207+0800_final_dev_test_handoff\\data\\IMCS-V2_dev.json",
+        "path": "${PROJECT}\\docs\\bert_crf\\evidence\\20261022T205207+0800_final_dev_test_handoff\\data\\IMCS-V2_dev.json",
+        "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+      },
+      "validation_status": "PASS",
+      "metadata_status": "FAIL",
+      "automated_metadata_status": "FAIL",
+      "historical_aggregate_exact_match": true,
+      "audit_input_id": "rule_mc10_historical",
+      "source_run_id_note": "Original rule run ID unavailable; rule_mc10_historical is an audit manifest label, not a recorded historical run ID.",
+      "method": "rule"
+    },
+    {
+      "method_id": "bert_softmax",
+      "source_run_id": "lr5e-5_ep3_20261022-151229",
+      "evidence_type": "current_rescore_of_historical_predictions",
+      "split": "official_dev",
+      "metric_policy": {
+        "version": "strict-ner-character-v1",
+        "scale": "fractions in [0,1], unrounded",
+        "primary_metric": "entities.micro.f1",
+        "zero_division": 0.0,
+        "entity_identity": [
+          "dialogue_id",
+          "sentence_id",
+          "entity_type",
+          "start",
+          "end"
+        ],
+        "span": "zero-based [start, end), Unicode code points",
+        "entity_matching": "exact type and boundaries within original dialogue and sentence",
+        "entity_micro": "pool TP/FP/FN globally before computing P/R/F1",
+        "bio_policy": "strict, reject invalid BIO without repair",
+        "character_unit": "Python len(str), original Unicode code points, no normalization",
+        "character_accuracy": "all positions including O; correct / total",
+        "character_micro": "sum one-vs-rest TP/FP/FN over selected labels, using all positions",
+        "character_macro": "unweighted mean over all fixed 11 labels (with O) or 10 (without O); absent F1=0",
+        "excluding_o": "exclude O label only, retain O->entity FP and entity->O FN; no position filtering",
+        "confusion_direction": "rows=gold, columns=predicted; fixed labels in characters.confusion_matrix.labels",
+        "support": "gold count for the entity type or character label"
+      },
+      "metrics": {
+        "tp": 21428,
+        "fp": 3687,
+        "fn": 2150,
+        "precision": 0.8531953016125822,
+        "recall": 0.9088133005343965,
+        "f1": 0.8801265068901074,
+        "support": 23578,
+        "predicted": 25115
+      },
+      "counts": {
+        "dialogues": 833,
+        "sentences": 33267,
+        "characters": 441339
+      },
+      "evaluation": {
+        "path": "backend/resources/history/softmax_evaluation.json",
+        "bytes": 16241,
+        "sha256": "88ec99f664582211ca11fa6c3d8e8dada32cb81f92608882db1ddb5259228d2a",
+        "original_sha256": "283ac98edc7b8a6815de3c346a8e980dc171c66c105d0f625406f753496a9d68"
+      },
+      "prediction": {
+        "path": "${PROJECT}\\runs\\lr5e-5_ep3_20261022-151229\\predict_dev\\predictions_dev.json",
+        "sha256": "f89864650eb08e1333f78781776c9c74e20ec65e815a4348ba396489eee3e51a"
+      },
+      "gold": {
+        "requested_path": "${PROJECT}\\docs\\bert_crf\\evidence\\20261022T205207+0800_final_dev_test_handoff\\data\\IMCS-V2_dev.json",
+        "path": "${PROJECT}\\docs\\bert_crf\\evidence\\20261022T205207+0800_final_dev_test_handoff\\data\\IMCS-V2_dev.json",
+        "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+      },
+      "validation_status": "PASS",
+      "metadata_status": "FAIL",
+      "automated_metadata_status": "FAIL",
+      "historical_aggregate_exact_match": true,
+      "audit_input_id": "lr5e-5_ep3_20261022-151229",
+      "method": "softmax"
+    },
+    {
+      "method_id": "bert_crf",
+      "source_run_id": "20261022T205207+0800_frozen_e5_dev",
+      "evidence_type": "current_rescore_of_historical_predictions",
+      "split": "official_dev",
+      "metric_policy": {
+        "version": "strict-ner-character-v1",
+        "scale": "fractions in [0,1], unrounded",
+        "primary_metric": "entities.micro.f1",
+        "zero_division": 0.0,
+        "entity_identity": [
+          "dialogue_id",
+          "sentence_id",
+          "entity_type",
+          "start",
+          "end"
+        ],
+        "span": "zero-based [start, end), Unicode code points",
+        "entity_matching": "exact type and boundaries within original dialogue and sentence",
+        "entity_micro": "pool TP/FP/FN globally before computing P/R/F1",
+        "bio_policy": "strict, reject invalid BIO without repair",
+        "character_unit": "Python len(str), original Unicode code points, no normalization",
+        "character_accuracy": "all positions including O; correct / total",
+        "character_micro": "sum one-vs-rest TP/FP/FN over selected labels, using all positions",
+        "character_macro": "unweighted mean over all fixed 11 labels (with O) or 10 (without O); absent F1=0",
+        "excluding_o": "exclude O label only, retain O->entity FP and entity->O FN; no position filtering",
+        "confusion_direction": "rows=gold, columns=predicted; fixed labels in characters.confusion_matrix.labels",
+        "support": "gold count for the entity type or character label"
+      },
+      "metrics": {
+        "tp": 21503,
+        "fp": 3051,
+        "fn": 2075,
+        "precision": 0.8757432597540116,
+        "recall": 0.9119942319111036,
+        "f1": 0.8935012050195297,
+        "support": 23578,
+        "predicted": 24554
+      },
+      "counts": {
+        "dialogues": 833,
+        "sentences": 33267,
+        "characters": 441339
+      },
+      "evaluation": {
+        "path": "backend/resources/history/crf_evaluation.json",
+        "bytes": 16508,
+        "sha256": "3eb4ab984ba9478636fc243fcfcd669cf0dc66f0eef539c8a44decf5d05c9ba1",
+        "original_sha256": "4e6f0af0cfd9230a56a2130f642808c03876b9f45cade7993bc8be898bf6cb17"
+      },
+      "prediction": {
+        "path": "${EXTERNAL_AUDIT}/NLPExp_stage1_audit_20261026T231851+0800\\handoff_v1_1_from_zip\\BERT-CRF-LR1e-5-E5-Dev-Test-Handoff-v1.1\\dev\\predictions_dev.json",
+        "sha256": "32001c71c939a2f5f73dfabed044032a1e220548e79b9db7c1c1a1b8e2ac5a4d"
+      },
+      "gold": {
+        "requested_path": "${PROJECT}\\docs\\bert_crf\\evidence\\20261022T205207+0800_final_dev_test_handoff\\data\\IMCS-V2_dev.json",
+        "path": "${PROJECT}\\docs\\bert_crf\\evidence\\20261022T205207+0800_final_dev_test_handoff\\data\\IMCS-V2_dev.json",
+        "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+      },
+      "validation_status": "PASS",
+      "metadata_status": "FAIL",
+      "automated_metadata_status": "FAIL",
+      "historical_aggregate_exact_match": true,
+      "audit_input_id": "20261022T205207+0800_frozen_e5_dev",
+      "method": "crf"
+    }
+  ]
+}

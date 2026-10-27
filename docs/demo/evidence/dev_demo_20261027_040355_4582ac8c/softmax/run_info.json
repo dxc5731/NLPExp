@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "artifact_kind": "model_prediction",
+  "run_id": "dev_demo_20261027_040355_4582ac8c_softmax",
+  "method": {
+    "name": "BERT-Softmax",
+    "kind": "bert"
+  },
+  "method_version": "frozen:93322262dd14252203966cd56499086430a51b13d1112aa0162fcf18b87f6adb",
+  "data": {
+    "version": "IMCS-V2-NER platform archive v2",
+    "split": "dev",
+    "source_file": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+    "source_sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f",
+    "archive_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67"
+  },
+  "code": {
+    "revision": "bcdd42777942b5ccbbf1ed14a0d7fc2c0631dce4",
+    "branch": "dxc",
+    "dirty": true,
+    "note": "File snapshots identify untracked application/source code separately.",
+    "snapshot": {
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\source_snapshot.json",
+      "bytes": 17916,
+      "sha256": "ab4c872b98b79750f89adbfe169943892bf1909e9e223b444d20cd683a7a9bbc"
+    }
+  },
+  "config": {
+    "version": "demo_inference_adapter_v1",
+    "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\runtime_config.json",
+    "bytes": 1922,
+    "sha256": "5009072030b695a4fbd3e602f38c4c3cd9d4aaaef0f02d496cc54668fbf9a094"
+  },
+  "preprocessing": "原始Unicode字符不归一化；输入投影为原对话ID、句ID、文本；Gold不输入模型。",
+  "alignment": {
+    "tokenizer": "冻结Tokenizer，资产逐文件SHA记录",
+    "character_mapping": "复用原词片offset恢复",
+    "special_tokens": "特殊token与Padding不输出",
+    "long_text": "超出冻结长度或覆盖失败即报错，不截断、不补O"
+  },
+  "prediction": {
+    "file": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\prediction\\predictions_dev.json",
+    "sha256": "f89864650eb08e1333f78781776c9c74e20ec65e815a4348ba396489eee3e51a"
+  },
+  "logs": [
+    {
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax_inference.log",
+      "bytes": 2489,
+      "sha256": "67bb73f2149f4cb504b990524eeb1c084529d76543def1222d32378ccfd4aecd"
+    }
+  ],
+  "inference_command": "${PROJECT}\\.venv-bert-crf\\Scripts\\python.exe -B -u -X utf8 -m src.predict --run-id lr5e-5_ep3_20261022-151229 --split dev --batch-size 64 --output-dir ${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\prediction",
+  "inference_working_directory": "${PROJECT}\\code",
+  "inference_elapsed_seconds": 63.7981843999587,
+  "timing_scope": "外层真实子进程墙钟时间，包含导入、资源检查、加载、预测与写盘，不含评分或训练。",
+  "device": "cuda",
+  "environment": {
+    "python": "3.13.5",
+    "packages": {
+      "torch": "2.14.1+cu132",
+      "transformers": "5.20.1",
+      "tokenizers": "0.23.3",
+      "numpy": "2.4.6",
+      "seqeval": "1.2.2"
+    },
+    "cuda": "13.2",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "cuda_available": true
+  },
+  "adaptation_notice": "New run metadata for actual execution; original historical run_info files untouched. Automatic evidence presence checks are not human attestations.",
+  "random_seeds": {
+    "training_seed": 42
+  },
+  "training": {
+    "command": "原组员记录：python -m src.train --run-id lr5e-5_ep3_20261022-151229；实际参数见原config.json",
+    "model_version": "组员冻结checkpoint:93322262dd14252203966cd56499086430a51b13d1112aa0162fcf18b87f6adb；原训练Git revision未提供",
+    "data": [
+      {
+        "path": "${PROJECT}\\.local\\bert_crf\\20261019T162653+0800_stage1a\\data\\IMCS-V2_train.json",
+        "bytes": 50868537,
+        "sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24",
+        "split": "train"
+      }
+    ],
+    "logs": [
+      {
+        "path": "${PROJECT}\\runs\\lr5e-5_ep3_20261022-151229\\train.log",
+        "bytes": 2624,
+        "sha256": "f7dd89210d7d8c3bba08a49c4550167b22bccd82ab8d53cc990b2ea78d765194"
+      }
+    ],
+    "config": {
+      "path": "${PROJECT}\\runs\\lr5e-5_ep3_20261022-151229\\config.json",
+      "bytes": 1562,
+      "sha256": "af61cb9c19c926dd94157645b65891a735aec49016b0f5910c85d67efdc02bc9"
+    }
+  }
+}

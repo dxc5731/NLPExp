@@ -1,0 +1,494 @@
+{
+  "schema_version": "dev_demo_v1",
+  "run_id": "dev_demo_20261027_040355_4582ac8c",
+  "kind": "full_official_dev_new_inference",
+  "status": "completed",
+  "started_at": "2026-10-27T04:03:55.504159+08:00",
+  "ended_at": "2026-10-27T04:06:57.385993+08:00",
+  "runner_pid": 1028,
+  "git": {
+    "revision": "bcdd42777942b5ccbbf1ed14a0d7fc2c0631dce4",
+    "branch": "dxc",
+    "dirty": true,
+    "note": "File snapshots identify untracked application/source code separately."
+  },
+  "split": "official_dev",
+  "data": {
+    "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+    "bytes": 17175331,
+    "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+  },
+  "methods": {
+    "rule": {
+      "method": "rule",
+      "name": "规则 mc10",
+      "status": "completed",
+      "stage": "完成",
+      "metrics": {
+        "tp": 18290,
+        "fp": 5891,
+        "fn": 5288,
+        "precision": 0.7563789752284852,
+        "recall": 0.7757231317329714,
+        "f1": 0.7659289348604451,
+        "support": 23578,
+        "predicted": 24181
+      },
+      "exit_codes": {
+        "inference": 0,
+        "validation": 0,
+        "batch": 0
+      },
+      "artifacts": {
+        "prediction": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\prediction\\predictions_dev.json",
+          "bytes": 1775521,
+          "sha256": "61d9bb7e268b37932d16a73b0caac5a8f4b1bc4c8cfd213be1c40d02efe3581b"
+        },
+        "validation": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\validation.json",
+          "bytes": 4451,
+          "sha256": "d9d6982a7be44314c3b5222ec766d401ed6b9893b517a86031627e2593475339"
+        },
+        "run_info": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\run_info.json",
+          "bytes": 3532,
+          "sha256": "03c9be0015879bebfe08d2f4264e96c20227f9a861f599b663fc3f4142c5f059"
+        },
+        "evaluation": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\001\\evaluation.json",
+          "bytes": 17161,
+          "sha256": "03be788bfa33e53798095f97568aa7389af28f7ddbca2c3d24cc769854f60440"
+        },
+        "metadata_check": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\001\\reproducibility_check.json",
+          "bytes": 6627,
+          "sha256": "e4969fbe99fa528ff419af36ada963f7ba6c4078dda5834f2975e086cdc5eb3c"
+        },
+        "error_summary": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\001\\errors\\error_summary.json",
+          "bytes": 2879,
+          "sha256": "8c04efc7d906649b2b12a1001a506528a6597f08435877618be16ccd24eb9155"
+        }
+      },
+      "started_at": "2026-10-27T04:03:55.946267+08:00",
+      "assets": [
+        {
+          "path": "${PROJECT}\\baseline\\dict\\dict_drug.txt",
+          "bytes": 26885,
+          "sha256": "e46a19cecc959f80f6aea0adedf8e12f4d78176374a800ea51bc8f1d10ddc85a"
+        },
+        {
+          "path": "${PROJECT}\\baseline\\dict\\dict_drug_category.txt",
+          "bytes": 10657,
+          "sha256": "0f90297b52932dd09ea6df2fc4420508cb5a9eddde4a3e5a8be2128c5e3e81b6"
+        },
+        {
+          "path": "${PROJECT}\\baseline\\dict\\dict_exam.txt",
+          "bytes": 12317,
+          "sha256": "41dc1f3bc4a580d5db20f690411ea5d4a7c379ce4704a5b01f0cdbc0132488bd"
+        },
+        {
+          "path": "${PROJECT}\\baseline\\dict\\dict_operation.txt",
+          "bytes": 5435,
+          "sha256": "6b0fdb04ea0b40e1b0dca9a766e58350893f7570c65d608bfd7cdc52864031cc"
+        },
+        {
+          "path": "${PROJECT}\\baseline\\dict\\dict_symptom.txt",
+          "bytes": 104863,
+          "sha256": "3205c35782283837594fe758113e099fd50071b30f72287600da310d037714d3"
+        }
+      ],
+      "per_type": {
+        "Symptom": {
+          "tp": 12716,
+          "fp": 3837,
+          "fn": 2635,
+          "precision": 0.7681991179846553,
+          "recall": 0.8283499446290143,
+          "f1": 0.7971414242728184,
+          "support": 15351,
+          "predicted": 16553
+        },
+        "Drug": {
+          "tp": 1994,
+          "fp": 227,
+          "fn": 1121,
+          "precision": 0.8977937865826204,
+          "recall": 0.6401284109149278,
+          "f1": 0.7473763118440779,
+          "support": 3115,
+          "predicted": 2221
+        },
+        "Drug_Category": {
+          "tp": 1359,
+          "fp": 202,
+          "fn": 358,
+          "precision": 0.8705957719410634,
+          "recall": 0.7914967967384974,
+          "f1": 0.8291641244661379,
+          "support": 1717,
+          "predicted": 1561
+        },
+        "Medical_Examination": {
+          "tp": 1398,
+          "fp": 1541,
+          "fn": 918,
+          "precision": 0.4756719972779857,
+          "recall": 0.6036269430051814,
+          "f1": 0.5320647002854424,
+          "support": 2316,
+          "predicted": 2939
+        },
+        "Operation": {
+          "tp": 823,
+          "fp": 84,
+          "fn": 256,
+          "precision": 0.9073869900771775,
+          "recall": 0.76274328081557,
+          "f1": 0.8288016112789527,
+          "support": 1079,
+          "predicted": 907
+        }
+      },
+      "counts": {
+        "dialogues": 833,
+        "sentences": 33267,
+        "characters": 441339
+      },
+      "metadata_status": "NEEDS_REVIEW",
+      "automated_metadata_status": "PASS",
+      "ended_at": "2026-10-27T04:06:57.350504+08:00"
+    },
+    "softmax": {
+      "method": "softmax",
+      "name": "BERT-Softmax",
+      "status": "completed",
+      "stage": "完成",
+      "metrics": {
+        "tp": 21428,
+        "fp": 3687,
+        "fn": 2150,
+        "precision": 0.8531953016125822,
+        "recall": 0.9088133005343965,
+        "f1": 0.8801265068901074,
+        "support": 23578,
+        "predicted": 25115
+      },
+      "exit_codes": {
+        "inference": 0,
+        "validation": 0,
+        "batch": 0
+      },
+      "artifacts": {
+        "prediction": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\prediction\\predictions_dev.json",
+          "bytes": 1896728,
+          "sha256": "f89864650eb08e1333f78781776c9c74e20ec65e815a4348ba396489eee3e51a"
+        },
+        "validation": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\validation.json",
+          "bytes": 4454,
+          "sha256": "3c171346c8e2fad91fa8e4b27a8ef89cceaa7408ff34d4ad6847a5df9153dd23"
+        },
+        "run_info": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\softmax\\run_info.json",
+          "bytes": 4442,
+          "sha256": "edb59744ee988efa05ad4d1550c41a9e036268f798bca8f07138a2c45c37a693"
+        },
+        "evaluation": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\002\\evaluation.json",
+          "bytes": 17160,
+          "sha256": "dfadabf4a8aecef9fb7861f33269901752223d5229e17d46e98741d460dd1b2d"
+        },
+        "metadata_check": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\002\\reproducibility_check.json",
+          "bytes": 9090,
+          "sha256": "ed44926edd4a37a4146d4f64dc63fb5406051992a85fa31181f2afd833f06d04"
+        },
+        "error_summary": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\002\\errors\\error_summary.json",
+          "bytes": 2887,
+          "sha256": "11ab90eed440a1e652d2ea26c5db00fbca6b4efb1c1f826945316c47d5c09273"
+        }
+      },
+      "started_at": "2026-10-27T04:03:57.697703+08:00",
+      "assets": [
+        {
+          "path": "${PROJECT}\\runs\\lr5e-5_ep3_20261022-151229\\checkpoints\\best.pt",
+          "bytes": 406810499,
+          "sha256": "93322262dd14252203966cd56499086430a51b13d1112aa0162fcf18b87f6adb"
+        },
+        {
+          "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\bert-base-chinese\\config.json",
+          "bytes": 624,
+          "sha256": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c"
+        },
+        {
+          "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\bert-base-chinese\\model.safetensors",
+          "bytes": 411553788,
+          "sha256": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3"
+        },
+        {
+          "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\bert-base-chinese\\tokenizer.json",
+          "bytes": 268943,
+          "sha256": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae"
+        },
+        {
+          "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\bert-base-chinese\\tokenizer_config.json",
+          "bytes": 49,
+          "sha256": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8"
+        },
+        {
+          "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\bert-base-chinese\\vocab.txt",
+          "bytes": 109540,
+          "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+        }
+      ],
+      "per_type": {
+        "Symptom": {
+          "tp": 14007,
+          "fp": 2491,
+          "fn": 1344,
+          "precision": 0.8490120014547218,
+          "recall": 0.9124487004103967,
+          "f1": 0.8795880561399102,
+          "support": 15351,
+          "predicted": 16498
+        },
+        "Drug": {
+          "tp": 2924,
+          "fp": 231,
+          "fn": 191,
+          "precision": 0.9267828843106181,
+          "recall": 0.9386837881219904,
+          "f1": 0.9326953748006379,
+          "support": 3115,
+          "predicted": 3155
+        },
+        "Drug_Category": {
+          "tp": 1581,
+          "fp": 305,
+          "fn": 136,
+          "precision": 0.8382820784729587,
+          "recall": 0.9207920792079208,
+          "f1": 0.8776019983347211,
+          "support": 1717,
+          "predicted": 1886
+        },
+        "Medical_Examination": {
+          "tp": 1962,
+          "fp": 469,
+          "fn": 354,
+          "precision": 0.807075277663513,
+          "recall": 0.8471502590673575,
+          "f1": 0.8266273435854223,
+          "support": 2316,
+          "predicted": 2431
+        },
+        "Operation": {
+          "tp": 954,
+          "fp": 191,
+          "fn": 125,
+          "precision": 0.8331877729257642,
+          "recall": 0.8841519925857275,
+          "f1": 0.8579136690647482,
+          "support": 1079,
+          "predicted": 1145
+        }
+      },
+      "counts": {
+        "dialogues": 833,
+        "sentences": 33267,
+        "characters": 441339
+      },
+      "metadata_status": "NEEDS_REVIEW",
+      "automated_metadata_status": "PASS",
+      "ended_at": "2026-10-27T04:06:57.361742+08:00"
+    },
+    "crf": {
+      "method": "crf",
+      "name": "BERT-CRF E5",
+      "status": "completed",
+      "stage": "完成",
+      "metrics": {
+        "tp": 21503,
+        "fp": 3051,
+        "fn": 2075,
+        "precision": 0.8757432597540116,
+        "recall": 0.9119942319111036,
+        "f1": 0.8935012050195297,
+        "support": 23578,
+        "predicted": 24554
+      },
+      "exit_codes": {
+        "inference": 0,
+        "validation": 0,
+        "batch": 0
+      },
+      "artifacts": {
+        "inference_config": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\frozen_inference_config.json",
+          "bytes": 2859,
+          "sha256": "17dbaa6d7d54b05debdb6ab4e130a2427f9529394fe9db9339dc98acf0803f5f"
+        },
+        "path_adaptation": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\path_adaptation.json",
+          "bytes": 872,
+          "sha256": "e52724ea79c13981a8ee65801e55ddd3d29ba925939bac1fe4049e8ab5042a8c"
+        },
+        "prediction": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\prediction\\predictions_dev.json",
+          "bytes": 2033991,
+          "sha256": "32001c71c939a2f5f73dfabed044032a1e220548e79b9db7c1c1a1b8e2ac5a4d"
+        },
+        "validation": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\validation.json",
+          "bytes": 4450,
+          "sha256": "eb0b80c0289907ffe2970386a31fc165f8faab1ac4667ff9576702971ed612fb"
+        },
+        "run_info": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\run_info.json",
+          "bytes": 4789,
+          "sha256": "839ca3918988844654418d36aea4321cb6309a2c55fb0dad204d65625679ab54"
+        },
+        "evaluation": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\003\\evaluation.json",
+          "bytes": 17142,
+          "sha256": "b81746f773f9a1f471d98f037dc8d6ce260c906680f1c5fa85a4e77ada097f81"
+        },
+        "metadata_check": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\003\\reproducibility_check.json",
+          "bytes": 9109,
+          "sha256": "c73003ce5fcb507414c74773d77c64260ab0198593e064fb00186dc059800723"
+        },
+        "error_summary": {
+          "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\003\\errors\\error_summary.json",
+          "bytes": 2878,
+          "sha256": "f38f35f7a4261b3fc409d3bf9f24a4c47ddc8e5c412c3f5449ba9956fbe00d76"
+        }
+      },
+      "started_at": "2026-10-27T04:05:03.538421+08:00",
+      "assets": [
+        {
+          "path": "${PROJECT}\\experiments\\bert_crf\\20261021T195736+0800_real_training_95abb833\\checkpoints\\epoch_0005.pt",
+          "bytes": 1220509451,
+          "sha256": "e5ee6aaa8d4a00a4626553002aa9a63253a8ee0139463fec2bb41427bf391bed"
+        },
+        {
+          "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\training_config.json",
+          "bytes": 5751,
+          "sha256": "3dcb3e0942bdc74b0a8d9f7db3a0a1d44c4b0f36b9fb7b8da3ec16347f77aef0"
+        },
+        {
+          "path": "${PROJECT}\\.local\\bert_crf\\20261019T162653+0800_stage1a\\tokenizer\\config.json",
+          "bytes": 624,
+          "sha256": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c"
+        },
+        {
+          "path": "${PROJECT}\\.local\\bert_crf\\20261019T162653+0800_stage1a\\tokenizer\\tokenizer.json",
+          "bytes": 268943,
+          "sha256": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae"
+        },
+        {
+          "path": "${PROJECT}\\.local\\bert_crf\\20261019T162653+0800_stage1a\\tokenizer\\tokenizer_config.json",
+          "bytes": 49,
+          "sha256": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8"
+        },
+        {
+          "path": "${PROJECT}\\.local\\bert_crf\\20261019T162653+0800_stage1a\\tokenizer\\vocab.txt",
+          "bytes": 109540,
+          "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+        },
+        {
+          "path": "${PROJECT}\\.local\\bert_crf\\20261019T174356+0800_stage1b\\pretrained\\config.json",
+          "bytes": 624,
+          "sha256": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c"
+        }
+      ],
+      "per_type": {
+        "Symptom": {
+          "tp": 14070,
+          "fp": 2159,
+          "fn": 1281,
+          "precision": 0.8669665413765482,
+          "recall": 0.9165526675786594,
+          "f1": 0.8910702976567447,
+          "support": 15351,
+          "predicted": 16229
+        },
+        "Drug": {
+          "tp": 2940,
+          "fp": 167,
+          "fn": 175,
+          "precision": 0.9462504023173479,
+          "recall": 0.9438202247191011,
+          "f1": 0.9450337512054002,
+          "support": 3115,
+          "predicted": 3107
+        },
+        "Drug_Category": {
+          "tp": 1573,
+          "fp": 182,
+          "fn": 144,
+          "precision": 0.8962962962962963,
+          "recall": 0.9161327897495631,
+          "f1": 0.9061059907834101,
+          "support": 1717,
+          "predicted": 1755
+        },
+        "Medical_Examination": {
+          "tp": 1959,
+          "fp": 394,
+          "fn": 357,
+          "precision": 0.8325541861453464,
+          "recall": 0.8458549222797928,
+          "f1": 0.8391518526451061,
+          "support": 2316,
+          "predicted": 2353
+        },
+        "Operation": {
+          "tp": 961,
+          "fp": 149,
+          "fn": 118,
+          "precision": 0.8657657657657658,
+          "recall": 0.8906394810009268,
+          "f1": 0.8780264961169484,
+          "support": 1079,
+          "predicted": 1110
+        }
+      },
+      "counts": {
+        "dialogues": 833,
+        "sentences": 33267,
+        "characters": 441339
+      },
+      "metadata_status": "NEEDS_REVIEW",
+      "automated_metadata_status": "PASS",
+      "ended_at": "2026-10-27T04:06:57.373894+08:00"
+    }
+  },
+  "logs": "run.log",
+  "training_executed": false,
+  "artifacts": {
+    "batch_report": {
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\batch_report.json",
+      "bytes": 4867,
+      "sha256": "46bf8073b3cd597a3b9cd7e2adf89d6ab31553fc5748297a77a71a2af82e931b"
+    },
+    "comparison": {
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\comparison\\comparison.json",
+      "bytes": 47144,
+      "sha256": "77b5c9ac7ea08711dacc8ef10c78c74d2e011a4dd88fcd097bddf87b54a3ca2f"
+    }
+  },
+  "frontend": "http://127.0.0.1:5173",
+  "source_snapshot": {
+    "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\source_snapshot.json",
+    "bytes": 17916,
+    "sha256": "ab4c872b98b79750f89adbfe169943892bf1909e9e223b444d20cd683a7a9bbc"
+  },
+  "batch_exit_code": 0,
+  "batch_status": "SUCCESS",
+  "elapsed_seconds": 181.77910139993764
+}

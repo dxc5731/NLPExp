@@ -1,0 +1,92 @@
+{
+  "scope": "repository_cleanup_static_validation_no_model_execution",
+  "status": "PASS",
+  "base_main": "57253be8cd5ce34fba2d1ec38aaf88770cc02c47",
+  "approved_deletions": [
+    "doc/老师的文档/课程项目任务书_20261013_codex.md",
+    "doc/老师的文档/贡献声明表_20261013_codex.md",
+    "doc/老师的文档/项目报告模板_20261013_codex.md",
+    "scripts/build_report_v02.py",
+    "scripts/make_report_section4.py",
+    "scripts/read_docx.py",
+    "scripts/sync_section6.py",
+    "课程项目任务书_20261013_codex.md",
+    "贡献声明_学号_姓名.md",
+    "贡献声明表_20261013_codex.md",
+    "项目报告模板_20261013_codex.md"
+  ],
+  "source_provenance_records_verified": 128,
+  "training_runs": 5,
+  "complete_epochs": 20,
+  "numeric_fields_matched_to_history": 180,
+  "docx_sha256": "dd1e1694d93b8b6a27fe9163ccb920d7f32099c66227b71b3bb59585537b4b08",
+  "report_png_matches": [
+    {
+      "path": "docs/report_assets/figures/architecture.png",
+      "sha256": "b9fa498519e3746cf02b2e7d3d81f27fea5e60b3b95f5bc710fe0eb6439a1610",
+      "docx_member": "word/media/image4.png"
+    },
+    {
+      "path": "docs/report_assets/figures/auxiliary_loss.png",
+      "sha256": "9373b09a3f34900afb71a696c80edbd5243e05eb6124e6f0c6224b5a603d1323",
+      "docx_member": "word/media/image11.png"
+    },
+    {
+      "path": "docs/report_assets/figures/best_and_ablation.png",
+      "sha256": "c32a40208ac8d10202fdf513c4b9d8a9a2eac1919126fe4ce8a97c2593379942",
+      "docx_member": "word/media/image8.png"
+    },
+    {
+      "path": "docs/report_assets/figures/cpu_acceptance_original.png",
+      "sha256": "c678684989668a250992f810e620ee78b24892a27fa38dc21c3fc924a13afc79",
+      "docx_member": "word/media/image13.png"
+    },
+    {
+      "path": "docs/report_assets/figures/crf_loss.png",
+      "sha256": "e43f9f7b067c87e587ac431dca957f52a181683b9c4e8d2df61edddcba409a67",
+      "docx_member": "word/media/image9.png"
+    },
+    {
+      "path": "docs/report_assets/figures/crf_val_f1.png",
+      "sha256": "d9e571571aafc4a352ef7208eb6d4730ebf31f7c56fd989cf599fc86a8045031",
+      "docx_member": "word/media/image10.png"
+    },
+    {
+      "path": "docs/report_assets/figures/official_dev.png",
+      "sha256": "8c5392253c9b561d863d4a44ed20d8c7720d10ab54216c94e0ff92335cc560fb",
+      "docx_member": "word/media/image12.png"
+    },
+    {
+      "path": "docs/report_assets/figures/timeline.png",
+      "sha256": "fd5837dc8d526066e6c7d6edb374361c4bf2bc9d7288be3cdea18eca23f92a67",
+      "docx_member": "word/media/image7.png"
+    }
+  ],
+  "abstract_characters_including_punctuation": 282,
+  "original_dxc_git_state_unchanged": true,
+  "backend_unittests": {
+    "passed": 17,
+    "new_prediction_executed": false
+  },
+  "packaging_unittests": {
+    "passed": 6
+  },
+  "plot_script": {
+    "status": "PASS",
+    "outputs": 14,
+    "note": "Initial bundled Python lacked matplotlib; rerun with existing isolated document-tool matplotlib produced seven PNG and seven SVG in a new external directory."
+  },
+  "not_executed": [
+    "training",
+    "model_inference",
+    "dev_scoring",
+    "frontend_backend_start_stop",
+    "browser_automation"
+  ],
+  "remaining_submission_items": [
+    "final_report_pdf_with_AI_statement",
+    "each_member_contribution",
+    "leader_identity_and_video_final_review"
+  ],
+  "note": "Historical model execution results remain separately archived; this PASS only describes the checks listed here."
+}

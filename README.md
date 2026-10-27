@@ -1,167 +1,117 @@
 # NLPExp — IMCS-V2-NER 医疗命名实体识别
 
-《自然语言处理》课程项目，方向 **B：信息抽取 / 序列标注**。
+《自然语言处理》课程项目：对中文医疗对话进行逐字符 BIO 标注，比较规则 mc10、BERT-Softmax、字符级 BERT-CRF。五类实体为 Symptom、Drug、Drug_Category、Medical_Examination、Operation。原始对话/句子 ID、字符、空格及标点保持不变。
 
-- **数据**：IMCS-V2-NER（CBLUE 医疗基准，公开数据集，[天池入口](https://tianchi.aliyun.com/dataset/95414)）
-- **任务**：给定医患对话中的一句话，为每个字符打 BIO 标签，识别 5 类实体
-  （症状 / 药物 / 药物类别 / 检查 / 操作）
-- **交付**：逐字符 BIO 预测，双层 ID 结构 `对话ID -> 句子ID -> 标签串`
+## 交付范围与资源
 
-## 一条命令复现
+本 main 分支保留完整源码、正式预测、评分、训练与分析证据、演示应用和复现说明。**当前是源码交付状态，正式报告 PDF、每人贡献声明按组内安排稍后补入**；不保留老师的任务书/模板或未定稿个人声明。最终交一个 ZIP，≤50 MB；模型、数据集、录屏、虚拟环境、Checkpoint 不进 ZIP。
 
-**前提**：Python 3.9+，装好 `code/requirements.txt` 里的依赖（torch 需按 CUDA 版本另装）。
-数据和模型**不随仓库分发**，按下面第 0 步准备。
+- 数据：[IMCS-V2-NER 天池入口](https://tianchi.aliyun.com/dataset/95414)。下载并解压后设置 `IMCS_DATA_DIR`；官方 dev 为 833 对话、33,267 句、441,339 字符。
+- 冻结双模型：[百度网盘，提取码 uknn](https://pan.baidu.com/s/1-KdQfJJLQTruKY_d5DM3pw?pwd=uknn)。大小、SHA-256、原始验收见 [冻结模型说明](docs/frozen_models/README.md)。微调 checkpoint 与从头训练所需的预训练 BERT 本体是不同资源。
+- [演示视频，提取码 qa8w](https://pan.baidu.com/s/1TDMxuzl9h9-0VCLm4Us4FQ?pwd=qa8w)。以上两个网盘地址来自本人已填的报告；链接内容/访问权限本轮未联网验收。
+- [项目摘要](项目摘要.md)；[交付与打包说明](docs/delivery/README.md)；[新增材料来源和双哈希](docs/delivery/provenance.json)。
 
-```bash
-# 0) 准备：下载预训练模型（约 400MB）；数据从天池下载后解压到 doc/数据/IMCS-V2-NER/IMCS-V2-NER/
-python reproduce.py --download-model
+## 一条命令与预期输出
 
-# 1) 只检查环境和数据（约 5 秒）
-python reproduce.py --check
-
-# 2) 快速复现（约 2 分钟）：验证流程与输出是否对得上
-python reproduce.py --quick
-
-# 3) 全量复现（A800 约 11 分钟 / RTX 4060 约 71 分钟）：复现主结果
-python reproduce.py --full
-```
-
-**预期输出**（seed = 42）：
-
-| 模式 | 阶段 | 预期值 | 容差 |
-|---|---|---|---|
-| quick | 单元测试 | 13 passed | — |
-| quick | 验证集实体 F1（100 段对话、1 轮） | 0.7228 | ±0.06 |
-| quick | 官方校验器 | PASS，errors = 0 | 精确 |
-| full | 验证集实体 F1（全量 88842 句、3 轮） | 0.8885 | ±0.005 |
-| full | dev 实体 F1 | 0.8801 | ±0.005 |
-
-**看到什么算成功**：脚本最后打印的汇总表全部 `PASS`，退出码为 0。
-
-**随机种子**：`seed = 42`，同时固定 Python / NumPy / PyTorch 种子并开启 `cudnn.deterministic`。
-同机器、同环境下重跑结果一致；不同 GPU 之间可能有 ±0.001 量级差异。
-
-**没有 GPU 也能跑**：`--check` 与 `--quick` 在 CPU 上可用（`--quick` 约 5—10 分钟），
-`--full` 建议在 GPU 上跑。
-
-**耗时参考**：见 [`doc/耗时参考.md`](doc/耗时参考.md)。
-
-## 仓库结构
-
-本项目由多条各自独立开发的分支合并而成，按模块分目录：
-
-| 目录 | 模块 | 内容 |
-|---|---|---|
-| `baseline/` | 规则 / 词典基线 | 训练集实体词典、最长匹配、阈值与组合策略、错误分析 |
-| `code/` | 公共数据 + BERT-Softmax | 数据切分与子词对齐、Dataset/DataLoader、BERT 微调、dev/test 预测导出 |
-| `src/` `configs/` `tests/` `docs/` | BERT-CRF | 字符级 CRF、BIO 硬约束、训练器与阶段验收记录 |
-| `handoff_packages/` | BERT-CRF 结果包 | dev/test 预测、run_info、评分与复现证据（**zip 形式，见目录内 README**） |
-| `evaluation/` | 统一评估 | 预测格式校验、实体级/字符级评分、错误导出、复现证据核查、多模型比较 |
-| `doc/` | 文档 | 课程文档、组内分工、接口说明、实验记录、附录材料 |
-| `deploy/` | 服务器脚本 | 训练包打包与运行脚本 |
-
-## 三种方法的预测产物在哪
-
-| 方法 | 预测文件 | dev 实体 F1 |
-|---|---|---:|
-| 规则 / 词典基线 | [`baseline/out_dev/pred_rule_min10_dev.json`](baseline/out_dev/pred_rule_min10_dev.json) | 0.7659 |
-| BERT-Softmax | [`runs/lr5e-5_ep3_20261022-151229/predict_dev/predictions_dev.json`](runs/lr5e-5_ep3_20261022-151229/predict_dev/predictions_dev.json) | 0.8801 |
-| BERT-CRF | [`handoff_packages/`](handoff_packages/README.md) 内 v1.1 压缩包的 `dev/predictions_dev.json` | 0.8935 |
-
-三份预测都在 dev 上、用 `evaluation/` 的同一个评分器计算，口径一致。
-
-各模块的详细说明：
-
-- 规则基线：[`baseline/`](baseline/)、[`RESULTS.md`](RESULTS.md)
-- BERT-Softmax：`doc/组内有用的文档/BERT数据接口说明_v2.md`
-- BERT-CRF：代码 [`src/bert_crf/`](src/bert_crf/)、阶段记录 [`docs/bert_crf/README.md`](docs/bert_crf/README.md)、**结果包 [`handoff_packages/README.md`](handoff_packages/README.md)**
-- 评估：[`evaluation/README.md`](evaluation/README.md)
-
-## 快速开始（规则基线，无需 GPU）
-
-```bash
-# 数据放项目根 IMCS-V2-NER/，程序会自动找到
-python baseline/run_rule.py 10 min10
-```
-
-结果与参数对比见 [`RESULTS.md`](RESULTS.md)。
-
-## 快速开始（BERT-Softmax 模块）
-
-**第 0 步：准备数据和模型（两者都不在仓库里）**
+**已配置完整本地演示资源**时，在项目根目录用 ML 环境的 Python 执行：
 
 ```powershell
-# 数据集：从 https://tianchi.aliyun.com/dataset/95414 下载后解压到
-#   doc/数据/IMCS-V2-NER/IMCS-V2-NER/    （或设 IMCS_DATA_DIR 指向它）
-
-# 预训练模型：下载 bert-base-chinese 到 code/models/bert-base-chinese/
-#   （或设 BERT_MODEL_DIR 指向已下载的模型目录）
-$env:BERT_MODEL_DIR = 'D:\models\bert-base-chinese'
-$env:IMCS_DATA_DIR  = 'D:\datasets\IMCS-V2-NER\IMCS-V2-NER'
+python -B -X utf8 scripts/run_dev_demo.py --split dev --methods rule,softmax,crf
 ```
 
-没设对的话，程序会直接告诉你缺哪个目录、该设哪个变量，不会抛底层库的奇怪报错。
+真实调用三条路线，创建新的 `runs/demo_runs/dev_demo_<时间>_<随机串>/`，生成各路线 `prediction/predictions_dev.json`、`validation.json`、`run_info.json`，以及统一 `evaluation/`、manifest 和日志。完整成功退出 0，部分成功 2，失败/中断 1。它只推理、校验、评分，不训练；配置方法见 [演示使用说明](docs/demo/使用说明.md)。**干净下载的仓库不含本机 runtime 或模型，不能跳过资源准备直接执行该命令。**
 
-**第 1 步：装依赖并跑单元测试**
+新机器优先按 [冻结模型指南](docs/frozen_models/README.md) 使用网盘完整包的相对路径入口进行 Softmax/CRF 推理，无需还原作者机器路径。前端可先以历史浏览模式启动；实时演示的旧适配器仍需配置原模型布局。
 
-```bash
-cd code
-pip install -r requirements.txt          # torch 需按 CUDA 版本另装
-python -m unittest discover -s tests -v  # 13 个单元测试，约 12 秒
+无需模型、数据和第三方依赖的一条交付检查命令：
+
+```powershell
+python -B -X utf8 scripts/package_delivery.py --check
 ```
 
-**第 2 步：训练与预测**
+预期输出 `status: PASS` 及检查文件数量，仅核验源码交付清单和压缩包成员；这不是模型运行验收。
 
-```bash
-python -m src.train --lr 5e-5 --epochs 3             # 训练
-python -m src.predict --run-id <run_id> --split dev  # 推理导出
+## 历史正式结果
+
+以下是**已有真实运行** `dev_demo_20261027_040355_4582ac8c` 的官方 dev 严格实体级评分，非网页预填的本次成绩。本次仓库整理未重新预测、训练或评分。
+
+| 路线 | Precision | Recall | Micro-F1 | TP | FP | FN |
+|---|---:|---:|---:|---:|---:|---:|
+| 规则 mc10 | 75.6379% | 77.5723% | 76.5929% | 18,290 | 5,891 | 5,288 |
+| BERT-Softmax | 85.3195% | 90.8813% | 88.0127% | 21,428 | 3,687 | 2,150 |
+| BERT-CRF E5 | 87.5743% | 91.1994% | 89.3501% | 21,503 | 3,051 | 2,075 |
+
+[日志、校验、评分与预测定位](docs/demo/evidence/README.md)。自动元数据检查 PASS 与人工 `NEEDS_REVIEW` 分开保留；第一阶段旧 run_info 的 FAIL 也未改写。内部 val 用于选模，不能当作官方 dev；test 无公开金标，不提供 test F1。
+
+## 环境与依赖
+
+| 用途 | 环境与安装依据 |
+|---|---|
+| 交付检查、统一评估 | Python 标准库；`evaluation/` 不要求 GPU |
+| 演示后端 | Python 3.12；`python -m pip install -r backend/requirements.lock.txt` |
+| 前端 | 已有验收 Node 24 / npm 11；进入 `frontend` 后 `npm.cmd ci` |
+| 双模型冻结包 | 历史验收 Python 3.13.5、torch 2.14.1+cu132、CUDA 13.2、transformers 5.20.1、tokenizers 0.23.3、RTX 5060 Laptop；详见包内 requirements 与指南 |
+| Softmax 从头训练 | `code/requirements.txt`（服务器环境另见 `code/requirements-server.txt`）；原训练环境与冻结验收环境分开记录，torch 的 CUDA wheel 需用对应官方索引 |
+| CRF 从头训练 | `docs/bert_crf/requirements-stage1a.lock.txt` 和 `configs/bert_crf/`，正式训练实际环境见各 run 的 environment.json |
+
+正式两种 BERT 训练随机种子均为 **42**；数据切分种子 42。规则冻结匹配无随机过程。其他 seed 对照仍保留在原实验目录，不能混称正式权重。不同环境结果若有差异，应保留实际预测和说明，不改分数强行对齐。
+
+## 前端与后端
+
+在项目根目录准备后端，在前端目录安装依赖：
+
+```powershell
+py -3.12 -m venv .local/demo_backend_env
+..localdemo_backend_envScriptspython.exe -m pip install -r backend/requirements.lock.txt
+Set-Location frontend
+npm.cmd ci
+Set-Location ..
 ```
 
-## 快速开始（BERT-CRF）
+两个终端分别运行 `.scriptsstart_demo_backend.cmd` 和 `.scriptsstart_demo_frontend.cmd`，访问 http://127.0.0.1:5173 。未配置私有模型也能查看仓库自带的历史成绩和 CRF 四轮分析；资源状态如实显示缺失。完整 dev 只由终端命令触发；网页短文本功能必须配置真实模型，未配置时明确拒绝。未提供已核验官方原句时不显示金标，不上传原医疗文本。[完整使用说明](docs/demo/使用说明.md)。
 
-代码在 `src/bert_crf/`，配置在 `configs/bert_crf/`，**结果在 [`handoff_packages/`](handoff_packages/README.md) 的 v1.1 包里**
-（dev 实体 F1 **0.8935**，P 0.8757 / R 0.9120）。
+## 从头训练与独立评估
 
-权重与原始数据不公开，需要向模块负责人索取（E5 checkpoint 约 1.2GB，SHA-256 见包内 `reproduce/README.md`）。
+从头训练需要另备原训练数据与 bert-base-chinese 预训练本体。以下训练命令与冻结推理不同，本轮没有执行：
 
-```bash
-# 单元测试（不需要权重）
-python -m pytest tests/bert_crf -q
-
-# 启动前预检：检查数据与资源，不训练
+```powershell
+python reproduce.py --check             # 仅检查 Softmax 环境和数据
+python reproduce.py --download-model    # 下载预训练模型，需要联网
+python reproduce.py --quick             # 会训练：100段对话、1轮
+python reproduce.py --full              # 会训练：Softmax全量训练与评估
 python scripts/train_bert_crf.py --config configs/bert_crf/lr_1e-5.json --preflight
-
-# 正式训练：需要已授权的数据与权重，必须显式加 --train
 python scripts/train_bert_crf.py --config configs/bert_crf/lr_1e-5.json --train
 ```
 
-推理复现（生成 dev/test 预测）见包内 `reproduce/README.md`，或直接用 v1.1 包里已冻结的
-`dev/predictions_dev.json`、`test/predictions_test.json`。
+不带参数的 `reproduce.py` 默认进入 quick 训练；只想检查时必须显式使用 `--check`。
 
-阶段记录与四轮实验对照见 [`docs/bert_crf/README.md`](docs/bert_crf/README.md)。
+训练配置、耗时口径、原复现记录见 [原附录 A](doc/附录A_复现指南.md)、[耗时参考](doc/耗时参考.md)、[CRF 文档](docs/bert_crf/README.md)。当前 CRF 源码保留第四轮辅助头能力；正式 E5 推理必须用匹配冻结源码，不能拿辅助头权重替代。
 
-## 评估模块
+任一新预测均可用同一评估器（替换尖括号路径，输出选新目录）：
 
-```bash
-cd evaluation
-python -X utf8 src/validate_predictions.py --data <数据> --predictions <预测> --split dev --report <报告>
-python -X utf8 src/evaluate_predictions.py --data <数据> --predictions <预测> --split dev --purpose model_evaluation
-python -X utf8 src/check_run_info.py --evaluation <评分结果> --run-info <run_info.json> --run-id <id> --method <方法名> --output-dir <输出>
+```powershell
+python -X utf8 evaluation/src/validate_predictions.py --data <官方dev.json> --predictions <新预测.json> --split dev --report <新目录/validation.json>
+python -X utf8 evaluation/src/evaluate_predictions.py --data <官方dev.json> --predictions <新预测.json> --split dev --purpose model_evaluation --output-dir <新评分目录>
 ```
 
-## 约定
+仅评分旧预测不能称为模型新推理。指标采用类型与 `[start,end)` 边界完全匹配，字符坐标为原 Unicode 码点。[评估模块说明](evaluation/README.md)。
 
-- 原始医疗数据、模型权重、Checkpoint、虚拟环境**不入库**，只用链接或路径定位。
-- 官方 **dev 不参与训练、调参或模型选择**，只用于最终预测与报告。
-- 原始对话 ID 和句子 ID 原样保留，不重新编号；每个原始字符一个标签（含标点与空格）。
-- 各模块的 AI 使用范围与程序验证方式见各自文档；正式实验设计、结果分析与个人贡献声明由组员本人完成。
+## 仓库结构与实验材料
 
-## 训练数据研究与评分核验
+| 路径 | 内容 |
+|---|---|
+| `baseline/` | 冻结五类词表、匹配逻辑、阈值/组合实验及正式结果；[RESULTS.md](RESULTS.md) |
+| `code/`、`runs/` | 公共数据接口、Softmax 训练/推理、原配置和记录（不含权重） |
+| `src/bert_crf/`、`configs/bert_crf/`、`tests/bert_crf/` | CRF 实现、配置与测试 |
+| `docs/bert_crf/training_records/` | 四轮五个 run 的 history/config/metrics、源版本、日志摘录及中断恢复记录 |
+| `docs/bert_crf/analysis/`、`docs/bert_crf/figures/` | 原四轮分析和图表 |
+| `docs/report_assets/` | 报告实际使用的 8 张 PNG、7 张 SVG、20 Epoch 数据及绘图脚本 |
+| `docs/frozen_models/` | 双模型网盘包说明、权重身份与历史验收，不含权重或重复推理源码 |
+| `docs/demo/evidence/` | 代表性全量 dev 和 Softmax 冻结验收的公开摘要 |
+| `backend/resources/history/` | 可移植历史评分资源，不依赖仓库外审计目录 |
+| `frontend/`、`backend/`、`scripts/start_demo_*.cmd` | 本地演示应用 |
+| `evaluation/` | 统一评估、数据研究、真实与合成核验记录 |
+| `handoff_packages/` | 既有 CRF 正式结果包，保留其版本及来源，不重复上传同一预测 |
+| `doc/`、`deploy/` | 已有有效实验文档、接口规范和服务器训练脚本 |
 
-[研究成果](evaluation/research/data_study/README.md)包含内部训练集的聚合统计、4 张 PNG/SVG 图、5 份 CSV、研究脚本与 19 项测试，以及八个人工评分场景的手算 / 本项目 / 作者实体评分对照。
-[数据来源核查](evaluation/research/data_study/天池与GitHub数据来源核查.md)说明平台 ZIP 与作者仓库的实际版本及标注差异。
-
-## 复现
-
-复现步骤与 2026-10-25 的实测记录见 [`doc/附录A_复现指南.md`](doc/附录A_复现指南.md)，
-代码结构说明见 [`doc/附录B_代码结构说明.md`](doc/附录B_代码结构说明.md)。
+其他成员的已有研究、训练日志、分析及贡献证据继续保留。清理仅移除批准的旧工具和课程模板；历史文档中相关引用作为历史保留，当前入口以本 README 为准。

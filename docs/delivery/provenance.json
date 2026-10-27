@@ -1,0 +1,1287 @@
+{
+  "schema_version": 1,
+  "base_main": "57253be8cd5ce34fba2d1ec38aaf88770cc02c47",
+  "policy": "Historical source identities are retained. Public copies may redact paths; no model execution during repository cleanup. Original files were not modified.",
+  "files": [
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T185424+0800_real_training_71838655/history.csv",
+      "source_bytes": 576,
+      "source_sha256": "22b0b3630b5e12b156b113e8aea3ab9855299414dcd3754bcf1000c0f23ec3db",
+      "published_path": "docs/bert_crf/training_records/20261020T185424+0800_real_training_71838655/history.csv",
+      "published_bytes": 573,
+      "published_sha256": "ea9406af8ba2195b2e14d3303b6fe4c6ede0e408ea7d2002d1d01110769818ae",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T185424+0800_real_training_71838655/config.json",
+      "source_bytes": 7462,
+      "source_sha256": "042cb049dd5df4f9c839d263bcc8d120dc08310320498bf1fc1d7be0a9223b5e",
+      "published_path": "docs/bert_crf/training_records/20261020T185424+0800_real_training_71838655/config.json",
+      "published_bytes": 7247,
+      "published_sha256": "da9faef06191162103967fbcb3c50eeee62eaefbd0d79b53fb7f216068f9d567",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T185424+0800_real_training_71838655/metrics.json",
+      "source_bytes": 3633,
+      "source_sha256": "337bf64182c5524a62c134809e2de0e1c52cecb9743a021feed3441940f096e0",
+      "published_path": "docs/bert_crf/training_records/20261020T185424+0800_real_training_71838655/metrics.json",
+      "published_bytes": 3508,
+      "published_sha256": "368269a201f49467276cd84e39bfbafea8720372dcf4a8001feb383c6385a0e9",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T185424+0800_real_training_71838655/environment.json",
+      "source_bytes": 585,
+      "source_sha256": "0203343c176a7cdbc6ac008b7227fdbe2b8d92eb7e986894282b2833990116d7",
+      "published_path": "docs/bert_crf/training_records/20261020T185424+0800_real_training_71838655/environment.json",
+      "published_bytes": 552,
+      "published_sha256": "520563b7c75d5b7c30f3fa9744156685d086836e4c9bb5a46b2c2cd234a1dde8",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T185424+0800_real_training_71838655/source_manifest.json",
+      "source_bytes": 3778,
+      "source_sha256": "c50a837bc37f75a08106607ee61af31a9ce285811820d140a6e3b4fe539aca43",
+      "published_path": "docs/bert_crf/training_records/20261020T185424+0800_real_training_71838655/source_manifest.json",
+      "published_bytes": 3740,
+      "published_sha256": "1dd3bea6f4384bcf391779daa08af7498217d9752e48ab1fa773a002fef2479a",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T185424+0800_real_training_71838655/checkpoint_info.json",
+      "source_bytes": 670,
+      "source_sha256": "7bbbaa85944bfef2889d4c4f256a0bea9af3da86af6aea678fdac059ee7be59c",
+      "published_path": "docs/bert_crf/training_records/20261020T185424+0800_real_training_71838655/checkpoint_info.json",
+      "published_bytes": 631,
+      "published_sha256": "a6b3cba5eb30a9fcaf146c5065fd0d28df67c7c3a2a6c7b2a76df144ceb02a66",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T185424+0800_real_training_71838655/run_info.json",
+      "source_bytes": 13750,
+      "source_sha256": "9ca88eebb5d124c8194f27a3310b1a49e1c33024023570ada2b013f907904907",
+      "published_path": "docs/bert_crf/training_records/20261020T185424+0800_real_training_71838655/run_info.json",
+      "published_bytes": 13364,
+      "published_sha256": "b6ecbf0c20051d695da2d2e5bb9669a748bf942a9dc69f1e5f18ff58798b35a0",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T185424+0800_real_training_71838655/run_manifest.json",
+      "source_bytes": 17891,
+      "source_sha256": "c4c62ad948dabe11c86286ea887e9204ed8ab68712c798a291b174d0e65e03e4",
+      "published_path": "docs/bert_crf/training_records/20261020T185424+0800_real_training_71838655/run_manifest.json",
+      "published_bytes": 17417,
+      "published_sha256": "abee7b01e67ca2b2a96f7a8a3fb475d7a7df6fda562b9e1b5da86e7ca78ccbb6",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T185424+0800_real_training_71838655/interruption.json",
+      "source_bytes": 3225,
+      "source_sha256": "465f1471ed5e23aac813940b22233899199b0dd8994b940a422c9540b591f16c",
+      "published_path": "docs/bert_crf/training_records/20261020T185424+0800_real_training_71838655/interruption.json",
+      "published_bytes": 3109,
+      "published_sha256": "1a702cd6785d47cb9ca02798be1efb1f2d1acad014c2f845ccf13e79ade03169",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T185424+0800_real_training_71838655/interruption.md",
+      "source_bytes": 3558,
+      "source_sha256": "a62b0f379be458f82274f8a58989fcb5e8e7156f04cbf3a807cda3876e464f18",
+      "published_path": "docs/bert_crf/training_records/20261020T185424+0800_real_training_71838655/interruption.md",
+      "published_bytes": 3558,
+      "published_sha256": "a62b0f379be458f82274f8a58989fcb5e8e7156f04cbf3a807cda3876e464f18",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "CRF日志摘录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T185424+0800_real_training_71838655/run.log",
+      "source_bytes": 3549914,
+      "source_sha256": "b016319de89500df5e8820e9869feea875b81f9f07263f58431657eaf030b99b",
+      "published_path": "docs/bert_crf/training_records/20261020T185424+0800_real_training_71838655/training_events.jsonl",
+      "published_bytes": 7397,
+      "published_sha256": "7510cecab9e477a740b33ed2cf11945bf8ba12ffdf028e34d47770e70ce438ad",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization; selected or adapted content"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T215116+0800_real_training_76608cc3/history.csv",
+      "source_bytes": 760,
+      "source_sha256": "81d99474a35d5807ddf700f0e39f25f2166ce9ad14c28e62dda6d0aec96ef078",
+      "published_path": "docs/bert_crf/training_records/20261020T215116+0800_real_training_76608cc3/history.csv",
+      "published_bytes": 756,
+      "published_sha256": "0e30e82e95dc3c2c5402d1fc66bbdbbb198ac5e716cfbac69505bf35322bae9a",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T215116+0800_real_training_76608cc3/config.json",
+      "source_bytes": 7462,
+      "source_sha256": "042cb049dd5df4f9c839d263bcc8d120dc08310320498bf1fc1d7be0a9223b5e",
+      "published_path": "docs/bert_crf/training_records/20261020T215116+0800_real_training_76608cc3/config.json",
+      "published_bytes": 7247,
+      "published_sha256": "da9faef06191162103967fbcb3c50eeee62eaefbd0d79b53fb7f216068f9d567",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T215116+0800_real_training_76608cc3/metrics.json",
+      "source_bytes": 4013,
+      "source_sha256": "0feff9d678908c58646e3828893d369edc5ca6b1487c7443fd247ba6d8d6eb83",
+      "published_path": "docs/bert_crf/training_records/20261020T215116+0800_real_training_76608cc3/metrics.json",
+      "published_bytes": 3871,
+      "published_sha256": "7b4e14819cefe3f0ca1df62a0c7a5712950bb89e12c7a43b6cb9503d1c3416e2",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T215116+0800_real_training_76608cc3/environment.json",
+      "source_bytes": 586,
+      "source_sha256": "09a8148fe251096b5c5119dcba7a6152eacbbfe084f9a30856a9b4c626c95bb6",
+      "published_path": "docs/bert_crf/training_records/20261020T215116+0800_real_training_76608cc3/environment.json",
+      "published_bytes": 553,
+      "published_sha256": "082b56626ff510c5adb4bb0700a341f8611039262206329117227a928f871cbf",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T215116+0800_real_training_76608cc3/source_manifest.json",
+      "source_bytes": 3778,
+      "source_sha256": "c50a837bc37f75a08106607ee61af31a9ce285811820d140a6e3b4fe539aca43",
+      "published_path": "docs/bert_crf/training_records/20261020T215116+0800_real_training_76608cc3/source_manifest.json",
+      "published_bytes": 3740,
+      "published_sha256": "1dd3bea6f4384bcf391779daa08af7498217d9752e48ab1fa773a002fef2479a",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T215116+0800_real_training_76608cc3/checkpoint_info.json",
+      "source_bytes": 670,
+      "source_sha256": "d61f102169ee49de973349af43fc6c94838f2399196d3f62fee56ba2ac856fe3",
+      "published_path": "docs/bert_crf/training_records/20261020T215116+0800_real_training_76608cc3/checkpoint_info.json",
+      "published_bytes": 631,
+      "published_sha256": "9906c2b4c61b794bbf916c39b518471e4183476e70fdc4242668e770639803e6",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T215116+0800_real_training_76608cc3/run_info.json",
+      "source_bytes": 17742,
+      "source_sha256": "79e0009f1f94de6ecd6d374c0d889ecf5ead834e370bb86579651a54cf41f819",
+      "published_path": "docs/bert_crf/training_records/20261020T215116+0800_real_training_76608cc3/run_info.json",
+      "published_bytes": 17234,
+      "published_sha256": "5c353595fa04fd142ec04e0772563e7cad571ea8a0e05b7b259a395c05efa7a5",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T215116+0800_real_training_76608cc3/run_manifest.json",
+      "source_bytes": 18382,
+      "source_sha256": "3554ebe1f24464665e6555dd665fb265de3494f7c02f57b1e51e53a5beb88249",
+      "published_path": "docs/bert_crf/training_records/20261020T215116+0800_real_training_76608cc3/run_manifest.json",
+      "published_bytes": 17875,
+      "published_sha256": "128b1dcddb83140f019b6df303beb4ae8b60427a445780e3e124cff63b23837a",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T215116+0800_real_training_76608cc3/resume_launch.json",
+      "source_bytes": 6575,
+      "source_sha256": "8a73d83b5c3e02350fe07f7448df53450626ef2e6b701d663adcd2b34eeb212c",
+      "published_path": "docs/bert_crf/training_records/20261020T215116+0800_real_training_76608cc3/resume_launch.json",
+      "published_bytes": 6021,
+      "published_sha256": "2cc2fdb1f1e60cf5f94b3f71624739cd9abfec36eb1f2e9947295401d234d1e5",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF日志摘录",
+      "source": "${PROJECT}/experiments/bert_crf/20261020T215116+0800_real_training_76608cc3/run.log",
+      "source_bytes": 4677971,
+      "source_sha256": "ed93cf131b55dcdd22cf7f694bc2d297d27942182ffdab9c52c41d4b47a847c0",
+      "published_path": "docs/bert_crf/training_records/20261020T215116+0800_real_training_76608cc3/training_events.jsonl",
+      "published_bytes": 10945,
+      "published_sha256": "1cffc3fb71351011faa0060a6a1dc0d8bc887abeb180f50f50e5d7d3e6ccb495",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization; selected or adapted content"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T004808+0800_real_training_8aad7b72/history.csv",
+      "source_bytes": 1159,
+      "source_sha256": "e35c34b1055c0585b65a629bae8240501cbd5a6bba81e9c62d103f949371aada",
+      "published_path": "docs/bert_crf/training_records/20261021T004808+0800_real_training_8aad7b72/history.csv",
+      "published_bytes": 1153,
+      "published_sha256": "1903409582d0b5139eb890ecbc39995d7f9a0d40eda954e783510b41de07b1ec",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T004808+0800_real_training_8aad7b72/config.json",
+      "source_bytes": 7464,
+      "source_sha256": "bc91cc75553046e81ff822e42a7625f4af4c2c4cc1ffcf93fa4d2a086999c011",
+      "published_path": "docs/bert_crf/training_records/20261021T004808+0800_real_training_8aad7b72/config.json",
+      "published_bytes": 7249,
+      "published_sha256": "dc7328206be07ecfdc94f7d2bfb9b66a17efa424f6ecffd88ed78744002bf41b",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T004808+0800_real_training_8aad7b72/metrics.json",
+      "source_bytes": 4021,
+      "source_sha256": "e2135c57b51b05c9f56ff89562bca22c21d31ec0e1f7ce2db71f49fdcdcac92c",
+      "published_path": "docs/bert_crf/training_records/20261021T004808+0800_real_training_8aad7b72/metrics.json",
+      "published_bytes": 3879,
+      "published_sha256": "51939da186101f91c178cfc70ad5f7f91b948038b5ad770d81557d54601690a1",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T004808+0800_real_training_8aad7b72/environment.json",
+      "source_bytes": 586,
+      "source_sha256": "09a8148fe251096b5c5119dcba7a6152eacbbfe084f9a30856a9b4c626c95bb6",
+      "published_path": "docs/bert_crf/training_records/20261021T004808+0800_real_training_8aad7b72/environment.json",
+      "published_bytes": 553,
+      "published_sha256": "082b56626ff510c5adb4bb0700a341f8611039262206329117227a928f871cbf",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T004808+0800_real_training_8aad7b72/source_manifest.json",
+      "source_bytes": 3885,
+      "source_sha256": "279082c52d54378ea051f9831b66bcb230f58b175a3ebf92728f4459230a9ad6",
+      "published_path": "docs/bert_crf/training_records/20261021T004808+0800_real_training_8aad7b72/source_manifest.json",
+      "published_bytes": 3846,
+      "published_sha256": "82a03366a8ed45658157c46e0b15e8836a1712672e2124b2052cadb9c80cdece",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T004808+0800_real_training_8aad7b72/checkpoint_info.json",
+      "source_bytes": 703,
+      "source_sha256": "7c482ebac77fbfd87e769cd4656cfbda99f8ca8cfca746925fb051804bea86be",
+      "published_path": "docs/bert_crf/training_records/20261021T004808+0800_real_training_8aad7b72/checkpoint_info.json",
+      "published_bytes": 664,
+      "published_sha256": "9728451c5e4862c517f86b130ba1ef643fc2a415d087e7d5a942b414ead067e4",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T004808+0800_real_training_8aad7b72/run_info.json",
+      "source_bytes": 17631,
+      "source_sha256": "aff9c1ed8dc24f1db56cb94f7a0b64d21e07d8b4c203f9837791e3c61e76a660",
+      "published_path": "docs/bert_crf/training_records/20261021T004808+0800_real_training_8aad7b72/run_info.json",
+      "published_bytes": 17138,
+      "published_sha256": "12731d325d0ab462ae74cc8619d91240f6c90008d90f18f84e8d1ebd756b24bf",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T004808+0800_real_training_8aad7b72/run_manifest.json",
+      "source_bytes": 18070,
+      "source_sha256": "f9b85568c0d0830f11bd281f75919306f14cabd928189c9e6b36aef7fa5862d9",
+      "published_path": "docs/bert_crf/training_records/20261021T004808+0800_real_training_8aad7b72/run_manifest.json",
+      "published_bytes": 17593,
+      "published_sha256": "adc8cc0892c67a9df3de73703a4a6c3a0bc68d1bef1d4bd11b0732bd42569719",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF日志摘录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T004808+0800_real_training_8aad7b72/run.log",
+      "source_bytes": 7777227,
+      "source_sha256": "1b0b6026575fefffc818d3ce3ddf9ef9ea488c64b7fe5fed9c7067da71444a75",
+      "published_path": "docs/bert_crf/training_records/20261021T004808+0800_real_training_8aad7b72/training_events.jsonl",
+      "published_bytes": 17178,
+      "published_sha256": "f13b0de846e8d7acc930e34022f020672b0490872a8fe93d8b7c69f7fd6242ad",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization; selected or adapted content"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T195736+0800_real_training_95abb833/history.csv",
+      "source_bytes": 1161,
+      "source_sha256": "70731abe42417fb71cb5687d058845dc83a15e6f1799bda9b8fd1a5a9149d7d6",
+      "published_path": "docs/bert_crf/training_records/20261021T195736+0800_real_training_95abb833/history.csv",
+      "published_bytes": 1155,
+      "published_sha256": "228582bcfa90b5c682a3b82dc346921cf59cf68c87b3956c08ee2122d6c81ffe",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T195736+0800_real_training_95abb833/config.json",
+      "source_bytes": 7462,
+      "source_sha256": "3253c334d6afecd85263eacbfc6949464fcade17b9a2770067b3d9285d873f75",
+      "published_path": "docs/bert_crf/training_records/20261021T195736+0800_real_training_95abb833/config.json",
+      "published_bytes": 7247,
+      "published_sha256": "c8cc68f25be58b9366a6e4e9d1103b3a16685a4190b628b2cdfd29cec9e738b7",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T195736+0800_real_training_95abb833/metrics.json",
+      "source_bytes": 4005,
+      "source_sha256": "07f5f526058e9c5aeb112d43ace792bb4844fcffea8286f33522cdd681ded901",
+      "published_path": "docs/bert_crf/training_records/20261021T195736+0800_real_training_95abb833/metrics.json",
+      "published_bytes": 3863,
+      "published_sha256": "273f433b694e4ad0f98475e807cd77455dbfd8078cc3a10dc4aa84b5c9bccba9",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T195736+0800_real_training_95abb833/environment.json",
+      "source_bytes": 586,
+      "source_sha256": "09a8148fe251096b5c5119dcba7a6152eacbbfe084f9a30856a9b4c626c95bb6",
+      "published_path": "docs/bert_crf/training_records/20261021T195736+0800_real_training_95abb833/environment.json",
+      "published_bytes": 553,
+      "published_sha256": "082b56626ff510c5adb4bb0700a341f8611039262206329117227a928f871cbf",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T195736+0800_real_training_95abb833/source_manifest.json",
+      "source_bytes": 3989,
+      "source_sha256": "9263f0d77330d6972411ac277be70e1c57683a431c09eb6255d422589afb2dc6",
+      "published_path": "docs/bert_crf/training_records/20261021T195736+0800_real_training_95abb833/source_manifest.json",
+      "published_bytes": 3949,
+      "published_sha256": "9c756f60846a71108d11d256c7f5b87583350366c13ff80580aac220035ac182",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T195736+0800_real_training_95abb833/checkpoint_info.json",
+      "source_bytes": 670,
+      "source_sha256": "1e313983ee19d5de4f0e9de239c4c87ce95e28bc8c621df7c400ddc497d12f40",
+      "published_path": "docs/bert_crf/training_records/20261021T195736+0800_real_training_95abb833/checkpoint_info.json",
+      "published_bytes": 631,
+      "published_sha256": "bc4c3c26187ce4afb0aaebd8eb1831006c7f43d3a56c8f2d65108b58e740a37e",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T195736+0800_real_training_95abb833/run_info.json",
+      "source_bytes": 17590,
+      "source_sha256": "3c6dc6ee84255e4bdcf2a42193baabac0f180441fbc16f65b494007de24faa03",
+      "published_path": "docs/bert_crf/training_records/20261021T195736+0800_real_training_95abb833/run_info.json",
+      "published_bytes": 17097,
+      "published_sha256": "56060ab51b53e25faf8f8131fe9ebcf61738af9fb474431e95c7ca722afd1b9a",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T195736+0800_real_training_95abb833/run_manifest.json",
+      "source_bytes": 18027,
+      "source_sha256": "af9ee5feb4f6b0d13d44c352ccdfb279416698f829fdf2458ec35c0402b93ff2",
+      "published_path": "docs/bert_crf/training_records/20261021T195736+0800_real_training_95abb833/run_manifest.json",
+      "published_bytes": 17550,
+      "published_sha256": "44d8344425a98f8bf1e20b8a8d22c354d6ecb4ac7b5876a882fafafeffd063b4",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF日志摘录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T195736+0800_real_training_95abb833/run.log",
+      "source_bytes": 7765123,
+      "source_sha256": "d95f6759feedb3c46a5b6e49bbf5ff9c21156004a6c3367d987b6fdc37990672",
+      "published_path": "docs/bert_crf/training_records/20261021T195736+0800_real_training_95abb833/training_events.jsonl",
+      "published_bytes": 17176,
+      "published_sha256": "ed07e2c56da88c12b461527f1d7ff5356b9a9daa545b0afbaf2d4f62ae5f4250",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization; selected or adapted content"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T231741+0800_real_training_86767c7e/history.csv",
+      "source_bytes": 2424,
+      "source_sha256": "9cc0068aeecf9655d3db5a946c700239da292b0cb282e617864e03d186ea1ca8",
+      "published_path": "docs/bert_crf/training_records/20261021T231741+0800_real_training_86767c7e/history.csv",
+      "published_bytes": 2418,
+      "published_sha256": "756b1aee9684b1d08dd4f8ddde7d69e5486f954685afc0f470d0dbd33ca20458",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T231741+0800_real_training_86767c7e/config.json",
+      "source_bytes": 7998,
+      "source_sha256": "cd3ca908f870ee163a496d4461b7e4b9e88443a9bdf94f56401dd5756fdbce16",
+      "published_path": "docs/bert_crf/training_records/20261021T231741+0800_real_training_86767c7e/config.json",
+      "published_bytes": 7767,
+      "published_sha256": "71a502857de6ed3974fca35906e3efb8d8df5c3e6c575f95fc8d508de2e8b844",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T231741+0800_real_training_86767c7e/metrics.json",
+      "source_bytes": 4961,
+      "source_sha256": "bbf63757dd7c817fc606c1823cecc7829b42f9e2fb125eb4be15678d339205c2",
+      "published_path": "docs/bert_crf/training_records/20261021T231741+0800_real_training_86767c7e/metrics.json",
+      "published_bytes": 4790,
+      "published_sha256": "ad31dfb7443edb313601ecbfd1dc80bee766d54b99f5aead0bc87a29456b9595",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T231741+0800_real_training_86767c7e/environment.json",
+      "source_bytes": 586,
+      "source_sha256": "09a8148fe251096b5c5119dcba7a6152eacbbfe084f9a30856a9b4c626c95bb6",
+      "published_path": "docs/bert_crf/training_records/20261021T231741+0800_real_training_86767c7e/environment.json",
+      "published_bytes": 553,
+      "published_sha256": "082b56626ff510c5adb4bb0700a341f8611039262206329117227a928f871cbf",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T231741+0800_real_training_86767c7e/source_manifest.json",
+      "source_bytes": 4310,
+      "source_sha256": "4d88b33fe639bea91c75988650771df944489a880d8e248fe0c5745dab1af8ef",
+      "published_path": "docs/bert_crf/training_records/20261021T231741+0800_real_training_86767c7e/source_manifest.json",
+      "published_bytes": 4267,
+      "published_sha256": "278f4b61870440a4f332d8176dba0e84534270aa5ce7473548a5f34ad4ccbe64",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T231741+0800_real_training_86767c7e/checkpoint_info.json",
+      "source_bytes": 703,
+      "source_sha256": "eb255144f1bb9e0bf9cb1b5c990a1e7d12f68f6c95b46bfa0298e08c14a5f7a6",
+      "published_path": "docs/bert_crf/training_records/20261021T231741+0800_real_training_86767c7e/checkpoint_info.json",
+      "published_bytes": 664,
+      "published_sha256": "5b2b2b4629004eefc11a4e8dc402cee1442d1f2df8dd5a08b6dfeb30f54bec84",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T231741+0800_real_training_86767c7e/run_info.json",
+      "source_bytes": 20483,
+      "source_sha256": "d08be856bc34f3ed47a9ec52ee351333734f7075ce69a7913a5b2619e431429a",
+      "published_path": "docs/bert_crf/training_records/20261021T231741+0800_real_training_86767c7e/run_info.json",
+      "published_bytes": 19917,
+      "published_sha256": "23170497a521eab622193cedaf6dbbc44f614a20b81d8565eb35c495e230e83e",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF原始训练记录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T231741+0800_real_training_86767c7e/run_manifest.json",
+      "source_bytes": 18937,
+      "source_sha256": "91fc88cd18a9d6c4ddebda6975e0acb9c981814db482a6d2d0198557134f1f32",
+      "published_path": "docs/bert_crf/training_records/20261021T231741+0800_real_training_86767c7e/run_manifest.json",
+      "published_bytes": 18452,
+      "published_sha256": "9c8677a813ff0c09264daa6cfff290cd2fd1d75dfa86ca047b1285c1a38ebfaf",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "CRF日志摘录",
+      "source": "${PROJECT}/experiments/bert_crf/20261021T231741+0800_real_training_86767c7e/run.log",
+      "source_bytes": 12586207,
+      "source_sha256": "6b0d67e03b27d91407374f9fc167b036d94c42457e671f2011c747e3211745c3",
+      "published_path": "docs/bert_crf/training_records/20261021T231741+0800_real_training_86767c7e/training_events.jsonl",
+      "published_bytes": 22953,
+      "published_sha256": "9a8b6ce4cf2589ffb55b052a9ab7216245beded1b3e28ca2d23f2d69404fe5ce",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization; selected or adapted content"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/architecture.png",
+      "source_bytes": 69417,
+      "source_sha256": "b9fa498519e3746cf02b2e7d3d81f27fea5e60b3b95f5bc710fe0eb6439a1610",
+      "published_path": "docs/report_assets/figures/architecture.png",
+      "published_bytes": 69417,
+      "published_sha256": "b9fa498519e3746cf02b2e7d3d81f27fea5e60b3b95f5bc710fe0eb6439a1610",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/architecture.svg",
+      "source_bytes": 78028,
+      "source_sha256": "ab722c61d832daab90a87ecf48bd8ec18b7807c2c7e8236f778e8ae8233d10f8",
+      "published_path": "docs/report_assets/figures/architecture.svg",
+      "published_bytes": 78028,
+      "published_sha256": "ab722c61d832daab90a87ecf48bd8ec18b7807c2c7e8236f778e8ae8233d10f8",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/auxiliary_loss.png",
+      "source_bytes": 74553,
+      "source_sha256": "9373b09a3f34900afb71a696c80edbd5243e05eb6124e6f0c6224b5a603d1323",
+      "published_path": "docs/report_assets/figures/auxiliary_loss.png",
+      "published_bytes": 74553,
+      "published_sha256": "9373b09a3f34900afb71a696c80edbd5243e05eb6124e6f0c6224b5a603d1323",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/auxiliary_loss.svg",
+      "source_bytes": 44890,
+      "source_sha256": "a0085cbb4e65d4d89b4d83bcf8c139b08eff6be7453a6d675d38990882acfa37",
+      "published_path": "docs/report_assets/figures/auxiliary_loss.svg",
+      "published_bytes": 44890,
+      "published_sha256": "a0085cbb4e65d4d89b4d83bcf8c139b08eff6be7453a6d675d38990882acfa37",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/best_and_ablation.png",
+      "source_bytes": 76789,
+      "source_sha256": "c32a40208ac8d10202fdf513c4b9d8a9a2eac1919126fe4ce8a97c2593379942",
+      "published_path": "docs/report_assets/figures/best_and_ablation.png",
+      "published_bytes": 76789,
+      "published_sha256": "c32a40208ac8d10202fdf513c4b9d8a9a2eac1919126fe4ce8a97c2593379942",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/best_and_ablation.svg",
+      "source_bytes": 53806,
+      "source_sha256": "e8b94f3ea4c6ddb4c1b4ab05cf8e2734a971a418165fd37563c745423594edc0",
+      "published_path": "docs/report_assets/figures/best_and_ablation.svg",
+      "published_bytes": 53806,
+      "published_sha256": "e8b94f3ea4c6ddb4c1b4ab05cf8e2734a971a418165fd37563c745423594edc0",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/cpu_acceptance_original.png",
+      "source_bytes": 76665,
+      "source_sha256": "c678684989668a250992f810e620ee78b24892a27fa38dc21c3fc924a13afc79",
+      "published_path": "docs/report_assets/figures/cpu_acceptance_original.png",
+      "published_bytes": 76665,
+      "published_sha256": "c678684989668a250992f810e620ee78b24892a27fa38dc21c3fc924a13afc79",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/crf_loss.png",
+      "source_bytes": 116994,
+      "source_sha256": "e43f9f7b067c87e587ac431dca957f52a181683b9c4e8d2df61edddcba409a67",
+      "published_path": "docs/report_assets/figures/crf_loss.png",
+      "published_bytes": 116994,
+      "published_sha256": "e43f9f7b067c87e587ac431dca957f52a181683b9c4e8d2df61edddcba409a67",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/crf_loss.svg",
+      "source_bytes": 61559,
+      "source_sha256": "f23287cc426afc6a56385c181826d895d9d7c162d59cbafef34d2784b534b475",
+      "published_path": "docs/report_assets/figures/crf_loss.svg",
+      "published_bytes": 61559,
+      "published_sha256": "f23287cc426afc6a56385c181826d895d9d7c162d59cbafef34d2784b534b475",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/crf_val_f1.png",
+      "source_bytes": 111444,
+      "source_sha256": "d9e571571aafc4a352ef7208eb6d4730ebf31f7c56fd989cf599fc86a8045031",
+      "published_path": "docs/report_assets/figures/crf_val_f1.png",
+      "published_bytes": 111444,
+      "published_sha256": "d9e571571aafc4a352ef7208eb6d4730ebf31f7c56fd989cf599fc86a8045031",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/crf_val_f1.svg",
+      "source_bytes": 47415,
+      "source_sha256": "6bb4014977438738ed5b1eb614f64d48324bbea90b8288afc51868b69cf03906",
+      "published_path": "docs/report_assets/figures/crf_val_f1.svg",
+      "published_bytes": 47415,
+      "published_sha256": "6bb4014977438738ed5b1eb614f64d48324bbea90b8288afc51868b69cf03906",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/epoch_data.csv",
+      "source_bytes": 4108,
+      "source_sha256": "7adbd9c48b3e0304060b57f8f5c79cb39a05f5fecc6a521c89b43679d0bdde67",
+      "published_path": "docs/report_assets/figures/epoch_data.csv",
+      "published_bytes": 4084,
+      "published_sha256": "e1526b8e2b465da50e6e23c47c89d38e0f97a3f1f363e16291607ad1ad5ef79c",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/official_dev.png",
+      "source_bytes": 47318,
+      "source_sha256": "8c5392253c9b561d863d4a44ed20d8c7720d10ab54216c94e0ff92335cc560fb",
+      "published_path": "docs/report_assets/figures/official_dev.png",
+      "published_bytes": 47318,
+      "published_sha256": "8c5392253c9b561d863d4a44ed20d8c7720d10ab54216c94e0ff92335cc560fb",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/official_dev.svg",
+      "source_bytes": 39510,
+      "source_sha256": "d1c2050a4da5c3d6624a8af1f4c06e7e18a8421c939d086bd97b5ee58e687f4b",
+      "published_path": "docs/report_assets/figures/official_dev.svg",
+      "published_bytes": 39510,
+      "published_sha256": "d1c2050a4da5c3d6624a8af1f4c06e7e18a8421c939d086bd97b5ee58e687f4b",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/plot_evidence.json",
+      "source_bytes": 21756,
+      "source_sha256": "80c54dd679e111cd15d026cad9aa8bd3be6425a0cf7de9d108e9998c3be98b61",
+      "published_path": "docs/report_assets/figures/plot_evidence.json",
+      "published_bytes": 21100,
+      "published_sha256": "8383f8e07e5e363d1a54f510368c94feb86a2244551b184c8f93f2c5aef10165",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/README.md",
+      "source_bytes": 1558,
+      "source_sha256": "c38e012c3775a647042dcf7f161f02f3e41823d6b2b6849d0a0a7a1b1a42208b",
+      "published_path": "docs/report_assets/figures/README.md",
+      "published_bytes": 1627,
+      "published_sha256": "c41ff05f8ea381abb4cf849700a4c6763615d60338aa47ab911f5b8b69c4cf9c",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/timeline.png",
+      "source_bytes": 62767,
+      "source_sha256": "fd5837dc8d526066e6c7d6edb374361c4bf2bc9d7288be3cdea18eca23f92a67",
+      "published_path": "docs/report_assets/figures/timeline.png",
+      "published_bytes": 62767,
+      "published_sha256": "fd5837dc8d526066e6c7d6edb374361c4bf2bc9d7288be3cdea18eca23f92a67",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "报告图表",
+      "source": "${PROJECT}/report_delivery_20261027_135814/figures/timeline.svg",
+      "source_bytes": 54539,
+      "source_sha256": "33f13b88c316417190eee1822696cf87504a8b4c9b345f7dd6bc04d64e6ee804",
+      "published_path": "docs/report_assets/figures/timeline.svg",
+      "published_bytes": 54539,
+      "published_sha256": "33f13b88c316417190eee1822696cf87504a8b4c9b345f7dd6bc04d64e6ee804",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "图表生成脚本",
+      "source": "${PROJECT}/report_delivery_20261027_135814/scripts/make_figures.py",
+      "source_bytes": 5992,
+      "source_sha256": "2794684e4a0bb98bf9cff6f09c5df0180e8c2f317a4aeb5afab6a4e5e679e0e0",
+      "published_path": "docs/report_assets/scripts/make_figures.py",
+      "published_bytes": 6268,
+      "published_sha256": "58bab03426974b2262bf6cc0ba4b23b705650a700e98dd17d0ede33bd5ca334b",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization; selected or adapted content"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/crf_inference.command.json",
+      "source_bytes": 1283,
+      "source_sha256": "f626f4d94f48fb3dd4adc423076b561c27fe40a4da050cc6d31229024dca8664",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/crf_inference.command.json",
+      "published_bytes": 1166,
+      "published_sha256": "ef5b77956950ba27fc1f6c8b3c88f4e2d4ae673c6be927e4cff1af8ec66441b8",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev日志摘录",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/crf_inference.log",
+      "source_bytes": 2490,
+      "source_sha256": "45779c861b4c180ba6e2917d87f4ed90347f9283466dbcff80acfff02b92be73",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/crf_inference.excerpt.txt",
+      "published_bytes": 2424,
+      "published_sha256": "478864964f166a7436acd2847b8a572ccd560b875cd9c6826a7ab9515f9a1b0c",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization; selected or adapted content"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/crf_validation.command.json",
+      "source_bytes": 1376,
+      "source_sha256": "881941eb31c42a2358f0fa552221dea0a576d4ae2610b5eb1592e967541d9fb4",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/crf_validation.command.json",
+      "published_bytes": 1272,
+      "published_sha256": "a595d32b615af7c8b7dae368a0b50bcc61851d87d217cf6a6e626cc011a3ac94",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/evaluation_input.json",
+      "source_bytes": 1347,
+      "source_sha256": "b51805ca6e652e413ed24545201a39a8b247aa56072322ae588873d7ec3c20e5",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/evaluation_input.json",
+      "published_bytes": 1256,
+      "published_sha256": "da278ad7f4b8ad56c8025018e1ad4b05e25b89eda4d32105fba991f0d6e8b5d5",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/manifest.json",
+      "source_bytes": 18985,
+      "source_sha256": "5218b397e07fb0e361c6ed6920da383153907d7449a6e9af75733bda37058879",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/manifest.json",
+      "published_bytes": 18439,
+      "published_sha256": "39bbccea2c0decd3af001dfafab06a25be031427e7faea72e18a813a66065e95",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/rule_inference.command.json",
+      "source_bytes": 1101,
+      "source_sha256": "7efaadcee2c2fa33ce1820d2d60f81d6a0b6025c579953566cd202f2c023a216",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/rule_inference.command.json",
+      "published_bytes": 1023,
+      "published_sha256": "ad66376e30494417e280d6fc5f927a9af2a532d8205c05a2256fed2c8fa85bec",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev日志摘录",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/rule_inference.log",
+      "source_bytes": 468,
+      "source_sha256": "d74f58186c3923b8dd3eb7d445124f570db5ae6b4babd8b612b15407c06a4200",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/rule_inference.excerpt.txt",
+      "published_bytes": 471,
+      "published_sha256": "e35e80df6401728287aefec10b43e41924646923e4e6fc6df61f437b4072a6fb",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization; selected or adapted content"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/rule_validation.command.json",
+      "source_bytes": 1379,
+      "source_sha256": "97a505d1ec04e31e26e85d660e2acb88f8ac1463bf51d3e5f4a0aa373fd73ff2",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/rule_validation.command.json",
+      "published_bytes": 1275,
+      "published_sha256": "263a25f086bd1d169507b3525939d350aba5b8a631bc884302dd00b0737fd040",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/softmax_inference.command.json",
+      "source_bytes": 1177,
+      "source_sha256": "bb2780d9b5901621f960bf01665eab07c593bec4d1cca4fa016da00ad8b22c16",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/softmax_inference.command.json",
+      "published_bytes": 1099,
+      "published_sha256": "344c8c51ff8c74edcc5b056717b1973977637519c473007975ff351e5b83b8c4",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev日志摘录",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/softmax_inference.log",
+      "source_bytes": 2489,
+      "source_sha256": "67bb73f2149f4cb504b990524eeb1c084529d76543def1222d32378ccfd4aecd",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/softmax_inference.excerpt.txt",
+      "published_bytes": 2242,
+      "published_sha256": "d620802f9aeb3ac415ea40ca5a647c47636291e5d940d4e6532845b9d9a2911d",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization; selected or adapted content"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/softmax_validation.command.json",
+      "source_bytes": 1388,
+      "source_sha256": "aadf7ddd16e5306a00fa4399e7b5274389e17a46e5c3a790ee9fb947ce664e44",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/softmax_validation.command.json",
+      "published_bytes": 1284,
+      "published_sha256": "f8f1723bba183aa5295fafe23e0e2196145b7f8208a3d8aae22850618c4b559d",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/source_snapshot.json",
+      "source_bytes": 17916,
+      "source_sha256": "ab4c872b98b79750f89adbfe169943892bf1909e9e223b444d20cd683a7a9bbc",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/source_snapshot.json",
+      "published_bytes": 16785,
+      "published_sha256": "ea024114f7f52f9266a9ee39d0011a0aafacff17e90434d26f15306e698e4915",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/unified_evaluation.command.json",
+      "source_bytes": 1199,
+      "source_sha256": "c4690c28dae729cd9df69b0e4696ea19f05c8ccb71297a98b66574ccdf9e5bb7",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/unified_evaluation.command.json",
+      "published_bytes": 1108,
+      "published_sha256": "dc7a2e001f1fca781d0a0835112205c9c9d738806d5dced09b7acf5b8c29fde4",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev日志摘录",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/unified_evaluation.log",
+      "source_bytes": 504,
+      "source_sha256": "fd5769601b06f32db7d3cf8558b618e5631f6cfe97a4a8987ff31240cd4b7e3b",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/unified_evaluation.excerpt.txt",
+      "published_bytes": 503,
+      "published_sha256": "e96125def1030e970434ec5be38481413d1586f258c5ea4778b7943c8b1ffeb7",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization; selected or adapted content"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/crf/assets.json",
+      "source_bytes": 1564,
+      "source_sha256": "5d0b69595eb093b10108880a9bbd45fdc61604c69a22a077c0690adafd7f0415",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/crf/assets.json",
+      "published_bytes": 1473,
+      "published_sha256": "bee02c1405a47ab7676f90391707ffeb734f168a52887f552d0821694d564037",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/crf/frozen_inference_config.json",
+      "source_bytes": 2859,
+      "source_sha256": "17dbaa6d7d54b05debdb6ab4e130a2427f9529394fe9db9339dc98acf0803f5f",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/crf/frozen_inference_config.json",
+      "published_bytes": 2846,
+      "published_sha256": "d6d782ab1dd29008f504b1fe6201a9005a57e474a258c374e732241935b183ec",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/crf/path_adaptation.json",
+      "source_bytes": 872,
+      "source_sha256": "e52724ea79c13981a8ee65801e55ddd3d29ba925939bac1fe4049e8ab5042a8c",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/crf/path_adaptation.json",
+      "published_bytes": 860,
+      "published_sha256": "7b8a78f366e217c03798aebf9e0e4094434b88b1aafd4bccafd18b8d1fc4ab5f",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/crf/runtime_config.json",
+      "source_bytes": 2007,
+      "source_sha256": "dcef2863b2e9302e346cd53c1ae734fdf6711f8c0931fe7e382dded36a05046c",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/crf/runtime_config.json",
+      "published_bytes": 1903,
+      "published_sha256": "49800f21072f4dc453d6f5ba1c691200186c18390ebd598083c2f6ceb45c66ef",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/crf/run_info.json",
+      "source_bytes": 4789,
+      "source_sha256": "839ca3918988844654418d36aea4321cb6309a2c55fb0dad204d65625679ab54",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/crf/run_info.json",
+      "published_bytes": 4567,
+      "published_sha256": "ea4a4a7ac43c31c938a92731af8ef35dca8fc372d852c9162c7a6809de341e8c",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/crf/validation.json",
+      "source_bytes": 4450,
+      "source_sha256": "eb0b80c0289907ffe2970386a31fc165f8faab1ac4667ff9576702971ed612fb",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/crf/validation.json",
+      "published_bytes": 4222,
+      "published_sha256": "018c57628338e6967e531e3b8a5b87dfa157c20ba0f5318754595c64411e4409",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/rule/assets.json",
+      "source_bytes": 920,
+      "source_sha256": "d1560946e45f78504060f09a2969a8a0b68a10d04a470190f9e87367e49ffca7",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/rule/assets.json",
+      "published_bytes": 855,
+      "published_sha256": "cbeacabbf59e2c7d2a0aaf90549e6c77b3e8265541a6197381e048cf6784c241",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/rule/runtime_config.json",
+      "source_bytes": 1342,
+      "source_sha256": "06307373215877ef68c3b4d5e57eaeb1bffb586d1989a9e8ef07105f1b5a0a35",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/rule/runtime_config.json",
+      "published_bytes": 1264,
+      "published_sha256": "385678c98ea9648b3e6b5e7504cb863755cd084f64dee97456eeb52bd935954c",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/rule/run_info.json",
+      "source_bytes": 3532,
+      "source_sha256": "03c9be0015879bebfe08d2f4264e96c20227f9a861f599b663fc3f4142c5f059",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/rule/run_info.json",
+      "published_bytes": 3428,
+      "published_sha256": "30126d319b81816f3f23fbbf19f53a2122f3c22fa71adbe3344e5313d2f0652f",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/rule/validation.json",
+      "source_bytes": 4451,
+      "source_sha256": "d9d6982a7be44314c3b5222ec766d401ed6b9893b517a86031627e2593475339",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/rule/validation.json",
+      "published_bytes": 4223,
+      "published_sha256": "2f44938e5823c8b3981371d64b0a80cd86024e5efc22b84b55e308bd25a0be65",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/softmax/assets.json",
+      "source_bytes": 1485,
+      "source_sha256": "966681f205dd442889362a2bfd984161ba046396e26932f209d7ebc8f9a2495b",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/softmax/assets.json",
+      "published_bytes": 1407,
+      "published_sha256": "979aebb0e06bd0417c7e7cc1fb99b6f96d1d3e41d517a4bf0fd7f19cc93efbc5",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/softmax/runtime_config.json",
+      "source_bytes": 1922,
+      "source_sha256": "5009072030b695a4fbd3e602f38c4c3cd9d4aaaef0f02d496cc54668fbf9a094",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/softmax/runtime_config.json",
+      "published_bytes": 1831,
+      "published_sha256": "9373dfbf0e6a7228cb1d331bf8dc3525ca25acedc3a5a529c6f437beedca3108",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/softmax/run_info.json",
+      "source_bytes": 4442,
+      "source_sha256": "edb59744ee988efa05ad4d1550c41a9e036268f798bca8f07138a2c45c37a693",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/softmax/run_info.json",
+      "published_bytes": 4299,
+      "published_sha256": "4fa71e6b1507feaa40af9e7511b07a8b54f417f709a5d23768f01750fadcea0d",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/softmax/validation.json",
+      "source_bytes": 4454,
+      "source_sha256": "3c171346c8e2fad91fa8e4b27a8ef89cceaa7408ff34d4ad6847a5df9153dd23",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/softmax/validation.json",
+      "published_bytes": 4226,
+      "published_sha256": "04e044a95cf16deaf759952a7806d033306dd06fb7a94d7dbe42c57f7f975cff",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/crf/prediction/inference_result.json",
+      "source_bytes": 2342,
+      "source_sha256": "8cd8db1c4c7f1dbb0e80f56dba9cd4a3591830169bcbb6025406c9331eb84853",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/crf/prediction/inference_result.json",
+      "published_bytes": 2276,
+      "published_sha256": "369c2bdf6f455adff23dcab79a6f59ac711dd21517036240c00f9addf8cb9a63",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/batch_report.json",
+      "source_bytes": 4867,
+      "source_sha256": "46bf8073b3cd597a3b9cd7e2adf89d6ab31553fc5748297a77a71a2af82e931b",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/batch_report.json",
+      "published_bytes": 4592,
+      "published_sha256": "4e1345ec5023c4af6dadd79805ae41df2ad47c9d6756c4580cb3a31f4779b4f1",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/comparison/comparison.json",
+      "source_bytes": 47144,
+      "source_sha256": "77b5c9ac7ea08711dacc8ef10c78c74d2e011a4dd88fcd097bddf87b54a3ca2f",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/comparison/comparison.json",
+      "published_bytes": 45299,
+      "published_sha256": "8dc6f0d7cb8e37cd477fe29727cd484e5122b7a2b23762f6fc70e6cc2fb7d942",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/comparison/entity_type_comparison.csv",
+      "source_bytes": 2167,
+      "source_sha256": "f8fc52fba9781873b8722d72392f643e9bbea193417f7b3e9e2631a63b347ce2",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/comparison/entity_type_comparison.csv",
+      "published_bytes": 2151,
+      "published_sha256": "2f67c90629a0d47680941627d57cc7440971c76ddc44dc951349f1d938ab07d0",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/comparison/model_comparison.csv",
+      "source_bytes": 1776,
+      "source_sha256": "28487ca4cef91d84937bbcac6525179b0a7343c9e7bab296d9b7fe96a5bdfdeb",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/comparison/model_comparison.csv",
+      "published_bytes": 1772,
+      "published_sha256": "e5bbb3e528df194e8a30f7da96d31e8d00e133b6c6104cf378d01136f8fe6e95",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/001/evaluation.json",
+      "source_bytes": 17161,
+      "source_sha256": "03be788bfa33e53798095f97568aa7389af28f7ddbca2c3d24cc769854f60440",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/001/evaluation.json",
+      "published_bytes": 16373,
+      "published_sha256": "41f7c48defea42c9daaa03ac2bd1dc83d26ccc778362d3d6496792d98976e68a",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/001/reproducibility_check.json",
+      "source_bytes": 6627,
+      "source_sha256": "e4969fbe99fa528ff419af36ada963f7ba6c4078dda5834f2975e086cdc5eb3c",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/001/reproducibility_check.json",
+      "published_bytes": 6365,
+      "published_sha256": "a040fa49e9845842097bbcc9c769b5c4442b9768de9f4b1611f913ee95436179",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/001/run_status.json",
+      "source_bytes": 960,
+      "source_sha256": "df688e760d5a7fa77ee0006a007b88e3b5c505afc0ff2109a6241ea022a5bc5d",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/001/run_status.json",
+      "published_bytes": 892,
+      "published_sha256": "49de5e367228a9c4b2b2a52555ea427cfcd457b1b6660d9d52bd4c6b07f16715",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/002/evaluation.json",
+      "source_bytes": 17160,
+      "source_sha256": "dfadabf4a8aecef9fb7861f33269901752223d5229e17d46e98741d460dd1b2d",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/002/evaluation.json",
+      "published_bytes": 16372,
+      "published_sha256": "dce9eac8deafe6707668520d31817dfe9e34a0905bd432b77c0f7b6704647279",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/002/reproducibility_check.json",
+      "source_bytes": 9090,
+      "source_sha256": "ed44926edd4a37a4146d4f64dc63fb5406051992a85fa31181f2afd833f06d04",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/002/reproducibility_check.json",
+      "published_bytes": 8714,
+      "published_sha256": "c9ce1aa1f5085f26e2112d85912ff545b01a95609c73d65f78123ebc91894866",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/002/run_status.json",
+      "source_bytes": 970,
+      "source_sha256": "8a1414e1ee9dbbd656598b68e3b3dc41f314e92720f5843cc207b4ad1d68320e",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/002/run_status.json",
+      "published_bytes": 902,
+      "published_sha256": "fdde6506ea930f4654af871090f641c641f2c209821ddf6b207aa82f3c250522",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/003/evaluation.json",
+      "source_bytes": 17142,
+      "source_sha256": "b81746f773f9a1f471d98f037dc8d6ce260c906680f1c5fa85a4e77ada097f81",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/003/evaluation.json",
+      "published_bytes": 16354,
+      "published_sha256": "83683ddd904a5a59467876b9140a00f51dff0f5b66a69a7fc48ec7720d6f1148",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/003/reproducibility_check.json",
+      "source_bytes": 9109,
+      "source_sha256": "c73003ce5fcb507414c74773d77c64260ab0198593e064fb00186dc059800723",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/003/reproducibility_check.json",
+      "published_bytes": 8733,
+      "published_sha256": "18f00c108b037de697cf2158daf1032c4db6962474be1831496b4e94097f10f9",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/003/run_status.json",
+      "source_bytes": 957,
+      "source_sha256": "e7c9008a344a4a60967f0c4d76b782d3df7d6c8f768dbe6a6bf231120ca56d9f",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/evaluation/20261027T040648718164_eow6y9sc/runs/003/run_status.json",
+      "published_bytes": 889,
+      "published_sha256": "3352d2dc5e186671b42831e2b450c5a240e78c8b6f6a97e9fa3fa35943921a7c",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "真实dev证据",
+      "source": "${PROJECT}/runs/demo_runs/dev_demo_20261027_040355_4582ac8c/softmax/prediction/run_info.json",
+      "source_bytes": 3370,
+      "source_sha256": "860503eb08768946f4d81da19c7d0203b69f1dc5242436c45f8e087a788b467e",
+      "published_path": "docs/demo/evidence/dev_demo_20261027_040355_4582ac8c/softmax/prediction/run_info.json",
+      "published_bytes": 3358,
+      "published_sha256": "8b767119e96d97aa55bb3655afc849886dc5b191084c264839bcc4671eba715f",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "Softmax冻结验收",
+      "source": "${PROJECT}/runs/lr5e-5_ep3_20261022-151229/softmax_dev_acceptance_20261027T024216+0800/acceptance_result.json",
+      "source_bytes": 4635,
+      "source_sha256": "2e7af950defb8ca42ee2cc907cd1899e09097a1a4ceb5d6d703478de063ed7ec",
+      "published_path": "docs/demo/evidence/softmax_dev_acceptance_20261027T024216+0800/acceptance_result.json",
+      "published_bytes": 4432,
+      "published_sha256": "1667254e5ed32871de328751f45ebe55149e8ffe6f6a7adf5d9bc1e8d482039f",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "Softmax冻结验收",
+      "source": "${PROJECT}/runs/lr5e-5_ep3_20261022-151229/softmax_dev_acceptance_20261027T024216+0800/prediction_comparison.json",
+      "source_bytes": 1104,
+      "source_sha256": "89d7f6bf2ec2173333b68d8965c03bd3f57f630f1264dd49e336fc1a63656d26",
+      "published_path": "docs/demo/evidence/softmax_dev_acceptance_20261027T024216+0800/prediction_comparison.json",
+      "published_bytes": 1053,
+      "published_sha256": "b633b5bab70bcd27e4b33c4e6f006c0a8e565e0ee6710d5709b4c66a783b202b",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "Softmax冻结验收",
+      "source": "${PROJECT}/runs/lr5e-5_ep3_20261022-151229/softmax_dev_acceptance_20261027T024216+0800/README.md",
+      "source_bytes": 5442,
+      "source_sha256": "0f0926bc51968d8039e073c1c1de3544148599e6e4be393072f369f45a9753a0",
+      "published_path": "docs/demo/evidence/softmax_dev_acceptance_20261027T024216+0800/README.md",
+      "published_bytes": 5377,
+      "published_sha256": "113af6dc428baaf0d39c9409f4d9286f40f0a0a2710cbf14d02f9d66af8cf6d6",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "Softmax冻结验收",
+      "source": "${PROJECT}/runs/lr5e-5_ep3_20261022-151229/softmax_dev_acceptance_20261027T024216+0800/validation_dev.json",
+      "source_bytes": 4472,
+      "source_sha256": "c73d3561a14801425f30fd8c8569e9fe7d6a8629619233ee52303e75ec17ccd2",
+      "published_path": "docs/demo/evidence/softmax_dev_acceptance_20261027T024216+0800/validation_dev.json",
+      "published_bytes": 4244,
+      "published_sha256": "96604b3486bec444d69b25d02408aa8e1b9936c99ad9aca0511edb7f9da8ebf7",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "Softmax冻结验收",
+      "source": "${PROJECT}/runs/lr5e-5_ep3_20261022-151229/softmax_dev_acceptance_20261027T024216+0800/prediction/inference.log",
+      "source_bytes": 1022,
+      "source_sha256": "d8685b1f7810cf9dd9234d8afb4e25dbc2c52e9c267243cfd9cb5fe8fdbd4350",
+      "published_path": "docs/demo/evidence/softmax_dev_acceptance_20261027T024216+0800/prediction/inference.txt",
+      "published_bytes": 972,
+      "published_sha256": "c5b8dce4b2bf7df986cfd6023dc249238b10213276433011c4fc39693abd6767",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "Softmax冻结验收",
+      "source": "${PROJECT}/runs/lr5e-5_ep3_20261022-151229/softmax_dev_acceptance_20261027T024216+0800/prediction/run_info.json",
+      "source_bytes": 3370,
+      "source_sha256": "267ef2359b2c10a103980940082b64ea5272a74d13decb60c73b05d179b8addf",
+      "published_path": "docs/demo/evidence/softmax_dev_acceptance_20261027T024216+0800/prediction/run_info.json",
+      "published_bytes": 3358,
+      "published_sha256": "148705a2bafad67ac4dac3e8c6fa617a6b9e9f6fb86bd1bd896c8028a4b62f73",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "Softmax冻结验收",
+      "source": "${PROJECT}/runs/lr5e-5_ep3_20261022-151229/softmax_dev_acceptance_20261027T024216+0800/score/20261027T024656349612_bzf8acl7/evaluation.json",
+      "source_bytes": 16438,
+      "source_sha256": "f0982b2e9290f8c2d517252ebf11ed847d631413af71267e06180faffdda1402",
+      "published_path": "docs/demo/evidence/softmax_dev_acceptance_20261027T024216+0800/score/20261027T024656349612_bzf8acl7/evaluation.json",
+      "published_bytes": 15689,
+      "published_sha256": "f9e63835a2e1f6c98046bd1504a0d88f615165d4ebbe87adfd46b818e471a65e",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "双模型冻结包",
+      "source": "${PROJECT}/model_delivery_20261027/BERT_Final_Frozen_Weights_20261027/requirements.txt",
+      "source_bytes": 224,
+      "source_sha256": "5f8c68e9712e7961ad0a0db4201c93a845577ba95ed17d4ea5ec90d427455819",
+      "published_path": "docs/frozen_models/requirements.txt",
+      "published_bytes": 224,
+      "published_sha256": "5f8c68e9712e7961ad0a0db4201c93a845577ba95ed17d4ea5ec90d427455819",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "双模型冻结包",
+      "source": "${PROJECT}/model_delivery_20261027/BERT_Final_Frozen_Weights_20261027/使用指南.md",
+      "source_bytes": 7797,
+      "source_sha256": "af18ee17b25ea988da77403a7f10d5b75fd1ee0034222013c0dc7ad6f083a67a",
+      "published_path": "docs/frozen_models/使用指南.md",
+      "published_bytes": 7797,
+      "published_sha256": "af18ee17b25ea988da77403a7f10d5b75fd1ee0034222013c0dc7ad6f083a67a",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "双模型冻结包",
+      "source": "${PROJECT}/model_delivery_20261027/BERT_Final_Frozen_Weights_20261027/manifest.json",
+      "source_bytes": 9953,
+      "source_sha256": "28a35ade6311402f6d66b1c0ad14c2bbd459e2fea44acce771873ed27f9bc82a",
+      "published_path": "docs/frozen_models/manifest.json",
+      "published_bytes": 9953,
+      "published_sha256": "28a35ade6311402f6d66b1c0ad14c2bbd459e2fea44acce771873ed27f9bc82a",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "双模型冻结包",
+      "source": "${PROJECT}/model_delivery_20261027/BERT_Final_Frozen_Weights_20261027/packaging_validation.json",
+      "source_bytes": 3414,
+      "source_sha256": "5aca80fe3bd241ffab8ed2fa4393957f202130cef9f67a5a550e3e676744d8d1",
+      "published_path": "docs/frozen_models/packaging_validation.json",
+      "published_bytes": 3297,
+      "published_sha256": "3fb1ccba9a51949c728fa51d8212597cc144179545ac84aa731efde5f1de5483",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "双模型冻结包",
+      "source": "${PROJECT}/model_delivery_20261027/BERT_Final_Frozen_Weights_20261027/BERT-CRF/model_info.json",
+      "source_bytes": 3611,
+      "source_sha256": "9f60a71239fc798e3b6d0b2f5d5ffaa3940a1a34a144108c39ab1cb417ade819",
+      "published_path": "docs/frozen_models/BERT-CRF/model_info.json",
+      "published_bytes": 3611,
+      "published_sha256": "9f60a71239fc798e3b6d0b2f5d5ffaa3940a1a34a144108c39ab1cb417ade819",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "双模型冻结包",
+      "source": "${PROJECT}/model_delivery_20261027/BERT_Final_Frozen_Weights_20261027/BERT-Softmax/model_info.json",
+      "source_bytes": 1531,
+      "source_sha256": "67dfd69e04d97296699181b1a42b22bf433592fe5ffbca22e032f674b346ce99",
+      "published_path": "docs/frozen_models/BERT-Softmax/model_info.json",
+      "published_bytes": 1531,
+      "published_sha256": "67dfd69e04d97296699181b1a42b22bf433592fe5ffbca22e032f674b346ce99",
+      "transformation": "byte_identical"
+    },
+    {
+      "group": "双模型冻结包",
+      "source": "${PROJECT}/model_delivery_20261027/delivery_result.json",
+      "source_bytes": 416,
+      "source_sha256": "52d4e374980c68544eb05b084ba1ad0f8b5e53da85bbcce32f9140fab8f16cbf",
+      "published_path": "docs/frozen_models/delivery_result.json",
+      "published_bytes": 403,
+      "published_sha256": "c0499aaac2ff0207a6687974e0d386a3504000c10356c4178dda06702c9ed937",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "前端历史成绩",
+      "source": "${EXTERNAL_AUDIT}/NLPExp_stage1_audit_20261026T231851+0800/real_dev_batch/20261026T232805941645_kfa1ekib/runs/001/evaluation.json",
+      "source_bytes": 16782,
+      "source_sha256": "1eae79d0520c4316b7f2686119ddd1fa11355a2db891ccd1306fe56e3d29a780",
+      "published_path": "backend/resources/history/rule_evaluation.json",
+      "published_bytes": 16021,
+      "published_sha256": "f6239a04bc09f2b591c9d6e461e75ab9575480b1482c4861e579ca59a5e0dced",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "前端历史成绩",
+      "source": "${EXTERNAL_AUDIT}/NLPExp_stage1_audit_20261026T231851+0800/real_dev_batch/20261026T232805941645_kfa1ekib/runs/002/evaluation.json",
+      "source_bytes": 17015,
+      "source_sha256": "283ac98edc7b8a6815de3c346a8e980dc171c66c105d0f625406f753496a9d68",
+      "published_path": "backend/resources/history/softmax_evaluation.json",
+      "published_bytes": 16241,
+      "published_sha256": "88ec99f664582211ca11fa6c3d8e8dada32cb81f92608882db1ddb5259228d2a",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "前端历史成绩",
+      "source": "${EXTERNAL_AUDIT}/NLPExp_stage1_audit_20261026T231851+0800/real_dev_batch/20261026T232805941645_kfa1ekib/runs/003/evaluation.json",
+      "source_bytes": 17240,
+      "source_sha256": "4e6f0af0cfd9230a56a2130f642808c03876b9f45cade7993bc8be898bf6cb17",
+      "published_path": "backend/resources/history/crf_evaluation.json",
+      "published_bytes": 16508,
+      "published_sha256": "3eb4ab984ba9478636fc243fcfcd669cf0dc66f0eef539c8a44decf5d05c9ba1",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization"
+    },
+    {
+      "group": "前端历史成绩",
+      "source": "${EXTERNAL_AUDIT}/NLPExp_stage1_audit_20261026T231851+0800/rescored_dev_summary.json",
+      "source_bytes": 9355,
+      "source_sha256": "ebca7ca403bdfb0392809e0e262e9377a3e61116fd68ffdd9e6b0f654b9c7366",
+      "published_path": "backend/resources/history/catalog.json",
+      "published_bytes": 9297,
+      "published_sha256": "452b8456c49cb574039664ad94173d28386d3ecaf50b8226883bc4e78be18654",
+      "transformation": "public_copy; machine paths redacted / UTF-8 newline normalization; selected or adapted content"
+    }
+  ]
+}

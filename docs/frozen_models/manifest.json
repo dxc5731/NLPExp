@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "hash_algorithm": "sha256",
+  "files": {
+    "BERT-CRF/model_info.json": {
+      "bytes": 3611,
+      "sha256": "9f60a71239fc798e3b6d0b2f5d5ffaa3940a1a34a144108c39ab1cb417ade819"
+    },
+    "BERT-CRF/provenance/checkpoint_info.json": {
+      "bytes": 670,
+      "sha256": "1e313983ee19d5de4f0e9de239c4c87ce95e28bc8c621df7c400ddc497d12f40"
+    },
+    "BERT-CRF/provenance/checkpoint_reference.json": {
+      "bytes": 721,
+      "sha256": "492eb274e369c513e20ff807664afe53a70ec6151a044f328b5c986cc1301b64"
+    },
+    "BERT-CRF/provenance/config.json": {
+      "bytes": 7462,
+      "sha256": "3253c334d6afecd85263eacbfc6949464fcade17b9a2770067b3d9285d873f75"
+    },
+    "BERT-CRF/provenance/history.csv": {
+      "bytes": 1161,
+      "sha256": "70731abe42417fb71cb5687d058845dc83a15e6f1799bda9b8fd1a5a9149d7d6"
+    },
+    "BERT-CRF/provenance/model_card.md": {
+      "bytes": 789,
+      "sha256": "1b3d9162b574248e6d62f1a353eadf209a969d16f4a3fc08d26f7726dda378b5"
+    },
+    "BERT-CRF/provenance/original_inference.json": {
+      "bytes": 2827,
+      "sha256": "0830b63519bc1a35bde818517956c59aca9ae8f72fd3aa5bdd65502432216324"
+    },
+    "BERT-CRF/provenance/original_reproduction_README.md": {
+      "bytes": 10814,
+      "sha256": "1e6a945fc653c6bc1d18319a467de93cd1793b19e3b7cee072c6174b4c324580"
+    },
+    "BERT-CRF/provenance/required_assets.json": {
+      "bytes": 1993,
+      "sha256": "bf99aa86e58063029c0b4516549e042dfd5693c316ccfff4f4de2fe31970d7dc"
+    },
+    "BERT-CRF/provenance/training_environment.json": {
+      "bytes": 586,
+      "sha256": "09a8148fe251096b5c5119dcba7a6152eacbbfe084f9a30856a9b4c626c95bb6"
+    },
+    "BERT-CRF/provenance/training_log_excerpt.json": {
+      "bytes": 468,
+      "sha256": "3df6530e9eec4852a628b1ecc0c63f0b2ebf5fd8dada174bafa3fd48e3438367"
+    },
+    "BERT-CRF/provenance/training_provenance.json": {
+      "bytes": 3865,
+      "sha256": "459ec37875b9e46ddb93fb8fdd1a40efca945f5190e76cb9cafdad3bcb8b52af"
+    },
+    "BERT-CRF/source/infer.py": {
+      "bytes": 9501,
+      "sha256": "f415755812845c6c3e4af4accda973ef6a0abb130a1be64e08e32beadae974f1"
+    },
+    "BERT-CRF/source/src/bert_crf/__init__.py": {
+      "bytes": 257,
+      "sha256": "57b22c9dc692ea521e70bf75fa78ded1ced698bdc0e05bcc0d9a5763b8463c17"
+    },
+    "BERT-CRF/source/src/bert_crf/character_mapping.py": {
+      "bytes": 6441,
+      "sha256": "c882ca9064fa3f00208df6057b3f82d688aaa17cd228e9bc0e76c47ec0c96706"
+    },
+    "BERT-CRF/source/src/bert_crf/checkpoint.py": {
+      "bytes": 4351,
+      "sha256": "bd6d84a946da786b99d29e3cf0cd36b4426bdc374dcf3af6314936a98d4514eb"
+    },
+    "BERT-CRF/source/src/bert_crf/config.py": {
+      "bytes": 3007,
+      "sha256": "9b6fb7d9572eda6a398b7dd5a977ed1978d7b27ab5160b8ca1e6c76f2f9d7c8d"
+    },
+    "BERT-CRF/source/src/bert_crf/constraints.py": {
+      "bytes": 610,
+      "sha256": "88830e7534a5a4c15bbb5f8181c8a99c0024f13fa383cb9ce29e6af51bea00f4"
+    },
+    "BERT-CRF/source/src/bert_crf/crf.py": {
+      "bytes": 5897,
+      "sha256": "9d672cb5eaabbb01ec7d140b6c70b9bcdfa981134017b5cd5b37fc62e3de1df6"
+    },
+    "BERT-CRF/source/src/bert_crf/data_adapter.py": {
+      "bytes": 11782,
+      "sha256": "9e0d1dcadde9e1f16d1fdf0673d00eb844a42a36fa18bda97fa4e2e08e072f79"
+    },
+    "BERT-CRF/source/src/bert_crf/experiment.py": {
+      "bytes": 5827,
+      "sha256": "1d3044f9c27f14ff8b2f96914662881d1efae97fb492111ff392fda68f2bcc18"
+    },
+    "BERT-CRF/source/src/bert_crf/formal_config.py": {
+      "bytes": 9429,
+      "sha256": "a3cdf8094ca095e5396becd8119894babe6285e534eaab5466992c4da0a4a25a"
+    },
+    "BERT-CRF/source/src/bert_crf/metrics.py": {
+      "bytes": 4302,
+      "sha256": "539d079338056f197b32e1a30888c6b9aecb9961cfdb547d4110b70c570c60c0"
+    },
+    "BERT-CRF/source/src/bert_crf/model.py": {
+      "bytes": 5332,
+      "sha256": "bb36b456dff831bbaf269e6c7f0c8b77c189d044aeeb3704a1e898ed755c0029"
+    },
+    "BERT-CRF/source/src/bert_crf/preflight.py": {
+      "bytes": 15741,
+      "sha256": "56aed9d9632b048d725b19b3eb44cdd0262a917437d01e03ef9e5da8e858b840"
+    },
+    "BERT-CRF/source/src/bert_crf/real_data.py": {
+      "bytes": 4819,
+      "sha256": "896bc8bde376b8bdf92623e3344f3295a223ef941377a1285f622ad5c9166da9"
+    },
+    "BERT-CRF/source/src/bert_crf/run_artifacts.py": {
+      "bytes": 5379,
+      "sha256": "7d10995ea57b67ced440bd59395de0f58d50420e30ed565f7c16ed8e73bb72f8"
+    },
+    "BERT-CRF/source/src/bert_crf/synthetic_smoke.py": {
+      "bytes": 8880,
+      "sha256": "108ea67a57c8f553677535e6e6098611d4f0e67f09558f78ce5e21b8c58f05f8"
+    },
+    "BERT-CRF/source/src/bert_crf/train.py": {
+      "bytes": 1899,
+      "sha256": "ec7ea308c00909f3acdd7c560953e7bcba13edcc6d56766848656c7f4c6454f5"
+    },
+    "BERT-CRF/source/src/bert_crf/trainer.py": {
+      "bytes": 20537,
+      "sha256": "7c36028c2a2a9b737819a09ca03feac4438d694fc4fa8d071da6007f7b5e1b8a"
+    },
+    "BERT-CRF/source/src/bert_crf/training_config.py": {
+      "bytes": 4100,
+      "sha256": "0b030c0b45f0b62d0af999b246d6518f5d9447c6f78182f644297cb30a59ad19"
+    },
+    "BERT-CRF/source/training_config.json": {
+      "bytes": 5751,
+      "sha256": "3dcb3e0942bdc74b0a8d9f7db3a0a1d44c4b0f36b9fb7b8da3ec16347f77aef0"
+    },
+    "BERT-CRF/tokenizer/config.json": {
+      "bytes": 624,
+      "sha256": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c"
+    },
+    "BERT-CRF/tokenizer/tokenizer.json": {
+      "bytes": 268943,
+      "sha256": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae"
+    },
+    "BERT-CRF/tokenizer/tokenizer_config.json": {
+      "bytes": 49,
+      "sha256": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8"
+    },
+    "BERT-CRF/tokenizer/vocab.txt": {
+      "bytes": 109540,
+      "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+    },
+    "BERT-CRF/weights/epoch_0005.pt": {
+      "bytes": 1220509451,
+      "sha256": "e5ee6aaa8d4a00a4626553002aa9a63253a8ee0139463fec2bb41427bf391bed"
+    },
+    "BERT-Softmax/model_info.json": {
+      "bytes": 1531,
+      "sha256": "67dfd69e04d97296699181b1a42b22bf433592fe5ffbca22e032f674b346ce99"
+    },
+    "BERT-Softmax/provenance/acceptance_acceptance_result.json": {
+      "bytes": 4635,
+      "sha256": "2e7af950defb8ca42ee2cc907cd1899e09097a1a4ceb5d6d703478de063ed7ec"
+    },
+    "BERT-Softmax/provenance/acceptance_README.md": {
+      "bytes": 5442,
+      "sha256": "0f0926bc51968d8039e073c1c1de3544148599e6e4be393072f369f45a9753a0"
+    },
+    "BERT-Softmax/provenance/config.json": {
+      "bytes": 1562,
+      "sha256": "af61cb9c19c926dd94157645b65891a735aec49016b0f5910c85d67efdc02bc9"
+    },
+    "BERT-Softmax/provenance/metrics.jsonl": {
+      "bytes": 976,
+      "sha256": "8e212ccc44c55b9367a1b45b9f43b682e20c19b8ad0b153d41fe12c62da5d754"
+    },
+    "BERT-Softmax/provenance/original_dev_run_info.json": {
+      "bytes": 3627,
+      "sha256": "7ab0638f01995f9a9fc52521fee7c1dd3fa3dc23395dca79ec557b834b596a74"
+    },
+    "BERT-Softmax/provenance/train.log": {
+      "bytes": 2624,
+      "sha256": "f7dd89210d7d8c3bba08a49c4550167b22bccd82ab8d53cc990b2ea78d765194"
+    },
+    "BERT-Softmax/provenance/实验记录.md": {
+      "bytes": 1423,
+      "sha256": "2ee21159ccedc11473624a6f2f92a736635052fb62a5fe27b4456fe071539544"
+    },
+    "BERT-Softmax/source/src/__init__.py": {
+      "bytes": 25,
+      "sha256": "9552f854fcf77389160a08cfb4be2eb902cd9a0c0af76ab57df02cbf9125d369"
+    },
+    "BERT-Softmax/source/src/align.py": {
+      "bytes": 6160,
+      "sha256": "b1a8c73af37c6e291d0fcbaf6b4411f440cc04338d0dce4cd74ab3d8864f479b"
+    },
+    "BERT-Softmax/source/src/config.py": {
+      "bytes": 1895,
+      "sha256": "99bc053b3a41dac4e8d0e9397689e1b099295590598f42669d5396a2f6f0eb7a"
+    },
+    "BERT-Softmax/source/src/dataset.py": {
+      "bytes": 6424,
+      "sha256": "7f6e2188c22f979d95cd8b51bd062b499ee7ce31b14b257f6806cc058554a24f"
+    },
+    "BERT-Softmax/source/src/labels.py": {
+      "bytes": 651,
+      "sha256": "89737f2f4c751ff59d51ae6a0897e63f43eb7c7cbd475727bce3d3592fe5986d"
+    },
+    "BERT-Softmax/source/src/metrics.py": {
+      "bytes": 2804,
+      "sha256": "8e319d50ca7fdf67013c15d5c24a510ac359ca674232cba4c338bf1f79e5d77f"
+    },
+    "BERT-Softmax/tokenizer/config.json": {
+      "bytes": 624,
+      "sha256": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c"
+    },
+    "BERT-Softmax/tokenizer/tokenizer.json": {
+      "bytes": 268943,
+      "sha256": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae"
+    },
+    "BERT-Softmax/tokenizer/tokenizer_config.json": {
+      "bytes": 49,
+      "sha256": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8"
+    },
+    "BERT-Softmax/tokenizer/vocab.txt": {
+      "bytes": 109540,
+      "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+    },
+    "BERT-Softmax/weights/best.pt": {
+      "bytes": 406810499,
+      "sha256": "93322262dd14252203966cd56499086430a51b13d1112aa0162fcf18b87f6adb"
+    },
+    "example_input.json": {
+      "bytes": 223,
+      "sha256": "1d9bc3d06b179356c189a2ef6675ca621ee273583aaf1aef5b7b2ace40e88b4c"
+    },
+    "infer.py": {
+      "bytes": 10168,
+      "sha256": "65bbf63768239edea6b36102ce897ca00f436db6643273038966cd5dfa1340df"
+    },
+    "packaging_validation.json": {
+      "bytes": 3414,
+      "sha256": "5aca80fe3bd241ffab8ed2fa4393957f202130cef9f67a5a550e3e676744d8d1"
+    },
+    "requirements.txt": {
+      "bytes": 224,
+      "sha256": "5f8c68e9712e7961ad0a0db4201c93a845577ba95ed17d4ea5ec90d427455819"
+    },
+    "source_copies.json": {
+      "bytes": 18667,
+      "sha256": "54e1a5ef5b1e601ac2bb02647daf9d8d4d43140f135ade7e386a1a4bcd661001"
+    },
+    "verify.py": {
+      "bytes": 702,
+      "sha256": "82f167e083f55db94e0f3ed6cc1c9cd57a50667346aadcd5005d86f16777b022"
+    },
+    "使用指南.md": {
+      "bytes": 7797,
+      "sha256": "af18ee17b25ea988da77403a7f10d5b75fd1ee0034222013c0dc7ad6f083a67a"
+    }
+  }
+}

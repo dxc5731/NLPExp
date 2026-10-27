@@ -1,0 +1,231 @@
+{
+  "training": {
+    "artifact_kind": "real_training",
+    "epochs": 5,
+    "batch_size": 16,
+    "learning_rate": 1e-05,
+    "weight_decay": 0.01,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_epsilon": 1e-08,
+    "scheduler": "linear",
+    "warmup_steps": 2777,
+    "gradient_clip_norm": 1.0,
+    "seed": 42,
+    "device": "cuda",
+    "precision": "float32",
+    "deterministic_algorithms": true,
+    "shuffle": true,
+    "selection_metric": "entity.micro.f1",
+    "selection_mode": "max",
+    "min_delta": 0.0,
+    "early_stopping_patience": 2,
+    "model_config_path": "inline:formal.model"
+  },
+  "model": {
+    "schema_version": "1.1_boundary_aux",
+    "artifact_kind": "real_training",
+    "bert_model_name": "google-bert/bert-base-chinese",
+    "bert_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+    "hidden_size": 768,
+    "num_labels": 11,
+    "labels": [
+      "O",
+      "B-Symptom",
+      "I-Symptom",
+      "B-Drug",
+      "I-Drug",
+      "B-Drug_Category",
+      "I-Drug_Category",
+      "B-Medical_Examination",
+      "I-Medical_Examination",
+      "B-Operation",
+      "I-Operation"
+    ],
+    "dropout": 0.1,
+    "bio_constraints": true,
+    "constraint_rule_version": "strict_bio_v1",
+    "seed": 42,
+    "device": "cuda",
+    "precision": "float32",
+    "deterministic_algorithms": true,
+    "boundary_aux": {
+      "enabled": true,
+      "weight": 0.2,
+      "target": "entity_start_end",
+      "loss": "balanced_bce_with_logits",
+      "decode_policy": "crf_only",
+      "implementation_version": "boundary_aux_v1"
+    }
+  },
+  "formal": {
+    "schema_version": "bert_crf_formal_v1",
+    "artifact_kind": "real_training",
+    "experiment_name": "boundary_aux_02",
+    "executor": "dxc",
+    "model": {
+      "schema_version": "1.1_boundary_aux",
+      "artifact_kind": "real_training",
+      "bert_model_name": "google-bert/bert-base-chinese",
+      "bert_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+      "hidden_size": 768,
+      "num_labels": 11,
+      "labels": [
+        "O",
+        "B-Symptom",
+        "I-Symptom",
+        "B-Drug",
+        "I-Drug",
+        "B-Drug_Category",
+        "I-Drug_Category",
+        "B-Medical_Examination",
+        "I-Medical_Examination",
+        "B-Operation",
+        "I-Operation"
+      ],
+      "dropout": 0.1,
+      "bio_constraints": true,
+      "constraint_rule_version": "strict_bio_v1",
+      "seed": 42,
+      "device": "cuda",
+      "precision": "float32",
+      "deterministic_algorithms": true,
+      "boundary_aux": {
+        "enabled": true,
+        "weight": 0.2,
+        "target": "entity_start_end",
+        "loss": "balanced_bce_with_logits",
+        "decode_policy": "crf_only",
+        "implementation_version": "boundary_aux_v1"
+      }
+    },
+    "training": {
+      "artifact_kind": "real_training",
+      "epochs": 5,
+      "batch_size": 16,
+      "learning_rate": 1e-05,
+      "weight_decay": 0.01,
+      "adam_betas": [
+        0.9,
+        0.999
+      ],
+      "adam_epsilon": 1e-08,
+      "scheduler": "linear",
+      "warmup_steps": 2777,
+      "gradient_clip_norm": 1.0,
+      "seed": 42,
+      "device": "cuda",
+      "precision": "float32",
+      "deterministic_algorithms": true,
+      "shuffle": true,
+      "selection_metric": "entity.micro.f1",
+      "selection_mode": "max",
+      "min_delta": 0.0,
+      "early_stopping_patience": 2,
+      "model_config_path": "inline:formal.model"
+    },
+    "inputs": {
+      "official_train": {
+        "path": ".local/bert_crf/20261019T162653+0800_stage1a/data/IMCS-V2_train.json",
+        "files": {
+          ".": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24"
+        }
+      },
+      "fixed_split": {
+        "path": ".local/bert_crf/20261020T161159+0800_interface_v2_audit/interface/code/artifacts/split_v1.json",
+        "files": {
+          ".": "497f21cf13d8f5accb83f86ffda16a4a59ba716c064ec347e990a219e8957072"
+        }
+      },
+      "interface": {
+        "path": ".local/bert_crf/20261020T161159+0800_interface_v2_audit/interface/code/src",
+        "files": {
+          "__init__.py": "8b084a9f378124b2b1a51563bf3c22444eb7ff33692017da28b2136ae56987ed",
+          "align.py": "40d63734e9b0eb7da4c6a33c5fb835d35d73442382ac35257c828a7ba7e6ca3e",
+          "config.py": "fbc669c1c807e31ba4ca570a15a3d408c60e48299e61f633a9ef833f94f9c4e3",
+          "data_io.py": "1b2d60df7551f31db7b3987df5c3b5b645659387831c48c2d3de703d068152ef",
+          "dataset.py": "9daae661ad7f8d8752561223c31ed956f1eb4c75c658cbc95c90ca5b16e31349",
+          "labels.py": "bfe9c11aa337c9c4fb7a8157047d1921418b307bae9dceb0f7191e290d3a882c",
+          "metrics.py": "6a74810fb76e187f7aeedfb26e70837b6d2f9815fd38d7ac5c28b8553173f0da",
+          "model.py": "4a2a5d4298a3e70083f2488cae62f1457e5e83654c2d1d8189d83cd209dac480",
+          "split.py": "b666ed7483688630e462ee1f7f43a5855cadb8412a44a67b5d91aad4314c07b5"
+        }
+      },
+      "tokenizer": {
+        "path": ".local/bert_crf/20261019T162653+0800_stage1a/tokenizer",
+        "files": {
+          "config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+          "tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+          "tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+          "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+        }
+      },
+      "pretrained": {
+        "path": ".local/bert_crf/20261019T174356+0800_stage1b/pretrained",
+        "files": {
+          "config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+          "model.safetensors": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3",
+          "README.md": "80efb5c88f6c09c0f4b2f91380852a374f023e195954f21ff7221928487ce454",
+          "tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+          "tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+          "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+        }
+      }
+    },
+    "data": {
+      "version": "IMCS-V2-NER_train_sha256_07cdd379",
+      "split_version": "split_v1_sha256_497f21cf",
+      "source": "official_train_only",
+      "train_split": "train",
+      "validation_split": "val",
+      "expected_dialogues": {
+        "train": 2225,
+        "val": 247
+      },
+      "expected_sentences": {
+        "train": 88842,
+        "val": 9687
+      },
+      "expected_characters": {
+        "train": 1153312,
+        "val": 126049
+      }
+    },
+    "alignment": {
+      "policy": "offset_share_unique_v1",
+      "offset_unit": "python_unicode_codepoint",
+      "gold": "original_character_bio",
+      "uncovered": "reject",
+      "overlap": "reject",
+      "truncation": "reject"
+    },
+    "resources": {
+      "max_tokens": 256,
+      "padding": "dynamic_longest",
+      "num_workers": 0,
+      "gradient_accumulation_steps": 1,
+      "amp": false,
+      "adam_foreach": false,
+      "optimizer_state_reserve_multiplier": 3,
+      "minimum_free_bytes": 1073741824,
+      "minimum_disk_free_bytes": 17179869184,
+      "measurement_file": "docs/bert_crf/evidence/20261021T224813+0800_boundary_aux_launch/resource_measurements_v2.json",
+      "measurement_sha256": "7327b6d3d8d58ad4c8598e9dd091b9d47f4c2b4271a5ff3ada631dba810c7206"
+    },
+    "outputs": {
+      "root": "experiments/bert_crf",
+      "checkpoints": "checkpoints",
+      "logs": ".",
+      "results": "."
+    },
+    "formats": {
+      "history": "bert_crf_history_v1",
+      "predictions": "character_internal_jsonl_v1",
+      "run_info": "bert_crf_internal_run_v1",
+      "future_handoff": "1.0"
+    },
+    "warmup_ratio": 0.1
+  }
+}

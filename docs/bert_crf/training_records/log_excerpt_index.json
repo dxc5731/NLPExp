@@ -1,0 +1,32 @@
+[
+  {
+    "run_id": "20261020T185424+0800_real_training_71838655",
+    "events": 6,
+    "source_lines": 12715,
+    "source_sha256": "b016319de89500df5e8820e9869feea875b81f9f07263f58431657eaf030b99b"
+  },
+  {
+    "run_id": "20261020T215116+0800_real_training_76608cc3",
+    "events": 8,
+    "source_lines": 16667,
+    "source_sha256": "ed93cf131b55dcdd22cf7f694bc2d297d27942182ffdab9c52c41d4b47a847c0"
+  },
+  {
+    "run_id": "20261021T004808+0800_real_training_8aad7b72",
+    "events": 11,
+    "source_lines": 27776,
+    "source_sha256": "1b0b6026575fefffc818d3ce3ddf9ef9ea488c64b7fe5fed9c7067da71444a75"
+  },
+  {
+    "run_id": "20261021T195736+0800_real_training_95abb833",
+    "events": 11,
+    "source_lines": 27776,
+    "source_sha256": "d95f6759feedb3c46a5b6e49bbf5ff9c21156004a6c3367d987b6fdc37990672"
+  },
+  {
+    "run_id": "20261021T231741+0800_real_training_86767c7e",
+    "events": 11,
+    "source_lines": 27776,
+    "source_sha256": "6b0d67e03b27d91407374f9fc167b036d94c42457e671f2011c747e3211745c3"
+  }
+]

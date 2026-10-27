@@ -1,0 +1,82 @@
+{
+  "created_at": "2026-10-27T03:38:17.976579+08:00",
+  "official_dev_sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f",
+  "models": {
+    "softmax": {
+      "status": "PASS",
+      "full_dev_execution": {
+        "command": [
+          "${PROJECT}\\.venv-bert-crf\\Scripts\\python.exe",
+          "-B",
+          "-X",
+          "utf8",
+          "${PROJECT}\\model_delivery_20261027\\BERT_Final_Frozen_Weights_20261027\\infer.py",
+          "--model",
+          "softmax",
+          "--input",
+          "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+          "--output",
+          "${PROJECT}\\model_delivery_20261027\\verification\\softmax_predictions_dev.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 68.73261619987898
+      },
+      "dialogues": 833,
+      "sentences": 33267,
+      "characters": 441339,
+      "different_sentences": 0,
+      "different_character_labels": 0,
+      "all_predictions_identical": true,
+      "single_sentence_inference": "PASS",
+      "parameter_state_hash_before": "f74abc7224520f307c3e0ec17885e14b26839d592f531e30239216abad151de1",
+      "parameter_state_hash_after": "f74abc7224520f307c3e0ec17885e14b26839d592f531e30239216abad151de1",
+      "backward_calls": 0,
+      "optimizer_steps": 0,
+      "bio_repairs": 526,
+      "checkpoint_sha256": "93322262dd14252203966cd56499086430a51b13d1112aa0162fcf18b87f6adb"
+    },
+    "crf": {
+      "status": "PASS",
+      "full_dev_execution": {
+        "command": [
+          "${PROJECT}\\.venv-bert-crf\\Scripts\\python.exe",
+          "-B",
+          "-X",
+          "utf8",
+          "${PROJECT}\\model_delivery_20261027\\BERT_Final_Frozen_Weights_20261027\\infer.py",
+          "--model",
+          "crf",
+          "--input",
+          "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+          "--output",
+          "${PROJECT}\\model_delivery_20261027\\verification\\crf_predictions_dev.json"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 104.70290199993178
+      },
+      "dialogues": 833,
+      "sentences": 33267,
+      "characters": 441339,
+      "different_sentences": 0,
+      "different_character_labels": 0,
+      "all_predictions_identical": true,
+      "single_sentence_inference": "PASS",
+      "parameter_state_hash_before": "376d0096eb052ae27feb95d1438485b219fe934bd1febbe8e927f51fa48b6c72",
+      "parameter_state_hash_after": "376d0096eb052ae27feb95d1438485b219fe934bd1febbe8e927f51fa48b6c72",
+      "backward_calls": 0,
+      "optimizer_steps": 0,
+      "bio_repairs": 0,
+      "checkpoint_sha256": "e5ee6aaa8d4a00a4626553002aa9a63253a8ee0139463fec2bb41427bf391bed"
+    }
+  },
+  "original_file_policy": "All existing files retained in their original locations; copying only.",
+  "existing_output_overwrite_refused": true,
+  "all_copied_originals_rechecked_unchanged": true,
+  "original_handoff_zip_unchanged": true,
+  "original_data_unchanged": true,
+  "weights_reserialized_or_retrained": false,
+  "environment": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "${PROJECT}\\.venv-bert-crf\\Scripts\\python.exe"
+  }
+}

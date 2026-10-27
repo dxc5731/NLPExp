@@ -1,0 +1,445 @@
+{
+  "git": {
+    "revision": "bcdd42777942b5ccbbf1ed14a0d7fc2c0631dce4",
+    "branch": "dxc",
+    "dirty": true,
+    "note": "File snapshots identify untracked application/source code separately."
+  },
+  "files": [
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\check_environment.py",
+      "bytes": 1661,
+      "sha256": "f3179542b26cefe757384a45d2d9b5d46b7987928c1106e33f6f83350987f700"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\compare_predictions.py",
+      "bytes": 2535,
+      "sha256": "80c9aa44c7c93b3c4fe82da1fc9754571ebd8b83b9d4944dcaabc0d6bf164217"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\infer.py",
+      "bytes": 9501,
+      "sha256": "f415755812845c6c3e4af4accda973ef6a0abb130a1be64e08e32beadae974f1"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\prepare_assets.py",
+      "bytes": 4247,
+      "sha256": "0d0f351792b9d12da4af962a2004118036ffaccfb238d4eb11bccbe82103ffab"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\__init__.py",
+      "bytes": 257,
+      "sha256": "57b22c9dc692ea521e70bf75fa78ded1ced698bdc0e05bcc0d9a5763b8463c17"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\character_mapping.py",
+      "bytes": 6441,
+      "sha256": "c882ca9064fa3f00208df6057b3f82d688aaa17cd228e9bc0e76c47ec0c96706"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\checkpoint.py",
+      "bytes": 4351,
+      "sha256": "bd6d84a946da786b99d29e3cf0cd36b4426bdc374dcf3af6314936a98d4514eb"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\config.py",
+      "bytes": 3007,
+      "sha256": "9b6fb7d9572eda6a398b7dd5a977ed1978d7b27ab5160b8ca1e6c76f2f9d7c8d"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\constraints.py",
+      "bytes": 610,
+      "sha256": "88830e7534a5a4c15bbb5f8181c8a99c0024f13fa383cb9ce29e6af51bea00f4"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\crf.py",
+      "bytes": 5897,
+      "sha256": "9d672cb5eaabbb01ec7d140b6c70b9bcdfa981134017b5cd5b37fc62e3de1df6"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\data_adapter.py",
+      "bytes": 11782,
+      "sha256": "9e0d1dcadde9e1f16d1fdf0673d00eb844a42a36fa18bda97fa4e2e08e072f79"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\experiment.py",
+      "bytes": 5827,
+      "sha256": "1d3044f9c27f14ff8b2f96914662881d1efae97fb492111ff392fda68f2bcc18"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\formal_config.py",
+      "bytes": 9429,
+      "sha256": "a3cdf8094ca095e5396becd8119894babe6285e534eaab5466992c4da0a4a25a"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\metrics.py",
+      "bytes": 4302,
+      "sha256": "539d079338056f197b32e1a30888c6b9aecb9961cfdb547d4110b70c570c60c0"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\model.py",
+      "bytes": 5332,
+      "sha256": "bb36b456dff831bbaf269e6c7f0c8b77c189d044aeeb3704a1e898ed755c0029"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\preflight.py",
+      "bytes": 15741,
+      "sha256": "56aed9d9632b048d725b19b3eb44cdd0262a917437d01e03ef9e5da8e858b840"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\real_data.py",
+      "bytes": 4819,
+      "sha256": "896bc8bde376b8bdf92623e3344f3295a223ef941377a1285f622ad5c9166da9"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\run_artifacts.py",
+      "bytes": 5379,
+      "sha256": "7d10995ea57b67ced440bd59395de0f58d50420e30ed565f7c16ed8e73bb72f8"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\synthetic_smoke.py",
+      "bytes": 8880,
+      "sha256": "108ea67a57c8f553677535e6e6098611d4f0e67f09558f78ce5e21b8c58f05f8"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\train.py",
+      "bytes": 1899,
+      "sha256": "ec7ea308c00909f3acdd7c560953e7bcba13edcc6d56766848656c7f4c6454f5"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\trainer.py",
+      "bytes": 20537,
+      "sha256": "7c36028c2a2a9b737819a09ca03feac4438d694fc4fa8d071da6007f7b5e1b8a"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\bert_crf\\training_config.py",
+      "bytes": 4100,
+      "sha256": "0b030c0b45f0b62d0af999b246d6518f5d9447c6f78182f644297cb30a59ad19"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\src\\validate_predictions.py",
+      "bytes": 9648,
+      "sha256": "cc5266af4c50cb4b81f632ebc3be20b5af5bca6ff7d73e46fb7a7fd9e67a994b"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\tests\\test_handoff.py",
+      "bytes": 4409,
+      "sha256": "4692db247d4c34cb5e2af135c2259c121861380ed0291e63e6f6b83a655fd56a"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\tests\\test_reproduction_fix.py",
+      "bytes": 2657,
+      "sha256": "82f584707c4ef528a0b7611220c0d2911a8872348dce933502c346d2e82bc127"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\examples\\pipeline_validation\\build_fixture.py",
+      "bytes": 4295,
+      "sha256": "d0766199ddd4493b2ee5e75e57c96d1ccb686f70bf8842c9de591ab8daf49204"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\src\\check_run_info.py",
+      "bytes": 13555,
+      "sha256": "ba4cd48b9a02a25da0fde6f5991ad928728c9b26f773caae35ad51e12b03c82c"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\src\\compare_evaluations.py",
+      "bytes": 10392,
+      "sha256": "03eaefb5975f73ce2cc4e4c53776c7d589b3caf4309aadb54e0e4e9e937f5f11"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\src\\evaluate_predictions.py",
+      "bytes": 8398,
+      "sha256": "7c75016ae1f4cc07d4037bfeb39ffb63aaee8d43fc7a1da10c15fe258c3dc173"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\src\\evaluation_io.py",
+      "bytes": 5033,
+      "sha256": "8863d424b22d05ecd1300cda2dce9f382ba043e80c12039471ecb201c1781335"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\src\\export_errors.py",
+      "bytes": 11640,
+      "sha256": "6bf80ffc670b9795f50ef4b6a569373cb8c06432e9d3b01e6b7dba234d81e003"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\src\\ner_metrics.py",
+      "bytes": 6198,
+      "sha256": "5e02e13834e07560a3586038c832a603e675115bf0b3a2d0b8d3ebedf2356074"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\src\\run_evaluation_batch.py",
+      "bytes": 11335,
+      "sha256": "ebbdc4b3eec92d2025b57c70e5ea3cf36b1139b10d83703b96ecf9eab6997327"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\src\\validate_predictions.py",
+      "bytes": 26114,
+      "sha256": "75dc966361d216bdb9500acb63bce6be4313b708136290cd26b1195dfb7c1dcb"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\tests\\author_entity_reference.py",
+      "bytes": 2273,
+      "sha256": "bb261d062409648faa7b933ba3212b512e2fff19d959ba5beb93c5f73e099dc0"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\tests\\crosscheck_author.py",
+      "bytes": 4199,
+      "sha256": "431c80213eae4ed3a1cf6d98b5a5be1cb88d9cf151a8c5aae8691a12be6f4e4c"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\tests\\prepare_author_reference.py",
+      "bytes": 1348,
+      "sha256": "629363821bd8adbe61d12ee03ed8b56e1ca899f3238c7e303c4f396283dc88ad"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\tests\\run_pipeline_acceptance.py",
+      "bytes": 5805,
+      "sha256": "6bc2507610e8ff9753cdc5b6b04045055d84a0afb8a369da274346d26eb33eb4"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\tests\\test_evaluate_predictions.py",
+      "bytes": 23237,
+      "sha256": "d1e5c35882c0c9e1b07492fa25e82c7c9de1c3617f6acf6faa61bc79ae042ce0"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\tests\\test_evaluation_pipeline.py",
+      "bytes": 27558,
+      "sha256": "053e5efa98d5fd4ce145b4a88425f2eefa2fbfcb6141bcb1dab6801a6478eb25"
+    },
+    {
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\unified_evaluation\\tests\\test_validate_predictions.py",
+      "bytes": 20575,
+      "sha256": "99a7448b51469bb33b12231ddbc1b11ac02dbc1870fc667ffe99c37c5d1cc98d"
+    },
+    {
+      "path": "${PROJECT}\\backend\\__init__.py",
+      "bytes": 62,
+      "sha256": "1da08ab422e1ba4a7e641e4a7314501967df4eac6fda0ebbb4f8ff6547b14d0a"
+    },
+    {
+      "path": "${PROJECT}\\backend\\app.py",
+      "bytes": 7585,
+      "sha256": "c96a67a02f780622351902fd39cad7b83e6932cad2e9a9e03690615e37c0bee6"
+    },
+    {
+      "path": "${PROJECT}\\backend\\common.py",
+      "bytes": 5447,
+      "sha256": "0beb7a8cf3e9eb20a87b643357da4ec5c6bbfddec30c86aee6262cdbbe31ca21"
+    },
+    {
+      "path": "${PROJECT}\\backend\\dev_runner.py",
+      "bytes": 15496,
+      "sha256": "4a140c0f5995688d21921580c1777de5aa959ffd6967572b95f5589d8ce1dcca"
+    },
+    {
+      "path": "${PROJECT}\\backend\\entities.py",
+      "bytes": 2110,
+      "sha256": "9808ea993ec8022bc34d877fc86043b55932c9234e064145bae1b3e65b64ef07"
+    },
+    {
+      "path": "${PROJECT}\\backend\\tests\\test_app.py",
+      "bytes": 3521,
+      "sha256": "714c7cc9105c7c6d1c70c57025a234351104930780daed48b0ea21e14bdd874f"
+    },
+    {
+      "path": "${PROJECT}\\backend\\text_service.py",
+      "bytes": 4609,
+      "sha256": "ae5d7a34e4fece3a00f6bfaad7f0923a1c259d12b1105a95f9bfd583003be5c7"
+    },
+    {
+      "path": "${PROJECT}\\backend\\worker.py",
+      "bytes": 8865,
+      "sha256": "9235cfaa75912dc2695d162aae957ae8c50a5ba2de832f0c6c966584c349d278"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\error_analysis.py",
+      "bytes": 11888,
+      "sha256": "9042d41f0b87323d4123b68cd669d30f384551cd8834583ca81c50de61e42f88"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\eval_pred.py",
+      "bytes": 10310,
+      "sha256": "9065e4b16ed271028792efc51bbc63f9401e669c81b103f936c0d49c7148c111"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\extract_dict.py",
+      "bytes": 5436,
+      "sha256": "ffa377585a8768043a07a2b2431f0cb6bc765c7145d46faefae599ca2a3396ee"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\fast_match.py",
+      "bytes": 2901,
+      "sha256": "ed03f7bc4746e067d0e0b76c4245c80ec16a7d84ed00eb20744c7aff9c591f2b"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\gated_combo.py",
+      "bytes": 3940,
+      "sha256": "43d62b01e583f87713ff9f1f1b4f4f3b90a81a41e3dde84b274a8f3f5e378837"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\label_map.py",
+      "bytes": 1792,
+      "sha256": "502d6862b6d57375a16192ff798d1ee107d5c65245b7efc78239662db464c53e"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\rule_baseline.py",
+      "bytes": 1719,
+      "sha256": "2031252f8074deb1a4b767e4fc32d826432e3ce619c1b58682a96755e19b5be6"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\run_dev.py",
+      "bytes": 4288,
+      "sha256": "bf8cc9a2c6986e1b95abc0634254caa104a3a6ff726350d97a2acf6066c2c6b1"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\run_rule.py",
+      "bytes": 7597,
+      "sha256": "1f694c8172cd2ced81618a6941655a791da94d929dca972cc899972ab8f4a923"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\score_entity.py",
+      "bytes": 2186,
+      "sha256": "aa58154ea6f4a67eff74bb044de3f6c2b2b18abcce267d7089cc618c4fe7c80a"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\score_pred.py",
+      "bytes": 1439,
+      "sha256": "5be4e0aa9dad81160a92b039b7d240c7792c5da6bdee9d5da0d8cc81253fdc69"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\score_rule.py",
+      "bytes": 1087,
+      "sha256": "953f06c8e78ceac30f822e8745225e6d1c525efb31850eaf4e02447826b08bd1"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\sweep_gated.py",
+      "bytes": 5458,
+      "sha256": "3acd6d93eec0f6b70eb07ff07c6b4c9bdc1ef9bbe506cb89a62d5ba4fc65601f"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\sweep_grid.py",
+      "bytes": 5004,
+      "sha256": "27b8dbb69609065fa1e76c92ea04f781a0d7cfd9a738baccf70a64fa6d3b62f6"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\sweep_mincount.py",
+      "bytes": 5518,
+      "sha256": "6000e89b327661e3d056232a3f86bdfb5072b9e35f8d877c277e5f012686f130"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\sweep_tfidf.py",
+      "bytes": 2079,
+      "sha256": "73f478bc8bcd68a510c0282363247df80e2a5c85a9dedcfe74c795dfc006fffc"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\tfidf_baseline.py",
+      "bytes": 2289,
+      "sha256": "7bd510aaf9565dfb34d69aca99415d6f302ba52d58e498151c7a9c069bb2657c"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\train_tfidf.py",
+      "bytes": 2805,
+      "sha256": "5f880b7d6ea522440b5e3e6d1705482ce8a0db4619a06ae8f99f91fd97f39693"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\verify_fast_match.py",
+      "bytes": 3097,
+      "sha256": "190459d43643680f742cf0b03be783119df6787ce836b937d9221e481c20f972"
+    },
+    {
+      "path": "${PROJECT}\\code\\src\\__init__.py",
+      "bytes": 25,
+      "sha256": "9552f854fcf77389160a08cfb4be2eb902cd9a0c0af76ab57df02cbf9125d369"
+    },
+    {
+      "path": "${PROJECT}\\code\\src\\align.py",
+      "bytes": 6160,
+      "sha256": "b1a8c73af37c6e291d0fcbaf6b4411f440cc04338d0dce4cd74ab3d8864f479b"
+    },
+    {
+      "path": "${PROJECT}\\code\\src\\config.py",
+      "bytes": 1895,
+      "sha256": "99bc053b3a41dac4e8d0e9397689e1b099295590598f42669d5396a2f6f0eb7a"
+    },
+    {
+      "path": "${PROJECT}\\code\\src\\data_io.py",
+      "bytes": 1086,
+      "sha256": "3292335e1656adc4166edb91ab9d4f0d4a316dccf9f328b2c2d36e28457489bf"
+    },
+    {
+      "path": "${PROJECT}\\code\\src\\dataset.py",
+      "bytes": 6424,
+      "sha256": "7f6e2188c22f979d95cd8b51bd062b499ee7ce31b14b257f6806cc058554a24f"
+    },
+    {
+      "path": "${PROJECT}\\code\\src\\labels.py",
+      "bytes": 651,
+      "sha256": "89737f2f4c751ff59d51ae6a0897e63f43eb7c7cbd475727bce3d3592fe5986d"
+    },
+    {
+      "path": "${PROJECT}\\code\\src\\metrics.py",
+      "bytes": 2804,
+      "sha256": "8e319d50ca7fdf67013c15d5c24a510ac359ca674232cba4c338bf1f79e5d77f"
+    },
+    {
+      "path": "${PROJECT}\\code\\src\\model.py",
+      "bytes": 977,
+      "sha256": "b2c2dc4be3d0433b32599229c5808b7be7192f999e0185821855c1bd44dea9bb"
+    },
+    {
+      "path": "${PROJECT}\\code\\src\\predict.py",
+      "bytes": 10015,
+      "sha256": "26e7c43ec2e8fd2e9258c9be38db64b74e05d2a781cfe5623d01ab60f74d8f5d"
+    },
+    {
+      "path": "${PROJECT}\\code\\src\\split.py",
+      "bytes": 4101,
+      "sha256": "e79ed51c56c9c0ea1bacf075e1f309121c9455e43a6a0dbcd171ed4499fd61df"
+    },
+    {
+      "path": "${PROJECT}\\code\\src\\train.py",
+      "bytes": 8407,
+      "sha256": "fd89463f36644349f91a95bf88407742b92124a2e8216b2c724d3d3ae395fff3"
+    },
+    {
+      "path": "${PROJECT}\\evaluation\\src\\check_run_info.py",
+      "bytes": 13555,
+      "sha256": "ba4cd48b9a02a25da0fde6f5991ad928728c9b26f773caae35ad51e12b03c82c"
+    },
+    {
+      "path": "${PROJECT}\\evaluation\\src\\compare_evaluations.py",
+      "bytes": 10392,
+      "sha256": "03eaefb5975f73ce2cc4e4c53776c7d589b3caf4309aadb54e0e4e9e937f5f11"
+    },
+    {
+      "path": "${PROJECT}\\evaluation\\src\\evaluate_predictions.py",
+      "bytes": 8398,
+      "sha256": "7c75016ae1f4cc07d4037bfeb39ffb63aaee8d43fc7a1da10c15fe258c3dc173"
+    },
+    {
+      "path": "${PROJECT}\\evaluation\\src\\evaluation_io.py",
+      "bytes": 5033,
+      "sha256": "8863d424b22d05ecd1300cda2dce9f382ba043e80c12039471ecb201c1781335"
+    },
+    {
+      "path": "${PROJECT}\\evaluation\\src\\export_errors.py",
+      "bytes": 11640,
+      "sha256": "6bf80ffc670b9795f50ef4b6a569373cb8c06432e9d3b01e6b7dba234d81e003"
+    },
+    {
+      "path": "${PROJECT}\\evaluation\\src\\ner_metrics.py",
+      "bytes": 6198,
+      "sha256": "5e02e13834e07560a3586038c832a603e675115bf0b3a2d0b8d3ebedf2356074"
+    },
+    {
+      "path": "${PROJECT}\\evaluation\\src\\run_evaluation_batch.py",
+      "bytes": 11335,
+      "sha256": "ebbdc4b3eec92d2025b57c70e5ea3cf36b1139b10d83703b96ecf9eab6997327"
+    },
+    {
+      "path": "${PROJECT}\\evaluation\\src\\validate_predictions.py",
+      "bytes": 26114,
+      "sha256": "75dc966361d216bdb9500acb63bce6be4313b708136290cd26b1195dfb7c1dcb"
+    }
+  ]
+}

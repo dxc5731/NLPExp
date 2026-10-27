@@ -23,7 +23,16 @@ def load(path):
     return json.loads(Path(path).read_text(encoding='utf-8'))
 
 def config():
-    return load(RUNTIME / 'runtime.json')
+    # A clean clone can browse public historical results without private assets.
+    # Existing configured inference installations retain their original values.
+    path = Path(os.environ.get('NLPEXP_RUNTIME_CONFIG', str(RUNTIME / 'runtime.json')))
+    result = {'demo_runs': str(ROOT / 'runs/demo_runs'),
+              'text_runs': str(ROOT / 'runs/demo_text_runs')}
+    if path.is_file():
+        result.update(load(path))
+    elif 'NLPEXP_RUNTIME_CONFIG' in os.environ:
+        raise FileNotFoundError('NLPEXP_RUNTIME_CONFIG 指定的配置文件不存在')
+    return result
 
 def sha(path):
     h = hashlib.sha256()
@@ -63,8 +72,12 @@ def asset_files(method):
     if method == 'rule':
         return sorted((ROOT / 'baseline/dict').glob('dict_*.txt'))
     if method == 'softmax':
+        if 'softmax_checkpoint' not in c or 'softmax_model_dir' not in c:
+            raise FileNotFoundError('未配置 Softmax 本地资源；请按 docs/demo/使用说明.md 准备 runtime.json')
         return [Path(c['softmax_checkpoint']), *sorted(Path(c['softmax_model_dir']).glob('*'))]
     if method == 'crf':
+        if 'crf_reproduce' not in c or 'crf_checkpoint' not in c:
+            raise FileNotFoundError('未配置 CRF E5 本地资源；请按 docs/demo/使用说明.md 准备 runtime.json')
         formal = load(Path(c['crf_reproduce']) / 'training_config.json')
         tok = ROOT / formal['inputs']['tokenizer']['path']
         return [Path(c['crf_checkpoint']), Path(c['crf_reproduce']) / 'training_config.json',

@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0",
+  "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+  "method_name": "BERT-CRF E5",
+  "automated_status": "PASS",
+  "status": "NEEDS_REVIEW",
+  "checks": [
+    {
+      "name": "schema_version",
+      "status": "PASS",
+      "message": "Supported metadata schema is 1.0."
+    },
+    {
+      "name": "artifact_kind",
+      "status": "PASS",
+      "message": "Synthetic fixtures and actual predictions must not be interchanged."
+    },
+    {
+      "name": "run_id",
+      "status": "PASS",
+      "message": "Must match manifest run_id."
+    },
+    {
+      "name": "method.name",
+      "status": "PASS",
+      "message": "Must match manifest method name."
+    },
+    {
+      "name": "method.kind",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "method_version",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "data.version",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "preprocessing",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "config.version",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "data.split",
+      "status": "PASS",
+      "message": "Must equal evaluated split."
+    },
+    {
+      "name": "data.source_sha256",
+      "status": "PASS",
+      "message": "Must equal scored gold bytes."
+    },
+    {
+      "name": "data.archive_sha256",
+      "status": "PASS",
+      "message": "Must match evaluated archive; real raw JSON also declares fixed platform archive provenance."
+    },
+    {
+      "name": "data.source_file",
+      "status": "PASS",
+      "message": "Must resolve to the scored source JSON."
+    },
+    {
+      "name": "prediction.sha256",
+      "status": "PASS",
+      "message": "Must match scored prediction bytes."
+    },
+    {
+      "name": "prediction.file",
+      "status": "PASS",
+      "message": "Must identify actual scored file."
+    },
+    {
+      "name": "input_files_unchanged",
+      "status": "PASS",
+      "message": "Actual source and prediction hashes match evaluation."
+    },
+    {
+      "name": "code.version",
+      "status": "PASS",
+      "message": "Provide Git revision+dirty or a local hashed source snapshot."
+    },
+    {
+      "name": "code.snapshot",
+      "status": "PASS",
+      "message": "Local file exists; declared hash checked when required/provided."
+    },
+    {
+      "name": "config.file",
+      "status": "PASS",
+      "message": "Local file exists; declared hash checked when required/provided."
+    },
+    {
+      "name": "logs",
+      "status": "PASS",
+      "message": "Provide at least one inference/evidence log reference."
+    },
+    {
+      "name": "logs[0]",
+      "status": "PASS",
+      "message": "Local file exists; declared hash checked when required/provided."
+    },
+    {
+      "name": "alignment",
+      "status": "PASS",
+      "message": "Describe original-character restoration, or explicitly no tokenizer."
+    },
+    {
+      "name": "alignment.tokenizer",
+      "status": "PASS",
+      "message": "BERT alignment evidence description required."
+    },
+    {
+      "name": "alignment.character_mapping",
+      "status": "PASS",
+      "message": "BERT alignment evidence description required."
+    },
+    {
+      "name": "alignment.special_tokens",
+      "status": "PASS",
+      "message": "BERT alignment evidence description required."
+    },
+    {
+      "name": "alignment.long_text",
+      "status": "PASS",
+      "message": "BERT alignment evidence description required."
+    },
+    {
+      "name": "inference_command",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "inference_working_directory",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "timing_scope",
+      "status": "PASS",
+      "message": "Required nonempty string."
+    },
+    {
+      "name": "device",
+      "status": "PASS",
+      "message": "Record actual device; synthetic no-inference fixture may use null."
+    },
+    {
+      "name": "environment",
+      "status": "PASS",
+      "message": "Provide Python version and string package versions (empty packages allowed for stdlib rules)."
+    },
+    {
+      "name": "inference_elapsed_seconds",
+      "status": "PASS",
+      "message": "Measured finite nonnegative seconds; synthetic not-executed uses null."
+    },
+    {
+      "name": "training",
+      "status": "PASS",
+      "message": "Declare training/dictionary construction provenance."
+    },
+    {
+      "name": "training.command",
+      "status": "PASS",
+      "message": "Required training/construction record."
+    },
+    {
+      "name": "training.model_version",
+      "status": "PASS",
+      "message": "Required training/construction record."
+    },
+    {
+      "name": "training.data",
+      "status": "PASS",
+      "message": "Declare hashed allowed training sources."
+    },
+    {
+      "name": "training.data[0].split",
+      "status": "PASS",
+      "message": "Declared build/training split must be train; does not prove no leakage."
+    },
+    {
+      "name": "training.data[0]",
+      "status": "PASS",
+      "message": "Local file exists; declared hash checked when required/provided."
+    },
+    {
+      "name": "training.logs",
+      "status": "PASS",
+      "message": "Training/build logs required."
+    },
+    {
+      "name": "training.logs[0]",
+      "status": "PASS",
+      "message": "Local file exists; declared hash checked when required/provided."
+    },
+    {
+      "name": "training.config",
+      "status": "PASS",
+      "message": "Local file exists; declared hash checked when required/provided."
+    },
+    {
+      "name": "random_seeds",
+      "status": "PASS",
+      "message": "Learned/stochastic methods require actual seeds; deterministic construction may declare not applicable."
+    },
+    {
+      "name": "actual_model_identity",
+      "status": "NEEDS_REVIEW",
+      "message": "Human evidence review required; not proven by this program."
+    },
+    {
+      "name": "absence_of_data_leakage",
+      "status": "NEEDS_REVIEW",
+      "message": "Human evidence review required; not proven by this program."
+    },
+    {
+      "name": "faithful_character_alignment",
+      "status": "NEEDS_REVIEW",
+      "message": "Human evidence review required; not proven by this program."
+    },
+    {
+      "name": "actual_training_reproducibility",
+      "status": "NEEDS_REVIEW",
+      "message": "Human evidence review required; not proven by this program."
+    },
+    {
+      "name": "truth_of_inference_timing",
+      "status": "NEEDS_REVIEW",
+      "message": "Human evidence review required; not proven by this program."
+    }
+  ],
+  "evidence": [
+    {
+      "label": "code.snapshot",
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\source_snapshot.json",
+      "sha256": "ab4c872b98b79750f89adbfe169943892bf1909e9e223b444d20cd683a7a9bbc"
+    },
+    {
+      "label": "config.file",
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\runtime_config.json",
+      "sha256": "dcef2863b2e9302e346cd53c1ae734fdf6711f8c0931fe7e382dded36a05046c"
+    },
+    {
+      "label": "logs[0]",
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf_inference.log",
+      "sha256": "45779c861b4c180ba6e2917d87f4ed90347f9283466dbcff80acfff02b92be73"
+    },
+    {
+      "label": "training.data[0]",
+      "path": "${PROJECT}\\.local\\bert_crf\\20261019T162653+0800_stage1a\\data\\IMCS-V2_train.json",
+      "sha256": "07cdd3799087283a5a17de8bb43e71cb159a9a2c99c1cfbe8081847fac358f24"
+    },
+    {
+      "label": "training.logs[0]",
+      "path": "${PROJECT}\\experiments\\bert_crf\\20261021T195736+0800_real_training_95abb833\\run.log",
+      "sha256": "d95f6759feedb3c46a5b6e49bbf5ff9c21156004a6c3367d987b6fdc37990672"
+    },
+    {
+      "label": "training.config",
+      "path": "${PROJECT}\\.local\\demo_app\\frozen_e5\\training_config.json",
+      "sha256": "3dcb3e0942bdc74b0a8d9f7db3a0a1d44c4b0f36b9fb7b8da3ec16347f77aef0"
+    }
+  ],
+  "inference_elapsed_seconds_for_comparison": null,
+  "notice": "PASS checks file presence, type and consistency only; human claims are not automatically verified.",
+  "run_info": {
+    "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\run_info.json",
+    "sha256": "839ca3918988844654418d36aea4321cb6309a2c55fb0dad204d65625679ab54"
+  },
+  "method_kind": "bert",
+  "method_version": "frozen:e5ee6aaa8d4a00a4626553002aa9a63253a8ee0139463fec2bb41427bf391bed",
+  "data_version": "IMCS-V2-NER platform archive v2"
+}

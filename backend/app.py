@@ -33,13 +33,24 @@ def health():return {'status':'ok','training_endpoint':False,'full_dev_http_endp
 
 @lru_cache(maxsize=1)
 def historical():
-    source=Path(config()['stage1_audit'])/'rescored_dev_summary.json'
-    rows=load(source);result=[]
-    for method,row in zip(METHODS,rows):
-        ev=load(row['evaluation']['path'])
+    source=ROOT/'backend/resources/history/catalog.json'
+    rows=load(source)['runs'];result=[]
+    by_method={row['method']:row for row in rows}
+    if set(by_method)!=set(METHODS) or len(rows)!=len(METHODS):
+        raise ValueError('历史成绩目录必须包含三条唯一技术路线')
+    for method in METHODS:
+        row=by_method[method]
+        evaluation=(ROOT/row['evaluation']['path']).resolve()
+        if not evaluation.is_relative_to(source.parent.resolve()):
+            raise ValueError('历史评分必须位于登记的资源目录')
+        if sha(evaluation)!=row['evaluation']['sha256']:
+            raise ValueError('历史评分文件身份不匹配')
+        ev=load(evaluation)
+        if row['metrics']!=ev['entities']['micro'] or row['counts']!=ev['counts']:
+            raise ValueError('历史摘要与原评分不一致')
         result.append({'method':method,'name':METHODS[method],'metrics':row['metrics'],'per_type':ev['entities']['per_type'],
                        'split':'official_dev','evidence_type':'historical_prediction_rescored_in_stage1','counts':row['counts'],
-                       'source':ref(source),'evaluation':row['evaluation'],'prediction':row['prediction'],
+                       'source':ref(source),'evaluation':{**row['evaluation'],**ref(evaluation)},'prediction':row['prediction'],
                        'legacy_metadata_status':row['metadata_status']})
     return result
 
@@ -117,7 +128,9 @@ def preview(run_id:str,key:str):
     return {'file':ref(p),'text':text,'truncated':p.stat().st_size>32000}
 
 @app.get('/api/cases')
-def cases():return [verified_case()]
+def cases():
+    case=verified_case()
+    return [case] if case else []
 
 @app.get('/api/experiments')
 def experiments():

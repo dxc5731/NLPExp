@@ -1,0 +1,158 @@
+{
+  "artifact_kind": "real_training",
+  "best_epoch": 3,
+  "best_metric": 0.8993796338326525,
+  "validation": {
+    "loss": 0.4161181380360614,
+    "sentences": 9687,
+    "characters": 126049,
+    "character_accuracy_including_O": 0.9754301898468056,
+    "protocol": "strict_bio_metrics_v1; exact BIO characters excluding O; fixed-five-type macro; zero division=0",
+    "character": {
+      "micro": {
+        "precision": 0.908060701616082,
+        "recall": 0.916368337311058,
+        "f1": 0.9121956048307266,
+        "true_positive": 18430,
+        "predicted": 20296,
+        "gold": 20112
+      },
+      "macro": {
+        "precision": 0.9046954790017017,
+        "recall": 0.9241430480567822,
+        "f1": 0.9141458049280884
+      },
+      "per_type": {
+        "Symptom": {
+          "precision": 0.9020956899960458,
+          "recall": 0.9067567567567567,
+          "f1": 0.9044202180376609,
+          "true_positive": 11407,
+          "predicted": 12645,
+          "gold": 12580
+        },
+        "Drug": {
+          "precision": 0.9545916638427652,
+          "recall": 0.9571865443425076,
+          "f1": 0.9558873430607397,
+          "true_positive": 2817,
+          "predicted": 2951,
+          "gold": 2943
+        },
+        "Drug_Category": {
+          "precision": 0.9026301063234471,
+          "recall": 0.9232970807097882,
+          "f1": 0.9128466327108093,
+          "true_positive": 1613,
+          "predicted": 1787,
+          "gold": 1747
+        },
+        "Medical_Examination": {
+          "precision": 0.9033864541832669,
+          "recall": 0.906093906093906,
+          "f1": 0.9047381546134663,
+          "true_positive": 1814,
+          "predicted": 2008,
+          "gold": 2002
+        },
+        "Operation": {
+          "precision": 0.8607734806629834,
+          "recall": 0.9273809523809524,
+          "f1": 0.8928366762177651,
+          "true_positive": 779,
+          "predicted": 905,
+          "gold": 840
+        }
+      }
+    },
+    "entity": {
+      "micro": {
+        "precision": 0.8982922774671301,
+        "recall": 0.9004696258142706,
+        "f1": 0.8993796338326525,
+        "true_positive": 5944,
+        "predicted": 6617,
+        "gold": 6601
+      },
+      "macro": {
+        "precision": 0.8947455643263049,
+        "recall": 0.897107131421113,
+        "f1": 0.8958959888207222
+      },
+      "per_type": {
+        "Symptom": {
+          "precision": 0.8987455197132617,
+          "recall": 0.9021812457836744,
+          "f1": 0.9004601054875997,
+          "true_positive": 4012,
+          "predicted": 4464,
+          "gold": 4447
+        },
+        "Drug": {
+          "precision": 0.9238227146814404,
+          "recall": 0.92,
+          "f1": 0.921907394609537,
+          "true_positive": 667,
+          "predicted": 722,
+          "gold": 725
+        },
+        "Drug_Category": {
+          "precision": 0.9036885245901639,
+          "recall": 0.9,
+          "f1": 0.901840490797546,
+          "true_positive": 441,
+          "predicted": 488,
+          "gold": 490
+        },
+        "Medical_Examination": {
+          "precision": 0.8739770867430442,
+          "recall": 0.8682926829268293,
+          "f1": 0.871125611745514,
+          "true_positive": 534,
+          "predicted": 611,
+          "gold": 615
+        },
+        "Operation": {
+          "precision": 0.8734939759036144,
+          "recall": 0.8950617283950617,
+          "f1": 0.8841463414634145,
+          "true_positive": 290,
+          "predicted": 332,
+          "gold": 324
+        }
+      }
+    },
+    "crf_nll": 0.4161181380360614,
+    "start_loss": 0.07333382832362696,
+    "end_loss": 0.06048271503913626,
+    "boundary_loss": 0.06690827179122326,
+    "total_loss": 0.42949979197762883,
+    "boundary_auxiliary": {
+      "threshold": 0.5,
+      "unit": "valid original character position; class-agnostic",
+      "metrics": {
+        "start": {
+          "precision": 0.8133892276422764,
+          "recall": 0.9700045447659446,
+          "f1": 0.8848200096731845,
+          "true_positive": 6403,
+          "predicted": 7872,
+          "gold": 6601
+        },
+        "end": {
+          "precision": 0.8532500332314237,
+          "recall": 0.9724284199363733,
+          "f1": 0.9089493061455679,
+          "true_positive": 6419,
+          "predicted": 7523,
+          "gold": 6601
+        }
+      },
+      "loss_aggregation": "sample-count-weighted mean of per-batch balanced BCE; diagnostic only",
+      "decode_policy": "crf_only"
+    }
+  },
+  "validation_source_run": "${PROJECT}\\experiments\\bert_crf\\20261021T231741+0800_real_training_86767c7e",
+  "validation_elapsed_seconds": 43.96966079995036,
+  "timing_scope": "internal validation loader/adaptation, GPU forward/decode, metrics and JSONL writes; excludes model loading and optimizer updates"
+}

@@ -1,0 +1,684 @@
+{
+  "schema_version": "1.0",
+  "purpose": "model_evaluation",
+  "split": "dev",
+  "created_at": "2026-10-27T04:06:55+08:00",
+  "python_version": "3.13.5",
+  "status": "SCORED",
+  "inputs": {
+    "data": {
+      "requested_path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+      "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+      "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+    },
+    "predictions": {
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\prediction\\predictions_dev.json",
+      "sha256": "32001c71c939a2f5f73dfabed044032a1e220548e79b9db7c1c1a1b8e2ac5a4d"
+    }
+  },
+  "validation": {
+    "schema_version": "1.0",
+    "purpose": "input_validation_only",
+    "mode": "prediction_validation",
+    "created_at": "2026-10-27T04:06:55+08:00",
+    "python_version": "3.13.5",
+    "split": "dev",
+    "status": "PASS",
+    "character_unit": "Python len(str): Unicode code points, no normalization",
+    "inputs": {
+      "data": {
+        "requested_path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+        "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+        "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+      },
+      "predictions": {
+        "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\prediction\\predictions_dev.json",
+        "sha256": "32001c71c939a2f5f73dfabed044032a1e220548e79b9db7c1c1a1b8e2ac5a4d"
+      }
+    },
+    "data": {
+      "format": "raw",
+      "dialogues": 833,
+      "sentences": 33267,
+      "unique_sentence_ids": 33267,
+      "sentences_with_text": 33267,
+      "characters": 441339,
+      "sentences_with_gold": 33267,
+      "dialogue_fields": [
+        "diagnosis",
+        "dialogue",
+        "explicit_info",
+        "implicit_info",
+        "report",
+        "self_report"
+      ],
+      "sentence_fields": [
+        "BIO_label",
+        "dialogue_act",
+        "local_implicit_info",
+        "sentence",
+        "sentence_id",
+        "speaker",
+        "symptom_norm",
+        "symptom_type"
+      ]
+    },
+    "predictions": {
+      "dialogues": 833,
+      "sentences": 33267,
+      "unique_sentence_ids": 33267,
+      "matched_sentence_ids": 33267,
+      "expected_sentences": {
+        "passed": 33267,
+        "failed": 0,
+        "not_fully_checked": 0
+      }
+    },
+    "required_checks": [
+      "data_json",
+      "data_structure",
+      "gold_presence",
+      "gold_format",
+      "gold_labels",
+      "gold_bio",
+      "gold_alignment",
+      "prediction_json",
+      "prediction_structure",
+      "prediction_format",
+      "prediction_labels",
+      "prediction_bio",
+      "prediction_alignment",
+      "id_coverage",
+      "record_counts"
+    ],
+    "checks": {
+      "data_json": {
+        "checked": 1,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "data_structure": {
+        "checked": 1,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "gold_presence": {
+        "checked": 33267,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "gold_format": {
+        "checked": 33267,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "gold_labels": {
+        "checked": 33267,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "gold_bio": {
+        "checked": 33267,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "gold_alignment": {
+        "checked": 33267,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "prediction_json": {
+        "checked": 1,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "prediction_structure": {
+        "checked": 1,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "id_coverage": {
+        "checked": 1,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "record_counts": {
+        "checked": 1,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "prediction_format": {
+        "checked": 33267,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "prediction_labels": {
+        "checked": 33267,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "prediction_bio": {
+        "checked": 33267,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      },
+      "prediction_alignment": {
+        "checked": 33267,
+        "errors": 0,
+        "skipped": 0,
+        "reasons": [],
+        "status": "PASS"
+      }
+    },
+    "errors": {
+      "total": 0,
+      "by_code": {},
+      "examples": [],
+      "examples_omitted": 0
+    }
+  },
+  "timing_seconds": {
+    "validation": 1.4368801999371499,
+    "scoring": 0.2532107001170516,
+    "total_before_publication": 1.7353650000877678
+  },
+  "implementation": {
+    "evaluate_predictions.py": "7c75016ae1f4cc07d4037bfeb39ffb63aaee8d43fc7a1da10c15fe258c3dc173",
+    "ner_metrics.py": "5e02e13834e07560a3586038c832a603e675115bf0b3a2d0b8d3ebedf2356074",
+    "validate_predictions.py": "75dc966361d216bdb9500acb63bce6be4313b708136290cd26b1195dfb7c1dcb"
+  },
+  "counts": {
+    "dialogues": 833,
+    "sentences": 33267,
+    "characters": 441339
+  },
+  "entities": {
+    "micro": {
+      "tp": 21503,
+      "fp": 3051,
+      "fn": 2075,
+      "precision": 0.8757432597540116,
+      "recall": 0.9119942319111036,
+      "f1": 0.8935012050195297,
+      "support": 23578,
+      "predicted": 24554
+    },
+    "per_type": {
+      "Symptom": {
+        "tp": 14070,
+        "fp": 2159,
+        "fn": 1281,
+        "precision": 0.8669665413765482,
+        "recall": 0.9165526675786594,
+        "f1": 0.8910702976567447,
+        "support": 15351,
+        "predicted": 16229
+      },
+      "Drug": {
+        "tp": 2940,
+        "fp": 167,
+        "fn": 175,
+        "precision": 0.9462504023173479,
+        "recall": 0.9438202247191011,
+        "f1": 0.9450337512054002,
+        "support": 3115,
+        "predicted": 3107
+      },
+      "Drug_Category": {
+        "tp": 1573,
+        "fp": 182,
+        "fn": 144,
+        "precision": 0.8962962962962963,
+        "recall": 0.9161327897495631,
+        "f1": 0.9061059907834101,
+        "support": 1717,
+        "predicted": 1755
+      },
+      "Medical_Examination": {
+        "tp": 1959,
+        "fp": 394,
+        "fn": 357,
+        "precision": 0.8325541861453464,
+        "recall": 0.8458549222797928,
+        "f1": 0.8391518526451061,
+        "support": 2316,
+        "predicted": 2353
+      },
+      "Operation": {
+        "tp": 961,
+        "fp": 149,
+        "fn": 118,
+        "precision": 0.8657657657657658,
+        "recall": 0.8906394810009268,
+        "f1": 0.8780264961169484,
+        "support": 1079,
+        "predicted": 1110
+      }
+    },
+    "gold_total": 23578,
+    "predicted_total": 24554
+  },
+  "characters": {
+    "total": 441339,
+    "correct": 428335,
+    "accuracy": 0.9705351215278958,
+    "per_label": {
+      "O": {
+        "tp": 361698,
+        "fp": 3651,
+        "fn": 7802,
+        "precision": 0.9900068154011644,
+        "recall": 0.9788849797023004,
+        "f1": 0.9844144851527321,
+        "support": 369500,
+        "predicted": 365349
+      },
+      "B-Symptom": {
+        "tp": 14371,
+        "fp": 1858,
+        "fn": 980,
+        "precision": 0.8855135867890813,
+        "recall": 0.9361605107159142,
+        "f1": 0.9101329955668145,
+        "support": 15351,
+        "predicted": 16229
+      },
+      "I-Symptom": {
+        "tp": 24852,
+        "fp": 5222,
+        "fn": 2195,
+        "precision": 0.8263616412848308,
+        "recall": 0.9188449735645358,
+        "f1": 0.870152833458798,
+        "support": 27047,
+        "predicted": 30074
+      },
+      "B-Drug": {
+        "tp": 2977,
+        "fp": 130,
+        "fn": 138,
+        "precision": 0.9581589958158996,
+        "recall": 0.9556982343499197,
+        "f1": 0.9569270331083253,
+        "support": 3115,
+        "predicted": 3107
+      },
+      "I-Drug": {
+        "tp": 9091,
+        "fp": 254,
+        "fn": 318,
+        "precision": 0.9728196896736223,
+        "recall": 0.9662025720055266,
+        "f1": 0.969499840034126,
+        "support": 9409,
+        "predicted": 9345
+      },
+      "B-Drug_Category": {
+        "tp": 1590,
+        "fp": 165,
+        "fn": 127,
+        "precision": 0.905982905982906,
+        "recall": 0.926033779848573,
+        "f1": 0.9158986175115207,
+        "support": 1717,
+        "predicted": 1755
+      },
+      "I-Drug_Category": {
+        "tp": 4126,
+        "fp": 477,
+        "fn": 327,
+        "precision": 0.8963719313491202,
+        "recall": 0.9265663597574669,
+        "f1": 0.9112190812720848,
+        "support": 4453,
+        "predicted": 4603
+      },
+      "B-Medical_Examination": {
+        "tp": 2080,
+        "fp": 273,
+        "fn": 236,
+        "precision": 0.8839779005524862,
+        "recall": 0.8981001727115717,
+        "f1": 0.8909830798886271,
+        "support": 2316,
+        "predicted": 2353
+      },
+      "I-Medical_Examination": {
+        "tp": 4962,
+        "fp": 606,
+        "fn": 591,
+        "precision": 0.8911637931034483,
+        "recall": 0.8935710426796326,
+        "f1": 0.8923657944429457,
+        "support": 5553,
+        "predicted": 5568
+      },
+      "B-Operation": {
+        "tp": 1007,
+        "fp": 103,
+        "fn": 72,
+        "precision": 0.9072072072072072,
+        "recall": 0.933271547729379,
+        "f1": 0.920054819552307,
+        "support": 1079,
+        "predicted": 1110
+      },
+      "I-Operation": {
+        "tp": 1581,
+        "fp": 265,
+        "fn": 218,
+        "precision": 0.8564463705308776,
+        "recall": 0.8788215675375208,
+        "f1": 0.8674897119341564,
+        "support": 1799,
+        "predicted": 1846
+      }
+    },
+    "including_o": {
+      "labels": [
+        "O",
+        "B-Symptom",
+        "I-Symptom",
+        "B-Drug",
+        "I-Drug",
+        "B-Drug_Category",
+        "I-Drug_Category",
+        "B-Medical_Examination",
+        "I-Medical_Examination",
+        "B-Operation",
+        "I-Operation"
+      ],
+      "micro": {
+        "tp": 428335,
+        "fp": 13004,
+        "fn": 13004,
+        "precision": 0.9705351215278958,
+        "recall": 0.9705351215278958,
+        "f1": 0.9705351215278958,
+        "support": 441339,
+        "predicted": 441339
+      },
+      "macro_f1": 0.9171943901747671,
+      "macro_denominator": 11
+    },
+    "excluding_o": {
+      "labels": [
+        "B-Symptom",
+        "I-Symptom",
+        "B-Drug",
+        "I-Drug",
+        "B-Drug_Category",
+        "I-Drug_Category",
+        "B-Medical_Examination",
+        "I-Medical_Examination",
+        "B-Operation",
+        "I-Operation"
+      ],
+      "micro": {
+        "tp": 66637,
+        "fp": 9353,
+        "fn": 5202,
+        "precision": 0.876918015528359,
+        "recall": 0.9275880788986484,
+        "f1": 0.9015416460910918,
+        "support": 71839,
+        "predicted": 75990
+      },
+      "macro_f1": 0.9104723806769706,
+      "macro_denominator": 10
+    },
+    "confusion_matrix": {
+      "labels": [
+        "O",
+        "B-Symptom",
+        "I-Symptom",
+        "B-Drug",
+        "I-Drug",
+        "B-Drug_Category",
+        "I-Drug_Category",
+        "B-Medical_Examination",
+        "I-Medical_Examination",
+        "B-Operation",
+        "I-Operation"
+      ],
+      "rows": "gold",
+      "columns": "predicted",
+      "counts": [
+        [
+          361698,
+          1512,
+          4837,
+          52,
+          111,
+          95,
+          325,
+          152,
+          448,
+          70,
+          200
+        ],
+        [
+          637,
+          14371,
+          288,
+          4,
+          0,
+          7,
+          15,
+          26,
+          1,
+          1,
+          1
+        ],
+        [
+          1848,
+          277,
+          24852,
+          2,
+          11,
+          0,
+          11,
+          1,
+          41,
+          0,
+          4
+        ],
+        [
+          66,
+          2,
+          0,
+          2977,
+          18,
+          41,
+          1,
+          6,
+          0,
+          1,
+          3
+        ],
+        [
+          126,
+          1,
+          2,
+          32,
+          9091,
+          6,
+          112,
+          0,
+          33,
+          0,
+          6
+        ],
+        [
+          71,
+          4,
+          1,
+          29,
+          3,
+          1590,
+          13,
+          1,
+          0,
+          2,
+          3
+        ],
+        [
+          181,
+          25,
+          26,
+          0,
+          70,
+          13,
+          4126,
+          0,
+          4,
+          0,
+          8
+        ],
+        [
+          135,
+          28,
+          1,
+          1,
+          0,
+          2,
+          0,
+          2080,
+          48,
+          21,
+          0
+        ],
+        [
+          412,
+          8,
+          65,
+          0,
+          2,
+          1,
+          0,
+          78,
+          4962,
+          0,
+          25
+        ],
+        [
+          45,
+          1,
+          0,
+          3,
+          0,
+          0,
+          0,
+          7,
+          1,
+          1007,
+          15
+        ],
+        [
+          130,
+          0,
+          2,
+          7,
+          39,
+          0,
+          0,
+          2,
+          30,
+          8,
+          1581
+        ]
+      ],
+      "row_sums": [
+        369500,
+        15351,
+        27047,
+        3115,
+        9409,
+        1717,
+        4453,
+        2316,
+        5553,
+        1079,
+        1799
+      ],
+      "column_sums": [
+        365349,
+        16229,
+        30074,
+        3107,
+        9345,
+        1755,
+        4603,
+        2353,
+        5568,
+        1110,
+        1846
+      ]
+    }
+  },
+  "metric_policy": {
+    "version": "strict-ner-character-v1",
+    "scale": "fractions in [0,1], unrounded",
+    "primary_metric": "entities.micro.f1",
+    "zero_division": 0.0,
+    "entity_identity": [
+      "dialogue_id",
+      "sentence_id",
+      "entity_type",
+      "start",
+      "end"
+    ],
+    "span": "zero-based [start, end), Unicode code points",
+    "entity_matching": "exact type and boundaries within original dialogue and sentence",
+    "entity_micro": "pool TP/FP/FN globally before computing P/R/F1",
+    "bio_policy": "strict, reject invalid BIO without repair",
+    "character_unit": "Python len(str), original Unicode code points, no normalization",
+    "character_accuracy": "all positions including O; correct / total",
+    "character_micro": "sum one-vs-rest TP/FP/FN over selected labels, using all positions",
+    "character_macro": "unweighted mean over all fixed 11 labels (with O) or 10 (without O); absent F1=0",
+    "excluding_o": "exclude O label only, retain O->entity FP and entity->O FN; no position filtering",
+    "confusion_direction": "rows=gold, columns=predicted; fixed labels in characters.confusion_matrix.labels",
+    "support": "gold count for the entity type or character label"
+  },
+  "run": {
+    "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+    "method_name": "BERT-CRF E5",
+    "method_version": "frozen:e5ee6aaa8d4a00a4626553002aa9a63253a8ee0139463fec2bb41427bf391bed",
+    "data_version": "IMCS-V2-NER platform archive v2",
+    "run_info_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\run_info.json",
+    "run_info_sha256": "839ca3918988844654418d36aea4321cb6309a2c55fb0dad204d65625679ab54"
+  },
+  "reproducibility": {
+    "status": "NEEDS_REVIEW",
+    "automated_status": "PASS",
+    "report_path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\evaluation\\20261027T040648718164_eow6y9sc\\runs\\003\\reproducibility_check.json"
+  }
+}

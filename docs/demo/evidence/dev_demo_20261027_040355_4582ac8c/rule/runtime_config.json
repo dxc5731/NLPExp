@@ -1,0 +1,39 @@
+{
+  "method": "rule",
+  "split": "dev",
+  "batch_size": 16,
+  "min_count": 10,
+  "assets": [
+    {
+      "path": "${PROJECT}\\baseline\\dict\\dict_drug.txt",
+      "bytes": 26885,
+      "sha256": "e46a19cecc959f80f6aea0adedf8e12f4d78176374a800ea51bc8f1d10ddc85a"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\dict\\dict_drug_category.txt",
+      "bytes": 10657,
+      "sha256": "0f90297b52932dd09ea6df2fc4420508cb5a9eddde4a3e5a8be2128c5e3e81b6"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\dict\\dict_exam.txt",
+      "bytes": 12317,
+      "sha256": "41dc1f3bc4a580d5db20f690411ea5d4a7c379ce4704a5b01f0cdbc0132488bd"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\dict\\dict_operation.txt",
+      "bytes": 5435,
+      "sha256": "6b0fdb04ea0b40e1b0dca9a766e58350893f7570c65d608bfd7cdc52864031cc"
+    },
+    {
+      "path": "${PROJECT}\\baseline\\dict\\dict_symptom.txt",
+      "bytes": 104863,
+      "sha256": "3205c35782283837594fe758113e099fd50071b30f72287600da310d037714d3"
+    }
+  ],
+  "no_training": true,
+  "data": {
+    "path": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+    "bytes": 17175331,
+    "sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f"
+  }
+}

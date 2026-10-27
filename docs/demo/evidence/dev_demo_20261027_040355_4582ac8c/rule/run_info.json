@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "artifact_kind": "model_prediction",
+  "run_id": "dev_demo_20261027_040355_4582ac8c_rule",
+  "method": {
+    "name": "规则 mc10",
+    "kind": "rule"
+  },
+  "method_version": "frozen:e46a19cecc959f80f6aea0adedf8e12f4d78176374a800ea51bc8f1d10ddc85a",
+  "data": {
+    "version": "IMCS-V2-NER platform archive v2",
+    "split": "dev",
+    "source_file": "${PROJECT}\\.local\\bert_softmax\\NLPExp_softmax_acceptance_20261027T024216+0800\\data\\IMCS-V2_dev.json",
+    "source_sha256": "16f597ad368971c7db994ca904e05d91942f0e3c73009c9ef1d597fde065d39f",
+    "archive_sha256": "84e34d2417b839d9fbe5c5f391e44de2a9b01bd5f31d576b8feccc78c1dfbc67"
+  },
+  "code": {
+    "revision": "bcdd42777942b5ccbbf1ed14a0d7fc2c0631dce4",
+    "branch": "dxc",
+    "dirty": true,
+    "note": "File snapshots identify untracked application/source code separately.",
+    "snapshot": {
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\source_snapshot.json",
+      "bytes": 17916,
+      "sha256": "ab4c872b98b79750f89adbfe169943892bf1909e9e223b444d20cd683a7a9bbc"
+    }
+  },
+  "config": {
+    "version": "demo_inference_adapter_v1",
+    "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\runtime_config.json",
+    "bytes": 1342,
+    "sha256": "06307373215877ef68c3b4d5e57eaeb1bffb586d1989a9e8ef07105f1b5a0a35"
+  },
+  "preprocessing": "原始Unicode字符不归一化；输入投影为原对话ID、句ID、文本；Gold不输入模型。",
+  "alignment": {
+    "tokenizer": "无分词器，原字符匹配",
+    "character_mapping": "原始字符位置",
+    "special_tokens": "特殊token与Padding不输出",
+    "long_text": "超出冻结长度或覆盖失败即报错，不截断、不补O"
+  },
+  "prediction": {
+    "file": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\prediction\\predictions_dev.json",
+    "sha256": "61d9bb7e268b37932d16a73b0caac5a8f4b1bc4c8cfd213be1c40d02efe3581b"
+  },
+  "logs": [
+    {
+      "path": "${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule_inference.log",
+      "bytes": 468,
+      "sha256": "d74f58186c3923b8dd3eb7d445124f570db5ae6b4babd8b612b15407c06a4200"
+    }
+  ],
+  "inference_command": "${PROJECT}\\.venv-bert-crf\\Scripts\\python.exe -B -u -X utf8 -m backend.worker --method rule --dev --output ${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\rule\\prediction",
+  "inference_working_directory": "${PROJECT}",
+  "inference_elapsed_seconds": 0.42679359996691346,
+  "timing_scope": "外层真实子进程墙钟时间，包含导入、资源检查、加载、预测与写盘，不含评分或训练。",
+  "device": "cpu",
+  "environment": {
+    "python": "3.13.5",
+    "packages": {
+      "torch": "2.14.1+cu132",
+      "transformers": "5.20.1",
+      "tokenizers": "0.23.3",
+      "numpy": "2.4.6",
+      "seqeval": "1.2.2"
+    },
+    "cuda": "13.2",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "cuda_available": true
+  },
+  "adaptation_notice": "New run metadata for actual execution; original historical run_info files untouched. Automatic evidence presence checks are not human attestations.",
+  "training_applicability": "本次仅使用已冻结词表推理，不进行词典构建或训练；词表与源码身份已记录，不反推构建时长。",
+  "seed_applicability": "冻结词典最长匹配，无随机过程",
+  "random_seeds": null
+}

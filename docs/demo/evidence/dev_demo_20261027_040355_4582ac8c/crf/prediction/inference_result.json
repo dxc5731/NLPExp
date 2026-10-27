@@ -1,0 +1,51 @@
+{
+  "run_id": "dev_demo_20261027_040355_4582ac8c_crf",
+  "split": "dev",
+  "started_at": "2026-10-27T04:05:04.581623+08:00",
+  "ended_at": "2026-10-27T04:06:44.479122+08:00",
+  "inference_elapsed_seconds": 99.89758269977756,
+  "timing_scope": "includes imports, input/hash checks, tokenization, model/checkpoint loading, CUDA forward+CRF decode, parameter identity checks and prediction writing; excludes training and independent validation",
+  "prediction": {
+    "file": "predictions_dev.json",
+    "sha256": "32001c71c939a2f5f73dfabed044032a1e220548e79b9db7c1c1a1b8e2ac5a4d",
+    "bytes": 2033991
+  },
+  "dialogues": 833,
+  "sentences": 33267,
+  "characters": 441339,
+  "batches": 2080,
+  "max_tokens_observed": 201,
+  "checkpoint_sha256": "e5ee6aaa8d4a00a4626553002aa9a63253a8ee0139463fec2bb41427bf391bed",
+  "state_hash_before": "376d0096eb052ae27feb95d1438485b219fe934bd1febbe8e927f51fa48b6c72",
+  "state_hash_after": "376d0096eb052ae27feb95d1438485b219fe934bd1febbe8e927f51fa48b6c72",
+  "optimizer_steps": 0,
+  "backward_calls": 0,
+  "auxiliary_head_enabled": false,
+  "gold_supplied_to_model": false,
+  "coordinate_probe": {
+    "offset_unit": "python_unicode_codepoint",
+    "probe": "non_bmp_v1",
+    "probe_length": 4,
+    "fast_tokenizer_class": "BertTokenizer"
+  },
+  "device": {
+    "type": "cuda",
+    "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "total_bytes": 8546484224,
+    "peak_allocated_bytes": 551086080,
+    "peak_reserved_bytes": 933232640,
+    "cpu": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel"
+  },
+  "environment": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "pytorch": "2.14.1+cu132",
+    "transformers": "5.20.1",
+    "numpy": "2.4.6",
+    "cuda": "13.2",
+    "cudnn": 92400,
+    "os": "Windows-11-10.0.26200-SP0"
+  },
+  "inference_command": "${PROJECT}\\.venv-bert-crf\\Scripts\\python.exe -u -X utf8 ${PROJECT}\\.local\\demo_app\\frozen_e5\\infer.py --config ${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\frozen_inference_config.json --project-root ${LOCAL_PARENT}/NLPexp --output ${PROJECT}\\runs\\demo_runs\\dev_demo_20261027_040355_4582ac8c\\crf\\prediction",
+  "inference_working_directory": "${PROJECT}",
+  "exceptions": []
+}
