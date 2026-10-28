@@ -4,11 +4,11 @@
 
 ## 交付范围与资源
 
-本 main 分支保留完整源码、正式预测、评分、训练与分析证据、演示应用和复现说明。**当前是源码交付状态，正式报告 PDF、每人贡献声明按组内安排稍后补入**；不保留老师的任务书/模板或未定稿个人声明。最终交一个 ZIP，≤50 MB；模型、数据集、录屏、虚拟环境、Checkpoint 不进 ZIP。
+保留完整源码、正式预测、评分、训练与分析证据、演示应用和复现说明。
 
 - 数据：[IMCS-V2-NER 天池入口](https://tianchi.aliyun.com/dataset/95414)。下载并解压后设置 `IMCS_DATA_DIR`；官方 dev 为 833 对话、33,267 句、441,339 字符。
 - 冻结双模型：[百度网盘，提取码 uknn](https://pan.baidu.com/s/1-KdQfJJLQTruKY_d5DM3pw?pwd=uknn)。大小、SHA-256、原始验收见 [冻结模型说明](docs/frozen_models/README.md)。微调 checkpoint 与从头训练所需的预训练 BERT 本体是不同资源。
-- [演示视频，提取码 qa8w](https://pan.baidu.com/s/1TDMxuzl9h9-0VCLm4Us4FQ?pwd=qa8w)。以上两个网盘地址来自本人已填的报告；链接内容/访问权限本轮未联网验收。
+- [演示视频，提取码 qa8w](https://pan.baidu.com/s/1TDMxuzl9h9-0VCLm4Us4FQ?pwd=qa8w)。
 - [项目摘要](项目摘要.md)；[交付与打包说明](docs/delivery/README.md)；[新增材料来源和双哈希](docs/delivery/provenance.json)。
 
 ## 一条命令与预期输出
