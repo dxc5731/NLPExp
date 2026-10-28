@@ -1,4 +1,4 @@
-# NLPExp — IMCS-V2-NER 医疗命名实体识别
+# IMCS-V2-NER 医疗实体抽取：规则基线 × BERT 两种微调对比
 
 《自然语言处理》课程项目：对中文医疗对话进行逐字符 BIO 标注，比较规则 mc10、BERT-Softmax、字符级 BERT-CRF。五类实体为 Symptom、Drug、Drug_Category、Medical_Examination、Operation。原始对话/句子 ID、字符、空格及标点保持不变。
 
@@ -114,4 +114,3 @@ python -X utf8 evaluation/src/evaluate_predictions.py --data <官方dev.json> --
 | `handoff_packages/` | 既有 CRF 正式结果包，保留其版本及来源，不重复上传同一预测 |
 | `doc/`、`deploy/` | 已有有效实验文档、接口规范和服务器训练脚本 |
 
-其他成员的已有研究、训练日志、分析及贡献证据继续保留。清理仅移除批准的旧工具和课程模板；历史文档中相关引用作为历史保留，当前入口以本 README 为准。
